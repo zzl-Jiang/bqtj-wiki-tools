@@ -39,6 +39,7 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 - `parse_arms.py` - 从 XML 处理武器数据，输出独立的 JSON 文件 + Excel 更新表
 - `parse_skills.py` - 处理具有 father/skill 层级结构的技能数据，包含重名检测和报告功能
 - `parse_things.py` - 处理物品数据（碎片、材料等），支持 gift 等特殊子标签解析，包含重名检测和报告功能
+- `patch_things.py` - 对 things 数据进行后处理补丁，通过 arms 数据补全武器碎片缺失字段（smeltD、btnList、itemsLevel 等）
 
 ## 常用命令
 
@@ -53,6 +54,9 @@ python scripts/parse_skills.py
 
 # 处理物品数据（输出至 data/things/）
 python scripts/parse_things.py
+
+# 对 things 数据应用补丁（需要先运行 parse_arms.py 和 parse_things.py）
+python scripts/patch_things.py
 ```
 
 ### 环境配置
@@ -87,6 +91,17 @@ pip install -e .
 ### 类别映射
 
 武器类别在 [config/arm_map.py](config/arm_map.py) 中通过 `CATEGORY_MAP` 字典手动映射，因为游戏数据缺乏可靠的类别元数据。
+
+## 数据水合说明
+
+部分 things 数据（如武器碎片）在 XML 中只有基础定义，游戏运行时通过 AS3 代码水合生成完整数据。Wiki 无法运行时水合，因此需要 `patch_things.py` 进行静态补丁：
+
+**补丁逻辑**：
+- 黑色武器碎片（blackChip）：匹配 arms 数据，补全 `itemsLevel`、`smeltD`、`btnList`、`iconUrl`
+- 稀有武器碎片（rareChip）：补全描述、`smeltD`、`btnList`
+- 修补后的数据会添加 `_patched: true` 标记
+
+**注意**：需要先运行 `parse_arms.py` 生成武器数据，补丁脚本才能正确匹配。
 
 ## 注意事项
 
