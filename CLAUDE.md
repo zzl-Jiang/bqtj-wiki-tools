@@ -38,6 +38,7 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 
 - `parse_arms.py` - 从 XML 处理武器数据，输出独立的 JSON 文件 + Excel 更新表
 - `parse_skills.py` - 处理具有 father/skill 层级结构的技能数据，包含重名检测和报告功能
+- `parse_things.py` - 处理物品数据（碎片、材料等），支持 gift 等特殊子标签解析，包含重名检测和报告功能
 
 ## 常用命令
 
@@ -50,8 +51,8 @@ python scripts/parse_arms.py
 # 处理技能数据（输出至 data/skills/）
 python scripts/parse_skills.py
 
-# 处理其他物品类型（chipClass.xml 等）
-python materials/things/convert_things_xml.py
+# 处理物品数据（输出至 data/things/）
+python scripts/parse_things.py
 ```
 
 ### 环境配置
