@@ -22,7 +22,6 @@
 │   ├── parser.py           # XML 解析器
 │   └── converter.py        # 类型转换器
 ├── config/                 # 配置数据
-│   └── arm_map.py          # 武器类别映射
 ├── xml/                    # 游戏原始 XML 数据（纳入版本控制）
 ├── data/                   # 输出目录（gitignored）
 ├── requirements.txt        # Python 依赖
@@ -33,16 +32,24 @@
 
 ## 环境准备
 
-1. **安装 Python**: 建议使用 Python 3.9 或更高版本
-2. **创建虚拟环境** (推荐):
+1. **克隆仓库**:
+   ```bash
+   git clone https://github.com/zzl-Jiang/bqtj-wiki-tools
+   cd bqtj-wiki-tools
+   ```
+
+2. **安装 Python**: 建议使用 Python 3.9 或更高版本
+
+3. **创建虚拟环境** (推荐):
    ```bash
    python -m venv .venv
    source .venv/bin/activate  # Linux/macOS
    .venv\Scripts\activate     # Windows
    ```
-3. **安装依赖**:
+
+4. **安装依赖**：
    ```bash
-   pip install -r requirements.txt
+   pip install -e .
    ```
 
 ## 使用指南
@@ -55,10 +62,10 @@
 
 ```bash
 # 处理武器数据（输出至 data/arms/）
-python scripts/parse_arms.py
+python -m scripts.parse_arms
 ```
 
-以及 scripts 文件夹下的其余脚本
+以及其他 scripts 文件夹中的处理脚本。
 
 ### 3. 上传数据到 Wiki
 
