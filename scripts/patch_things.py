@@ -14,7 +14,9 @@ Things 数据补丁脚本
 import os
 import json
 import glob
+import datetime
 from typing import Dict, Any, Optional
+import pandas as pd
 
 # --- 配置 ---
 THINGS_JSON_DIR = './data/things/json'
@@ -347,26 +349,26 @@ def run_patch():
     print("=" * 50)
 
     # 加载武器数据
-    print("\n[1/5] 加载武器数据...")
+    print("\n[1/6] 加载武器数据...")
     arms_data = load_arms_data()
     if not arms_data:
         print("[!] 无法加载武器数据，补丁中止")
         return
 
     # 加载 things 数据
-    print("\n[2/5] 加载 Things 数据...")
+    print("\n[2/6] 加载 Things 数据...")
     things_index = load_things_data()
     if not things_index:
         print("[!] 无法加载 Things 数据，补丁中止")
         return
 
     # 生成缺失的稀有碎片
-    print("\n[3/5] 生成缺失的稀有武器碎片...")
+    print("\n[3/6] 生成缺失的稀有武器碎片...")
     generated_count = generate_rare_chips(things_index, arms_data)
     print(f"[OK] 生成了 {generated_count} 个稀有碎片")
 
     # 匹配并修补
-    print("\n[4/5] 应用补丁...")
+    print("\n[4/6] 应用补丁...")
 
     patch_stats = {
         'black_weapon_chips': 0,
@@ -431,6 +433,33 @@ def run_patch():
             except Exception as e:
                 print(f"  [!] 保存 {thing_name} 失败: {e}")
 
+    # 生成 Excel 批量更新表
+    print(f"\n[6/6] 生成 Excel 批量更新表...")
+    excel_data = []
+    excel_patched_count = 0
+
+    for thing_name, thing_info in things_index.items():
+        thing_data = thing_info['data']
+        # 只包含被修补过或新生成的数据
+        if thing_data.get('_patched') or thing_data.get('_generated'):
+            excel_data.append({
+                "PageName": f"Data:Things/{thing_data['name']}.json",
+                "Content": json.dumps(thing_data, ensure_ascii=False)
+            })
+            excel_patched_count += 1
+
+    if excel_data:
+        EXCEL_OUT_DIR = './data/things'
+        os.makedirs(EXCEL_OUT_DIR, exist_ok=True)
+        EXCEL_NAME = f'{EXCEL_OUT_DIR}/物品数据更新_补全_{datetime.datetime.now().strftime("%Y%m%d_%H%M%S")}.xlsx'
+
+        df = pd.DataFrame(excel_data)
+        df.to_excel(EXCEL_NAME, index=False, header=False)
+        print(f"  [OK] Excel 已生成: {EXCEL_NAME}")
+        print(f"       包含 {excel_patched_count} 条更新记录")
+    else:
+        print("  [!] 没有需要更新的数据，跳过 Excel 生成")
+
     # 统计报告
     print("\n" + "=" * 50)
     print(" 补丁完成报告")
@@ -441,6 +470,8 @@ def run_patch():
     print(f" 跳过 (无匹配武器): {patch_stats['skipped']}")
     print(f" 错误: {patch_stats['errors']}")
     print(f" 文件已更新/生成: {total_patched}")
+    if excel_data:
+        print(f" Excel 更新记录: {excel_patched_count}")
     print("=" * 50)
 
 
