@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="normal">
+		<body name="no" cnName="空"></body>
+	</father>
+<father name="bulletLine">
+	<body cnName="普通射线" name="longLine">longLine</body>
+	<body cnName="静止闪电" name="staticLightning" raNum="30" con="filter" len="50" time="0.03" waveAn="45" everFleshB="1" imgDieType="ranStop">generalEffect/lineLightning</body>
+	<body cnName="线条闪电" name="lineLightning" raNum="30" con="add" len="50" time="0.2" waveAn="45" imgDieType="ranPlay">generalEffect/lineLightning</body>
+	<body cnName="移动闪电" name="moveLightning" raNum="30" con="add" len="50" time="0.2" waveAn="45" everFleshB="1" imgDieType="ranPlay">generalEffect/lineLightning</body>
+	<body cnName="银狐射线" name="foxLightning" raNum="30" con="add" len="26" time="0.2" waveAn="35" everFleshB="1" imgDieType="stop">bullet/laserFox</body>
+	
+	 <body cnName="孔雀射线" name="peacockLine" raNum="30" con="add" len="34" everFleshB="1" imgDieType="die" time="-1" bottomLayerB="1">bullet/blueFire</body>
+</father>
+
+<father name="bulletLine" cnName="线性子弹" num="7">
+  <body raNum="60" con="add" len="20" everFleshB="1" imgDieType="die" time="-1" bottomLayerB="1" name="lightCone_bullet" cnName="光锥激光">bullet/blueLaser</body>
+  <body raNum="60" con="add" len="28" everFleshB="1" imgDieType="die" time="-1" bottomLayerB="1" name="extremeLaser_bullet" cnName="极源激光">bullet/purLaserBig</body>
+  <body raNum="30" con="add" len="50" time="0.034" waveAn="30" imgDieType="ranPlay" name="BallLightning_frozenLine_bullet" cnName="冰冻连线">generalEffect/lineLightning</body>
+  <body raNum="30" con="filter" len="50" time="0.03" waveAn="45" everFleshB="1" imgDieType="ranStop" name="yearDragon_bullet" cnName="辰龙闪电">generalEffect/lineLightning</body>
+  <body raNum="30" con="filter" len="50" time="0.1" waveAn="45" everFleshB="1" imgDieType="ranStop" soundUrl="IronChiefS/clear1" name="clearAttackIron_point" cnName="缴械射线">generalEffect/lineLightning</body>
+  <body raNum="30" con="filter" len="30" time="0.03" waveAn="15" imgDieType="die" name="yearChicken_bullet" cnName="酉鸡射线">specialGun/yearChickenBullet</body>
+  <body raNum="30" con="filter" len="30" time="0.03" imgDieType="die" name="yearSheep_bullet" cnName="未羊射线">specialGun/yearSheepBullet</body>
+  
+  <body cnName="治疗射线" name="laserBlackLine" raNum="30" con="add" len="26" time="0.2" waveAn="35" everFleshB="1" imgDieType="stop">bullet/laserBlack</body>
+</father>
+
+<![CDATA[爆炸火光]]>
+<father name="boom" cnName="爆炸火光" num="24">
+<body soundUrl="boomSound/smallBoom" name="imploding_enemy_hit" cnName="小爆炸">boomEffect/boom1</body>
+<body soundUrl="boomSound/midBoom1" name="squibDevice_hit" cnName="中爆炸">boomEffect/boom2</body>
+<body soundUrl="sound/pointBoom_hero" shake="3,0.4,30" name="pointBoom_hero_hit" cnName="大爆炸">boomEffect/boom3</body>
+<body soundUrl="boomSound/bigBoom" shake="5,0.4,13" name="BoomSkullS_boom_hit" cnName="大爆炸-快速">boomEffect/bigCircle</body>
+<body con="add" soundUrl="SpiderKing/shoot_hit" name="SpiderKing_shoot_hit" cnName="小毒爆">boomEffect/posion1</body>
+<body soundUrl="sound/pointBoom_hero" shake="3,0.4,30" name="selfBoom_GasBomb_hit" cnName="大毒爆">boomEffect/posion3</body>
+<body con="add" soundUrl="sound/hummer_hit" name="revengeGhost_hit" cnName="固体爆裂">boomEffect/midCan</body>
+  <body soundUrl="boomSound/boom" shake="3,0.4,13" name="BoomSkullS_box_hit" cnName="木头爆炸">boomEffect/midWood</body>
+  
+<body con="add" name="extremeLaserFire_boom" cnName="烈焰大地-冒烟">boomEffect/smoke2</body>
+  <body con="add" name="extremeLightning_boom" cnName="闪电极源-自爆">generalEffect/frozenBallHide</body>
+  <body soundUrl="boomSound/midBoom2" soundVolume="0.5" con="add" name="beadCrossbow_boom" cnName="烟花弩-自爆">specialGun/beadBoom</body>
+  
+
+
+  
+ <body soundUrl="boomSound/bigBoom" name="defendBeiDou_hitFloor" cnName="保卫北斗-爆炸">boomEffect/bigCircle</body>
+  <body soundUrl="boomSound/midBoom2" soundVolume="0.7" shake="3,0.4,13" name="yearDog_boom" cnName="戌狗-爆炸">boomEffect/bigCircle</body>
+  <body con="add" soundUrl="sound/fireHit2" name="skeletonWandBullet_hit" cnName="骷髅权杖-子弹-爆炸">boomEffect/bigCircle</body>
+  <body soundUrl="boomSound/smallBoom" soundVolume="0.3" shake="3,0.4,13" name="RifleHornetShooter_hit" cnName="赤鼬导弹发射器-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/midBoom2" soundVolume="0.3" name="rocketMammothSun_hit" cnName="熔炉-子弹-小爆">boomEffect/boom1</body>
+  <body soundUrl="sound/body_hit" name="fightBackBullet_hit" cnName="反击导弹-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/midBoom2" name="VanityKer_missle_hit" cnName="虚空客-导弹-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/midBoom1" soundVolume="0.3" shake="3,0.4,13" name="Mammoth_missileChip_hit" cnName="洲际导弹碎片-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/microBoom2" soundVolume="0.1" name="FastGuards_missileSun_hit" cnName="超级弹幕-孙弹-小爆">boomEffect/boom1</body>
+  <body soundUrl="sound/fireHit1" shake="3,0.4,9" soundVolume="0.5" con="add" name="yearPig_hitFloor" cnName="亥猪-小爆">boomEffect/boom1</body>
+  <body soundUrl="sound/fireHit2" name="CheetahCarBullet_hit" cnName="古飙火球-小爆">boomEffect/boom1</body>
+  <body soundUrl="sound/fireHit2" soundVolume="0.3" name="rocketCate_hit" cnName="卡特巨炮-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/microBoom2" name="XiaoMei_pistol_hit" cnName="小美-手枪-小爆">boomEffect/boom1</body>
+  <body soundUrl="sound/fireHit1" soundVolume="0.5" name="redFire_hitFloor" cnName="猩焰-小爆">boomEffect/boom1</body>
+  <body soundUrl="sound/fireHit1" name="redFire_hitFloor" cnName="火球-小爆">boomEffect/boom1</body>
+  <body shake="3,0.3,15" name="ArthurRocket180_hit" cnName="超范围火炮-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/midBoom2" shake="3,0.4,13" name="PetBoomSkullS_shoot1_hit" cnName="爆骷S-跟踪导弹-小爆">boomEffect/boom1</body>
+  
+  <body soundUrl="boomSound/smallBoom" shake="3,0.4,9" soundVolume="0.5" name="rocket1_hitFloor" cnName="火箭筒-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/microBoom" name="imploding_godArmsSkill_hit" cnName="爆石-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/midBoom2" soundVolume="0.3" shake="3,0.4,13" name="endlessRocket_hit" cnName="无尽轰炮-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/microBoom1" soundVolume="0.3" name="LastdayBigChild_hit" cnName="烟花炮-子弹-小爆">boomEffect/boom1</body>
+  <body soundUrl="boomSound/microBoom" soundVolume="0.5" name="endlessRocket_hitFloor" cnName="无尽轰炮-小爆">boomEffect/boom1</body>
+  
+  
+  <body con="add" name="extremeRocket_fire" cnName="一般中爆">boomEffect/boom2</body>
+  <body soundUrl="boomSound/midBoom1" shake="3,0.4,15" name="old_rocket_hit" cnName="古老的火炮-中爆">boomEffect/boom2</body>
+  <body soundUrl="sound/magicHit2" shake="2,0.2,10" con="add" name="extremeRocket_hit" cnName="擎天极源-中爆">boomEffect/boom2</body>
+  <body soundUrl="boomSound/midBoom1" soundVolume="0.3" shake="3,0.3,15" name="ZombieShell_rocket_hit" cnName="僵尸炮兵总管-火炮-中爆">boomEffect/boom2</body>
+  <body soundUrl="sound/fireHit2" soundVolume="0.3" name="redFire_hit" cnName="猩焰-中爆">boomEffect/boom2</body>
+  <body soundUrl="sound/fireHit2" name="WatchEagle_wind_hit" cnName="守望者-飓风-中爆">boomEffect/boom2</body>
+  <body soundUrl="boomSound/microBoom2" shake="3,0.4,13" name="BoomSkullS_general_hit" cnName="爆骷S-普通导弹-中爆">boomEffect/boom2</body>
+  <body soundUrl="sound/fireHit1" soundVolume="0.3" shake="3,0.4,13" name="Nian_spark_hit" cnName="驾驭星火-中爆">boomEffect/boom2</body>
+  <body soundUrl="boomSound/midBoom1" soundVolume="0.3" shake="3,0.4,13" name="rocket1_hit" cnName="火箭筒-中爆">boomEffect/boom2</body>
+  <body soundUrl="boomSound/midBoom2" shake="3,0.4,13" name="BoomSkullS_follow_hit" cnName="爆骷S-跟踪导弹-中爆">boomEffect/boom2</body>
+  <body soundUrl="sound/fireHit2" soundVolume="0.3" shake="3,0.4,13" con="add" name="yearPig_hit" cnName="亥猪-中爆">boomEffect/boom2</body>
+  <body soundVolume="0.4" soundUrl="boomSound/midBoom2" name="rainBulletIron_hit" cnName="冥王暴雨-中爆">boomEffect/boom2</body>
+  <body soundUrl="boomSound/microBoom2" name="LastdayBig_hit" cnName="烟花炮-母弹-中爆">boomEffect/boom2</body>
+  <body soundUrl="sound/vehicle_hit1" name="babyBoom_skull_hit" cnName="爆骷-婴儿潮-中爆">boomEffect/boom2</body>
+  <body soundUrl="boomSound/midBoom2" soundVolume="0.3" shake="3,0.4,13" name="LastdayMissle_hit" cnName="跟踪导弹-中爆">boomEffect/boom2</body>
+  <body soundVolume="0.2" soundUrl="boomSound/midBoom2" name="DiggingRainBullet_hit" cnName="锥雨-蓝色-中爆">boomEffect/boom2</body>
+  <body soundUrl="sound/magicHit2" name="bangerGunSkill_hit" cnName="炮仗-中爆">boomEffect/boom2</body>
+  
+  <body shake="2,0.2,15" soundUrl="boomSound/midBoom2" name="boom_headless_hit" cnName="自爆僵尸炸弹-中爆">boomEffect/boom2</body>
+  <body soundUrl="boomSound/midBoom2" name="bulletRainBullet_hit" cnName="枪林弹雨-导弹-中爆">boomEffect/boom2</body>
+  
+  <body soundUrl="sound/fireHit2" name="defendBeiDou_boom" cnName="保卫北斗-大爆">boomEffect/boom3</body>
+  <body soundUrl="boomSound/midBoom2" name="PoliceZombieBullet_hit" cnName="炸弹-大爆">boomEffect/boom3</body>
+  <body soundUrl="boomSound/midBoom1" shake="2,0.2,10" name="LastdayBig3_hit" cnName="三连炮-大爆">boomEffect/boom3</body>
+  <body soundUrl="sound/magicHit2" shake="2,0.2,10" con="add" name="GaiaFit_main_hit" cnName="轰天雷-主炮-大爆">boomEffect/boom3</body>
+  
+  <body con="add" soundUrl="HugePoison/shoot_hit" name="yearCattle_hit" cnName="丑牛-毒爆">boomEffect/posion1</body>
+  <body con="add" soundUrl="HugePoison/shoot_hit" soundVolume="0.3" name="HugePoison_shake_hit" cnName="巨毒尸-毒震-毒爆">boomEffect/posion1</body>
+  <body con="add" soundUrl="sound/water_hit" name="ZombieWolf_shoot_hit" cnName="嗜血尸狼-喷毒-毒爆">boomEffect/posion1</body>
+  
+ <body soundUrl="boomSound/midBoom2" soundVolume="0.7" shake="3,0.4,13" name="bigSoilBoom" cnName="垂直爆炸">boomEffect/bigSoil</body>
+   <![CDATA[火光]]>
+  
+   <body soundUrl="sound/changeToZombie_enemy" con="add" name="zoomOutBullet_hit" cnName="大闪光">boomEffect/showLight</body>
+  <body soundUrl="sound/bigShoot" name="RedMoto_main_fire" cnName="赤焰-主炮-火光">gunFire/f</body>
+  <body soundUrl="GaiaFit/shoot" name="BlueMoto_main_fire" cnName="幽鬼-主炮-火光">gunFire/f</body>
+  <body raNum="30" soundUrl="pistol1/barrel4_sound" name="DesertTank_sub_fire" cnName="沙漠进袭者-副炮-火光">gunFire/f</body>
+  <body raNum="30" soundUrl="ak/barrel2_sound" name="Daybreak_sub_fire" cnName="破晓-副炮-火光">gunFire/f</body>
+  <body raNum="30" soundUrl="ak/barrel5_sound" name="Diggers_main_fire" cnName="挖掘者-散弹-火光">gunFire/f</body>
+  <body raNum="30" soundUrl="m4/barrel_sound" name="Prophet_sub_fire" cnName="先知-副炮-火光">gunFire/f</body>
+  <body raNum="30" soundUrl="ak/barrel5_sound" name="Titans_sub_fire" cnName="泰坦-副炮-火光">gunFire/f1</body>
+  <body raNum="30" soundUrl="rocket/barrel_sound" con="add" name="Prophet_main_fire" cnName="先知-主炮-火光">gunFire/rocket</body>
+  <body raNum="30" soundUrl="rocket/barrel2_sound" con="add" name="DesertTank_main_fire" cnName="沙漠进袭者-主炮-火光">gunFire/rocket</body>
+  <body raNum="30" con="add" name="gunFireRocket" cnName="火炮火光">gunFire/rocket</body>
+  <body raNum="1" con="add" name="yearMonkey_fire" cnName="申猴-火光">specialGun/christmasGunBoom</body>
+  <body raNum="15" name="christmasGun_fire" cnName="圣诞礼炮-火光">specialGun/christmasGunFire</body>
+  <body soundUrl="terroristBoxEffect/hit1" name="terroristBox_boom" cnName="恐怖盒子-自爆">terroristBoxEffect/effect</body>
+  
+  <body soundUrl="GaiaFit/shoot" name="GaiaFit_main_fire" cnName="轰天雷-主炮-音效"/>
+  <body soundUrl="AircraftGun/shoot" name="AircraftGun_main_fire" cnName="狩猎者-音效"/>
+  <body soundUrl="CivilianFit/shoot" name="CivilianFit_main_fire" cnName="镇山虎-主炮-音效"/>
+  <body soundUrl="sound/laserShoot" name="Punisher_sub_fire" cnName="制裁者-副炮-音效"/>
+  <body soundUrl="FlyFit/shoot" name="FlyFit_main_fire" cnName="霸空雕-主炮-音效"/>
+  <body soundUrl="sound/bigShoot" name="Punisher_main_fire" cnName="制裁者-主炮-音效"/>
+</father>
+
+<![CDATA[状态]]>
+<father name="state" cnName="状态" num="135">
+  <body partType="mouth" name="gmMask3_state" cnName="丛安面具-状态">AnniverUI/congan</body>
+  <body partType="mouth" name="gmMask1_state" cnName="花火面具-状态">AnniverUI/huahuo</body>
+  <body partType="mouth" name="gmMask2_state" cnName="沃龙面具-状态">AnniverUI/wolong</body>
+  <body con="filter" name="Antimatter_hammer_add" cnName="击中眩晕-添加">Antimatter/effect</body>
+  <body partType="foot_left,foot_right" con="filter" name="blade_blueMoto_state" cnName="冻血刀锋-状态">BlueMoto/blade</body>
+  <body partType="body" con="add" name="Bubbles_blue_state" cnName="蓝-状态">Bubbles/blue</body>
+  <body partType="body" con="add" name="Bubbles_green_state" cnName="绿-状态">Bubbles/green</body>
+  <body partType="" con="filter" name="DuelistEffect_state" cnName="决斗者-特效预处理-状态">Duelist/kickEffect</body>
+  <body partType="body" con="add" name="eleField_FastGuards_link_state" cnName="静电场-吸附-状态">FastGuards/eleHit</body>
+  <body con="filter" name="FastGuards_spring_state" cnName="极速伤害-状态">FastGuards/springEffect</body>
+  <body partType="hand_left" con="add" name="windAttack_FightShooter_state" cnName="旋风刀-状态">FightShooter/shoot_bullet</body>
+  <body partType="body" con="add" soundUrl="LastdayTank/shield1" name="LastdaySpellImmunity_state" cnName="免疫护罩-状态">LastdayTank/spellImmunityShield</body>
+  <body con="filter" name="madArmsAttack_state" cnName="擎天斩-状态">Madboss/armsAttEffect</body>
+  <body name="MadbossUnderBuff_state" cnName="武器抵抗-状态">Madboss/underBuff</body>
+  <body con="add" name="Mammoth_missileChip_state" cnName="洲际导弹-自爆-状态">Mammoth/blueElec</body>
+  <body con="add" name="Mammoth_missileChip_state2" cnName="洲际导弹-自爆-状态2">Mammoth/redElec</body>
+  <body partType="2eye,2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="filter" name="Nian_change_state" cnName="恶魔火-状态">NianMonster/sparkBullet</body>
+  <body partType="mouth" con="add" name="SaberTiger_shield_anger_state" cnName="超导电幕-怒气-状态">SaberTiger/angerEffect</body>
+  <body partType="body" con="add" name="SaberTiger_shield_first_state" cnName="超导电幕-第一阶段-状态">SaberTiger/shield1</body>
+  <body con="add" noShowB="1" name="SaberTiger_shield_state" cnName="超导电幕-状态">SaberTiger/shield1</body>
+  <body con="add" noShowB="1" name="SaberTiger_shield_state2" cnName="超导电幕-状态2">SaberTiger/shield2</body>
+  <body partType="body" con="add" name="SaberTiger_shield_second_state" cnName="超导电幕-第二阶段-状态">SaberTiger/shield2</body>
+  <body partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="add" name="Salamander_back_state" cnName="融弹回血-状态">Salamander/bubbling</body>
+  <body con="add" name="shotgunBlade_ArmsSkill_state2" cnName="跳斩-状态2">Striker/bladeDownEffect</body>
+  <body con="add" name="shotgunBlade_ArmsSkill_state" cnName="跳斩-状态">Striker/bladeUpEffect</body>
+  <body partType="body" con="add" name="invincible_eeg_state" cnName="无敌光环-状态">Triceratops/energyShield</body>
+  <body partType="body" con="add" name="VanityKer_rayBuff_state" cnName="解析射线-状态">VanityKer/rayBuff</body>
+  <body noShowB="1" noFollowB="1" randomRange="1" con="add" name="windThunder_ArmsSkill_state" cnName="风雷-状态">bullet/lightning1</body>
+  <body noShowB="1" noFollowB="1" randomRange="1" con="add" name="windThunder_ArmsSkill_state2" cnName="风雷-状态2">bullet/lightning2</body>
+  <body partType="shootPoint" con="add" raNum="1" name="yearDragonSkill_state" cnName="电爆-状态">bulletHitEffect/blueLaser</body>
+  <body partType="shootPoint" con="filter" raNum="30" name="cyanArmySkill_state" cnName="无敌之怒-状态">bulletHitEffect/fireSmoke</body>
+  <body partType="shootPoint" raNum="25" followPartRaB="1" name="KingRabbitKingHit_state2" cnName="王者之箭-击中-状态2">bulletHitEffect/smoke_black</body>
+  <body partType="shootPoint,hand_left,hand_right" raNum="25" followPartRaB="1" name="rainBulletHitIron_state" cnName="腐蚀-状态">bulletHitEffect/smoke_black</body>
+  <body partType="2eye" raNum="25" followPartRaB="1" name="blindnessPhantomHit_state" cnName="腐蚀-状态">bulletHitEffect/smoke_black</body>
+  <body partType="arm_right_1,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="filter" raNum="30" name="invisibility_enemy_state" cnName="隐匿之雾-状态">bulletHitEffect/smoke_small</body>
+  <body partType="mouth" con="filter" raNum="30" name="Triceratops_deserted_state2" cnName="饥荒-状态2">bulletHitEffect/smoke_small</body>
+  <body partType="2hand" con="add" raNum="30" name="SnowFattySprint_state" cnName="千斤顶-状态">bulletHitEffect/smoke_small</body>
+  <body partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="add" raNum="30" name="ironBody_enemy_state" cnName="钢铁之躯-状态">bulletHitEffect/smoke_small</body>
+  <body partType="2foot" con="add" raNum="30" name="groupSpeedUp_enemy_state" cnName="群体加速-状态">bulletHitEffect/smoke_small</body>
+  <body partType="hand_right" con="filter" raNum="30" name="boom_headless_add" cnName="自爆炸弹-添加">bulletHitEffect/spark_motion</body>
+  <body partType="body" con="add" name="acidicParts_state" cnName="酸性腐蚀-状态">generalEffect/bigPoison</body>
+  <body partType="foot_left,foot_right" con="filter" name="blueMoto_state_state" cnName="特效-状态">generalEffect/bladeNormal</body>
+  <body partType="body" con="add" name="skeletonCard_link_state" cnName="骷髅卡扣血-状态">generalEffect/bloodLoss</body>
+  <body partType="hand_right" con="add" name="murderous_vehicle_state" cnName="核动力-状态">generalEffect/crazy</body>
+  <body con="add" partType="body" name="KingRabbitKingHit_state" cnName="王者之箭-击中-状态">generalEffect/crazy</body>
+  <body partType="body" con="add" name="BallLightning_electric_state" cnName="电磁敏感-状态">generalEffect/electricBallBig</body>
+  <body partType="body" con="add" name="gas_WatchEagle_state" cnName="燃气-状态">generalEffect/fire</body>
+  <body partType="mouth" con="add" name="tauntLing_link_state" cnName="嘲讽敌人-状态">generalEffect/fire</body>
+  <body partType="body" con="add" name="BallLightning_fire_state" cnName="火焰敏感-状态">generalEffect/fireBallBig</body>
+  <body partType="head" con="add" name="ballPhantomZ_state" cnName="闪电外壳-状态">generalEffect/frozenBallBig</body>
+  <body partType="body" con="add" name="BallLightning_frozen_state" cnName="冷冻敏感-状态">generalEffect/frozenBallBig</body>
+  <body partType="mouth" con="add" name="Triceratops_deserted_state" cnName="饥荒-状态">generalEffect/headSmoke</body>
+  <body partType="body" con="add" name="strongLing_state" cnName="遇强则刚-状态">generalEffect/hurtDefence1</body>
+  <body partType="body" name="FoggyDefence_state" cnName="抵御-状态">generalEffect/invincibleShield</body>
+  <body partType="body" con="add" name="MeatyShield_state" cnName="反击护盾-状态">generalEffect/invincibleShield</body>
+  <body partType="body" con="add" raNum="1" name="charged_BlackLaer_state" cnName="充能-状态">generalEffect/lakeBuff</body>
+  <body partType="body" con="add" name="nearAddLifeLove_state" cnName="靠近回血-状态">generalEffect/lifeReply</body>
+  <body partType="shootPoint" con="add" raNum="30" followPartRaB="1" name="crazy_vehicle_state" cnName="核弹头-状态">generalEffect/murderous</body>
+  <body partType="2hand" con="add" raNum="30" followPartRaB="1" name="crazy_vehicle_hand" cnName="核弹头-状态">generalEffect/murderous</body>
+  <body partType="body" con="add" name="WarriorShield_state" cnName="空虚装甲-状态">generalEffect/nothing</body>
+  <body partType="leg_right_1,leg_left_1,arm_right_1,arm_left_1,mouth" con="add" name="MadbossBuff_state" cnName="全身发光、走路带烟-状态">generalEffect/purBigLight</body>
+  <body partType="mouth" con="add" name="FoggyShakeHit_state" cnName="斩击buff-状态">generalEffect/purpleFace</body>
+  <body partType="body" con="add" name="outfit_elephant_state" cnName="遁形-状态">generalEffect/spellImmunityShield</body>
+  <body con="filter" partType="body" name="WatchEagleAirDefence_state" cnName="守望之盾-状态">generalEffect/subductionEffect</body>
+  <body partType="head" con="add" name="waterFlamer_ArmsSkill_state" cnName="湿身-状态">generalEffect/waterFace</body>
+  <body partType="head" name="onlyWeaponHurtBattle_add" cnName="只受副手伤害-添加">generalEffect/weaponKill</body>
+  <body partType="head" name="pumpkinDropEffect_state" cnName="怪物带着南关头-状态">pumpkinHead/effect</body>
+  <body partType="2eye" con="add" name="crazyMad_state2" cnName="觉醒-状态2">skillEffect/crazy_hero_eye</body>
+  <body partType="2hand,shootPoint" name="shortLivedDisabledUnderHit_state" cnName="短命之仇-受到攻击-状态">skillEffect/disabledBig</body>
+  <body partType="2hand" name="MeatyDesertedHalo_state" cnName="荒芜光环-状态">skillEffect/disabled_enemy</body>
+  <body partType="2foot" name="PoisonDemonHit_state" cnName="闪击-减速目标-状态">skillEffect/disabled_enemy</body>
+  <body partType="2hand,arm_right_0,arm_right_1,arm_left_0,arm_left_1" name="shotgunBladeHero_state" cnName="英雄跳斩-降低目标攻击力-状态">skillEffect/disabled_enemy</body>
+  <body partType="2eye" name="lightConeSkill_state" cnName="炫目-状态">skillEffect/disabled_enemy</body>
+  <body partType="mouth" con="add" soundUrl="sound/vehicle_hit1" name="Antimatter_hammer_state" cnName="击中眩晕-状态">skillEffect/dizziness</body>
+  <body partType="mouth" con="add" name="pullAttackHit_state" cnName="抓捕-击中-状态">skillEffect/dizziness</body>
+  <body partType="mouth" con="add" name="eleOverlap_hero_state" cnName="元素叠加-状态">skillEffect/eleOverlap</body>
+  <body con="add" name="jiaozi_state" cnName="饺子无敌状态-状态">skillEffect/energyShield</body>
+  <body partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="add" imgDieType="last" name="feedback_enemy_state" cnName="电离折射-状态">skillEffect/feedback_hero_part</body>
+  <body partType="2hand" con="add" name="globalSpurting_enemy_state" cnName="全局溅射-状态">skillEffect/globalSpurting_enemy</body>
+  <body partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="add" raNum="1" name="laser_FightWolf_state" cnName="灼热视线-状态">skillEffect/laserHeat</body>
+  <body partType="head" con="add" name="shortLivedDisabled_state" cnName="短命之仇-状态">skillEffect/lifeReplace_enemy_bullet</body>
+  <body partType="mouth" con="add" raNum="1" name="lightLake_state" cnName="光能-状态">skillEffect/lightLake</body>
+  <body partType="mouth" con="add" name="lookDown_hero_state" cnName="藐视-状态">skillEffect/lookDown</body>
+  <body partType="mouth" con="add" name="electromagnet_state" cnName="磁力场-状态">skillEffect/magneticField</body>
+  <body partType="body" con="add" raNum="30" followPartRaB="1" name="boundless_enemy_link_state" cnName="无疆统治-吸附-状态">skillEffect/magneticField_paralysis</body>
+  <body partType="shootPoint" con="add" raNum="30" followPartRaB="1" name="ballPhantomZ_link_state" cnName="闪电外壳-曲扭光环-状态">skillEffect/magneticField_paralysis</body>
+  <body partType="2hand" con="add" raNum="30" followPartRaB="1" name="murderous_hero_state" cnName="嗜爪-状态">skillEffect/murderous_enemy</body>
+  <body partType="2hand" con="add" raNum="15" followPartRaB="1" name="murderous_enemy_state" cnName="嗜爪-状态">skillEffect/murderous_enemy</body>
+  <body partType="mouth" con="add" raNum="1" name="nightLing_state" cnName="暗夜信徒-状态">skillEffect/nightLing</body>
+  <body con="add" name="noMoveWarrior_state" cnName="麻痹-状态">skillEffect/paralysis_enemy</body>
+  <body con="add" soundUrl="sound/paralysis_enemy_hit" name="BlackLaer_hitParalysis_state" cnName="静电麻痹-状态">skillEffect/paralysis_enemy</body>
+  <body partType="2hand" con="filter" raNum="30" name="corrosion_hugePosion_state" cnName="蚀毒-状态">skillEffect/poisonClaw_enemy</body>
+  <body partType="2foot" con="filter" raNum="30" name="TransportZombieThrowHit_state" cnName="击退-状态">skillEffect/poisonClaw_enemy</body>
+  <body partType="2hand" con="filter" raNum="20" name="poisonClaw_enemy_add" cnName="毒爪-添加">skillEffect/poisonClaw_enemy</body>
+  <body partType="2hand" con="filter" raNum="20" name="posion7_hugePosion_add" cnName="七步毒-添加">skillEffect/poisonousFog_hero</body>
+  <body partType="hand_right" con="filter" raNum="20" name="corrosion_hugePosion_add" cnName="蚀毒-添加">skillEffect/poisonousFog_hero</body>
+  <body partType="mouth" con="add" name="LaborZombieBoomBuff_state" cnName="爆瓶buff-状态">skillEffect/poisonousFog_hero</body>
+  <body partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="filter" raNum="30" name="yearCattleSkill_state" cnName="周二大吉-状态">skillEffect/poisonousFog_hero</body>
+  <body partType="body,head" con="filter" raNum="20" name="suicide_GasBomb_add" cnName="毒气弹-靠近自爆-添加">skillEffect/poisonousFog_hero</body>
+  <body partType="shootPoint" con="filter" raNum="30" followPartRaB="1" name="resonanceLing_state" cnName="共鸣-状态">skillEffect/purpleFire</body>
+  <body partType="body,arm_right_1,arm_left_1,leg_right_1,leg_left_1" con="add" raNum="25" name="wisdomAnger_hero_state" cnName="智慧怒火-状态">skillEffect/purpleFire</body>
+  <body partType="2hand" con="add" name="moreBullet_state" cnName="超级散射-状态">skillEffect/redCircle</body>
+  <body partType="arm_right_1,arm_left_1,leg_right_1,leg_left_1" con="add" raNum="30" name="xiaoAiShoot_state" cnName="小炎戒-状态">skillEffect/redFire</body>
+  <body partType="arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="filter" raNum="30" name="superHighDrill_state" cnName="超能推撞-状态">skillEffect/redFire</body>
+  <body partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="add" imgDieType="last" name="groupReverseHurt_enemy_state" cnName="反转术-状态">skillEffect/reverseHurt_enemy</body>
+  <body con="filter" raNum="1" name="rolling_hero_state" cnName="翻滚-状态">skillEffect/rollingShadow</body>
+  <body partType="head" name="outfit_blood_state" cnName="坏血-状态">skillEffect/rune_black_n</body>
+  <body partType="mouth" con="add" name="armyCommanderSkill_state" cnName="鼓舞士气-状态">skillEffect/rune_blue_shield</body>
+  <body partType="body" con="add" name="vertigoArmorIron_state" cnName="眩晕护甲-状态">skillEffect/rune_blue_shield</body>
+  <body partType="mouth" con="add" name="rebirth_enemy_add" cnName="重生-添加">skillEffect/rune_green_r</body>
+  <body partType="mouth" con="add" name="recovery_enemy_add" cnName="复原-添加">skillEffect/rune_red_e</body>
+  <body partType="mouth" con="add" name="strongHalo_equip_state" cnName="顽强光环-状态">skillEffect/rune_red_shield</body>
+  <body partType="mouth" con="add" name="comboPhantomZHit_state" cnName="减速-状态">skillEffect/screaming_hero_target</body>
+  <body partType="mouth" con="filter" name="elementsBlue_state" cnName="使自身恐惧-状态">skillEffect/screaming_hero_target</body>
+  <body partType="mouth" con="add" name="PoliceZombieShakeHit_state" cnName="封锁被动技能-状态">skillEffect/silenceMore</body>
+  <body partType="mouth" con="add" name="silenceWarrior_state" cnName="沉默-状态">skillEffect/silence_enemy</body>
+  <body partType="2eye" con="filter" raNum="30" name="PoliceZombieCharge_state" cnName="充能-状态">skillEffect/smallFire</body>
+  <body partType="2eye,2hand" con="filter" raNum="30" name="maxSpeedTask_state" cnName="极限射速-状态">skillEffect/smallFire</body>
+  <body partType="2hand,2leg" con="filter" raNum="30" name="crazy_sanji_state" cnName="恶魔风脚-状态">skillEffect/smallFire</body>
+  <body partType="shootPoint" con="filter" raNum="30" name="globalSpurting_hero_state2" cnName="全局溅射-状态2">skillEffect/smallFire</body>
+  <body partType="2hand" con="filter" raNum="30" name="moonCake_state" cnName="月饼增加攻击力-状态">skillEffect/smallFire</body>
+  <body partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="add" raNum="30" name="selfBurn_task_add" cnName="自燃-添加">skillEffect/smallFire</body>
+  <body partType="2hand,2foot" con="filter" raNum="30" name="feeding_wolf_state" cnName="反哺-状态">skillEffect/smallFire</body>
+  <body partType="hand_left" con="filter" name="knife_skeleton_state" cnName="地狱之刃-状态">skillEffect/smallFire</body>
+  <body partType="2hand" con="add" raNum="30" name="agile_PetLake_state" cnName="敏捷光环-状态">skillEffect/smallFire</body>
+  <body partType="shootPoint" con="filter" raNum="30" followPartRaB="1" name="sameArmsHurtAddZang_state" cnName="相同武器伤害叠加-状态">skillEffect/smallFire</body>
+  <body partType="arm_right_1,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="add" raNum="25" name="gngerFire_pet_state" cnName="怒火-状态">skillEffect/smallFire</body>
+  <body con="filter" raNum="1" name="heroSprint_state" cnName="鬼步-状态">skillEffect/sprintShadow</body>
+  <body partType="shootPoint" con="add" raNum="30" followPartRaB="1" name="through_enemy_add" cnName="永久金刚钻-添加">skillEffect/through_hero</body>
+  <body partType="2hand" con="add" raNum="30" followPartRaB="1" name="trueshotLaer_state" cnName="强击光环-状态">skillEffect/trueshot_enemy</body>
+  <body partType="arm_right_1,arm_left_1" con="add" raNum="30" followPartRaB="1" name="fox_godArmsSkill2_state" cnName="强击蝙蝠-状态">skillEffect/trueshot_enemy</body>
+  <body partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="filter" raNum="1" name="wizardAnger_wind_state" cnName="巫尸之怒-状态">skillEffect/witchSmoke</body>
+  <body partType="2eye" con="add" name="penGunSkill_state" cnName="封眼-状态">specialGun/penGunBuff</body>
+  <body partType="head" con="add" name="pianoGunSkill_state" cnName="音爆-状态">specialGun/pianoGunBuff</body>
+  <body partType="body" con="add" name="yearRabbitSkill_state" cnName="包裹-状态">specialGun/yearRabbitBuff</body>
+  <body partType="body" con="add" imgDieType="stop" name="yearSnakeSkill_state" cnName="蛇刺-状态">specialGun/yearSnakeState</body>
+  
+  <body con="add" name="paralysisEyes" partType="2eye" cnName="闪电眼">skillEffect/paralysis_enemy_bullet</body>
+  <body cnName="竖盾状态" name="verShieldState" con="add">skillEffect/verShield</body>
+  <body cnName="竖盾状态2" name="verShieldMadState" con="add">skillEffect/verShield2</body>
+  <body cnName="红光眼" name="redEyes" con="add" partType="2eye">skillEffect/trueBoss</body>
+  
+  <body cnName="冰冻状态" name="frozenState" con="add" partType="body">generalEffect/frozen</body>
+	
+  
+  
+</father>
+
+<![CDATA[子弹]]>
+<father name="bullet" cnName="子弹" num="211">
+  <body raNum="30" con="filter" name="AircraftGun_main_bullet" cnName="狩猎者">AircraftGun/bullet</body>
+  <body raNum="1" con="add" name="lightBall_BlackLaer_bullet" cnName="黑暗雷尔-辐射光球">BlackLaer/ball</body>
+  <body raNum="30" con="filter" name="shoot_BlackLaer_bullet" cnName="黑暗雷尔-射击">BlackLaer/bullet</body>
+  <body raNum="2" name="BoomSkullS_boom_bullet" cnName="爆骷S-轰炸导弹">BoomSkullS/boomBullet</body>
+  <body raNum="2" name="BoomSkullS_box_bullet" cnName="爆骷S-箱子导弹">BoomSkullS/boxBullet</body>
+  <body raNum="30" name="BoomSkullS_follow_bullet" cnName="爆骷S-跟踪导弹">BoomSkullS/bullet1</body>
+  <body raNum="2" name="BoomSkullS_general_bullet" cnName="爆骷S-普通导弹">BoomSkullS/generalBullet</body>
+  <body raNum="30" name="BoomSkullS_para_bullet" cnName="爆骷S-抛物线导弹">BoomSkullS/paraBullet</body>
+  <body raNum="2" name="BoomWolf_bullet_bullet" cnName="火炮尸狼-火炮">BoomWolf/bullet_floor</body>
+  <body raNum="30" con="filter" name="CheetahCarBullet_bullet" cnName="古飙火球">CheetahCar/bullet</body>
+  <body raNum="30" name="CivilianFit_main_bullet" cnName="镇山虎-主炮">CivilianFit/bullet</body>
+  <body raNum="1" name="DiggingRainBullet_bullet" cnName="锥雨-蓝色">DiggingBeast/bullet</body>
+  <body raNum="1" name="DiggingRainBullet_red_bullet" cnName="锥雨-红色">DiggingBeast/redBullet</body>
+  <body raNum="1" name="DryFrog_shoot_bullet" cnName="投弹">DryFrog/bullet</body>
+  <body name="DryFrogPour_zero_bullet" cnName="倒炸弹-空弹">DryFrog/noBullet</body>
+  <body con="add" name="Duelist_shoot_bullet" cnName="射击">Duelist/bullet</body>
+  <body raNum="30" con="filter" name="FastGuards_shoot_bullet" cnName="射击">FastGuards/bullet</body>
+  <body raNum="30" name="FastGuards_missile_bullet" cnName="超级弹幕-母弹">FastGuards/missile</body>
+  <body raNum="30" name="FastGuards_missileChild_bullet" cnName="超级弹幕-子弹">FastGuards/missile2</body>
+  <body raNum="30" name="FastGuards_missileSun_bullet" cnName="超级弹幕-孙弹">FastGuards/missile3</body>
+  <body con="add" soundUrl="FastGuards/screenHit" shake="3,0.3,35,90" name="FastGuards_screen_bullet" cnName="致命打击">FastGuards/screenBullet</body>
+  <body con="add" name="knifeBoom_FightKing_bullet" cnName="狂刃爆发">FightKing/shoot_bullet</body>
+  <body name="FightPig_shoot_bullet" cnName="狂野收割者-飞刀">FightPig/bullet1</body>
+  <body con="add" soundUrl="FightPig/skill2" name="FightPig_thunder_bullet" cnName="雷霆斧击">FightPig/thunderBullet1</body>
+  <body con="add" raNum="30" name="rocket_fight_bullet" cnName="狂战戟">FightShooter/bullet</body>
+  <body raNum="30" con="filter" name="FireDragon_fireball_bullet" cnName="异角龙-火球">FireDragon/fireball</body>
+  <body raNum="30" con="add" name="FireDragon_combo_bullet" cnName="异祖龙-连续火球">FireDragon/fireball</body>
+  <body con="filter" raNum="30" name="elementsGreen_bullet" cnName="稀有元素-绿">FireWolf/elementsGreenBullet</body>
+  <body con="filter" raNum="30" name="elementsBlue_bullet" cnName="稀有元素-蓝">FireWolf/elementsPurpleBullet</body>
+  <body con="filter" raNum="30" name="elementsRed_bullet" cnName="稀有元素-红">FireWolf/elementsRedBullet</body>
+  <body con="filter" raNum="30" name="elementsYellow_bullet" cnName="稀有元素-黄">FireWolf/elementsYellowBullet</body>
+  <body con="filter" imgDieType="last" name="FireWolf_rockFireLink_bullet" cnName="墟洞岩火-火">FireWolf/fire1</body>
+  <body con="add" name="FireWolf_noName_bullet" cnName="虚炎狼-无名火">FireWolf/noFire</body>
+  <body name="FireWolf_rockFire_bullet" cnName="墟洞岩火-地面特效">FireWolf/rockFire</body>
+  <body name="FlyDragonBall_bullet" cnName="异角龙-金球">FlyDragon/drop</body>
+  <body raNum="30" name="FlyDragon_fireball_bullet" cnName="异角龙-火球">FlyDragon/fireball</body>
+  <body con="add" name="FlyFit_main_bullet" cnName="霸空雕-主炮">FlyFit/bullet</body>
+  <body name="GasDefense_1_bullet" cnName="飞扳">GasDefenseZombie/bullet</body>
+  <body raNum="1" name="HammerMummy_1_bullet" cnName="星锤干尸-飞锤">HammerMummy/bullet</body>
+  <body name="IceManShake_bullet" cnName="野帝-暴怒一击">IceMan/boom</body>
+  <body raNum="1" name="IceManShoot1_bullet" cnName="野帝-雪球">IceMan/bullet</body>
+  <body raNum="2" name="IceManKick_bullet" cnName="野帝-踢爆">IceMan/kickBullet</body>
+  <body raNum="1" name="rainBulletIron_bullet" cnName="冥王暴雨">IronChiefS/bullet</body>
+  <body raNum="2" name="IronZombieKing_floor_bullet" cnName="僵尸王地滚弹">IronZombieKing/bullet_floor</body>
+  <body raNum="2" con="filter" name="KingRabbit_king_bullet" cnName="王者之箭">KingRabbit/bigBullet</body>
+  <body raNum="3" con="filter" name="KingRabbit_more_bullet" cnName="无疆之箭">KingRabbit/bullet</body>
+  <body raNum="30" con="add" name="KingRabbit_shoot_bullet" cnName="王者兔-射击">KingRabbit/bullet</body>
+  <body raNum="30" name="Knights_shoot1_bullet" cnName="无疆骑士-流星拳">Knights/bullet1</body>
+  <body raNum="30" name="LastdayMissle_bullet" cnName="跟踪导弹">LastdayTank/bullet1</body>
+  <body name="lingGun_bullet" cnName="鬼目射手-武器">LingShooter/bullet</body>
+  <body con="filter" raNum="15" name="Mammoth_shoot_bullet" cnName="异猛象-喷球">Mammoth/ball</body>
+  <body con="add" name="Mammoth_electricity_bullet" cnName="异猛象-电磁风暴">Mammoth/elecBullet</body>
+  <body raNum="30" name="Mammoth_missile_bullet" cnName="洲际导弹">Mammoth/missile</body>
+  <body raNum="30" name="Mammoth_missileChip_bullet" cnName="洲际导弹碎片">Mammoth/missileChip</body>
+  <body con="add" name="MeatyBackBullet_bullet" cnName="反弹粒子">MeatyZombie/backBullet</body>
+  <body con="add" name="MeatyShieldBullet_bullet" cnName="反击粒子">MeatyZombie/shieldBullet</body>
+  <body raNum="16" con="add" name="Nian_darts_bullet" cnName="年兽-晶火刃">NianMonster/dartsBullet</body>
+  <body raNum="30" name="Nian_fireball_bullet" cnName="年兽-火球">NianMonster/fireball</body>
+  <body con="add" name="Nian_spark_bullet" cnName="驾驭星火">NianMonster/sparkBullet</body>
+  <body name="knife_Nuggets_bullet" cnName="掘金尸-疾风斩">NuggetsZombie/piercingLeft</body>
+  <body name="OfficeZombie_1_bullet" cnName="办公僵尸">OfficeZombie/bullet</body>
+  <body raNum="30" name="PetBoomSkull_shoot1_bullet" cnName="爆骷-跟踪导弹">PetBoomSkull/bullet1</body>
+  <body name="babyBoom_skull_bullet" cnName="爆骷-婴儿潮">PetBoomSkullS/babyBullet</body>
+  <body raNum="30" name="PetBoomSkullS_shoot1_bullet" cnName="爆骷S-跟踪导弹">PetBoomSkullS/bullet1</body>
+  <body raNum="30" name="PetBoomSkullSecond_shoot1_bullet" cnName="爆骷-跟踪导弹">PetBoomSkullSecond/bullet1</body>
+  <body raNum="30" name="PetBoomSkullThird_shoot1_bullet" cnName="爆骷X3-跟踪导弹">PetBoomSkullThird/bullet1</body>
+  <body raNum="30" name="PetBoomSkullThird_shoot3_bullet" cnName="爆骷X3-跟踪导弹">PetBoomSkullThird/bullet3</body>
+  <body con="add" raNum="1" name="PetChaosKing_shoot_bullet" cnName="狂战尸-狂刃追踪">PetChaosKing/shoot_bullet</body>
+  <body con="add" raNum="1" name="PetFightKing_shoot_bullet" cnName="狂战尸-狂刃追踪">PetFightKing/shoot_bullet</body>
+  <body raNum="2" name="PetIronChiefS_shoot1_bullet" cnName="冥王-光波">PetIronChiefS/bullet</body>
+  <body con="add" raNum="2" name="PetIronChiefThird_shoot1_bullet" cnName="哈迪斯-光波">PetIronChiefThird/bullet</body>
+  <body raNum="2" name="PetIronZombieKing_floor_bullet" cnName="僵尸王地滚弹">PetIronZombieKing/bullet_floor</body>
+  <body raNum="1" con="add" name="lightBall_PetLaer_bullet" cnName="雷尔-辐射光球">PetLaer/ball</body>
+  <body raNum="30" con="filter" name="shoot_PetLaer_bullet" cnName="雷尔-射击">PetLaer/bullet</body>
+  <body raNum="1" con="add" name="lightBall_PetLaerS_bullet" cnName="雷斯-辐射光球">PetLaerS/ball</body>
+  <body raNum="30" con="filter" name="shoot_PetLaerS_bullet" cnName="雷斯-射击">PetLaerS/bullet</body>
+  <body raNum="1" con="add" name="lightBall_PetLake_bullet" cnName="雷克-辐射光球">PetLake/ball</body>
+  <body raNum="30" con="filter" name="shoot_PetLake_bullet" cnName="雷克-射击">PetLake/bullet</body>
+  <body raNum="1" name="PetTyphoonWitch_anger_bullet" cnName="宠-巫师之怒">PetTyphoonWitch/batBullet1</body>
+  <body raNum="1" name="PetTyphoonWitch_anger_bulletLeft" cnName="宠-巫师之怒-左">PetTyphoonWitch/batBullet2</body>
+  <body raNum="30" name="PetTyphoonWitch_shoot1_bullet" cnName="飓风巫尸-能量波">PetTyphoonWitch/bullet1</body>
+  <body raNum="30" name="PetTyphoonWitch_shoot2_bullet" cnName="飓风巫尸-聚能波">PetTyphoonWitch/bullet2</body>
+  <body raNum="1" name="PetTyphoonWitch_wind_bullet" cnName="飓风巫尸-飓风">PetTyphoonWitch/windEffect</body>
+  <body raNum="1" name="PetZombieCleaver_1_bullet" cnName="屠刀僵尸-飞刀">PetZombieCleaver/bullet</body>
+  <body raNum="2" name="PetZombieFootball_1_bullet" cnName="橄榄僵尸">PetZombieFootball/bullet</body>
+  <body raNum="2" name="PetZombieHelmet_1_bullet" cnName="橄榄僵尸">PetZombieHelmet/bullet</body>
+  <body raNum="2" name="PetZombieKing_floor_bullet" cnName="僵尸王地滚弹">PetZombieKing/bullet_floor</body>
+  <body raNum="30" name="PoliceZombieBullet_bullet" cnName="电棍僵尸">PoliceZombie/bullet</body>
+  <body raNum="1" con="add" name="PoliceZombieShake_bullet" cnName="电棍僵尸电流">PoliceZombie/electricLine</body>
+  <body raNum="30" name="RifleHornetShooter_bullet" cnName="赤鼬导弹发射器">RifleHornetShooter/bullet1</body>
+  <body raNum="30" name="SaberTiger_missile_bullet" cnName="末日轰炸">SaberTiger/bullet1</body>
+  <body name="SaberTiger_laser_bullet" cnName="骷髅-量子光束">SaberTiger/laserEffect</body>
+  <body raNum="30" name="Salamander_shoot_bullet" cnName="虚洪螈-射击">Salamander/bullet1</body>
+  <body raNum="30" con="filter" name="Salamander_water_bullet" cnName="虚洪螈-水柱">Salamander/waterBullet</body>
+  <body raNum="30" con="add" name="Sentry1_bullet" cnName="哨兵-激光">Sentry/bullet1</body>
+  <body raNum="30" name="Sentry2_bullet" cnName="哨兵-慢速导弹">Sentry/bullet2</body>
+  <body raNum="30" con="add" name="Shapers1_bullet" cnName="窃听者-激光">Shapers/bullet1</body>
+  <body name="knife_skeleton_bullet" cnName="骷髅-地狱剑">Skeleton/knifeEffect</body>
+  <body raNum="1" name="SnowFattyShoot_bullet" cnName="关东尸-飞刀">SnowFatty/bullet</body>
+  <body raNum="1" name="SnowThinShoot_bullet" cnName="童灵尸-雪球">SnowThin/bullet</body>
+  <body raNum="1" name="SnowThinRotate_bullet" cnName="童灵尸-旋转雪球">SnowThin/bullet2</body>
+  <body raNum="2" name="SwimKing_floor_bullet" cnName="游尸王地滚弹">SwimKing/bullet_floor</body>
+  <body name="blackHoleMad_bullet" cnName="黑洞">ThingsIcon/blackHoleDevicer</body>
+  <body name="magnetBullet_bullet" cnName="磁铁">ThingsIcon/electromagnet</body>
+  <body con="add" name="extremeGemDrop_bullet" cnName="极源宝石">ThingsIcon/extremeGem</body>
+  <body raNum="30" name="TransportZombieShoot_bullet" cnName="飞刀">TransportZombie/bullet</body>
+  <body raNum="1" name="TyphoonWitch_bat_bullet" cnName="飓风巫尸-蝙蝠阵">TyphoonWitch/batBullet1</body>
+  <body raNum="1" name="TyphoonWitch_bat_bulletLeft" cnName="飓风巫尸-蝙蝠阵-左">TyphoonWitch/batBullet2</body>
+  <body raNum="30" name="TyphoonWitch_shoot1_bullet" cnName="飓风巫尸-能量波">TyphoonWitch/bullet1</body>
+  <body raNum="30" name="TyphoonWitch_shoot2_bullet" cnName="飓风巫尸-聚能波">TyphoonWitch/bullet2</body>
+  <body raNum="1" name="TyphoonWitch_wind_bullet" cnName="飓风巫尸-飓风">TyphoonWitch/windEffect</body>
+  <body raNum="30" con="filter" name="VanityKer_shoot_bullet" cnName="虚空客-射击">VanityKer/bullet1</body>
+  <body raNum="30" name="VanityKer_missle_bullet" cnName="虚空客-导弹">VanityKer/bullet2</body>
+  <body con="add" name="VanityKer_comet_bullet" cnName="星际尘埃">VanityKer/comet</body>
+  <body con="add" name="VanityKer_dreamland_bullet" cnName="虚空客-虚幻镜像">VanityKer/lightWall</body>
+  <body raNum="30" name="VirtualScorpion_shoot_bullet" cnName="虚晶蝎-射击">VirtualScorpion/bullet</body>
+  <body raNum="1" name="VirtualScorpion_yinWind_bullet" cnName="虚晶蝎-阴风">VirtualScorpion/wind1</body>
+  <body raNum="1" name="VirtualScorpion_yangWind_bullet" cnName="虚晶蝎-阳风">VirtualScorpion/wind2</body>
+  <body raNum="2" con="filter" name="WarriorBullet_bullet" cnName="狂人机器剑气">Warrior/bullet</body>
+  <body raNum="2" con="filter" name="WarriorSecBullet_bullet" cnName="狂人机器X剑气">WarriorSec/bullet</body>
+  <body raNum="1" name="WatchEagle_shoot_bullet" cnName="守望者-激光球">WatchEagle/bullet</body>
+  <body raNum="1" name="WatchEagle_wind_bullet" cnName="守望者-飓风">WatchEagle/windEffect</body>
+  <body raNum="5" name="Weaver_smoke_bullet" cnName="编织者-瘟疫">Weaver/smoke</body>
+  <body name="Weaver_web_bullet" cnName="编织者-织网">Weaver/web</body>
+  <body raNum="1" con="add" name="YouthWolfShoot_bulletLeft" cnName="地波-左">YouthWolf/bulletLeft</body>
+  <body raNum="1" con="add" name="YouthWolfShoot_bullet" cnName="地波">YouthWolf/bulletRight</body>
+  <body raNum="1" name="ZombieCleaver_1_bullet" cnName="屠刀僵尸-飞刀">ZombieCleaver/bullet</body>
+  <body raNum="2" name="ZombieFootball_1_bullet" cnName="橄榄僵尸">ZombieFootball/bullet</body>
+  <body name="boom_headless_bullet" cnName="自爆僵尸炸弹">ZombieHeadless/bullet</body>
+  <body raNum="2" name="ZombieBomb_1_bullet" cnName="携弹僵尸">ZombieIncapable/bullet</body>
+  <body raNum="2" name="ZombieKing_floor_bullet" cnName="僵尸王地滚弹">ZombieKing/bullet_floor</body>
+  <body name="laser_ling_bullet" cnName="鬼目游尸-镭射眼">ZombieLing/bullet</body>
+  <body raNum="2" name="ZombiePrison_1_bullet" cnName="监狱僵尸-飞刀">ZombiePrison/bullet</body>
+  <body raNum="1" name="ZombieSilver_1_bullet" cnName="银锤-飞刀">ZombieSilver/bullet</body>
+  <body name="anger_FightWolf_bullet" cnName="狂战狼-大地之怒">boomEffect/blackBoom</body>
+  <body name="Mammoth_core_die_bullet" cnName="机械核心-自爆">boomEffect/boom3</body>
+  <body name="HugePoison_shake_bullet" cnName="巨毒尸-毒震">boomEffect/posion1</body>
+  <body raNum="30" name="fightBackBullet_bullet" cnName="反击导弹">bullet/backBullet</body>
+  <body name="zoomOutGaia_bullet" cnName="装甲压制-盖亚">bullet/bigGaia</body>
+  <body raNum="10" name="meteoriteRain_bullet" cnName="陨石雨">bullet/bigStone</body>
+  <body con="filter" raNum="30" name="yearPig_bullet" cnName="亥猪">bullet/blueFire</body>
+  <body con="add" raNum="30" name="redFire_bullet" cnName="猩焰">bullet/fireball</body>
+  <body raNum="30" name="rocketMammoth_bullet" cnName="熔炉">bullet/gaiaBullet</body>
+  <body name="bulletRainBullet_bullet" cnName="枪林弹雨-导弹">bullet/gaiaBulletFire</body>
+  <body con="filter" raNum="30" name="extremeRocket_bullet" cnName="擎天极源">bullet/gaiaFit</body>
+  <body raNum="30" name="rocketMammothSun_bullet" cnName="熔炉-子弹">bullet/gaiaSmallBullet</body>
+  <body raNum="30" name="yearDog_bullet" cnName="戌狗">bullet/grenade</body>
+  <body name="hurtBulletMad_bullet" cnName="尖锥">bullet/hurtBulletMad</body>
+  <body raNum="30" con="add" name="shoot_Watchdog_bullet" cnName="看门狗-射击">bullet/laser</body>
+  <body raNum="30" name="hitMissile_outfit_bullet" cnName="派生导弹-套件">bullet/laser</body>
+  <body con="filter" raNum="30" name="laserKill_godArmsSkill_bullet" cnName="影灭">bullet/laser2</body>
+  <body con="filter" raNum="60" name="purLaserBig" cnName="激光尾巴">bullet/purLaserBig</body>
+  <body raNum="60" con="filter" name="bangerGun_bullet" cnName="炮仗">bullet/laserOrange</body>
+  <body con="filter" soundUrl="sound/electric" name="lightningFloor_bullet" cnName="大地闪电-修罗">bullet/lightning1</body>
+  <body con="add" name="lightningWatchdog_bullet" cnName="大地闪电">bullet/lightning1</body>
+  <body raNum="30" name="XiaoMei_pistol_bullet" cnName="小美-手枪">bullet/missile_bullet</body>
+  <body raNum="30" soundUrl="sound/endlessRocketShoot" volume="0.5" name="endlessRocket_bullet" cnName="无尽轰炮">bullet/missile_bullet</body>
+  <body raNum="30" con="filter" name="RedMoto_main_bullet" cnName="赤焰-主炮">bullet/orangeBullet</body>
+  <body con="filter" raNum="30" name="yearMouse_bullet" cnName="子鼠">bullet/purpleFire</body>
+  <body raNum="30" con="add" name="revengeArrow_bullet" cnName="复仇之箭">bullet/redArrow</body>
+  <body raNum="30" con="add" name="SkeletalMageShoot_bullet" cnName="法球">bullet/skeletonBullet</body>
+  <body raNum="30" con="filter" name="SkeletalMageFollowBullet_bullet" cnName="追魂术-子弹">bullet/skeletonBullet</body>
+  <body name="zoomOutBullet_bullet" cnName="放大-飞镖">bullet/smallGaia</body>
+  <body name="squibDevice_bullet" cnName="爆竹">bullet/squib</body>
+  <body name="thornyRoad_bullet" cnName="荆棘之路">bullet/thorns</body>
+  <body raNum="30" name="waterFlamer_bullet" cnName="洪荒">bullet/waterBullet</body>
+  <body con="add" name="skyArch_bullet" cnName="天弓">bulletHitEffect/blueLaser</body>
+  <body raNum="30" con="filter" name="fireFlamer_bullet" cnName="炽焰" imgDieType="last">fireEffect/fire1</body>
+  <body raNum="30" con="filter" name="frostFlamer_bullet" cnName="寒霜">fireEffect/ice1</body>
+  <body raNum="2" con="filter" name="FlyDragon_fireSurroundSmoke_bullet" cnName="异祖龙巨焰喷烟">fireEffect/smoke1</body>
+  <body con="add" name="LaborZombie_1_bullet" cnName="爆瓶子弹"  imgDieType="ranPlay">generalEffect/bigPoison</body>
+  <body con="add" name="LaborZombie_1_bulletRed" cnName="爆瓶子弹-我方" imgDieType="ranPlay">generalEffect/bigPoisonRed</body>
+  <body con="add" raNum="1" name="BallLightning_electric_bullet" cnName="电磁球">generalEffect/electricBall</body>
+  <body con="filter" raNum="1" name="defendBeiDou_bullet" cnName="保卫北斗">generalEffect/fire</body>
+  <body raNum="1" con="add" name="BallLightning_fire_bullet" cnName="火焰球">generalEffect/fireBall</body>
+  <body con="add" raNum="1" name="BallLightning_frozen_bullet" cnName="冰冻球">generalEffect/frozenBall</body>
+  <body con="add" name="extremeLightning_bullet" cnName="闪电极源">generalEffect/frozenBallBig</body>
+  <body con="add" soundUrl="sound/fireHit1" name="extremeLaserFire_bullet" cnName="烈焰大地">generalEffect/purfloorFire</body>
+  <body con="add" name="floorFireBullet" cnName="地火">generalEffect/floorFire</body>
+  <body raNum="1" name="yearMonkey_bullet" cnName="申猴">generalEffect/windEffect</body>
+  <body raNum="1" con="add" name="summonWolf_bigBoss_bullet" cnName="大Boss群狼">generalEffect/wolfSummonBullet</body>
+  <body raNum="1" con="add" name="summonWolf_bigBoss_bulletLeft" cnName="大Boss群狼-左">generalEffect/wolfSummonBullet2</body>
+  <body raNum="30" name="rocket1_bullet" cnName="火箭筒">rocket/rocketBullet</body>
+  <body raNum="30" soundUrl="sound/PetBoomSkull_endlessBombing" volume="0.5" name="PetBoomSkull_endlessBombing_bullet" cnName="爆骷-无尽轰炸">skillEffect/PetBoomSkull_bullet2</body>
+  <body con="add" name="pounce_spider_bullet" cnName="毒蛛-反扑">skillEffect/feedback_enemy_bullet</body>
+  <body name="hammer_enemy_bullet" cnName="眩晕之锤">skillEffect/hammer_bullet</body>
+  <body name="imploding_enemy_bullet" cnName="爆石">skillEffect/imploding_enemy_bullet</body>
+  <body soundUrl="sound/imploding_enemy" name="sweep_runAway_bullet" cnName="导弹召唤-任务">skillEffect/imploding_enemy_bullet</body>
+  <body con="add" name="revengeGhost_bullet" cnName="复仇之魂">skillEffect/killBall</body>
+  <body con="filter" name="lifeReplace_enemy_bullet" cnName="生命置换">skillEffect/lifeReplace_enemy_bullet</body>
+  <body con="add" name="zomSkillBullet_bullet" cnName="闪电球">skillEffect/paralysis_enemy_bullet</body>
+  <body con="add" name="knife_xiaoMing_bullet" cnName="鸣人疾风斩">skillEffect/piercingLeft</body>
+  <body raNum="30" name="HugePoison_shoot_bullet" cnName="巨毒尸-喷毒">skillEffect/poisonClaw_enemy</body>
+  <body name="acidRain_SpiderKing_bullet" cnName="酸雨">skillEffect/poisonousFog_hero</body>
+  <body con="filter" name="skillCopy_enemy_bullet" cnName="技能复制">skillEffect/skillCopy_enemy_bullet</body>
+  <body raNum="1" con="add" name="xiaoBoShoot_bullet" cnName="小波飞雷神">skillEffect/stickShadowLeft</body>
+  <body raNum="1" con="add" name="xiaoBoShoot_bulletLeft" cnName="小波飞雷神-左">skillEffect/stickShadowRight</body>
+  <body raNum="30" name="flyDragonHead_bullet" cnName="火首">specialGun/FlyDragonGunBullet</body>
+  <body raNum="30" name="flyDragonHead_bulletLeft" cnName="火首-左">specialGun/FlyDragonGunBullet2</body>
+  <body raNum="30" con="add" soundUrl="specialGun/arrowAttack" volume="0.5" name="combo_crossbow_bullet" cnName="武器技能-连弩">specialGun/beadBullet</body>
+  <body con="add" name="beadCrossbow_bullet" cnName="烟花弩">specialGun/beadBullet</body>
+  <body raNum="30" urlRandomValue="3" name="christmasGun_bullet" cnName="圣诞礼炮">specialGun/christmasGunBullet</body>
+  <body raNum="30" con="filter" name="greedySnake_bullet" cnName="贪吃蛇">specialGun/greedySnakeBullet</body>
+  <body con="add" raNum="30" name="penGun_bullet" cnName="钢笔枪">specialGun/penGunBullet</body>
+  <body con="add" raNum="30" urlRandomValue="3" name="pianoGun_bullet" cnName="弦音">specialGun/pianoGunBullet</body>
+  <body raNum="30" con="add" name="sickle_godArmsSkill_bullet" cnName="青蜂-飞镰">specialGun/rifleHornetBullet</body>
+  <body raNum="30" name="scorpionCrossbow_bullet" cnName="刺蝎">specialGun/scorpionBullet</body>
+  <body raNum="30" name="snakeCrossbow_bullet" cnName="银蛇">specialGun/snakeBullet</body>
+  <body con="add" raNum="1" name="yearCattle_bullet" cnName="丑牛">specialGun/yearCattleBullet</body>
+  <body con="add" raNum="1" urlRandomValue="3" name="yearRabbit_bullet" cnName="卯兔">specialGun/yearRabbitBullet</body>
+  <body raNum="30" con="filter" name="yearSnake_bullet" cnName="巳蛇">specialGun/yearSnakeBullet</body>
+  <body con="add" raNum="30" name="yearTiger_bullet" cnName="寅虎">specialGun/yearTigerBullet</body>
+  <body con="filter" raNum="30" name="yearTiger_bulletFilter" cnName="寅虎-拖尾">specialGun/yearTigerBullet</body>
+  <body name="terroristBox_bullet" cnName="恐怖盒子">terroristBoxEffect/box</body>
+  <body con="add" name="saberDartsBullet_bullet" cnName="剑齿镖-副手">weapon/saberDartsEffect</body>
+  <body name="blueLaserBig" cnName="大激光击中" raNum="1" con="add">bulletHitEffect/blueLaserBig</body>
+  <body name="iceConeBullet" cnName="冰锥子弹" con="add" raNum="30">specialGun/iceConeBullet</body>
+  
+</father>
+
+<![CDATA[其他]]>
+<father name="other" cnName="其他" num="33">
+  <body soundUrl="specialGun/yearTigerSound" name="yearTigerSound" cnName="寅虎-音效"/>
+  <body soundUrl="specialGun/purgoldFoxSound" name="purgoldFox_point" cnName="群攻-音效"/>
+  <body soundUrl="electric" name="magnetBulletSkill_point" cnName="磁铁磁力-音效"/>
+  <body soundUrl="sound/earthquake" name="noAiFindAndHit_other" cnName="不受ai发现和伤害-音效"/>
+  <body soundUrl="boomSound/bigBoom" name="noAiFindAndHit_point" cnName="不受ai发现和伤害-音效"/>
+  <body con="add" name="FireWolf_noFire_point" cnName="无名火-点">FireWolf/fireShow</body>
+  <body con="add" noShowB="1" name="SaberTiger_shield_point" cnName="超导电幕-点">SaberTiger/angerEffect</body>
+  <body con="add" name="sprintSwordHit_extra_other" cnName="凯撒特效附带-其他">Striker/swordAfterAttackLeft</body>
+  <body con="add" name="sprintSwordHit_extra_point" cnName="凯撒特效附带-点">Striker/swordAfterAttackRight</body>
+  <body con="add" name="sprintSwordHit_other" cnName="凯撒特效附带-其他">Striker/swordAttackLeft</body>
+  <body con="add" name="sprintSwordHit_point" cnName="凯撒特效附带-点">Striker/swordAttackRight</body>
+  <body con="add" partType="head" name="laserWatchdogUnder_point" cnName="激光扫荡-受到攻击-点">Watchdog/hurtEffect</body>
+  <body raNum="1" con="filter" name="YouthWolf_combo_other" cnName="连拳-其他">YouthWolf/shadowLeft</body>
+  <body raNum="1" con="filter" name="YouthWolf_combo_point" cnName="连拳-点">YouthWolf/shadowRight</body>
+  <body partType="body,head" soundUrl="sound/pointBoom_hero" name="pianoGunSkill_point" cnName="音爆-点">boomEffect/bigCircle</body>
+  <body soundUrl="boomSound/boom" name="revengeLing_point" cnName="复仇-点">boomEffect/bigFire</body>
+  <body partType="hand_right,leg_right_1,eye_left,body" name="MadbossBuff_other" cnName="全身发光、走路带烟-其他">boomEffect/boom3</body>
+  <body soundUrl="boomSound/midBoom2" partType="body" con="add" name="yearSnakeSkill_point" cnName="蛇刺-点">boomEffect/midCan</body>
+  <body soundUrl="sound/body_hit" name="flySkyBatBuff_point" cnName="蝙蝠状态-点">boomEffect/midWood</body>
+  <body raNum="1" soundUrl="TransportZombie/throwBoom" name="TransportZombieThrowHit_point" cnName="击退-点">boomEffect/posion3</body>
+  <body con="add" soundUrl="sound/fireHit2" name="SkeletalMageClonedUnder_point" cnName="分身只受副手攻击-点">bulletHitEffect/headshot</body>
+  <body partType="body" soundUrl="sound/magicHit1" name="yearSheepSkill_point" cnName="周末无双-点">bulletHitEffect/purpleLaser</body>
+  <body con="add" soundUrl="sound/crazy_hero" name="YouthWolf_crazy_other" cnName="虚无狂暴-其他">bulletHitEffect/purpleLaser</body>
+  <body con="add" name="SkeletalMageCloned_point" cnName="制魂术-点">bulletHitEffect/purpleLaser</body>
+  <body partType="head,body" soundUrl="sound/vehicleFit" name="firePossession_other" cnName="附身-其他">generalEffect/blackHoleHide</body>
+  <body partType="head" name="firePossession_point" cnName="附身-点">generalEffect/headTip</body>
+  <body soundUrl="sound/hummer_hit" name="goldSpadeSkill_point" cnName="崩溃-点">generalEffect/lightning</body>
+  <body noFollowB="1" soundUrl="sound/skillCopy_enemy" con="add" name="madfireTeleport_point" cnName="瞬移-点">generalEffect/vehicleFit</body>
+  <body partType="shootPoint" con="add" raNum="1" name="purgoldSkunkLink_point" cnName="弹爆状态-点">gunFire/purgoldSkunk</body>
+  <body con="add" name="SaberTiger_laser_point" cnName="量子光束-点">skillEffect/aperture</body>
+  <body con="add" name="madArmsAttack_other" cnName="擎天斩-其他">skillEffect/apertureBig</body>
+  <body soundUrl="sound/magicHit1" con="add" partType="body" name="invincibleEmp_point" cnName="无敌驱散-点">skillEffect/emp</body>
+  <body name="sniperKingEnemyHit_point" cnName="狙击之王怪物攻击主角-点">skillEffect/paralysis_enemy</body>
+</father>
+
+<![CDATA[尾烟]]>
+<father name="smoke" cnName="尾烟" num="51">
+  <body con="filter" raNum="30" name="CivilianFit_main_smoke" cnName="镇山虎-主炮-尾烟">CivilianFit/smoke</body>
+  <body con="filter" raNum="15" name="DryFrog_shoot_smoke" cnName="投弹-尾烟">DryFrog/bulletSmoke</body>
+  <body con="filter" name="knifeBoom_FightKing_smoke" cnName="狂刃爆发-尾烟">FightKing/shoot_bullet</body>
+  <body con="filter" raNum="1" name="FightPig_shoot_smoke" cnName="狂野收割者-飞刀-尾烟">FightPig/smoke1</body>
+  <body con="filter" raNum="30" name="rocket_fight_smoke" cnName="狂战戟-尾烟">FightShooter/bullet</body>
+  <body con="filter" raNum="30" name="FireWolf_noName_smoke" cnName="虚炎狼-无名火-尾烟">FireWolf/noSmoke</body>
+  <body raNum="30" con="filter" name="FlyFit_main_smoke" cnName="霸空雕-主炮-尾烟">FlyFit/smoke</body>
+  <body con="filter" name="GasDefense_1_smoke" cnName="飞扳-尾烟">GasDefenseZombie/bullet</body>
+  <body con="filter" raNum="30" name="IceManShoot1_smoke" cnName="野帝-雪球-尾烟">IceMan/smoke</body>
+  <body con="add" name="LastdayMissle_smoke" cnName="跟踪导弹-尾烟">LastdayTank/smoke1</body>
+  <body con="filter" name="lingGun_smoke" cnName="鬼目射手-武器-尾烟">LingShooter/smoke</body>
+  <body con="add" raNum="30" name="Mammoth_missile_smoke" cnName="洲际导弹-尾烟">Mammoth/missileSmoke</body>
+  <body con="filter" raNum="1" name="PetTyphoonWitch_shoot2_smoke" cnName="飓风巫尸-聚能波-尾烟">PetTyphoonWitch/smoke2</body>
+  <body con="filter" raNum="1" name="PetZombieCleaver_1_smoke" cnName="屠刀僵尸-飞刀-尾烟">PetZombieCleaver/smoke</body>
+  <body con="add" name="RifleHornetShooter_smoke" cnName="赤鼬导弹发射器-尾烟">RifleHornetShooter/smoke1</body>
+  <body con="add" name="SaberTiger_missile_smoke" cnName="末日轰炸-尾烟">SaberTiger/smoke1</body>
+  <body con="filter" raNum="30" name="Sentry1_smoke" cnName="哨兵-激光-尾烟">Sentry/bullet1</body>
+  <body con="filter" raNum="1" name="SnowFattySprint_smoke" cnName="关东尸-冲撞前飞刀-尾烟">SnowFatty/bullet</body>
+  <body con="filter" raNum="30" name="SnowThinShoot_smoke" cnName="童灵尸-雪球-尾烟">SnowThin/smoke</body>
+  <body con="filter" raNum="1" name="TyphoonWitch_shoot2_smoke" cnName="飓风巫尸-聚能波-尾烟">TyphoonWitch/smoke2</body>
+  <body con="filter" raNum="1" name="ZombieCleaver_1_smoke" cnName="屠刀僵尸-飞刀-尾烟">ZombieCleaver/smoke</body>
+  <body con="filter" name="laser_ling_smoke" cnName="鬼目游尸-镭射眼-尾烟">ZombieLing/smoke</body>
+  <body con="filter" raNum="1" name="ZombiePrison_1_smoke" cnName="监狱僵尸-飞刀-尾烟">ZombiePrison/smoke</body>
+  <body con="filter" raNum="1" name="ZombieSilver_1_smoke" cnName="银锤-飞刀-尾烟">ZombieSilver/smoke</body>
+  <body raNum="60" con="filter" name="skyArch_smoke" cnName="天弓-尾烟">bullet/blueLaser</body>
+  <body raNum="30" con="filter" name="meteoriteRain_smoke" cnName="陨石雨-尾烟">bullet/fireball</body>
+  <body con="filter" raNum="30" name="redFire_smoke" cnName="猩焰-尾烟">bullet/fireballSmoke</body>
+  <body con="filter" raNum="30" name="hitMissile_outfit_smoke" cnName="派生导弹-套件-尾烟">bullet/laser</body>
+  <body raNum="30" con="filter" name="revengeArrow_smoke" cnName="复仇之箭-尾烟">bullet/redArrow</body>
+  <body con="add" raNum="1" name="squibDevice_smoke" cnName="爆竹-尾烟">bullet/squibSpark</body>
+  <body raNum="30" con="filter" name="waterFlamer_smoke" cnName="洪荒-尾烟">bullet/waterSmoke</body>
+  <body con="filter" raNum="30" name="fightBackBullet_smoke" cnName="反击导弹-尾烟">bulletHitEffect/fireSmoke</body>
+  <body con="filter" raNum="30" name="rocket1_smoke" cnName="火箭筒-尾烟">bulletHitEffect/smoke_small</body>
+  <body raNum="30" con="filter" name="snakeCrossbow_smoke" cnName="银蛇-尾烟">bulletHitEffect/smoke_small2</body>
+  <body con="filter" raNum="30" name="boom_headless_smoke" cnName="自爆僵尸炸弹-尾烟">bulletHitEffect/spark_motion</body>
+  <body con="filter" name="zoomOutBullet_smoke" cnName="放大-飞镖-尾烟">bulletHitEffect/spark_motion</body>
+  <body con="filter" raNum="30" name="ZombieKing_floor_smoke" cnName="僵尸王地滚弹-尾烟">bulletHitEffect/spark_motion</body>
+  <body con="add" name="babyBoom_skull_smoke" cnName="爆骷-婴儿潮-尾烟">generalEffect/crazy</body>
+  <body con="add" name="revengeGhost_smoke" cnName="复仇之魂-尾烟">generalEffect/lakeBuff</body>
+  <body con="add" name="blackHoleMad_smoke" cnName="黑洞-尾烟">lightEffect/orange</body>
+  <body con="add" name="magnetBullet_smoke" cnName="磁铁-尾烟">lightEffect/whiteDrop</body>
+  <body con="filter" raNum="30" name="electricBoom_enemy_smoke" cnName="电球爆发-尾烟">skillEffect/paralysis_enemy_bullet</body>
+  <body con="filter" raNum="30" name="yearCattle_smoke" cnName="丑牛-尾烟">skillEffect/poisonClaw_enemy</body>
+  <body con="filter" name="acidRain_SpiderKing_smoke" cnName="酸雨-尾烟">skillEffect/poisonousFog_hero</body>
+  <body con="filter" raNum="30" name="circle_inward_shell_smoke" cnName="僵尸炮兵总管-圆周弹-尾烟">skillEffect/smallFire</body>
+  <body con="filter" raNum="1" name="xiaoBoShoot_smoke" cnName="小波飞雷神-尾烟">skillEffect/stickShadowSmoke</body>
+  <body con="filter" raNum="1" name="TyphoonWitch_shoot1_smoke" cnName="飓风巫尸-能量波-尾烟">skillEffect/witchSmoke</body>
+  <body con="filter" raNum="30" name="flyDragonHead_smoke" cnName="火首-尾烟">specialGun/FlyDragonGunSmoke</body>
+  <body con="filter" raNum="30" name="beadCrossbow_smoke" cnName="烟花弩-尾烟">specialGun/electricLine</body>
+  <body con="filter" raNum="30" name="penGun_smoke" cnName="钢笔枪-尾烟">specialGun/penGunSmoke</body>
+  <body raNum="30" con="filter" name="sickle_godArmsSkill_smoke" cnName="青蜂-飞镰-尾烟">specialGun/rifleHornetBulletSmoke</body>
+</father>
+
+<![CDATA[击打]]>
+<father name="hit" cnName="击打" num="161">
+<body name="pistol1_hit" cnName="一般枪支击中">bulletHitEffect/yellow_motion</body>
+<body name="gun_hit" cnName="枪支击中带音效" soundUrl="hitSound/bulletHitBody" soundRan="5" soundVolume="0.2">bulletHitEffect/yellow_motion</body>
+<body soundUrl="ZombieLing/hit2" name="laser_ling_hit" cnName="鬼目游尸-镭射眼-击中">bulletHitEffect/yellow_motion</body>
+  <body soundUrl="LingShooter/hit2" name="lingGun_hit" cnName="鬼目射手-武器-击中">bulletHitEffect/yellow_motion</body>
+  <body soundUrl="ZombieFootball/hit2" name="ZombieFootball_1_hit" cnName="橄榄僵尸-击中">bulletHitEffect/yellow_motion</body>
+  <body soundUrl="DryFrog/skill7" con="filter" name="DryFrogPour_hitFloor" cnName="倒炸弹-击地">bulletHitEffect/yellow_motion</body>
+  <body soundUrl="PetZombieFootball/hit2" name="PetZombieFootball_1_hit" cnName="橄榄僵尸-击中">bulletHitEffect/yellow_motion</body>
+  <body soundUrl="specialGun/arrowImpact" name="snakeCrossbow_hit" cnName="银蛇-击中">bulletHitEffect/yellow_motion</body>
+  <body soundUrl="PetZombieHelmet/hit2" name="PetZombieHelmet_1_hit" cnName="橄榄僵尸-击中">bulletHitEffect/yellow_motion</body>
+  <body soundUrl="sound/metal_hit1" name="Nian_darts_hit" cnName="年兽-晶火刃-击中">bulletHitEffect/yellow_motion</body>
+  <body soundUrl="sound/hitFloor" name="squibDevice_hitFloor" cnName="爆竹-击地">bulletHitEffect/yellow_motion</body>
+  
+  <body soundUrl="sound/fireHit1" name="lightBall_BlackLaer_hit" cnName="黑暗雷尔-辐射光球-音效"/>
+  <body soundUrl="sound/lifeReplace_enemy_hit" name="lifeReplace_enemy_hit" cnName="生命置换-音效"/>
+  <body soundUrl="sound/paralysis_enemy_hit" name="zomSkillBullet_hit" cnName="闪电球-音效"/>
+  <body soundUrl="sound/magicHit2" shake="2,0.2,10" con="add" name="AircraftGun_main_hit" cnName="狩猎者-击中">AircraftGun/hit</body>
+  <body soundUrl="sound/magicHit2" shake="2,0.2,10" con="add" name="CivilianFit_main_hit" cnName="镇山虎-主炮-击中">CivilianFit/hit</body>
+  <body soundUrl="boomSound/microBoom" name="DryFrog_shoot_hit" cnName="投弹-击中">DryFrog/boom</body>
+  <body soundUrl="sound/hummer_hit" raNum="4" name="OfficeZombie_1_hit" cnName="办公僵尸-击中">OfficeZombie/hitEffect</body>
+  <body con="add" soundUrl="sound/fireHit2" name="SkeletalMageShoot_hit" cnName="法球-击中">SkeletalMage/boom</body>
+  <body soundUrl="sound/fireHit1" con="add" name="VanityKer_dreamland_hit" cnName="虚空客-虚幻镜像-击中">VanityKer/lightHit</body>
+  <body con="add" soundUrl="sound/hummer_hit" name="WatchEagle_shoot_hit" cnName="守望者-激光球-击中">WatchEagle/hit</body>
+  <body con="add" soundUrl="ZombieCleaver/hit1" name="ZombieCleaver_1_hit" cnName="屠刀僵尸-飞刀-击中">bladeHitEffect/blood</body>
+  <body con="add" soundUrl="PetZombieCleaver/hit1" name="PetZombieCleaver_1_hit" cnName="屠刀僵尸-飞刀-击中">bladeHitEffect/blood</body>
+  <body con="add" soundUrl="sound/vehicle_hit1" name="HammerMummy_1_hit" cnName="星锤干尸-飞锤-击中">bladeHitEffect/blood</body>
+  <body con="add" soundUrl="sound/body_hit" name="anger_FightWolf_hit" cnName="狂战狼-大地之怒-击中">bladeHitEffect/blood</body>
+  <body con="add" soundUrl="PetZombieCleaver/hit1" soundVolume="0.4" name="PetZombieCleaver_1_hitFloor" cnName="屠刀僵尸-飞刀-击地">bladeHitEffect/blood</body>
+  <body soundUrl="FightKing/hit2" con="add" name="knifeBoom_FightKing_hit" cnName="狂刃爆发-击中">bladeHitEffect/blood</body>
+  <body soundUrl="TyphoonWitch/hit2" name="TyphoonWitch_bat_hit" cnName="飓风巫尸-蝙蝠阵-击中">bladeHitEffect/blood</body>
+  <body con="add" soundUrl="sound/vehicle_hit1" soundVolume="0.4" name="HammerMummy_1_hitFloor" cnName="星锤干尸-飞锤-击地">bladeHitEffect/blood</body>
+  <body con="add" name="knife_skeleton_hit" cnName="骷髅-地狱剑-击中">bladeHitEffect/blood</body>
+  <body soundUrl="PetTyphoonWitch/hit2" name="PetTyphoonWitch_anger_hit" cnName="宠-巫师之怒-击中">bladeHitEffect/blood</body>
+  <body soundUrl="PetChaosKing/hit2" con="add" name="PetChaosKing_shoot_hit" cnName="狂战尸-狂刃追踪-击中">bladeHitEffect/blood</body>
+  <body con="add" soundUrl="sound/vehicle_hit2" name="ZombiePrison_1_hit" cnName="监狱僵尸-飞刀-击中">bladeHitEffect/blood</body>
+  <body con="add" soundUrl="sound/vehicle_hit2" soundVolume="0.4" name="ZombiePrison_1_hitFloor" cnName="监狱僵尸-飞刀-击地">bladeHitEffect/blood</body>
+  <body con="add" soundUrl="ZombieCleaver/hit1" soundVolume="0.4" name="ZombieCleaver_1_hitFloor" cnName="屠刀僵尸-飞刀-击地">bladeHitEffect/blood</body>
+  <body soundUrl="PetFightKing/hit2" con="add" name="PetFightKing_shoot_hit" cnName="狂战尸-狂刃追踪-击中">bladeHitEffect/blood</body>
+  
+  
+  
+  
+  
+  
+  <body cacheB="1" imgDieType="die" con="add" name="lightCone_hit" cnName="矿锯尾烟">bulletHitEffect/blueLaser</body>
+  
+  
+  
+  <body soundUrl="uiSound/lotteryProps" con="add" name="blackHoleMad_hit" cnName="黑洞-击中">bulletHitEffect/bluntBig</body>
+  <body soundUrl="uiSound/gradeUp" con="add" name="magnetBullet_hit" cnName="磁铁-击中">bulletHitEffect/bluntBig</body>
+  <body soundUrl="sound/magicHit2" name="godMace_hit" cnName="上帝之杖-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/body_hit" name="KingRabbit_shoot_hit" cnName="王者兔-射击-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/magicHit1" name="pounce_spider_hit" cnName="毒蛛-反扑-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/vehicle_hit1" con="add" name="PetIronChiefS_shoot1_hit" cnName="冥王-光波-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/hummer_hit" name="hammer_enemy_hit" cnName="眩晕之锤-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/hand_hit" name="shoot_Watchdog_hit" cnName="看门狗-射击-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/fireHit1" name="shoot_BlackLaer_hit" cnName="黑暗雷尔-射击-击中">bulletHitEffect/energy</body>
+  <body con="add" soundUrl="sound/vehicle_hit2" name="TransportZombieShoot_hit" cnName="飞刀-击中">bulletHitEffect/energy</body>
+  <body soundUrl="boomSound/midBoom2" soundVolume="0.3" name="fireworksSun_hit" cnName="烟花-子弹-击中">bulletHitEffect/energy</body>
+  <body name="shoot_PhantomX_hit" cnName="幻影X型-激光炮-击中">bulletHitEffect/energy</body>
+  <body soundUrl="FightShooter/armsHit" shake="3,0.4,5" name="rocket_fight_hit" cnName="狂战戟-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/vehicle_hit1" soundVolume="1" name="summonWolf_bigBoss_hit" cnName="大Boss群狼-击中">bulletHitEffect/energy</body>
+  <body soundUrl="PetTyphoonWitch/hit2" name="PetTyphoonWitch_wind_hit" cnName="飓风巫尸-飓风-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/magicHit2" shake="2,0.2,10" con="add" name="FlyFit_main_hit" cnName="霸空雕-主炮-击中">bulletHitEffect/energy</body>
+  <body con="add" soundUrl="ZombieSilver/hit1" name="ZombieSilver_1_hit" cnName="银锤-飞刀-击中">bulletHitEffect/energy</body>
+  <body con="add" soundUrl="ZombieSilver/hit1" soundVolume="0.4" name="ZombieSilver_1_hitFloor" cnName="银锤-飞刀-击地">bulletHitEffect/energy</body>
+  <body con="add" soundUrl="sound/snowHit" name="IceManShake_hit" cnName="野帝-暴怒一击-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/fireHit1" con="add" name="PetIronChiefThird_shoot1_hit" cnName="哈迪斯-光波-击中">bulletHitEffect/energy</body>
+  <body con="add" soundUrl="sound/water_hit" name="Mammoth_shoot_hit" cnName="异猛象-喷球-击中">bulletHitEffect/energy</body>
+  <body soundUrl="TyphoonWitch/hit2" name="TyphoonWitch_wind_hit" cnName="飓风巫尸-飓风-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/paralysis_enemy_hit" name="lightningFloor_hit" cnName="大地闪电-修罗-击中">bulletHitEffect/energy</body>
+  <body con="add" soundUrl="sound/magicHit2" name="Mammoth_electricity_hit" cnName="异猛象-电磁风暴-击中">bulletHitEffect/energy</body>
+  <body con="add" name="SaberTiger_laser_hit" cnName="骷髅-量子光束-击中">bulletHitEffect/energy</body>
+  <body soundUrl="TyphoonWitch/hit1" name="TyphoonWitch_shoot1_hit" cnName="飓风巫尸-能量波-击中">bulletHitEffect/energy</body>
+  <body soundUrl="PetTyphoonWitch/hit1" name="PetTyphoonWitch_shoot1_hit" cnName="飓风巫尸-能量波-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/water_hit" name="Salamander_shoot_hit" cnName="虚洪螈-射击-击中">bulletHitEffect/energy</body>
+  <body soundUrl="sound/body_hit" name="revengeArrow_hit" cnName="复仇之箭-击中">bulletHitEffect/energyPurple</body>
+  <body soundUrl="sound/magicHit2" name="laserKill_godArmsSkill_hit" cnName="影灭-击中">bulletHitEffect/energyPurple</body>
+  <body soundUrl="sound/magicHit2" name="imploding_blackArmsSkill_hit" cnName="沙金-击中">bulletHitEffect/energyYellow</body>
+  <body name="yearChicken_hit" cnName="酉鸡-击中">bulletHitEffect/energyYellow</body>
+  
+  <body con="add" name="yearDragon_hit" cnName="辰龙-击中">bulletHitEffect/fitHit</body>
+  <body name="yearSheep_hit" cnName="未羊-击中">bulletHitEffect/fitHit</body>
+  
+  <body soundUrl="sound/magicHit2" name="MeatyShieldBullet_hit" cnName="反击粒子-击中">bulletHitEffect/fitHit</body>
+  <body soundUrl="sound/water_hit" name="MeatyBackBullet_hit" cnName="反弹粒子-击中">bulletHitEffect/fitHit</body>
+  <body con="add" soundUrl="sound/vehicle_hit1" name="WarriorBullet_hit" cnName="狂人机器剑气-击中">bulletHitEffect/fitHit</body>
+  <body con="add" soundUrl="sound/magicHit2" name="YouthWolfShoot_hit" cnName="地波-击中">bulletHitEffect/fitHit</body>
+  
+  <body soundUrl="sound/vehicle_hit" soundRan="3" con="add" name="hurtBulletMad_hit" cnName="尖锥-击中">bulletHitEffect/fitHit</body>
+  <body soundUrl="specialGun/arrowImpact" name="yearSnake_hit" cnName="巳蛇-击中">bulletHitEffect/fitHit</body>
+  <body soundUrl="sound/hand_hit" name="LastdayViking_hit" cnName="机关枪-击中">bulletHitEffect/fitHit</body>
+  <body raNum="4" con="add" name="yearMonkey_hit" cnName="申猴-击中">bulletHitEffect/fitHit</body>
+  <body con="add" soundUrl="sound/paralysis_enemy_hit" name="BallLightning_fire_hit" cnName="火焰球-击中">bulletHitEffect/fitHit</body>
+  <body con="add" soundUrl="sound/paralysis_enemy_hit" soundVolume="0.3" name="paralysisHit" cnName="电流击中-小声">bulletHitEffect/fitHit</body>
+  <body soundUrl="sound/paralysis_enemy_hit" name="PoliceZombieShake_hit" cnName="电流-击中">bulletHitEffect/fitHit</body>
+  <body con="add" soundUrl="sound/body_hit" raNum="4" name="GasDefense_1_hit" cnName="飞扳-击中">bulletHitEffect/fitHit</body>
+  
+  
+  <body cacheB="1" imgDieType="die" con="add" name="extremeLaser_hit" cnName="激光极源-击中">bulletHitEffect/purLaser</body>
+  <body raNum="30" name="fireFlamer_hit" cnName="炽焰-击中">bulletHitEffect/smoke_motion</body>
+  <body soundUrl="PetIronZombieKing/hitFloor2" raNum="30" name="PetIronZombieKing_floor_hitFloor" cnName="僵尸王地滚弹-击地">bulletHitEffect/smoke_small</body>
+  <body soundUrl="SwimKing/hitFloor2" soundVolume="0.2" raNum="30" name="SwimKing_gun_hitFloor" cnName="僵尸王-背部火炮-击地">bulletHitEffect/smoke_small</body>
+  <body soundUrl="ZombieKing/hitFloor2" raNum="30" name="ZombieKing_floor_hitFloor" cnName="僵尸王地滚弹-击地">bulletHitEffect/smoke_small</body>
+  <body soundUrl="SwimKing/hitFloor2" raNum="30" name="SwimKing_floor_hitFloor" cnName="游尸王地滚弹-击地">bulletHitEffect/smoke_small</body>
+  <body soundUrl="IronZombieKing/hitFloor2" raNum="30" name="IronZombieKing_floor_hitFloor" cnName="僵尸王地滚弹-击地">bulletHitEffect/smoke_small</body>
+  <body soundUrl="boomSound/microBoom1" name="boom_headless_hitFloor" cnName="自爆僵尸炸弹-击地">bulletHitEffect/smoke_small</body>
+  <body soundUrl="PetZombieKing/hitFloor2" raNum="30" name="PetZombieKing_floor_hitFloor" cnName="僵尸王地滚弹-击地">bulletHitEffect/smoke_small</body>
+  <body soundUrl="sound/hitFloor" raNum="30" name="BoomWolf_bullet_hitFloor" cnName="火炮尸狼-火炮-击地">bulletHitEffect/smoke_small</body>
+  <body soundUrl="sound/snowHit" raNum="1" con="add" name="SnowThinRotate_hit" cnName="童灵尸-旋转雪球-击中">bulletHitEffect/snowBigHit</body>
+  <body raNum="8" con="add" name="SnowThinShoot_hitFloor" cnName="童灵尸-雪球-击地">bulletHitEffect/snowHit</body>
+  <body soundUrl="sound/snowHit" raNum="8" name="IceManShoot1_hit" cnName="野帝-雪球-击中">bulletHitEffect/snowHit</body>
+  <body raNum="8" name="IceManShoot1_hitFloor" cnName="野帝-雪球-击地">bulletHitEffect/snowHit</body>
+  <body soundUrl="sound/snowHit" raNum="8" con="add" name="SnowThinShoot_hit" cnName="童灵尸-雪球-击中">bulletHitEffect/snowHit</body>
+  <body con="add" name="extremeLaserFire_hit" cnName="烈焰大地-击中">bulletHitEffect/spark_motion</body>
+  <body soundUrl="uiSound/getDrop" soundRan="6" con="add" name="extremeGemDrop_hit" cnName="极源宝石-击中">bulletHitEffect/yellow</body>
+
+  <body soundUrl="sound/paralysis_enemy_hit" shake="2,0.2,10" con="filter" name="extremeLightning_hit" cnName="闪电极源-击中">generalEffect/frozenBallHide</body>
+  <body name="DryFrogPour_zero_hitFloor" cnName="倒炸弹-空弹-击地">generalEffect/headSmoke</body>
+  <body name="christmasGun_hitFloor" cnName="圣诞礼炮-击地">no</body>
+  <body soundUrl="specialGun/christmasGunHit" name="christmasGun_hit" cnName="圣诞礼炮-击中">specialGun/christmasGunBoom</body>
+  <body soundUrl="" name="pianoGun_hit" cnName="弦音-击中">specialGun/christmasGunBoom</body>
+  <body soundUrl="specialGun/water_hit" name="penGun_hit" cnName="钢笔枪-击中">specialGun/christmasGunBoom</body>
+  
+  <body name="bulletHitRed" cnName="子弹击中-红" raNum="4">bulletHitEffect/red</body>
+  <body name="IronDogFiveHit" cnName="五人斩-击中" con="add" soundUrl="sound/vehicle_hit" soundRan="3">bulletHitEffect/bigBlue</body>
+  <body name="iceConeHit" cnName="冰锥击中" con="add" soundUrl="sound/fragHit">boomEffect/midCan</body>
+  
+</father>
+
+<![CDATA[瞬发]]>
+<father name="target" cnName="瞬发" num="70">
+	
+  <body soundUrl="sound/feedback_hero" name="feedback_enemy_me" cnName="电离折射-音效"/>
+  <body soundUrl="sound/invisibility_hero" con="add" name="wizardAnger_wind_me" cnName="巫尸之怒-音效"/>
+  <body soundUrl="sound/magicHit1" name="terroristBox_screaming_me" cnName="惊吓-音效"/>
+  <body soundUrl="sound/cloned_enemy" name="blindnessPhantomZHit_me" cnName="哨兵之门-击中召唤哨兵-音效"/>
+  <body soundUrl="sound/magneticField" name="ballPhantomZ_me" cnName="闪电外壳-音效"/>
+  <body soundUrl="sound/silence_enemy" name="GasDefenseShake_me" cnName="当头扳击-音效"/>
+  <body soundUrl="sound/reverseHurt_enemy" name="groupReverseHurt_enemy_me" cnName="反转术-音效"/>
+  <body soundUrl="sound/poisonousFog_hero" name="poisonousFog_hero_me" cnName="毒雾-音效"/>
+  <body soundUrl="sound/skillCopy_enemy" name="skillCopyTransport_me" cnName="技能复制-音效"/>
+  <body soundUrl="sound/teleport_enemy" con="add" name="dinosaurEgg_me" cnName="异龙蛋-音效"/>
+  <body soundUrl="sound/crazy_hero" name="crazyMad_me" cnName="觉醒-音效"/>
+  <body soundUrl="sound/coquettish_hero" name="coquettish_hero_me" cnName="妖魅-音效"/>
+  <body soundUrl="skillEffect/possession_s" name="firePossession_me" cnName="附身-音效"/>
+  <body soundUrl="sound/through_hero" name="through_hero_me" cnName="金刚钻-音效"/>
+  <body shake="5,0.2,20" soundUrl="sound/earthquake" name="earthquake_me" cnName="地震-音效"/>
+  <body soundUrl="sound/groupLight_hero" name="groupLightMadFly_me" cnName="群体圣光-音效"/>
+  <body soundUrl="sound/globalLight_hero" name="globalLight_hero_me" cnName="全域圣光-音效"/>
+  <body soundUrl="sound/hummer_shoot" name="hammer_enemy_me" cnName="眩晕之锤-音效"/>
+  <body soundUrl="sound/devour_hero" name="devour_hero_me" cnName="吞噬-音效"/>
+  <body soundUrl="sound/electric" name="current_skull_me" cnName="聚能电流-音效"/>
+  <body soundUrl="sound/lifeReplace_enemy" name="liveReplace_enemy_me" cnName="生命置换-音效"/>
+  <body soundUrl="sound/wolfFashionSkill" name="wolfFashionSkill_me" cnName="狼震-音效"/>
+  <body soundUrl="sound/charm_hero" name="charm_hero_me" cnName="魅惑-音效"/>
+  <body soundUrl="sound/murderous_hero" name="murderous_hero_me" cnName="嗜爪-音效"/>
+  <body soundUrl="sound/fireHit2" noShowB="1" name="Triceratops_stone_me" cnName="巨石崩塌-音效"/>
+  <body soundUrl="sound/moreMissile_hero" name="circle_inward_shell_me" cnName="圆周弹-音效"/>
+  <body soundUrl="sound/imploding_enemy" name="sweep_runAway_me" cnName="导弹召唤-逃出升天任务-音效"/>
+  <body soundUrl="sound/energyShield" name="bladeShield_me" cnName="利刃盾-音效"/>
+  <body soundUrl="sound/globalSpurting_enemy" name="globalSpurting_enemy_me" cnName="全局溅射-音效"/>
+  <body soundUrl="sound/teleport_enemy" name="squibDevice_me" cnName="爆竹-音效"/>
+  <body soundUrl="sound/tenacious_hero" name="tenacious_enemy_me" cnName="反击-音效"/>
+  <body soundUrl="sound/groupSpeedUp_enemy" name="groupSpeedUp_enemy_me" cnName="群体加速-音效"/>
+  <body soundUrl="sound/skillFlesh" name="Hit_fleshSkill_godArmsSkill_me" cnName="刷新-音效"/>
+  <body soundUrl="sound/paralysis_enemy_shoot" name="paralysis_enemy_me" cnName="闪电麻痹-音效"/>
+  <body partType="body" soundUrl="specialGun/christmasGunShoot" name="bubblesGotoCamp_target" cnName="转变颜色-目标">Bubbles/change</body>
+  <body soundUrl="CheetahCar/hp_in" con="add" name="fastForward_Cheetah_me" cnName="冲刺-释放">CheetahCar/fastForward</body>
+  <body partType="body" soundUrl="boomSound/midBoom" name="addFlamer_ArmsSkill_link_target" cnName="大炎爆-爆-目标">boomEffect/bigCircle</body>
+  <body soundUrl="sound/pointBoom_hero" name="yearPigSkill_target" cnName="周五大吉-目标">boomEffect/bigCircle</body>
+  <body name="nuclear_peak_target" cnName="核爆-目标">boomEffect/bigFire</body>
+  <body partType="body" name="skyArchSkill_target" cnName="核爆-目标">boomEffect/boom1</body>
+  <body name="iceConeFire" cnName="冰锥发射" con="add">boomEffect/boom1</body>
+  
+  <body partType="body" soundUrl="boomSound/midBoom" name="Hit_burn_ArmsSkill_link_target" cnName="炎爆-爆-目标">boomEffect/boom3</body>
+  <body con="add" partType="body" name="yearHourseSkill_target" cnName="处决-目标">boomEffect/midCan</body>
+  <body partType="body" name="MeatyAway_target" cnName="全域驱赶-目标">boomEffect/posion3</body>
+  <body raNum="1" soundUrl="sound/laserShoot2" name="godMace_ArmsSkill_target" cnName="上帝之杖-目标">bulletHitEffect/purpleLaser</body>
+  <body con="add" randomRange="10" soundUrl="sound/electric" name="madCloseLightning_target" cnName="近电-目标">bulletHitEffect/spark_motion2</body>
+  <body con="add" randomRange="40" name="Nian_change_link_target" cnName="自燃-链接-目标">bulletHitEffect/spark_motion2</body>
+  <body con="add" name="wolfFashionSkill_target" cnName="狼震-目标">bulletHitEffect/wolfShake</body>
+  <body soundUrl="sound/invisibility_hero" partType="body" name="blackHoleDevicer_me" cnName="黑洞-释放">generalEffect/blackHoleHide</body>
+  <body soundUrl="uiSound/swapHero" con="add" partType="head" name="madmanHead_me" cnName="战争狂人脱下头盔-释放">generalEffect/blackHoleHide</body>
+  <body partType="head" name="madmanHead_target" cnName="战争狂人脱下头盔-目标">generalEffect/blackHoleHide</body>
+  <body partType="2eye" con="add" name="meteoriteRain_me" cnName="陨石雨-释放">generalEffect/crazy</body>
+  <body partType="body" name="resistMulHurt_target" cnName="巨伤盾-目标">generalEffect/hurtDefence</body>
+  <body partType="body" con="filter" name="noHurt10Lings_me" cnName="抵挡低于自身生命值的伤害。-释放">generalEffect/hurtDefence1</body>
+  <body soundUrl="sound/paralysis_enemy_hit" con="add" name="static_BlackLaer_target" cnName="静电过载-目标">generalEffect/lakeBoom</body>
+  <body noFollowB="1" soundUrl="sound/vehicleFit" con="add" name="changeToGaia_me" cnName="变身盖亚-释放">generalEffect/vehicleFit</body>
+  <body soundUrl="sound/teleport_enemy" con="add" name="teleport_BoomSkullS_me" cnName="瞬移-释放">lightEffect/basinShow</body>
+  
+  <body name="charm_hero_target" cnName="魅惑-目标">skillEffect/charm_hero</body>
+  <body con="add" name="electricDevicer_target" cnName="全域电击-目标">skillEffect/electricDevicer</body>
+  <body con="add" soundUrl="sound/groupLight_hero" soundVolume="0.3" name="VanityKer_feeding_target" cnName="反哺-目标">skillEffect/groupLight_hero</body>
+  <body con="add" name="groupLightMadFly_target" cnName="群体圣光-目标">skillEffect/groupLight_hero</body>
+  <body soundUrl="sound/groupLight_hero" con="add" name="feeding_wolf_me" cnName="反哺-释放">skillEffect/groupLight_hero</body>
+  <body soundUrl="sound/invisibility_hero" con="add" name="invisibility_enemy_me" cnName="隐匿之雾-释放">skillEffect/hiding_hero</body>
+  <body soundUrl="sound/hiding_hero" con="add" name="madfireHiding_me" cnName="隐身-释放">skillEffect/hiding_hero</body>
+  <body soundUrl="sound/cloned_enemy" con="add" name="cloned_BlackLaer_me" cnName="分身-释放">skillEffect/hiding_hero</body>
+  <body con="add" partType="body" name="immune_equip_target" cnName="免疫-目标">skillEffect/immune_equip</body>
+  <body con="add" partType="head" name="firePossession_target" cnName="附身-目标">skillEffect/possession</body>
+  <body soundUrl="sound/tauntLing" partType="mouth" name="tauntLing_me" cnName="嘲讽-释放">skillEffect/screaming_hero</body>
+  <body soundUrl="sound/magicHit1" partType="mouth" con="add" name="fear_godArmsSkill_target" cnName="爆胆-目标">skillEffect/screaming_hero</body>
+  <body soundUrl="sound/screaming_hero" partType="mouth" con="add" name="screaming_enemy_me" cnName="尖叫-释放">skillEffect/screaming_hero</body>
+  <body con="add" name="treater_knights_target" cnName="净化器-目标">skillEffect/treater_equip</body>
+  <body con="add" name="skillEffectTeleport" cnName="闪烁">skillEffect/teleport</body>
+  <body con="add" name="skillEffectTeleportShow" cnName="闪烁出现">skillEffect/endTeleport</body>
+
+ </father>
+
+
+</data>

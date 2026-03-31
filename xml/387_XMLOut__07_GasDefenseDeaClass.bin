@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="death">
+		<body index="0" name="防毒尸">
+			
+			<name>GasDefenseDea</name>
+			<cnName>防毒尸</cnName><headIconUrl>IconGather/GasDefenseZombie</headIconUrl>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/GasDefenseZombie360.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1.2</lifeRatio>
+			<showLevel>9999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move
+				,normalAttack,shakeAttack
+				,hurt1,hurt2,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-76,28,76</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>6</maxVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 技能 -->
+			<skillArr>GasDefenseDeaT,cmldef3_enemy</skillArr>
+			<bossSkillArr></bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><cn>扳击</cn>
+					<hurtRatio>2</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<skillArr></skillArr>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt cd="3">
+					<imgLabel>shakeAttack</imgLabel>
+					<grapRect>-400,-300,800,600</grapRect>
+					<hurtRatio>3.5</hurtRatio>
+					<attackType>direct</attackType>
+					<skillArr></skillArr>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+			</hurtArr>
+
+		</body>
+		<skill>
+			<name>GasDefenseDeaT</name>
+			<cnName>突袭</cnName><everNoClearB>1</everNoClearB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			
+			<addType>state</addType>
+			<effectType>teleport</effectType>
+			<value>6</value><!-- 第几帧触发 -->
+			<mul>90</mul><!-- 瞬移到敌人面前的距离 -->
+			<secMul>30</secMul><!-- 瞬移到敌人背后的距离的随机值  -30~30 -->
+			<valueString>shakeAttack</valueString><!-- 什么动作触发 -->
+			<duration>99999999</duration>
+			<pointEffectImg name="teleportNew"/>
+			<otherEffectImg name="teleportLine"/>
+			<description>瞬移到敌人头顶，对其发起重击。</description>
+		</skill>
+	</father>
+</data>

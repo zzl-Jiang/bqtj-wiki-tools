@@ -1,0 +1,3670 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<data id="qianyouNiubi2026" cnName="支线续章：绿岛篇" author="倩友小萌新">
+	<!-- id是唯一识别码，必须防止和其他关卡集合重复，不设置的话默认为文件名。 -->
+	<info>
+		绿岛支线时间线与绿岛主线并行，爆枪小队全员将在绿岛面对未知的挑战而前进。
+		该系列支线剧情已实现与主线剧情的全接轨，第二章期待您的沉浸式剧情游玩体验！爆枪小队集结南下，迷雾雷区尸变鏖战，会师仙草奔赴苍木道！
+		后续还有更多精彩章节敬请期待！        B站 倩友小萌新(下滑页面查看推荐提示)
+		推荐：关闭P1的AI功能，默认小白档游玩，其余角色P1档可能会出现bug
+	</info>
+
+	<father name="normal" cn="关卡">
+		<gather name="千里驰援">
+			<level name="GreenIs_RapidRescue" cnName="千里驰援" descrip="有一台载具闯入战斧高地防空警戒区，这位不速之客究竟是谁？">
+				<![CDATA[2025.9.13添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" />
+				<sceneLabel>MainUpland</sceneLabel>
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1"></allDefault>
+					<!-- 人类 -->
+					<unitOrder id="we1" camp="we">
+						<unit cnName="制毒师" dpsMul="150" lifeMul="1" dieGotoState="stru" armsRange="consVirgo" skillArr="crazy_enemy,through_hero_5,groupLight_hero_7,jumpNumAdd1"/>
+					</unitOrder>
+					<unitOrder id="we2"  camp="we">
+						<unit cnName="处决者"/>
+					</unitOrder>
+					<unitOrder id="we3"  camp="we">
+						<unit cnName="小樱" dpsMul="100" lifeMul="0.3" skillArr="uavYing_14,moreUav_14,trueshotYing_14,hurtAddYing_14,coquettish_hero_14,invisibility_hero_10,screaming_hero_10,gliding_hero_10,rolling_hero_10,heroSprint,jumpNumAdd1" armsRange="consVirgo"/>
+						<unit cnName="藏师将军" dpsMul="100" lifeMul="0.3" skillArr="jumpNumAdd1" armsRange="sniperCicadaYa" aiOrder="followBodyAttack:小樱"/>
+						<unit cnName="天鹰小美" dpsMul="150" lifeMul="0.5" armsRange="lightCone,yearChicken,beadCrossbow,christmasGun$2" skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,State_AddMove50"  aiOrder="followBodyAttack:藏师将军"/>
+					</unitOrder>
+					<unitOrder id="we4"  camp="we">
+						<unit cnName="摩卡" dpsMul="30000" lifeMul="1" armsRange="lightCone" dieGotoState="stru" skillArr="crazy_enemy,groupLight_hero_7,hiding_hero_3,jumpNumAdd1,State_AddMove50,toFlyState" aiOrder="followBodyAttack:藏师将军"/>
+						<unit cnName="玉晴"  aiOrder="followBodyAttack:制毒师"/>
+					</unitOrder>
+					<unitOrder id="we5"  camp="we">
+						<unit cnName="心零" dpsMul="100" lifeMul="0.3" skillArr="jumpNumAdd1,WatchEagleWing" armsRange="consLeo" aiOrder="followBodyAttack:小樱"/>
+					</unitOrder>
+					<unitOrder id="we6"  camp="we">
+						<unit cnName="雇佣兵" dpsMul="200" lifeMul="1" dieGotoState="stru" armsRange="lightCone,yearDragon,consLibra,shotgunBlade" skillArr="crazy_enemy,groupLight_hero_7,hiding_hero_3,feedback_hero_5,pioneer_hero_5,moreMissile_hero_10,silence_hero_5,through_hero_5,moreMissile_enemy,pointBoom_enemy,changeToSecDiggers,jumpNumAdd1,State_AddMove,toFlyState"  aiOrder="followBodyAttack:摩卡"/>
+					</unitOrder>
+					<unitOrder id="we7"  camp="we">
+						<unit cnName="丛林特种兵" num="1" dpsMul="1000" lifeMul="1" dieGotoState="stru"  aiOrder="followBodyAttack:小樱"/>
+						<unit cnName="沙漠特种兵" num="1" dpsMul="1000" lifeMul="1" dieGotoState="stru"  aiOrder="followBodyAttack:小樱"/>
+						<unit cnName="处决者"  lifeMul="0.3" dpsMul="1100" skillArr="crazy_vehicle_8,groupLightMadFly"  aiOrder="followBody:小樱"/>
+						<unit cnName="鲲" lifeMul="2" aiOrder="followBody:处决者"/>
+						<unit cnName="潜影者" lifeMul="2" aiOrder="followBody:处决者"/>
+						<unit cnName="大鹏" lifeMul="2" skillArr="slowMove_enemy,groupSpeedUp_enemy"  aiOrder="followBody:处决者"/>
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group>
+						<event>
+							<condition></condition>
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<order>createUnit:we1; r1</order>
+							<order>heroNoExistXY:1100,600</order>
+						</event>
+						<event>
+							<condition delay="0.5"></condition>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s1</order>
+							<order>body:制毒师;followPoint:1100,600</order>
+							<order>body:制毒师; setShootXY:100,512</order>
+						</event>
+						<event>
+							<condition delay="1">say:listOver</condition>
+							<order>createUnit:we2; r2</order>
+							<order>body:处决者; flipToLeft</order>
+							<order>body:处决者;followPoint:1400,600</order>
+							<order>playMusic; music_face:suspense</order>
+							<order>say; startList:s2</order>
+						</event>
+						<event>
+							<condition delay="1">say:listOver</condition>
+							<order>body:处决者; rangeLimit:close</order>
+							<order>body:处决者; followPoint:-1000,-2000</order>
+						</event>
+						<![CDATA[飞机飞走]]>
+						<event>
+							<condition delay="5"></condition>
+							<order>createUnit:we3; r1</order>
+							<order>heroEverParasitic:小樱</order>
+							<order>body:处决者; toDel</order>
+							<order>say; startList:s3</order>
+						</event>
+						<event>
+							<condition delay="2">say:listOver</condition>
+							<order>createUnit:we4; r1</order>
+							<order>playMusic; music_face:love</order>
+							<order>say; startList:s4</order>
+						</event>
+						<event>
+							<condition delay="2">say:listOver</condition>
+							<order>createUnit:we5; r1</order>
+							<order>playMusic; music_face:piano</order>
+							<order>say; startList:s5</order>
+						</event>
+						<event>
+							<condition delay="2">say:listOver</condition>
+							<order>playMusic; music_face:piano</order>
+							<order>createUnit:we6; r1</order>
+							<order>say; startList:s6</order>
+						</event>
+						<event>
+							<condition delay="1">say:listOver</condition>
+							<order>alert:yes; 获得物品：绿岛地区迷雾信号屏蔽实况报告单（内含绿岛地图）。</order>
+							<order>say; startList:s7</order>
+						</event>
+						<event>
+							<condition delay="2">say:listOver</condition>
+							<order>createUnit:we7; r2</order>
+							<order>say; startList:s8</order>
+						</event>
+						<event>
+							<condition delay="2">say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="空中封锁">
+			<level name="GreenIs_AirBlockade" cnName="空中封锁" descrip="爆枪小队南下千里驰援，快速穿越霞光海峡尽快抵达绿岛，务必保证核心载具处决者的安全。">
+				<![CDATA[2025.9.27添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" />
+				<sceneLabel>RaysSea</sceneLabel>
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1"></allDefault>
+					<!-- 人类 -->
+					<unitOrder id="we1" camp="we">
+						<unit cnName="处决者"  lifeMul="0.3" dpsMul="400" skillArr="crazy_vehicle_8,groupLightMadFly,executionerSkill_10,vacuumJie_11" />
+						<unit cnName="鲲" lifeMul="2" aiOrder="followBodyAttack:雇佣兵"/>
+						<unit cnName="潜影者" lifeMul="2" aiOrder="followBodyAttack:鲲"/>
+						<unit cnName="大鹏" lifeMul="2" skillArr="slowMove_enemy,groupSpeedUp_enemy"  aiOrder="followBodyAttack:潜影者"/>
+						<unit cnName="心零" dpsMul="20" lifeMul="0.3" skillArr="jumpNumAdd1,WatchEagleWing" armsRange="consLeo" aiOrder="followBodyAttack:处决者"/>
+						<unit cnName="雇佣兵" dpsMul="20" lifeMul="1" dieGotoState="stru" armsRange="lightCone,yearDragon,consLibra,shotgunBlade" skillArr="crazy_enemy,groupLight_hero_7,hiding_hero_3,feedback_hero_5,pioneer_hero_5,moreMissile_hero_10,silence_hero_5,through_hero_5,moreMissile_enemy,pointBoom_enemy,changeToSecDiggers,jumpNumAdd1,State_AddMove,toFlyState"  aiOrder="followBodyAttack:心零"/>
+					</unitOrder>
+					<unitOrder id="enemy1">
+						<numberType>num</numberType>
+						<unit cnName="吸血蝙蝠" num="8"/>
+						<unit cnName="僵尸空降兵" num="5"  />
+						<unit cnName="僵尸空军总管" num="5"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<numberType>num</numberType>
+						<unit cnName="鬼目游尸" num="5"/>
+						<unit cnName="冥刃游尸" num="6"  />
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<numberType>num</numberType>
+						<unit cnName="吸血蝙蝠" num="4"/>
+						<unit cnName="僵尸空降兵" unitType="super" num="2"  />
+						<unit cnName="僵尸空军总管" num="5"/>
+						<unit cnName="鬼目游尸" num="5"/>
+						<unit cnName="冥刃游尸" num="6"  />
+					</unitOrder>
+					<unitOrder id="boss1">
+						<numberType>num</numberType>
+						<unit cnName="吸血蝙蝠" num="4"/>
+						<unit cnName="僵尸空降兵" num="5"  />
+						<unit cnName="僵尸空军总管" num="5"/>
+						<unit cnName="鬼目游尸" num="5"/>
+						<unit cnName="冥刃游尸" num="3"  />
+						<unit cnName="僵尸空降兵" unitType="super" num="2"  />
+						<unit cnName="游尸王" lifeMul="2" unitType="boss" dpsMul="1" skillArr="crazy_vehicle_3" />
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group>
+						<event>
+							<condition></condition>
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<!-- 主角限制 -->
+							<order>createUnit:we1; r_birth</order>
+							<order>heroEverParasitic:处决者</order>
+							<!-- 添加僵尸和巡逻 -->
+							<order>openInput</order>
+						</event>
+						<event>
+							<condition delay="1"></condition>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s1</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+						</event>
+						<event>
+							<condition  doNumber="2">enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; rEnemySpace2</order>
+						</event>
+						<event>
+							<condition delay="1">enemyNumber:less_1</condition>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s2</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+						</event>
+						<event>
+							<condition  doNumber="2">enemyNumber:less_1</condition>
+							<order>createUnit:enemy2; rEnemySpace2</order>
+						</event>
+						<event>
+							<condition  doNumber="2">enemyNumber:less_1</condition>
+							<order>createUnit:enemy3; rEnemySpace2</order>
+						</event>
+						<event>
+							<condition delay="1">enemyNumber:less_1</condition>
+							<order>say; startList:s3</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+						</event>
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>createUnit:boss1; rEnemySpace2</order>
+						</event>
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s4</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+					<group>
+						<event id="e_fail">
+							<condition delay="1">bodyEvent:die; 处决者</condition>
+							<order>alert:yes; 载具坠毁，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03"></condition>
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="振翼高飞">
+			<level name="GreenIs_SoarHigh" cnName="振翼高飞" descrip="爆枪小队进入血蟒防空识别区，快速突破血蟒空中包围圈尽快抵达绿岛，务必保证心零的安全。">
+				<![CDATA[2025.10.4添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" />
+				<sceneLabel>RaysSea</sceneLabel>
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1"></allDefault>
+					<!-- 人类 -->
+					<unitOrder id="we1" camp="we">
+						<unit cnName="心零" dpsMul="500" lifeMul="0.3" dieGotoState="stru" skillArr="coquettish_hero_14,tauntLing_10,strongLing_10,revengeLing_10,resonanceLing_10,nightLing_10,clawLing_10,vacuumJie_11,jumpNumAdd1,State_AddMove50,WatchEagleWing" armsRange="consLeo"/>
+						<unit cnName="处决者"  lifeMul="0.3" dpsMul="400" skillArr="crazy_vehicle_8,groupLightMadFly,executionerSkill_10"  aiOrder="followBodyAttack:心零"/>
+						<unit cnName="小樱" dpsMul="100" lifeMul="0.3" dieGotoState="stru" skillArr="uavYing_5,moreUav_5,trueshotYing_5,hurtAddYing_5,coquettish_hero_5,invisibility_hero_5,screaming_hero_5,gliding_hero_5,rolling_hero_5,heroSprint,jumpNumAdd1,WatchEagleWing" armsRange="consVirgo"  aiOrder="followBodyAttack:处决者"/>
+						<unit cnName="藏师将军" dpsMul="100" lifeMul="0.3" dieGotoState="stru" skillArr="jumpNumAdd1,WatchEagleWing" armsRange="sniperCicadaYa" aiOrder="followBodyAttack:小樱"/>
+						<unit cnName="天鹰小美" dpsMul="150" lifeMul="0.5" armsRange="lightCone,yearChicken,beadCrossbow,christmasGun$2" dieGotoState="stru" skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,State_AddMove50,WatchEagleWing"  aiOrder="followBodyAttack:藏师将军"/>
+					</unitOrder>
+					<unitOrder id="we2" camp="we">
+						<numberType>num</numberType>
+						<unit cnName="潜伏者" num="1" lifeMul="50" />
+					</unitOrder>
+					<unitOrder id="we3" camp="we">
+						<unit cnName="冥王" lifeMul="1" dpsMul="600"  aiOrder="followBodyAttack:天鹰小美"/>
+						<unit cnName="爆骷S" lifeMul="1" dpsMul="600" skillArr="groupLight_hero_7,hiding_hero_3"  aiOrder="followBodyAttack:冥王"/>
+					</unitOrder>
+					<unitOrder id="enemy1">
+						<numberType>num</numberType>
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="3" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="3" lifeMul="3" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="3" lifeMul="3" armsRange="sniperSmilodon" skillArr="toFlyState,feedback_enemy"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<numberType>num</numberType>
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="3" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="3" lifeMul="3" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="3" lifeMul="3" armsRange="sniperSmilodon" skillArr="toFlyState,feedback_enemy"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<numberType>num</numberType>
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="3" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="3" lifeMul="3" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="3" lifeMul="3" armsRange="sniperSmilodon" skillArr="toFlyState,feedback_enemy"/>
+					</unitOrder>
+					<unitOrder id="boss1">
+						<numberType>num</numberType>
+						<unit cnName="血蟒雇佣兵" num="5" lifeMul="3" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="5" lifeMul="3" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="5" lifeMul="3" armsRange="sniperSmilodon" skillArr="WatchEagleWing,feedback_enemy"/>
+						<unit cnName="霸空雕" lifeMul="15" unitType="boss" dpsMul="1" skillArr="crazy_vehicle_3" />
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group>
+						<event>
+							<condition></condition>
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<!-- 主角限制 -->
+							<order>createUnit:we1; r_birth</order>
+							<order>heroEverParasitic:心零</order>
+							<!-- 添加僵尸和巡逻 -->
+						</event>
+						<event>
+							<condition delay="0.1"></condition>
+							<order>createUnit:we2; r2</order>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s1</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>body:潜伏者; changeCamp:enemy</order>
+							<order>body:潜伏者; ai:patrolRandom</order>
+							<order>body:潜伏者; setAttackTarget:心零</order>
+						</event>
+						<event>
+							<condition delay="3"></condition>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s2</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+						</event>
+						<event>
+							<condition  doNumber="2">enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; rEnemySpace2</order>
+						</event>
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>playMusic; music_face:descent</order>
+							<order>createUnit:we3; r_birth</order>
+							<order>say; startList:s3</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+						</event>
+						<event>
+							<condition  doNumber="2">enemyNumber:less_1</condition>
+							<order>createUnit:enemy2; rEnemySpace2</order>
+						</event>
+						<event>
+							<condition  doNumber="2">enemyNumber:less_1</condition>
+							<order>createUnit:enemy3; rEnemySpace2</order>
+						</event>
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s4</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+						</event>
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>createUnit:boss1; rEnemySpace2</order>
+						</event>
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s5</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+					<group>
+						<event id="e_fail">
+							<condition delay="1">bodyEvent:die; 心零</condition>
+							<order>alert:yes; 心零阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03"></condition>
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="初登绿岛">
+			<level name="GreenIs_FirstVisit" cnName="初登绿岛" descrip="爆枪小队已顺利登陆，尽快击溃沿岸巡逻的血蟒部队，我们要尽快争取时间向绿岛内部深入与文杰和小白会合。">
+				<![CDATA[2025.10.29添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" />
+				<sceneLabel>GreenIs1</sceneLabel>
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1" />
+
+					<!-- ★ 我方：爆枪小队四人 + 三尸宠 ★ -->
+					<unitOrder id="we1" camp="we">
+						<!-- 小樱（主控） -->
+						<unit cnName="小樱" dpsMul="2000" lifeMul="0.5" dieGotoState="stru"
+							skillArr="vacuumJie_10,uavYing_4,moreUav_4,trueshotYing_4,hurtAddYing_4,coquettish_hero_4,invisibility_hero_10,screaming_hero_5,gliding_hero_5,rolling_hero_5,heroSprint,jumpNumAdd1"
+							armsRange="pistol_two,shotgun_two,sniperRifle,ak47" />
+						<!-- 藏师将军 -->
+						<unit cnName="藏师将军" dpsMul="100" lifeMul="0.6" dieGotoState="stru"
+							skillArr="jumpNumAdd1" armsRange="rocket1,sniperRifle,pistol_two,ak47,shotgun_two" aiOrder="followBodyAttack:小樱" />
+						<!-- 天鹰小美 -->
+						<unit cnName="天鹰小美" dpsMul="150" lifeMul="0.6" dieGotoState="stru"
+							armsRange="XiaoMei_pistol,XiaoMei_rocket,christmasGun$2"
+							skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,State_AddMove50" aiOrder="followBodyAttack:藏师将军" />
+						<!-- 心零 -->
+						<unit cnName="心零" dpsMul="100" lifeMul="0.8" dieGotoState="stru"
+							skillArr="coquettish_hero_14,tauntLing_10,strongLing_10,revengeLing_10,resonanceLing_10,nightLing_10,clawLing_10,jumpNumAdd1,State_AddMove50,WatchEagleWing"
+							armsRange="shotgun1" aiOrder="followBodyAttack:天鹰小美" />
+					</unitOrder>
+					<unitOrder id="we2" camp="we">
+						<unit cnName="处决者"  lifeMul="9999999" skillArr="State_noAiFind,State_InvincibleThrough,noAttackOrder,noMoveSpeed" />
+					</unitOrder>
+
+					<!-- ★ 尸宠：跟随各自主人 ★ -->
+					<unitOrder id="pet2" camp="we">
+						<unit cnName="冥王" lifeMul="1.8" dpsMul="40"
+							aiOrder="followBodyAttack:心零" />
+					</unitOrder>
+					<unitOrder id="pet3" camp="we">
+						<unit cnName="爆骷S" lifeMul="1.6" dpsMul="35"
+							aiOrder="followBodyAttack:天鹰小美" />
+					</unitOrder>
+
+					<!-- ★ 敌方：血蟒沿岸巡逻小分队（规模缩小，体现迷雾下我方实力受限） ★ -->
+					<unitOrder id="enemy1">
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="1"/>
+						<unit cnName="血蟒突击兵" num="2"/>
+						<unit cnName="血蟒狙击兵" num="2"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="2"/>
+						<unit cnName="血蟒突击兵" num="2"/>
+						<unit cnName="血蟒狙击兵" num="1"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="2"/>
+						<unit cnName="血蟒突击兵" num="1"/>
+						<unit cnName="血蟒狙击兵" num="2"/>
+					</unitOrder>
+					<unitOrder id="boss1">
+						<unit cnName="血蟒狙击兵" unitType="boss" lifeMul="30" onlyLevelSkillB="1" skillArr="sumLandDog,slowMove_enemy"/>
+						<unit cnName="血蟒突击兵" unitType="boss" dpsMul="2"  lifeMul="30" onlyLevelSkillB="1" skillArr="imploding_enemy,moreMissile_enemy" />
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="3"/>
+						<unit cnName="血蟒雇佣兵" num="1"/>
+						<unit cnName="血蟒突击兵" num="1"/>
+						<unit cnName="血蟒狙击兵" num="1"/>
+					</unitOrder>
+				</unitG>
+				<rectG>
+					<!-- 敌人出生点 -->
+					<rect id="rEnemySpace1">2600,650,100,100</rect>
+					<rect id="rEnemySpace2">1700,650,100,100</rect>
+					<!-- 其他特殊点 -->
+					<rect id="fly1">152,600,60,60</rect>
+					<rect id="r_wounded">400,500,50,50</rect>
+					<rect id="r_prison">500,400,80,80</rect>
+					<rect id="r_prison_guard">520,420,50,50</rect>
+					<rect id="r_retreat">600,600,50,50</rect>
+					<rect id="r_friend">200,200,50,50</rect>
+					<rect id="r_boss">250,200,50,50</rect>
+				</rectG>
+				<eventG>
+					<group>
+						<!-- 初始设置：禁用装备、创建我方四人 -->
+						<event>
+							<condition />
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<!-- 主角限制 -->
+							<order>createUnit:we2; fly1</order>
+							<order>body:处决者; flipToRight</order>
+							<order>createUnit:we1; r_birth</order>
+							<order>parasiticWeRolePan</order>
+							<order>heroEverParasitic:小樱</order>
+							<order>openInput</order>
+						</event>
+
+						<!-- 延迟0.5秒创建尸宠，营造“跟随主人”的出场感 -->
+						<event>
+							<condition delay="0.5" />
+							<order>createUnit:pet2; r2</order>
+							<order>createUnit:pet3; r3</order>
+						</event>
+
+						<!-- 登陆剧情：感受迷雾压制，只能使用基础武器 -->
+						<event>
+							<condition delay="1" />
+							<order>playMusic; music_face:piano</order>
+							<order>say; startList:s1</order>
+						</event>
+
+						<!-- 对话结束，血蟒巡逻队出现 -->
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+							<order>createUnit:enemy1; hideRan</order>
+						</event>
+						<event>
+							<condition  doNumber="3">liveEnemyNumber:less_1</condition>
+							<order>createUnit:enemy2; hideRan</order>
+						</event>
+						<event>
+							<condition  doNumber="3">liveEnemyNumber:less_1</condition>
+							<order>createUnit:enemy3; hideRan</order>
+						</event>
+
+						<event>
+							<condition  doNumber="1">liveEnemyNumber:less_1</condition>
+							<order>createUnit:boss1; hideRan</order>
+						</event>
+
+						<!-- 敌人全灭后，决定转移 -->
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>playMusic; music_face:piano</order>
+							<order>say; startList:s2</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>alert:yes; 绿岛地区迷雾信号屏蔽实况报告单（内含绿岛地图）。</order>
+						</event>
+						<event>
+							<condition delay="1"></condition>
+							<order>say; startList:s3</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="密林潜行">
+			<level name="GreenIs_UnderSneaking" cnName="密林潜行" descrip="众人赶在更多血蟒巡逻部队发现之前顺着地图来到了苍木道，即将发生的事情出乎众人意料。">
+				<![CDATA[2025.11.1添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" />
+				<sceneLabel>GreenIs2</sceneLabel>
+
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1" />
+
+					<!-- ★ 我方：爆枪小队四人 ★ -->
+					<unitOrder id="we1" camp="we">
+						<!-- 小樱（主控） -->
+						<unit cnName="小樱" dpsMul="4550" lifeMul="0.5" dieGotoState="stru"
+							skillArr="vacuumJie_8,uavYing_4,moreUav_4,trueshotYing_4,hurtAddYing_4,coquettish_hero_4,invisibility_hero_10,screaming_hero_10,gliding_hero_10,rolling_hero_10,heroSprint,jumpNumAdd1"
+							armsRange="pistol_two,shotgun_two,sniperRifle,ak47" />
+						<!-- 藏师将军 -->
+						<unit cnName="藏师将军" dpsMul="100" lifeMul="0.8" dieGotoState="stru"
+							skillArr="jumpNumAdd1" armsRange="rocket1,sniperRifle,pistol_two,ak47,shotgun_two" aiOrder="followBodyAttack:小樱" />
+						<!-- 天鹰小美 -->
+						<unit cnName="天鹰小美" dpsMul="150" lifeMul="0.6" dieGotoState="stru"
+							armsRange="XiaoMei_pistol,XiaoMei_rocket,christmasGun$2"
+							skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,State_AddMove50" aiOrder="followBodyAttack:藏师将军" />
+						<!-- 心零 -->
+						<unit cnName="心零" dpsMul="100" lifeMul="0.8" dieGotoState="stru"
+							skillArr="coquettish_hero_14,tauntLing_10,strongLing_10,revengeLing_10,resonanceLing_10,nightLing_10,clawLing_10,jumpNumAdd1,State_AddMove50,WatchEagleWing"
+							armsRange="shotgun1" aiOrder="followBodyAttack:天鹰小美" />
+					</unitOrder>
+
+					<!-- ★ 尸宠：跟随各自主人 ★ -->
+					<unitOrder id="pet2" camp="we">
+						<unit cnName="冥王" lifeMul="1.8" dpsMul="40"
+							aiOrder="followBodyAttack:心零" />
+					</unitOrder>
+					<unitOrder id="pet3" camp="we">
+						<unit cnName="爆骷S" lifeMul="1.6" dpsMul="35"
+							aiOrder="followBodyAttack:天鹰小美" />
+					</unitOrder>
+
+					<!-- ★ 友方：受伤垂死的血蟒士兵（仅触发剧情）★ -->
+					<unitOrder id="woundedEnemy" camp="we">
+						<unit cnName="血蟒突击兵" lifeMul="1" dpsMul="5000" skillArr="State_InvincibleThrough,State_noAiFind" dieGotoState="stru" />
+					</unitOrder>
+
+					<!-- ★ 敌方：少量游荡者（可选，若希望有零星战斗可保留，若纯剧情可注释）★ 
+			<unitOrder id="enemy_patrol">
+				<numberType>num</numberType>
+				<unit cnName="血蟒雇佣兵" num="1" lifeMul="1.5" skillArr="toFlyState" />
+				<unit cnName="血蟒突击兵" num="1" lifeMul="1.5" armsRange="rifleDragon" />
+			</unitOrder>
+			-->
+				</unitG>
+				<rectG>
+					<!-- 敌人出生点 -->
+					<rect id="rEnemySpace1">2600,650,100,100</rect>
+					<rect id="rEnemySpace2">1700,650,100,100</rect>
+					<!-- 其他特殊点 -->
+					<rect id="fly1">152,600,60,60</rect>
+					<rect id="r_wounded">2500,1150,50,50</rect>
+					<rect id="r_prison">500,400,80,80</rect>
+					<rect id="r_prison_guard">520,420,50,50</rect>
+					<rect id="r_retreat">600,600,50,50</rect>
+					<rect id="r_friend">200,200,50,50</rect>
+					<rect id="r_boss">250,200,50,50</rect>
+				</rectG>
+				<eventG>
+					<group>
+						<!-- 初始设置：创建我方四人 + 尸宠 -->
+						<event>
+							<condition />
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<order>createUnit:we1; r_birth</order>
+							<order>heroEverParasitic:小樱</order>
+							<order>createUnit:pet2; r2</order>
+							<order>createUnit:pet3; r3</order>
+							<order>createUnit:woundedEnemy; r_wounded</order>
+							<order>body:血蟒突击兵; toDie</order>
+							<order>openInput</order>
+						</event>
+
+						<!-- 进入苍木道密林，背景音乐切换为悬疑氛围 -->
+						<event>
+							<condition delay="1"></condition>
+							<order>playMusic; music_face:suspense</order>
+							<order>say; startList:s1</order>
+						</event>
+
+						<!-- 发现受伤士兵 -->
+						<event>
+							<condition>say:listOver</condition>
+						</event>
+						<event>
+							<condition>bodyGap:less_350; 小樱:血蟒突击兵</condition>
+							<order>say; startList:s2</order>
+						</event>
+
+						<!-- 士兵临终遗言 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>say; startList:s3</order>
+						</event>
+
+						<!-- 士兵气绝，众人哀叹 -->
+						<event>
+							<condition delay="1">say:listOver</condition>
+							<order>body:血蟒突击兵; rebirth</order>
+							<order>body:血蟒突击兵;toDie:die</order>
+							<order>playMusic; music_face:piano</order>
+							<order>say; startList:s4</order>
+						</event>
+
+						<!-- 分析路线，想起制毒师告诫（天气铺垫） -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>say; startList:s5</order>
+						</event>
+
+						<!-- 突然！远处爆炸，地面震荡 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>level; shake:beatMadboss</order>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s6</order>
+						</event>
+
+						<!-- 大批血蟒部队正在围拢（任务完成，紧张转移） -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>say; startList:s7</order>
+						</event>
+						<event>
+							<condition delay="1">say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; win</order>
+						</event>
+					</group>
+
+					<!-- 失败条件：小樱、心零任意一人阵亡（尸宠可牺牲） -->
+					<group>
+						<event id="e_fail">
+							<condition delay="1">bodyEvent:die; 小樱</condition>
+							<order>alert:yes; 小樱阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+						<event id="e_fail2">
+							<condition delay="1">bodyEvent:die; 心零</condition>
+							<order>alert:yes; 心零阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="血蟒围困">
+			<level name="GreenIs_PythonBesiege" cnName="血蟒围困" descrip="突如其来的爆炸声吸引了附近大批的血蟒部队，拿起手中的武器，击溃前来包围的血蟒部队，做好突围寻找新生路的准备。">
+				<![CDATA[2025.11.3添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" />
+				<sceneLabel>GreenIs2</sceneLabel>
+
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1" />
+
+					<!-- ★ 我方：爆枪小队四人 ★ -->
+					<unitOrder id="we1" camp="we">
+						<!-- 小樱（主控） -->
+						<unit cnName="小樱" dpsMul="6500" lifeMul="0.5" dieGotoState="stru"
+							skillArr="vacuumJie_8,uavYing_4,moreUav_4,trueshotYing_4,hurtAddYing_4,coquettish_hero_4,invisibility_hero_10,screaming_hero_10,gliding_hero_10,rolling_hero_10,heroSprint,jumpNumAdd1"
+							armsRange="pistol_two,shotgun_two,sniperRifle,ak47" />
+						<!-- 藏师将军 -->
+						<unit cnName="藏师将军" dpsMul="350" lifeMul="0.6" dieGotoState="stru"
+							skillArr="jumpNumAdd1" armsRange="rocket1,sniperRifle,pistol_two,ak47,shotgun_two" aiOrder="followBodyAttack:小樱" />
+						<!-- 天鹰小美 -->
+						<unit cnName="天鹰小美" dpsMul="350" lifeMul="0.6" dieGotoState="stru"
+							armsRange="XiaoMei_pistol,XiaoMei_rocket,christmasGun$2"
+							skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,State_AddMove50" aiOrder="followBodyAttack:藏师将军" />
+						<!-- 心零 -->
+						<unit cnName="心零" dpsMul="350" lifeMul="0.8" dieGotoState="stru"
+							skillArr="coquettish_hero_14,tauntLing_10,strongLing_10,revengeLing_10,resonanceLing_10,nightLing_10,clawLing_10,jumpNumAdd1,State_AddMove50,WatchEagleWing"
+							armsRange="shotgun1" aiOrder="followBodyAttack:天鹰小美" />
+					</unitOrder>
+
+					<!-- ★ 尸宠：跟随各自主人 ★ -->
+					<unitOrder id="pet2" camp="we">
+						<unit cnName="冥王" lifeMul="1.8" dpsMul="40"
+							aiOrder="followBodyAttack:心零" />
+					</unitOrder>
+					<unitOrder id="pet3" camp="we">
+						<unit cnName="爆骷S" lifeMul="1.6" dpsMul="35"
+							aiOrder="followBodyAttack:冥王" />
+					</unitOrder>
+
+					<!-- ★ 敌方：血蟒围剿部队（共10波，按难度递增）★ -->
+					<!-- 波次1-3：基础步兵 -->
+					<unitOrder id="wave1">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="2" lifeMul="2" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="2" lifeMul="2" armsRange="rifleDragon" skillArr="toFlyState"/>
+					</unitOrder>
+					<unitOrder id="wave2">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="2" lifeMul="2.2" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="2" lifeMul="2.2" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="2" lifeMul="2.2" armsRange="sniperSmilodon" skillArr="feedback_enemy"/>
+					</unitOrder>
+					<unitOrder id="wave3">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="2" lifeMul="2.5" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="2" lifeMul="2.5" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="3" lifeMul="2.5" armsRange="sniperSmilodon" skillArr="feedback_enemy"/>
+					</unitOrder>
+					<!-- 波次4-6：加入重装兵 -->
+					<unitOrder id="wave4">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="2" lifeMul="2.5" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="2" lifeMul="2.5" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="2" lifeMul="2.5" armsRange="sniperSmilodon" skillArr="feedback_enemy"/>
+						<unit cnName="血蟒重甲兵" num="2" lifeMul="4" armsRange="shotgun1"/>
+					</unitOrder>
+					<unitOrder id="wave5">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="2.5" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="3" lifeMul="2.5" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="3" lifeMul="2.5" armsRange="sniperSmilodon" skillArr="feedback_enemy"/>
+						<unit cnName="血蟒重甲兵" num="3" lifeMul="4" armsRange="shotgun1"/>
+					</unitOrder>
+					<unitOrder id="wave6">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="2.8" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="3" lifeMul="2.8" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="4" lifeMul="2.8" armsRange="sniperSmilodon" skillArr="feedback_enemy"/>
+						<unit cnName="血蟒重甲兵" num="4" lifeMul="4.5" armsRange="shotgun1"/>
+					</unitOrder>
+					<!-- 波次7-9：加入精英部队 -->
+					<unitOrder id="wave7">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="2.8" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="4" lifeMul="2.8" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="5" lifeMul="2.8" armsRange="sniperSmilodon" skillArr="toFlyState,feedback_enemy"/>
+						<unit cnName="血蟒重甲兵" num="5" lifeMul="4.5" armsRange="shotgun1"/>
+						<unit cnName="血蟒重甲兵" lifeMul="15" unitType="super" dpsMul="1.5" skillArr="groupSpeedUp_enemy" />
+					</unitOrder>
+					<unitOrder id="wave8">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="4" lifeMul="3" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="4" lifeMul="3" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="5" lifeMul="3" armsRange="sniperSmilodon" skillArr="toFlyState,feedback_enemy"/>
+						<unit cnName="血蟒重甲兵" num="5" lifeMul="5" armsRange="shotgun1"/>
+						<unit cnName="血蟒重甲兵" num="2" lifeMul="15" unitType="super" dpsMul="1.5" skillArr="groupSpeedUp_enemy" />
+					</unitOrder>
+					<unitOrder id="wave9">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="5" lifeMul="3" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="5" lifeMul="3" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="5" lifeMul="3" armsRange="sniperSmilodon" skillArr="feedback_enemy"/>
+						<unit cnName="血蟒重甲兵" num="5" lifeMul="5" armsRange="shotgun1"/>
+						<unit cnName="血蟒重甲兵" num="3" lifeMul="15" unitType="super" dpsMul="1.5" skillArr="groupSpeedUp_enemy" />
+					</unitOrder>
+					<!-- 波次10：最终强敌，带BOSS级单位 -->
+					<unitOrder id="wave10">
+						<numberType>num</numberType>
+						<unit cnName="巡逻狗" num="3"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒雇佣兵" num="5" lifeMul="3" skillArr="toFlyState,slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="5" lifeMul="3" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒突击兵" unitType="boss" dpsMul="10"  lifeMul="20" onlyLevelSkillB="1" skillArr="imploding_enemy,moreMissile_enemy"/>
+						<unit cnName="血蟒重甲兵" unitType="boss" dpsMul="10"  lifeMul="100" onlyLevelSkillB="1" skillArr="imploding_enemy,moreMissile_enemy"/>
+					</unitOrder>
+				</unitG>
+				<rectG>
+					<!-- 敌人出生点 -->
+					<rect id="rEnemySpace1">2600,650,100,100</rect>
+					<rect id="rEnemySpace2">1700,650,100,100</rect>
+					<!-- 其他特殊点 -->
+					<rect id="fly1">152,600,60,60</rect>
+					<rect id="r_wounded">2500,1150,50,50</rect>
+					<rect id="r_prison">500,400,80,80</rect>
+					<rect id="r_prison_guard">520,420,50,50</rect>
+					<rect id="r_retreat">600,600,50,50</rect>
+					<rect id="r_friend">200,200,50,50</rect>
+					<rect id="r_boss">250,200,50,50</rect>
+				</rectG>
+				<eventG>
+					<group>
+						<!-- ========== 初始设置 ========== -->
+						<event>
+							<condition />
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<order>createUnit:we1; r_birth</order>
+							<order>parasiticWeRolePan</order>
+							<order>heroEverParasitic:小樱</order>
+							<order>createUnit:pet2; r2</order>
+							<order>createUnit:pet3; r3</order>
+							<order>openInput</order>
+						</event>
+
+						<!-- ========== 开场：被包围的紧迫感 ========== -->
+						<event>
+							<condition delay="0.5" />
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s1</order>
+						</event>
+
+						<!-- ========== 波次战斗：共10波，每波全灭后给地雷并触发下一波 ========== -->
+						<!-- 波次1 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>createUnit:wave1; rEnemySpace2</order>
+							<order>say; startList:s2_1</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,2</order>
+							<!-- 缴获2颗地雷 -->
+							<order>createUnit:wave2; rEnemySpace2</order>
+							<order>say; startList:s2_2</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,2</order>
+							<order>createUnit:wave3; rEnemySpace2</order>
+							<order>say; startList:s2_3</order>
+						</event>
+						<!-- 波次4-6 -->
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,3</order>
+							<order>createUnit:wave4; rEnemySpace2</order>
+							<order>say; startList:s2_4</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,3</order>
+							<order>createUnit:wave5; rEnemySpace2</order>
+							<order>say; startList:s2_5</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,3</order>
+							<order>createUnit:wave6; rEnemySpace2</order>
+							<order>say; startList:s2_6</order>
+						</event>
+						<!-- 波次7-9 -->
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,4</order>
+							<order>createUnit:wave7; rEnemySpace2</order>
+							<order>say; startList:s2_7</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,4</order>
+							<order>createUnit:wave8; rEnemySpace2</order>
+							<order>say; startList:s2_8</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,4</order>
+							<order>createUnit:wave9; rEnemySpace2</order>
+							<order>say; startList:s2_9</order>
+						</event>
+						<!-- 波次10：最终波 -->
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,5</order>
+							<order>createUnit:wave10; rEnemySpace2</order>
+							<order>playMusic; music_face:Madboss</order>
+							<order>say; startList:s2_10</order>
+						</event>
+
+						<!-- ========== 全部敌人消灭，战斗胜利 ========== -->
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>playMusic; music_face:piano</order>
+							<order>say; startList:s3</order>
+						</event>
+
+						<!-- ========== 分兵决策 ========== -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>say; startList:s4</order>
+						</event>
+
+						<!-- 小樱移交地图给藏师将军 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>body:小樱; transferItem:绿岛地图; 藏师将军</order>
+							<!-- 假设存在该指令，若无则用剧情表现 -->
+							<order>say; startList:s5</order>
+						</event>
+
+						<!-- ========== 任务完成，为第四关铺垫 ========== -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+
+					<!-- ========== 失败条件：小樱或心零阵亡 ========== -->
+					<group>
+						<event id="e_fail1">
+							<condition delay="1">bodyEvent:die; 小樱</condition>
+							<order>alert:yes; 小樱阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+						<event id="e_fail2">
+							<condition delay="1">bodyEvent:die; 心零</condition>
+							<order>alert:yes; 心零阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="殊途同归">
+			<level name="GreenIs_DoubleinPairs" cnName="殊途同归" descrip="情况越来越严峻，大批血蟒支援部队向苍木道方向赶来，坚持五分钟击溃血蟒部队，为藏师一队提前突围断后，倒计时结束未击溃全部血蟒部队视为任务失败。">
+				<![CDATA[2025.11.9添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" />
+				<sceneLabel>GreenIs2</sceneLabel>
+
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1" />
+
+					<!-- ★ 我方：爆枪小队四人 ★ -->
+					<unitOrder id="we1" camp="we">
+						<!-- 小樱（主控） -->
+						<unit cnName="小樱" dpsMul="3000" lifeMul="0.5" dieGotoState="stru"
+							skillArr="vacuumJie_8,uavYing_2,moreUav_2,trueshotYing_2,hurtAddYing_2,coquettish_hero_4,invisibility_hero_4,screaming_hero_4,gliding_hero_4,rolling_hero_5,heroSprint,jumpNumAdd1"
+							armsRange="pistol_two,shotgun_two,sniperRifle,ak47" />
+						<!-- 藏师将军 -->
+						<unit cnName="藏师将军" dpsMul="350" lifeMul="0.5" dieGotoState="stru"
+							skillArr="jumpNumAdd1" armsRange="rocket1,sniperRifle,pistol_two,ak47,shotgun_two"/>
+						<!-- 天鹰小美 -->
+						<unit cnName="天鹰小美" dpsMul="450" lifeMul="0.5" dieGotoState="stru"
+							armsRange="XiaoMei_pistol,XiaoMei_rocket,christmasGun$2"
+							skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_2,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,State_AddMove50" aiOrder="followBodyAttack:小樱" />
+						<!-- 心零 -->
+						<unit cnName="心零" dpsMul="450" lifeMul="0.5" dieGotoState="stru"
+							skillArr="coquettish_hero_14,tauntLing_10,strongLing_10,revengeLing_10,resonanceLing_10,nightLing_10,clawLing_10,jumpNumAdd1,State_AddMove50,WatchEagleWing"
+							armsRange="shotgun1" aiOrder="followBodyAttack:天鹰小美" />
+					</unitOrder>
+
+					<!-- ★ 尸宠：跟随各自主人 ★ -->
+					<unitOrder id="pet2" camp="we">
+						<unit cnName="冥王" lifeMul="1.8" dpsMul="40"
+							aiOrder="followBodyAttack:藏师将军" />
+					</unitOrder>
+					<unitOrder id="pet3" camp="we">
+						<unit cnName="爆骷S" lifeMul="1.6" dpsMul="35"
+							aiOrder="followBodyAttack:藏师将军" />
+					</unitOrder>
+
+					<unitOrder id="enemy1">
+						<unit cnName="血蟒雇佣兵" num="4" dpsMul="1.5" lifeMul="2" />
+						<unit cnName="血蟒突击兵" num="4" dpsMul="1.5" lifeMul="2"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<unit cnName="血蟒雇佣兵" num="4" dpsMul="1.5" lifeMul="2"/>
+						<unit cnName="血蟒突击兵" num="4" dpsMul="1.5" lifeMul="2"/>
+						<unit cnName="血蟒狙击兵" num="2" dpsMul="1.5" lifeMul="2"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<unit cnName="血蟒雇佣兵" num="4" dpsMul="1.5" lifeMul="2"/>
+						<unit cnName="血蟒突击兵" num="4" dpsMul="1.5" lifeMul="2"/>
+						<unit cnName="血蟒狙击兵" num="4" dpsMul="1.5" lifeMul="2"/>
+					</unitOrder>
+					<unitOrder id="boss1">
+						<unit cnName="血蟒雇佣兵" dpsMul="3" lifeMul="0.5" unitType="boss" onlyLevelSkillB="1" skillArr="imploding_enemy"/>
+						<unit cnName="大地掠袭者" dpsMul="1" lifeMul="12" unitType="boss" warningRange="4000" onlyLevelSkillB="1" skillArr="defence100,floorTankSkill_8,sumAirDog"/>
+					</unitOrder>
+				</unitG>
+
+				<rectG>
+					<!-- 敌人出生点 -->
+					<rect id="rEnemySpace1">2600,650,100,100</rect>
+					<rect id="rEnemySpace2">1700,650,100,100</rect>
+					<!-- 其他特殊点 -->
+					<rect id="fly1">152,600,60,60</rect>
+					<rect id="r_wounded">2500,1150,50,50</rect>
+					<rect id="r_prison">500,400,80,80</rect>
+					<rect id="r_prison_guard">520,420,50,50</rect>
+					<rect id="r_retreat">600,600,50,50</rect>
+					<rect id="r_friend">200,200,50,50</rect>
+					<rect id="r_boss">250,200,50,50</rect>
+				</rectG>
+				<eventG>
+					<group>
+						<!-- 初始设置：创建全员 -->
+						<event>
+							<condition />
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<order>level;taskTimingB:false</order>
+							<order>createUnit:we1; r_birth</order>
+							<order>heroEverParasitic:小樱</order>
+							<order>createUnit:pet2; r2</order>
+							<order>createUnit:pet3; r3</order>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,70</order>
+							<order>alert:yes; 重要提示：当前开发者模式下该关卡无5分钟倒计时限制</order>
+							<order>openInput</order>
+						</event>
+
+						<!-- 播放分兵嘱托对话 -->
+						<event>
+							<condition delay="1" />
+							<order>playMusic; music_face:piano</order>
+							<order>say; startList:s1</order>
+						</event>
+
+						<!-- 对话结束，藏师及尸宠离场（向右移动至3000码外后删除） -->
+
+
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+							<order>body:藏师将军; rangeLimit:close</order>
+							<order>body:藏师将军; lockShootXY:4090,1200</order>
+							<order>body:冥王; rangeLimit:close</order>
+							<order>body:冥王; lockShootXY:4090,1200</order>
+							<order>body:爆骷S; rangeLimit:close</order>
+							<order>body:爆骷S; lockShootXY:4090,1200</order>
+						</event>
+						<event>
+							<condition delay="0.5"></condition>
+							<order>body:藏师将军;followPoint:4090,1200</order>
+							<order>body:冥王;followPoint:4090,1200</order>
+							<order>body:爆骷S;followPoint:4090,1200</order>
+						</event>
+						<event>
+							<condition delay="13"></condition>
+							<order>body:藏师将军; addEffectPosition:oreBombShowFlower</order>
+							<order>body:藏师将军; toDel</order>
+							<order>body:冥王; addEffectPosition:oreBombShowFlower</order>
+							<order>body:冥王; toDel</order>
+							<order>body:爆骷S; addEffectPosition:oreBombShowFlower</order>
+							<order>body:爆骷S; toDel</order>
+							<order>say; startList:s2</order>
+							<!-- 简短提醒断后开始 -->
+						</event>
+
+						<!-- 断后开始：出现第一波敌人 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>level;taskTimingB:true</order>
+							<order>createUnit:enemy1; hideRan</order>
+						</event>
+
+						<!-- 连续波次：每波全灭后刷下一波 -->
+						<event>
+							<condition doNumber="4">liveEnemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,5</order>
+							<order>createUnit:enemy2; hideRan</order>
+						</event>
+						<event>
+							<condition doNumber="4">liveEnemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,5</order>
+							<order>createUnit:enemy3; hideRan</order>
+						</event>
+						<event>
+							<condition doNumber="1">liveEnemyNumber:less_1</condition>
+							<order>body:sumByP1; addTempDevice:hurtMine_6,5</order>
+							<order>createUnit:boss1; hideRan</order>
+						</event>
+
+						<!-- 所有敌人消灭，任务完成 -->
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>level;taskTimingB:false</order>
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s3</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+
+					<!-- 失败条件：小樱、心零、小美任意一人阵亡 -->
+					<group>
+						<event id="e_fail1">
+							<condition delay="1">bodyEvent:die; 小樱</condition>
+							<order>alert:yes; 小樱阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+						<event id="e_fail2">
+							<condition delay="1">bodyEvent:die; 心零</condition>
+							<order>alert:yes; 心零阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+						<event id="e_fail3">
+							<condition delay="1">bodyEvent:die; 天鹰小美</condition>
+							<order>alert:yes; 天鹰小美阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="雾里寻踪">
+			<level name="GreenIs_TracingMist" cnName="雾里寻踪" descrip="话分两头，藏师带领随行尸宠沿着稍远的郁葱坪方向出发，这一路上相对安全，只要克服眼前携带迷雾发射装置的小股血蟒巡逻队即可。战斗完毕后迷雾会削弱，才能战斧高地取得联系。">
+				<![CDATA[2025.11.21添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" />
+				<sceneLabel>GreenIs4</sceneLabel>
+
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1" />
+					<!-- 我方：藏师 + 三尸宠 -->
+					<unitOrder id="we1" camp="we">
+						<unit cnName="藏师将军" dpsMul="6500" lifeMul="0.5" dieGotoState="stru"
+							skillArr="vacuumJie_6,groupLight_hero_7,crazy_hero_2,through_hero_2,murderous_hero_2,pointBoom_hero_2,hiding_hero_2,jumpNumAdd1,rolling_hero_5,State_AddMove50" armsRange="rocket1,sniperRifle,pistol_two,ak47,shotgun_two"/>
+					</unitOrder>
+					<unitOrder id="pet2" camp="we">
+						<unit cnName="冥王" lifeMul="1.8" dpsMul="40"
+							aiOrder="followBodyAttack:藏师将军" />
+					</unitOrder>
+					<unitOrder id="pet3" camp="we">
+						<unit cnName="爆骷S" lifeMul="1.6" dpsMul="35"
+							aiOrder="followBodyAttack:藏师将军" />
+					</unitOrder>
+
+					<!-- 敌方：携带迷雾发射装置的血蟒巡逻队 -->
+					<unitOrder id="enemy1">
+						<numberType>num</numberType>
+						<unit cnName="血蟒雇佣兵" num="1" lifeMul="2.5" skillArr="slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="1" lifeMul="2.5" armsRange="rifleDragon" skillArr="toFlyState"/>
+						<unit cnName="血蟒狙击兵" num="1" lifeMul="3" skillArr="imploding_enemy" />
+						<unit cnName="巡逻狗" num="1"/>
+						<unit cnName="飞天狗" num="1"/>
+						<unit cnName="血蟒重甲兵" num="2"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<numberType>num</numberType>
+						<unit cnName="血蟒雇佣兵" num="2" lifeMul="2.5" skillArr="slowMove_enemy" />
+						<unit cnName="血蟒突击兵" num="2" lifeMul="2.5" armsRange="rifleDragon" skillArr="toFlyState,imploding_enemy"/>
+						<unit cnName="血蟒狙击兵" num="2" lifeMul="2.5" armsRange="sniperSmilodon" skillArr="feedback_enemy"/>
+						<unit cnName="巡逻狗" num="2"/>
+						<unit cnName="飞天狗" num="2"/>
+						<unit cnName="血蟒重甲兵" num="2"/>
+					</unitOrder>
+				</unitG>
+				<rectG>
+					<!-- 敌人出生点 -->
+					<rect id="rEnemySpace1">2600,650,100,100</rect>
+					<rect id="rEnemySpace2">1700,650,100,100</rect>
+					<!-- 其他特殊点 -->
+					<rect id="fly1">152,600,60,60</rect>
+					<rect id="r_wounded">2500,1150,50,50</rect>
+					<rect id="r_prison">500,400,80,80</rect>
+					<rect id="r_prison_guard">520,420,50,50</rect>
+					<rect id="r_retreat">600,600,50,50</rect>
+					<rect id="r_friend">200,200,50,50</rect>
+					<rect id="r_boss">250,200,50,50</rect>
+				</rectG>
+				<eventG>
+					<group>
+						<event>
+							<condition />
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<order>addWeather:rain; 3:10000</order>
+							<order>createUnit:we1; r_birth</order>
+							<order>heroEverParasitic:藏师将军</order>
+							<order>createUnit:pet2; r2</order>
+							<order>createUnit:pet3; r3</order>
+							<order>openInput</order>
+						</event>
+						<event>
+							<condition delay="1" />
+							<order>playMusic; music_face:suspense</order>
+							<order>body:sumByP1; addTempDevice:hammerMine_6,10</order>
+							<order>say; startList:s1</order>
+						</event>
+						<!-- 遭遇迷雾巡逻队 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>say; startList:s2</order>
+						</event>
+						<!-- 全灭第一波 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>createUnit:enemy2; rEnemySpace1</order>
+							<order>body:sumByP1; addTempDevice:hammerMine_6,2</order>
+						</event>
+						<event>
+							<condition doNumber="3">enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; rEnemySpace2</order>
+							<order>body:sumByP1; addTempDevice:hammerMine_6,2</order>
+						</event>
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>say; startList:s3</order>
+						</event>
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+							<order>createUnit:enemy2; rEnemySpace1</order>
+							<order>body:sumByP1; addTempDevice:hammerMine_6,2</order>
+						</event>
+						<!-- 全灭敌人，迷雾削弱 -->
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>playMusic; music_face:piano</order>
+							<order>say; startList:s4</order>
+						</event>
+						<!-- 恢复与高地通讯 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>say; startList:s5</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+					<group>
+						<event id="e_fail">
+							<condition delay="1">bodyEvent:die; 藏师将军</condition>
+							<order>alert:yes; 藏师阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="雷区险地">
+			<level name="GreenIs_MineFields" cnName="雷区险地" descrip="话分另一头，小樱一行人沿着郁葱甸方向发现了掩埋在道路间的大量地雷，利用随身缴获的特殊地雷去连环引爆，开辟一条安全前进道路，但在排雷后有一队血蟒士兵匆匆撤退至此，他们似乎并不是来围剿你们的，这是什么情况？（开发者模式下无强制排雷数量任务目标要求）">
+				<![CDATA[2025.12.28添加]]>
+				<info diy="greenIsTask" enemyLv="99" preBulletArr="hurtMineBullet,hammerMineBullet" noAIB="1" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" firstLostB="1" />
+				<drop noChargerBasinB="1"/>
+				<sceneLabel>GreenIs3</sceneLabel>
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1" />
+					<!-- 我方：天鹰小美、小樱、心零（无尸宠） -->
+					<unitOrder id="we1" camp="we">
+						<!-- 天鹰小美（玩家控制） -->
+						<unit cnName="天鹰小美" dpsMul="350" lifeMul="0.5" dieGotoState="stru"
+							armsRange="rocket1"
+							skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_2,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,gliding_hero_7" />
+					</unitOrder>
+					<unitOrder id="we2" camp="we">
+						<!-- 小樱（初始静止） -->
+						<unit cnName="小樱" dpsMul="3000" lifeMul="50" dieGotoState="stru"
+							skillArr="vacuumJie_7,trueshotYing_2,hurtAddYing_2,coquettish_hero_4,invisibility_hero_4,screaming_hero_4,gliding_hero_4,rolling_hero_5,heroSprint,jumpNumAdd1,WatchEagleWing"
+							armsRange="pistol_two,shotgun_two,sniperRifle,ak47" aiOrder="followBodyAttack:心零" />
+					</unitOrder>
+					<unitOrder id="we3" camp="we">
+						<!-- 心零（初始静止） -->
+						<unit cnName="心零" dpsMul="350" lifeMul="50" dieGotoState="stru"
+							skillArr="coquettish_hero_14,tauntLing_10,strongLing_10,revengeLing_10,resonanceLing_10,nightLing_10,clawLing_10,jumpNumAdd1,State_AddMove50,WatchEagleWing"
+							armsRange="shotgun1" aiOrder="followBodyAttack:天鹰小美" />
+					</unitOrder>
+					<!-- 撤退的血蟒士兵（友军，不攻击） -->
+					<unitOrder id="we4" camp="we">
+						<unit cnName="血蟒突击兵" lifeMul="50" dpsMul="10" dieGotoState="stru" />
+						<unit cnName="血蟒狙击兵" lifeMul="0.5" dpsMul="10" dieGotoState="stru" />
+					</unitOrder>
+				</unitG>
+
+				<rectG>
+					<!-- 敌人出生点（未使用但保留） -->
+					<rect id="rEnemySpace1">2600,650,100,100</rect>
+					<rect id="rEnemySpace2">1700,650,100,100</rect>
+					<!-- 血蟒士兵出现点 -->
+					<rect id="r_wounded">3300,1200,100,100</rect>
+					<!-- 其他备用矩形 -->
+					<rect id="fly1">152,600,60,60</rect>
+					<rect id="fly2">150,950,100,100</rect>
+					<rect id="fly3">100,850,50,50</rect>
+					<rect id="r_prison">500,400,80,80</rect>
+					<rect id="r_prison_guard">520,420,50,50</rect>
+					<rect id="r_retreat">600,600,50,50</rect>
+					<rect id="r_friend">200,200,50,50</rect>
+					<rect id="r_boss">250,200,50,50</rect>
+				</rectG>
+
+				<eventG>
+					<group>
+						<!-- 初始设置：创建单位、赋予地雷、调用地雷初始化 -->
+						<event>
+							<condition />
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<order>addWeather:heat; 3:10000</order>
+							<order>createUnit:we1; r_birth</order>
+							<order>createUnit:we2; fly2</order>
+							<order>createUnit:we3; fly3</order>
+							<order>heroEverParasitic:天鹰小美</order>
+							<order>body:sumByP1; addTempDevice:hammerMine_6,40</order>
+							<order>body:sumByP1; allArmsCapacity:15</order>
+							<order>body:sumByP1; allArmsChargerMul:0</order>
+							<order>GreenIs1_mine</order>
+							<!-- 停止小樱和心零的AI，使其静止 -->
+							<order>body:小樱; ai:no</order>
+							<order>body:心零; ai:no</order>
+							<order>openInput</order>
+						</event>
+
+						<!-- 开场对话 -->
+						<event>
+							<condition delay="1" />
+							<order>playMusic; music_face:suspense</order>
+							<order>say; startList:s1</order>
+						</event>
+
+						<!-- 发现雷区 -->
+						<event>
+							<condition delay="2">say:listOver</condition>
+							<order>say; startList:s2</order>
+						</event>
+
+						<!-- 玩家确认引爆 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>playMusic; music_face:descent</order>
+							<order>alert:yes; 尝试在有限的火炮弹药前提下用缴获的眩晕地雷连环引爆前方雷区。</order>
+						</event>
+
+						<!-- 选择“是”后播放对话 -->
+						<event>
+							<condition>enemyMineNumer:less_1</condition>
+							<order>say; startList:s3</order>
+						</event>
+
+						<!-- 等待地雷排除任务完成（由地雷系统自动触发） -->
+						<event>
+							<condition delay="0.5">say:listOver</condition>
+							<!-- 恢复小樱和心零的AI -->
+							<order>body:小樱; ai:followBodyAttack:天鹰小美</order>
+							<order>body:心零; ai:followBodyAttack:天鹰小美</order>
+							<order>createUnit:we4; r_wounded</order>
+							<order>playMusic; music_face:suspense</order>
+							<order>say; startList:s4</order>
+						</event>
+
+						<!-- 任务完成，显示出口 -->
+						<event>
+							<condition delay="0.1">say:listOver</condition>
+							<order>body:血蟒突击兵; rangeLimit:close</order>
+							<order>body:血蟒突击兵; lockShootXY:4000,1200</order>
+							<order>body:血蟒狙击兵; rangeLimit:close</order>
+							<order>body:血蟒狙击兵; lockShootXY:4000,1200</order>
+						</event>
+						<event>
+							<condition delay="0.5"></condition>
+							<order>body:血蟒突击兵;followPoint:4000,1200</order>
+							<order>body:血蟒狙击兵;followPoint:4000,1200</order>
+						</event>
+						<event>
+							<condition delay="3"></condition>
+							<order>body:血蟒突击兵; addEffectPosition:oreBombShowFlower</order>
+							<order>body:血蟒突击兵; toDel</order>
+							<order>body:血蟒狙击兵; addEffectPosition:oreBombShowFlower</order>
+							<order>body:血蟒狙击兵; toDel</order>
+							<order>say; startList:s5</order>
+							<!-- 简短提醒断后开始 -->
+						</event>
+						<event>
+							<condition delay="1">say:listOver</condition>
+							<order>playMusic; music_face:suspense</order>
+							<order>level; shake:beatMadboss</order>
+							<order>say; startList:s6</order>
+						</event>
+						<event>
+							<condition delay="1">say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; win</order>
+						</event>
+					</group>
+					<!-- 失败条件：天鹰小美阵亡 -->
+					<group>
+						<event id="e_fail1">
+							<condition delay="1">bodyEvent:die; 天鹰小美</condition>
+							<order>alert:yes; 小美阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+						<event id="e_fail2">
+							<condition delay="1">bodyEvent:die; 心零</condition>
+							<order>alert:yes; 心零阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+						<event id="e_fail3">
+							<condition delay="1">bodyEvent:die; 小樱</condition>
+							<order>alert:yes; 小樱阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="尸变危机">
+			<level name="GreenIs_MorgueCrisis" cnName="尸变危机" descrip="情况突变，先前追捕爆枪小队的血蟒部队反而被僵尸部队追杀撤退至此，联起手来共同击退即将靠近的大批已感染血蟒持枪僵尸部队，记得充分运用血蟒士兵递给你的时停沙漏道具，此战结束后，小樱一行人将得到更多小白和文杰的行踪信息。">
+				<!-- 关卡数据：预置时停沙漏技能，禁用载具/道具/装备等 -->
+				<![CDATA[2026.1.21添加]]>
+				<info diy="greenIsTask" enemyLv="99" preSkillArr="timeCapsuleT" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" firstLostB="1" />
+				<drop noChargerBasinB="1" />
+				<sceneLabel>GreenIs3</sceneLabel>
+
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1" />
+
+					<!-- 我方：小樱、天鹰小美、心零 -->
+					<unitOrder id="we1" camp="we">
+						<unit cnName="小樱" dpsMul="500" lifeMul="0.3" dieGotoState="stru"
+							skillArr="uavYing_7,moreUav_7,trueshotYing_14,hurtAddYing_14,coquettish_hero_14,invisibility_hero_10,screaming_hero_10,gliding_hero_10,rolling_hero_10,heroSprint,jumpNumAdd1"
+							armsRange="consVirgo" aiOrder="followBodyAttack:心零" />
+						<unit cnName="天鹰小美" dpsMul="500" lifeMul="0.3" dieGotoState="stru"
+							armsRange="lightCone,yearChicken,beadCrossbow,christmasGun$2"
+							skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,State_AddMove50"
+							aiOrder="followBodyAttack:小樱" />
+						<unit cnName="心零" dpsMul="500" lifeMul="0.1" dieGotoState="stru"
+							skillArr="groupLight_hero_7,crazy_hero_13,coquettish_hero_14,tauntLing_10,strongLing_10,revengeLing_10,resonanceLing_10,nightLing_10,clawLing_10,jumpNumAdd1,State_AddMove50,WatchEagleWing"
+							armsRange="consLeo,lightCone,rifleHornetYa,shotgunSkunkYa" />
+					</unitOrder>
+
+					<!-- 友方：血蟒残兵（临时合作）使用游戏内已有单位 -->
+					<unitOrder id="ally1" camp="we">
+						<unit cnName="血蟒重甲兵" lifeMul="0.8" dpsMul="0.5" dieGotoState="stru"
+							skillArr="imploding_enemy" aiOrder="followBodyAttack:小樱" />
+						<unit cnName="血蟒突击兵" num="1" lifeMul="0.6" dpsMul="0.4" dieGotoState="stru" aiOrder="patrolRandom" />
+						<unit cnName="血蟒狙击兵" num="1" lifeMul="0.6" dpsMul="0.4" dieGotoState="stru" aiOrder="patrolRandom" />
+					</unitOrder>
+
+					<!-- 敌方：感染病毒的血蟒僵尸部队（多波次） -->
+					<unitOrder id="zombie_wave1">
+						<numberType>num</numberType>
+						<unit cnName="血蟒感染者" num="4" lifeMul="150" armsRange="rifleDragon" skillArr="through_enemy" />
+						<unit cnName="血蟒感染者" num="3" lifeMul="150" armsRange="lightCone" skillArr="through_enemy" />
+						<unit cnName="棍棒僵尸" num="4" lifeMul="180" />
+						<unit cnName="伐木僵尸" num="6" lifeMul="180" />
+					</unitOrder>
+					<unitOrder id="zombie_wave2">
+						<numberType>num</numberType>
+						<unit cnName="血蟒感染者" num="5" lifeMul="180" />
+						<unit cnName="血蟒感染者" num="2" lifeMul="180" armsRange="lightCone" skillArr="through_enemy" />
+						<unit cnName="棍棒僵尸" num="5" lifeMul="165" />
+						<unit cnName="伐木僵尸" num="4" lifeMul="165" />
+					</unitOrder>
+					<unitOrder id="zombie_wave3">
+						<numberType>num</numberType>
+						<unit cnName="血蟒感染者" num="5" lifeMul="180" />
+						<unit cnName="血蟒感染者" num="2" lifeMul="180" armsRange="lightCone" skillArr="through_enemy" />
+						<unit cnName="棍棒僵尸" num="5" lifeMul="165" />
+						<unit cnName="伐木僵尸" num="4" lifeMul="165" />
+					</unitOrder>
+					<unitOrder id="zombie_wave4">
+						<numberType>num</numberType>
+						<unit cnName="血蟒感染者" num="5" lifeMul="180" />
+						<unit cnName="血蟒感染者" num="2" lifeMul="180" armsRange="lightCone" skillArr="through_enemy" />
+						<unit cnName="棍棒僵尸" num="5" lifeMul="165" />
+						<unit cnName="伐木僵尸" num="4" lifeMul="165" />
+					</unitOrder>
+					<unitOrder id="zombie_boss">
+						<numberType>num</numberType>
+						<unit cnName="血蟒感染者" num="1" lifeMul="60" unitType="super" armsRange="lightCone" skillArr="through_enemy" />
+						<unit cnName="血蟒感染者" num="2" lifeMul="60" unitType="super" armsRange="rifleDragon" skillArr="through_enemy" />
+					</unitOrder>
+				</unitG>
+
+				<rectG>
+					<!-- 出生点 -->
+					<rect id="r_birth">1500,700,50,50</rect>
+					<!-- 友军出现点 -->
+					<rect id="r_wounded">3300,1200,100,100</rect>
+					<!-- 僵尸出生点 -->
+					<rect id="z1">1700,650,100,100</rect>
+					<rect id="z2">2000,700,100,100</rect>
+					<rect id="z3">2300,750,100,100</rect>
+				</rectG>
+
+				<eventG>
+					<group>
+						<!-- 初始设置：创建我方单位 -->
+						<event>
+							<condition />
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<order>createUnit:we1; r_birth</order>
+							<order>heroEverParasitic:心零</order>
+							<order>body:sumByP1; allArmsCapacity:10</order>
+							<order>body:sumByP1; allArmsChargerMul:5</order>
+							<order>openInput</order>
+						</event>
+
+						<!-- 开场：阴森氛围，远处传来惨叫 -->
+						<event>
+							<condition delay="1" />
+							<order>playMusic; music_face:descent</order>
+							<order>say; startList:s1</order>
+						</event>
+
+						<!-- 血蟒残兵仓皇逃出，与玩家相遇 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>createUnit:ally1; r_wounded</order>
+							<order>playMusic; music_face:suspense</order>
+							<order>say; startList:s2</order>
+						</event>
+
+						<!-- 血蟒重甲兵给予时停沙漏（直接添加装置） -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>alert:yes; 获得装置：悬停沙漏，请合理时停叠加输出</order>
+							<order>body:sumByP1; addTempDevice:timeCapsuleT_4,5</order>
+							<order>say; startList:s3</order>
+						</event>
+
+						<!-- 第一波僵尸出现 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>createUnit:zombie_wave1; z1</order>
+							<order>playMusic; music_face:Madboss</order>
+							<order>say; startList:s4</order>
+						</event>
+
+						<event>
+							<condition doNumber="1">say:listOver</condition>
+							<order>createUnit:zombie_wave2; z2</order>
+							<order>playMusic; music_face:Madboss</order>
+							<order>body:sumByP1; addTempDevice:timeCapsuleT_4,1</order>
+							<order>say; startList:s5</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>createUnit:zombie_wave3; z2</order>
+							<order>body:sumByP1; addTempDevice:timeCapsuleT_4,1</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>createUnit:zombie_wave4; z3</order>
+							<order>body:sumByP1; addTempDevice:timeCapsuleT_4,1</order>
+						</event>
+
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>createUnit:zombie_boss; z3</order>
+							<order>body:sumByP1; addTempDevice:timeCapsuleT_4,1</order>
+							<order>sceneScale:0.5</order>
+							<order>say; startList:s6</order>
+						</event>
+
+						<!-- 全灭所有僵尸，胜利 -->
+						<event>
+							<condition delay="0.5">enemyNumber:less_1</condition>
+							<order>sceneScale:1</order>
+							<order>body:血蟒重甲兵; ai:no</order>
+							<order>body:血蟒突击兵; ai:no</order>
+							<order>body:血蟒狙击兵; ai:no</order>
+							<order>allWeHeroRebirth</order>
+							<order>playMusic; music_face:piano</order>
+							<order>say; startList:s7</order>
+						</event>
+
+						<!-- 胜利对话结束，任务完成 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+
+					<!-- 失败条件：小樱或天鹰小美阵亡 -->
+					<group>
+						<event id="e_fail">
+							<condition delay="1">bodyEvent:die; 心零</condition>
+							<order>alert:yes; 心零阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+						<event id="e_fail2">
+							<condition delay="1">bodyEvent:die; 小樱</condition>
+							<order>alert:yes; 小樱阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+						<event id="e_fail3">
+							<condition delay="1">bodyEvent:die; 天鹰小美</condition>
+							<order>alert:yes; 小美阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<gather name="会师仙草">
+			<level name="GreenIs_Resession" cnName="会师仙草" descrip="随着一阵震天的响声，藏师一行与小樱一行人先后抵达仙草镇入口，交流各自分队一路上所见所闻，对目前绿岛目前局势有了大致的把握，他们在这里会发现什么关于小白文杰二人行踪的线索？">
+				<!-- 关卡数据：纯剧情，无战斗，禁用无关功能 -->
+				<![CDATA[2026.1.28添加]]>
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" firstLostB="1" />
+				<drop noChargerBasinB="1" />
+				<sceneLabel>GreenTown1</sceneLabel>
+
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1" />
+
+					<!-- 藏师队：藏师将军 + 三尸宠 -->
+					<unitOrder id="we_zang" camp="we">
+						<unit cnName="藏师将军" dpsMul="6500" lifeMul="0.5" dieGotoState="stru"
+							skillArr="vacuumJie_6,groupLight_hero_7,crazy_hero_2,through_hero_2,murderous_hero_2,pointBoom_hero_2,hiding_hero_2,jumpNumAdd1,rolling_hero_5,State_AddMove50" armsRange="lightCone,sniperCicadaYa" />
+					</unitOrder>
+					<unitOrder id="pets" camp="we">
+						<unit cnName="冥王" lifeMul="1.8" dpsMul="400" aiOrder="patrolRandom" />
+						<unit cnName="爆骷S" lifeMul="1.6" dpsMul="350" aiOrder="patrolRandom" />
+					</unitOrder>
+
+					<!-- 小樱队：小樱、天鹰小美、心零 -->
+					<unitOrder id="we_ying" camp="we">
+						<unit cnName="小樱" dpsMul="100" lifeMul="0.3" dieGotoState="stru"
+							skillArr="trueshotYing_14,hurtAddYing_14,coquettish_hero_14,invisibility_hero_10,screaming_hero_10,gliding_hero_10,rolling_hero_10,heroSprint,jumpNumAdd1"
+							armsRange="consVirgo" aiOrder="followBodyAttack:藏师将军" />
+						<unit cnName="天鹰小美" dpsMul="150" lifeMul="0.5" dieGotoState="stru"
+							armsRange="lightCone,yearChicken,beadCrossbow,christmasGun$2"
+							skillArr="groupLight_hero_7,hiding_hero_3,wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,sweep_enemy,moreMissile_enemy,disabledHalo_enemy,paralysis_enemy,changeToZombie_enemy,jumpNumAdd1,State_AddMove50"
+							aiOrder="followBodyAttack:小樱" />
+						<unit cnName="心零" dpsMul="500" lifeMul="0.3" dieGotoState="stru"
+							skillArr="coquettish_hero_14,tauntLing_10,strongLing_10,revengeLing_10,resonanceLing_10,nightLing_10,clawLing_10,vacuumJie_11,jumpNumAdd1,State_AddMove50,WatchEagleWing"
+							armsRange="consLeo" aiOrder="followBodyAttack:天鹰小美" />
+					</unitOrder>
+
+					<!-- 飞行器：处决者（用于接应） -->
+					<unitOrder id="plane" camp="we">
+						<unit cnName="处决者"  lifeMul="0.3" dpsMul="400" skillArr="crazy_vehicle_8,groupLightMadFly,executionerSkill_10,vacuumJie_11" aiOrder="followBodyAttack:藏师将军" />
+					</unitOrder>
+				</unitG>
+
+				<rectG>
+					<!-- 藏师队出生点（仙草镇入口右侧） -->
+					<rect id="r_birth_zang">800,600,50,50</rect>
+					<!-- 藏师队出生点（仙草镇入口左侧） -->
+					<rect id="r_birth_pets">1100,600,300,300</rect>
+					<!-- 小樱队出生点（仙草镇入口右侧） -->
+					<rect id="r_birth_ying">4000,1000,50,50</rect>
+					<!-- 飞行器初始位置（远处） -->
+					<rect id="r_plane_start">4000,300,50,50</rect>
+					<!-- 任务完成出口点 -->
+					<rect id="r_over">3300,500,50,50</rect>
+				</rectG>
+
+				<eventG>
+					<group>
+						<!-- 初始设置：创建藏师队（先抵达） -->
+						<event>
+							<condition />
+							<order>weAllHeroNoShoot</order>
+							<order>weAllHeroNoEquip</order>
+							<order>createUnit:we_zang; r_birth_zang</order>
+							<order>heroEverParasitic:藏师将军</order>
+							<order>parasiticWeRolePan</order>
+							<order>createUnit:pets; r_birth_pets</order>
+							<order>openInput</order>
+						</event>
+						<!-- 播放背景音乐 -->
+						<event>
+							<condition />
+							<order>playMusic; music_face:piano</order>
+						</event>
+						<!-- 两队会合，开始对话 s1 -->
+						<event>
+							<condition delay="1" />
+							<order>say; startList:s1</order>
+						</event>
+
+						<!-- 对话结束后，制毒师通讯 s2 -->
+						<!-- 延迟2秒，创建小樱队（步行赶到） -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>createUnit:we_ying; r_birth_ying</order>
+							<order>playMusic; music_face:mission</order>
+							<order>say; startList:s2</order>
+						</event>
+
+						<!-- 通讯结束，心零提议遥控飞行器 s3 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>say; startList:s3</order>
+						</event>
+
+						<!-- 飞行器出现并移动到降落点 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>createUnit:plane; r_plane_start</order>
+							<order>sceneScale:0.33</order>
+							<order>playMusic; music_face:mission</order>
+							<order>say; startList:s4</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>body:处决者; ai:no</order>
+							<order>alert:yes; 控制藏师靠近处决者在100码距离内停留1秒即可登机触发后续剧情</order>
+						</event>
+
+						<!-- 飞行器到达，众人准备登机 -->
+						<event>
+							<condition delay="1">bodyGap:less_50; 处决者:藏师将军</condition>
+							<order>hideBody:藏师将军</order>
+							<order>everParasitic:藏师将军; 处决者</order>
+							<order>body:小樱; followBody:处决者</order>
+							<order>body:天鹰小美; followBody:处决者</order>
+							<order>body:心零; followBody:处决者</order>
+							<order>playMusic; music_face:mission</order>
+							<order>say; startList:s5</order>
+						</event>
+						<!-- 对话结束，任务完成 -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>alert:yes; 控制处决者靠近场上友方单位在50码距离内即可立即登机触发后续剧情，提示接应顺序：心零、小美、小樱</order>
+						</event>
+						<event>
+							<condition delay="0.03">bodyGap:less_50; 处决者:心零</condition>
+							<order>hideBody:心零</order>
+						</event>
+						<event>
+							<condition delay="0.03">bodyGap:less_50; 处决者:天鹰小美</condition>
+							<order>hideBody:天鹰小美</order>
+						</event>
+						<event>
+							<condition delay="0.03">bodyGap:less_50; 处决者:小樱</condition>
+							<order>hideBody:小樱</order>
+						</event>
+						<event>
+							<condition />
+							<order>body:冥王; followBody:处决者</order>
+							<order>body:爆骷S; followBody:处决者</order>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+
+					<!-- 失败条件（以防万一） -->
+					<group>
+						<event id="e_fail">
+							<condition delay="1">bodyEvent:die; 小樱</condition>
+							<order>alert:yes; 小樱阵亡，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.03" />
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+	</father>
+
+	<father name="normal" cn="对话">
+	<level name="GreenIs_RapidRescue">
+		<sayList name="s1">
+			<say target="制毒师">
+				<content>欸，小白和文杰去绿岛这么久了，至今却没听到他们任何音信。</content>
+			</say>
+			<say target="制毒师">
+				<content>联系不上他们属实让我担心，要不是高地事务繁忙脱不开身，我现在就想带人去绿岛一趟。</content>
+			</say>
+			<say target="制毒师">
+				<content>咦，什么动静？怎么空中巡逻队突然起飞了？好像远处有个黑点朝战斧高地冲过来了？</content>
+			</say>
+			<say target="丛林特种兵">
+				<content>我们是战斧空中巡逻部队，你即将进入战斧领空，立即离开！立即离开！</content>
+			</say>
+			<say target="制毒师">
+				<content>摩卡，你应该还在高地观测台值班，马上侦测即将闯入战斧领空的不明飞行物！</content>
+			</say>
+			<say target="摩卡">
+				<content>收到，已启动地面雷达进行目标探测和初步定位。</content>
+			</say>
+			<say target="丛林特种兵">
+				<content>报告，我们正在高空伴飞接近不明飞行物，可随时下达攻击指令。</content>
+			</say>
+			<say target="制毒师">
+				<content>巡逻部队，继续尾随保持安全间距伴飞，等待后续指令，做好拦截准备。</content>
+			</say>
+			<say target="摩卡">
+				<content>正在启动敌我识别IFF系统，向目标发射1030MHz加密询问信号。</content>
+			</say>
+			<say target="丛林特种兵">
+				<content>报告，我们已接近不明飞行物，但目测似乎是我方先进飞行载具处决者。</content>
+			</say>
+			<say target="摩卡">
+				<content>制毒师，观测台已经收到了不明飞行物自动发出的1090MHz战斧高地专属加密应答信号，是我们的载具处决者无疑。</content>
+			</say>
+			<say target="制毒师">
+				<content>那台载具正是小白文杰两人出发时乘坐的载具，他们很可能在上面，快尝试联系！</content>
+			</say>
+			<say target="摩卡">
+				<content>有点奇怪，以往要是他们的话文杰早提前找我打预约电话点餐了......我正在尝试与处决者驾驶舱对话。小白？文杰？你们在里面吗？</content>
+			</say>
+			<say target="玉晴">
+				<content>等等，你们是谁？为什么我后面有一群挂着机炮导弹的飞机在追我？</content>
+			</say>
+			<say target="玉晴">
+				<content>小白是我儿子，文杰是我外甥，这架飞机是他们设定的自动巡航带我来战斧的，我什么都不知道。</content>
+			</say>
+			<say target="制毒师">
+				<content>小白是她儿子？文杰是她外甥？我想起来了，这是小白他老妈玉晴！</content>
+			</say>
+			<say target="制毒师">
+				<content>战斧空中巡逻部队，已确认是己方载具处决者，无需继续伴飞，预警解除。</content>
+			</say>
+			<say target="丛林特种兵">
+				<content>收到，停止跟踪，按原定计划继续在高地外围巡逻。</content>
+			</say>
+			<say target="摩卡">
+				<content>处决者会在半分钟内降落在预设好的战斧高地，位置就在制毒师你的附近。</content>
+			</say>
+			<say target="制毒师">
+				<content>好，我在这里等着。</content>
+			</say>
+		</sayList>
+		<sayList name="s2">
+			<say target="制毒师">
+				<content>玉晴大姐，刚才让你受惊了，我是制毒师，是小白和文杰的好战友。</content>
+			</say>
+			<say target="处决者">
+				<content>让我好好缓一缓，等等，你说你是制毒师？</content>
+			</say>
+			<say target="制毒师">
+				<content>对的，目前战斧高地的事务由我负责。</content>
+			</say>
+			<say target="处决者">
+				<content>太好了，终于找到一位管事的。小白转交给我一份重要的病毒样本，他特别嘱咐过我要交到制毒师你手上。</content>
+			</say>
+			<say target="制毒师">
+				<content>病毒样本？难不成是在绿岛开始蔓延的病毒样本？</content>
+			</say>
+			<say target="处决者">
+				<content>正是这个。还有一件事，小白和文杰他们不久前和旺达有激烈冲突，在我返航前他们暂时摆脱了血蟒部队围困，但他们仍在绿岛腹地很可能深陷重围。</content>
+			</say>
+			<say target="处决者">
+				<content>作为一位母亲，我恳请你派人去营救我的儿子和外甥！</content>
+			</say>
+			<say target="制毒师">
+				<content>大姐，看你说的，既然是我们的好战友有难，我们岂有不救的道理？</content>
+			</say>
+			<say target="制毒师">
+				<content>摩卡，你先带处决者载具和玉晴大姐前往新建的战斧研究院进行消毒，务必亲自安置好这份重要的病毒样本。</content>
+			</say>
+			<say target="摩卡">
+				<content>正在设定处决者自动导航前往战斧研究院，玉晴大姐，我们会好好招待你的。</content>
+			</say>
+			<say target="制毒师">
+				<content>小樱，你们几位快来高地一趟。</content>
+			</say>
+			<say target="藏师将军">
+				<content>发生什么事了？我刚才看到高地的巡逻机呼啸飞过，难不成是铁犬又打上山了？</content>
+			</say>
+			<say target="制毒师">
+				<content>事关小白和文杰的安危，你们快上高地我有要事安排。</content>
+			</say>
+			<say target="小樱">
+				<content>我们马上来！</content>
+			</say>
+			<say target="制毒师">
+				<content>玉晴大姐，你先在高地休息一会，摩卡会好好招待你的，晚点咱们高地再见。</content>
+			</say>
+			<say target="处决者">
+				<content>行，我一会也过来，我知道一些消息，可能会帮到你们。</content>
+			</say>
+		</sayList>
+		<sayList name="s3">
+			<say target="藏师将军">
+				<content>制毒师，我们来了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>刚才飞过去的载具好眼熟，好像是我们的处决者载具。</content>
+			</say>
+			<say target="小樱">
+				<content>有小白的消息了吗？我们这些日子都很担心他们的安危。</content>
+			</say>
+			<say target="制毒师">
+				<content>情况可能不乐观，需要你们亲身前往绿岛营救他们。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>制毒师，他们难不成被血蟒部队抓住了？</content>
+			</say>
+			<say target="制毒师">
+				<content>小白的妈妈玉晴就在刚才降落在高地的载具里，根据她的话小白他们暂时摆脱了血蟒的追击，但情况仍不容乐观。</content>
+			</say>
+			<say target="藏师将军">
+				<content>既然是小白和臭文杰有难，我们怎么能坐视不管？</content>
+			</say>
+			<say target="小樱">
+				<content>我们这就收拾准备，启程前往绿岛。</content>
+			</say>
+			<say target="制毒师">
+				<content>此次行动非同小可，一定要慎重行事。对了，心零去哪了？</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我来的路上试过了，暂时联系不到她。</content>
+			</say>
+			<say target="藏师将军">
+				<content>我途中路过新城区，看到她似乎在那里捣鼓什么新玩意。</content>
+			</say>
+			<say target="制毒师">
+				<content>阿天今天在新城区值班，我这会发消息让他提醒心零快点上山。</content>
+			</say>
+			<say target="摩卡">
+				<content>制毒师，玉晴大姐说是有重要事情要来找你，刚在招待厅喝了杯水就要匆匆来找你。</content>
+			</say>
+			<say target="摩卡">
+				<content>我现在带她过来。</content>
+			</say>
+			<say target="制毒师">
+				<content>辛苦了，玉晴大姐来得正好。</content>
+			</say>
+			<say target="小樱">
+				<content>啊？小白的妈妈现在就要来了？可我......还没准备好。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>别这么不自然，今天还没到见对方家长的那一步。</content>
+			</say>
+		</sayList>
+		<sayList name="s4">
+			<say target="摩卡">
+				<content>大伙都在高地啊，我给大家介绍一下，这是小白的妈妈玉晴大姐。</content>
+			</say>
+			<say target="藏师将军">
+				<content>大姐好，叫我藏师就行。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>阿姨好，我是小美。</content>
+			</say>
+			<say target="小樱">
+				<content>婆......阿姨好，叫我小樱就行。</content>
+			</say>
+			<say target="制毒师">
+				<content>欢迎加入战斧高地这个大家庭。</content>
+			</say>
+			<say target="玉晴">
+				<content>各位好，说起来这一路上真令我心有余悸。</content>
+			</say>
+			<say target="玉晴">
+				<content>尤其是靠近高地，突然出现那么多挂着机炮导弹的飞机追着我不放。</content>
+			</say>
+			<say target="制毒师">
+				<content>让你见笑了，这个是高地的空中巡逻部队，保卫高地领空安全是我们的职责。</content>
+			</say>
+			<say target="玉晴">
+				<content>我跟着这位摩卡小哥一路走来，感慨没想到绿岛之外还有如此家大业大的基地。</content>
+			</say>
+			<say target="制毒师">
+				<content>您抬举我们了，我们基地越强大，才能更好地保护高地上下千余人。</content>
+			</say>
+			<say target="摩卡">
+				<content>对了，玉晴大姐，说起来绿岛，你有没有小白他们的消息？</content>
+			</say>
+			<say target="藏师将军">
+				<content>我们爆枪小队就要患难与共，有大姐你的前线消息我们也方便后续登岛营救。</content>
+			</say>
+			<say target="玉晴">
+				<content>好，我把我已经知道的告诉你们，希望能帮到你们。</content>
+			</say>
+			<say target="玉晴">
+				<content>听说绿岛腹地有一座神秘的塔，叫迷雾主塔。那里就是绿岛迷雾装置的总源头，这种迷雾能大程度削弱敌方实力也能屏蔽外界信号，我之前就被关押在附近。</content>
+			</say>
+			<say target="摩卡">
+				<content>原来是迷雾，怪不得我们无法得知绿岛内部发生了什么。</content>
+			</say>
+			<say target="玉晴">
+				<content>在我作为人质被从旺达那里交换出来之后，我听到有血蟒士兵向旺达通话，说是那座塔正在遭受不明飞行物的攻击。</content>
+			</say>
+			<say target="制毒师">
+				<content>不明飞行物？这又是谁？不过明面上看对我们是好消息，迷雾本身会严重约束我们的作战能力，如果迷雾彻底散去对我们再好不过。</content>
+			</say>
+			<say target="玉晴">
+				<content>随后小白和文杰带我闯出了旺达的包围，但旺达也瞬间消失不知所踪。在冲出了包围圈后，他们交给我那份病毒样本，就转身向绿岛腹地走去，那台载具便载着我来到了高地。</content>
+			</say>
+			<say target="摩卡">
+				<content>阿天，你听到后去高地观测台一趟，监测绿岛信号屏蔽是否有所衰减？</content>
+			</say>
+			<say target="雇佣兵">
+				<content>收到了，我这就去观测台一趟。</content>
+			</say>
+			<say target="制毒师">
+				<content>阿天，你找到心零了吗？</content>
+			</say>
+			<say target="雇佣兵">
+				<content>对了，我刚在新城区找到心零，她一会就会上高地和大家会合。</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿，不好意思，让大家久等了。</content>
+			</say>
+			<say target="小樱">
+				<content>心零你到哪里去了？怎么我们大家联系不到你？</content>
+			</say>
+			<say target="心零">
+				<content>我刚才在捣鼓穿一件新玩意，临时卸下了通讯器没听到。</content>
+			</say>
+			<say target="制毒师">
+				<content>快来高地吧，大伙都在等你。</content>
+			</say>
+			<say target="心零">
+				<content>我早来到高地了，你们不信抬头看看？</content>
+			</say>
+			<say target="心零">
+				<content>当当当当！</content>
+			</say>
+		</sayList>
+		<sayList name="s5">
+			<say target="心零">
+				<content>天空一声巨响，心零闪亮登场！</content>
+			</say>
+			<say target="藏师将军">
+				<content>心零？你怎么长了一对翅膀飞在天上？</content>
+			</say>
+			<say target="制毒师">
+				<content>哈哈，我还在寻思你在捣鼓什么新玩意，原来是这一款金属仿生翅膀。</content>
+			</say>
+			<say target="心零">
+				<content>这还不是重点，看我手里这把狮子座，这下我心零才是真正的如虎添翼。</content>
+			</say>
+			<say target="小樱">
+				<content>制毒师，我们也可以装备同款的翅膀吗？</content>
+			</say>
+			<say target="制毒师">
+				<content>当然可以，仓库还有几件同款翅膀，我建议你们出发时带上。</content>
+			</say>
+			<say target="制毒师">
+				<content>这种特制的金属仿生翅膀也便于折叠收纳，不会给你们造成额外的负担。</content>
+			</say>
+			<say target="藏师将军">
+				<content>实在是太给力了。</content>
+			</say>
+			<say target="心零">
+				<content>诶呀，我都忘了和阿姨问好了，玉阿姨好！小白总在我面前夸您年轻有活力，没想到真人比照片还好看，您这状态至少比照片上年轻十岁！</content>
+			</say>
+			<say target="玉晴">
+				<content>你好呀，小姑娘，说话真甜。</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿。对了，制毒师，我倒是有个小牢骚想说。</content>
+			</say>
+			<say target="制毒师">
+				<content>有啥话直接说呗。</content>
+			</say>
+			<say target="心零">
+				<content>要是这翅膀能换个皮肤多好，如果有更漂亮的蝴蝶翅膀岂不是更好？就算是卖1000黄金我也愿意。</content>
+			</say>
+			<say target="制毒师">
+				<content>不着急，说不定以后高地能给你们做出来更多的定制翅膀呢。</content>
+			</say>
+			<say target="摩卡">
+				<content>好了，咱们继续说正题吧，现在小白和文杰很可能身陷重围，事不宜迟，需要你们爆枪小队全员南下驰援。</content>
+			</say>
+			<say target="小樱">
+				<content>放心交给我们，我们已经做好了准备。</content>
+			</say>
+			<say target="藏师将军">
+				<content>保证完成任务。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我们一定会确保他们的安全。</content>
+			</say>
+			<say target="心零">
+				<content>有我心零出马，一个顶俩。</content>
+			</say>
+			<say target="制毒师">
+				<content>看到你们斗志昂扬我放心了。</content>
+			</say>
+			<say target="雇佣兵">
+				<content>制毒师，观测台已经有报告结果了，我马上带过来。</content>
+			</say>
+			<say target="制毒师">
+				<content>好，辛苦了。</content>
+			</say>
+		</sayList>
+		<sayList name="s6">
+			<say target="雇佣兵">
+				<content>大伙们，我来了。这就是观测台生成的报告单。</content>
+			</say>
+			<say target="制毒师">
+				<content>我来仔细看看。</content>
+			</say>
+		</sayList>
+		<sayList name="s7">
+			<say target="制毒师">
+				<content>玉晴大姐，你说的没错，绿岛腹地的迷雾浓度确实有所消散，迷雾主塔遭受攻击应该属实。</content>
+			</say>
+			<say target="制毒师">
+				<content>但迷雾毕竟是缓慢扩散的，绿岛不少地区仍有大量迷雾残余，小樱，你们需要格外当心。</content>
+			</say>
+			<say target="小樱">
+				<content>我们记住了，会慎重行事的。</content>
+			</say>
+			<say target="制毒师">
+				<content>这份报告单你们收好，上面有我们已知的绿岛主要地点的地图。</content>
+			</say>
+			<say target="制毒师">
+				<content>玉晴大姐，另外特别感谢你把绿岛的病毒样本带到了高地。</content>
+			</say>
+			<say target="制毒师">
+				<content>有了这原始的病毒样本，我们才有途径去研究病毒的各项数据。</content>
+			</say>
+			<say target="玉晴">
+				<content>这个就不用谢我了，这份功劳更多在小白和文杰身上。</content>
+			</say>
+			<say target="玉晴">
+				<content>后续的病毒研究工作还得寄托在制毒师你身上。</content>
+			</say>
+			<say target="制毒师">
+				<content>那是当然，研究这种新型病毒是我的本职工作。</content>
+			</say>
+			<say target="制毒师">
+				<content>对了，摩卡，你派一支空中小队前来高地，阿天，再麻烦你一趟亲自送他们半程前往绿岛。</content>
+			</say>
+			<say target="雇佣兵">
+				<content>好的，不过为什么是送他们半程？。</content>
+			</say>
+			<say target="制毒师">
+				<content>我们的普通载具容易受到迷雾影响，绿岛的迷雾已经蔓延到了岛屿周边的空域，确保安全将他们送至迷雾边界，剩下的半程路就要靠他们和他们背后的金属仿生翅膀。</content>
+			</say>
+			<say target="摩卡">
+				<content>收到，空中小队马上会降落在高地，稍后我会在高地观测台密切注意你们的行动。</content>
+			</say>
+			<say target="摩卡">
+				<content>一旦绿岛的迷雾衰减到恢复信号的程度，我们会立马联系小白和文杰，方便你们会合取得联系。</content>
+			</say>
+			<say target="制毒师">
+				<content>大姐您先好好休息，我一会带您到招待厅，稍后我再安排您的日常起居。</content>
+			</say>
+			<say target="制毒师">
+				<content>玉晴大姐，你已经是我们高地大家庭的一员了，我们欢迎你的加入。</content>
+			</say>
+			<say target="玉晴">
+				<content>多谢各位相助，我玉晴属实感激不尽。</content>
+			</say>
+			<say target="丛林特种兵">
+				<content>空中小队即将降落高地。</content>
+			</say>
+		</sayList>
+		<sayList name="s8">
+			<say target="沙漠特种兵">
+				<content>空中小队已集合完毕。</content>
+			</say>
+			<say target="藏师将军">
+				<content>大伙们，我们准备出发了。</content>
+			</say>
+			<say target="制毒师">
+				<content>记住，安全第一，切记不可冲动行事。</content>
+			</say>
+			<say target="小樱">
+				<content>没问题，我在绿岛生活多年，我熟悉那里，我们会小心行动的。</content>
+			</say>
+			<say target="摩卡">
+				<content>我们在高地等着你们的好消息。</content>
+			</say>
+			<say target="雇佣兵">
+				<content>走吧，咱们先去仓库一趟取一些必需品，随后我带队送你们前往绿岛。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>好，我去整理我们要带的金属仿生翅膀。</content>
+			</say>
+			<say target="心零">
+				<content>好耶，今天终于可以出远门打架咯。</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_AirBlockade">
+		<sayList name="s1">
+			<say target="心零">
+				<content>哇，从高空俯瞰霞光市南边的海域，碧蓝的海水在阳光下闪烁，真是太美了！</content>
+			</say>
+			<say target="小樱">
+				<content>是啊，这就是霞光海峡。当年我第一次来霞光市时，就是乘船经过这里，不过从空中看又是另一番景象。</content>
+			</say>
+			<say target="藏师将军">
+				<content>现在飞在天上俯瞰整片海峡，视野确实更加开阔壮观。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>心零，你怎么到舱外了，来舱内休息一下好养足体力。</content>
+			</say>
+			<say target="心零">
+				<content>放心，我心零大小姐有的是搬砖的体力，况且这翅膀这么有意思我不得好好体验？</content>
+			</say>
+			<say target="制毒师">
+				<content>阿天，你们目前的行进情况如何？有没有发现异常？</content>
+			</say>
+			<say target="雇佣兵">
+				<content>制毒师，我们正在安全跨越霞光海峡，目前一切正常。</content>
+			</say>
+			<say target="小樱">
+				<content>放心吧，我正在操控处决者载具跟随阿天他们一起行动。</content>
+			</say>
+			<say target="制毒师">
+				<content>高地观测台收到。我和摩卡会全程监控，为你们提供支援。</content>
+			</say>
+			<say target="摩卡">
+				<content>制毒师，雷达显示霞光海峡空域有异常情况！</content>
+			</say>
+			<say target="摩卡">
+				<content>靠近霞光市的近海空域出现大量飞行僵尸信号，它们形成了空中封锁，规模超出预期。</content>
+			</say>
+			<say target="摩卡">
+				<content>虽然这些僵尸单体强度不高，但僵尸潮形成了一道数十公里长的空中屏障，必须尽快突破！</content>
+			</say>
+			<say target="藏师将军">
+				<content>啊？绵延几十里的尸潮？即使它们单体强度再低我们也招架不住僵尸数量庞大啊。</content>
+			</say>
+			<say target="小樱">
+				<content>我们眼下目标是尽快登岛和小白他们会合，和这群僵尸缠斗会损耗我们宝贵的营救时间。</content>
+			</say>
+			<say target="制毒师">
+				<content>我想起来了！小樱，注意你驾驶的处决者载具配备了最新的真空吸附系统。面对大规模尸潮时，可以先用吸附技能控制住僵尸群，再集中火力歼灭。</content>
+			</say>
+			<say target="制毒师">
+				<content>目前这款改良式载具还处于实验阶段，今天正好借此机会实战测试。</content>
+			</say>
+			<say target="藏师将军">
+				<content>好办法啊，如果能用真空吸附将附近的僵尸控在一起，咱们来个围而攻之便能迅速撕开口子打开南下新航线。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我也赞同这个方案。</content>
+			</say>
+			<say target="心零">
+				<content>俺也一样。</content>
+			</say>
+			<say target="心零">
+				<content>我已经迫不及待想试试手上这把狮子座的威力了。</content>
+			</say>
+			<say target="摩卡">
+				<content>当心！前方一公里进入僵尸密集区，雷达显示大量飞行目标，各单位立即进入战斗状态！</content>
+			</say>
+			<say target="雇佣兵">
+				<content>空中小队收到，大家准备迎敌。</content>
+			</say>
+			<say target="小樱">
+				<content>我也看到了，前方黑压压的全是飞行僵尸。</content>
+			</say>
+		</sayList>
+		<sayList name="s2">
+			<say target="雇佣兵" >
+				<content>没想到这个办法确实好使，将大量僵尸控在一处便于我们集火歼灭。</content>
+			</say>
+			<say target="摩卡" >
+				<content>小樱，你们刚才的动静吸引了东西两个方向的尸潮，它们正在向你们靠近。</content>
+			</say>
+			<say target="心零" >
+				<content>不怕不怕，兵来将挡水来土掩，僵尸来有心零挑大梁！</content>
+			</say>
+			<say target="摩卡" >
+				<content>西侧的僵尸涌过来了，当心！</content>
+			</say>
+			<say target="心零" >
+				<content>嘻嘻，来得正好，看我的狮子座！</content>
+			</say>
+		</sayList>
+		<sayList name="s3">
+			<say target="制毒师" >
+				<content>西侧尸潮已尽数歼灭，大家都没事吧。</content>
+			</say>
+			<say target="藏师将军" >
+				<content>放心，这点僵尸不足以构成威胁。</content>
+			</say>
+			<say target="摩卡" >
+				<content>东侧最后一批尸潮在迅速靠近你们，务必当心。</content>
+			</say>
+			<say target="雇佣兵" >
+				<content>各位驾驶员，一会交叉火力向尸潮集火攻击。</content>
+			</say>
+			<say target="丛林特种兵" >
+				<content>收到。</content>
+			</say>
+			<say target="潜影者" >
+				<content>收到。</content>
+			</say>
+			<say target="大鹏" >
+				<content>收到。</content>
+			</say>
+			<say target="天鹰小美" >
+				<content>尸潮出现了，准备迎敌！</content>
+			</say>
+		</sayList>
+		<sayList name="s4">
+			<say target="小樱">
+				<content>我们这是冲出包围圈了？我再三试过了这个真空吸附技能，发现再也吸不到附近的僵尸了。</content>
+			</say>
+			<say target="摩卡">
+				<content>正是如此，你们已冲出了危险区域。</content>
+			</say>
+			<say target="心零">
+				<content>这就结束了？我打架还没打够滋味呢。</content>
+			</say>
+			<say target="藏师将军">
+				<content>放心，登岛后少不了你最爱的打架环节。</content>
+			</say>
+			<say target="心零">
+				<content>嘻嘻，其实我更爱的是搬砖环节。</content>
+			</say>
+			<say target="制毒师">
+				<content>阿天，你们快到霞光市领空的边缘了，再往前就是绿岛的防空识别区。</content>
+			</say>
+			<say target="制毒师">
+				<content>小樱，毕竟这次行动性质是你们私人潜入绿岛，在明面上不能有战斧高地的势力介入绿岛纷争，我们只能送你们到这了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我们明白其中的利害关系，我们目标是救人，尽可能不和绿岛势力发生摩擦。</content>
+			</say>
+			<say target="制毒师">
+				<content>好，穿越霞光海峡剩下的半程就靠你们了，这台处决者载具留给你们，其余的阿天悉数带队返航高地。</content>
+			</say>
+			<say target="藏师将军">
+				<content>啊？难道说剩下半程路我们几个都要挤在这台处决者里？</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿，驾驶舱内不是有我们提前拿好的金属仿生翅膀嘛，咱们就这样飞去绿岛倒也无妨。</content>
+			</say>
+			<say target="雇佣兵">
+				<content>送君千里终须一别，前方就是霞光市防空识别区的边界了。</content>
+			</say>
+			<say target="雇佣兵">
+				<content>祝你们绿岛营救行动顺利，一定要平安归来。高地等你们的好消息！</content>
+			</say>
+			<say target="制毒师" >
+				<content>临近绿岛空域，后续可能会有迷雾影响信号沟通，一定要注意安全，我们会不断尝试和你们取得联系。</content>
+			</say>
+			<say target="小樱">
+				<content>放心交给我们吧！我们一定会把小白和文杰安全带来的！</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_SoarHigh">
+		<sayList name="s1">
+			<say target="小樱">
+				<content>处决者已经调到自动导航状态，大家都从驾驶舱内出来吧，我们都来练练操作这款金属仿生翅膀赶路。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>小樱说的有道理，我们趁着现在安全学一学使用翅膀飞行。</content>
+			</say>
+			<say target="雇佣兵">
+				<content>制毒师，爆枪小队已送出霞光市地界，护航的空中小队已尽数返航。</content>
+			</say>
+			<say target="制毒师">
+				<content>好，阿天你尽快带队返航高地，一会摩卡会接应你们的。</content>
+			</say>
+			<say target="雇佣兵">
+				<content>收到。</content>
+			</say>
+			<say target="制毒师">
+				<content>小樱，你们进展如何?我在观测台看坐标显示你们应该进入了绿岛的防空识别区。</content>
+			</say>
+			<say target="小樱">
+				<content>我们还在适应这款新型仿生翅膀，不过不得不承认，它的飞行性能甚至不逊色于我们的载具。</content>
+			</say>
+			<say target="摩卡">
+				<content>你倒是提醒我了，这款翅膀还有个特殊功能，它安装了类似离开幻银号飞船时仍可使用载具技能的共享装置。</content>
+			</say>
+			<say target="藏师将军">
+				<content>啊？真的有这么厉害？岂不是说我们在飞船外都能使用处决者的真空技能吸怪？</content>
+			</say>
+			<say target="摩卡">
+				<content>完全可以！我记得你们临出发前我给其中的一套翅膀根部装上了这个共享装置，大家快看看在谁的翅膀上？</content>
+			</say>
+			<say target="小樱">
+				<content>我身上没有诶。</content>
+			</say>
+			<say target="藏师将军">
+				<content>我这里也没有。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>咦？心零，你的翅膀根部和我们不一样。</content>
+			</say>
+			<say target="心零">
+				<content>我来看看......还真是！我心零大小姐运气就是好！</content>
+			</say>
+			<say target="制毒师">
+				<content>心零，这处决者的真空技能就交给你操控了。</content>
+			</say>
+			<say target="心零">
+				<content>放心交给我好了，有我心零出马，一个顶俩！</content>
+			</say>
+			<say target="小樱">
+				<content>咦？快看，前面有一架直升机？</content>
+			</say>
+			<say target="潜伏者">
+				<content>你已进入血蟒军团的防空警戒范围，绿岛已经全面戒严禁止入内！请立即表明身份并绕道飞行！</content>
+			</say>
+			<say target="小樱">
+				<content>你误会了，我原本就是绿岛居民，我们只是探望家乡而已。</content>
+			</say>
+			<say target="潜伏者">
+				<content>绿岛已全面戒严！禁止任何船只、飞行器入岛，速速绕道返航！</content>
+			</say>
+			<say target="小樱">
+				<content>我们阔别故乡已久远道而来，还希望你们能够通融一下，放我们登岛。</content>
+			</say>
+			<say target="潜伏者">
+				<content>最后一次警告！立即出示你们的身份！</content>
+			</say>
+			<say target="心零">
+				<content>哼，我就是爆枪小队的心零大小姐，怎么样？</content>
+			</say>
+			<say target="潜伏者">
+				<content>啊？又是爆枪小队！</content>
+			</say>
+			<say target="潜伏者">
+				<content>呼叫血蟒！请求支援！重复，请求支援！</content>
+			</say>
+			<say target="潜伏者">
+				<content>爆枪小队再度来犯！爆枪小队再度来犯！</content>
+			</say>
+		</sayList>
+		<sayList name="s2">
+			<say target="藏师将军">
+				<content>什么情况？我们怎么差点被打了一个措手不及？</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿，他一定是听到我鼎鼎大名的心零被吓到了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我想想，这只是绿岛外围已经如此戒严，这么看绿岛内部的形势比我们想象的更严峻。</content>
+			</say>
+			<say target="小樱">
+				<content>现在我们别无退路，登岛救人是我们的首要目标，拖得越久我们和他们的处境都更危险。</content>
+			</say>
+			<say target="藏师将军">
+				<content>说得对，这个臭文杰还欠我几次请客喝酒呢，哪能这么白白便宜他？咱们现在出发!</content>
+			</say>
+			<say target="制毒师">
+				<content>小樱？你们刚才和血蟒部队打照面了？</content>
+			</say>
+			<say target="小樱">
+				<content>没办法，对方对我们极其戒备，刚才对方出先手差点打了我们一个措手不及。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>可惜我们出手慢了一步，对方应该早向血蟒发出了支援信号。</content>
+			</say>
+			<say target="制毒师">
+				<content>这正是我担心的，高地观测台能隐约侦测你们前方十公里处有大批血蟒部队聚集，更远处受限于迷雾影响，高地无法获悉更具体的情况。</content>
+			</say>
+			<say target="藏师将军">
+				<content>看来接下来是一场孤军深入的硬仗了。</content>
+			</say>
+			<say target="摩卡">
+				<content>等等，不止有你们，你们出发前忘了带你们的尸宠了！</content>
+			</say>
+			<say target="小樱">
+				<content>尸宠已经带了，雷斯尸宠就在旁边的处决者舱内待着，毕竟它不能飞，也帮不了什么忙。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我想起来了，会飞的尸宠又不是只有雷斯。</content>
+			</say>
+			<say target="摩卡">
+				<content>没错，你们的冥王尸宠和爆骷S尸宠正在全速向你们赶来。</content>
+			</say>
+			<say target="小樱">
+				<content>太好了，多一份力量就多一份胜算。</content>
+			</say>
+			<say target="血蟒狙击兵">
+				<content>爆枪小队就在前面！包围起来消灭他们！</content>
+			</say>
+			<say target="血蟒雇佣兵">
+				<content>是！</content>
+			</say>
+			<say target="制毒师">
+				<content>大家当心！准备战斗！</content>
+			</say>
+			<say target="心零">
+				<content>来得正好，心零大小姐现在闪亮登场！</content>
+			</say>
+		</sayList>
+		<sayList name="s3">
+			<say target="心零">
+				<content>血蟒原来就这么点人，我还没打尽心呢。</content>
+			</say>
+			<say target="制毒师">
+				<content>别掉以轻心，刚才前来包围你们的血蟒部队只是马前卒，他们的大部队马上就到。</content>
+			</say>
+			<say target="小樱">
+				<content>制毒师，我们的尸宠都来了！这下我们登岛作战更有把握了。</content>
+			</say>
+			<say target="制毒师">
+				<content>好，这下你们登岛队伍才算齐全了。另外随着你们越来越接近绿岛，高地观测台受迷雾的影响也越来越大，之后我们很可能无法和你们获得联系。</content>
+			</say>
+			<say target="小樱">
+				<content>我们明白这一点，我们已做好了孤军深入的准备。</content>
+			</say>
+			<say target="摩卡">
+				<content>我会一直尝试联系你们的，一旦你们所在区域的迷雾有所减弱，我们会立刻联系你们共享情报。</content>
+			</say>
+			<say target="摩卡">
+				<content>最后一点，大家尽可能前往绿岛中心地带，迷雾主塔已遭受攻击，那片区域受到迷雾的影响最小，我们应该能在那里获得稳定的无线联系。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>没问题，我们登岛后会因地制宜规划前往绿岛中心。</content>
+			</say>
+			<say target="制毒师">
+				<content>雷达侦测到前方一公里有血蟒大部队活动，高度警戒！</content>
+			</say>
+		</sayList>
+		<sayList name="s4">
+			<say target="小樱">
+				<content>周围好安静啊，难不成我们冲出了血蟒的空中包围圈？</content>
+			</say>
+			<say target="藏师将军">
+				<content>我不好说，不过我能越来越明显感到我的实力受到压制了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>是迷雾！我们已经进入了迷雾蔓延区域。</content>
+			</say>
+			<say target="摩卡" >
+				<content>小樱……沙沙……绿岛天气变化紊乱……沙沙……雨热交加……</content>
+			</say>
+			<say target="小樱" >
+				<content>摩卡大哥？发生什么了？摩卡，收到请答复！</content>
+			</say>
+			<say target="摩卡">
+				<content>……沙沙……你们面前很危险……霸空雕……</content>
+			</say>
+			<say target="藏师将军">
+				<content>迷雾不但压制我们的实力也限制阻断了我们和外界的通信。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我有种不祥的预感，我能感到危险在快速逼近！</content>
+			</say>
+			<say target="小樱">
+				<content>在通讯掉线前我似乎听到摩卡在提醒我们有霸空雕在接近。</content>
+			</say>
+			<say target="心零">
+				<content>我看到了！就在我们眼前！</content>
+			</say>
+		</sayList>
+		<sayList name="s5">
+			<say target="小樱">
+				<content>还好有尸宠帮忙，我们才得以快速突破血蟒空中包围圈。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>喂？制毒师，收到请答复！摩卡，收到请答复！</content>
+			</say>
+			<say target="制毒师">
+				<content>……沙沙……（信号丢失）</content>
+			</say>
+			<say target="摩卡">
+				<content>……沙沙……（信号丢失）</content>
+			</say>
+			<say target="藏师将军">
+				<content>这里受迷雾影响太大了，我们联系不上他们。</content>
+			</say>
+			<say target="心零">
+				<content>前面就是绿岛了，我们先登陆吧。</content>
+			</say>
+			<say target="小樱">
+				<content>心零说得对，咱们先登陆再说。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>大家都跟上，我们现在是孤军深入不要掉队了。</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_FirstVisit">
+		<!-- 登陆 · 迷雾压制 · 只能拿基础枪 -->
+		<sayList name="s1">
+			<say target="小樱">
+				<content>好，咱们就在这片海滩登陆。大家收好翅膀，脚踏实地了。</content>
+			</say>
+			<say target="藏师将军">
+				<content>总算着陆了，这翅膀虽好，仍不如脚踩在土地上最踏实。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>心零，飞了这么久，累不累？下来歇会儿吧。</content>
+			</say>
+			<say target="心零">
+				<content>不累不累！我搬砖的力气多着呢！这翅膀太好玩了，我要多飞一会儿，还能帮你们望风！</content>
+			</say>
+			<say target="藏师将军">
+				<content>制毒师，摩卡，我们已经登陆绿岛，能听到吗？</content>
+			</say>
+			<say target="制毒师">
+				<content>……沙沙……（信号丢失）</content>
+			</say>
+			<say target="摩卡">
+				<content>……沙沙……（信号丢失）</content>
+			</say>
+			<say target="天鹰小美">
+				<content>果然，即使迷雾已经停止进一步扩散，余留的迷雾仍把通讯切断了。</content>
+			</say>
+			<say target="心零">
+				<content>切就切呗，本来咱们就是孤军奋战，怕啥！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>小樱，载具留在这儿，会不会被血蟒发现？</content>
+			</say>
+			<say target="小樱">
+				<content>放心，制毒师给它装了特殊隐身涂层，雷达也扫不到。再说，咱们说不定还要用它的技能呢。</content>
+			</say>
+			<say target="心零">
+				<content>对了对了！我把翅膀上的吸附共享装置拆下来给你了，小樱姐。那玩意儿太重，带着飞得不爽。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>有共享装置，咱们就能远程用处决者的真空吸附。不过制毒师说过，离载具越远效果越弱，但就算在绿岛深处，至少也能保留一级效果。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>还有，现在虽然只是绿岛外围，但我已经感到一股隐隐的压制力了。</content>
+			</say>
+			<say target="藏师将军">
+				<content>是啊，这残留的迷雾真邪门，我手里的金蝉沉得跟灌了铅似的。</content>
+			</say>
+			<say target="小樱">
+				<content>没错，从踏上这片土地开始，就觉得空气闷得慌，动作也慢了半拍。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我也试过了，光锥完全没反应，我身上的所有装备，装置，载具也都失效了，倒是这把和文杰同款的圣诞礼炮还能用......</content>
+			</say>
+			<say target="心零">
+				<content>啊？！我的狮子座也哑火了！只能用这把破散弹枪？</content>
+			</say>
+			<say target="小樱">
+				<content>别抱怨了，能用的都在这里——原始步枪、散弹、手枪、狙击，还有火炮。至少它们还能开火。</content>
+			</say>
+			<say target="藏师将军">
+				<content>哈，就算只有烧火棍，我这个屠尸将军也照样杀敌！难不成咱们还比不上文杰手里那根烧火棍似的圣诞礼炮？</content>
+			</say>
+			<say target="小樱">
+				<content>我试了下，我的技能还能用，只是威力被强行压低了。不过翻滚和鬼步还算顺畅，至少能快速走位。</content>
+			</say>
+			<say target="小樱">
+				<content>嘘——有脚步声。是血蟒的巡逻队！</content>
+			</say>
+			<!-- 遭遇战 · 以弱胜强 -->
+			<say target="血蟒雇佣兵">
+				<content>前方发现入侵者！疑似闯入的爆枪小队！立即放下武器投降！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>被发现了……准备战斗！</content>
+			</say>
+			<say target="藏师将军">
+				<content>就这么几个人，速战速决！</content>
+			</say>
+			<say target="心零">
+				<content>终于可以打架啦！看我的！</content>
+			</say>
+		</sayList>
+		<!-- 战后 · 立刻转移，前往苍木道 -->
+		<sayList name="s2">
+			<say target="天鹰小美">
+				<content>巡逻队解决了，但刚才动静不小，枪声肯定传出去了。</content>
+			</say>
+			<say target="藏师将军">
+				<content>不宜久留。小樱，看看地图，最近的掩体在哪儿？</content>
+			</say>
+			<say target="小樱">
+				<content>好，我来看看。</content>
+			</say>
+		</sayList>
+		<sayList name="s3">
+			<say target="小樱">
+				<content>沿着这条小路朝东北，穿过密林就是苍木道。那里树多，适合隐蔽。</content>
+			</say>
+			<say target="心零">
+				<content>好嘞！出发出发！</content>
+			</say>
+			<say target="小樱">
+				<content>大家跟上，保持静默。真正的战斗……还在后面呢。</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_UnderSneaking">
+		<!-- 进入苍木道密林，迷雾沉沉，气氛压抑 -->
+		<sayList name="s1">
+			<say target="小樱">
+				<content>这里就是苍木道……树密得透不过光，连天都遮住了。</content>
+			</say>
+			<say target="藏师将军">
+				<content>这林子越深，迷雾越浓。我这把枪的瞄准镜里全是噪点，快成摆设了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>大家小心脚下，树根盘根错节的，别摔着。</content>
+			</say>
+			<say target="心零">
+				<content>我飞高点给你们探路！咦——那边树下……好像有什么东西在动？</content>
+			</say>
+			<say target="小樱">
+				<content>是人！快过去看看！</content>
+			</say>
+		</sayList>
+
+		<!-- 发现受伤的血蟒侦察兵 -->
+		<sayList name="s2">
+			<say target="血蟒突击兵">
+				<content>咳、咳咳……你们……是爆枪小队？</content>
+			</say>
+			<say target="天鹰小美">
+				<content>别动，你伤得太重了。我们不是来打架的，是来找人的。</content>
+			</say>
+			<say target="血蟒突击兵">
+				<content>呵……现在说这些……还有什么用……我快不行了……</content>
+			</say>
+			<say target="藏师将军">
+				<content>兄弟，有什么话就说出来吧，兴许我们能帮上忙。或者……你知道些什么？</content>
+			</say>
+		</sayList>
+
+		<!-- 临终透露关键情报 -->
+		<sayList name="s3">
+			<say target="血蟒突击兵">
+				<content>绿岛……完了……病毒从里面扩散……好多兄弟都变成了行尸……</content>
+			</say>
+			<say target="心零">
+				<content>病毒？！难道是那艘飞船带来的？可我们检查过，飞船上干干净净的啊……</content>
+			</say>
+			<say target="血蟒突击兵">
+				<content>咳……谁说得清呢……是天灾还是人祸……反正……里面已经失控了……</content>
+			</say>
+			<say target="小樱">
+				<content>那你有没有见过两个外来者？一个白头发，一个戴眼镜！</content>
+			</say>
+			<say target="血蟒突击兵">
+				<content>白头发……戴眼镜……啊，是他们！两天前……我看见他们穿过郁葱甸，往仙草镇去了……</content>
+			</say>
+			<say target="血蟒突击兵">
+				<content>后面追着大批僵尸和血蟒精锐……他们……凶多吉少……（剧烈咳嗽）我求你们……救救绿岛……别让更多乡亲像我一样……</content>
+			</say>
+		</sayList>
+
+		<!-- 士兵气绝，众人默哀 -->
+		<sayList name="s4">
+			<say target="小樱">
+				<content>喂，坚持住！喂！……没气了。</content>
+			</say>
+			<say target="藏师将军">
+				<content>唉，至少他最后走得还算体面。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>虽然是血蟒的人，临终却把希望托付给我们……愿他安息。</content>
+			</say>
+			<say target="小樱">
+				<content>现在没时间难过了。他说小白和文杰去了仙草镇方向，我们得赶快。</content>
+			</say>
+		</sayList>
+
+		<!-- 分析路线，回忆制毒师的告诫（天气铺垫） -->
+		<sayList name="s5">
+			<say target="小樱">
+				<content>（展开地图）郁葱甸……仙草镇……这条路最近，但要穿过一片开阔地。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>等等，你们还记得出发前制毒师和摩卡的话吗？</content>
+			</say>
+			<say target="藏师将军">
+				<content>记得。他们说绿岛深处受迷雾影响，气候极端——要么突降暴雨，要么酷热难当。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>没错。要是冒然进开阔地，遇上恶劣天气就麻烦了。</content>
+			</say>
+			<say target="心零">
+				<content>难怪我总觉得身上黏糊糊的，又闷又湿……原来暴雨要来了？</content>
+			</say>
+			<say target="小樱">
+				<content>不管怎样，救人要紧。大家做好应对准备，尽快赶路。</content>
+			</say>
+		</sayList>
+
+		<!-- 突然！爆炸！地面震荡！ -->
+		<sayList name="s6">
+			<say target="藏师将军">
+				<content>什么声音？！</content>
+			</say>
+			<say target="心零">
+				<content>哇啊——地在晃！是地震吗？</content>
+			</say>
+			<say target="天鹰小美">
+				<content>不对，是爆炸！从仙草镇方向传来的！</content>
+			</say>
+			<say target="小樱">
+				<content>小白他们可能就在那里！快走！</content>
+			</say>
+		</sayList>
+
+		<!-- 大批血蟒部队正在围拢，任务在紧张中完成 -->
+		<sayList name="s7">
+			<say target="天鹰小美">
+				<content>等等！你们听……四周有脚步声，好多好多！</content>
+			</say>
+			<say target="血蟒狙击兵">
+				<content>前面就是爆枪小队！快包围拿下他们，一个都不能放走！</content>
+			</say>
+			<say target="心零">
+				<content>不好，爆炸把周围的血蟒全引来了！我们被包围了！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>别慌！趁他们还没合围，咱们依托地势反击！</content>
+			</say>
+			<say target="小樱">
+				<content>先突围出去，再想办法去郁葱甸！快！</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_PythonBesiege">
+		<!-- 开场：被包围 -->
+		<sayList name="s1">
+			<say target="小樱">
+				<content>爆炸声把周围的血蟒全引来了！四面八方都是敌人……准备迎战！</content>
+			</say>
+			<say target="藏师将军">
+				<content>来得好！老子正愁没处撒气呢！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>别硬拼，利用地形打游击！大家互相照应！</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿，看我飞起来给他们个“高打低”！</content>
+			</say>
+		</sayList>
+
+		<!-- 每波战斗间歇的短台词（体现战斗激烈与缴获） -->
+		<sayList name="s2_1">
+			<say target="小樱">
+				<content>第一波！稳住！</content>
+			</say>
+		</sayList>
+		<sayList name="s2_2">
+			<say target="藏师将军">
+				<content>哼，就这点人？不够塞牙缝的！</content>
+			</say>
+		</sayList>
+		<sayList name="s2_3">
+			<say target="天鹰小美">
+				<content>注意！敌人里混了狙击手，别露头太久！</content>
+			</say>
+		</sayList>
+		<sayList name="s2_4">
+			<say target="心零">
+				<content>哇，这些重装兵好硬！不过嘿嘿，捡到地雷啦！</content>
+			</say>
+		</sayList>
+		<sayList name="s2_5">
+			<say target="小樱">
+				<content>地雷都收好，后面用得上。</content>
+			</say>
+		</sayList>
+		<sayList name="s2_6">
+			<say target="藏师将军">
+				<content>又干掉一波！血蟒真是杀不完的蚂蚁。</content>
+			</say>
+		</sayList>
+		<sayList name="s2_7">
+			<say target="天鹰小美">
+				<content>硬茬子来了！当心他们的技能！</content>
+			</say>
+		</sayList>
+		<sayList name="s2_8">
+			<say target="心零">
+				<content>血蟒这是把家底全搬出来啦？</content>
+			</say>
+		</sayList>
+		<sayList name="s2_9">
+			<say target="小樱">
+				<content>坚持住！马上就能撕开口子！</content>
+			</say>
+		</sayList>
+		<sayList name="s2_10">
+			<say target="血蟒狙击兵">
+				<content>爆枪小队！旺达首领有令，格杀勿论！你们插翅难逃！</content>
+			</say>
+			<say target="藏师将军">
+				<content>废话少说，来战！</content>
+			</say>
+		</sayList>
+
+		<!-- 战斗胜利，短暂喘息 -->
+		<sayList name="s3">
+			<say target="天鹰小美">
+				<content>终于打退了……这一仗少说也消灭了上百血蟒士兵。</content>
+			</say>
+			<say target="心零">
+				<content>呼、呼……累死我啦！不过捡了好多好多地雷！嘿嘿，把这些埋在敌人路上，肯定够他们喝一壶的！</content>
+			</say>
+			<say target="小樱">
+				<content>这种临时装置后面用得上，大家尽量都多带点。</content>
+			</say>
+			<say target="藏师将军">
+				<content>但血蟒的增援马上就到，得赶紧决定下一步怎么走。</content>
+			</say>
+		</sayList>
+
+		<!-- 分兵决策 -->
+		<sayList name="s4">
+			<say target="小樱">
+				<content>（展开地图）我们现在有两条路去仙草镇——郁葱坪和郁葱甸。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>郁葱坪地势开阔，适合尸宠推进，迷雾影响也小些，说不定能联系上制毒师；郁葱甸林密隐蔽，小白和文杰既然从那边走，或许能找到他们的踪迹。</content>
+			</say>
+			<say target="藏师将军">
+				<content>你的意思……分兵？</content>
+			</say>
+			<say target="小樱">
+				<content>没错。血蟒以为我们是一整队，肯定会分头追。我们分成两队，既能分散敌人，又能提高搜索效率。</content>
+			</say>
+			<say target="心零">
+				<content>分兵？那谁跟谁一队呀？</content>
+			</say>
+		</sayList>
+
+		<!-- 分队确定 + 移交地图 -->
+		<sayList name="s5">
+			<say target="小樱">
+				<content>藏师将军，你带我们的尸宠走郁葱坪。你经验最老到，尸宠跟着你能发挥最大战力。</content>
+			</say>
+			<say target="藏师将军">
+				<content>明白。那你们三个呢？</content>
+			</say>
+			<say target="小樱">
+				<content>我、小美、心零断后，随后徒步走郁葱甸。人少灵活，不容易被大股敌人盯上。藏师，你先带着尸宠出发去郁葱坪。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>这样分配确实合理……但藏师你一个人带三个尸宠，会不会太勉强？</content>
+			</say>
+			<say target="藏师将军">
+				<content>哈，老子当年在霞光市单枪匹马闯尸潮的时候，这帮血蟒崽子还在上小学呢！放心，这些尸宠我带得动。</content>
+			</say>
+			<say target="心零">
+				<content>啊？我的冥王要跟藏师大叔走啦？呜……你要好好照顾它啊！</content>
+			</say>
+			<say target="藏师将军">
+				<content>保证完璧归赵。</content>
+			</say>
+			<say target="小樱">
+				<content>（取出地图）你带上这张制毒师给的绿岛地图，上面标了绕道郁葱坪去仙草镇的路线和补给点。</content>
+			</say>
+			<say target="藏师将军">
+				<content>那你呢？</content>
+			</say>
+			<say target="小樱">
+				<content>路线我早记在心里了。咱们在仙草镇汇合，不管哪队先找到小白和文杰，都要想办法通知另一队。</content>
+			</say>
+			<say target="藏师将军">
+				<content>好，就这么定了！你们可要多加小心。</content>
+			</say>
+			<say target="小樱">
+				<content>你也是。大家……分头行动，一定要完完整整地在仙草镇见！</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_DoubleinPairs">
+		<sayList name="s1">
+			<say target="血蟒狙击兵">
+				<content>爆枪小队就在前面！快跟上，别让他们跑了！</content>
+			</say>
+			<say target="小樱">
+				<content>计划赶不上变化，藏师，你带尸宠从郁葱坪突围！我们断后掩护！</content>
+			</say>
+			<say target="藏师将军">
+				<content>什么？你们三个留下？这太冒险了！</content>
+			</say>
+			<say target="小樱">
+				<content>听我的！你经验最老到，尸宠跟着你才能发挥全力。我们人少灵活，更容易脱身。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>藏师，时间紧迫，血蟒的支援部队马上就到，快走！</content>
+			</say>
+			<say target="心零">
+				<content>呜……我的冥王要跟藏师大叔走了……你要好好照顾它啊！</content>
+			</say>
+			<say target="藏师将军">
+				<content>放心，保证完璧归赵。你们……一定要撑住！</content>
+			</say>
+			<say target="小樱">
+				<content>我们在仙草镇汇合！快走！</content>
+			</say>
+		</sayList>
+		<sayList name="s2">
+			<say target="小樱">
+				<content>他们走远了……接下来，该我们了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>听——引擎声，是血蟒的机械化部队。五分钟内必须解决，否则我们插翅难逃。</content>
+			</say>
+			<say target="心零">
+				<content>来得好！正好拿他们出气！看心零大小姐怎么收拾这群铁疙瘩！</content>
+				<say target="小樱">
+					<content>我们刚刚收集到的地雷，该派上用场了。</content>
+				</say>
+			</say>
+		</sayList>
+		<sayList name="s3">
+			<say target="天鹰小美">
+				<content>终于……全解决了。这辆坦克还真够硬的，还好我们撑住了。</content>
+			</say>
+			<say target="小樱">
+				<content>嗯，多亏大家。不知道藏师那边顺不顺利……我们也该出发了，目标仙草镇！</content>
+			</say>
+			<say target="心零">
+				<content>好嘞！出发出发！</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_TracingMist">
+		<!-- 郁葱坪 · 雨中独行 -->
+		<sayList name="s1">
+			<say target="藏师将军">
+				<content>身后的枪声渐渐远了……小樱她们，应该能脱身吧。</content>
+			</say>
+			<say target="藏师将军">
+				<content>这雨还真是说来就来，越下越大，制毒师和摩卡的话半点不假。</content>
+			</say>
+			<say target="藏师将军">
+				<content>前面就是郁葱坪了，视野倒开阔，我看看地图……嗯？地图里面夹的东西是……</content>
+			</say>
+			<say target="藏师将军">
+				<content>（取出装置）原来小樱把吸附共享装置留给我了……她们自己用得着的东西，倒舍得给我。</content>
+			</say>
+			<say target="藏师将军">
+				<content>这里的迷雾淡了不少，步子也轻快了。通讯器有动静了，到前面空地试试联系高地。</content>
+			</say>
+			<say target="藏师将军">
+				<content>不对，有脚步声……血蟒巡逻队？正好，先清掉他们再联络制毒师。</content>
+			</say>
+			<say target="藏师将军">
+				<content>说不定我手上捡来的地雷能发挥作用。</content>
+			</say>
+		</sayList>
+
+		<!-- 遭遇血蟒重甲兵 -->
+		<sayList name="s2">
+			<say target="血蟒重甲兵">
+				<content>发现入侵者！疑似爆枪小队，立即包围！</content>
+			</say>
+			<say target="藏师将军">
+				<content>入侵？老子是来捞人的！你们搞的什么迷雾信号屏蔽，害得我们满岛乱窜！</content>
+			</say>
+		</sayList>
+
+		<!-- 战斗中，想起文杰 -->
+		<sayList name="s3">
+			<say target="藏师将军">
+				<content>居然还有增援？文杰你小子给我等着，等救出你，我非得让你钱包大出血请我十顿酒！</content>
+			</say>
+		</sayList>
+
+		<!-- 战斗结束，迷雾减弱 -->
+		<sayList name="s4">
+			<say target="藏师将军">
+				<content>呼……清完了。这里的空旷地雾气散得更快了，和高地的通讯应该能接通。</content>
+			</say>
+		</sayList>
+
+		<!-- 与高地恢复联系 -->
+		<sayList name="s5">
+			<say target="藏师将军">
+				<content>制毒师，摩卡，我是藏师，能听到吗？</content>
+			</say>
+			<say target="制毒师">
+				<content>……沙沙……藏师？信号终于连上了！你那边情况如何？</content>
+			</say>
+			<say target="藏师将军">
+				<content>可算联系上了！我们分兵了，小樱她们走郁葱甸，我带着尸宠走郁葱坪。刚端掉一队巡逻兵，仙草镇应该不远了。</content>
+			</say>
+			<say target="摩卡">
+				<content>收到，已标记你的位置。藏师，最近绿岛局势情况有变——绿岛内部病毒失控，出现大量尸变，仙草镇外围已有感染血蟒在游荡。</content>
+			</say>
+			<say target="藏师将军">
+				<content>尸变？那小樱她们……</content>
+			</say>
+			<say target="制毒师">
+				<content>藏师，你先冷静听我说。根据观测，小樱她们所走的郁葱甸方向确实正有一波尸潮靠近，但信号被丛林和残余迷雾阻断，我们暂时联系不上她们。</content>
+			</say>
+			<say target="藏师将军">
+				<content>那我立刻折返去支援！</content>
+			</say>
+			<say target="制毒师">
+				<content>不行。血蟒的搜索队还在苍木道附近，你现在回去等于自投罗网。而且郁葱甸的尸潮反而可能牵制住血蟒，给小樱她们争取时间。</content>
+			</say>
+			<say target="摩卡">
+				<content>藏师，你继续按原计划前往仙草镇。全岛已经关停的迷雾终究会散尽，只有到那里，你才能找到小白和文杰的线索，也是她们最终汇合的目标。</content>
+			</say>
+			<say target="藏师将军">
+				<content>（沉默片刻）……我明白了。制毒师，摩卡，你们盯紧全岛，一旦联系上小樱，马上告诉我。</content>
+			</say>
+			<say target="制毒师">
+				<content>放心，交给我们。</content>
+			</say>
+			<say target="摩卡">
+				<content>对了，我们刚刚截获几条血蟒通讯——对话显示他们已把主力调去防控尸变，追捕你们的优先级降低了。这是个好机会，尽快动身前往仙草镇！</content>
+			</say>
+			<say target="藏师将军">
+				<content>好！我的高阶武器似乎也解除限制了，我这就动身。你们保重！</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_MineFields">
+		<!-- 进入雷区，闷热异常 -->
+		<sayList name="s1">
+			<say target="小樱">
+				<content>呼……暂时甩开追兵了。不知道藏师那边顺不顺利……</content>
+			</say>
+			<say target="小樱">
+				<content>这片林子又闷又热，跟蒸笼似的。制毒师他们的话真是一点不差——幸好这翅膀能飞高点，上层空气还凉快些。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>等等，你们不觉得……太安静了吗？连鸟叫声都没有。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>事出反常必有妖。大家先别动，我看看周围。</content>
+			</say>
+			<say target="心零">
+				<content>哎呀，管它什么妖不妖的！我现在只想早点上高地冲个热水澡——咦？地上那些闪闪发光的是什么？</content>
+			</say>
+			<say target="天鹰小美">
+				<content>等等，你别动！那应该是地雷！血蟒在这里布下了雷区。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>（仔细观察）这种地雷……和我们之前缴获的那些一模一样。触发机制、外壳工艺，完全一致。</content>
+			</say>
+			<say target="小樱">
+				<content>我也用用这翅膀，飞得高才能看清情况，你们原地先等等。</content>
+			</say>
+		</sayList>
+
+		<!-- 分析局势，商讨排雷方案 -->
+		<sayList name="s2">
+			<say target="小樱">
+				<content>不妙，前方道路被雷区完全封锁了。想绕路的话，至少要翻两座山，时间根本不够。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>那就只能手动排雷了。这种地雷用我手里的火炮就能触发引爆，但它的爆炸半径和威力我们可是有目共睹。</content>
+			</say>
+			<say target="小樱">
+				<content>这……和让我们去滚雷送死有什么两样？</content>
+			</say>
+			<say target="天鹰小美">
+				<content>眼下没有别的办法了，即使冒险也得试试。可惜我火炮子弹没剩几发，一炮换一个雷，根本不够用。</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿，咱们不是从血蟒身上捡了好多眩晕地雷吗？以雷治雷！</content>
+			</say>
+			<say target="小樱">
+				<content>你的意思是……用缴获的眩晕地雷当做延长引线去引爆这片雷区？</content>
+			</say>
+			<say target="天鹰小美">
+				<content>（眼睛一亮）这办法可行！眩晕地雷的触发机制和致命地雷一样，只要埋得够近，连锁反应就能清出一条路。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>你们保持飞行状态别乱动，我去布置眩晕地雷引爆它们。</content>
+			</say>
+			<say target="心零">
+				<content>好嘞！小美姐姐冲呀！</content>
+			</say>
+		</sayList>
+
+		<!-- 排雷成功，引发爆炸 -->
+		<sayList name="s3">
+			<say target="心零">
+				<content>哇——这爆炸，比高地过年放的烟花还壮观！下次一定让制毒师给我多做几颗，我留着过年当烟花放！</content>
+			</say>
+			<say target="小樱">
+				<content>先别想烟花的事了。能设计出这种地雷的人，绝对不简单。</content>
+			</say>
+			<say target="小樱">
+				<content>不知道是绿岛的哪位高人，居然能给血蟒造出这种东西。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>看来雷区也没必要全清掉，只炸出一条安全通道。剩下的雷留着，万一后面有用呢。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>等有机会，我们带几个样本上高地给制毒师研究研究。血蟒研究出来各种稀奇古怪的东西正是我们缺少的。</content>
+			</say>
+		</sayList>
+
+		<!-- 撤退的血蟒士兵出现，透露情报 -->
+		<sayList name="s4">
+			<say target="血蟒突击兵">
+				<content>咳咳……咳……有、有人？别、别开枪！我们不是来追你们的！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>什么意思？你们不是在围剿我们吗？</content>
+			</say>
+			<say target="血蟒突击兵">
+				<content>后、后面……仙草镇方向……全完了！整个绿岛中心已经快失控了，我们好多兄弟都……啊！</content>
+			</say>
+			<say target="血蟒狙击兵">
+				<content>它们追上来了！快跑！再不跑就来不及了！</content>
+			</say>
+			<say target="小樱">
+				<content>等等！你说的是仙草镇方向？你们有没有见过两个外来者？一个白头发，一个戴眼镜！</content>
+			</say>
+			<say target="血蟒突击兵">
+				<content>白头发？戴眼镜？……原来是他们！我们在前几天见过他们护送着一个粉头发的中年女人……穿过仙草镇郊区，其他的我们一概不知……尸变已经扩散了……还是保命要紧……快逃吧……</content>
+			</say>
+		</sayList>
+
+		<!-- 情报确认，加速前进 -->
+		<sayList name="s5">
+			<say target="小樱">
+				<content>喂——别跑啊！话还没说完呢！……跑得真快。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>粉头发的女人？说的不就是小白妈妈玉晴吗？这些血蟒士兵也仅仅知道几天前小白和文杰的行踪，他们还没我们知道的多！</content>
+			</say>
+			<say target="小樱">
+				<content>看来现在绿岛尸变的程度比我们想象的还要严重，连血蟒自己都无法有效失控病毒扩散。我们必须加快前进速度！另外我现在渐渐感觉到自己实力恢复了不少，带来的高阶武器似乎可以使用了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我也是，看来这里残留的迷雾消退了不少……趁小白他们还没被彻底困住，我们得尽快赶去仙草镇方向。</content>
+			</say>
+		</sayList>
+		<sayList name="s6">
+			<say target="小樱">
+				<content>不好！又发生了什么动静？</content>
+			</say>
+			<say target="心零">
+				<content>快看刚刚那几个跑掉的血蟒小兵又狼狈地跑过来了，他们后面似乎跟了一大堆——僵尸！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>大家快做好战斗准备，我去把剩下没清理的个别地雷先清理了，大家快行动起来！快！</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_MorgueCrisis">
+		<!-- 开场：阴森氛围 -->
+		<sayList name="s1">
+			<say target="天鹰小美">
+				<content>我把附近确认了一遍，周围的地雷已经排除完毕。</content>
+			</say>
+			<say target="小樱">
+				<content>而且我们带来的高阶武器也可以用了，我的技能似乎也不受限制了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>看来停止扩散后残留的迷雾终于散尽了，我们可以好好大展手脚了。</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿，我带来的大宝贝狮子座终于可以派上用场了。</content>
+			</say>
+			<say target="小樱">
+				<content>快看，刚刚跑掉的几位血蟒士兵又跑过来了。</content>
+			</say>
+		</sayList>
+
+		<!-- 血蟒残兵出现 -->
+		<sayList name="s2">
+			<say target="血蟒重甲兵">
+				<content>爆枪小队？快救救我们！</content>
+			</say>
+			<say target="小樱">
+				<content>你先别急，挑重点说。</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>仙草镇外围爆发了一大批感染者，包括许多我们部队的士兵都成了感染者……他们马上就会追到这里！</content>
+			</say>
+			<!-- 血蟒重甲兵给予时停沙漏 -->
+			<say target="血蟒重甲兵">
+				<content>我们小队快顶不住了……这个，时停沙漏，听说是从之前坠毁在绿岛上的飞船上拆下来的装置，绿岛科学家专门研究它复刻了一批装置……按下它可以让时间暂停一小会儿……</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>本来是用来对付这些感染者的，但我们完全无法发挥这个装置真正的实力，现在给你们……或许能帮上忙……</content>
+			</say>
+			<say target="天鹰小美">
+				<content>时间暂停？！这么厉害的东西？</content>
+			</say>
+			<say target="心零">
+				<content>没想到狂人的飞船上还有这么稀奇古怪的玩意，有空了让制毒师给我们也做一批。</content>
+			</say>
+			<say target="小樱">
+				<content>谢谢你们，心零，这些装置你拿上。你们快躲到我们身后，这里交给我们！</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>大恩不言谢，这些僵尸里可能裹挟了不少类似的悬停沙漏，你们注意收集一下，这些僵尸血量极厚，我们用普通武器无能为力。</content>
+			</say>
+		</sayList>
+		<!-- 第一波僵尸出现 -->
+		<sayList name="s3">
+			<say target="天鹰小美">
+				<content>看前面！是血蟒的感染者！他们冲过来了！后面还混杂了大量其他僵尸！</content>
+			</say>
+			<say target="心零">
+				<content>交给我啦！看我的狮子座！</content>
+			</say>
+		</sayList>
+
+		<!-- 第一波过半，压迫感提升 -->
+		<sayList name="s4">
+			<say target="天鹰小美">
+				<content>太厚实了……它们好像杀不动！</content>
+			</say>
+		</sayList>
+
+		<!-- 第二波出现 -->
+		<sayList name="s5">
+			<say target="血蟒狙击兵">
+				<content>又、又来一波！我们几个也挡不住了……</content>
+			</say>
+			<say target="天鹰小美">
+				<content>集中火力，先消灭拿枪的血蟒感染者！</content>
+			</say>
+			<say target="小樱">
+				<content>别慌！心零，快用沙漏装置！</content>
+			</say>
+		</sayList>
+
+		<!-- 第三波出现，含BOSS -->
+		<sayList name="s6">
+			<say target="血蟒感染者">
+				<content>嘎……杀……</content>
+			</say>
+			<say target="小樱">
+				<content>那个血蟒感染者已经丧失了心智！小心它的攻击！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>心零，快用悬停沙漏！趁时间暂停你集火攻击它！</content>
+			</say>
+		</sayList>
+
+		<!-- 胜利，盟友告知情报 -->
+		<sayList name="s7">
+			<say target="血蟒重甲兵">
+				<content>终、终于结束了……多谢你们出手。</content>
+			</say>
+			<say target="心零">
+				<content>这悬停沙漏真带劲！配合狮子座，时停一开，揍人跟切菜似的！</content>
+			</say>
+			<say target="心零">
+				<content>哎，你们不觉得这荒郊野岭突然冒出家二手武器店很怪吗？老板跑哪去了？</content>
+			</say>
+			<say target="小樱">
+				<content>确实蹊跷……心零，你发现什么了？</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿，在武器店门口捡到一张前几天的绿岛日报！小樱姐你看——</content>
+			</say>
+			<say target="小樱">
+				<content>（接过报纸）让我来看看……“突破10层虚天塔新晋新星传闻只是两位少年？神秘的墨镜男和白发小鬼究竟是什么来头？”……虚天塔？</content>
+			</say>
+			<say target="心零">
+				<content>墨镜男？白发小鬼？这可不是说咱亲爱的文杰大表哥和小白嘛！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>虚天塔……这是什么东西？为什么我们从未听说过？你们血蟒部队应该知道吧。</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>呃……这个嘛，我也只是听长官们提过。虚天塔是由世界三大军团——亚洲的昆仑、美洲的利维坦、非洲的刺沙联合制作的虚拟现实游戏，据说塔有无限层，里面复刻了现实中的各种僵尸，一层比一层难。</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>每年都会有比赛，各地军团派代表参加，赢了能拿到特殊大奖。但得用专门的卫星网络才能参加……听说通关第10层能拿到昆仑特制的芯片，好像跟新版的“迷雾”有关。</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>报纸上说的两位少年……该不会就是你们要找的那两个外来者吧？戴眼镜、白头发，他们最近好像在仙草镇那边出现过，还听说他们跟交叉骨和旺达参谋长有过接触……</content>
+			</say>
+			<say target="心零">
+				<content>交叉骨？好奇葩的名字啊，这么会起名字，有本小姐两成水平没？</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>（苦笑）姑娘你可别小瞧他……交叉骨是我们血蟒最强的战士之一，据说他曾经一个人击败过通关虚天塔第50层的高手。那可不是普通人能做到的，第50层的怪物连正规军都得组队刷。他对你们爆枪小队好像特别有敌意，你们要是碰上他，千万要小心。</content>
+			</say>
+			<say target="心零">
+				<content>第50层？听起来有点东西嘛……不过本小姐有狮子座和时停沙漏，才不怕他！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>心零，别轻敌。既然能被血蟒如此推崇，肯定不简单。</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>对了，我还听说交叉骨这人特别记仇，之前有几个小队在执行任务时无意冒犯了他，结果被他追着打了三天三夜……你们要是遇到他，尽量别起正面冲突，绕道走比较好。</content>
+			</say>
+			<say target="心零">
+				<content>切，我才不绕道呢！他要是敢来，正好让我试试刚捡到的新玩具！</content>
+			</say>
+			<say target="小樱">
+				<content>心零，听人劝。我们的目标是找人，不是打架。不过……如果真碰上，我们也不会怕。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我大概明白了……那小白他们现在还在仙草镇吗？</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>这个……我们也不太确定。</content>
+			</say>
+			<say target="心零">
+				<content>什么？他们不在仙草镇？那我们绕那么大老远路图了啥？</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>但前两天我们亲眼看见交叉骨在仙草镇入口跟他们打得难解难分，我们这些小兵早躲远了。后来我们跟大部队走散，又被僵尸和血蟒感染者追杀，才逃到这儿碰上你们。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>你们接下来打算怎么办？</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>我们准备在这稍作休整……然后去苍木道找大部队……现在全岛都在忙着对付尸变，估计没空再追你们。对了，你们最好先去仙草镇入口看看，说不定能找到什么线索。</content>
+			</say>
+			<say target="小樱">
+				<content>他说的对，我们这里已经离目的地不远，再说藏师应该也快到仙草镇了，先跟他会合再一起找。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>没错，我们先和藏师会合再说，小白他们在仙草镇肯定留下了行动踪迹，到时候大家群策群力，</content>
+			</say>
+			<say target="血蟒重甲兵">
+				<content>再次感谢爆枪小队，不计前嫌搭救我们！</content>
+			</say>
+			<say target="心零">
+				<content>你们也小心！走啦小樱姐！小美姐！</content>
+			</say>
+			<say target="小樱">
+				<content>走吧，目标仙草镇入口。一定要找到小白和文杰的行踪！</content>
+			</say>
+		</sayList>
+	</level>
+	<level name="GreenIs_Resession">
+		<!-- s1：藏师先行抵达仙草镇入口，通讯小樱队 -->
+		<sayList name="s1">
+			<say target="藏师将军">
+				<content>按地图的指引，这里应该就是仙草镇入口了。</content>
+			</say>
+			<say target="藏师将军">
+				<content>虽然四下安静，但空气中残留的硝烟味说明不久前发生过激烈交火。</content>
+			</say>
+			<say target="藏师将军">
+				<content>现在信号恢复了，我得赶紧联系小樱她们。</content>
+			</say>
+			<say target="藏师将军">
+				<content>喂？小樱？小美？我已抵达仙草镇入口，暂时没发现危险。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>藏师？信号终于通了，我们马上就到。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我们走另一侧路，现在已经能看到仙草镇的轮廓，再有一小段路就到了！</content>
+			</say>
+			<say target="藏师将军">
+				<content>我看到你们了，我就在就在入口前面！</content>
+			</say>
+		</sayList>
+
+		<!-- s2：两队会合，交流情报，穿插高地通讯 -->
+		<sayList name="s2">
+			<say target="小樱">
+				<content>藏师，我们总算会合了！</content>
+			</say>
+			<say target="藏师将军">
+				<content>小樱，你们这一路还顺利吗？</content>
+			</say>
+			<say target="小樱">
+				<content>唉，一言难尽。雷区、尸变，还遇到了血蟒幸存者，听说了不少事。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我们在郁葱甸捡到一张报纸，上面提到“虚天塔”和两个神秘少年——白头发、戴眼镜，应该就是小白和文杰。</content>
+			</say>
+			<say target="心零">
+				<content>对对对！还有那个叫交叉骨的，血蟒的人说他超厉害，说什么打败过通关虚天塔五十层的高手！不过本小姐才不怕他呢！</content>
+			</say>
+			<say target="心零">
+				<content>话说这名字起得真够奇葩的，还不如叫“鸡叉骨”呢！</content>
+			</say>
+			<say target="小樱">
+				<content>这张报纸是在郁葱甸一家的二手武器店里找到的，你也看看。</content>
+			</say>
+			<say target="藏师将军">
+				<content>（接过报纸）虚天塔？看来咱们真成井底之蛙了，绿岛上竟然发生了这么多事。</content>
+			</say>
+			<say target="藏师将军">
+				<content>对了，我刚刚跟高地恢复了通讯。摩卡说绿岛尸变已经全面爆发，血蟒自顾不暇，应该暂时没精力再追我们了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>难怪我们那条路上几乎没遇到血蟒围堵，反而碰上不少感染士兵。现在最要紧的是找到小白和文杰的行踪，他们最后出现在仙草镇，可镇上似乎没什么动静。</content>
+			</say>
+			<say target="小樱">
+				<content>种种迹象表明，他们应该已经离开了仙草镇，去向其他地方了。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我们把所有线索梳理一下：小白和文杰最初来绿岛是为了营救玉晴阿姨，对吧？</content>
+			</say>
+			<say target="心零">
+				<content>对啊，现在玉晴阿姨安全了，他们的主要目的已经达成。等等，你是说……</content>
+			</say>
+			<say target="天鹰小美">
+				<content>主要目的达成后，次要目的就成了新的主要目的。</content>
+			</say>
+			<say target="小樱">
+				<content>我明白了——我们只顾着找他们，却忽略了他们现在的目标。</content>
+			</say>
+			<say target="小樱">
+				<content>他们是在追查尸变的真相，所以哪里尸变最严重，他们就会往哪里去！</content>
+			</say>
+			<say target="摩卡">
+				<content>（通讯接入）你们总算分析到点子上了！我和制毒师刚刚整合了全岛情报，发现了一些重要线索。</content>
+			</say>
+			<say target="心零">
+				<content>摩卡大哥！终于又听到你的声音了！</content>
+			</say>
+			<say target="制毒师">
+				<content>小樱，藏师，现在绿岛残留的迷雾彻底消散，高地观测台能实时追踪你们的动向和血蟒部队的分布。有两个关键信息需要你们知晓。</content>
+			</say>
+			<say target="小樱">
+				<content>请讲，我们都在听着。</content>
+			</say>
+			<say target="制毒师">
+				<content>第一，血蟒正在大规模地将感染者尸潮向苍木道驱赶，那片区域已经沦为感染者的重灾区。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>难怪之前救下的血蟒士兵说要去苍木道与大部队会合，原来他们是想把尸潮集中到那里控制！</content>
+			</say>
+			<say target="藏师将军">
+				<content>都怪这该死的迷雾，哪怕是残留的一部分也害得我们信息不通，像无头苍蝇一样乱撞。</content>
+			</say>
+			<say target="摩卡">
+				<content>第二，我们探测到苍木道附近有异常能量波动，疑似血蟒的秘密机甲，很可能就是靠它把尸潮压制在那片区域。</content>
+			</say>
+			<say target="制毒师">
+				<content>最重要的是，我们刚刚捕捉到了小白和文杰的通讯器信号，定位显示他们正向苍木道腹地前进！</content>
+			</say>
+			<say target="小樱">
+				<content>什么？他们在苍木道？我们还在仙草镇，得立刻折返！</content>
+			</say>
+			<say target="制毒师">
+				<content>徒步肯定来不及，你们必须想办法尽快赶过去！</content>
+			</say>
+		</sayList>
+
+		<!-- s3：心零灵机一动，提议遥控飞行器 -->
+		<sayList name="s3">
+			<say target="心零">
+				<content>哎！咱们的处决者不是还停在回头澳岸边吗？制毒师好像给它装过远程遥控系统！</content>
+			</say>
+			<say target="天鹰小美">
+				<content>对呀！我怎么把这茬给忘了！心零你太机灵了！</content>
+			</say>
+			<say target="心零">
+				<content>嘿嘿，不过遥控器我可没带，嫌它太沉。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>我也没带……</content>
+			</say>
+			<say target="小樱">
+				<content>说到遥控器，咱们队里哪个遥控器专业户谁最爱随身带这些？藏师，该你出场了。</content>
+			</say>
+			<say target="藏师将军">
+				<content>（摸了摸口袋）嘿，还真在我这儿！我马上让它飞过来。</content>
+			</say>
+			<say target="小樱">
+				<content>太好了，这样就能快速支援苍木道了！</content>
+			</say>
+			<say target="制毒师">
+				<content>好，稍后摩卡会把小白文杰的坐标发到载具上，有情况随时联络。</content>
+			</say>
+		</sayList>
+
+		<!-- s4：飞行器出现并降落 -->
+		<sayList name="s4">
+			<say target="心零">
+				<content>快看！处决者飞过来了！</content>
+			</say>
+			<say target="藏师将军">
+				<content>嚯，还真能遥控！比我想象的还快。</content>
+			</say>
+		</sayList>
+
+		<!-- s5：登机，出发苍木道 -->
+		<sayList name="s5">
+			<say target="摩卡">
+				<content>藏师，小白和文杰的坐标已经发到处决者上了。</content>
+			</say>
+			<say target="藏师将军">
+				<content>收到，我先上去调试一下。</content>
+			</say>
+			<say target="藏师将军">
+				<content>舱内空间足够，咱们和尸宠都能坐下。</content>
+			</say>
+			<say target="天鹰小美">
+				<content>大家快登机，苍木道那边刻不容缓！</content>
+			</say>
+			<say target="心零">
+				<content>诶哟，用这仿生翅膀飞了这么久正好累了，躺会儿歇歇！</content>
+			</say>
+			<say target="制毒师">
+				<content>你们尽快进舱，不用担心你们的尸宠，冥王和爆骷S可以伴飞，不会占你们位置。</content>
+			</say>
+			<say target="心零">
+				<content>冲呀！让他们见识见识爆枪小队的厉害！</content>
+			</say>
+			<say target="藏师将军">
+				<content>都上来了？你们别动，我拉你们一把。</content>
+			</say>
+			<say target="小樱">
+				<content>大家做好准备，目标——苍木道，支援小白和文杰！</content>
+			</say>
+		</sayList>
+	</level>
+  </father>
+</data>

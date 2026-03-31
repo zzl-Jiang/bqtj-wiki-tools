@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="howitzer" cnName="榴弹炮">
+		<bullet cnName="撒旦" color="orange">
+			<name>arcHowDea</name><dpsMul>0.5</dpsMul>
+			<cnName>陈年·撒旦</cnName><skillArr>oldSugarDea</skillArr>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			
+			<!--基本-->
+			<capacity>83</capacity>
+			<attackGap>0.6</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<crossbowD focoB="1" minDelayMul="0.3" vAtt="1" />
+			<reloadGap>1.5</reloadGap>
+			<bulletWidth>40</bulletWidth>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>10</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>7</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>7</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>25</bulletSpeed>
+			<followD value="0.35" delay="2" />
+			
+			<!--特殊------------------------------------------------------------ -->
+			<gravity>0.6</gravity>
+			<penetrationGap>1000</penetrationGap>
+			<boomD bodyB="1" radius="100" />
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/arcHowIcon</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl name="blueLaserBig"></bulletImgUrl>
+			<smokeImgUrl name="yearPig_bullet"></smokeImgUrl>
+			<hitImgUrl name="yearDog_boom"></hitImgUrl>
+			<hitFloorImgUrl name="pistol1_hit"></hitFloorImgUrl>
+			<fireImgUrl name="gunFireRocket"></fireImgUrl>
+			<shootSoundUrl>specialGun/arcHowSound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/arcHow</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>抛物线弹道武器，2秒子弹会对敌人进行弱跟踪。</info>
+		</bullet>
+	</father>
+	
+	<father type="howitzer" cnName="榴弹炮">
+		<bullet color="blue">
+			<name>yearDogDea</name>
+			<cnName>弹力·戌狗</cnName>
+			<dpsMul>0.6</dpsMul>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>285</capacity>
+			<attackGap>0.7</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>30</bulletWidth><aiShootRange>610</aiShootRange>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>40</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>15</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>20</bulletSpeed>
+			<bulletVra>15</bulletVra>
+			<!--特殊------------------------------------------------------------ -->
+			<bounceD floor="20" hurtNumAdd="0.1" />
+			<boomD bodyB="1" floorB="1" radius="130" hurtMul="1" />
+			<twoShootPro>0</twoShootPro>
+			<penetrationNum>0</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<gravity>1.7</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/yearDogIcon</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">bullet/grenade</bulletImgUrl>
+			<smokeImgUrl con="filter" raNum="30">bullet/fireballSmoke</smokeImgUrl>
+			<selfBoomImgUrl soundUrl="boomSound/midBoom2" soundVolume="0.7" shake="3,0.4,13">boomEffect/bigCircle</selfBoomImgUrl><!-- 子弹图像【必备】 -->
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/yearDog_sound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearDog</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>每次地面反弹都会增加武器子弹10%的伤害，最大增伤200%。</info>
+		</bullet>
+		
+	</father>
+	<father name="deathArms">
+		
+		<skill name="陈年老弹">
+			<name>oldSugarDea</name>
+			<cnName>陈年老弹</cnName><noRandomListB>1</noRandomListB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><changeHurtB>1</changeHurtB>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>oldSugar</effectType>
+			<mul>2</mul>
+			<secMul>8</secMul>
+			<description>子弹每存在1秒，就增加[mul]的伤害，最高增加[secMul]的伤害。</description>
+		</skill>
+	</father>
+</data>

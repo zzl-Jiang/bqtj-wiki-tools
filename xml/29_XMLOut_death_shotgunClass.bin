@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="shotgun" cnName="散弹枪">
+		<bullet color="purple">
+			<name>crocodileDea</name>
+			<cnName>爆·沙鳄</cnName><dpsMul>0.44</dpsMul>
+			<whippB>0</whippB>
+			<!--基本-->
+			<capacity>105</capacity><iconUrl>newGun/crocodileDea_icon</iconUrl>
+			<attackGap>0.95</attackGap>
+			<reloadGap>1.5</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>600</bulletWidth>
+			<bulletNum>11</bulletNum>				
+			<shootAngle>22</shootAngle>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<skillArr>implodingDea</skillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>14</upValue>
+			<shootShakeAngle>70</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/shotgunRed_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0xFF0000" size="2" lightSize="6" blendMode="add"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/shotgunCrocodile</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		<bullet color="purple">
+			<name>shotgunRedDea</name><dpsMul>0.35</dpsMul>
+			<cnName>背刺·赤龙</cnName><skillArr>backstabDea</skillArr>
+			<whippB>0</whippB>
+			<!--基本-->
+			<capacity>125</capacity><iconUrl>specialGun/shotgunRedIcon</iconUrl>
+			<attackGap>0.8</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>600</bulletWidth>
+			<bulletNum>8</bulletNum>				
+			<shootAngle>22</shootAngle>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.6</armsArmMul>
+			<upValue>14</upValue>
+			<shootShakeAngle>70</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/shotgunRed_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0xFF0000" size="2" lightSize="6" blendMode="add"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/shotgunRed</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		
+		<bullet color="purple">
+			<name>shotgunFireDea</name><dpsMul>0.64</dpsMul>
+			<cnName>臣服·火龙</cnName><skillArr>toLand</skillArr>
+			<whippB>0</whippB>
+			<!--基本-->
+			<capacity>125</capacity><iconUrl>specialGun/shotgunFireIcon</iconUrl>
+			<attackGap>0.9</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>550</bulletWidth>
+			<bulletNum>8</bulletNum>				
+			<shootAngle>15</shootAngle>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.6</armsArmMul>
+			<upValue>14</upValue>
+			<shootShakeAngle>70</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bounceD body="2" hurtNumAdd="-1"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/shotgunRed_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0xFF0000" size="2" lightSize="6" blendMode="add"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/shotgunFire</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		<bullet color="blue">
+			<name>xm1014Red</name><cnName>铁手</cnName>
+			<dpsMul>0.77</dpsMul>
+			<iconUrl>newGun/xm1014Red_icon</iconUrl>
+			<capacity>285</capacity>
+			<attackGap>0.7</attackGap>
+			<bulletNum>10</bulletNum>
+			<shootAngle>40</shootAngle>
+			<reloadGap>1.2</reloadGap><bulletWidth>400</bulletWidth>					
+			<beatBack>2</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.6</armsArmMul><upValue>15</upValue><shootShakeAngle>70</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<shootSoundUrl>shotgun1/barrel3_sound</shootSoundUrl>
+			<bodyImgRange>newGun/xm1014Red</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		<bullet color="blue">
+			<name>xm1014Yellow</name><cnName>无情</cnName>
+			<dpsMul>0.67</dpsMul>
+			<iconUrl>newGun/xm1014Yellow_icon</iconUrl>
+			<capacity>285</capacity>
+			<bounceD floor="4"/>
+			
+			<attackGap>0.7</attackGap>
+			<bulletNum>8</bulletNum>
+			<shootAngle>20</shootAngle>
+			<reloadGap>1.2</reloadGap><bulletWidth>600</bulletWidth>					
+			<beatBack>2</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.6</armsArmMul><upValue>15</upValue><shootShakeAngle>70</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<shootSoundUrl>shotgun1/barrel3_sound</shootSoundUrl>
+			<bodyImgRange>newGun/xm1014Yellow</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	
+	<father type="shotgun" cnName="散弹枪">
+		<bullet>
+			<name>xm1014</name>
+			<cnName>冷血</cnName><dpsMul>0.7</dpsMul>
+			<iconUrl>newGun/xm1014_icon</iconUrl>
+			
+			<capacity>5</capacity>
+			<attackGap>0.7</attackGap>
+			<reloadGap>1.2</reloadGap>
+			<bulletWidth>600</bulletWidth>
+			<bulletNum>8</bulletNum>				
+			<shootAngle>22</shootAngle>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>15</upValue>
+			<shootShakeAngle>70</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>		
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!-- <smokeImgUrl>sub/missile_bullet_smoke</smokeImgUrl>--><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>shotgun1/barrel3_sound</shootSoundUrl>
+			<bodyImgRange>newGun/xm1014</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	
+	<father name="deathArms">
+		<skill cnName="爆沙"><!-- dps -->
+			<name>implodingDea</name><noRandomListB>1</noRandomListB>
+			<cnName>爆沙</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<effectProArr>0.2</effectProArr>
+			<mul>1</mul>
+			<extraValueType>nowArmsHurt</extraValueType><![CDATA[<extraValueType>nowArmsHurt</extraValueType>]]>
+			<!-- 子弹所需 -->
+			<obj>"name":"imploding_blackArmsSkill","site":"me","flipB":true</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg soundUrl="sound/imploding_enemy"></meEffectImg>
+			<description>击中目标后有[effectProArr.0]概率向前方爆裂出4条火花，轰炸前方所有目标，每条火花伤害为：武器面板单发伤害*增伤Buff。</description>
+		</skill>
+		
+		<skill name="背刺">
+			<name>backstabDea</name>
+			<cnName>背刺</cnName><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><condition>hit</condition><target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>backstabGod</effectType><effectFather>arms</effectFather><changeHurtB>1</changeHurtB>
+			<mul>1.6</mul>
+			<secMul>2.0</secMul>
+			<pointEffectImg name="purpleClawSmall"/>
+			<otherEffectImg name="purpleClaw"/>
+			<description>当你面朝着敌人背面时，对敌人可造成额外[mul-1]的伤害，如果敌人以你为攻击目标时，则该伤害则会提升至[secMul-1]。无视技能免疫。</description>
+		</skill>
+	</father>
+	
+	
+</data>

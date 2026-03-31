@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="enemy">
+		<body index="0" name="黑暗骑士" shell="compound">
+			
+			<name>BlackKnights</name>
+			<cnName>黑暗骑士</cnName><headIconUrl>IconGather/BlackKnights</headIconUrl>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/BlackKnights3591.swf</swfUrl>
+			<!-- 基本系数 -->
+			<rosRatio>99</rosRatio>
+			<lifeRatio>1.8</lifeRatio>
+			<rateRatio>0.05</rateRatio>
+			<headHurtMul>0.3</headHurtMul>
+			<showLevel>9999</showLevel>
+			<!-- 图像 -->
+			<dieJumpMul>0</dieJumpMul>
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move
+				,normalAttack,shootAttack
+				,twoAttack,laserAttack,walkAttack
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+				,die1
+			</imgArr>
+			<lifeBarExtraHeight>-280</lifeBarExtraHeight>
+			<handAddRa>90</handAddRa>
+			<!-- 碰撞体积 -->
+			<hitRect>-18,-96,36,96</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>7</maxVx>
+			<motionD jumpDelayT="0.19"/>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<preBulletArr>BlackKnights_2</preBulletArr>
+			<!-- 技能 -->
+			<bulletLauncherClass>VehicleBulletLauncher</bulletLauncherClass>
+			<skillArr>pierceBK,penDefence,noMetalCorrosion</skillArr>
+			<bossSkillArr>twoAttackBK,laserAttackBK,walkAttackBK,noUnderMulHurt,meltFlamerPurgold,cardNoAttackSkill,underHitBK,underBlackKnights,laserAttackBKSlow,BlackKnightsBuff,strong_enemy,noSpeedReduce,underToLand</bossSkillArr>
+			
+			<extraAIClassLabel>BlackKnights_AIExtra</extraAIClassLabel>
+			<!-- 掉落 -->
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<!-- 普通攻击1 -->
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><cn>重锤</cn>
+					<mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>4</hurtRatio>
+					<skillArr>hammer_knights</skillArr>
+					<attackType>holy</attackType>
+					<shakeValue>10</shakeValue>
+					<hitImgUrl name="yellowHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel><cn>拳炮</cn>
+					<bulletLabel>BlackKnights_1</bulletLabel>
+					<grapRect>-500,-100,250,150</grapRect>
+					<hurtRatio>2</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				<![CDATA[以下为大招]]>
+				<hurt>
+					<imgLabel>twoAttack</imgLabel><cn>无双拳</cn><noAiChooseB>1</noAiChooseB>
+					<grapRect>-500,-100,250,150</grapRect>
+					<hurtRatio>8</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				<hurt>
+					<imgLabel>laserAttack</imgLabel><cn>无疆激光</cn><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>3</hurtRatio>
+					<attackType>holy</attackType>
+					<shakeValue>10</shakeValue>
+					<hitImgUrl name="silverScreenBulletHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>walkAttack</imgLabel><cn>践踏</cn><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>4</hurtRatio><ingfollowB>1</ingfollowB>
+					<attackType>holy</attackType>
+					<shakeValue>10</shakeValue>
+					<hitImgUrl name="yellowHit"/>
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+		
+		
+		<bullet>
+			<name>BlackKnights_1</name>
+			<cnName>黑暗骑士-拳炮</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.35</attackGap>
+			<attackDelay>0.27</attackDelay>
+			<bulletAngle>157</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>2</shootNum>					
+			<shootAngle>20</shootAngle>
+			<shootGap>0.39</shootGap>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-106,-199</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<followD value="0.5"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="BlackKnightsBullet"/>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="boomSound/smallBoom"  shake="3,0.4,9" soundVolume="0.5">boomEffect/boom1</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		<bullet>
+			<name>BlackKnights_2</name>
+			<cnName>黑暗骑士-双拳炮</cnName><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>20</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<bulletAngle>-140</bulletAngle>	
+			
+			<bulletNum>3</bulletNum>								
+			<shootAngle>30</shootAngle>	
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<boomD selfB="1" hurtMul="0" noExcludeBodyB="1" haveBodyHitEffectB="1"/>
+			<bindingD cnName="空单位" lifeMul="0.005" skillArr="underBKBullet,penDefence,BoneBreakerHit" />
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-153,-394</shootPoint>
+			<bulletSpeed>15</bulletSpeed>
+			<speedD a="-5" min="7" max="15" random="0.4" />
+			<followD value="1" delay="0.3" maxTime="6" />	<!-- 跟踪 -->
+			<skillArr>summonShortLifeMax</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="BlackKnightsBulletTwo"/>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="boomSound/smallBoom"  shake="3,0.4,9" soundVolume="0.5">boomEffect/boom1</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="oreBombState"/>
+		</bullet>
+		
+	</father>
+	<father name="enemy">
+		<![CDATA[特别技能]]>
+		<skill><!-- dps -->
+			<name>pierceBK</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>英雄诅咒</cnName><noCopyB>1</noCopyB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>allHit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>pierceBK</effectType><effectFather>blackKnights</effectFather>
+			<description>攻击角色敌人时，使其无敌状态消失0.033秒。对不受伤害碰撞的敌人无效，对使用重生石后的无敌无效。</description>
+		</skill>
+		<skill><!-- dps -->
+			<name>penDefence</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>穿刺抵抗</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>penDefence</effectType><effectFather>blackKnights</effectFather>
+			<mul>0.35</mul>
+			<description>受到以下枪械的伤害降低[1-mul]：穿人个数或穿墙深度大于10。喷火器不受影响。</description>
+		</skill>
+		<skill><!-- dps -->
+			<name>penShield</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>穿刺盾</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>penDefence</effectType><effectFather>blackKnights</effectFather>
+			<mul>0.2</mul>
+			<description>受到以下枪械的伤害降低[1-mul]：穿人个数或穿墙深度大于10。喷火器不受影响。</description>
+		</skill>
+		<skill><!-- dps -->
+			<name>spurtingShield</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>溅射盾</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit</condition>
+			<otherConditionArr>hurtIsSpurting</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtAndMul</effectType>
+			<mul>0.1</mul>
+			<description>受到击中溅射的伤害降低[1-mul]。</description>
+		</skill>
+		<skill><!-- dps -->
+			<name>p1Defence</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>P1抵抗</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit</condition>
+			<otherConditionArr>hurtPuIsP1</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtAndMul</effectType>
+			<mul>0.3</mul>
+			<description>受到P1角色的伤害降低[1-mul]。</description>
+		</skill>
+		
+		<![CDATA[不显示技能]]>
+		<skill cnName="受到伤害"><!-- dps -->
+			<name>underBlackKnights</name>
+			<cnName>受到伤害</cnName><noCopyB>1</noCopyB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underHurtBefore</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>under</effectType><effectFather>blackKnights</effectFather>
+			<description>阶段生命值的设定。</description>
+		</skill>
+		<skill cnName="受到攻击"><!-- dps -->
+			<name>underHitBK</name>
+			<cnName>受到攻击</cnName><noCopyB>1</noCopyB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>underAllHit</effectType><effectFather>blackKnights</effectFather>
+			<pointEffectImg name="empNoSound"/><!-- 伤害消失特效 -->
+			<otherEffectImg name="laserWatchdogUnder_point"/><!--全域激光状态下，被击中头部的状态 -->
+			<description>各动作受到伤害的设定，包括头部敏感、载具敏感、无敌等。</description>
+		</skill>	
+		<skill><!-- dps -->
+			<name>BlackKnightsBuff</name><!-- 释放动作时不会被眩晕，头顶载具敏感显示 -->
+			<cnName>黑暗骑士Buff</cnName><noCopyB>1</noCopyB><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>buff</effectType><effectFather>blackKnights</effectFather>
+			<stateEffectImg name="BlackKnightsVehicleEffect"/><!-- 头顶载具敏感显示 -->
+			<otherEffectImg name="defendBeiDou_boom"/><!-- 死亡爆炸所需 -->
+			<pointEffectImg name="babyBoom_skull_hit"/><!-- 死亡爆炸所需 -->
+			<duration>99999999</duration>
+		</skill>
+		
+		<![CDATA[招式技能]]>
+		<skill>
+			<name>twoAttackBK</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>无双拳</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType>
+			<condition>no</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<!--图像 ------------------------------------------------------------ -->
+			<meActionLabel>twoAttack</meActionLabel>
+			<description>黑暗骑士进入无敌状态，使用双手发射无双拳导弹，敌人击破该导弹才能让黑暗骑士受到伤害。</description>
+		</skill>
+				<skill>
+					<name>underBKBullet</name><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+					<cnName>导弹-受到伤害</cnName><noCopyB>1</noCopyB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>die</condition>
+					<target>me</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>underBKBullet</effectType><effectFather>blackKnights</effectFather>
+					<otherEffectImg name="orangeLightning"/>
+					<pointEffectImg name="yellowHitSilence"/>
+					<description></description>
+				</skill>
+		<skill>
+			<name>laserAttackBK</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>全域激光</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType>
+			<condition>no</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<!--图像 ------------------------------------------------------------ -->
+			<meActionLabel>laserAttack</meActionLabel>
+			<otherEffectImg name="laserBlackLine"/>
+			<description>黑暗骑士进入无敌状态（除了头部），头顶持续发射旋转激光攻击敌人。</description>
+		</skill>
+					<skill>
+						<name>laserAttackBKSlow</name>
+						<cnName>全域激光减速</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+						<!--触发条件与目标------------------------------------------------------------ -->
+						<conditionType>passive</conditionType>
+						<condition>no</condition>
+						<target>target</target>
+						<!--效果------------------------------------------------------------ -->
+						<addType>state</addType>
+						<effectType>moveSpeedNoReduce</effectType>
+						<value>0</value>
+						<mul>0.1</mul>
+						<duration>0.2</duration>
+						<!--图像------------------------------------------------------------ -->
+						<stateEffectImg partType="2foot">skillEffect/disabled_enemy</stateEffectImg>
+						<description>击中目标后降低其[1-mul]的移动速度。</description>
+					</skill>
+		<skill>
+			<name>walkAttackBK</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>践踏</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType>
+			<condition>no</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<!--图像 ------------------------------------------------------------ -->
+			<meActionLabel>walkAttack</meActionLabel>
+			<description>黑暗骑士进入践踏状态，此时受到载具伤害提高3倍，其他伤害降低至5%。</description>
+		</skill>
+	</father>
+
+	
+</data>

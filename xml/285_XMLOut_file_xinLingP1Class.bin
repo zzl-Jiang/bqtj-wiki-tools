@@ -1,0 +1,1303 @@
+<data id="心零P1" cnName="心零P1" author="疯狂屠尸手">
+  <info>心零喜欢用黄金买东西，所以有很多重生石，关卡内死了可以重生9次</info>
+  <!--█████████████████████████████████-->
+  <!--██████████████分█界█线██████████████-->
+  <!--█████████████████████████████████-->
+  <father>
+    <gather>
+      <level name="心零寻找制毒师" cnName="心零寻找制毒师" descrip="心零听说霞光市的僵尸毒非常与众不同，以制毒师的性子肯定会来沃土镇">
+        <info enemyLv="25" modeDiy="death" firstLostB="1" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1"/>
+        <sceneLabel>WoTu</sceneLabel>
+        <unitG>
+          <allDefault aiOrder="patrolGlobal"/>
+          <unitOrder id="心零" camp="we">
+            <unit id="心零" cnName="心零" lifeMul="0.7" dpsMul="5" skillArr="饰演重生石,shootSpeed2,无限携弹量,jumpNumAdd1"/>
+          </unitOrder>
+		  <unitOrder id="制毒师" camp="we">
+						<unit cnName="制毒师" num="1" lifeMul="50"   dieGotoState="stru"/>
+					</unitOrder>
+		  <unitOrder id="enemy1">
+						<numberType>pro</numberType>
+						<unit cnName="肥胖僵尸" num="8" />
+						<unit cnName="战斗僵尸" num="8" />
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<numberType>pro</numberType>
+						<unit cnName="肥胖僵尸" num="3" />
+						<unit cnName="战斗僵尸" num="4" />
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<numberType>pro</numberType>
+						<unit cnName="肥胖僵尸" num="5" />
+						<unit cnName="战斗僵尸" num="5" />
+						<unit cnName="携弹僵尸" num="1" />
+					</unitOrder>
+					<unitOrder id="enemy4">
+						<unit cnName="战斗僵尸" num="1" unitType="boss" />
+						<unit cnName="战斗僵尸" num="1" unitType="boss" lifeMul="0.3"/>
+					</unitOrder>
+        </unitG>
+		<rectG>
+					<rect id="制毒师出生点">150,700,0,0</rect>
+				</rectG>
+        <eventG>
+          <group id="关卡进程">
+            <event>
+              <order>sceneScale:1</order>
+              <order>weAllHeroNoShoot</order>
+              <order>weAllHeroNoEquip</order><order>weAllHeroNoSkill</order>
+              <order>createUnit:心零; r2</order> <order>createUnit:制毒师; 制毒师出生点</order>
+              <order>heroEverParasitic:心零</order>
+            </event>
+			<event>
+              <order>openInput</order>
+			  <order>say;startList:开局</order>
+			  <order>body:制毒师; rangeLimit:close</order><order>body:制毒师; followPoint:-150,700</order>
+            </event>
+			<event>
+			<condition delay="3"/>
+			<order>body:制毒师; toDel</order>
+			</event>
+			<event>
+			  <condition>say:listOver</condition>
+			  <order>say;startList:出怪了</order>
+			  <order>createUnit:enemy1; r123</order>
+            </event>
+			<event>
+			<condition>liveEnemyNumber:less_1</condition>
+			<order>say;startList:打完一波直接跑</order>
+			<order>level; showPointer:r_over</order>
+			</event>
+						<event id="e2_2">
+							<condition doNumber="3">enemyNumber:less_1</condition>
+							<order>createUnit:enemy2; r123</order>
+						</event>
+						<event id="e2_4">
+							<condition doNumber="4" orderChooseType="randomOne">enemyNumber:less_1</condition>
+							<order>createUnit:enemy3; r123</order>
+						</event>
+						<event id="e2_4">
+							<condition doNumber="1" orderChooseType="randomOne">enemyNumber:less_5</condition>
+							<order>createUnit:enemy4; r123</order>
+						</event>
+          </group>
+		  <group id="被打死一次">
+            <event>
+              <condition>weNumber:greater_20</condition><!--P1和心零总计2个，如召唤了空单位即可多于20个-->
+			  <order>say;startList:被打死一次</order>
+            </event>
+          </group>
+          <group id="判断失败">
+            <event>
+              <condition>bodyEvent:die; 心零</condition>
+			  <order>say;startList:死了</order>
+            </event>
+            <event>
+              <condition delay="1.5"/>
+              <order>alert:yes; Vegetable</order>
+            </event>
+            <event>
+              <order>level; fail</order>
+            </event>
+          </group>
+        </eventG>
+      </level>
+    </gather>
+	<skill>
+			<name>无限携弹量</name>
+			<cnName>无限携弹量</cnName>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>addChargerMaxMul</effectType>
+			<mul>1e+7</mul><!--如果直接写Infinity，携弹量会变成0-->
+			<description>单位所有武器携弹量*[mul]（携弹量大于等于999999，就显示为∞）</description>
+		</skill>
+	 <skill>
+			<name>饰演重生石</name>
+			<cnName>饰演重生石</cnName><noCopyB>1</noCopyB>
+			<conditionType>passive</conditionType>
+			<condition>allDie</condition>
+			<otherConditionArr>rebirthNumLess</otherConditionArr>
+			<conditionRange>9</conditionRange>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>rebirth</effectType>
+			<linkArr>godHiding_things,饰演重生石的链接-召唤空单位</linkArr>
+			<mul>1</mul>
+			<meEffectImg soundUrl="sound/groupLight_hero" con="add">skillEffect/groupLight_hero</meEffectImg>
+			<description>单位死后重生，回复[mul]的生命值，并进入隐身无敌不受碰撞持续3秒，最多重生[conditionRange]次。</description>
+		</skill>
+		<skill>
+			<name>饰演重生石的链接-召唤空单位</name>
+			<cnName>饰演重生石的链接-召唤空单位</cnName>
+			<conditionType>passive</conditionType>
+			<target>me</target>
+			<addType>instant</addType>
+			<summonedUnitsB>1</summonedUnitsB>
+			<effectType>summonedUnits</effectType>
+			<obj>"cnName":"空单位","num":20,"camp":"we","lifeTime":0.01,"existB":false</obj><!--存在时间为0是永久存在，因此要直接没只能接近0-->
+			<description>触发饰演重生石的同时召唤[obj.num]个[obj.cnName]来触发条件weNumber:greater_20来进行下一步，[obj.lifeTime]秒后消失防止卡顿</description>
+		</skill>
+    <level name="心零寻找制毒师">
+      <sayList name="开局">
+        <say target="心零">
+          <content>我次奥，制毒师跑的真快！</content>
+        </say>
+		<say target="心零">
+          <content>刚刚还看到他往这里走，这一下就没影了</content>
+        </say>
+        <say target="心零">
+          <content>他怎么打得过这里的僵尸的？莫非是遇到高人相助？</content>
+        </say>
+		</sayList>
+		<sayList name="出怪了">
+		<say target="心零">
+          <content>哇啊，下一波僵尸这就来了，不过正好让我练练手！</content>
+        </say>
+      </sayList>
+	  <sayList name="打完一波直接跑">
+		<say target="心零">
+          <content>这把捡来的火炮太弱了，不打了。赶紧溜，换个地方找</content>
+        </say>
+      </sayList>
+	  <sayList name="被打死一次">
+		<say target="心零">
+          <content>真疼啊，还好我买了很多重生石</content>
+        </say>
+		<say target="心零">
+          <content>我就喜欢拿着黄金去买东西。</content>
+        </say>
+      </sayList>
+      <sayList name="死了">
+        <say target="心零">
+          <content>啊？重生次数用完了？</content>
+        </say>
+      </sayList>
+    </level>
+  </father>
+  <!--█████████████████████████████████-->
+  <!--██████████████分█界█线██████████████-->
+  <!--█████████████████████████████████-->
+    <father>
+    <gather>
+      <level name="心零寻找制毒师2" cnName="心零寻找制毒师2" descrip="心零换个地方找制毒师，逛到了北斗城">
+        <info enemyLv="25" modeDiy="death" firstLostB="1" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1"/>
+        <sceneLabel>BeiDou</sceneLabel>
+        <unitG>
+          <allDefault aiOrder="patrolGlobal"/>
+          <unitOrder id="心零" camp="we">
+            <unit id="心零" cnName="心零" lifeMul="0.7" dpsMul="5" skillArr="饰演重生石,shootSpeed2,无限携弹量,jumpNumAdd1"/>
+          </unitOrder>
+		  <unitOrder id="we2" camp="we">
+						<unit cnName="沙漠特种兵" warningRange="1e+7" dpsMul="25" num="1" noUnderHurtB="1" skillArr="shootSpeed2,掉落超能石"/>
+						<unit cnName="雇佣兵" warningRange="1e+7" lifeMul="25" dpsMul="25" num="4" aiOrder="followBodyAttack:沙漠特种兵" skillArr="shootSpeed2,crazy_enemy"/>
+					</unitOrder>
+					<!-- 敌方 -->
+					<unitOrder id="enemy1">
+					<default lifeMul="9"/>
+						<unit cnName="战斗僵尸" num="2" />
+						<unit cnName="无头自爆僵尸" num="0.5" />
+						<unit cnName="屠刀僵尸" num="2"/>
+						<unit cnName="携弹僵尸" num="2"/>
+						<unit cnName="僵尸狙击兵" num="0.3"/>
+						<unit cnName="僵尸暴枪兵" num="0.3"/>
+						<unit cnName="僵尸炮兵总管" num="0.3"/>
+					</unitOrder>
+					<unitOrder id="僵尸突击兵">
+						<unit cnName="僵尸突击兵" id="僵尸突击兵" num="1" lifeMul="15" unitType="boss" skillArr="birthRandomSpider,teleport_enemy"/>
+					</unitOrder>
+        </unitG>
+        <eventG>
+          <group id="关卡进程以及分支-一直划水">
+            <event>
+              <order>sceneScale:1</order>
+              <order>weAllHeroNoShoot</order>
+              <order>weAllHeroNoEquip</order><order>weAllHeroNoSkill</order>
+              <order>createUnit:心零; r1</order>
+              <order>heroEverParasitic:心零</order>
+            </event>
+			<event>
+              <order>openInput</order>
+			  </event>
+						<event>
+						<order>createUnit:we2; r1</order>
+						<order>say;startList:开局</order>
+						</event>
+						<event>
+							<condition doNumber="2" orderChooseType="randomOne">enemyNumber:less_2</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+							<order>createUnit:enemy1; r3</order>
+						</event>
+						<event><condition>enemyNumber:less_1</condition></event>
+						<event>
+							<condition doNumber="5" orderChooseType="randomOne">enemyNumber:less_4</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+							<order>createUnit:enemy1; r3</order>
+						</event>
+						<event><condition>enemyNumber:less_2</condition></event>
+						<event>
+							<condition doNumber="3" orderChooseType="randomOne">enemyNumber:less_6</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+							<order>createUnit:enemy1; r3</order>
+						</event>
+						<event>
+							<condition doNumber="1">enemyNumber:less_1</condition>
+							<order>createUnit:僵尸突击兵; r1</order><!--没敌人了，再出首领-->
+						</event>
+						<event>
+             			 <condition>enemyNumber:less_1</condition><!--首领死亡再检测-->
+         			   </event>
+						<event>
+							<condition>weNumber:less_15</condition><!--雇佣兵5个+p1和心零2个=7个，加上8个空单位为15个，击杀了8个视为不在划水-->
+							<order>say;startList:分支-一直划水</order>
+						</event>
+						<event>
+							<condition>say:listOver; 分支-一直划水</condition>
+							<order>say;startList:分支-一直划水2</order>
+						</event>
+						<event>
+							<order>level; showPointer:r_over</order>
+						</event>
+          </group>
+		    <group id="分支-作战">
+		  <event>
+              <condition>bodyEvent:die; 僵尸突击兵</condition><!--首领死亡-->
+			  <!--不知道为什么无法同时触发两个<condition>bodyEvent:die; 僵尸突击兵</condition>，因此一个是敌人少于1，另一个是僵尸突击兵死亡-->
+			  </event>
+			  <event>
+					<condition>weNumber:greater_14</condition><!--雇佣兵5个+p1和心零2个=7个，加上8个空单位为15个，击杀了8个视为不在划水-->
+					<order>say;startList:分支-作战</order>
+				</event>
+				<event>
+							<condition>say:listOver; 分支-作战</condition>
+						</event>
+						<event>
+							<order>level; showPointer:r_over</order>
+						</event>
+						<event>
+						<condition delay="2"/>
+						<order>say;startList:分支-作战2</order>
+						</event>
+          </group>
+		  <group id="沙漠特种兵给超能石">
+		  <event>
+              <condition>say:listOver; 开局</condition>
+			  </event>
+			  <event>
+			  <condition doNumber="50"/>
+			  <order>body:沙漠特种兵; doSkill:掉落超能石</order>
+            </event>
+          </group>
+		  <group id="心零拾获超能石">
+		  <event>
+              <condition doNumber="-1">hitDrop:p1; skillStoneTask</condition><!--为什么【hitDrop:】的后面只能是p1？-->
+			  <order>addNumber: 拾获超能石; 1</order>
+			  <order>tip:1; 拾获超能石[拾获超能石]/25个</order>
+			  </event>
+          </group>
+		  <group id="心零拾获超能石25个">
+		  <event>
+              <condition>number:greater_24; 拾获超能石</condition><!--24<25-->
+			  <order>body:心零; addSkillLock:弹鼻屎,tauntLing_10,击杀召唤空单位</order>
+			  <order>say;startList:学到技能</order>
+			  </event>
+          </group>
+		  <group id="被打死一次">
+		  <event>
+              <condition>number:greater_24; 拾获超能石</condition><!--整个见到北斗佣兵队说话捡超能石学习技能这个事件结束才解锁重生装逼功能-->
+			  </event>
+            <event>
+              <condition>weNumber:greater_20</condition><!--P1和心零总计2个，如重生召唤了空单位即可多于20个-->
+			  <order>say;startList:被打死一次</order>
+            </event>
+          </group>
+          <group id="判断失败">
+            <event>
+              <condition>bodyEvent:die; 心零</condition>
+			  <order>say;startList:死了</order>
+            </event>
+            <event>
+              <condition delay="1.5"/>
+              <order>alert:yes; Vegetable</order>
+            </event>
+            <event>
+              <order>level; fail</order>
+            </event>
+          </group>
+        </eventG>
+      </level>
+    </gather>
+	<skill><!--用于计杀敌数-->
+			<name>击杀召唤空单位</name><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>击杀召唤空单位</cnName><otherConditionArr>summonedNumLess</otherConditionArr><!--obj.maxNum不好使，这个就好使了，好神奇啊-->
+			<conditionType>passive</conditionType><conditionRange>8</conditionRange>
+			<condition>killTarget</condition>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>summonedUnits</effectType>
+			<summonedUnitsB>1</summonedUnitsB>
+			<obj>"cnName":"空单位","camp":"we","num":1,"existB":0,"lifeTime":0</obj>
+			<description>击杀后将召唤[obj.cnName]永久存在（上限[conditionRange]只）。用于计杀敌数，触发条件</description>
+		</skill>
+	<skill>
+			<name>掉落超能石</name>
+			<cnName>掉落超能石</cnName>
+			<conditionType>active</conditionType>
+			<cd>1e+9</cd><firstCd>1e+9</firstCd>
+			<continueNum>25</continueNum>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>theKunSkill</effectType><effectFather>vehicle</effectFather>
+			<valueString>skillStoneTask</valueString><!--反客的超能石-->
+			<description>掉落1个超能石；释放[continueNum]次以后进入冷却</description>
+		</skill>
+		<skill>
+			<name>弹鼻屎</name>
+			<cnName>弹鼻屎</cnName><iconUrl36>SkillIcon/imploding_pet_36</iconUrl36><!--尸宠爆石图标-->
+			<cd>4</cd><firstCd>1e+9</firstCd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>4000</conditionRange>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<extraValueType>nowArmsDpsOrNormal</extraValueType>
+			<mul>100</mul>
+			<obj>"name":"鼻屎","site":"me","flipB":true,"launcherB":true</obj>
+			<meEffectImg soundUrl="sound/imploding_enemy"/>
+			<description>释放出1颗鼻屎，贯穿敌人，并在地形间反弹，鼻屎的伤害为当前武器面板战斗力或单位基础伤害的[mul]，并带有技能击中溅射</description>
+		</skill>
+		<bullet><!--由爆沙改编-->
+			<name>鼻屎</name>
+			<cnName>鼻屎</cnName>
+			<hurtRatio>1</hurtRatio>
+			<shakeAngle>15</shakeAngle>
+			<bulletLife>4</bulletLife>
+			<bulletWidth>50</bulletWidth>
+			<hitType>rect</hitType>
+			<bulletAngle>190</bulletAngle>
+			<extendGap>25</extendGap>
+			<shootPoint>0,-60</shootPoint><noMagneticB>1</noMagneticB>
+			<bulletSpeed>35</bulletSpeed>
+			<gravity>0.4</gravity>
+			<bounceD floor="2147483647" vMul="0.8" noDieB="1"/>	<!-- 反弹 -->
+			<skillArr>Hit_Spurting_ArmsSkill</skillArr>
+			<bulletImgUrl con="filter" raNum="60">bullet/laserOrange</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/magicHit2">bulletHitEffect/energyYellow</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+    <level name="心零寻找制毒师2">
+      <sayList name="开局">
+        <say target="心零">
+          <content>你们在这里清理僵尸？带我一个吧！</content>
+        </say>
+		<say target="沙漠特种兵">
+          <content>小姑娘，你的武器看起来很弱，帮不上忙。</content>
+        </say>
+        <say target="心零">
+          <content>这都被你看出来了</content>
+        </say>
+		<say target="沙漠特种兵">
+          <content>我们也没有好武器给你，我给你点超能石，看看能不能弄出点技能吧。</content>
+        </say>
+		</sayList>
+		
+		<sayList name="学到技能">
+        <say target="心零">
+          <content>我好像学到了一些技能！</content>
+        </say>
+		<say target="沙漠特种兵">
+          <content>这么厉害，那来帮忙打僵尸吧。</content>
+        </say>
+        <say target="心零">
+          <content>好嘞！</content>
+        </say>
+		</sayList>
+		
+		<sayList name="分支-一直划水">
+        <say target="沙漠特种兵">
+          <content>你怎么一直在划水啊</content>
+        </say>
+		<say target="心零">
+          <content>哎呀，我只是有点懒。</content>
+        </say>
+        <say target="心零">
+          <content>我得把力气留在赶路上，再见啦！</content>
+        </say>
+		</sayList>
+		
+		<sayList name="分支-一直划水2">
+        <say target="沙漠特种兵">
+          <content>衮</content>
+        </say>
+		</sayList>
+		
+		<sayList name="分支-作战">
+        <say target="沙漠特种兵">
+          <content>多谢支援！请问阁下姓名？</content>
+        </say>
+		<say target="心零">
+          <content>我就是福建省霞浦县弹鼻屎之王心零！</content>
+        </say>
+        <say target="沙漠特种兵">
+          <content>王心凌您好，我很喜欢听您的歌曲！幸会幸会！</content>
+        </say>
+		<say target="心零">
+          <content>。。。。。。。。</content>
+        </say>
+		<say target="心零">
+          <content>好了我该继续找人了，拜拜</content>
+        </say>
+		</sayList>
+		
+		<sayList name="分支-作战2">
+		<say target="雇佣兵">
+          <content>等一下，她是不是其实叫心零啊？</content>
+        </say>
+        <say target="沙漠特种兵">
+          <content>什么？我清清楚楚听见她说王心凌，不会有错的。</content>
+        </say>
+		</sayList>
+
+	  <sayList name="被打死一次">
+		<say target="心零">
+          <content>真疼啊，还好我买了很多重生石</content>
+        </say>
+		<say target="心零">
+          <content>我就喜欢拿着黄金去买东西。</content>
+        </say>
+      </sayList>
+      <sayList name="死了">
+        <say target="心零">
+          <content>啊？重生次数用完了？</content>
+        </say>
+      </sayList>
+    </level>
+  </father>
+  <!--█████████████████████████████████-->
+  <!--██████████████分█界█线██████████████-->
+  <!--█████████████████████████████████-->
+  <father>
+  <gather>
+  <level name="心零找到制毒师" cnName="心零找到制毒师" descrip="心零在双塔村找到制毒师">
+				<info enemyLv="25" modeDiy="death" firstLostB="1" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1"/>
+				<sceneLabel>ShuangTa</sceneLabel>
+				<unitG>
+					<unitOrder id="制毒师" camp="we">
+						<unit id="制毒师" cnName="制毒师" num="1" aiOrder="patrolRandom"/>
+					</unitOrder>
+					<unitOrder id="心零" camp="we">
+            <unit id="心零" cnName="心零" lifeMul="0.7" dpsMul="5" skillArr="弹鼻屎,tauntLing_10,饰演重生石,shootSpeed2,无限携弹量,jumpNumAdd1"/>
+          </unitOrder>
+					<allDefault aiOrder="patrolGlobal"/>
+				</unitG>
+				<eventG>
+					<group>
+					<event>
+              <order>sceneScale:1</order>
+              <order>weAllHeroNoShoot</order>
+              <order>weAllHeroNoEquip</order><order>weAllHeroNoSkill</order>
+              <order>createUnit:心零; r1</order>
+              <order>heroEverParasitic:心零</order>
+			  <order>createUnit:制毒师; r2</order>
+            </event>
+			<event>
+              <order>openInput</order>
+			  </event>
+			  <event>
+              <condition>bodyGap:less_200; 心零:制毒师</condition>
+			  <order>body:制毒师; ai:noAndStop</order><!--乱逛→停下-->
+			  </event>
+			  <event>
+              <order>say;startList:见到制毒师对话</order>
+			  </event>
+			  <event>
+              <condition>say:listOver; 见到制毒师对话</condition>
+			  <order>level; showPointer:r_over</order>
+			  </event>
+			</group>
+          <group id="判断失败">
+            <event>
+              <condition>bodyEvent:die; 心零</condition>
+			  <order>say;startList:死了</order>
+            </event>
+            <event>
+              <condition delay="1.5"/>
+              <order>alert:yes; Vegetable</order>
+            </event>
+            <event>
+              <order>level; fail</order>
+            </event>
+          </group>
+				</eventG>
+			</level>
+			</gather>
+			<level name="心零找到制毒师">
+			<sayList name="见到制毒师对话">
+		<say target="心零">
+          <content>终于见到传说中的制毒师了！</content>
+        </say>
+		<say target="制毒师">
+          <content>有何贵干？</content>
+        </say>
+		<say target="心零">
+          <content>我想拜你为师！听说您研究过世界上所有毒物，我也想像你一样厉害！</content>
+        </say>
+		<say target="制毒师">
+          <content>拜我为师？让我想想</content>
+        </say>
+		<say target="制毒师">
+          <content>这样吧，你先去附近的幽灵谷收集点僵尸血液回来，我在这期间想想怎么教你。</content>
+        </say>
+		<say target="心零">
+          <content>你这是找借口把我支开吧？</content>
+        </say>
+		<say target="制毒师">
+          <content>不完全是。因为我真的要研究僵尸血液。</content>
+        </say>
+		<say target="心零">
+          <content>呜呜呜，你就忍心看着这样的弱女子去僵尸那儿送死？</content>
+        </say>
+		<say target="制毒师">
+          <content>你不弱。我早就在双塔村楼顶看到你在北斗城用超能石学习了新技能，应付个僵尸轻轻松松。</content>
+        </say>
+		<say target="制毒师">
+          <content>这儿被小白他们打下来，作为基地。到时候收集完僵尸血液回这来找我就行了。</content>
+        </say>
+		<say target="心零">
+          <content>都被你看穿了……好吧，我去看一看</content>
+        </say>
+      </sayList>
+      <sayList name="死了">
+        <say target="心零">
+          <content>啊？重生次数用完了？</content>
+        </say>
+      </sayList>
+    </level>
+			</father>
+  <!--█████████████████████████████████-->
+  <!--██████████████分█界█线██████████████-->
+  <!--█████████████████████████████████-->
+  <father>
+  <gather>
+  <level name="幽灵谷收集僵尸血液" cnName="幽灵谷收集僵尸血液" descrip="心零在幽灵谷收集僵尸血液，收集100个即可通关">
+				<info enemyLv="25" modeDiy="death" firstLostB="1" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1"/>
+				<sceneLabel>YouLing</sceneLabel>
+				<unitG>
+				<allDefault aiOrder="patrolGlobal"/>
+					<unitOrder id="心零" camp="we">
+            <unit id="心零" cnName="心零" lifeMul="0.7" dpsMul="5" skillArr="弹鼻屎,tauntLing_10,饰演重生石,shootSpeed2,无限携弹量,jumpNumAdd1"/>
+          </unitOrder>
+		  <!-- 敌方 -->
+					<unitOrder id="enemy1">
+						<unit cnName="鬼目游尸" num="6" skillArr="死后掉落血浆"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<unit cnName="冥刃游尸" num="6" skillArr="死后掉落血浆"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<unit cnName="鬼目射手" num="5" skillArr="死后掉落血浆"/>
+					</unitOrder>
+					<unitOrder id="enemy4">
+					<default skillArr="死后掉落血浆"/>
+						<unit cnName="鬼目游尸" num="3"/>
+						<unit cnName="冥刃游尸" num="3"/>
+						<unit cnName="鬼目射手" num="2"/>
+					</unitOrder>
+					<unitOrder id="enemy5">
+						<unit cnName="冥刃游尸" unitType="boss" skillArr="死后掉落血浆"/>
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group>
+					<event>
+              <order>sceneScale:1</order>
+              <order>weAllHeroNoShoot</order>
+              <order>weAllHeroNoEquip</order><order>weAllHeroNoSkill</order>
+              <order>createUnit:心零; r1</order>
+              <order>heroEverParasitic:心零</order>
+            </event>
+			<event>
+              <order>openInput</order>
+			  </event>
+			  <event>
+							<condition doNumber="3" >enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; r123</order>
+						</event>
+						<event>
+							<condition doNumber="3" >enemyNumber:less_2</condition>
+							<order>createUnit:enemy2; r123</order>
+						</event>
+						<event>
+							<condition doNumber="3" >enemyNumber:less_3</condition>
+							<order>createUnit:enemy3; r123</order>
+						</event>
+						<event>
+							<condition doNumber="3" >enemyNumber:less_2</condition>
+							<order>createUnit:enemy4; r123</order>
+						</event>
+						<event>
+							<condition doNumber="1" >enemyNumber:less_4</condition>
+							<order>createUnit:enemy5; r123</order>
+						</event>
+			</group>
+			 <group id="心零拾获血浆">
+		  <event>
+              <condition doNumber="-1">hitDrop:p1; plasma</condition><!--为什么【hitDrop:】的后面只能是p1？-->
+			  <order>addNumber: 拾获血浆; 1</order>
+			  <order>tip:1; 拾获血浆[拾获血浆]/100个</order>
+			  </event>
+          </group>
+		  <group id="提示心零拾获血浆">
+		  <event>
+              <condition doNumber="-1">number:less_1; 拾获血浆</condition>
+			  <order>tip:1; 击杀敌人以掉落血浆</order>
+			  </event>
+          </group>
+		  <group id="捡了5个">
+		  <event>
+              <condition>number:greater_4; 拾获血浆</condition>
+			  <order>say;startList:捡了5个</order>
+			  </event>
+          </group>
+		  <group id="捡完了">
+		  <event>
+              <condition>number:greater_99; 拾获血浆</condition>
+			  <order>level; showPointer:r_over</order>
+			  <order>say;startList:收工</order>
+			  </event>
+          </group>
+		  <group id="被打死一次">
+            <event>
+              <condition>weNumber:greater_20</condition><!--P1和心零总计2个，如召唤了空单位即可多于20个-->
+			  <order>say;startList:被打死一次</order>
+            </event>
+          </group>
+          <group id="判断失败">
+            <event>
+              <condition>bodyEvent:die; 心零</condition>
+			  <order>say;startList:死了</order>
+            </event>
+            <event>
+              <condition delay="1.5"/>
+              <order>alert:yes; Vegetable</order>
+            </event>
+            <event>
+              <order>level; fail</order>
+            </event>
+          </group>
+				</eventG>
+			</level>
+			</gather>
+			<skill>
+			<name>死后掉落血浆</name>
+			<cnName>死后掉落血浆</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType><condition>die</condition>
+			<target>me</target>
+			<addType>instant</addType><effectProArr>0.5,0.4,0.1</effectProArr>
+			<effectType>theKunSkill</effectType><effectFather>vehicle</effectFather>
+			<valueString>plasma</valueString><!--肉鸽的血浆-->
+			<description>死后有[effectProArr.0]的概率掉落1个血浆，[effectProArr.1]的概率掉落2个，[effectProArr.2]的概率掉落3个</description>
+		</skill>
+			<level name="幽灵谷收集僵尸血液">
+			<sayList name="捡了5个">
+		<say target="心零">
+          <content>这儿的僵尸没有下半身，而且会飞，好神奇</content>
+        </say>
+      </sayList>
+			<sayList name="收工">
+		<say target="心零">
+          <content>差不多了，收工！</content>
+        </say>
+      </sayList>
+			<sayList name="被打死一次">
+		<say target="心零">
+          <content>真疼啊，还好我买了很多重生石</content>
+        </say>
+		<say target="心零">
+          <content>我就喜欢拿着黄金去买东西。</content>
+        </say>
+      </sayList>
+      <sayList name="死了">
+        <say target="心零">
+          <content>啊？重生次数用完了？</content>
+        </say>
+      </sayList>
+    </level>
+			</father>
+  <!--█████████████████████████████████-->
+  <!--██████████████分█界█线██████████████-->
+  <!--█████████████████████████████████-->
+			<father>
+			<gather>
+				  <level name="回双塔村交差" cnName="回双塔村交差" descrip="心零在幽灵谷收集了一些僵尸血液，回到双塔村交差，可是好像来晚了">
+				<info enemyLv="25" modeDiy="death" firstLostB="1" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1"/>
+				<sceneLabel>ShuangTa</sceneLabel>
+				<unitG>
+				<allDefault aiOrder="patrolGlobal"/>
+					<unitOrder id="心零" camp="we">
+            <unit id="心零" cnName="心零" lifeMul="0.7" dpsMul="5" skillArr="弹鼻屎,tauntLing_10,饰演重生石,shootSpeed2,无限携弹量,jumpNumAdd1"/>
+          </unitOrder>
+		  <!-- 敌方 -->
+					<unitOrder id="enemy1">
+						<numberType>pro</numberType>
+						<default skillArr="死后掉落武器" lifeMul="9"/>
+						<unit cnName="鬼目游尸" num="1"/>
+						<unit cnName="冥刃游尸" num="1"/>
+						<unit cnName="屠刀僵尸" num="1"/>
+						<unit cnName="无头自爆僵尸" num="1"/>
+						<unit cnName="僵尸空降兵" num="0.3"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+					<default skillArr="死后掉落武器" lifeMul="9"/>
+						<unit cnName="冥刃游尸" num="1"/>
+						<unit cnName="屠刀僵尸" num="1"/>
+						<unit cnName="僵尸空降兵" num="1"/>
+						<unit cnName="鬼目射手" num="1" unitType="boss" />
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group>
+					<event>
+              <order>sceneScale:1</order>
+              <order>weAllHeroNoShoot</order>
+              <order>weAllHeroNoEquip</order><order>weAllHeroNoSkill</order>
+              <order>createUnit:心零; r1</order>
+              <order>heroEverParasitic:心零</order>
+			  <order>level; enemyNormalMul:10</order><!--35级主线制毒师说过【数量10倍于之前的僵尸大军即将来袭】-->
+            </event>
+			<event>
+              <order>openInput</order>
+			  </event>
+			   <event id="e1_1">
+							<order>createUnit:enemy1; r2</order>
+						</event>
+			  <event>
+							<order>say;startList:感叹</order>
+						</event>
+			 <event id="e1_1">
+							<condition doNumber="2" orderChooseType="randomOne">enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+							<order>createUnit:enemy1; r3</order>
+							<order>createUnit:enemy1; r4</order>
+						</event>
+						<event id="e1_1">
+							<condition doNumber="4" orderChooseType="randomOne">enemyNumber:less_2</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+							<order>createUnit:enemy1; r3</order>
+							<order>createUnit:enemy1; r4</order>
+						</event>
+						<event id="e1_1">
+							<condition doNumber="5" orderChooseType="randomOne">enemyNumber:less_3</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+							<order>createUnit:enemy1; r3</order>
+							<order>createUnit:enemy1; r4</order>
+						</event>
+						<event id="e1_1">
+							<condition orderChooseType="randomOne">enemyNumber:less_1</condition>
+							<order>createUnit:enemy2; r1</order>
+							<order>createUnit:enemy2; r2</order>
+							<order>createUnit:enemy2; r3</order>
+							<order>createUnit:enemy2; r4</order>
+						</event>
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>say;startList:满载而归</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>level; showPointer:r_over</order>
+						</event>
+			</group>
+			 <group id="心零拾获武器">
+		  <event>
+              <condition doNumber="-1" orderChooseType="randomOne">hitDrop:p1; 武器</condition><!--为什么【hitDrop:】的后面只能是p1？-->
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>tip:1; 心零觉得这把枪太垃圾了，直接拆解</order>
+			  <order>body:心零; onlyNewArms:akGreen</order>
+			  <order>body:心零; onlyNewArms:mambaGreen</order>
+			  <order>body:心零; onlyNewArms:rocketDeath</order>
+			  <order>body:心零; onlyNewArms:bounceRocketDea</order>
+			  <order>body:心零; onlyNewArms:rocketSkyDea</order>
+			  <order>body:心零; onlyNewArms:sunDeath</order>
+			  <order>body:心零; onlyNewArms:sandStormDea</order>
+			  <order>body:心零; onlyNewArms:rifleYellow</order>
+			  <order>body:心零; onlyNewArms:awpYellow</order>
+			  <order>body:心零; onlyNewArms:shotgunTyran</order>
+			  <order>body:心零; onlyNewArms:pistolRed</order>
+			  <order>body:心零; onlyNewArms:pistolSange</order>
+			  </event>
+          </group>
+		  <group id="被打死一次">
+		  <event>
+		  <condition>say:listOver; 感叹</condition>
+		  </event>
+            <event>
+              <condition>weNumber:greater_20</condition><!--P1和心零总计2个，如召唤了空单位即可多于20个-->
+			  <order>say;startList:被打死一次</order>
+            </event>
+          </group>
+          <group id="判断失败">
+            <event>
+              <condition>bodyEvent:die; 心零</condition>
+			  <order>say;startList:死了</order>
+            </event>
+            <event>
+              <condition delay="1.5"/>
+              <order>alert:yes; Vegetable</order>
+            </event>
+            <event>
+              <order>level; fail</order>
+            </event>
+          </group>
+				</eventG>
+			</level>
+			</gather>
+			<skill>
+			<name>死后掉落武器</name>
+			<cnName>死后掉落武器</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType><condition>die</condition>
+			<target>me</target>
+			<addType>instant</addType><effectProArr>0.08</effectProArr>
+			<effectType>theKunSkill</effectType><effectFather>vehicle</effectFather>
+			<valueString>武器</valueString>
+			<description>死后有[effectProArr.0]的概率掉落1个武器</description>
+		</skill>
+
+			<level name="回双塔村交差">
+			<sayList name="感叹">
+		<say target="心零">
+          <content>看来是被打了都跑路了，这僵尸日新月异的，一点点地形优势怎么难得住它们？</content>
+        </say>
+		<say target="心零">
+          <content>不过这么多僵尸身上说不定有更好的武器，我得跟它们借点儿。</content>
+        </say>
+      </sayList>
+	  <sayList name="满载而归">
+	  <say target="心零">
+          <content>真是满载而归！待会挑点好的继续上路找制毒师</content>
+        </say>
+      </sayList>
+			<sayList name="被打死一次">
+		<say target="心零">
+          <content>真疼啊，还好我买了很多重生石</content>
+        </say>
+		<say target="心零">
+          <content>我就喜欢拿着黄金去买东西。</content>
+        </say>
+      </sayList>
+      <sayList name="死了">
+        <say target="心零">
+          <content>啊？重生次数用完了？</content>
+        </say>
+      </sayList>
+    </level>
+	</father>
+	  <father type="effect"><!--开发者关卡中，必须type="effect"才能捡-->
+    <drop>
+			<name>武器</name>
+			<cnName>武器</cnName>
+			<text>获得武器</text>
+			<imgUrl>dropEffect/arms</imgUrl>
+		</drop>
+  </father>
+  <!--█████████████████████████████████-->
+  <!--██████████████分█界█线██████████████-->
+  <!--█████████████████████████████████-->
+  <father>
+  <gather>
+  <level name="南唐城" cnName="南唐城" descrip="心零继续找制毒师，逛到了南唐城">
+				<info enemyLv="25" modeDiy="death" firstLostB="1" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1"/>
+				<sceneLabel>NanTang</sceneLabel>
+				<unitG>
+					<unitOrder id="小樱" camp="we">
+						<unit cnName="小樱" lifeMul="8" dpsMul="9" warningRange="1e+7" skillArr="shootSpeed2" dieGotoState="stru" />
+					</unitOrder>
+					<unitOrder id="心零" camp="we">
+            <unit id="心零" cnName="心零" lifeMul="0.7" dpsMul="5" skillArr="弹鼻屎,tauntLing_10,饰演重生石,shootSpeed2,无限携弹量,jumpNumAdd1"/>
+          </unitOrder>
+					<allDefault aiOrder="patrolGlobal"/>
+					<!-- 敌方 -->
+					<unitOrder id="enemy1"><default lifeMul="25" skillArr="死后掉落超能石"/>
+						<unit cnName="携弹僵尸" num="4" />
+						<unit cnName="橄榄僵尸" num="4"/>
+						<unit cnName="无头自爆僵尸" num="4"/>
+						<unit cnName="僵尸突击兵" num="0.3"/>
+						<unit cnName="僵尸狙击兵" num="0.3"/>
+						<unit cnName="僵尸暴枪兵" num="0.3"/>
+						<unit cnName="僵尸空军总管" num="0.5"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<unit cnName="火炮僵尸王" num="1"  lifeMul="80" unitType="boss"/>
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group id="关卡进程">
+						<event>
+							<order>createUnit:小樱; r3</order>
+							<order>sceneScale:1</order>
+              <order>weAllHeroNoShoot</order>
+              <order>weAllHeroNoEquip</order><order>weAllHeroNoSkill</order>
+              <order>createUnit:心零; r_birth</order>
+              <order>heroEverParasitic:心零</order><order>body:心零; onlyNewArms:akGreen,rocketDeath,shotgunTyran,pistolRed</order>
+						</event>
+						<event>
+						<order>openInput</order>
+						</event>
+						<event>
+							<condition doNumber="4" orderChooseType="randomOne">enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+						</event>
+						<event><condition delay="0.01">enemyNumber:less_1</condition></event>
+						<event>
+							<condition doNumber="3" orderChooseType="randomOne">enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+						</event>
+						<event><condition delay="0.01">enemyNumber:less_1</condition></event>
+						<event>
+							<condition doNumber="2" orderChooseType="randomOne">enemyNumber:less_3</condition>
+							<order>createUnit:enemy1; r1</order>
+							<order>createUnit:enemy1; r2</order>
+						</event>
+						<event>
+							<condition orderChooseType="randomOne">enemyNumber:less_1</condition>
+							<order>createUnit:enemy3; r1</order>
+							<order>createUnit:enemy3; r2</order>
+						</event>
+					</group>
+					<group id="对话和判断通关">
+					<event>
+					<condition>bodyGap:less_300; 心零:小樱</condition>
+					<order>say;startList:和小樱对话</order>
+					</event>
+					<event>
+					<condition>say:listOver;和小樱对话</condition>
+					<order>body:小樱; onlyNewArms:mambaGreen</order>
+					<order>say;startList:把枪给了小樱</order>
+					</event>
+					<event>
+							<condition>bodyEvent:die;火炮僵尸王</condition>
+							<order>say;startList:问制毒师去向</order>
+							</event>
+							<event>
+							<condition>say:listOver;问制毒师去向</condition>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+					<group>
+						<!-- 小樱死亡 任务失败 -->
+						<event>
+							<condition delay="0.5">bodyEvent:die; 小樱</condition>
+							<order>alert:yes; 小樱已倒下，任务失败！</order>
+						</event>
+						<event>
+							<condition delay="0.3"></condition>
+							<order>level; fail</order>
+						</event>
+					</group>
+					<group id="被打死一次">
+		  <event>
+		  <condition>say:listOver; 把枪给了小樱</condition>
+		  </event>
+            <event>
+              <condition>weNumber:greater_20</condition><!--P1和心零总计2个，如召唤了空单位即可多于20个-->
+			  <order>say;startList:被打死一次</order>
+            </event>
+          </group>
+          <group id="判断失败">
+            <event>
+              <condition>bodyEvent:die; 心零</condition>
+			  <order>say;startList:死了</order>
+            </event>
+            <event>
+              <condition delay="1.5"/>
+              <order>alert:yes; Vegetable</order>
+            </event>
+            <event>
+              <order>level; fail</order>
+            </event>
+          </group>
+		  <group id="心零拾获超能石">
+		  <event>
+              <condition doNumber="-1">hitDrop:p1; skillStoneTask</condition><!--为什么【hitDrop:】的后面只能是p1？-->
+			  <order>addNumber: 拾获超能石; 1</order>
+			  <order>tip:1; 拾获超能石[拾获超能石]/30个</order>
+			  </event>
+          </group>
+		  <group id="心零拾获超能石30个">
+		  <event>
+              <condition>number:greater_29; 拾获超能石</condition>
+			  <order>body:心零; addSkillLock:coquettish_hero_14,trueshot_enemy,摧残</order>
+			  </event>
+          </group>
+				</eventG>
+  </level>
+  </gather>
+  <skill>
+			<name>死后掉落超能石</name>
+			<cnName>死后掉落超能石</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType><condition>die</condition>
+			<target>me</target>
+			<addType>instant</addType><effectProArr>0.4</effectProArr>
+			<effectType>theKunSkill</effectType><effectFather>vehicle</effectFather>
+			<valueString>skillStoneTask</valueString><!--反客的超能石-->
+			<description>死后有[effectProArr.0]的概率掉落1个超能石</description>
+		</skill>
+		<skill>
+			<name>摧残</name>
+			<cnName>摧残</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<addType>instant</addType>
+			<effectType>changeHurt</effectType>
+			<mul>0.1</mul>
+			<secMul>2</secMul>
+			<obj>"type":"accurate","exceptSkillB":true</obj>
+			<meEffectImg></meEffectImg>
+			<targetEffectImg></targetEffectImg>
+			<description>提升打身体[secMul]的伤害值。提升爆头[mul]的伤害值，无视技能免疫和免疫</description>
+		</skill>
+			<level name="南唐城">
+			<sayList name="和小樱对话">
+		<say target="心零">
+          <content>喔，这么可爱的小姐姐，在这里做什么呀</content>
+        </say>
+		<say target="小樱">
+          <content>我在找超能矿石呢，有了超能石，我就能学习超能力，变得强大了！</content>
+        </say>
+		<say target="心零">
+          <content>这儿有超能石啊，这么好，我也来找找看</content>
+        </say>
+		<say target="心零">
+          <content>不过你的枪太烂了，怎么找得过僵尸呢？我刚好有多余的，给你一把用。</content>
+        </say>
+      </sayList>
+	  <sayList name="把枪给了小樱">
+	  <say target="心零">
+          <content>送你的，不用还了</content>
+        </say>
+		<say target="小樱">
+          <content>谢谢你！</content>
+        </say>
+      </sayList>
+	  <sayList name="问制毒师去向">
+		<say target="心零">
+          <content>对了，你有没有见过制毒师？</content>
+        </say>
+		<say target="小樱">
+          <content>见过呀，他是个热心肠的好人呢。前几天，他来这找我，说他现在有好多好多的神能石。</content>
+        </say>
+		<say target="小樱">
+          <content>我只要找到足够的超能石，就可以跟他交换同等数量的神能石，他说整个霞光市只有我有这个特权哦。</content>
+        </say>
+		<say target="心零">
+          <content>听着就像把你引到这里来打僵尸</content>
+        </say>
+		<say target="心零">
+          <content>他去哪了呢？</content>
+        </say>
+		<say target="小樱">
+          <content>记不清了，我只记得后来他接了个电话，然后就急匆匆往北边赶去了。</content>
+        </say>
+		<say target="心零">
+          <content>电话，哦不，我在拜师的时候竟然没要他的电话，后悔莫及啊</content>
+        </say>
+		<say target="心零">
+          <content>我得继续找他去，拜拜！</content>
+        </say>
+      </sayList>
+			<sayList name="被打死一次">
+		<say target="心零">
+          <content>真疼啊，还好我买了很多重生石</content>
+        </say>
+		<say target="心零">
+          <content>我就喜欢拿着黄金去买东西。</content>
+        </say>
+      </sayList>
+      <sayList name="死了">
+        <say target="心零">
+          <content>啊？重生次数用完了？</content>
+        </say>
+      </sayList>
+    </level>
+  </father>
+  <!--█████████████████████████████████-->
+  <!--██████████████分█界█线██████████████-->
+  <!--█████████████████████████████████-->
+  <father>
+  <gather>
+  <level name="心零向北到达清明岭" cnName="心零向北到达清明岭" descrip="随着小樱的指引，心零向北走到了清明岭">
+				<info enemyLv="25" modeDiy="death" firstLostB="1" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1"/>
+				<sceneLabel>QingMing</sceneLabel>
+				<unitG>
+					<unitOrder id="心零" camp="we">
+            <unit id="心零" cnName="心零" lifeMul="0.7" dpsMul="5" skillArr="弹鼻屎,tauntLing_10,coquettish_hero_14,trueshot_enemy,摧残,饰演重生石,shootSpeed2,无限携弹量,jumpNumAdd1"/>
+          </unitOrder>
+					<allDefault aiOrder="patrolGlobal"/>
+					<!-- 敌方 -->
+					<unitOrder id="enemy1"><default lifeMul="14"/>
+						<unit cnName="无头自爆僵尸" num="3" />
+						<unit cnName="屠刀僵尸" num="3" />
+						<unit cnName="橄榄僵尸" num="3" />
+						<unit cnName="僵尸空降兵" num="1"/>
+						<unit cnName="僵尸狙击兵" num="0.3"/>
+						<unit cnName="僵尸暴枪兵" num="0.3"/>
+						<unit cnName="僵尸空军总管" num="1"/>
+					</unitOrder>
+					<unitOrder id="亚瑟" camp="we">
+						<unit cnName="亚瑟" warningRange="1e+7" lifeMul="50" unitType="boss" dieGotoState="stru"/>
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group id="关卡进程">
+					<event>
+							<order>createUnit:亚瑟; r3</order>
+							<order>sceneScale:1</order>
+              <order>weAllHeroNoShoot</order>
+              <order>weAllHeroNoEquip</order><order>weAllHeroNoSkill</order>
+              <order>createUnit:心零; r_birth</order>
+              <order>heroEverParasitic:心零</order><order>body:心零; onlyNewArms:akGreen,rocketDeath,shotgunTyran,pistolRed</order>
+						</event>
+						<event>
+						<order>openInput</order>
+						</event>
+						<event>
+						<condition>bodyGap:less_300; 心零:亚瑟</condition>
+						<order>say;startList:开局和亚瑟对话</order>
+						</event>
+						<event>
+						<condition>say:listOver; 开局和亚瑟对话</condition>
+						<order>say;startList:亚瑟出兵</order>
+						</event>
+						<event>
+							<condition delay="0.5" />
+							<order>body:亚瑟; changeCamp:enemy</order>
+						</event>
+						<event>
+							<condition doNumber="14" />
+							<order>createUnit:enemy1; r123</order>
+						</event>
+						<event>
+							<condition>liveEnemyNumber:less_1</condition>
+							<order>say;startList:打完亚瑟</order>
+							</event>
+							<event>
+							<condition>say:listOver; 打完亚瑟</condition>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+										<group id="被打死一次">
+            <event>
+              <condition>weNumber:greater_20</condition><!--P1和心零总计2个，如召唤了空单位即可多于20个-->
+			  <order>say;startList:被打死一次</order>
+            </event>
+          </group>
+          <group id="判断失败">
+            <event>
+              <condition>bodyEvent:die; 心零</condition>
+			  <order>say;startList:死了</order>
+            </event>
+            <event>
+              <condition delay="1.5"/>
+              <order>alert:yes; Vegetable</order>
+            </event>
+            <event>
+              <order>level; fail</order>
+            </event>
+          </group>
+				</eventG>
+			</level>
+  </gather>
+  <level name="心零向北到达清明岭">
+			<sayList name="开局和亚瑟对话">
+		<say target="心零">
+          <content>哇哦，居然在这里碰到了天鹰军团的总司令：亚瑟</content>
+        </say>
+		<say target="心零">
+          <content>的克隆体！</content>
+        </say>
+		<say target="亚瑟">
+          <content>……</content>
+        </say>
+		<say target="心零">
+          <content>咿？不说点什么吗？</content>
+        </say>
+		<say target="亚瑟">
+          <content>你是干什么的，没事速速退去</content>
+        </say>
+		<say target="心零">
+          <content>我要找制毒师，我有急事要找他，您知道制毒师在哪吗？</content>
+        </say>
+      </sayList>
+	  <sayList name="亚瑟出兵">
+	  <say target="亚瑟">
+          <content>找制毒师？准没好事！全体听令进攻！</content>
+        </say>
+      </sayList>
+	  <sayList name="打完亚瑟">
+		<say target="心零">
+          <content>太粗暴了吧，不由分说就开打..</content>
+        </say>
+		<say target="心零">
+          <content>让我猜猜，你们打下双塔村的时候，跟你们作对这么久的制毒师直接倒戈加入了天鹰？</content>
+        </say>
+		<say target="亚瑟">
+          <content>……</content>
+        </say>
+		<say target="心零">
+          <content>看你这脸色，我好像猜对了</content>
+        </say>
+		<say target="心零">
+          <content>所以你听说我要找制毒师才会攻击我，怕我对天鹰为非作歹？</content>
+        </say>
+		<say target="心零">
+          <content>您放心吧，我只是想要学点技术。</content>
+        </say>
+		<say target="心零">
+          <content>话说回来，您有没有制毒师的电话或者别的联系方式呢？</content>
+        </say>
+		<say target="亚瑟">
+          <content>……</content>
+        </say>
+		<say target="心零">
+          <content>算了，那您入土为安吧。</content>
+        </say>
+      </sayList>
+			<sayList name="被打死一次">
+		<say target="心零">
+          <content>真疼啊，还好我买了很多重生石</content>
+        </say>
+		<say target="心零">
+          <content>我就喜欢拿着黄金去买东西。</content>
+        </say>
+      </sayList>
+      <sayList name="死了">
+        <say target="心零">
+          <content>啊？重生次数用完了？</content>
+        </say>
+      </sayList>
+    </level>
+  </father>
+</data>

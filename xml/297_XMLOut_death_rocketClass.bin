@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="rocket" cnName="火炮-紫色">
+		<bullet cnName="丑牛"  kind="poison" color="purple">
+			<name>yearCattleDea</name>
+			<cnName>滞毒·丑牛</cnName><dpsMul>0.58</dpsMul>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>166</capacity><skillArr>stopPosionDea</skillArr>
+			<attackGap>0.6</attackGap><iconUrl>specialGun/yearCattleIcon</iconUrl>
+			<reloadGap>1.5</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>10</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>2</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>35</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl con="add" raNum="1">specialGun/yearCattleBullet</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="HugePoison/shoot_hit">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/poisonClaw_enemy</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/yearCattleSound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearCattle</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			
+		</bullet>
+		
+		<bullet color="purple">
+			<name>bounceRocketDea</name>
+			<cnName>递归</cnName><iconUrl>newGun/bounceRocketDea_icon</iconUrl>
+			<dpsMul>0.5</dpsMul>
+			<hitType>rect</hitType>
+			<!--基本-->
+			<capacity>100</capacity>
+			<attackGap>1</attackGap>
+			<bulletNum>1</bulletNum>
+			<shakeAngle>5</shakeAngle>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>30</bulletWidth>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>8</bulletLife>
+			<bulletSpeed>40</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<bounceD floor="20"/>
+			<penetrationNum>9999</penetrationNum>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rocketHummer_sound</shootSoundUrl>
+			<bulletImgUrl name="rocket1_bullet"/>
+			<hitImgUrl name="midCircleQuietly"/><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl name="gun_hit"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="missleSmokeSm"/><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgUrl name="gunFireRocket"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/bounceRocketDea</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info></info>
+		</bullet>
+		
+		<bullet color="purple">
+			<name>rocketSkyS</name>
+			<cnName>苍穹S</cnName><iconUrl>newGun/rocketSkyS_icon</iconUrl>
+			<dpsMul>0.66</dpsMul>
+			<hitType>rect</hitType><sightMul>1.5</sightMul>
+			<!--基本-->
+			<capacity>66</capacity><skillArr>throughWallHurt</skillArr>
+			<attackGap>1.5</attackGap>
+			<bulletNum>1</bulletNum>
+			<shakeAngle>5</shakeAngle>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>20</bulletWidth>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>3</bulletLife>
+			<bulletSpeed>20</bulletSpeed>
+			<speedD max="20" min="10" a="-40"/>
+			<!--特殊------------------------------------------------------------ -->
+			<bulletSkillArr>followToMouseLAST</bulletSkillArr><!-- pointerMissileNoDieLAST -->
+			<followD value="2" delay="0.3" />
+			<boomD selfB="1" bodyB="1" radius="200" />
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rocketHummer_sound</shootSoundUrl>
+			<bulletImgUrl name="rocket1_bullet"/>
+			<hitImgUrl name="midSpaceQuietly"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="rocketSmokeSm"/><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgUrl name="gunFireRocket"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/rocketSkyS</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>子弹射出0.3秒后将持续跟踪鼠标点。</info>
+		</bullet>
+		<bullet color="purple">
+			<name>rocketSkyDea</name>
+			<cnName>苍穹</cnName><iconUrl>newGun/rocketSky_icon</iconUrl>
+			<dpsMul>0.71</dpsMul>
+			<hitType>rect</hitType><sightMul>1.5</sightMul>
+			<!--基本-->
+			<capacity>66</capacity>
+			<attackGap>1.5</attackGap>
+			<bulletNum>1</bulletNum>
+			<shakeAngle>5</shakeAngle>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>20</bulletWidth>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>3</bulletLife>
+			<bulletSpeed>20</bulletSpeed>
+			<speedD max="20" min="10" a="-40"/>
+			<!--特殊------------------------------------------------------------ -->
+			<bulletSkillArr>followToMouseLAST</bulletSkillArr><!-- pointerMissileNoDieLAST -->
+			<followD value="2" delay="0.3" />
+			<boomD selfB="1" bodyB="1" radius="200" />
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rocketHummer_sound</shootSoundUrl>
+			<bulletImgUrl name="rocket1_bullet"/>
+			<hitImgUrl name="midSpaceQuietly"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="rocketSmokeSm"/><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgUrl name="gunFireRocket"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/rocketSky</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>子弹射出0.3秒后将持续跟踪鼠标点。</info>
+		</bullet>
+		<bullet color="purple">
+			<name>roamDea</name>
+			<cnName>漫步</cnName>
+			<dpsMul>0.58</dpsMul><iconUrl>newGun/roamDea_icon</iconUrl>
+			
+			<aiShootRange>600</aiShootRange><!-- ai射程 -->
+			<capacity>285</capacity>
+			<attackGap>0.7</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>5</shakeAngle>
+			<bulletWidth>20</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>3</shootAngle>				
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>10</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>15</bulletLife>
+			<hitType>rect</hitType>
+			
+			<skillArr>Hit_SlowMove_ArmsSkill</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<penetrationGap>0</penetrationGap>
+			<bulletSpeed>3</bulletSpeed>
+			<speedD random="0.1" max="10" min="1" a="-1" />
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  bodyB="1" radius="130"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl name="rocket1_bullet"/>
+			<hitImgUrl name="midSpace"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl>
+			<!-- 子弹尾烟效果（默认为空） -->
+			<fireImgUrl name="gunFireRocket"/>
+			<shootSoundUrl>specialGun/roamRocketSound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/roamRocket</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>子弹的移动速度很低，且存在时间长。</info>
+		</bullet>
+		
+		<bullet color="purple">
+			<name>rocketCateDea</name>
+			<cnName>追魂巨炮</cnName><iconUrl>ThingsIcon/rocketCate</iconUrl>
+			<dpsMul>0.45</dpsMul>
+			<!--基本-->
+			<capacity>285</capacity>
+			<attackGap>0.7</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletNum>6</bulletNum>
+			<shootAngle>15</shootAngle>
+			<extendGap>20</extendGap>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul><upValue>5</upValue><shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil><screenShakeValue>16</screenShakeValue>
+			
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>1.6</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>35</bulletSpeed>
+			<speedD min="15" a="-20"/>
+			<followD delay="0.2" value="2"/>
+			<bulletImgUrl raNum="30">bullet/gaiaBullet</bulletImgUrl>
+			<hitImgUrl name="CheetahCarBullet_hit"></hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl name="fireFlamer_hit"></hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bullet/fireballSmoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/rocketHummer_sound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/rocketCate</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>子弹射出0.2秒后将自动跟踪周围敌人。</info>
+		</bullet>
+		
+		<bullet color="blue">
+			<name>christmasDea</name>
+			<cnName>绝命礼炮</cnName><iconUrl>specialGun/christmasGunIcon</iconUrl>
+			<dpsMul>0.40</dpsMul>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>200</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>3</shakeAngle><aiShootRange>600</aiShootRange>
+			<bulletWidth>50</bulletWidth>
+			<bulletNum>5</bulletNum>				
+			<shootAngle>15</shootAngle>
+			<gunNum>1</gunNum>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>15</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>25</bulletSpeed>
+			<speedD random="0.3"  selfVra="0.2"/>
+			<!--特殊------------------------------------------------------------ -->
+			<gravity>0.4</gravity>
+			<boomD  bodyB="1" selfB="1" radius="130"/>
+			<bounceD glueFloorB="1" />
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" urlRandomValue="3">specialGun/christmasGunBullet</bulletImgUrl>
+			<hitImgUrl soundUrl="specialGun/christmasGunHit">specialGun/christmasGunBoom</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!-- <smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl>子弹尾烟效果（默认为空） -->
+			<hitFloorImgUrl>no</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgUrl  raNum="15">specialGun/christmasGunFire</fireImgUrl>
+			<shootSoundUrl>specialGun/christmasGunShoot</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/christmasGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>射出的子弹将粘在地形上，15秒后才消失。</info>
+		</bullet>
+	</father>	
+	<father type="rocket" cnName="火炮">	
+		
+		<bullet cnName="卯兔" kind="water" color="blue">
+			<name>yearRabbitDea</name>
+			<cnName>泡泡·卯兔</cnName><dpsMul>0.63</dpsMul><skillArr>yearRabbitDea</skillArr>
+			<!--基本-->
+			<capacity>500</capacity><iconUrl>specialGun/yearRabbitIcon</iconUrl>
+			<attackGap>0.4</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>7</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>1.05</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>0</upValue>
+			<shootShakeAngle>45</shootShakeAngle>
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>6</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>36</bulletSpeed>
+			<speedD min="6" max="36" random="0.3" a="-25"/>
+			<bounceD floor="1" body="0"/>	<!-- 反弹 -->
+			
+			<!--图像动画属性------------------------------------------------------------ -->
+			
+			<bulletImgUrl con="add" raNum="1" urlRandomValue="3">specialGun/yearRabbitBullet</bulletImgUrl>
+			<hitImgUrl soundUrl="specialGun/christmasGunHit">specialGun/christmasGunBoom</hitImgUrl>
+			<hitFloorImgUrl>no</hitFloorImgUrl>
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/yearRabbitSound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearRabbit</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			
+		</bullet>
+		
+		
+		
+		
+		
+		
+		
+		
+		<bullet color="blue">
+			<name>mammothDeath</name>
+			<cnName>爆·熔炉</cnName><iconUrl>newGun/rocketMammoth_icon</iconUrl>
+			<dpsMul>0.61</dpsMul>
+			<!--基本-->
+			<capacity>250</capacity>
+			<attackGap>0.8</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>35</bulletWidth>	
+			<aiShootRange>700</aiShootRange>
+			<bulletNum>1</bulletNum>				
+			<bulletSkillArr>mammothDeathSunSunAllDieEvent</bulletSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>1</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>40</bulletSpeed>
+			<boomD  selfB="1" radius="0"/><!-- 自爆特效 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl name="sunDeathBullet"/>
+			<hitImgUrl name="midCircle"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="rocketSmokeSm"/><!-- redFire_smoke -->
+			<fireImgUrl name="gunFireRocket"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rocketHummer_sound</shootSoundUrl>
+			<bodyImgRange>specialGun/rocketMammoth</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>母弹自爆后内部弹射出16颗更小的跟踪子弹，每颗伤害为母弹的10%。</info>
+		</bullet>
+				<bullet cnName="熔炉-子弹">
+					<name>mammothDeathSun</name>
+					<cnName>熔炉-子弹</cnName><armsType>rocket</armsType>
+					<noMagneticB>1</noMagneticB>
+					<!--伤害属性------------------------------------------------------------ -->
+					<hurtRatio>0.1</hurtRatio>
+					<!--基本属性------------------------------------------------------------ -->
+					<bulletAngle>0</bulletAngle>
+					<bulletLife>0.7</bulletLife>
+					<bulletWidth>20</bulletWidth>
+					<hitType>rect</hitType>
+					<extendGap>30</extendGap>
+					<followD value="1"/>
+					<!--攻击时的属性------------------------------------------------------------ -->
+					<bulletNum>16</bulletNum>
+					<shootAngle>167</shootAngle>
+					<!--运动属性------------------------------------------------------------ -->	
+					<bulletSpeed>20</bulletSpeed>
+					<bulletImgUrl raNum="30">bullet/gaiaSmallBullet</bulletImgUrl>
+					<smokeImgUrl name="smallMissleSmokeSm"/>
+					<hitImgUrl soundUrl="LingShooter/hit2">bulletHitEffect/yellow_motion</hitImgUrl>
+					<hitFloorImgUrl name="fireFlamer_hit"/>
+				</bullet>
+	</father>
+	<father type="rocket" cnName="火炮">
+		<bullet color="blue">
+			<name>rocketDeath</name>
+			<cnName>火箭筒</cnName><iconUrl>newGun/rocketDeath_icon</iconUrl>
+			<!--基本-->
+			<dpsMul>0.77</dpsMul>
+			<capacity>250</capacity>
+			<attackGap>0.8</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>35</bulletWidth>	
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>2.5</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>45</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  bodyB="1" floorB="1" radius="200"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl raNum="30">rocket/rocketBullet</bulletImgUrl>
+			<hitImgUrl name="midSpace"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="rocketSmokeSm"/><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgUrl name="gunFireRocket"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<shootSoundUrl>rocket/barrel_sound</shootSoundUrl>
+			<bodyImgRange>newGun/rocketDeath</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	
+	
+	<father name="deathArms">
+		<skill name="越障麻痹">
+			<name>throughWallParalysis</name><noRandomListB>1</noRandomListB>
+			<cnName>越障麻痹</cnName>
+			<haveEffectBuletHitNum>1</haveEffectBuletHitNum><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>throughWall</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>moveSpeed</effectType>
+			<mul>0</mul>
+			<duration>3</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<targetEffectImg soundUrl="sound/paralysis_enemy_hit"></targetEffectImg>
+			<stateEffectImg con="add" >skillEffect/paralysis_enemy</stateEffectImg>
+			<description>击中目标时，如果射击者和目标隔着地形，则目标将被麻痹[duration]秒。</description>
+		</skill>
+		<skill name="越障增伤">
+			<name>throughWallHurt</name><noRandomListB>1</noRandomListB>
+			<cnName>越障增伤</cnName>
+			<haveEffectBuletHitNum>1</haveEffectBuletHitNum><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>throughWall</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtAddPointEffect</effectType><changeHurtB>1</changeHurtB>
+			<mul>1.8</mul>
+			<!--图像------------------------------------------------------------ --> 
+			<pointEffectImg name="rainBulletBoom" />
+			<description>击中目标时，如果射击者和目标隔着地形，则伤害将提高[mul-1]。</description>
+		</skill>
+		
+		
+		<skill><!-- dps-被动 -->
+			<name>yearRabbitDea</name><noSkillDodgeB>1</noSkillDodgeB>
+			<cnName>泡泡</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>yearRabbitDea</effectType><effectFather>arms</effectFather>
+			<duration>3</duration>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg partType="body" con="add">specialGun/yearRabbitBuff</stateEffectImg>
+			<description>用泡泡将敌人包裹住，使其飘到空中，持续[duration]秒。敌人为精英怪和首领时，持续时间减半。</description>
+		</skill>
+		<skill name="滞毒"><!-- dps -->
+			<name>stopPosionDea</name>
+			<cnName>滞毒</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><noSkillDodgeB>1</noSkillDodgeB>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>hurtFromChildLockTargetStop</effectType>
+			<valueString>poison</valueString>
+			<extraValueType>hurtValue</extraValueType>
+			<mul>0.25</mul>
+			<doGap>0.15</doGap>
+			<duration>2</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<stateEffectImg partType="2foot" con="filter" raNum="30">skillEffect/poisonClaw_enemy</stateEffectImg>
+			<description>让目标中上“滞毒”：目标身体没有左右移动时，每0.2秒都将受到伤害，伤害值=击中伤害*[mul]。状态持续[duration]秒。</description>
+		</skill>
+	</father>
+	
+	
+</data>

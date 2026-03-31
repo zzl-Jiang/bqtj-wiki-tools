@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<![CDATA[六周年已添加]]>
+	<father type="laser" cnName="激光枪">
+		<bullet name="光锥" color="black" dropLevelArr="99" dropBodyArr="LastdayTank" evoMaxLv="12" evoMustFirstLv="4" composeLv="99" chipNum="300">
+			<name>lightCone</name>
+			<cnName>光锥</cnName>
+			<iconUrl>specialGun/lightConeIcon</iconUrl>
+			<!--基本-->
+			<capacity>8</capacity> 
+			<attackGap>0.7</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>900</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<bounceD floor="0" body="0" noDieB="1" />	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			<penetrationNum>5</penetrationNum>
+			<skillArr>Hit_disabled_ArmsSkill,Hit_blindness_ArmsSkill</skillArr>
+			<godSkillArr>lightConeSkill,lightConeBlind</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>15</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.5</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>3</upValue>
+			<shootRecoil>2</shootRecoil>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.7</bulletLife>
+			<hitType>longLine</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>0.7</dpsMul>
+			<uiDpsMul>2.65</uiDpsMul>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<![CDATA[<shootSoundUrl>specialGun/lightConeSound</shootSoundUrl>]]>
+			<flipX>1</flipX>
+			<fireImgUrl cacheB="1" imgDieType="die" con="add">bulletHitEffect/blueLaser</fireImgUrl>
+			<bulletImgUrl raNum="60" con="add" len="20" everFleshB="1" imgDieType="die" time="-1"  bottomLayerB="1">bullet/blueLaser</bulletImgUrl>
+			<hitImgUrl cacheB="1" imgDieType="die" con="add">bulletHitEffect/blueLaser</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/lightCone</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>消灭首领末日坦克(99级)</description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill name="炫目">
+			<name>lightConeSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>炫目</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><overlyingB>1</overlyingB>
+			<effectType>lightConeSkill</effectType>
+			<value>5</value><!-- value秒内可达到最大丢失率 -->
+			<mul>2.15</mul><!-- 最大丢失率 -->
+			<duration>2</duration>
+			<stateEffectImg partType="2eye">skillEffect/disabled_enemy</stateEffectImg>
+			<description>灼烧目标的视觉系统，使其攻击成功率大幅降低。灼烧时间越长（上限[value]秒），攻击成功率越低。</description>
+		</skill>
+		<skill name="夺目-氩星光锥">
+			<name>lightConeSkillYa</name><noRandomListB>1</noRandomListB>
+			<cnName>夺目</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><overlyingB>1</overlyingB>
+			<effectType>lightConeSkill</effectType>
+			<value>5</value><!-- value秒内可达到最大丢失率 -->
+			<mul>2.15</mul><!-- 最大丢失率 -->
+			<duration>2</duration>
+			<stateEffectImg partType="2eye">skillEffect/disabled_enemy</stateEffectImg>
+			<description>超强激光短暂破坏敌人的刚体技能，持续[duration]秒。同时灼烧目标的视觉系统，使其攻击成功率大幅降低。灼烧时间越长（上限[value]秒），攻击成功率越低，无视免疫和技能免疫。</description>
+		</skill>
+		
+		
+		<skill name="欺盲">
+			<name>lightConeBlind</name><noRandomListB>1</noRandomListB>
+			<cnName>欺盲</cnName>
+			<changeHurtB>1</changeHurtB><![CDATA[武器技能必须带上这个参数，不然就是伤害之后才执行]]>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>lightConeBlind</effectType>
+			<value>1</value><!-- 最大倍数，第一次先不要调那么变态 -->
+			<mul>0.4</mul><!-- lostPro乘积 -->
+			<description>对被致盲的敌人造成额外伤害，致盲率越高，伤害越高。</description>
+		</skill>
+		
+		
+		<skill name="超级欺盲-氩星光锥">
+			<name>lightConeBlindYa</name><noRandomListB>1</noRandomListB>
+			<cnName>超级欺盲</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<changeHurtB>1</changeHurtB><![CDATA[武器技能必须带上这个参数，不然就是伤害之后才执行]]>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>lightConeBlind</effectType>
+			<value>1</value><!-- 最大倍数，第一次先不要调那么变态 -->
+			<mul>0.4</mul><!-- lostPro乘积 -->
+			<description>对被致盲的敌人造成额外伤害，致盲率越高，伤害越高，无视免疫和技能免疫。</description>
+		</skill>
+		<![CDATA[
+		<skill>
+			<name>lightConePurgold</name><noRandomListB>1</noRandomListB>
+			<cnName>驱魂</cnName>
+			<otherConditionArr>targetIsLive</otherConditionArr>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>toDie</effectType>
+			<description>击毙敌人时，使其重生技能无效。</description>
+		</skill>
+		]]>
+		<skill>
+			<name>lightConePurgold</name><noRandomListB>1</noRandomListB>
+			<cnName>驱魂</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+			<otherConditionArr>haveSkillOr</otherConditionArr>
+			<conditionString>feeding_wolf,rebirth_enemy,rebirth_loveSkill</conditionString>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>no</effectType>
+			<duration>2</duration>
+			<stateEffectImg name="lightConePurgold"/>
+			<description>击中敌人时，使其重生技能无效，持续[duration]秒。</description>
+		</skill>
+	</father>
+</data>

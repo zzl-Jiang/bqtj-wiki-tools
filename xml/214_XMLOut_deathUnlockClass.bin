@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<gather>
+		<father name="firstArms">
+			<body value="1" must="30"  text="重生后随机出现1把蓝色记忆武器"/>
+			<body diff="2" value="2" must="200"  text="重生后随机出现2把蓝色记忆武器"/>
+			
+		</father>
+		
+		<father name="firstSilver" text="初始秘银[value]">
+			<body value="100" must="50"/>
+			<body value="200" must="100"/>
+			<body value="300" must="150"/>
+		</father>
+		
+		<father name="armsSite" text="武器空位+[value]">
+			<body value="1" must="30"/>
+			<body value="2" must="100"/>
+			<body value="3" must="300"/>
+		</father>
+		<father name="lifeBottle" text="生命药瓶次数+[value]">
+			<body value="1" must="30"/>
+			<body value="2" must="70"/>
+			<body value="3" must="150"/>
+			<body value="4" must="200"/>
+			<body value="5" must="300"/>
+			<![CDATA[
+			<body diff="2" value="6" must="200"/>
+			<body diff="3" value="7" must="200"/>
+			<body diff="3" value="8" must="200"/>
+			<body diff="3" value="9" must="200"/>
+			]]>
+		</father>
+		<father name="skillSite" text="技能空位+[value]">
+			<body value="1" must="100"/>
+			<body diff="2" value="2" must="400"/>
+			<![CDATA[<body diff="3" value="3" must="700"/> 技能的作用非常大]]>
+			
+		</father>
+		
+		<father name="jumpNum" text="弹跳次数+[value]">
+			<body value="1" must="30"/>
+			<body value="2" must="100"/>
+			<body value="3" must="300"/>
+			<body diff="2" value="4" must="200"/>
+			<body diff="3" value="5" must="200"/>
+		</father>
+		<father name="smallMap">
+			<body must="30" text="小地图显示传送门" />
+			<body must="50" text="小地图显示水晶、宝箱、弹药、钥匙等"/>
+		</father>
+		<father name="bigMap">
+			<body must="30" text="大地图传送功能（玩家需在传送门附近）" />
+			<body must="200" text="大地图任意位置传送"/>
+		</father>
+		<father name="portal">
+			<body must="400" text="解锁橙色传送门" />
+		</father>
+		<father name="role">
+			<body must="200" text="解锁角色：藏师" />
+			<body must="200" text="解锁角色：亚瑟" />
+		</father>
+		<father name="bloodSave">
+			<body must="2000" text="多余血浆存储处" />
+		</father>
+		<![CDATA[
+		
+		<father name="reloadMul" text="换弹速度+[mul]">
+			<body mul="0.3" must="20"/>
+			<body mul="0.5" must="60"/>
+			<body mul="0.8" must="120"/>
+		</father>
+		<father name="godHand">
+			<body must="100" skill="godHand_equip" />
+		</father>
+		]]>
+	</gather>
+</data>

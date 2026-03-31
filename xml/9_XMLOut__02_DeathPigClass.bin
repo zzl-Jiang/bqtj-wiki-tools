@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="death" info="单位">
+		<body index="0" name="豪猪" shell="normal">
+			
+			<name>DeathPig</name>
+			<cnName>豪猪</cnName>
+			<raceType>zombies</raceType><headIconUrl>IconGather/FightPig</headIconUrl>
+			<swfUrl>swf/enemy/FightPig358.swf</swfUrl>
+			<swfName>FightPig</swfName> 
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<showLevel>9999</showLevel>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move
+				,normalAttack2,shootAttack2,sprintAttack,rollAttack,__rollAttack,rollAttack__,lightningAttack2
+				,hurt1,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<lifeBarExtraHeight>-20</lifeBarExtraHeight>
+			<handAddRa>90</handAddRa>
+			<!-- 碰撞体积 -->
+			<hitRect>-18,-96,36,96</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>8</maxVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>FightPig_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>rollDeathPig,thunderDeathPig,collisionDeathPig</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<preBulletArr></preBulletArr>
+			<!-- 副本ai数据 -->
+			
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack2</imgLabel><cn>斧击</cn>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>7</shakeValue>
+					<hitImgUrl name="yellowHit"/>
+				</hurt>
+				<hurt cd="3">
+					<imgLabel>shootAttack2</imgLabel><cn>飞斧</cn>
+					<bulletLabel>DeathPig_1</bulletLabel>
+					<grapRect>-350,-111,300,105</grapRect>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>rollAttack</imgLabel>
+					<noAiChooseB>1</noAiChooseB>
+					<noShootB>1</noShootB><ingfollowB>1</ingfollowB>
+					<hurtRatio>0.7</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>sprintAttack</imgLabel><oneHurtB>1</oneHurtB>
+					<noAiChooseB>1</noAiChooseB>
+					<hurtRatio>4</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl name="oreWormHit"/>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>lightningAttack2</imgLabel><oneHurtB>1</oneHurtB>
+					<noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.6</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+				</hurt>
+			</hurtArr>
+		</body>
+		<![CDATA[
+		<skill cnName="雷霆斧击"><!-- dps -->
+			<name>thunderDeathPig</name>
+			<cnName>雷霆斧击</cnName><iconUrl36>SkillIcon/thunder_pig_36</iconUrl36>
+			<cd>6</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition><!-- cd结束后触发 -->
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>600</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>bullet_deathPig</effectType>
+			<value>100</value>
+			<duration>2</duration>
+			<!-- 子弹所需 -->
+			<obj>"name":"thunderDeathPig"</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meActionLabel>lightningAttack2</meActionLabel>
+			<description>挥舞屠夫砍击前方所有敌人，对普通单位造成瞬秒伤害，对首领造成最大生命值15%的伤害。</description>
+		</skill>
+		]]>
+		<skill name="雷霆斧击">
+			<name>thunderDeathPig</name>
+			<cnName>雷霆斧击</cnName><iconUrl36>SkillIcon/thunder_pig_36</iconUrl36>
+			<showInLifeBarB>1</showInLifeBarB>
+			<cd>9</cd>
+			<delay>0.79</delay>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition><!-- cd结束后触发 -->
+			<otherConditionArr>lifePerLess</otherConditionArr>
+			<conditionRange>0.4</conditionRange>
+			<target>me</target>
+			
+			<addType>state</addType>
+			<effectType>bullet_lightningFloorOne</effectType>
+			<extraValueType>producterDpsFactor</extraValueType><!-- 伤害乘以什么数值 -->
+			<value>30</value><!-- 闪电个数 -->
+			<mul>0.066</mul><!-- 闪电时间间隔 -->
+			<secMul>50</secMul><!-- 闪电距离间隔 -->
+			<range>100</range><!-- 初始位置距离 -->
+			<duration>2</duration>
+			<obj>"name":"thunderDeathPig"</obj>
+			<meActionLabel>lightningAttack2</meActionLabel>
+			<description>挥舞雷霆之斧砍向地面，对前方产生连续的雷击。</description>
+			
+		</skill>
+		
+		
+		
+				<bullet>
+					<name>thunderDeathPig</name>
+					<cnName>雷霆斧击</cnName>
+					<!--伤害属性------------------------------------------------------------ -->
+					<hurtRatio>3</hurtRatio>
+					<!--基本属性------------------------------------------------------------ -->
+					<bulletLife>0.0001</bulletLife>
+					<bulletWidth>320</bulletWidth>
+					<hitType>longLine</hitType>
+					<!--攻击时的属性------------------------------------------------------------ -->
+					<twoHitGap>0.5</twoHitGap>
+					<twoHitSameNameB>1</twoHitSameNameB>
+					<bulletAngle>270</bulletAngle>
+					<!--特殊属性------------------------------------------------------------ -->	
+					<penetrationGap>1000</penetrationGap>
+					<penetrationNum>999</penetrationNum>
+					<!--运动属性------------------------------------------------------------ -->	
+					<shootPoint>0,0</shootPoint>
+					<bulletSpeed>0</bulletSpeed>
+					<!--图像动画属性------------------------------------------------------------ -->
+					<flipX>1</flipX>
+					<imgClearDelay>0.3</imgClearDelay>
+					<bulletImgUrl name="thunderDeathPig"/>
+					<hitImgUrl>bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+				</bullet>
+		<skill cnName="野性冲锋"><!-- dps -->
+			<name>collisionDeathPig</name>
+			<cnName>野性冲锋</cnName><iconUrl36>SkillIcon/collision_pig_36</iconUrl36>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>11</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition><!-- cd结束后触发 -->
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>500</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>invincible</effectType>
+			<duration>1.7</duration>
+			<![CDATA[<stateEffectImg name="invincibleShield2"/>]]>
+			<!--图像------------------------------------------------------------ -->
+			<meActionLabel>sprintAttack</meActionLabel>
+			<description>集中全身力量向前冲锋，对目标造成重大伤害。</description>
+		</skill>
+		
+		<skill index="0" name="巨力滚">
+			<name>rollDeathPig</name><noCopyB>1</noCopyB>
+			<cnName>巨力滚</cnName><iconUrl36>SkillIcon/roll_pig_36</iconUrl36>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>16</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition><!-- cd结束后触发 -->
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>roll_pig</effectType>
+			<mul>1.6</mul>
+			<duration>4</duration>
+			<description>单位进入巨力滚动状态，所受到伤害减少70%，移动速度增加[mul-1]，同时对经过的敌人造成伤害。</description>
+		</skill>
+		
+		
+			<bullet cnName="豪猪-飞刀">
+				<name>DeathPig_1</name>
+				<cnName>豪猪飞刀</cnName>
+				<!--基本属性------------------------------------------------------------ -->
+				<shakeAngle>5</shakeAngle>
+				<bulletLife>5</bulletLife>
+				<bulletWidth>30</bulletWidth>
+				<hitType>rect</hitType>
+				<!--攻击时的属性------------------------------------------------------------ -->
+				<attackGap>1.1</attackGap>
+				<attackDelay>0.6</attackDelay>
+				<bulletAngle>185</bulletAngle>
+				<bulletAngleRange>40</bulletAngleRange>
+				<bulletNum>1</bulletNum>				
+				<shootNum>1</shootNum>					
+									
+				<shootAngle>0</shootAngle>					
+				<!--运动属性------------------------------------------------------------ -->	
+				<shootPoint>-97,-58</shootPoint>
+				<bulletSpeed>17</bulletSpeed>
+				<gravity>0.6</gravity>
+				<bounceD floor="5"/>	<!-- 反弹 -->
+				<!--图像动画属性------------------------------------------------------------ -->
+				<flipX>1</flipX>
+				<bulletImgUrl>FightPig/bullet1</bulletImgUrl>
+				<hitImgUrl name="yellowHit"/>
+				<hitFloorImgUrl con="add" soundUrl="sound/vehicle_hit2" soundVolume="0.4">bladeHitEffect/blood</hitFloorImgUrl>
+				<smokeImgUrl con="filter" raNum="1">FightPig/smoke1</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			</bullet>
+	</father>
+</data>

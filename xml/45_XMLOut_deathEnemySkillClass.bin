@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="enemy">
+		<skill>
+			<name>superFirstLost</name>
+			<cnName>苏醒</cnName><everNoClearB>1</everNoClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType><noBeClearB>1</noBeClearB>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>lostCtrl</effectType>
+			<duration>1</duration>
+			<description>出场时需要[duration]的苏醒时间。</description>
+		</skill>
+		<skill>
+			<name>teleportExcapeDeath</name>
+			<cnName>躲藏</cnName>
+			<conditionType>passive</conditionType>
+			<condition>heroShootOver</condition>
+			<target>me</target>
+			
+			<addType>instant</addType>
+			<effectType>teleport</effectType>
+			<valueString>farTargetMust</valueString>
+			<value>400</value>
+			<range>600</range>
+			<meEffectImg name="teleportNew"/>
+			<otherEffectImg name="teleportLine"/>
+			<description>瞬间移动到视野中的任何位置。</description>
+		</skill>
+		
+		
+		
+		<skill>
+			<name>selfBurnDeath</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>自燃</cnName><iconUrl36>SkillIcon/selfBurn_hero_36</iconUrl36>
+			<conditionType>passive</conditionType>
+			<condition>interval</condition>
+			<target>me,range,enemy</target>
+			
+			<addType>instant</addType>
+			<effectType>normal_hurt</effectType>
+			<extraValueType>producterDpsFactor</extraValueType>
+			<mul>0.15</mul>
+			<duration>0.3</duration>
+			<range>100</range>
+			
+			<addSkillEffectImg name="selfBurn_task_add"/>
+			<targetEffectImg name="Nian_change_link_target"/>
+			<description>释放技能后，单位全身燃起熊熊烈火，对附近[range]范围内的敌人造成伤害。</description>
+		</skill>
+		
+		<skill>
+			<name>teleportDeath</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>瞬移</cnName><iconUrl36>SkillIcon/flash_pet_36</iconUrl36>
+			<cd>5</cd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>awayAttackTarget</otherConditionArr>
+			<conditionRange>200</conditionRange>
+			<target>me</target>
+			
+			<addType>instant</addType>
+			<effectType>teleport</effectType>
+			<value>150</value><!-- 瞬移到目标面前100的距离 -->
+			<valueString>attackTarget</valueString>
+			<meEffectImg name="teleportNew"/>
+			<otherEffectImg name="teleportLine"/>
+			<description>瞬间移动到目标的前方。</description>
+		</skill>
+		
+		<skill>
+			<name>fastForwardDeath</name>
+			<cnName>快进</cnName><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>3</cd><iconUrl36>SkillIcon/flash_pet_36</iconUrl36>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>followingTarget</otherConditionArr>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>fastForward</effectType>
+			<meEffectImg name="dinosaurEgg_me"/>
+			<otherEffectImg name="teleportLine"/>
+			<description>减少移动路程。</description>
+		</skill>
+		<skill>
+			<name>pointerMissile</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>指向导弹</cnName><iconUrl36>SkillIcon/moreMissile_hero_36</iconUrl36>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>5</cd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>1400</conditionRange>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<extraValueType>targetDpsFactor</extraValueType><!-- 附加值类型为当前武器dps比例 -->
+			<!-- 子弹所需 -->
+			<obj>"name":"pointerMissileBullet","site":"lifeBar","flipB":true</obj>
+			<![CDATA[sound/moreMissile_hero]]>
+			<meEffectImg name="misslePointerSound"/>
+			<pointEffectImg name="misslePointer"/>
+			<description>。</description>
+		</skill>
+					<bullet>
+						<name>pointerMissileBullet</name><hurtRatio>2.4</hurtRatio> 
+						<bulletNum>1</bulletNum>
+						<shakeAngle>15</shakeAngle><bulletAngle>-90</bulletAngle>
+						<bulletLife>4</bulletLife><bulletWidth>30</bulletWidth>
+						<hitType>rect</hitType>
+						<shootPoint>0,0</shootPoint>
+						<penetrationGap>1000</penetrationGap>
+						<bulletSkillArr>pointerMissileLAST</bulletSkillArr>
+						<followD value="2" delay="0.8" />
+						<boomD selfB="1" bodyB="1" radius="120" />
+						<noHitTime>1</noHitTime>
+						<!--运动属性------------------------------------------------------------ -->	
+						<bulletSpeed>10</bulletSpeed>
+						<speedD max="40" min="1" a="-5"/>
+						
+						<bulletImgUrl name="fightBackBullet_bullet"/>
+						<hitImgUrl name="midSpaceQuietly"/><!-- 子弹图像【必备】 -->
+						<smokeImgUrl name="rocketSmokeSm"/><!-- 子弹尾烟效果（默认为空） -->
+					</bullet>	
+					
+		<skill>
+			<name>rotatingLightning</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>旋转闪电</cnName><iconUrl36>SkillIcon/laser_PetFightWolf_36</iconUrl36>
+			<cd>9999999</cd>
+			<firstCd>9999999</firstCd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>1000</conditionRange>
+			
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<extraValueType>targetDpsFactor</extraValueType>
+			<!-- 子弹所需 -->
+			<obj>"name":"rotatingLightningBullet"</obj>
+			<description>。</description>
+		</skill>	
+				<bullet>
+					<name>rotatingLightningBullet</name>
+					<cnName>旋转闪电</cnName>
+					<hurtRatio>0.20</hurtRatio>
+					<bulletSkillArr>rotatingLightningLEN</bulletSkillArr>
+					<bulletAngle>0</bulletAngle><bulletLife>9999999</bulletLife><bulletWidth>530</bulletWidth><hitType>longLine</hitType>	
+					<penetrationGap>1000</penetrationGap>
+					<penetrationNum>999</penetrationNum>
+					<noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+					<bulletSpeed>0</bulletSpeed>
+					<noHitTime>0.7</noHitTime><!-- 前期准备时间 -->
+					<hitGap>0.1</hitGap>
+					<bulletImgUrl name="rotatingLightningLine"/>
+					<hitImgUrl name="BallLightning_fire_hit"/>
+					<fireImgUrl name="yearDragonSkill_state"/>
+				</bullet>
+				
+		<skill><!-- 生存-主动 -->
+			<name>magneticFieldDeath</name><wantDescripB>1</wantDescripB>
+			<cnName>磁力场</cnName>
+			<showInLifeBarB>1</showInLifeBarB><iconUrl36>SkillIcon/magneticField_enemy_36</iconUrl36>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>16</cd>
+			<firstCd>14</firstCd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>800</conditionRange>
+			<target>me</target>
+			
+			<addType>state</addType>
+			<effectType>magneticB</effectType>
+			<value>1</value>
+			<mul>0.2</mul>
+			<duration>6</duration>
+			<range>800</range>
+			<passiveSkillArr>magneticFieldDeathLink</passiveSkillArr>
+			<meEffectImg soundUrl="sound/magneticField"></meEffectImg>
+			<stateEffectImg  name="electromagnet_state"/>
+			<description>向外释放磁力场，使[range]码的范围内的所有敌方子弹偏离轨道，持续[duration]秒。</description>
+		</skill>					
+		
+				<skill><!-- 生存-主动 -->
+					<name>magneticFieldDeathLink</name>
+					<cnName>磁力场-曲扭光环</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					
+					<conditionType>active</conditionType>
+					<condition>interval</condition>
+					<target>me,range,enemy</target>
+					
+					<addType>state</addType>
+					<effectType>magneticField</effectType>
+					<range>800</range>
+					<duration>0.5</duration>
+					 <pointEffectImg name="bluePointerLine"/>
+					<stateEffectImg partType="shootPoint" con="add" raNum="30" followPartRaB="1">skillEffect/magneticField_paralysis</stateEffectImg>
+					<description>使目标射出的子弹偏离轨道，持续[duration]秒。</description>
+				</skill>
+		
+		<skill><!-- dps -->
+			<name>poisonDeath</name>
+			<cnName>毒液</cnName><showInLifeBarB>1</showInLifeBarB>
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<addType>state</addType>
+			<effectType>poison</effectType>
+			<extraValueType>producterDpsFactor</extraValueType>
+			<mul>0.5</mul>
+			<doGap>1</doGap>
+			<duration>5</duration>
+			<addSkillEffectImg name="poisonClaw"/>
+			<targetEffectImg name="poisonHit"/>
+			<stateEffectImg partType="mouth" con="add">skillEffect/poisonousFog_hero</stateEffectImg>
+			<description>释放技能后，单位的双手将涂满毒液，对攻击目标造成中毒效果。</description>
+		</skill>
+		<skill><!-- 限制 -->
+			<name>paralysisDeath</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>麻痹电球</cnName><iconUrl36>SkillIcon/paralysis_pet_36</iconUrl36>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>6</cd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>2000</conditionRange>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>bullet_pointEF</effectType>
+			<extraValueType>producterDpsFactor</extraValueType>
+			<!-- 子弹所需 -->
+			<obj>"name":"paralysisDeathBullet","site":"attackTargetBody","minYB":1,"pointEf":1,"flipB":true</obj>
+			<meEffectImg soundUrl="sound/paralysis_enemy_shoot"></meEffectImg>
+			<pointEffectImg name="lightningVertical"/>
+			<otherEffectImg name="bluePointerLine"/>
+			<description>在敌人附近放置一个麻痹电球，碰撞敌人后将使其无法移动5秒（翻滚也将失效）。</description>
+		</skill>
+					<bullet>
+						<name>paralysisDeathBullet</name>
+						<cnName>麻痹电球</cnName>
+						<!--伤害属性------------------------------------------------------------ -->
+						<hurtRatio>0</hurtRatio>
+						<!--基本属性------------------------------------------------------------ -->
+						<bulletLife>12</bulletLife>
+						<bulletWidth>25</bulletWidth>
+						<hitType>rect</hitType>
+						<bulletAngle>0</bulletAngle>
+						<noHitTime>0.5</noHitTime><!-- 给玩家0.5的反应时间 -->
+						<!--运动属性------------------------------------------------------------ -->	
+						<shootPoint>150,-80</shootPoint>
+						<bulletSpeed>0</bulletSpeed>
+						<skillArr>paralysisDeathBullet</skillArr>
+						<penetrationGap>1000</penetrationGap>
+						<boomD selfB="1" hurtMul="0"/>
+						<!--图像动画属性------------------------------------------------------------ -->
+						<flipX>1</flipX>
+						<bulletImgUrl con="add">skillEffect/paralysis_enemy_bullet</bulletImgUrl>
+						<hitImgUrl  soundUrl="sound/paralysis_enemy_hit"></hitImgUrl><!-- 子弹图像【必备】 -->
+						<selfBoomImgUrl name="yearDragon_hit"/>
+					</bullet>
+					<skill>
+						<name>paralysisDeathBullet</name>
+						<cnName>麻痹电球-减速</cnName>
+						<conditionType>passive</conditionType>
+						<condition>hit</condition>
+						<target>target</target>
+						<addType>state</addType>
+						<effectType>moveSpeed</effectType>
+						<mul>0</mul>
+						<duration>3</duration>
+						<stateEffectImg con="add">skillEffect/paralysis_enemy</stateEffectImg>
+					</skill>
+					
+		<![CDATA[
+		<skill><!-- 限制 -->
+			<name>paralysisDeath</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>闪电麻痹</cnName><iconUrl36>SkillIcon/paralysis_pet_36</iconUrl36>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>9</cd>
+			
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>800</conditionRange>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<extraValueType>producterDpsFactor</extraValueType>
+			<!-- 子弹所需 -->
+			<obj>"name":"paralysisDeathBullet","site":"me","flipB":true</obj>
+			<meEffectImg soundUrl="sound/paralysis_enemy_shoot"></meEffectImg>
+			<description>从单位背后发出一颗闪电球，击中并且麻痹目标，使目标无法移动5秒。</description>
+		</skill>
+					<bullet>
+						<name>paralysisDeathBullet</name>
+						<cnName>闪电麻痹</cnName>
+						<!--伤害属性------------------------------------------------------------ -->
+						<hurtRatio>0.1</hurtRatio>
+						<!--基本属性------------------------------------------------------------ -->
+						<bulletLife>3</bulletLife>
+						<bulletWidth>15</bulletWidth>
+						<hitType>rect</hitType>
+						<bulletAngle>180</bulletAngle>
+						<!--运动属性------------------------------------------------------------ -->	
+						<shootPoint>0,-80</shootPoint>
+						<bulletSpeed>12</bulletSpeed>
+						<!--特殊属性------------------------------------------------------------ -->	
+						<followD value="1"/>	<!-- 跟踪 -->
+						<skillArr>paralysis_enemy_link</skillArr>
+						<penetrationGap>1000</penetrationGap>
+						<!--图像动画属性------------------------------------------------------------ -->
+						<flipX>1</flipX>
+						<bulletImgUrl con="add">skillEffect/paralysis_enemy_bullet</bulletImgUrl>
+						<hitImgUrl  soundUrl="sound/paralysis_enemy_hit"></hitImgUrl><!-- 子弹图像【必备】 -->
+					</bullet>
+		]]>			
+		<skill name="分身">
+			<name>clonedDeath</name>
+			<cnName>分身</cnName><iconUrl36>SkillIcon/cloned_36</iconUrl36>
+			<cd>20</cd>
+			<firstCd>22</firstCd><noInClonedB>1</noInClonedB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>1200</conditionRange>
+			<target>me</target>
+			
+			<addType>instant</addType>
+			<effectType>clonedNoCF</effectType>
+			<value>1</value>
+			<mul>0.2</mul>
+			<secMul>0.5</secMul>
+			<valueString>dieDel</valueString><!-- 分身添加技能 -->
+			<duration>20</duration>
+			<meEffectImg soundUrl="sound/cloned_enemy" con="add">skillEffect/hiding_hero</meEffectImg>
+			<otherEffectImg name="shadowDie"/><!-- 特效缓存 -->
+			<description>产生1个分身，攻击力为自身的[secMul]，生命值为自身的[mul]，持续[duration]秒。</description>
+		</skill>
+				<skill>
+					<name>dieDel</name>
+					<cnName>死后消失</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB><noBeClearB>1</noBeClearB>
+					<conditionType>passive</conditionType>
+					<condition>allDie</condition>
+					<target>me</target>
+					<addType>instant</addType>
+					<effectType>toDel</effectType>
+					<targetEffectImg name="shadowDie"/>
+					<description>死后直接消失，常用于分身、幻影。</description>
+				</skill>
+				
+		<skill>
+			<name>deadlyArrowDeath</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>夺命箭</cnName>
+			<conditionType>passive</conditionType><noCopyB>1</noCopyB>
+			<condition>underAllHurt</condition>
+			<target>target</target>
+			<addType>instant</addType>
+			<effectType>bullet_deadlyArrow</effectType>
+			<extraValueType>producterDpsFactor</extraValueType>
+			<secMul>0.05</secMul><!-- 用mul会被设置成bullet的伤害值，所以用secmul-->
+			<obj>"name":"deadlyArrowDeath","site":"deadlyArrowDeath","producerShootB":true,"ranX":25,"ranY":25</obj>
+			<pointEffectImg name="deadlyArrowDeathFire"/>
+			<otherEffectImg name="consVirgoLine"/>
+			<description>自身生命值每减少[secMul]就向敌人发出夺命箭。</description>
+		</skill>
+					<bullet>
+						<name>deadlyArrowDeath</name>
+						<cnName>夺命箭子弹</cnName><noMagneticB>1</noMagneticB>
+						<!--基本属性------------------------------------------------------------ -->
+						<hurtRatio>1</hurtRatio>
+						<bulletLife>4</bulletLife>
+						<bulletWidth>40</bulletWidth>
+						<hitType>rect</hitType>
+						<shootPoint>0,-150</shootPoint>
+						<bulletSpeed>3</bulletSpeed>
+						<speedD min="3" max="20" a="15"/>
+						<!--特殊属性------------------------------------------------------------ -->	
+						<penetrationGap>1000</penetrationGap>
+						<bulletImgUrl raNum="30" con="add">bullet/redArrow</bulletImgUrl>
+						<smokeImgUrl raNum="30" con="filter">bullet/redArrow</smokeImgUrl>
+						<hitImgUrl soundUrl="sound/body_hit">bulletHitEffect/energyPurple</hitImgUrl><!-- 子弹图像【必备】 -->
+					</bullet>
+					
+		<skill>
+			<name>summonedSpiderDeath</name>
+			<iconUrl36>SkillIcon/summonedSpider_spiderKing_36</iconUrl36>
+			<cnName>召唤毒蛛</cnName>
+			<showInLifeBarB>1</showInLifeBarB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>30</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>2000</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>summonedUnits</effectType>
+			<duration>20</duration>
+			<!-- 子弹所需 -->
+			<obj>"cnName":"绝命毒蛛","num":3,"lifeMul":0.4,"dpsMul":0.5,"maxNum":10,"cx":48,"cy":-15,"pointEf":1</obj>
+			<pointEffectImg name="poisonHit"/>
+			<meActionLabel>birthAttack</meActionLabel>
+			<description>召唤[obj.num]只绝命毒蛛。</description>
+		</skill>
+		
+		<skill>
+			<name>invincibleHoleDeath</name>
+			<cnName>无敌光环</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<iconUrl>SkillIcon/invincibleHole</iconUrl>
+			<conditionType>passive</conditionType>
+			<condition>interval</condition>
+			<target noMeB="1" noHaveNowSkillB="1" noZeroB="1">me,range,we</target>
+			
+			<addType>state</addType>
+			<effectType>invincibleHoleDeath</effectType><effectFather>death</effectFather>
+			<duration>0.5</duration>
+			<range>700</range>
+			<meEffectImg name="KingRabbitKingHit_state"/>
+			<pointEffectImg name="orangePointerLine"/>
+			<stateEffectImg name="invincibleShield2"/>
+			<description>让所有我方单位（排除自己）进入无敌状态。</description>
+		</skill>
+	</father>
+</data>

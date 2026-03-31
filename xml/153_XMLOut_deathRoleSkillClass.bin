@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="deathRole" cnName="肉鸽角色">
+		
+		<skill name="狂暴">
+			<name>crazyDR</name>
+			<cnName>狂暴</cnName><iconUrl>SkillIcon/crazy_hero</iconUrl>
+			<effectInfoArr>增加伤害输出</effectInfoArr><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>46</cd>
+			<changeText>技能冷却时间：[cd]秒</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>beforeAttack</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>crazyDR</effectType><effectFather>death</effectFather>
+			<mul>2</mul>
+			<value>2.5</value><![CDATA[大于这个射速的]]>
+			<duration>5</duration>
+			
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg soundUrl="sound/crazy_hero"></meEffectImg>
+			<stateEffectImg partType="2eye" con="filter" raNum="30">skillEffect/smallFire</stateEffectImg>
+			<stateEffectImg2 partType="2eye" con="add">skillEffect/crazy_hero_eye</stateEffectImg2>
+			<description>释放技能后，增加[mul-1]武器的射击速度（面板射速大于[value]发每秒的，不加射速，增加同等武器伤害），持续[duration]秒。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><cd>46</cd></skill>
+				<skill><cd>37</cd></skill>
+				<skill><cd>30</cd></skill>
+			</growth>
+		</skill>
+		
+		<skill name="真空">
+			<name>vacuumDR</name><iconUrl>SkillIcon/vacuumJie</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>真空</cnName><ignoreImmunityB>1</ignoreImmunityB>
+			<changeText>技能冷却时间[cd]秒</changeText>
+			<cd>8</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>attackTargetNoSameInvi</otherConditionArr>
+			<target>mouse,range,enemy</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>vacuumDR</effectType><effectFather>death</effectFather>
+			<mul>1.1</mul>
+			<range>1000</range>
+			<duration>2</duration>
+			<meEffectImg name="vacuumJieSound"/>
+			<targetEffectImg name="vacuumJie"/>
+			<stateEffectImg name="noMoveWarrior_state"/>
+			<pointEffectImg name="teleportLine"/>
+			<description>将鼠标处半径[range]码的敌人吸附至鼠标处，麻痹并减防[mul-1]，持续[duration]秒，期间盾牌僵尸的盾牌将失效。</description>
+			<growth>
+				<skill><cd>8</cd></skill>
+				<skill><cd>7</cd></skill>
+				<skill><cd>6</cd></skill>
+			</growth>
+		</skill>
+		<skill name="隐身">
+			<name>hidingDR</name><iconUrl>SkillIcon/hiding_hero</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>隐身</cnName>
+			<changeText>技能冷却时间[cd]秒</changeText>
+			<cd>12</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>hiding_hero</otherConditionArr>
+			<conditionRange>1000</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>hidingB</effectType>
+			<mul>4</mul>
+			<secMul>0</secMul><!-- 背后攻击造成额外伤害 -->
+			<duration>6</duration>
+			<meEffectImg name="madfireHiding_me"/>
+			<description>释放技能后进入隐身状态，持续[duration]秒。隐身时对敌人发起攻击，将打破隐身状态，同时对敌人造成2~4倍的暴击。</description>
+			<growth>
+				<skill><cd>12</cd></skill>
+				<skill><cd>10</cd></skill>
+				<skill><cd>8</cd></skill>
+			</growth>
+		</skill>
+		
+		
+		<skill name="翻滚之火">
+			<name>rollFireDR</name><iconUrl>SkillIcon/selfBurn_hero</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>翻滚之火</cnName>
+			<changeText>伤害系数：[mul]</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>rollAction</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>rollFireDR</effectType><effectFather>death</effectFather>
+			<mul>0.11</mul><!-- 伤害比例 -->
+			<value>0.1</value><!-- 伤害间隔 -->
+			<range>80</range><!-- 伤害半径 -->
+			<extraValueType>dpsFactor</extraValueType>
+			<duration>1</duration>
+			<meEffectImg name="flamerShootSound"/>
+			<stateEffectImg name="selfBurn_task_add"/>
+			<pointEffectImg name="Nian_change_link_target"/><!-- 击打敌人的特效 -->
+			<description>每次翻滚，都将使全身燃起持续[duration]秒的烈火，烈火每[value]秒对靠近的敌人造成伤害，伤害=角色伤害x[mul]。</description>
+			<growth>
+				<skill><mul>0.19</mul></skill>
+				<skill><mul>0.23</mul></skill>
+				<skill><mul>0.28</mul></skill>
+			</growth>
+		</skill>
+	</father>
+	
+	
+	
+	
+	<father name="deathRole" cnName="肉鸽角色-可购买">
+		<skill name="下蹲派生">
+			<name>hitMissileDR</name>
+			<cnName>下蹲派生</cnName><iconUrl>SkillIcon/hitMissile_hero</iconUrl><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>伤害系数[mul]</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>heroShoot</condition>
+			<otherConditionArr>isSquat</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<effectProArr>0.25</effectProArr>
+			<extraValueType>nowArmsHurt</extraValueType>
+			<mul>1</mul>
+			<!-- 子弹所需 -->
+			<obj>"name":"hitMissileDea","site":"shootPoint","flipB":false</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg></meEffectImg>
+			<targetEffectImg></targetEffectImg>
+			<description>下蹲时射击，都有[effectProArr.0]的概率派生跟踪导弹。导弹伤害为当前武器面板单发伤害x[mul]。</description>
+			<growth>
+				<skill><mul>2</mul></skill>
+				<skill><mul>2.7</mul></skill>
+				<skill><mul>3.4</mul></skill>
+			</growth>
+		</skill>
+		
+		<skill name="背袭">
+			<name>backstab</name><iconUrl>SkillIcon/backstab</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>背袭</cnName><ignoreImmunityB>1</ignoreImmunityB>
+			<changeText>伤害提高[mul-1]</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><condition>hit</condition><target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>backstab</effectType><effectFather>death</effectFather><changeHurtB>1</changeHurtB>
+			<mul>1.3</mul>
+			<pointEffectImg name="purpleClawSmall"/>
+			<description>当你面朝着敌人背面时，对敌人可造成额外[mul-1]的伤害。</description>
+			<growth>
+				<skill><mul>1.3</mul></skill>
+				<skill><mul>1.4</mul></skill>
+				<skill><mul>1.5</mul></skill>
+			</growth>
+		</skill>
+		<skill name="滑翔">
+			<name>glidingDR</name><iconUrl>SkillIcon/gliding_hero</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>滑翔</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>提升[mul]的伤害{n}</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>airDownKey</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>glidingDR</effectType><effectFather>death</effectFather>
+			<groundDieB>1</groundDieB>
+			<mul>0.25</mul>
+			<secMul>0.08</secMul>
+			<value></value>
+			<duration>99999</duration>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg></meEffectImg>
+			<stateEffectImg partType="2foot" con="add" raNum="30">bulletHitEffect/smoke_small</stateEffectImg>
+			<stateEffectImg2 name="greatSageCloud"/>
+			<description>在空中按下“蹲下”键后，人物将开启滑翔模式，并提高[mul]的伤害。落地或双击“蹲下”键，将清除技能效果。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>0.25</mul></skill>
+				<skill><mul>0.32</mul></skill>
+				<skill><mul>0.41</mul></skill>
+			</growth>
+		</skill>
+		
+		<skill name="余波">
+			<name>boomWaveDR</name><iconUrl>SkillIcon/boomWaveDR</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>余波</cnName><ignoreImmunityB>1</ignoreImmunityB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>提升[mul]的伤害{n}</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>touchDoKey</condition>
+			<otherConditionArr>touchName</otherConditionArr>
+			<conditionString>superCon</conditionString>
+			<target>me,range,enemy</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>boomWaveDR</effectType><effectFather>death</effectFather>
+			<mul>0.02</mul>
+			<duration>13</duration>
+			<range>99999</range>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="earthquake_me"/>
+			<stateEffectImg name="pullAttackHit_state"/>
+			<otherEffectImg name="foxLightning"/>
+			<description>打爆精英罐时，爆炸的余波会将眩晕所有敌人（除了罐内的精英怪），眩晕时间如下：小怪45秒、精英怪20秒、首领[duration]秒，并减少小怪[mul]的生命值。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>0.02</mul></skill>
+				<skill><mul>0.15</mul></skill>
+				<skill><mul>0.30</mul></skill>
+			</growth>
+		</skill>
+		
+		<skill name="整数增益">
+			<name>integerHurtDR</name><iconUrl>SkillIcon/integerHurtDR</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>整数增益</cnName><everNoClearB>1</everNoClearB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>提升[mul]的伤害{n}</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>integerHurtDR</effectType><effectFather>death</effectFather>
+			<value>5</value>
+			<mul>1.58</mul>
+			<duration>9999999</duration>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg name="crazy_vehicle_hand"/>
+			<![CDATA[<otherEffectImg name="murderous_hero_me"/>]]>
+			<description>当剩余弹药为[value]的倍数时，角色将获得[mul-1]增伤状态。注意，增伤效果是击中敌人时生效，不是在发射子弹时生效。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.6</mul></skill>
+				<skill><mul>1.8</mul></skill>
+				<skill><mul>2.0</mul></skill>
+			</growth>
+		</skill>
+		
+		<skill name="翻滚之噬">
+			<name>rollHoleDR</name><iconUrl>SkillIcon/rollHoleDR</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>翻滚之噬</cnName><noBeClearB>1</noBeClearB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>转换[mul]的弹药{n}</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>rollAction</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>rollHoleDR</effectType><effectFather>death</effectFather>
+			<mul>0.0000001</mul>
+			<duration>0.5</duration>
+			<range>70</range>
+			<!--图像------------------------------------------------------------ -->
+			<otherEffectImg name="invincibleEmp_point"/>
+			<description>翻滚时将清除身边的敌人子弹。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>0.0000001</mul></skill>
+				<skill><mul>0.0015</mul><description>翻滚时将吸收身边的敌人子弹，并转为当前武器[mul]的弹药。</description></skill>
+				<skill><mul>0.003</mul><description>翻滚时将吸收身边的敌人子弹，并转为当前武器[mul]的弹药。</description></skill>
+			</growth>
+		</skill>
+		
+		<skill name="攻防一体">
+			<name>lifeAddHurtDR</name><iconUrl>SkillIcon/lifeAddHurtDR</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>攻防一体</cnName><everNoClearB>1</everNoClearB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>转换[mul]的弹药{n}</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>lifeAddHurtDR</effectType><effectFather>death</effectFather>
+			<mul>0.030</mul>
+			<duration>9999999</duration>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg name="sequeHurt"/>
+			<description>获得与生命升级次数相关的增伤，增伤=生命升级次数x[mul]。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>0.030</mul></skill>
+				<skill><mul>0.036</mul></skill>
+				<skill><mul>0.042</mul></skill>
+			</growth>
+		</skill>
+		
+		<skill name="击毙回复">
+			<name>killAddLifeDR</name><iconUrl>SkillIcon/killAddLifeDR</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>击毙回复</cnName>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>补充[mul]的生命值</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition>
+			<otherConditionArr>targetLifePerLess</otherConditionArr>
+			<conditionRange>0.99999</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>life</effectType>
+			<value>0</value>
+			<mul>0.05</mul>
+			<!--附加属性 -->
+			<obj>"target":"now","addType":"add"</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="VanityKer_feeding_target"/>
+			<targetEffectImg></targetEffectImg>
+			<description>击毙单位后，补充自身[mul]的生命值。</description>
+			<growth>
+				<skill><mul>0.05</mul></skill>
+				<skill><mul>0.075</mul></skill>
+				<skill><mul>0.100</mul></skill>
+			</growth>
+		</skill>
+		
+		<skill name="电回击">
+			<name>lightningBackDR</name><iconUrl>SkillIcon/lightningBackDR</iconUrl><wantDescripB>1</wantDescripB>
+			<cnName>电回击</cnName>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>伤害系数[mul]</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit</condition>
+			<minTriggerT>0.2</minTriggerT>
+			<target targetMustLiveB="1">target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<extraValueType>meDpsFactor</extraValueType>
+			<effectType>lightningBackDR</effectType><effectFather>death</effectFather>
+			<mul>1.4</mul>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="electricLineSound"/>
+			<otherEffectImg name="yearDragon_bullet"/>
+			<description>受到攻击时，将释放一条闪电回击敌人，伤害=角色伤害x[mul]x当前难度怪物伤害系数。最短触发间隔[minTriggerT]秒。</description>
+			<growth>
+				<skill><mul>1.4</mul></skill>
+				<skill><mul>1.8</mul></skill>
+				<skill><mul>2.2</mul></skill>
+			</growth>
+		</skill>
+		
+		
+		<skill cnName="迷失光环"><!-- dps -->
+			<name>posErrorHalo</name>
+			<cnName>迷失光环</cnName><iconUrl>SkillIcon/posErrorHalo</iconUrl><wantDescripB>1</wantDescripB>
+			<changeText>移动速度降低[mul]</changeText>
+			<conditionType>passive</conditionType>
+			<condition>interval</condition>
+			<target>me,range,enemy</target>
+			
+			<addType>state</addType>
+			<effectType>posErrorHalo</effectType><effectFather>death</effectFather>
+			<mul>0.8</mul>
+			<duration>1</duration>
+			<range>99999</range>
+			<stateEffectImg name="upElectric2"/>
+			<description>降低所有敌人[1-mul]的移动速度，同时使敌人无法瞬移。</description>
+			<growth>
+				<skill><mul>0.8</mul></skill>
+				<skill><mul>0.6</mul></skill>
+				<skill><mul>0.45</mul></skill>
+			</growth>
+		</skill>
+		
+		<skill cnName="致残光环"><!-- dps -->
+			<name>disabledHaloDR</name>
+			<cnName>致残光环</cnName><iconUrl>SkillIcon/disabledHalo_pet</iconUrl><wantDescripB>1</wantDescripB>
+			<changeText>射速降低[mul]{n}或攻击力降低[secMul]</changeText>
+			<conditionType>passive</conditionType>
+			<condition>interval</condition>
+			<target>me,range,enemy</target>
+			
+			<addType>state</addType>
+			<effectType>shootSpeedOrHurtMul</effectType>
+			<mul>0.75</mul>
+			<secMul>0.75</secMul>
+			<duration>1</duration>
+			<range>99999</range>
+			<stateEffectImg partType="2hand">skillEffect/disabled_enemy</stateEffectImg>
+			<description>降低所有持枪敌人[1-mul]的射速、非持枪敌人[1-secMul]的攻击力。</description>
+			<growth>
+				<skill><mul>0.7</mul><secMul>0.7</secMul></skill>
+				<skill><mul>0.55</mul><secMul>0.55</secMul></skill>
+				<skill><mul>0.4</mul><secMul>0.4</secMul></skill>
+			</growth>
+		</skill>
+	</father>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<father name="deathRoleOther" cnName="肉鸽角色其他">
+		<skill>
+			<name>deathPro</name>
+			<cnName>属性加成</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>allHit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>pro</effectType><effectFather>death</effectFather>
+		</skill>
+		<skill>
+			<name>rollingDeath</name>
+			<cnName>翻滚</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<iconUrl>SkillIcon/rolling_hero</iconUrl>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>rollKey</condition>
+			<otherConditionArr>rollingDeath</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>rolling</effectType><effectFather>death</effectFather>
+			<minTriggerT>0.56</minTriggerT>
+			<mul>0</mul><!-- 限制玩家移动速度的影响 -->
+			<value>180</value><!-- 移动距离 -->
+			<duration>0.46</duration>
+			<secMul>0.36</secMul><!-- 移动持续的时间 -->
+			<stateEffectImg name="rolling_hero_state"/>
+			<otherEffectImg name="sprintSmoke"/>
+			<!--图像------------------------------------------------------------ -->
+			<description>按下翻滚键进行翻滚，期间不受攻击、子弹碰撞，最短触发间隔[minTriggerT]秒。</description>
+		</skill>
+		<skill>
+			<name>infiniteAnger</name>
+			<cnName>无限怒气</cnName><everNoClearB>1</everNoClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType><noBeClearB>1</noBeClearB>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>addAnger</effectType>
+			<value>100</value>
+			<duration>999999</duration>
+			<description>无限怒气。</description>
+		</skill>
+		<skill>
+			<name>weaponRosLost</name>
+			<cnName>副手硬直</cnName><everNoClearB>1</everNoClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType><noBeClearB>1</noBeClearB>
+			<condition>ros</condition>
+			<otherConditionArr>isWeaponHurt,targetIsHero</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>weaponRosLost</effectType><effectFather>death</effectFather>
+			<duration>0.8</duration>
+			<stateEffectImg name="pullAttackHit_state"/>
+			<description>副手攻击让持枪单位硬直时，使其失去射击能力[duration]秒钟。</description>
+		</skill>
+	</father>
+	<father name="drop">
+		<skill>
+			<name>deathGem</name>
+			<cnName>升级水晶</cnName>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>deathGem</effectType><effectFather>death</effectFather>
+			<meEffectImg name="murderous_enemy_state"/>
+		</skill>
+	</father>
+</data>

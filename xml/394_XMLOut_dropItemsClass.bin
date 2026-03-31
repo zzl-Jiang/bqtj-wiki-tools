@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="temp">
+		<drop keyB="1" cnName="武器" name="deathArms" noFollowHeroB="1" text="获得武器"/>
+		<drop keyB="1" cnName="装备" name="deathEquip" noFollowHeroB="1" text="获得装备"/>
+		<drop keyB="1" cnName="物品" name="deathThings" noFollowHeroB="1" text="获得物品"/>
+		<drop keyB="1" cnName="技能" name="deathSkill" noFollowHeroB="1" text="获得技能"/>
+	</father>
+	<father type="effect">
+		<drop keyB="1" cnName="升级水晶" name="deathGem" noFollowHeroB="1" imgUrl="NewIcon/deathGem"  lightImg="lightEffect/purgoldDrop" />
+		<drop keyB="1" cnName="收费弹药" name="deathCharger" text="弹药+10%" noFollowHeroB="1" imgUrl="NewIcon/deathCharger" lightImg="lightEffect/darkgoldDrop"/>
+		<drop keyB="1" cnName="宝箱钥匙" name="deathBoxKey" noFollowHeroB="1" imgUrl="NewIcon/deathBoxKey" lightImg="lightEffect/orangeDrop"/>
+		<drop cnName="秘银" name="silver" imgUrl="NewIcon/silver" imgRandom="5" lightImg="lightEffect/whiteSmall"/>
+		<drop cnName="血浆" name="plasma" imgUrl="NewIcon/plasma" imgRandom="5" lightImg="lightEffect/greenSmall"/>
+		<drop keyB="1" cnName="药瓶" name="bloodBottle" text="血量+50%" imgUrl="NewIcon/bloodBottle" noFollowHeroB="1" extraSkill="dropAddLife50" />
+		<drop keyB="1" cnName="小药瓶" name="smallBloodBottle" text="血量+20%" imgUrl="NewIcon/smallBloodBottle" noFollowHeroB="1" extraSkill="dropAddLife20" />
+		<drop keyB="1" cnName="大药瓶" name="bigBloodBottle" text="血量+100%" imgUrl="NewIcon/bigBloodBottle" noFollowHeroB="1" extraSkill="dropAddLife100" />
+		
+		
+		
+		<drop cnName="增加血量">
+			<name>addLifeMul</name>
+			<cnName>增加血量</cnName>
+			<text>+血量</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/addLifeMul</imgUrl><!-- 图像地址 -->
+			<extraSkill>DropEffect_AddLifeMul</extraSkill><!-- 附加技能状态 -->
+			<lifetime>60</lifetime>
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="增加弹药">
+			<name>addCharger</name>
+			<cnName>增加弹药</cnName>
+			<text>+弹药</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/addCharger</imgUrl><!-- 图像地址 -->
+			<extraSkill>DropEffect_AddChargerMul</extraSkill><!-- 附加技能状态 -->
+			<lifetime>60</lifetime>
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="增加银币">
+			<name>addCoin</name>
+			<cnName>增加银币</cnName>
+			<imgUrl>dropEffect/addCoin</imgUrl><!-- 图像地址 -->
+			<lifetime>60</lifetime>
+		</drop>
+		<drop cnName="活动掉落">
+			<name>addPumpkin</name>
+			<cnName>小南瓜</cnName>
+			<text>获得物品</text>
+			<imgUrl>ThingsIcon/pumpkin</imgUrl><!-- 要加上noFollowHeroB    pumpkin小南瓜  zongzi粽子：   candy糖果-->
+			<noFollowHeroB>1</noFollowHeroB>
+			<smallMapColor>0xFF00FFFF</smallMapColor>
+		</drop>
+		
+		<drop cnName="大银币-用于任务">
+			<name>addCoin_task</name>
+			<cnName>增加银币</cnName>
+			<imgUrl>dropEffect/addCoin_task</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+			<smallMapColor>0xFF00FFFF</smallMapColor>
+		</drop>
+		<drop cnName="血液样本-用于任务">
+			<name>bloodTask</name>
+			<cnName>血液样本</cnName>
+			<imgUrl>ThingsIcon/bloodSample</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+			<smallMapColor>0xFF00FFFF</smallMapColor>
+		</drop>
+		<drop cnName="血滴-用于任务">
+			<name>bloodDrop</name>
+			<cnName>血滴</cnName>
+			<imgUrl>ThingsIcon/bloodDrop</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="超能石-用于任务">
+			<name>skillStoneTask</name>
+			<cnName>超能石</cnName>
+			<imgUrl>ThingsIcon/skillStone</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		
+		<drop cnName="纪念币">
+			<name>addAniverCoin</name>
+			<cnName>增加纪念币</cnName>
+			<imgUrl>ThingsIcon/anniCoin</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="十年币">
+			<name>addTenCoin</name>
+			<cnName>增加十年币</cnName>
+			<imgUrl>ThingsIcon/tenCoin</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="零件券">
+			<name>addPartsCoin</name>
+			<cnName>增加零件券</cnName>
+			<imgUrl>ThingsIcon/partsCoin</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		
+		
+		<drop cnName="无敌药水">
+			<name>invincibleDrugDrop</name>
+			<cnName>无敌药水</cnName>
+			<imgUrl>dropEffect/invincibleDrug</imgUrl>
+			<extraSkill>invincibleDrugDrop</extraSkill>
+			<noFollowHeroB>1</noFollowHeroB>
+			<lifetime>15</lifetime>
+			<smallMapColor>0xFF00FFFF</smallMapColor>
+		</drop>
+		
+		<drop cnName="异祖龙-金球">
+			<name>FlyDragonBall</name>
+			<cnName>金球</cnName>
+			<lifetime>10</lifetime>
+			<imgUrl>FlyDragon/drop</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<![CDATA[稀有元素]]>
+		<drop cnName="稀有元素-黄">
+			<name>elementsYellow</name>
+			<cnName>稀有元素-黄</cnName>
+			<lifetime>10</lifetime>
+			<imgUrl>FireWolf/elementsYellow</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="稀有元素-红">
+			<name>elementsRed</name>
+			<cnName>稀有元素-红</cnName>
+			<lifetime>10</lifetime>
+			<imgUrl>FireWolf/elementsRed</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="稀有元素-绿">
+			<name>elementsGreen</name>
+			<cnName>稀有元素-绿</cnName>
+			<lifetime>10</lifetime>
+			<imgUrl>FireWolf/elementsGreen</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="稀有元素-蓝">
+			<name>elementsBlue</name>
+			<cnName>稀有元素-绿</cnName>
+			<lifetime>10</lifetime>
+			<imgUrl>FireWolf/elementsPurple</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<drop cnName="稀有元素-紫">
+			<name>elementsPurple</name>
+			<cnName>稀有元素-紫</cnName>
+			<lifetime>10</lifetime>
+			<imgUrl>FireWolf/elementsPurple</imgUrl><!-- 图像地址 -->
+			<noFollowHeroB>1</noFollowHeroB>
+		</drop>
+		<![CDATA[绿岛]]>
+		<drop keyB="1" cnName="无敌罐头" name="invinCanned" lifeTime="90" noFollowHeroB="1" text="无敌10秒" imgUrl="dropEffect/invinCanned" extraSkill="invinCannedDrop"/>
+		<drop keyB="1" cnName="增伤药剂" name="hurtDrug" lifeTime="90" noFollowHeroB="1" text="伤害加倍7秒" imgUrl="dropEffect/hurtDrug" extraSkill="hurtDrugDrop"/>
+		<drop keyB="1" cnName="眩晕地雷x2" name="hammerMineEffect" lifeTime="90" noFollowHeroB="1" text="获得眩晕地雷x2" imgUrl="dropEffect/hammerMine" extraSkill="hammerMineDrop"/>
+		<drop keyB="1" cnName="致命地雷x2" name="hurtMineEffect" lifeTime="90" noFollowHeroB="1" text="获得致命地雷x2" imgUrl="dropEffect/hurtMine" extraSkill="hurtMineDrop"/>
+		
+		
+	</father>
+	<father type="arms">
+		<drop cnName="手枪">
+			<name>pistol</name>
+			<cnName>手枪</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/arms</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="步枪">
+			<name>rifle</name>
+			<cnName>步枪</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/arms</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="狙击枪">
+			<name>sniper</name>
+			<cnName>狙击枪</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/arms</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="散弹枪">
+			<name>shotgun</name>
+			<cnName>散弹枪</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/arms</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="火箭筒">
+			<name>rocket</name>
+			<cnName>火箭筒</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/arms</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="激光枪">
+			<name>laser</name>
+			<cnName>激光枪</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/arms</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="弩">
+			<name>crossbow</name>
+			<cnName>弩</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/arms</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="喷火器">
+			<name>flamer</name>
+			<cnName>喷火器</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/arms</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="稀有武器">
+			<name>rareArms</name>
+			<cnName>稀有武器</cnName>
+			<text>获得武器</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/rareArms</imgUrl><!-- 图像地址 -->
+		</drop>
+		
+		
+		
+		
+	</father>
+	<father type="equip">
+		<![CDATA[绿岛]]>
+		
+		
+		
+		
+		
+		
+		<drop cnName="头盔">
+			<name>head</name>
+			<cnName>头盔</cnName>
+			<text>获得装备</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/equip</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="战衣">
+			<name>coat</name>
+			<cnName>战衣</cnName>
+			<text>获得装备</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/equip</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="战裤">
+			<name>pants</name>
+			<cnName>战裤</cnName>
+			<text>获得装备</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/equip</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="腰带">
+			<name>belt</name>
+			<cnName>腰带</cnName>
+			<text>获得装备</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/equip</imgUrl><!-- 图像地址 -->
+		</drop>
+		<![CDATA[
+		<drop cnName="地震发生器">
+			<name>earthquakeGenerator_1</name>
+			<cnName>地震发生器</cnName>
+			<text>获得装置</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/earthquakeGenerator</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="无尽轰炮">
+			<name>endlessRocket_1</name>
+			<cnName>无尽轰炮</cnName>
+			<text>获得装置</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/endlessRocket</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="闪电塔">
+			<name>lightningTower_1</name>
+			<cnName>闪电塔</cnName>
+			<text>获得装置</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/lightningTower</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="无尽轰炮">
+			<name>endlessRocket_1</name>
+			<cnName>无尽轰炮</cnName>
+			<text>获得装置</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/endlessRocket</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="闪电塔">
+			<name>lightningTower_1</name>
+			<cnName>闪电塔</cnName>
+			<text>获得装置</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/lightningTower</imgUrl><!-- 图像地址 -->
+		</drop>
+		]]>
+		<![CDATA[
+		<drop cnName="屠夫">
+			<name>butcherBlade_1</name>
+			<cnName>屠夫</cnName>
+			<text>获得副手</text><!-- 文本显示 -->
+			<imgUrl>weapon/butcherBlade_icon_1</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="月刺">
+			<name>moonDagger_1</name>
+			<cnName>月刺</cnName>
+			<text>获得副手</text><!-- 文本显示 -->
+			<imgUrl>weapon/moonDagger_icon_1</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="沃龙牌棍棒">
+			<name>wolongStick_1</name>
+			<cnName>沃龙牌棍棒</cnName>
+			<text>获得副手</text><!-- 文本显示 -->
+			<imgUrl>weapon/wolongStick_icon_1</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="剑齿镖">
+			<name>saberDarts_1</name>
+			<cnName>剑齿镖</cnName>
+			<text>获得副手</text><!-- 文本显示 -->
+			<imgUrl>weapon/saberDarts_icon_1</imgUrl><!-- 图像地址 -->
+		</drop>
+		]]>
+	</father>	
+	<father type="things">
+		<drop cnName="超能石">
+			<name>skillStone</name>
+			<cnName>超能石</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/skillStone</imgUrl><!-- 图像地址 -->
+		</drop>
+		
+		
+		<drop cnName="神能石">
+			<name>godStone</name>
+			<cnName>神能石</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/godStone</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="转化石">
+			<name>converStone</name>
+			<cnName>转化石</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/converStone</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="生命催化剂">
+			<name>lifeCatalyst</name>
+			<cnName>生命催化剂</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/lifeCatalyst</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="商券">
+			<name>taxStamp</name>
+			<cnName>商券</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/taxStamp</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="稀有宝箱">
+			<name>normalChest</name>
+			<cnName>稀有宝箱</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/normalChest</imgUrl><!-- 图像地址 -->
+		</drop>
+		
+		
+		<drop cnName="沙漠进袭者碎片">
+			<name>DesertTankCash</name>
+			<cnName>沙漠进袭者碎片</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/DesertTankCash</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="破晓碎片">
+			<name>DaybreakCash</name>
+			<cnName>破晓碎片</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/DaybreakCash</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="收割者碎片">
+			<name>RedReaperCash</name>
+			<cnName>收割者碎片</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/RedReaperCash</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="潜行者碎片">
+			<name>SeaSharkCash</name>
+			<cnName>潜行者碎片</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/SeaSharkCash</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="巨鲸碎片">
+			<name>BlueWhaleCash</name>
+			<cnName>巨鲸碎片</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/BlueWhaleCash</imgUrl><!-- 图像地址 -->
+		</drop>
+		
+		<drop cnName="先知碎片">
+			<name>ProphetCash</name>
+			<cnName>先知碎片</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/ProphetCash</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="制裁者碎片">
+			<name>TitansCash</name>
+			<cnName>碎片</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/TitansCash</imgUrl><!-- 图像地址 -->
+		</drop>
+		<drop cnName="泰坦碎片">
+			<name>PunisherCash</name>
+			<cnName>泰坦碎片</cnName>
+			<text>获得物品</text><!-- 文本显示 -->
+			<imgUrl>ThingsIcon/PunisherCash</imgUrl><!-- 图像地址 -->
+		</drop>
+		
+	</father>	
+	<father type="gene">
+		<drop cnName="基因体">
+			<name>gene</name>
+			<cnName>基因体</cnName>
+			<text>获得基因体</text><!-- 文本显示 -->
+			<imgUrl>dropEffect/gene</imgUrl><!-- 图像地址 -->
+		</drop>
+	</father>	
+</data>

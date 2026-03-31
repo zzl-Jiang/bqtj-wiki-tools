@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="we" cnName="我方">
+		
+		<body index="0" name="战士" shell="normal">
+			
+			<name>Striker</name>
+			<cnName>我</cnName>
+			<raceType>human</raceType>
+			<swfUrl>swf/hero/Striker358.swf</swfUrl>
+			<!-- 基本系数 -->
+			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 -->
+			<headIconUrl>IconGather/me</headIconUrl>
+			<showLevel>9999</showLevel>
+			<!-- 图像 -->
+			<![CDATA[添加新副手动作时，注意电离驱散里也要加]]>
+			<imgArr>
+				standStop,standForward,standBack,standStop__squatStop
+				,squatForward,squatStop,squatBack,squatStop__standStop
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+				,die1,die2,__stru,stru
+				,rollingBackAttack,rollingForwardAttack
+				,normalAttack1
+				,swordAttack,swordAfterAttack,bladeAttack,daggerAttack,stickAttack,ghost_swordAttack,great_stickAttack,sec_bladeAttack,sec_daggerAttack,sec_stickAttack,dartsAttack,shovelsAttack,spadeAttack
+				,shotgunBladeAttack
+				,sickleAttack
+				,yanluoAttack
+				,equipStand
+				,BlueMotoRide,RedMotoRide,WatchEagleRide
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<flyType>space</flyType><motionD F_AIR="6" />
+			<!-- AI属性 -->
+			
+			<armsNumber>0</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>firstRifle</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>striker</oneAiLabel>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<studyCnNameArr>狂暴,派生导弹,群体圣光,定点轰炸,吞噬,远视,群体隐身,万弹归宗,毒雾,反击,嗜爪,欺凌,金刚钻,魅惑,电离折射,馈赠,沉默,近视,先锋盾,精准,群体自燃,滑翔,翻滚,王者之翼,附身,全域光波</studyCnNameArr>
+			<p1SkillArr>吞噬,万弹归宗,远视,沉默,先锋盾,滑翔,翻滚,附身,全域光波</p1SkillArr>
+			<!-- 攻击数据 -->
+			<moreD dpsMul="0.8" underHurtMul="0.4" studySkillLvAdd="1" firstLv="6" />
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack1</imgLabel>
+					<hurtRatio>0.15</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt><!-- 镰刀攻击 -->
+					<imgLabel>sickleAttack</imgLabel><ingfollowB>1</ingfollowB>
+					<hurtRatio>0.05</hurtRatio>
+					<shakeValue>4</shakeValue><beatBack>2</beatBack>
+					<attackType>direct</attackType>
+					<hitImgUrl name="purpleSickle"/>
+				</hurt>
+				
+				
+				<hurt>
+					<imgLabel>bladeAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>daggerAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>8</shakeValue><beatBack>3</beatBack><screenShakeValue>6</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit2">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>sec_daggerAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>8</shakeValue><beatBack>3</beatBack><screenShakeValue>6</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit2">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>stickAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>sec_stickAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>dartsAttack</imgLabel>
+					<hurtRatio>0.2</hurtRatio>
+					<bulletLabel>saberDartsBullet</bulletLabel>
+					<grapRect>-660,-150,560,190</grapRect>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				
+				
+				
+				
+				
+				<hurt>
+					<imgLabel>spadeAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit_stone">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shovelsAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+					<grapRect>-171,-100,128,120</grapRect>
+				</hurt>
+				<hurt>
+					<imgLabel>shotgunBladeAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<skillArr>shotgunBladeHero</skillArr>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>swordAttack</imgLabel>
+					<hurtRatio>0.2</hurtRatio>
+					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>swordAfterAttack</imgLabel>
+					<hurtRatio>0.1</hurtRatio>
+					<skillArr>sprintSwordHit_extra</skillArr>
+					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>sec_bladeAttack</imgLabel><![CDATA[噬魂-屠夫，1刀，实际单刀伤害*1（WeaponDefine.hitNum）]]>
+					<hurtRatio>0.6</hurtRatio>
+					<shakeValue>15</shakeValue><beatBack>6</beatBack><screenShakeValue>12</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/metal_hit2">bulletHitEffect/bluntBig</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>ghost_swordAttack</imgLabel><![CDATA[刹鬼-凯撒，2刀，实际单刀伤害*2（WeaponDefine.hitNum）]]>
+					<hurtRatio>0.45</hurtRatio>
+					<shakeValue>15</shakeValue><beatBack>7</beatBack><screenShakeValue>15</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="purpleHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>great_stickAttack</imgLabel><![CDATA[大圣-棍棒，1刀，实际单刀伤害*2（WeaponDefine.hitNum）]]>
+					<hurtRatio>1.12</hurtRatio>
+					<shakeValue>15</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="yellowStickHit"/>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>snow_daggerAttack</imgLabel><![CDATA[雪影-月刺，3刀，实际单刀伤害*2（WeaponDefine.hitNum）]]>
+					<hurtRatio>0.39</hurtRatio>
+					<grapRect>-660,-150,560,190</grapRect>
+					<shakeValue>15</shakeValue><beatBack>6</beatBack><screenShakeValue>12</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="blueHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>yanluoAttack</imgLabel><![CDATA[阎罗-死神，8刀，实际单刀伤害*8（WeaponDefine.hitNum）]]>
+					<ingfollowB>1</ingfollowB>
+					<hurtRatio>0.02</hurtRatio>
+					<shakeValue>4</shakeValue><beatBack>2</beatBack>
+					<attackType>direct</attackType>
+					<hitImgUrl name="yanluoHit"/>
+				</hurt>
+				
+			</hurtArr>
+		</body>	
+		<body index="0" name="小樱" shell="normal">
+			
+			<name>Girl</name>
+			<cnName>小樱</cnName>
+			<sex>female</sex>
+			<raceType>human</raceType>
+			<swfUrl>swf/hero/Girl358.swf</swfUrl>
+			<description>一位温柔可爱、性格单纯的女孩，她将成为爆枪联盟的第一位女队员，但身世却一直是个迷。</description>
+			<!-- 基本系数 -->
+			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 -->
+			<headIconUrl>IconGather/Girl</headIconUrl>
+			
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,standStop__squatStop
+				,squatForward,squatStop,squatBack,squatStop__standStop
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,die1,__stru,stru
+				,normalAttack1,changeAttack
+				,rollingBackAttack,rollingForwardAttack
+				,swordAttack,swordAfterAttack,bladeAttack,daggerAttack,stickAttack,dartsAttack,shovelsAttack,spadeAttack
+				,snow_daggerAttack
+				,fox_dartsAttack
+				,shotgunBladeAttack
+				,sickleAttack
+				,officer_bladeAttack
+				,cowboyAttack
+				,mecha_swordAttack
+				,equipStand
+				,BlueMotoRide,RedMotoRide,WatchEagleRide
+			</imgArr>
+			<headPlayB>1</headPlayB>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<flyType>space</flyType><motionD F_AIR="6" />
+			
+			<!-- AI属性 -->
+			<armsNumber>1</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>pistol1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>mage</oneAiLabel>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<studyCnNameArr>智慧怒火,沉默,怒蜂,全域圣光,隐匿之雾,尖叫,反转术,妖魅,馈赠,金刚钻,近视,万弹归宗,远视,群体隐身,强击领域,精锐之师,先锋盾,滑翔,群蜂,合金护甲,翻滚,全域光波</studyCnNameArr>
+			<p1SkillArr>怒蜂,近视,万弹归宗,远视,群体隐身,强击领域,精锐之师,滑翔,群蜂,翻滚,全域光波</p1SkillArr>
+			<addMoreText>完成支线任务“寻找小樱”后入队</addMoreText>
+			<moreD dpsMul="0.65" underHurtMul="0.46" firstLv="35" studySkillLvAdd="1"/>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack1</imgLabel>
+					<hurtRatio>0.15</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt><!-- 镰刀攻击 -->
+					<imgLabel>sickleAttack</imgLabel><ingfollowB>1</ingfollowB>
+					<hurtRatio>0.05</hurtRatio>
+					<shakeValue>4</shakeValue><beatBack>2</beatBack>
+					<attackType>direct</attackType>
+					<hitImgUrl name="purpleSickle"/>
+				</hurt>
+				
+				
+				<hurt>
+					<imgLabel>bladeAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>daggerAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>8</shakeValue><beatBack>3</beatBack><screenShakeValue>6</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit2">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>sec_daggerAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>8</shakeValue><beatBack>3</beatBack><screenShakeValue>6</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit2">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>stickAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>sec_stickAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>dartsAttack</imgLabel>
+					<hurtRatio>0.2</hurtRatio>
+					<bulletLabel>saberDartsBullet</bulletLabel>
+					<grapRect>-171,-100,128,120</grapRect>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>spadeAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit_stone">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shovelsAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+					<grapRect>-171,-100,128,120</grapRect>
+				</hurt>
+				<hurt>
+					<imgLabel>shotgunBladeAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<skillArr>shotgunBladeHero</skillArr>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>swordAttack</imgLabel>
+					<hurtRatio>0.2</hurtRatio>
+					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>swordAfterAttack</imgLabel>
+					<hurtRatio>0.1</hurtRatio>
+					<skillArr>sprintSwordHit_extra</skillArr>
+					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/metal_hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>ghost_swordAttack</imgLabel>
+					<hurtRatio>0.45</hurtRatio>
+					<shakeValue>15</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="purpleHit"/>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>snow_daggerAttack</imgLabel><![CDATA[雪影-月刺，3刀，实际单刀伤害*2（WeaponDefine.hitNum）]]>
+					<hurtRatio>0.4</hurtRatio>
+					<shakeValue>15</shakeValue><beatBack>6</beatBack><screenShakeValue>12</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="blueHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>fox_dartsAttack</imgLabel><![CDATA[白狐-剑齿镖，子弹型）]]>
+					<hurtRatio>0.8</hurtRatio>
+					<bulletLabel>saberDartsFox</bulletLabel>
+					<grapRect>-735,-181,625,293</grapRect>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="purpleHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>officer_bladeAttack</imgLabel><![CDATA[惊雀-屠夫，1刀，实际单刀伤害*2（WeaponDefine.hitNum）]]>
+					<hurtRatio>0.56</hurtRatio>
+					<shakeValue>15</shakeValue><beatBack>6</beatBack><screenShakeValue>12</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="yellowHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>cowboyAttack</imgLabel><![CDATA[猎风-棍棒，1刀，实际单刀伤害*1（WeaponDefine.hitNum）]]>
+					<hurtRatio>1.1</hurtRatio>
+					<shakeValue>15</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="yellowStickHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>mecha_swordAttack</imgLabel><![CDATA[刹鬼-凯撒，2刀，实际单刀伤害*2（WeaponDefine.hitNum）]]>
+					<hurtRatio>0.45</hurtRatio>
+					<shakeValue>15</shakeValue><beatBack>7</beatBack><screenShakeValue>15</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="purpleHit"/>
+				</hurt>
+				
+				
+			</hurtArr>
+		</body>	
+		<![CDATA[六周年已添加]]>
+		<body index="0" name="心零" shell="normal">
+			
+			<name>XinLing</name>
+			<cnName>心零</cnName>
+			<sex>female</sex>
+			<raceType>human</raceType>
+			<movieLink>Girl</movieLink>
+			<swfUrl>swf/hero/XinLing.swf</swfUrl>
+			<description>制毒师的女助手，即将成为爆枪小队的第二位女成员。</description>
+			<!-- 基本系数 -->
+			<rosRatio>0.2</rosRatio>
+			<!-- 图像 -->
+			<headIconUrl>IconGather/XinLing</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>rocket1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>sniper</oneAiLabel>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<studyCnNameArr>妖魅,嘲讽,遇强则刚,复仇,共鸣,暗夜信徒,恶爪</studyCnNameArr>
+			<addMoreText>完成支线任务“训练女助手”后入队</addMoreText>
+			<moreD dpsMul="0.55" underHurtMul="0.35" studySkillLvAdd="1" firstLv="50" />
+		</body>	
+		<body index="0" name="丛林特种兵" shell="normal">
+			
+			<name>Jungle</name>
+			<cnName>丛林特种兵</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/Jungle.swf</swfUrl>
+			<!-- 基本系数 -->
+			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/Jungle</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>pistol_two,shotgun_two</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>1</shootLenMul>
+			<oneAiLabel>mage</oneAiLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<studyCnNameArr>群体圣光,反击,远视,万弹归宗,吞噬,金刚钻,狂暴,嗜爪,毒雾,隐身,定点轰炸,派生导弹,欺凌,魅惑,电离折射,馈赠</studyCnNameArr>
+			<addMoreText>暂未开放</addMoreText>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>
+		<body index="0" name="文杰表哥" shell="normal">
+			
+			<name>WenJie</name>
+			<cnName>文杰表哥</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/WenJie360.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/WenJie</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>shotgun1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>shotgun</oneAiLabel>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<bossSkillArr>myopia_hero_1</bossSkillArr>
+			<studyCnNameArr>真空,群体圣光,反击,反制,毒雾,群体隐身,吞噬,万弹归宗,欺凌,魅惑,加速扳机,电离折射,嗜爪,馈赠,翻滚,近视,滑翔,沉默,先锋盾,群体自燃,合金护甲,抵御,全域光波</studyCnNameArr>
+			<p1SkillArr>真空,欺凌,加速扳机,滑翔,沉默,翻滚,合金护甲,全域光波</p1SkillArr>
+			<addMoreText></addMoreText>
+			<moreD dpsMul="0.5" underHurtMul="0.3" arenaUnderHurtMul="2" studySkillLvAdd="1" firstLv="6" />
+			
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+			
+		</body>	
+		<body index="0" name="雇佣兵" shell="normal">
+			
+			<name>ATian</name>
+			<cnName>雇佣兵</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/ATian.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/ATian</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ak47,shotgun1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+			
+		</body>
+		<body index="0" name="摩卡" shell="normal">
+			
+			<name>Mocha</name>
+			<cnName>摩卡</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/Mocha360.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/Mocha</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>1</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>shotgunSkunkTwo</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>shotgun</oneAiLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>	
+		<body index="0" name="藏师将军" shell="normal">
+			
+			<name>ZangShi</name>
+			<cnName>藏师将军</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/ZangShi360.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/ZangShi</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>5</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>sniperRifle,rocket1,pistol1,ak47,shotgun1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>sniper</oneAiLabel>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr>crazy_hero_2,through_hero_2,murderous_hero_2</skillArr>
+			<bossSkillArr>pointBoom_hero_2,hiding_hero_2</bossSkillArr>
+			<studyCnNameArr>万弹归宗,定点轰炸,欺凌,金刚钻,派生导弹,嗜爪,远视,狂暴,群体圣光,反击,精准,全局溅射,血盾,藐视,元素叠加</studyCnNameArr>
+			<addMoreText>完成主线任务“营救藏师”后入队</addMoreText>
+			<moreD dpsMul="1" underHurtMul="0.55" studySkillLvAdd="2" firstLv="16" />
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+			
+		</body>
+		<body index="0" name="沙漠特种兵" shell="normal">
+			
+			<name>DesertCommando</name>
+			<cnName>沙漠特种兵</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/DesertCommando.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/DesertCommando</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>pistol_two,shotgun_two</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>shotgun</oneAiLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>	
+		
+		<body index="0" name="制毒师">
+			
+			<name>Doctor</name>
+			<cnName>制毒师</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink><showLevel>9999</showLevel>
+			<swfUrl>swf/hero/Doctor360.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/Doctor</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>pistol2</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr>poisonousFog_hero_5,charm_hero_1</skillArr>
+			<addMoreText>暂未开放</addMoreText>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>
+		<body index="0" name="“制毒师”">
+			
+			<name>Doctor2</name>
+			<cnName>“制毒师”</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/Doctor2.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/Doctor</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>pistol2,shotgun_two</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr>poisonousFog_hero_5</skillArr>
+			<bossSkillArr>poisonClaw_enemy,Doctor2_cloned,corrosion_hugePosion,corrosion_enemy,disabledHalo_enemy</bossSkillArr>
+			<bossSkillArrCn>毒爪、毒雾、分身、蚀毒、腐蚀、致残光环</bossSkillArrCn>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>
+		<body>
+			<name>Striker2</name>
+			<cnName>本我</cnName><showLevel>9999</showLevel>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/Striker358.swf</swfUrl>
+			<swfName>Striker</swfName>
+			<!-- 基本系数 -->
+			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 -->
+			<headIconUrl>IconGather/me</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>12</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ak47</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr></bossSkillArr>
+		</body>
+		
+		
+		
+	</father>
+	
+	<father name="enemy" cnName="敌方">
+		<body index="0" name="僵尸突击兵">
+			
+			<name>ZombieSoldier</name>
+			<cnName>僵尸突击兵</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieSoldier.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>0.8</lifeRatio>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,belt
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -75, 24, 75</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>6</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ak47,pistol1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>0.7</shootLenMul>
+			<!-- 技能 -->
+			<skillArr>crazy_enemy</skillArr>
+			<bossSkillArr>skillGift_enemy,moreMissile_enemy,selfBurn_enemy</bossSkillArr>
+			<bossSkillArrCn>自燃，万弹归宗，馈赠</bossSkillArrCn>
+			<demBossSkillArr>selfBurn_enemy</demBossSkillArr>
+		</body>
+		<body index="0" name="僵尸空降兵" shell="compound">
+			
+			<name>ZombieAirborne</name>
+			<cnName>僵尸空降兵</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieAirborne.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>0.8</lifeRatio>
+			<!-- 图像 -->
+			<aircraft>normal</aircraft>
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,belt
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -75, 24, 75</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<motionState>fly</motionState>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ak47,pistol1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>0.7</shootLenMul>
+			<!-- 技能 -->
+			<skillArr>crazy_enemy</skillArr>
+			<bossSkillArr>poisonClaw_enemy,bullying_enemy</bossSkillArr>
+			<bossSkillArrCn>欺凌，毒爪</bossSkillArrCn>
+		</body>
+		
+		<body index="0" name="僵尸狙击兵" shell="metal">
+			
+			<name>ZombieShoot</name>
+			<cnName>僵尸狙击兵</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieShoot.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>0.7</lifeRatio>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,belt
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -75, 24, 75</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>6</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>sniperRifle,pistol1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>0.6</shootLenMul>
+			<!-- 技能 -->
+			<skillArr>hyperopia_incapable</skillArr>
+			<bossSkillArr>pointBoom_enemy,murderous_enemy,slowMove_enemy</bossSkillArr>
+			<bossSkillArrCn>定点轰炸，嗜爪，减速</bossSkillArrCn>
+			<demBossSkillArr>murderous_enemy</demBossSkillArr>
+		</body>
+		
+		<body index="0" name="僵尸暴枪兵">
+			
+			<name>ZombieViolence</name>
+			<cnName>僵尸暴枪兵</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieViolence.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>1.2</lifeRatio>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,belt
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -85, 24, 85</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>6</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>shotgun1,pistol2</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>0.8</shootLenMul>
+			<!-- 技能 -->
+			<skillArr>bullying_enemy</skillArr>
+			<bossSkillArr>recovery_enemy,tenacious_enemy,feedback_enemy</bossSkillArr>
+			<bossSkillArrCn>复原，反击，电离折射</bossSkillArrCn>
+		</body>
+		<body index="0" name="僵尸空军总管" shell="compound">
+			
+			<name>ZombieAirForce</name>
+			<cnName>僵尸空军总管</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieAirForce.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>1</lifeRatio>
+			<!-- 图像 -->
+			<aircraft>normal</aircraft>
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+				,skillAttack1
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,belt
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -85, 24, 85</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>7</maxVx>
+			<squatMaxVx>4</squatMaxVx>
+			<motionState>fly</motionState>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ZombieShell_rocket</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>0.7</shootLenMul>
+			<!-- 技能 -->
+			<skillArr>through_enemy</skillArr>
+			<bossSkillArr>crazy_enemy,slowMove_enemy,sweep_enemy,pointBoom_enemy</bossSkillArr>
+			<bossSkillArrCn>狂暴，导弹召唤，减速，万弹归宗，定点轰炸</bossSkillArrCn>
+			<demBossSkillArr>crazy_enemy,slowMove_enemy</demBossSkillArr>
+		</body>
+		<body index="0" name="僵尸炮兵总管" shell="metal">
+			
+			<name>ZombieShell</name>
+			<cnName>僵尸炮兵总管</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieShell.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1.2</lifeRatio>
+			<showLevel>6</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+				,skillAttack1
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,belt
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -85, 24, 85</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>6</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ZombieShell_rocket</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>0.7</shootLenMul>
+			<!-- 技能 -->
+			<skillArr>groupLight_enemy</skillArr>
+			<bossSkillArr>sweep_enemy,moreMissile_enemy,pointBoom_enemy</bossSkillArr>
+			<bossSkillArrCn>群体圣光，导弹召唤，万弹归宗，定点轰炸</bossSkillArrCn>
+		</body>
+		<body index="0" name="防暴僵尸" shell="metal">
+			
+			<name>ZombieRiotl</name>
+			<cnName>防暴僵尸</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieRiotl.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>1</lifeRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,belt
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -85, 24, 85</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>1</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ZombieRiotl_rocket</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>0.7</shootLenMul>
+			<!-- 技能 -->
+			<skillArr>skillGift_enemy</skillArr>
+			<bossSkillArr>sweep_enemy,pointBoom_enemy,skillGift_enemy,strong_enemy</bossSkillArr>
+			<bossSkillArrCn>导弹召唤，万弹归宗，定点轰炸，馈赠，顽强</bossSkillArrCn>
+			<demBossSkillArr>strong_enemy,through_hero_10</demBossSkillArr>
+		</body>
+		<body index="0" name="火炮僵尸王">
+			
+			<name>ZombieBoomKing</name>
+			<cnName>火炮僵尸王</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieBoomKing.swf</swfUrl>
+			<headIconUrl>IconGather/PetZombieKing</headIconUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>2.5</lifeRatio>
+			<showLevel>20</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,belt
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -110, 24, 110</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>10</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ZombieBoomKing_rocket,shotgun_two</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>0.8</shootLenMul>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>paralysis_enemy,selfBurn_enemy,imploding_enemy,sweep_shell,UnderRos_AddMove_Battle,crazy_enemy</bossSkillArr>
+			<demBossSkillArr>paralysis_enemy</demBossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+		</body>
+		<body index="0" name="天鹰特种兵" shell="metal">
+			
+			<name>TUNCommando</name>
+			<cnName>天鹰特种兵</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/TUNCommando.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/TUNAirborne</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>5</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ZombieBoomKing_rocket,sniperRifle,pistol_two,ak47,shotgun_two</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>rebirth_enemy,feedback_enemy,recovery_enemy</bossSkillArr>
+			<bossSkillArrCn>重生，电离折射，复原</bossSkillArrCn>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>	
+		<body index="0" name="天鹰空降兵" shell="compound">
+			
+			<name>TUNAirborne</name>
+			<cnName>天鹰空降兵</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/TUNAirborne.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<aircraft>normal</aircraft>
+			<headIconUrl>IconGather/TUNAirborne</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<motionState>fly</motionState>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ZombieBoomKing_rocket,pistol_two,shotgun_two</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr>through_enemy</skillArr>
+			<bossSkillArr>imploding_enemy,sweep_enemy,moreMissile_enemy,pointBoom_enemy</bossSkillArr>
+			<bossSkillArrCn>爆石，导弹召唤，万弹归宗，定点轰炸</bossSkillArrCn>
+			<demBossSkillArr>imploding_enemy,moreMissile_enemy</demBossSkillArr>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>	
+		
+		<body index="0" name="鬼目射手">
+			
+			<name>LingShooter</name>
+			<cnName>鬼目射手</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/LingShooter.swf</swfUrl>
+			<headIconUrl>IconGather/ZombieLing</headIconUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>0.8</lifeRatio>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				
+			</lowerImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -75, 24, 40</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<motionState>fly</motionState>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>lingGun</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>1</shootLenMul>
+			<!-- 技能 -->
+			<skillArr>silence_enemy,globalSpurting_enemy</skillArr>
+			<bossSkillArr>disabledHalo_enemy,hidingAll_enemy,paralysis_enemy</bossSkillArr>
+			<bossSkillArrCn>沉默、致残光环、群体隐身、闪电麻痹</bossSkillArrCn>
+			<demBossSkillArr>silence_enemy</demBossSkillArr>
+		</body>
+		<body index="0" name="亚瑟" shell="metal">
+			
+			<name>Arthur</name>
+			<cnName>亚瑟</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/Arthur360.swf</swfUrl>
+			<!-- 基本系数 -->
+			<showLevel>30</showLevel>
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/Arthur</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>3</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>pistol_two,shotgun_two,ZombieBoomKing_rocket</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>feedback_enemy,recovery_enemy,pointBoom_enemy,selfBurn_enemy,imploding_enemy,sweep_shell,UnderRos_AddMove_Battle,crazy_enemy</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<demBossSkillArr>feedback_enemy,crazy_enemy</demBossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>
+		<body index="0" name="狂战射手">
+			
+			<name>FightShooter</name>
+			<cnName>狂战射手</cnName><headIconUrl>IconGather/FightKing</headIconUrl>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/FightShooter.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>2.5</lifeRatio>
+			<showLevel>44</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,die1,die2
+				,choppedAttack,windAttack
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<lifeBarExtraHeight>-20</lifeBarExtraHeight>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-20, -110, 40, 110</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>12</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>1</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>rocket_fight</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<shootLenMul>2.5</shootLenMul>
+			<extraAIClassLabel>FightKing_AIExtra</extraAIClassLabel>
+			<oneAiLabel>FightShooter</oneAiLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>choppedAttack_FightShooter,windAttack_FightShooter,FightKing_crazy,groupLight_enemy,globalSpurting_enemy,tenacious_enemy</bossSkillArr>
+			<demBossSkillArr>choppedAttack_FightShooter,windAttack_FightShooter,FightKing_crazy</demBossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>choppedAttack</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>7</shakeValue>
+					<hitImgUrl con="add" soundUrl="FightShooter/hit2">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>windAttack</imgLabel>
+					<hurtRatio>0.3</hurtRatio>
+					<skillArr>FightKing_slowMove</skillArr>
+					<attackType>direct</attackType>
+					<shakeValue>6</shakeValue>
+					<grapRect>-350,-111,300,105</grapRect>
+					<hitImgUrl con="add" soundUrl="FightShooter/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		<body index="0" name="小美" shell="normal">
+			
+			<name>XiaoMei</name>
+			<cnName>天鹰小美</cnName>
+			<sex>female</sex>
+			<raceType>human</raceType>
+			<swfUrl>swf/hero/XiaoMei.swf</swfUrl>
+			<description>小樱的孪生姐妹，从小在天鹰军团长大，未来将成为爆枪小队成员。</description>
+			<!-- 基本系数 -->
+			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<showLevel>55</showLevel>
+			<movieLink>Girl</movieLink>
+			<!-- 图像 -->
+			<headIconUrl>IconGather/XiaoMei</headIconUrl>
+			<headPlayB>1</headPlayB>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<flyType>space</flyType><motionD F_AIR="6" />
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>XiaoMei_pistol,XiaoMei_rocket</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>XiaoMei</oneAiLabel>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<studyCnNameArr>智慧怒火,隐匿之雾,尖叫,技能复制,尸化,先锋盾,反击</studyCnNameArr>
+			<addMoreText>完成支线任务“回家”后入队</addMoreText>
+			<moreD dpsMul="0.9" underHurtMul="0.65" studySkillLvAdd="41" firstLv="95" />
+			<!-- 技能 -->
+			<bossSkillArr>wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,changeToZombie_enemy</bossSkillArr>
+			<extraG label="ExtraTaskAI" bossSkillArr="wisdomAnger_hero_1,screaming_hero_7,invisibility_enemy,skillCopy_enemy,changeToZombie_enemy,murderous_enemy">
+				<extra lifeMin="0.7" skillArr=""/>
+				<extra lifeMin="0.4" skillArr=""/>
+				<extra lifeMin="0" skillArr=""/>
+			</extraG>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack1</imgLabel>
+					<hurtRatio>0.15</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		<body index="0" name="奇皇博士" shell="normal">
+			
+			<name>QiHuang</name>
+			<cnName>奇皇博士</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/QiHuang.swf</swfUrl>
+			<!-- 基本系数 -->
+			<showLevel>28</showLevel>
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/QiHuang</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ak47,shotgun1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>rebirth_enemy,recovery_enemy,groupLight_enemy,tenacious_enemy</bossSkillArr>
+			<demBossSkillArr>bullying_enemy</demBossSkillArr>
+			<bossSkillArrCn>重生，复原，群体圣光，反击</bossSkillArrCn>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>
+		
+		<body index="0" name="鬼影战士" shell="normal">
+			
+			<name>GhostSoldier</name>
+			<cnName>鬼影战士</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/GhostSoldier.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/GhostSoldier</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<oneAiLabel>shootHead</oneAiLabel>
+			<!-- AI属性 -->
+			<dropD rareSuit="normal"/>
+			<armsNumber>5</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ZombieBoomKing_rocket,sniperRifle,pistol_two,ak47,shotgun_two</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>through_enemy,rebirth_enemy,feedback_enemy,recovery_enemy,groupLight_enemy,tenacious_enemy</bossSkillArr>
+			<bossSkillArrCn>永久金刚钻，重生，电离折射，复原，群体圣光，反击</bossSkillArrCn>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>	
+		
+		<body index="0" name="鬼爵" shell="normal">
+			<name>GhostDuke</name>
+			<cnName>鬼爵</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/GhostDuke360.swf</swfUrl>
+			<!-- 基本系数 -->
+			<showLevel>999</showLevel>
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/GhostDuke</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>12</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<dropD rareSuit="normal" extraRareArmsArr="shotgunFire,pistolGod" />
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>rifleWhite,shotgunFire,pistolGod,sniperGreen,rocketSky</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>rebirth_enemy,poisonClaw_enemy,Doctor2_cloned,corrosion_hugePosion,corrosion_enemy,disabledHalo_enemy</bossSkillArr>
+			<bossSkillArrCn>重生、毒爪、分身、蚀毒、腐蚀、致残光环</bossSkillArrCn>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraG label="ExtraTaskAI" bossSkillArr="rebirth_enemy,poisonClaw_enemy,Doctor2_cloned,corrosion_hugePosion,corrosion_enemy,disabledHalo_enemy">
+				<extra lifeMin="0.7" skillArr=""/>
+				<extra lifeMin="0.4" skillArr=""/>
+				<extra lifeMin="0" skillArr=""/>
+			</extraG>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>
+		
+		
+		
+		
+		<body index="0" name="流亡者" shell="normal">
+			<name>exilesSoldier</name>
+			<cnName>流亡者</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfName>exilesSuit</swfName>
+			<showLevel>9999</showLevel>
+			<!-- 基本系数 -->
+			<headIconUrl>NewIcon/liuwang</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect>
+			<squatHitRect>-12,-50,24,50</squatHitRect>
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> 
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> 
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> 
+			<!-- 运动 -->
+			<maxVx>15</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>4</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>smileCrossbow</randomArmsRange>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr></bossSkillArr>
+		</body>
+	</father>	
+</data>

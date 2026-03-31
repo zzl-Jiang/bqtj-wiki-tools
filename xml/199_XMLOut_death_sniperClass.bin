@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="sniper" cnName="狙击枪">
+		<![CDATA[橙色]]>
+		<bullet color="orange">
+			<name>sniperSmilodonDea</name>
+			<cnName>破障·剑齿</cnName><dpsMul>0.93</dpsMul>
+			<iconUrl>newGun/sniperSmilodon_icon</iconUrl>
+			<capacity>45</capacity>
+			<attackGap>1.3</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>800</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<penetrationGap>1000</penetrationGap>
+			
+			<beatBack>10</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootShakeAngle>25</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>	
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<shootSoundUrl>sniper2/barrel_sound</shootSoundUrl>
+			<bodyImgRange>specialGun/sniperSmilodon</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		<bullet color="orange">
+			<name>sniperGreenDea</name>
+			<cnName>绞杀·猎隼</cnName><dpsMul>0.74</dpsMul><skillArr>fullCrushGod</skillArr>
+			<iconUrl>newGun/sniperGreen_icon</iconUrl>
+			<capacity>50</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>1000</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<penetrationGap>200</penetrationGap>
+			
+			<beatBack>10</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootShakeAngle>25</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>	
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<shootSoundUrl>sniper2/barrel_sound</shootSoundUrl>
+			<bodyImgRange>specialGun/sniperGreen</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		<![CDATA[紫色]]>
+		
+		
+		
+		<bullet color="purple">
+			<name>svdBlue</name>
+			<cnName>豫让</cnName><dpsMul>0.79</dpsMul>
+			<iconUrl>newGun/svdBlue_icon</iconUrl>
+			<capacity>76</capacity>
+			<attackGap>1.3</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>800</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<penetrationGap>200</penetrationGap>
+			
+			<beatBack>10</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootShakeAngle>25</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>	
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<shootSoundUrl>sniper2/barrel_sound</shootSoundUrl>
+			<bodyImgRange>newGun/svdBlue</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		
+		<![CDATA[蓝色]]>
+		<bullet color="blue">
+			<name>awpYellow</name>
+			<cnName>贯体之刃</cnName><dpsMul>0.79</dpsMul>
+			<iconUrl>newGun/awpYellow_icon</iconUrl>
+			<capacity>200</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>1100</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<penetrationNum>7</penetrationNum><speedD penDec="1"/>
+			
+			<beatBack>10</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootShakeAngle>25</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>	
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<shootSoundUrl>sniper1/barrel_sound</shootSoundUrl>
+			<bodyImgRange>newGun/awpYellow</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		<bullet color="blue">
+			<name>awpGreen</name>
+			<cnName>剧毒之刃</cnName><dpsMul>0.79</dpsMul>
+			<iconUrl>newGun/awpGreen_icon</iconUrl>
+			<capacity>181</capacity>
+			<attackGap>1.1</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>1100</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<skillArr>poisonArmsDea</skillArr>
+			
+			<beatBack>10</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootShakeAngle>25</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>	
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<lineD lightColor="0x00CC00" size="2" lightSize="6" blendMode="add" type="one" />
+			<shootSoundUrl>sniper1/barrel_sound</shootSoundUrl>
+			<bodyImgRange>newGun/awpGreen</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+			<skill name="剧毒">
+				<name>poisonArmsDea</name>
+				<cnName>剧毒</cnName>
+				<!--触发条件与目标------------------------------------------------------------ -->
+				<conditionType>passive</conditionType><noSkillDodgeB>1</noSkillDodgeB>
+				<condition>hit</condition>
+				<target>target</target>
+				<!--效果------------------------------------------------------------ -->
+				<addType>state</addType>
+				<effectType>hurtFromChildLock</effectType>
+				<valueString>poison</valueString>
+				<extraValueType>hurtValue</extraValueType>
+				<value>0</value>
+				<mul>0.2</mul>
+				<doGap>1</doGap>
+				<duration>5</duration>
+				<!--图像------------------------------------------------------------ -->
+				<meEffectImg></meEffectImg>
+				<stateEffectImg partType="mouth" con="add">skillEffect/poisonousFog_hero</stateEffectImg>
+				<description>击中目标后使其中毒，每秒受到伤害为击中伤害的[mul]，持续[duration]秒。</description>
+			</skill>
+	</father>
+	
+	<father type="sniper" cnName="狙击枪">
+		<bullet>
+			<name>barrettM82</name>
+			<cnName>巴雷特</cnName><dpsMul>1.2</dpsMul>
+			<iconUrl>newGun/barrettM82_icon</iconUrl>
+			
+			<capacity>6</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>900</bulletWidth>
+			<bulletNum>1</bulletNum>				
+						
+			<beatBack>10</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>3</upValue>
+			<shootShakeAngle>15</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>		
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!-- <smokeImgUrl>sub/missile_bullet_smoke</smokeImgUrl>--><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>sniper1/barrel2_sound</shootSoundUrl>
+			<bodyImgRange>newGun/barrettM82</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	
+	<father name="deathArms">
+		
+	</father>
+</data>

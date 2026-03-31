@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="lightning">
+		<bullet color="purple" sightMul="2">
+			<name>electricArcS</name>
+			<cnName>极弧S</cnName>
+			<aiShootRange>700</aiShootRange><!-- ai射程 -->
+			<dpsMul>0.060</dpsMul>
+			<iconUrl>newGun/electricArcSIcon</iconUrl>
+			<!--基本-->
+			<capacity>200</capacity>
+			<attackGap>0.4</attackGap>
+			<reloadGap>2</reloadGap>
+			<bulletWidth>25</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>1</shootAngle>
+			<shakeAngle>13</shakeAngle>
+			<noShakeTime>0.5</noShakeTime>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>10</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>5</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noHitB>1</noHitB>
+			<bulletLife>5</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<bulletSkillArr>electricArcSunPRE</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD selfB="1"/>
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>armsToMousePoint</skillArr>
+			<godSkillArr></godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>sound/lightningShoot</shootSoundUrl>
+			<bulletImgUrl name="electricArcBullet"/>
+			<selfBoomImgUrl name="yearDragon_hit"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/electricArcS</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>前后2颗子弹之间将产生电弧，持续对敌人造成伤害。子弹本体没有伤害。</info>
+		</bullet>
+		
+		<bullet color="blue" sightMul="1.5">
+			<name>electricArc</name>
+			<cnName>极弧</cnName>
+			<aiShootRange>700</aiShootRange><!-- ai射程 -->
+			<dpsMul>0.060</dpsMul>
+			<iconUrl>newGun/electricArcIcon</iconUrl>
+			<!--基本-->
+			<capacity>400</capacity>
+			<attackGap>0.4</attackGap>
+			<reloadGap>2</reloadGap>
+			<bulletWidth>25</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>1</shootAngle>
+			<shakeAngle>13</shakeAngle>
+			<noShakeTime>0.5</noShakeTime>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>10</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>5</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noHitB>1</noHitB>
+			<bulletLife>5</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<bulletSkillArr>electricArcSunPRE</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD selfB="1"/>
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<skillArr></skillArr>
+			<godSkillArr></godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>sound/lightningShoot</shootSoundUrl>
+			<bulletImgUrl name="electricArcBullet"/>
+			<selfBoomImgUrl name="yearDragon_hit"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/electricArc</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>前后2颗子弹之间将产生电弧，持续对敌人造成伤害。子弹本体没有伤害。</info>
+		</bullet>
+		<![CDATA[
+		<bullet color="orange" sightMul="1.3">
+			<name>electricArcX</name>
+			<cnName>极弧X</cnName>
+			<aiShootRange>700</aiShootRange><!-- ai射程 -->
+			<dpsMul>0.12</dpsMul>
+			<iconUrl>newGun/electricArcIcon</iconUrl>
+			<!--基本-->
+			<capacity>200</capacity>
+			<attackGap>0.35</attackGap>
+			<reloadGap>2</reloadGap>
+			<bulletWidth>25</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>1</shootAngle>
+			<shakeAngle>13</shakeAngle>
+			<noShakeTime>0.5</noShakeTime>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>10</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>5</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noHitB>1</noHitB>
+			<bulletLife>4</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>15</bulletSpeed>
+			<bulletSkillArr>electricArcSunPRE</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD selfB="1"/>
+			<penetrationNum>999</penetrationNum>
+			<skillArr></skillArr>
+			<godSkillArr></godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>sound/lightningShoot</shootSoundUrl>
+			<bulletImgUrl name="electricArcBullet"/>
+			<selfBoomImgUrl name="yearDragon_hit"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/electricArcX</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>前后2颗子弹之间将产生电弧，持续对敌人造成伤害（可穿透敌人）。子弹本身没有伤害。</description>
+		</bullet>
+		]]>
+				<bullet cnName="电弧-闪电">
+					<name>electricArcSun</name>
+					<cnName>电弧-闪电</cnName><armsType>lightning</armsType>
+					<noMagneticB>1</noMagneticB>
+					<!--伤害属性------------------------------------------------------------ -->
+					<hurtRatio>1</hurtRatio>
+					<!--基本属性------------------------------------------------------------ -->
+					<hitType>longLine</hitType>
+					<bulletLife>0.034</bulletLife>
+					<bulletNum>1</bulletNum>
+					<bulletWidth>900</bulletWidth>
+					<bulletSpeed>0</bulletSpeed>
+					<bulletImgUrl name="BallLightning_frozenLine_bullet"/>
+					<penetrationNum>999</penetrationNum>
+					<penetrationGap>1000</penetrationGap>
+					<hitImgUrl name="paralysisHit"/>
+				</bullet>
+	</father>
+</data>
