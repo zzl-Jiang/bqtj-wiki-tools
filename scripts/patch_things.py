@@ -3,7 +3,7 @@ Things 数据补丁脚本
 
 功能：在 parse_things.py 生成的数据基础上，通过 Arms 数据进行水合补全。
 补全范围（按需扩展）：
-    - 黑色/暗金/紫金/空间武器碎片：补全 smeltD、btnList、iconUrl 等
+    - 黑色/暗金/紫金/氩金武器碎片：补全 smeltD、btnList、iconUrl 等
     - 稀有武器碎片：补全描述、smeltD 等
 
 注意：
@@ -21,20 +21,19 @@ THINGS_JSON_DIR = './data/things/json'
 ARMS_JSON_DIR = './data/arms/json'
 PATCHED_SUFFIX = '_patched'
 
-# 武器颜色等级映射（根据 AS 源码 EquipColor）
+# 武器颜色等级映射
 COLOR_PRIORITY = {
     "rare": 1,      # 红武稀有碎片
     "black": 2,     # 黑武碎片
     "darkgold": 3,  # 暗金碎片
     "purgold": 4,   # 紫金碎片
-    "yagold": 5,    # 空间碎片
+    "yagold": 5,    # 氩金碎片
 }
 
-# Smelt 配置（根据 AS 源码 ThingsDefineGroup.inBlackArmsRangeArr）
+# Smelt 配置
 def get_smelt_config(items_level: int, color: str) -> Dict[str, Any]:
     """
     根据物品等级和颜色返回 smeltD 配置
-    逻辑参考 AS: ThingsDefineGroup.inBlackArmsRangeArr
     """
     config = {
         "type": "armsChip",
@@ -151,7 +150,6 @@ def is_weapon_chip(thing_data: Dict) -> tuple[bool, Optional[str]]:
 def patch_black_weapon_chip(thing_data: Dict, arms_data: Dict) -> bool:
     """
     修补黑色武器碎片数据
-    参考 AS: ThingsDefineGroup.inBlackArmsRangeArr
 
     返回: 是否进行了修补
     """
@@ -208,7 +206,6 @@ def patch_black_weapon_chip(thing_data: Dict, arms_data: Dict) -> bool:
 def patch_rare_weapon_chip(thing_data: Dict, arms_data: Dict) -> bool:
     """
     修补稀有武器碎片数据
-    参考 AS: ThingsDefineGroup.inRareArmsRangeArr
 
     返回: 是否进行了修补
     """
@@ -264,6 +261,83 @@ def patch_rare_weapon_chip(thing_data: Dict, arms_data: Dict) -> bool:
     return True
 
 
+def get_rare_chip_template(things_index: Dict) -> Dict[str, Any]:
+    """
+    获取 rareChip 模板数据
+    用于生成新的稀有武器碎片时作为基础
+    """
+    if 'rareChip' in things_index:
+        return things_index['rareChip']['data'].copy()
+    # 如果没有模板，返回基础结构
+    return {
+        'father': 'rareChip',
+        'fatherCnName': '稀有碎片',
+        'hideB': True,
+        'addDropDefineB': True,
+    }
+
+
+def generate_rare_chips(things_index: Dict, arms_data: Dict) -> int:
+    """
+    生成缺失的稀有武器碎片
+
+    根据 AS 源码逻辑：
+    - 遍历所有武器，找到 chipNum > 0 的武器
+    - 从 rareChip 模板复制属性
+    - 生成新的稀有碎片
+
+    返回: 生成的碎片数量
+    """
+    # 获取模板
+    template = get_rare_chip_template(things_index)
+
+    generated = 0
+
+    for arm_name, arm_data in arms_data.items():
+        # 检查是否有碎片（AS: haveChipB() -> chipNum > 0）
+        chip_num = arm_data.get('chipNum', 0)
+        if chip_num <= 0:
+            continue
+
+        # 检查是否已存在对应的稀有碎片
+        if arm_name in things_index:
+            continue
+
+        # 获取武器信息
+        weapon_cn_name = arm_data.get('cnName', '')
+        rare_drop_level = arm_data.get('rareDropLevel', 1)
+
+        # 创建新的稀有碎片
+        rare_chip = template.copy()
+        rare_chip.update({
+            'name': arm_name,
+            'cnName': f'{weapon_cn_name}稀有碎片',
+            'secType': 'arms',
+            'description': f'合成{weapon_cn_name}所需物品。',
+            'itemsLevel': rare_drop_level,
+            'iconUrl': f'ThingsIcon/{arm_name}',
+            'smeltD': {
+                'type': 'armsChip',
+                'grade': 1,
+                'price': 10
+            },
+            'btnList': ['compose'],
+            '_generated': True,
+            '_patchSource': 'arms_rare_generated'
+        })
+
+        # 添加到索引
+        things_index[arm_name] = {
+            'data': rare_chip,
+            'file': os.path.join(THINGS_JSON_DIR, f'{arm_name}.json')
+        }
+
+        generated += 1
+        print(f"  [稀有碎片/生成] {arm_name} ({rare_chip['cnName']})")
+
+    return generated
+
+
 def run_patch():
     """
     主流程：加载数据、匹配、修补、保存
@@ -272,26 +346,32 @@ def run_patch():
     print(" Things 数据补丁工具")
     print("=" * 50)
 
-    # 1. 加载武器数据
-    print("\n[1/4] 加载武器数据...")
+    # 加载武器数据
+    print("\n[1/5] 加载武器数据...")
     arms_data = load_arms_data()
     if not arms_data:
         print("[!] 无法加载武器数据，补丁中止")
         return
 
-    # 2. 加载 things 数据
-    print("\n[2/4] 加载 Things 数据...")
+    # 加载 things 数据
+    print("\n[2/5] 加载 Things 数据...")
     things_index = load_things_data()
     if not things_index:
         print("[!] 无法加载 Things 数据，补丁中止")
         return
 
-    # 3. 匹配并修补
-    print("\n[3/4] 应用补丁...")
+    # 生成缺失的稀有碎片
+    print("\n[3/5] 生成缺失的稀有武器碎片...")
+    generated_count = generate_rare_chips(things_index, arms_data)
+    print(f"[OK] 生成了 {generated_count} 个稀有碎片")
+
+    # 匹配并修补
+    print("\n[4/5] 应用补丁...")
 
     patch_stats = {
         'black_weapon_chips': 0,
         'rare_weapon_chips': 0,
+        'generated': generated_count,
         'skipped': 0,
         'errors': 0
     }
@@ -317,6 +397,10 @@ def run_patch():
                     print(f"  [黑武碎片] {thing_name} ({thing_data.get('cnName')})")
 
             elif father == 'rareChip':
+                # 跳过多生成的（已经在上一步处理过）
+                if thing_data.get('_generated'):
+                    patch_stats['rare_weapon_chips'] += 1
+                    continue
                 patched = patch_rare_weapon_chip(thing_data, arms_data)
                 if patched:
                     patch_stats['rare_weapon_chips'] += 1
@@ -329,15 +413,15 @@ def run_patch():
             print(f"  [!] 处理 {thing_name} 时出错: {e}")
             patch_stats['errors'] += 1
 
-    # 4. 保存结果
-    print(f"\n[4/4] 保存修补后的数据...")
+    # 保存结果
+    print(f"\n[5/5] 保存修补后的数据...")
 
     total_patched = 0
     for thing_name, thing_info in things_index.items():
         thing_data = thing_info['data']
 
-        # 只保存被修补过的文件
-        if thing_data.get('_patched'):
+        # 保存被修补过或新生成的文件
+        if thing_data.get('_patched') or thing_data.get('_generated'):
             try:
                 file_path = thing_info['file']
                 with open(file_path, 'w', encoding='utf-8') as f:
@@ -351,10 +435,11 @@ def run_patch():
     print(" 补丁完成报告")
     print("=" * 50)
     print(f" 黑色武器碎片已修补: {patch_stats['black_weapon_chips']}")
-    print(f" 稀有武器碎片已修补: {patch_stats['rare_weapon_chips']}")
+    print(f" 稀有武器碎片已生成: {patch_stats['generated']}")
+    print(f" 稀有武器碎片已修补: {patch_stats['rare_weapon_chips'] - patch_stats['generated']}")
     print(f" 跳过 (无匹配武器): {patch_stats['skipped']}")
     print(f" 错误: {patch_stats['errors']}")
-    print(f" 文件已更新: {total_patched}")
+    print(f" 文件已更新/生成: {total_patched}")
     print("=" * 50)
 
 
