@@ -10,17 +10,13 @@
 - **双路输出**：
   - 生成单个文件的 `.json`（用于留档与核对）
   - 生成符合 HuijiBot 格式的 `.xlsx` 批量更新表
-- **数据水合**：通过 Arms 数据补全武器碎片缺失字段（如 smeltD、itemsLevel）
+- **数据水合**：通过补充数据补全缺失字段
 
 ## 目录结构
 
 ```
 .
 ├── scripts/                # Python 处理脚本
-│   ├── parse_arms.py       # 武器数据处理器
-│   ├── parse_skills.py     # 技能数据处理器
-│   ├── parse_things.py     # 物品数据处理器
-│   └── patch_things.py     # 物品数据补丁（水合）
 ├── core/                   # 核心解析模块
 │   ├── cleaner.py          # XML 清洗器
 │   ├── parser.py           # XML 解析器
@@ -60,16 +56,9 @@
 ```bash
 # 处理武器数据（输出至 data/arms/）
 python scripts/parse_arms.py
-
-# 处理技能数据（输出至 data/skills/）
-python scripts/parse_skills.py
-
-# 处理物品数据（输出至 data/things/）
-python scripts/parse_things.py
-
-# 对物品数据应用补丁（补全武器碎片字段，需先运行 parse_arms.py）
-python scripts/patch_things.py
 ```
+
+以及 scripts 文件夹下的其余脚本
 
 ### 3. 上传数据到 Wiki
 
@@ -79,7 +68,7 @@ python scripts/patch_things.py
 
 ## 注意事项
 
-- `data/` 和 `materials/` 目录已加入 `.gitignore`，生成的数据文件和参考材料不会提交
+- `data/` 目录已加入 `.gitignore`，生成的数据文件不会提交
 - XML 文件常存在格式问题（属性间缺少空格），由 `XmlCleaner` 自动处理
 - 本项目仅供 wiki 编辑者学习交流使用，请勿用于商业或非法用途
 
