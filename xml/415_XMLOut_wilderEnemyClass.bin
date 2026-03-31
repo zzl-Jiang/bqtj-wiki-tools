@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="wilder" cnName="秘境">
+		<body index="0" name="守望者" shell="metal">
+			
+			<name>WatchEagle</name>
+			<cnName>守望者</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/WatchEagle341.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<flipCtrlBy>target</flipCtrlBy>
+			<dieJumpMul>0</dieJumpMul>
+			<showLevel>999</showLevel>
+			<imgArr>
+				stand,move,hurt1,die1
+				,shootAttack
+				,normalAttack
+				,subductionAttack
+				,subductionAttack2
+				,subductionAttack3
+				,sprintAttack
+				,windAttack
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-25,-15,50,30</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>10</maxVx>
+			<motionState>fly</motionState><flyUseSpiderB>1</flyUseSpiderB><flyType>tween</flyType>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>WatchEagle_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<bulletLauncherClass>VehicleBulletLauncher</bulletLauncherClass>
+			<skillArr>sprint_WatchEagle,wind_WatchEagle</skillArr>
+			<bossSkillArr>noBounce_enemy</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<uiSkillArr>gas_WatchEagle</uiSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<skillArr></skillArr>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl>bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>WatchEagle_shoot</bulletLabel>
+					<grapRect>-400,-50,450,200</grapRect>
+					<hurtRatio>0.001</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				<hurt>
+					<imgLabel>subductionAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<grapRect>-87,61,146,262</grapRect>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<skillArr></skillArr>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>subductionAttack2</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<grapRect>-101,-300,119,211</grapRect>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<skillArr></skillArr>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>subductionAttack3</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<grapRect>-262,-42,212,96</grapRect>
+					<hurtRatio>1</hurtRatio>
+					<attackType>direct</attackType>
+					<skillArr></skillArr>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				
+				<hurt  info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>sprintAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtMul>0.05</hurtMul>
+					<grapRect>-73,150,146,200</grapRect>
+					<hurtRatio>1</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>windAttack</imgLabel>
+					<hurtMul>0.2</hurtMul>
+					<bulletLabel>WatchEagle_wind</bulletLabel>
+					<grapRect>-300,12,270,100</grapRect>
+					<hurtRatio>0.0000001</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="异角龙">
+			
+			<name>Triceratops</name>
+			<cnName>异角龙</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/Triceratops87.swf</swfUrl>
+			<!-- 基本系数 -->
+
+			<lifeRatio>2</lifeRatio>
+			<dieJumpMul>0</dieJumpMul>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move
+				,stoneAttack,eggAttack,shootAttack,normalAttack,poisonAttack,magicAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,die1
+			</imgArr>
+			<imgType>normal</imgType>
+			
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-80</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>6</maxVx>
+			<runStartVx>11</runStartVx>
+			<motionD jumpDelayT="0.18"/>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr>noBounce_enemy</skillArr>
+			<uiSkillArr></uiSkillArr>
+			<bossSkillArr>Triceratops_stone,Triceratops_egg,Triceratops_oasis,Triceratops_deserted,noDegradation</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>3</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>Triceratops_shoot</bulletLabel>
+					<grapRect>-400,-111,100,150</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>poisonAttack</imgLabel>
+					<bulletLabel>Triceratops_poison</bulletLabel>
+					<grapRect>-300,-111,100,200</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>stoneAttack</imgLabel>
+					<hurtRatio>1</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>magicAttack</imgLabel>
+					<grapRect>-300,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="异祖龙" shell="normal">
+			
+			<name>FlyDragon</name>
+			<cnName>异祖龙</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/FlyDragon.swf</swfUrl>
+			<rosRatio>2</rosRatio>
+			<headHurtMul>0.4</headHurtMul>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<flipCtrlBy>target</flipCtrlBy>
+			<showLevel>999</showLevel>
+			<imgArr>
+				stand,move,hurt1,die1
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,rollAttack,__rollAttack,rollAttack__
+				,shootAttack
+				,thornAttack
+				,sprintAttack
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-27,-23,50,54</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>10</maxVx>
+			<motionState>fly</motionState><flyUseSpiderB>1</flyUseSpiderB><flyType>tween</flyType>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>FlyDragon_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>FlyDragon_fireSurround,FlyDragonBall,FlyDragon_dodgePro,FlyDragon_summoned,FlyDragon_hammer,noDegradation,FlyDragon_likeMissle,fightReduct,defenceBounce_enemy</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<uiSkillArr></uiSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				
+				<hurt>
+					<imgLabel>thornAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<skillArr></skillArr>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>FlyDragon_fireball</bulletLabel>
+					<grapRect>-400,-50,300,200</grapRect>
+					<hurtRatio>1.2</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>sprintAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtMul>0.05</hurtMul>
+					<grapRect>-350,-17,270,97</grapRect>
+					<hurtRatio>0.5</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>rollAttack</imgLabel>
+					<grapRect>-350,-17,270,97</grapRect>
+					<noAiChooseB>1</noAiChooseB>
+					<noShootB>1</noShootB>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="异齿虎" shell="compound">
+			
+			<name>SaberTiger</name>
+			<cnName>异齿虎</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/SaberTiger.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<lifeRatio>2</lifeRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,run,die1
+				,normalAttack,shootAttack,laserAttack,missileAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-20</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>6</maxVx>
+			<runStartVx>12</runStartVx>
+			<!-- AI属性 -->
+			
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<bulletLauncherClass>VehicleBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<bossSkillArr>fightReduct,strong_enemy,State_SpellImmunity,SaberTiger_ChemicalTank,SaberTiger_rebirth,SaberTiger_shield,SaberTiger_shield_defence,SaberTiger_laser,SaberTiger_missile</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>SaberTiger_machine</bulletLabel>
+					<grapRect>-400,-111,250,105</grapRect>
+					<hurtRatio>0.1</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>laserAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,250,105</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>missileAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<bulletLabel>SaberTiger_missile</bulletLabel>
+					<grapRect>-400,-111,250,105</grapRect>
+					<hurtMul>0.1</hurtMul>
+					<attackType>holy</attackType>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="异猛象" shell="metal">
+			
+			<name>Mammoth</name>
+			<cnName>异猛象</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/Mammoth.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<lifeRatio>2</lifeRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				stand,die1
+				,normalAttack,missileAttack,summonAttack,shakeAttack,shootAttack
+			</imgArr>
+			<flipCtrlBy>no</flipCtrlBy>
+			<dieJumpMul>0</dieJumpMul>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-200</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>0</maxJumpNum>
+			<maxVx>0</maxVx>
+			<!-- AI属性 -->
+			
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>State_SpellImmunity,strong_enemy,defenceBounce_enemy,fightReduct,Mammoth_hurt,weDieTogather,Mammoth_coreShow,Mammoth_wolf,Mammoth_core,Mammoth_electricity,Mammoth_missile</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>2</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>Mammoth_shoot</bulletLabel>
+					<grapRect>-800,-800,1600,1600</grapRect>
+					<hurtRatio>0.1</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>shakeAttack</imgLabel><noAiChooseB>1</noAiChooseB><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>missileAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<bulletLabel>Mammoth_missile</bulletLabel>
+					<grapRect>-400,-111,250,105</grapRect>
+					<hurtMul>0.05</hurtMul>
+					<attackType>holy</attackType>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="虚空客" shell="metal">
+			
+			<name>VanityKer</name>
+			<cnName>虚空客</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/VanityKer.swf</swfUrl>
+			<rosRatio>2</rosRatio>
+			<headHurtMul>1</headHurtMul>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<flipCtrlBy>target</flipCtrlBy>
+			<showLevel>999</showLevel>
+			<imgArr>
+				stand,move,hurt1,die1
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,shootAttack
+				,missleAttack
+				,lightAttack
+				,normalAttack
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-27,-23,50,54</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>10</maxVx>
+			<motionState>fly</motionState><flyUseSpiderB>1</flyUseSpiderB><flyType>tween</flyType>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel></extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>strong_enemy,VanityKer_antimatter,State_SpellImmunity,VanityKer_dreamland,VanityKer_rayBuff,VanityKer_comet,fightReduct,defenceBounce_enemy</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<uiSkillArr></uiSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>VanityKer_shoot</bulletLabel>
+					<grapRect>-400,-50,300,200</grapRect>
+					<hurtRatio>0.12</hurtRatio>
+				</hurt>
+				<hurt>
+					<imgLabel>missleAttack</imgLabel>
+					<bulletLabel>VanityKer_missle</bulletLabel>
+					<grapRect>-341,28,279,115</grapRect>
+					<hurtRatio>1</hurtRatio>
+				</hurt>
+				
+				<hurt info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>lightAttack</imgLabel>
+					<grapRect>-350,-17,270,97</grapRect>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="年兽" shell="compound">
+			
+			<name>NianMonster</name>
+			<cnName>年兽</cnName><editD raIfNoMapB="1"/>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/NianMonster.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<lifeRatio>2</lifeRatio>
+			<showLevel>999</showLevel>
+			<headHurtMul>0.7</headHurtMul>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,die1,run
+				,normalAttack,shootAttack,sparkAttack,dartsAttack,changeAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-120</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>6</maxVx>
+			<runStartVx>8</runStartVx>
+			<!-- AI属性 -->
+			
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<bulletLauncherClass></bulletLauncherClass>
+			<skillArr></skillArr>
+			<bossSkillArr>fightReduct,defenceBounce_enemy,cmldef2_enemy,desertedHalo_enemy,noSpeedReduce,Nian_change,Nian_spark</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>Nian_fireball</bulletLabel>
+					<grapRect>-500,-111,350,105</grapRect>
+					<hurtRatio>0.5</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt>
+					<imgLabel>dartsAttack</imgLabel>
+					<bulletLabel>Nian_darts</bulletLabel>
+					<grapRect>-344,-93,302,109</grapRect>
+					<hurtRatio>1</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>sparkAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,250,105</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>changeAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,250,105</grapRect>
+				</hurt>
+				
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="虚炎狼" shell="compound">
+			
+			<name>FireWolf</name>
+			<cnName>虚炎狼</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/FireWolf.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<lifeRatio>2</lifeRatio>
+			<showLevel>999</showLevel>
+			<headHurtMul>0.7</headHurtMul>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,die1
+				,normalAttack,sprintAttack,shootAttack,rockFireAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-120</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>6</maxVx>
+			<runStartVx>8</runStartVx>
+			<!-- AI属性 -->
+			<avtiveSkillCdOverT>0.1</avtiveSkillCdOverT>
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<bulletLauncherClass></bulletLauncherClass>
+			<skillArr></skillArr>
+			<bossSkillArr>fightReduct,defenceBounce_enemy,FireWolf_rockFire,FireWolf_cloned,FireWolf_elements,FireWolf_noFire</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraAIClassLabel>FireWolf_AIExtra</extraAIClassLabel>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>sprintAttack</imgLabel>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<continuousNum>2</continuousNum>
+					<grapRect>-220,-160,170,250</grapRect>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>FireWolf_shoot</bulletLabel>
+					<grapRect>-350,-200,160,180</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>rockFireAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,250,105</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="虚洪螈">
+			
+			<name>Salamander</name>
+			<cnName>虚洪螈</cnName>
+			<raceType>zombie</raceType>
+			<swfUrl>swf/enemy/Salamander.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<lifeRatio>2</lifeRatio>
+			<rosRatio>0.15</rosRatio>
+			<showLevel>999</showLevel>
+			<headHurtMul>0.7</headHurtMul>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,die1,hurt1
+				,normalAttack1,normalAttack2,shootAttack,waterAttack,windAttack,inAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-120</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>9</maxVx>
+			<runStartVx>12</runStartVx>
+			<!-- AI属性 -->
+			<avtiveSkillCdOverT>0.1</avtiveSkillCdOverT>
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<bulletLauncherClass></bulletLauncherClass>
+			<skillArr></skillArr>
+			<bossSkillArr>cmldef2_enemy,bubblesGotoCamp,Salamander_burrow,Salamander_wather,Salamander_back,Salamander_bubbles</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraAIClassLabel>Salamander_AIExtra</extraAIClassLabel>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack1</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>1</hurtRatio><attackType>direct</attackType><shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>normalAttack2</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>1</hurtRatio><attackType>direct</attackType><shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>Salamander_shoot</bulletLabel>
+					<hurtRatio>0.7</hurtRatio><shakeValue>4</shakeValue><attackType>direct</attackType>
+					<grapRect>-320,-160,250,250</grapRect>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>waterAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<bulletLabel>Salamander_water</bulletLabel>
+					<hurtMul>0.25</hurtMul><hurtRatio>0</hurtRatio><shakeValue>4</shakeValue><attackType>holy</attackType>
+					<grapRect>-320,-160,250,250</grapRect>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>windAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.2</hurtRatio><attackType>direct</attackType><grapRect>-220,-160,170,250</grapRect>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>inAttack</imgLabel><noAiChooseB>1</noAiChooseB><grapRect>-220,-160,170,250</grapRect>
+					<hurtMul>0.4</hurtMul><hurtRatio>0</hurtRatio><shakeValue>4</shakeValue><attackType>holy</attackType>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="虚晶蝎" shell="normal">
+			
+			<name>VirtualScorpion</name>
+			<cnName>虚晶蝎</cnName>
+			<raceType>zombie</raceType>
+			<swfUrl>swf/enemy/VirtualScorpion.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<doubleLifeBarB>1</doubleLifeBarB>
+			<lifeRatio>2</lifeRatio>
+			<rosRatio>0.15</rosRatio>
+			<showLevel>999</showLevel>
+			<headHurtMul>0.7</headHurtMul>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,die1,hurt1
+				,normalAttack,tailAttack,shootAttack,pressAttack,windAttack,lightAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-60</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>9</maxVx>
+			<runStartVx>12</runStartVx>
+			<!-- AI属性 -->
+			<avtiveSkillCdOverT>0.1</avtiveSkillCdOverT>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>defenceBounce_enemy,fightReduct,VirtualScorpion_press,VirtualScorpion_wind,VirtualScorpion_defence,VirtualScorpion_light</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraAIClassLabel>VirtualScorpion_AIExtra</extraAIClassLabel>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>1</hurtRatio><attackType>direct</attackType><shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="15">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>tailAttack</imgLabel><mustGrapRectB>1</mustGrapRectB><exactGrapRectB>1</exactGrapRectB>
+					<hurtRatio>1</hurtRatio><attackType>direct</attackType><shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="15">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<bulletLabel>VirtualScorpion_shoot</bulletLabel>
+					<hurtRatio>0.7</hurtRatio><shakeValue>4</shakeValue><attackType>direct</attackType>
+					<grapRect>-450,-105,268,114</grapRect>
+				</hurt>
+				
+				<hurt info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>pressAttack</imgLabel>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.5</hurtMul>
+					<attackType>holy</attackType>
+					<hitImgUrl soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>windAttack</imgLabel>
+					<bulletLabel>VirtualScorpion_yinWind</bulletLabel>
+					<bulletArr>VirtualScorpion_yangWind</bulletArr>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.3</hurtMul>
+					<attackType>holy</attackType>
+					<grapRect>-450,-105,268,114</grapRect>
+				</hurt>
+				<hurt info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>lightAttack</imgLabel>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.15</hurtMul>
+					<attackType>holy</attackType>
+					<hitImgUrl soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+	</father>
+	<father name="wilder" cnName="枯荣镇">
+		<body index="0" name="炸裂者" shell="normal">
+			
+			<name>DryFrog</name>
+			<cnName>炸裂者</cnName><headIconUrl>IconGather/DryFrog</headIconUrl>
+			<raceType>zombie</raceType>
+			<swfUrl>swf/enemy/DryFrog.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<lifeRatio>2</lifeRatio>
+			<showLevel>999</showLevel>
+			<headHurtMul>1</headHurtMul>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,die1,hurt1
+				,normalAttack,shootAttack,pullAttack,rotateAttack,pourAttack,leapAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-80</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>8</maxVx>
+			<runStartVx>10</runStartVx>
+			<!-- AI属性 -->
+			<avtiveSkillCdOverT>0.1</avtiveSkillCdOverT>
+			<nextAttackTime>0</nextAttackTime>
+			<preBulletArr>DryFrogPour_zero</preBulletArr>
+			<!-- 技能 -->
+			<bulletLauncherClass></bulletLauncherClass>
+			<skillArr></skillArr>
+			<bossSkillArr>fightReduct,defenceBounce_enemy,DryFrogPull,DryFrogRotate,DryFrogPour,DryFrogJump</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraAIClassLabel>DryFrog_AIExtra</extraAIClassLabel>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><cn>飞踹</cn>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel><cn>投弹</cn>
+					<bulletLabel>DryFrog_shoot</bulletLabel>
+					<grapRect>-366,-108,171,108</grapRect>
+					<hurtRatio>0.5</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				
+				<hurt  info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>pullAttack</imgLabel>
+					<hurtRatio>0.001</hurtRatio>
+					<skillArr>DryFrogPullHit,DryFrogPullPosion</skillArr>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt  info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>rotateAttack</imgLabel>
+					<bulletLabel>DryFrogRotate</bulletLabel>
+					<hurtRatio>1</hurtRatio>
+					<grapRect>-300,-111,250,105</grapRect>
+				</hurt>
+				<hurt  info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>pourAttack</imgLabel>
+					<bulletLabel>DryFrogPour</bulletLabel>
+					<hurtMul>0.12</hurtMul>
+					<attackType>holy</attackType>
+					<grapRect>-300,-111,250,105</grapRect>
+				</hurt>
+				<hurt  info="不加入ai选择"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>leapAttack</imgLabel>
+					<skillArr>emp_wind</skillArr>
+					<hurtMul>0.2</hurtMul>
+					<attackType>holy</attackType>
+					<grapRect>-300,-111,250,105</grapRect>
+					<hitImgUrl con="add" soundUrl="sound/laserShoot2">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<![CDATA[
+				<hurt>
+					<imgLabel>sprintAttack</imgLabel>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<continuousNum>2</continuousNum>
+					<grapRect>-220,-160,170,250</grapRect>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt info="不加入ai选择">
+					<imgLabel>rockFireAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,250,105</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				]]>
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="极速守卫" shell="metal">
+			
+			<name>FastGuards</name>
+			<cnName>极速守卫</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/FastGuards.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<lifeRatio>2</lifeRatio>
+			<showLevel>999</showLevel>
+			<headHurtMul>3</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgArr>
+				stand,move,die1,hurt1
+				,shootAttack,eleAttack,screenAttack,missileAttack,springAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,die1
+			</imgArr>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>15</maxVx>
+			<!-- AI属性 -->
+			<avtiveSkillCdOverT>0.1</avtiveSkillCdOverT>
+			<nextAttackTime>0</nextAttackTime>
+			<preBulletArr>FastGuards_screen,FastGuards_missileChild,FastGuards_missileSun</preBulletArr>
+			<!-- 技能 -->
+			<bulletLauncherClass>VehicleBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<bossSkillArr>fightReduct,FastGuards_spring,eleField_FastGuards,FastGuards_screen,FastGuards_missile</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraAIClassLabel>FastGuards_AIExtra</extraAIClassLabel>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>FastGuards_shoot</bulletLabel>
+					<grapRect>-366,-108,171,108</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt name="不加入ai选择">
+					<imgLabel>missileAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<bulletLabel>FastGuards_missile</bulletLabel>
+					<grapRect>-366,-108,171,108</grapRect>
+					<hurtRatio>2</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				
+				<hurt name="不加入ai选择">
+					<imgLabel>springAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<noUseOtherSkillB>1</noUseOtherSkillB>
+					<ingfollowB>1</ingfollowB>
+					<hurtMul>0.05</hurtMul>
+					<attackType>holy</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt name="不加入ai选择">
+					<imgLabel>FastGuards_screen</imgLabel><noAiChooseB>1</noAiChooseB>
+					<noUseOtherSkillB>1</noUseOtherSkillB>
+					<grapRect>-366,-108,171,108</grapRect>
+				</hurt>
+				<![CDATA[
+				<hurt>
+					<imgLabel>move</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				]]>
+				
+				
+			</hurtArr>
+		</body>
+		
+		<body index="0" name="编织者" shell="compound">
+			
+			<name>Weaver</name>
+			<cnName>编织者</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/Weaver.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>2</lifeRatio>
+			<showLevel>999</showLevel>
+			<headHurtMul>2</headHurtMul>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move
+				,normalAttack,shootAttack,smokeAttack,webAttack,summonedAttack,thornAttack
+				,hurt1,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<lifeBarExtraHeight>-50</lifeBarExtraHeight>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<maxVx>8</maxVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>Weaver_ExtraAI</extraAIClassLabel>
+			<!-- 技能 -->
+			<bulletLauncherClass>VehicleBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<bossSkillArr>cmldef2_enemy,trueshot_enemy,fightReduct,Weaver_summoned,Weaver_smoke,Weaver_web,Weaver_thorn</bossSkillArr><![CDATA[  ]]>
+			<bossSkillArrCn></bossSkillArrCn>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel>
+					<hurtRatio>3</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<grapRect>-150,-111,150,105</grapRect>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>Weaver_shoot</bulletLabel>
+					<grapRect>-300,-111,100,105</grapRect>
+					<hurtRatio>1.5</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				
+				<hurt name="不加入ai选择">
+					<imgLabel>smokeAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<bulletLabel>Weaver_smoke</bulletLabel>
+					<grapRect>-300,-111,100,105</grapRect>
+					<hurtRatio>6</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt name="不加入ai选择">
+					<imgLabel>thornAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.000001</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>holy</attackType>
+					<grapRect>-150,-111,150,105</grapRect>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bulletHitEffect/energy</hitImgUrl>
+					<skillArr>Weaver_thorn_hit</skillArr>
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+		<body index="0" name="决斗者">
+			
+			<name>Duelist</name>
+			<cnName>决斗者</cnName>
+			<raceType>zombie</raceType>
+			<swfUrl>swf/enemy/Duelist287.swf</swfUrl>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<lifeRatio>2</lifeRatio>
+			<showLevel>999</showLevel>
+			<headHurtMul>1</headHurtMul>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,die1,hurt1
+				,normalAttack,kickAttack,shakeAttack,shootAttack,comboAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-80</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>10</maxVx>
+			<!-- AI属性 -->
+			<avtiveSkillCdOverT>0.1</avtiveSkillCdOverT>
+			<nextAttackTime>0</nextAttackTime>
+			<preBulletArr></preBulletArr>
+			<!-- 技能 -->
+			<bulletLauncherClass></bulletLauncherClass>
+			<skillArr>DuelistEffect</skillArr>
+			<bossSkillArr>fightReduct,defenceBounce_enemy,DuelistShoot,DuelistShake,DuelistCombo</bossSkillArr><![CDATA[  DuelistShoot,DuelistShake ]]>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraAIClassLabel>Duelist_AIExtra</extraAIClassLabel>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><cn>拳击</cn>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt cd="1">
+					<imgLabel>kickAttack</imgLabel><cn>膝撞</cn>
+					<hurtRatio>2</hurtRatio>
+					<grapRect>-300,-80,200,80</grapRect>
+					<shakeValue>4</shakeValue>
+					<beatBack>5</beatBack>
+					<meBack>5</meBack>
+					<attackType>holy</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt><br/>
+				
+				<hurt info="不加入ai选择">
+					<imgLabel>shakeAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtMul>0.2</hurtMul>
+					<shakeValue>4</shakeValue>
+					<skillArr>DuelistShakeSlow</skillArr>
+					<attackType>holy</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bulletHitEffect/bluntBig</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>shootAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<bulletLabel>Duelist_shoot</bulletLabel>
+					<grapRect>-366,-108,171,108</grapRect>
+					<hurtMul>0.3</hurtMul>
+					<attackType>holy</attackType>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>comboAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-366,-108,171,108</grapRect>
+					<skillArr>DuelistComboHit</skillArr>
+					<hurtMul>0.2</hurtMul>
+					<attackType>holy</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bulletHitEffect/bluntBig</hitImgUrl>
+				</hurt>
+				<![CDATA[
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>DryFrog_shoot</bulletLabel>
+					<grapRect>-366,-108,171,108</grapRect>
+					<hurtRatio>0.5</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				
+				
+				<hurt>
+					<imgLabel>sprintAttack</imgLabel>
+					<hurtRatio>0.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<continuousNum>2</continuousNum>
+					<grapRect>-220,-160,170,250</grapRect>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+				<hurt info="不加入ai选择">
+					<imgLabel>rockFireAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,250,105</grapRect>
+					<hurtRatio>0.2</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				]]>
+			</hurtArr>
+		</body>
+	</father>	
+	<father name="other" cnName="其他">
+		<body index="0" name="气泡" shell="other">
+		
+			<name>Bubbles</name>
+			<cnName>气泡</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/Bubbles.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.7</lifeRatio>
+			<dieJumpMul>0</dieJumpMul>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>0</maxVx>
+			<motionD F_G="0.2" jumpMul="0.1"/>
+			<!-- AI属性 -->
+			<defaultAiOrder>no</defaultAiOrder>
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr>State_SpellImmunity</skillArr>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<grapRect>-50,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+		<body index="0" name="反物质" shell="other">
+			
+			<name>Antimatter</name>
+			<cnName>反物质</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/Antimatter.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.7</lifeRatio>
+			<!-- 图像 -->
+			<dieJumpMul>0</dieJumpMul>
+			<imgArr>
+				stand,move,die1
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<motionD F_G="0.3" jumpDelayT="0.001"/>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>Antimatter_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.000001</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+				</hurt>
+				<hurt><imgLabel>stand</imgLabel><noAiChooseB>1</noAiChooseB><hurtRatio>0.000001</hurtRatio><attackType>direct</attackType></hurt>
+				<hurt><imgLabel>jumpUp</imgLabel><noAiChooseB>1</noAiChooseB><hurtRatio>0.000001</hurtRatio><attackType>direct</attackType></hurt>
+				<hurt><imgLabel>jumpDown</imgLabel><noAiChooseB>1</noAiChooseB><hurtRatio>0.000001</hurtRatio><attackType>direct</attackType></hurt>
+				<hurt><imgLabel>__jumpUp</imgLabel><noAiChooseB>1</noAiChooseB><hurtRatio>0.000001</hurtRatio><attackType>direct</attackType></hurt>
+				<hurt><imgLabel>jumpDown__</imgLabel><noAiChooseB>1</noAiChooseB><hurtRatio>0.000001</hurtRatio><attackType>direct</attackType></hurt>
+			</hurtArr>
+		</body>	
+		<body index="0" name="异龙蛋" shell="normal">
+		
+			<name>TriceratopsEgg</name><headIconUrl>IconGather/TriceratopsEgg</headIconUrl>
+			<cnName>异龙蛋</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/TriceratopsEgg.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.7</lifeRatio>
+			<dieJumpMul>0</dieJumpMul>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move,die1
+			</imgArr>
+			<dieImg soundUrl="sound/water_hit">boomEffect/posion1</dieImg>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>0</maxJumpNum>
+			<maxVx>0</maxVx>
+			<!-- AI属性 -->
+			<defaultAiOrder>no</defaultAiOrder>
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr>State_SpellImmunity</skillArr>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<grapRect>-50,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+		<body index="0" name="绿洲" shell="normal">
+		
+			<name>DesertOasis</name>
+			<cnName>绿洲</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/DesertOasis.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.7</lifeRatio>
+			<dieJumpMul>0</dieJumpMul>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,birthAttack,die1
+			</imgArr>
+			<dieImg soundUrl="sound/water_hit">boomEffect/posion1</dieImg>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>0</maxJumpNum>
+			<maxVx>0</maxVx>
+			<!-- AI属性 -->
+			<defaultAiOrder>no</defaultAiOrder>
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr>State_SpellImmunity</skillArr>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>stand</imgLabel>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<grapRect>-50,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+		<body index="0" name="异龙蛋-装置召唤" shell="normal">
+			
+			<name>DinosaurEgg</name>
+			<cnName>无敌异龙蛋</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/DinosaurEgg.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.7</lifeRatio>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<dieJumpMul>0</dieJumpMul>
+			<imgArr>
+				stand,move,die1
+			</imgArr>
+			<dieImg soundUrl="sound/water_hit">boomEffect/posion1</dieImg>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>0</maxJumpNum>
+			<maxVx>0</maxVx>
+			<!-- AI属性 -->
+			<defaultAiOrder>no</defaultAiOrder>
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr>State_SpellImmunity</skillArr>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<grapRect>-50,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+		<body index="0" name="生化罐" shell="metal">
+		
+			<name>ChemicalTank</name>
+			<cnName>生化罐</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ChemicalTank.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1.4</lifeRatio>
+			<dieJumpMul>0</dieJumpMul>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<dieImg>boomEffect/posion1</dieImg>
+			<lifeBarExtraHeight>-130</lifeBarExtraHeight>
+			<imgArr>
+				stand,stand1,stand2,stand3,stand4,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>0</maxJumpNum>
+			<maxVx>0</maxVx>
+			<!-- AI属性 -->
+			<defaultAiOrder>no</defaultAiOrder>
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr>fightReduct,defenceBounce_enemy,State_SpellImmunity,standImageByLife,ChemicalTank_Triceratops</skillArr>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>stand</imgLabel>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<grapRect>-50,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+	</father>
+</data>

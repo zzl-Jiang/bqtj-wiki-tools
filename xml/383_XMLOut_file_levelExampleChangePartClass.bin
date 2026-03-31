@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- id是唯一识别码，必须防止和其他关卡集合重复，不设置的话默认为文件名。 -->
+<data id="levelExampleChangePart" cnName="改变形象" author="沃龙先生">
+	<!-- 关卡集介绍。 -->
+	<info>使用关卡命令和新技能来改变角色的外观。</info>
+	
+	<father name="normal">
+		<gather>
+			<level name="levelExampleChangePart1" cnName="改变形象" descrip="">
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1" />
+				<!-- 场景 -->
+				<sceneLabel>XiShan2</sceneLabel>
+				
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<!-- 把外观改成铁犬。 -->
+							<order>changePart:p1; all:IronDog</order>
+							<!-- 背包不可用，避免形象被改变 -->
+							<order>noWearShop</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		
+	</father>
+	
+	<father name="normal">
+		<gather>
+			<level name="levelExampleChangePart2" cnName="击杀换头" descrip="">
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1" />
+				<!-- 场景 -->
+				<sceneLabel>XiShan2</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG>
+					<!-- 设置全部单位id命令为patrolGlobal（巡逻全图） -->
+					
+					<unitOrder id="enemy1" camp="enemy">
+						<!-- default可以设置所有单位的属性，格式和unit一致。 -->
+						<default aiOrder="patrolGlobal" skillArr="noUnderMulHurt,spellImmunityMax"/>
+						<!-- 11种怪物，每种10%的概率出现，不能添加太多小怪，否则内存不够将导致出错，因为这些小怪都是位图缓存，会占用很多内存。 -->
+						<numberType>pro</numberType>
+						<unit cnName="利爪僵尸" num="0.1"  />
+						<unit cnName="窃听者" num="0.1"/>
+						<unit cnName="狂战射手" num="0.1"/>
+						<unit cnName="关东尸" num="0.1"/>
+						<unit cnName="双头僵尸" num="0.1"/>
+						<unit cnName="女爵尸" num="0.1"/>
+						<unit cnName="血蟒重甲兵" num="0.1"/>
+						<unit cnName="哨兵" num="0.1"/>
+						<unit cnName="掘金尸" num="0.1"/>
+						<unit cnName="多肉" num="0.1"/>
+					</unitOrder>
+				</unitG>
+				
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<!-- 给p1添加锁定技能：击毙换头 -->
+							<order>body:p1; addSkillLock:killCopyHead2</order>
+							<!-- 背包不可用，避免形象被改变 -->
+							<order>noWearShop</order>
+						</event>
+						<event>
+							<!-- 循环刷怪10000次，因为怪物加了“setMaxLifeMulByBo2”技能，所以血量会跟随波数越来越高。。 -->
+							<condition doNumber="10000">enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; r123</order>
+						</event>
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>alert:yes; 恭喜你！你完成了一项壮举，成功击败了10000波的僵尸！</order>
+						</event>
+						<event>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		
+		<skill>
+			<name>killCopyHead2</name>
+			<cnName>击毙换头</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>copyPartByTarget</effectType>
+			<valueString>head</valueString>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="madmanHead_target"/>
+			<description>击毙敌人后复制他的头。</description>
+		</skill>
+	</father>
+</data>

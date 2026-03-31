@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="rifle" cnName="步枪">
+		<bullet index="0" name="AK47">
+			<name>ak47</name>
+			<cnName>步枪</cnName><extraMul>1.8</extraMul>
+			<!--随机属性------------------------------------------------------------ -->
+			<randomPro>1</randomPro>
+			<uiDpsMul>1.11</uiDpsMul>
+			<!--基本-->
+			<capacity>35,45</capacity>
+			<attackGap>0.06,0.15</attackGap>
+			<reloadGap>1.5,2</reloadGap>
+			<shakeAngle>3,8</shakeAngle>
+			<bulletWidth>400,700</bulletWidth>
+			<bulletShakeWidth>0,200</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>					
+			<!--特殊-->
+			<penetrationNum>0</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<selfBoom>0</selfBoom>
+			<floorBounce>0</floorBounce>
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--图像-->
+			<armsImgLabel></armsImgLabel>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>3</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackDelay>0</attackDelay>
+			<shootNum>1</shootNum>							
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<!--<bulletMaxV>10</bulletMaxV>-->
+			<!--<bulletMaxVa>0</bulletMaxVa>-->
+			<!-- <bulletVra>-1000</bulletVra>-->		<!-- 自转速度（默认值为0，标准值30，-1000代表永远不转方向）-->
+			<!-- <gravity>0.8</gravity>-->			<!-- 重力系数（默认值为0）-->
+			<!--跟踪------------------------------------------------------------ -->
+			<followD value="0" delay="0" maxTime="0" />				<!-- 跟踪敏捷度（默认为0，就是不跟踪，标准值为1）-->
+			<bounceD floor="0" body="0" num="0"/>	<!-- 反弹 -->
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!-- <smokeImgUrl>sub/missile_bullet_smoke</smokeImgUrl>--><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl></shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<allImgPartArr>body,barrel,grip,stock,bullet</allImgPartArr><!-- 对于allImgRange来说，这是其内部的部件列表，如果没有这个参数，则使用默认值 -->
+			<allImgRange>ak,m4,xm8</allImgRange>
+			<bodyImgRange>shotgun1/body,shotgun2/body,shotgun3/body,sniper1/body,sniper2/body,sniper3/body</bodyImgRange>
+			<barrelImgRange>ak/barrel2,ak/barrel3,ak/barrel4,ak/barrel5,ak/barrel6,ak/barrel7</barrelImgRange>
+			<gripImgRange>sniper1/grip,pistol2/grip,pistol3/grip,sniper1/grip,sniper2/grip,sniper3/grip</gripImgRange>
+			<bulletImgRange></bulletImgRange>
+			<stockImgRange>sniper1/stock,sniper2/stock,sniper3/stock,shotgun1/stock,shotgun2/stock,shotgun3/stock</stockImgRange>
+			<glassImgRange></glassImgRange>
+		</bullet>
+		<bullet index="0" name="firstRifle" cnName="初始枪">
+			<name>firstRifle</name>
+			<cnName>初始枪</cnName>
+			<!--基本-->
+			<capacity>35,45</capacity>
+			<attackGap>0.1,0.15</attackGap>
+			<reloadGap>1.5</reloadGap>
+			<shakeAngle>3,8</shakeAngle>
+			<bulletWidth>500,500</bulletWidth>
+			<bulletShakeWidth>0,200</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<!--特殊-->
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.6</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<allImgPartArr>body,barrel,grip,stock,bullet</allImgPartArr><!-- 对于allImgRange来说，这是其内部的部件列表，如果没有这个参数，则使用默认值 -->
+			<allImgRange>ak,m4,xm8</allImgRange>
+			<bodyImgRange>shotgun1/body,shotgun2/body,shotgun3/body,sniper1/body,sniper2/body,sniper3/body</bodyImgRange>
+			<barrelImgRange>ak/barrel2,ak/barrel3,ak/barrel4,ak/barrel5,ak/barrel6,ak/barrel7</barrelImgRange>
+			<gripImgRange>sniper1/grip,pistol2/grip,pistol3/grip,sniper1/grip,sniper2/grip,sniper3/grip</gripImgRange>
+			<bulletImgRange></bulletImgRange>
+			<stockImgRange>sniper1/stock,sniper2/stock,sniper3/stock,shotgun1/stock,shotgun2/stock,shotgun3/stock</stockImgRange>
+		</bullet>
+		<bullet index="0" name="rifleLock">
+			<name>rifleLock</name>
+			<cnName>步枪</cnName>
+			<!--基本-->
+			<capacity>45</capacity>
+			<attackGap>0.1</attackGap>
+			<reloadGap>1.1</reloadGap>
+			<shakeAngle>6</shakeAngle>
+			<bulletWidth>600</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<!--特殊-->
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.6</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<lineD lightColor="0xFFCC00" size="2" lightSize="6" blendMode="add" type="one" />
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<allImgPartArr>body,barrel,grip,stock,bullet</allImgPartArr><!-- 对于allImgRange来说，这是其内部的部件列表，如果没有这个参数，则使用默认值 -->
+			<allImgRange>ak,m4,xm8</allImgRange>
+			<bodyImgRange>shotgun1/body,shotgun2/body,shotgun3/body,sniper1/body,sniper2/body,sniper3/body</bodyImgRange>
+			<barrelImgRange>ak/barrel2,ak/barrel3,ak/barrel4,ak/barrel5,ak/barrel6,ak/barrel7</barrelImgRange>
+			<gripImgRange>sniper1/grip,pistol2/grip,pistol3/grip,sniper1/grip,sniper2/grip,sniper3/grip</gripImgRange>
+			<bulletImgRange></bulletImgRange>
+			<stockImgRange>sniper1/stock,sniper2/stock,sniper3/stock,shotgun1/stock,shotgun2/stock,shotgun3/stock</stockImgRange>
+		</bullet>
+		
+		
+		<bullet index="0" name="lingGun" cnName="鬼目射手-武器">
+			<name>lingGun</name>
+			<cnName>鬼目枪</cnName>
+			<!--基本-->
+			<capacity>35,45</capacity>
+			<attackGap>0.5,0.6</attackGap>
+			<reloadGap>1.5</reloadGap>
+			<shakeAngle>3,8</shakeAngle>
+			<bulletWidth>10</bulletWidth>
+			<bulletNum>3</bulletNum>				
+			<shootAngle>25</shootAngle>
+			<!--特殊-->
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.6</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>3</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>20</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>LingShooter/shoot1</shootSoundUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl>LingShooter/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="LingShooter/hit2">bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter">LingShooter/smoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			<!--图像范围------------------------------------------------------------ -->
+			<allImgPartArr>body,barrel,grip,stock,bullet</allImgPartArr><!-- 对于allImgRange来说，这是其内部的部件列表，如果没有这个参数，则使用默认值 -->
+			<allImgRange>xm8</allImgRange>
+			<textureImgRange>texture/t16</textureImgRange>
+		</bullet>
+		
+		<bullet index="14" name="rifleYellow">
+			<name>rifleYellow</name>
+			<cnName>沙暴</cnName>
+			<!--基本-->
+			<capacity>50</capacity>
+			<attackGap>0.1</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>5</shakeAngle>
+			<bulletWidth>600</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>					
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>0</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="4" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			<skillArr>Hit_hitMissile_godArmsSkill,Hit_AddLifeMul_ArmsSkill</skillArr>
+			<godSkillArr>Hit_fleshSkill_godArmsSkill,Hit_pointBoom_godArmsSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			
+			<hurtRatio>3</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/rifleYellowIcon</iconUrl>
+			<shootSoundUrl>specialGun/rifleYellow_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0xD04400" size="2" lightSize="6" blendMode="add" type="one" />
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<bodyImgRange>specialGun/rifleYellow</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		<bullet index="13" name="rifleWhite" color="red" rareDropLevel="60">
+			<name>rifleWhite</name>
+			<cnName>尘暴</cnName>
+			<!--基本-->
+			<capacity>35,55</capacity>
+			<attackGap>0.1,0.15</attackGap>
+			<reloadGap>2,4</reloadGap>
+			<shakeAngle>5</shakeAngle>
+			<bulletWidth>500,700</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>					
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>0</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="4" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			<skillArr>Hit_hitMissile_godArmsSkill,Hit_AddLifeMul_ArmsSkill</skillArr>
+			<godSkillArr>Hit_fleshSkill_godArmsSkill,Hit_pointBoom_godArmsSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>1.7</dpsMul>
+			<hurtRatio>3</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rifleYellow_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0xD04400" size="2" lightSize="6" blendMode="add" type="one" />
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<bodyImgRange>specialGun/rifleWhite</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>60级以上关卡和每周任务(武器-处决)</description>
+		</bullet>
+		
+		<bullet index="31" name="rifleDragon" color="black" dropLevelArr="81" chipNum="400">
+			<name>rifleDragon</name>
+			<cnName>迅龙</cnName>
+			<!--基本-->
+			<capacity>35,55</capacity>
+			<attackGap>0.1,0.15</attackGap>
+			<reloadGap>2,4</reloadGap>
+			<shakeAngle>5</shakeAngle>
+			<bulletWidth>500,700</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>					
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>2</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			<skillArr>Hit_AddLifeMul_ArmsSkill,Hit_hitMissile_godArmsSkill</skillArr>
+			<godSkillArr>Hit_imploding_godArmsSkill,windThunder_ArmsSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>1.7</dpsMul>
+			<hurtRatio>3</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<recordD moveGap="2000"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rifleYellow_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0xD04400" size="2" lightSize="6" blendMode="add" type="one" />
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<bodyImgRange>specialGun/rifleDragon</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		<bullet index="31" name="rifleHornet" color="black" dropLevelArr="87" dropBodyArr="" evoMaxLv="16" composeLv="86" chipNum="50">
+			<name>rifleHornet</name>
+			<cnName>青蜂</cnName><extraMul>1.5</extraMul>
+			<!--基本-->
+			<capacity>35,55</capacity>
+			<attackGap>0.1,0.15</attackGap>
+			<reloadGap>2,4</reloadGap>
+			<shakeAngle>5</shakeAngle>
+			<bulletWidth>500,700</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>					
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>2</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			<skillArr>Hit_AddLifeMul_ArmsSkill,Hit_hitMissile_godArmsSkill</skillArr>
+			<godSkillArr>Hit_imploding_godArmsSkill,sickle_godArmsSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>1.7</dpsMul>
+			<hurtRatio>3</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rifleYellow_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0x6633FF" size="2" lightSize="6" blendMode="add" type="one" />
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<bodyImgRange>specialGun/rifleHornet</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		<bullet name="rifleHornetYa" color="yagold">
+			<name>rifleHornetYa</name>
+			<cnName>氩星青蜂</cnName>
+			<!--基本-->
+			<capacity>200</capacity>
+			<attackGap>0.07</attackGap>
+			<reloadGap>0.5</reloadGap>
+			<shakeAngle>5</shakeAngle>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>					
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<penetrationGap>1000</penetrationGap>
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>1</dpsMul>
+			<hurtRatio>1</hurtRatio>
+			<armsArmMul>0.6</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>17</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rifleYellow_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0x6633FF" size="2" lightSize="6" blendMode="add" type="one" />
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<bodyImgRange>specialGun/rifleHornet6</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	<father  type="rifle" cnName="特殊">	
+		<bullet  index="34" cnName="炮仗" color="red" rareDropLevel="999"  chipB="1" chipNum="130">
+			<name>bangerGun</name>
+			<cnName>炮仗</cnName>
+			<iconUrl>specialGun/bangerGunIcon</iconUrl>
+			<!--基本-->
+			<capacity>35</capacity>
+			<attackGap>0.1</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>5</shakeAngle>
+			<bulletWidth>20</bulletWidth>
+			<bulletShakeWidth>0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>					
+			<beatBack>3</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<gatlinRange>10</gatlinRange><gatlinNum>6</gatlinNum>
+			<penetrationNum>2</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			<skillArr>Hit_AddLifeMul_ArmsSkill,Hit_hitMissile_godArmsSkill</skillArr>
+			<godSkillArr>infiniteFire,bangerGunSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>1.1</dpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>29</bulletSpeed>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>5</upValue>
+			<shootShakeAngle>3</shootShakeAngle>
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>2</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>2.5</bulletLife>
+			<hitType>rect</hitType>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/rifleYellow_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="60" con="filter">bullet/laserOrange</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<bodyImgRange>specialGun/bangerGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			
+			<description>主城“冶炼屋”</description>
+		</bullet>
+	</father>
+</data>

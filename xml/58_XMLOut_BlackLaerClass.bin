@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="wilder">
+		<body index="0" name="黑暗雷尔" shell="compound">
+			
+			<name>BlackLaer</name>
+			<cnName>黑暗雷尔</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/BlackLaer.swf</swfUrl>
+			<headIconUrl>IconGather/PetLaer</headIconUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move
+				,normalAttack,shootAttack,chargedAttack,ballAttack,staticAttack
+				,hurt1,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-76,28,76</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>BlackLaer_AIExtra</extraAIClassLabel>
+			<bossSkillArr>trueshotLaer,cloned_BlackLaer,charged_BlackLaer,lightBall_BlackLaer,static_BlackLaer,BlackLaer_hitParalysis</bossSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/hand_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<bulletLabel>shoot_BlackLaer</bulletLabel>
+					<grapRect>-450,-88,351,77</grapRect>
+				</hurt>
+				
+				<hurt info="不加入ai选择-充能">
+					<imgLabel>chargedAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,100,105</grapRect>
+				</hurt>
+				<hurt info="不加入ai选择-辐射光球">
+					<imgLabel>ballAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<bulletLabel>lightBall_BlackLaer</bulletLabel>
+					<grapRect>-400,-111,100,105</grapRect>
+					<hurtRatio>12</hurtRatio>
+				</hurt>
+				<hurt info="不加入ai选择-充能">
+					<imgLabel>staticAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+	</father>
+	<father name="enemy">	
+		
+		
+		<skill index="0" name="分身">
+			<name>cloned_BlackLaer</name>
+			<cnName>分身</cnName>
+			<cd>30</cd><noInClonedB>1</noInClonedB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>lifePerLess</otherConditionArr>
+			<conditionRange>0.5</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>cloned</effectType>
+			<value>2</value>
+			<mul>0.1</mul>
+			<secMul>0.75</secMul>
+			<duration>30</duration>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg soundUrl="sound/cloned_enemy" con="add">skillEffect/hiding_hero</meEffectImg>
+			<description>生命值低于50%时产生[value]个分身，攻击力与自身同等，血量为自身的[mul]，持续[duration]秒。</description>
+		</skill>
+		<skill index="0" cnName="充能"><!-- 限制 -->
+			<name>charged_BlackLaer</name>
+			<cnName>充能</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>10</cd>
+			<delay>0.66</delay>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>weNumMore</otherConditionArr><!-- 我方数量>1时才释放 -->
+			<conditionRange>1</conditionRange>
+			<target noMeB="1">me,random,we</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>charged_BlackLaer</effectType>
+			<value>1.5</value>
+			<mul>0.1</mul>
+			<range>800</range>
+			<duration>5</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<stateEffectImg partType="body" con="add" raNum="1">generalEffect/lakeBuff</stateEffectImg>
+			<description>随机瞬移到分身或主体身边，使其受到伤害降低[1-mul]、移动速度增加[value]倍，持续[duration]秒。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<meActionLabel>chargedAttack</meActionLabel>
+		</skill>
+		<skill index="0" cnName="辐射光球"><!-- dps -->
+			<name>lightBall_BlackLaer</name>
+			<cnName>辐射光球</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>30</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>400</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>no</effectType>
+			<!--图像------------------------------------------------------------ --> 
+			<meActionLabel>ballAttack</meActionLabel>
+			<description>向前方发射缓慢移动的光球，对敌人造成持续伤害，受到伤害的敌人移动速度降低90%，同时使其无法释放技能。</description>
+		</skill>
+		<skill index="0" cnName="静电过载"><!-- 限制 -->
+			<name>static_BlackLaer</name>
+			<cnName>静电过载</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>15</cd>
+			<delay>0.5</delay>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>700</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>static_BlackLaer</effectType>
+			<duration>0.8</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<targetEffectImg soundUrl="sound/paralysis_enemy_hit" con="add">generalEffect/lakeBoom</targetEffectImg>
+			<description>瞬移到敌人身上，使周围150码内的敌人麻痹3秒。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<meActionLabel>staticAttack</meActionLabel>
+		</skill>
+				<skill index="0" name="静电麻痹">
+					<name>BlackLaer_hitParalysis</name>
+					<cnName>静电麻痹</cnName>
+					<cd>0.1</cd>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>active</conditionType>
+					<target>me,range,enemy</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>moveSpeed</effectType>
+					<mul>0</mul>
+					<range>150</range>
+					<duration>2</duration>
+					<!--图像------------------------------------------------------------ --> 
+					<stateEffectImg con="add" soundUrl="sound/paralysis_enemy_hit">skillEffect/paralysis_enemy</stateEffectImg>
+					<description>使其麻痹，持续3秒。</description>
+				</skill>
+		<skill name="trueshotLaer" cnName="强击光环"><!-- dps -->
+			<name>trueshotLaer</name>
+			<cnName>强击光环</cnName><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>interval</condition>
+			<target noMeB="1">me,range,we</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>hurtMul</effectType>
+			<mul>1.6</mul>
+			<duration>2</duration>
+			<range>400</range>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg partType="2hand" con="add" raNum="30" followPartRaB="1">skillEffect/trueshot_enemy</stateEffectImg>
+			<description>周围[range]码以内的我方单位提升[mul-1]的攻击力。</description>
+		</skill>
+	</father>
+	
+	
+	<father type="zombie" cnName="黑暗雷尔">
+		<bullet cnName="黑暗雷尔-射击">
+			<name>shoot_BlackLaer</name>
+			<cnName>黑暗雷尔-射击</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.9</attackGap>
+			<attackDelay>0.5</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>50</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-86,-55</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<followD value="0.3"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="filter">BlackLaer/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/fireHit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="黑暗雷尔-辐射光球">
+			<name>lightBall_BlackLaer</name>
+			<cnName>辐射光球</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>13</bulletLife>
+			<bulletWidth>60</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1</attackGap>
+			<attackDelay>0.55</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<twoHitGap>0.1</twoHitGap>
+			<followD value="1" maxTime="2" />	<!-- 跟踪 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-92,-43</shootPoint>
+			<bulletSpeed>10</bulletSpeed>
+			<speedD max="25" min="1" a="-4" />
+			<skillArr>lightBall_PetLake_slow,silence_wind</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1"  con="add">BlackLaer/ball</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/fireHit1"></hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>	
+	
+	
+</data>

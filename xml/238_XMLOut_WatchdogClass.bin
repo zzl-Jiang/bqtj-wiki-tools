@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="enemy">
+		<body index="0" name="看门狗" shell="metal">
+			
+			<name>Watchdog</name>
+			<cnName>看门狗</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/Watchdog.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<headHurtMul>3</headHurtMul>
+			<rosRatio>99</rosRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move
+				,shootAttack,lightningAttack,laserAttack
+				,hurt1,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-76,28,76</hitRect>
+			<lifeBarExtraHeight>-40</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>7</maxVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>Watchdog_AIExtra</extraAIClassLabel><!-- Watchdog_AIExtra -->
+			<bossSkillArr>noSpeedReduce,silence_enemy,underWatchdog,underDieWatchdog,lightningWatchdog,laserWatchdog,fightReduct,defenceBounce_enemy</bossSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel><cn>射击</cn>
+					<hurtRatio>0.2</hurtRatio>
+					<bulletLabel>shoot_Watchdog</bulletLabel>
+					<grapRect>-450,-88,351,77</grapRect>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>lightningAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-400,-111,100,105</grapRect>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>laserAttack</imgLabel><noAiChooseB>1</noAiChooseB><ingfollowB>1</ingfollowB>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.08</hurtMul>
+					<attackType>holy</attackType>
+					<grapRect>-400,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+		
+		
+		
+		<skill cnName="大地闪电"><!-- dps -->
+			<name>lightningWatchdog</name>
+			<cnName>大地闪电</cnName><noBeClearB>1</noBeClearB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB><skillIcon>SkillIcon/laser_PetFightWolf_36</skillIcon>
+			<cd>7</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>bullet_lightningWatchdog</effectType>
+			<value>16</value><!-- 闪电个数 -->
+			<mul>0.15</mul><!-- 闪电时间间隔 -->
+			<secMul>60</secMul><!-- 闪电距离间隔 -->
+			<duration>4</duration>
+			<obj>"name":"lightningWatchdog"</obj>
+			<!--图像------------------------------------------------------------ --> 
+			<meActionLabel>lightningAttack</meActionLabel>
+			<description>看门狗向周围释放扩散闪电，对目标造成巨大伤害，并大幅降低其枪支的射速。</description>
+		</skill>
+					<skill cnName="大地闪电-过载">
+						<name>lightningWatchdogHit</name>
+						<cnName>大地闪电-过载</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+						<!--触发条件与目标------------------------------------------------------------ -->
+						<conditionType>passive</conditionType>
+						<condition>hit</condition>
+						<target>target</target>
+						<!--效果------------------------------------------------------------ -->
+						<addType>state</addType>
+						<effectType>attackGapMul</effectType>
+						<mul>0.1</mul>
+						<duration>8</duration>
+						<stateEffectImg partType="shootPoint" raNum="25" followPartRaB="1">bulletHitEffect/smoke_black</stateEffectImg>
+						<description>击中目标后腐蚀对方手上的枪支，降低枪支[1-mul]的射击速度，持续[duration]秒。</description>
+					</skill>
+		
+		<skill cnName="激光扫荡"><!-- dps -->
+			<name>laserWatchdog</name>
+			<cnName>激光扫荡</cnName><noBeClearB>1</noBeClearB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>9999999</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>laserWatchdog</effectType>
+			<passiveSkillArr>laserWatchdogUnder,laserWatchdogUnder2</passiveSkillArr>
+			<duration>0.5</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<meActionLabel>laserAttack</meActionLabel>
+			<description>生命值低于50%时，看门狗开启激光扫荡，扫荡期间只有发射激光部位可被攻击，接着生命值每次被损伤10%关闭或者开启激光扫荡，如此重复直至倒下。</description>
+		</skill>
+		
+						<skill cnName="激光扫荡-受到攻击"><!-- dps -->
+							<name>laserWatchdogUnder</name>
+							<cnName>激光扫荡-受到攻击</cnName>
+							<!--触发条件与目标------------------------------------------------------------ -->
+							<conditionType>passive</conditionType>
+							<condition>underHit</condition>
+							<target>me</target>
+							<!--效果------------------------------------------------------------ -->
+							<addType>instant</addType>
+							<effectType>laserWatchdogUnder</effectType>
+							<pointEffectImg con="add" partType="head">Watchdog/hurtEffect</pointEffectImg>
+						</skill>
+						<skill cnName="激光扫荡-受到攻击"><!-- dps -->
+							<name>laserWatchdogUnder2</name>
+							<cnName>激光扫荡-受到攻击</cnName>
+							<!--触发条件与目标------------------------------------------------------------ -->
+							<conditionType>passive</conditionType>
+							<condition>underSkillHit</condition>
+							<target>me</target>
+							<!--效果------------------------------------------------------------ -->
+							<addType>instant</addType>
+							<effectType>laserWatchdogUnder</effectType>
+							<pointEffectImg con="add" partType="head">Watchdog/hurtEffect</pointEffectImg>
+						</skill>
+						
+						
+						
+		<skill cnName="受到伤害"><!-- dps -->
+			<name>underWatchdog</name>
+			<cnName>受到伤害</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underHurt</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>underWatchdog</effectType>
+			<description></description>
+		</skill>
+				<skill cnName="受到伤害"><!-- dps -->
+					<name>underDieWatchdog</name>
+					<cnName>受到伤害</cnName>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>beforeDie</condition>
+					<target>me</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>underWatchdog</effectType>
+					<description></description>
+				</skill>
+	</father>		
+		
+		
+		
+		
+	<father type="zombie" cnName="看门狗">
+		<bullet cnName="看门狗-射击">
+			<name>shoot_Watchdog</name>
+			<cnName>看门狗-射击</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.9</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>10</bulletAngleRange>
+			<shootNum>9</shootNum>
+			<shootGap>0.05</shootGap>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-60,-95</shootPoint>
+			<bulletSpeed>25</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="add">bullet/laser</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/hand_hit">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		
+		<bullet cnName="大地闪电">
+			<name>lightningWatchdog</name>
+			<cnName>大地闪电</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtMul>0.65</hurtMul>
+			<attackType>holy</attackType>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.0001</bulletLife>
+			
+			<bulletWidth>220</bulletWidth>
+			<hitType>longLine</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<bulletAngle>270</bulletAngle>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<skillArr>lightningWatchdogHit</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<imgClearDelay>0.23</imgClearDelay>
+			<bulletImgUrl con="add">bullet/lightning1</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>	
+	
+	
+</data>

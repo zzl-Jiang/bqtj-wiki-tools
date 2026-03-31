@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="snake" cnName="血蟒">
+		<body  shell="normal">
+			<name>Domino</name>
+			<cnName>多米诺</cnName><headIconUrl>IconGather/Domino</headIconUrl>
+			<raceType>human</raceType>
+			<swfUrl>swf/hero/Domino.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<showLevel>9999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				standStop,standForward,standBack,standStop__squatStop
+				,squatForward,squatStop,squatBack,squatStop__standStop
+				,die1,die2,__stru,stru
+				,throwAttack
+				,jumpDown__,jumpDown,jumpUp__jumpDown,jumpUp,__jumpUp
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<lowerImgArr>
+				thigh
+				,leg_left_1
+				,leg_left_0
+				,foot_left
+				,leg_right_1
+				,leg_right_0
+				,foot_right
+			</lowerImgArr>
+			<lifeBarExtraHeight>-20</lifeBarExtraHeight>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -100, 24, 95</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -50, 24, 50</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>1</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>pistol2</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<extraAIClassLabel></extraAIClassLabel>
+			<oneAiLabel>striker</oneAiLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>rebirth_enemy</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			
+			<!-- 攻击数据 -->
+			<hurtArr>
+				
+			</hurtArr>
+		</body>
+	</father>	
+	
+</data>

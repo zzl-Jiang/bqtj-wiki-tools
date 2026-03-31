@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="enemy" cnName="敌方">
+		<body index="0" name="战争狂人" shell="normal">
+			
+			<name>Madman</name>
+			<cnName>战争狂人</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/Madman266.swf</swfUrl>
+			<!-- 基本系数 -->
+			<showLevel>999</showLevel>
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/Madman</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>meltFlamer</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>pointBoom_enemy,selfBurn_enemy,imploding_enemy,sweep_shell,UnderRos_AddMove_Battle,crazy_enemy</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>
+	</father>
+		
+</data>

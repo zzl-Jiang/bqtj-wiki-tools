@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="enemy">
+		<body index="0" name="幻影X" shell="metal">
+			
+			<name>PhantomX</name>
+			<cnName>幻影X</cnName><headIconUrl>IconGather/PhantomX</headIconUrl>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/PhantomX.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<showLevel>92</showLevel>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move
+				,normalAttack,shootAttack,lightAttack,rotateAttack,comboAttack
+				,hurt1,die1
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<lifeBarExtraHeight>-70</lifeBarExtraHeight>
+			<!-- 碰撞体积 -->
+			<hitRect>-25,-50,50,50</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>9</maxVx>
+			<motionState>fly</motionState>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<flyType>space</flyType>
+			<motionD F_AIR="8"/>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>PhantomX_AIExtra</extraAIClassLabel>
+			<bossSkillArr>blindnessPhantom,comboPhantom,rotatePhantom,noSpeedReduce,treater_knights</bossSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><cn>盾击</cn>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel><cn>激光</cn>
+					<hurtRatio>2</hurtRatio>
+					<bulletLabel>shoot_PhantomX</bulletLabel>
+					<grapRect>-450,-88,351,77</grapRect>
+				</hurt>
+				
+				<hurt info="不加入ai选择-致盲之光">
+					<imgLabel>lightAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.2</hurtMul>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<skillArr>blindnessPhantomHit</skillArr>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择-猛击">
+					<imgLabel>comboAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>1</hurtRatio>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<skillArr>comboPhantomHit</skillArr>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				
+				<hurt info="不加入ai选择-旋击">
+					<imgLabel>rotateAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.1</hurtMul>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+		
+		<bullet>			
+			<name>shoot_PhantomX</name>
+			<cnName>幻影X型-激光炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>700</bulletWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<shootPoint>-60,-60</shootPoint>
+			<bulletAngle>179.9</bulletAngle>
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.33</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD size="0"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!-- <smokeImgUrl>sub/missile_bullet_smoke</smokeImgUrl>--><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		
+	</father>
+	<father name="enemy">
+		<skill cnName="致盲之光"><!-- 限制 -->
+			<name>blindnessPhantom</name>
+			<cnName>致盲之光</cnName><iconUrl36>SkillIcon/blindnessPhantom_36</iconUrl36>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>9</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<effectType>noUnderHurtB</effectType>
+			<duration>1.8</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<description>向目标释放强烈光照，使其完全无法发动攻击，攻击成功率降至0%。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<meActionLabel>lightAttack</meActionLabel>
+		</skill>
+				<skill cnName="腐蚀">
+					<name>blindnessPhantomHit</name>
+					<cnName>腐蚀</cnName>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<effectType>lostPro</effectType>
+					<mul>999</mul>
+					<duration>5</duration>
+					<stateEffectImg partType="2eye" raNum="25" followPartRaB="1">bulletHitEffect/smoke_black</stateEffectImg>
+					<description></description>
+				</skill>
+				
+		<skill index="0" cnName="猛击"><!-- 限制 -->
+			<name>comboPhantom</name>
+			<cnName>猛击</cnName><iconUrl36>SkillIcon/comboPhantom_36</iconUrl36>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>7</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<effectType>noUnderHurtB</effectType>
+			<duration>1.4</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<description>向目标猛力发起3连击，逐渐降低目标的移动速度。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<meActionLabel>comboAttack</meActionLabel>
+		</skill>
+				<skill cnName="猛击-减速">
+					<name>comboPhantomHit</name>
+					<cnName>减速</cnName>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB>
+					<overlyingB>1</overlyingB>
+					<effectType>moveSpeedOver</effectType>
+					<value>3</value>
+					<mul>1</mul>
+					<duration>5</duration>
+					<!--图像------------------------------------------------------------ -->
+					<stateEffectImg partType="2foot">skillEffect/disabled_enemy</stateEffectImg>
+					<description>。</description>
+				</skill>
+				
+		<skill index="0" cnName="旋击"><!-- 限制 -->
+			<name>rotatePhantom</name>
+			<cnName>旋击</cnName><iconUrl36>SkillIcon/rotatePhantom_36</iconUrl36>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>12</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>600</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>noUnderHurtB</effectType>
+			<duration>0.01</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<description>向目标发起旋转攻击，造成巨大伤害。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<meActionLabel>rotateAttack</meActionLabel>
+		</skill>
+	</father>
+</data>

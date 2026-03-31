@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="death" info="单位">
+		<body index="0" name="投毒僵尸">
+			
+			<name>LaborZombieDeath</name>
+			<cnName>投毒僵尸</cnName>
+			<raceType>zombies</raceType><headIconUrl>IconGather/LaborZombie</headIconUrl>
+			<swfUrl>swf/enemy/LaborZombie3581.swf</swfUrl>
+			<swfName>LaborZombie</swfName>
+			<!-- 基本系数 -->
+			<lifeRatio>1.3</lifeRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move
+				,normalAttack,poisonAttack,hurt1,hurt2,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-76,28,76</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<!-- AI属性 -->
+			<nextAttackTime>1</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr>LaborZombiePoison</skillArr>
+			<bossSkillArr></bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="4">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>poisonAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-433,-167,858,272</grapRect>
+					<hurtRatio>1</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+				
+			</hurtArr>
+		</body>
+		<skill name="投毒">
+			<name>LaborZombiePoison</name>
+			<cnName>投毒</cnName><noBeClearB>1</noBeClearB>
+			<cd>3</cd>
+			<delay>0.63</delay>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget,isGroundB</otherConditionArr>
+			<conditionRange>620</conditionRange>
+			<target>me</target>
+			
+			<addType>state</addType>
+			<effectType>bullet_fireFloor</effectType>
+			<extraValueType>producterDpsFactor</extraValueType><!-- 伤害乘以什么数值 -->
+			<value>9</value><!-- 闪电个数 -->
+			<mul>0.01</mul><!-- 闪电时间间隔 -->
+			<secMul>30</secMul><!-- 闪电距离间隔 -->
+			<range>1</range><!-- 初始位置距离 -->
+			<duration>0.5</duration>
+			<obj>"name":"LaborZombiePoisonBullet"</obj>
+			<meEffectImg name="yearCattle_hit"/>
+			<meActionLabel>poisonAttack</meActionLabel>
+			<description></description>
+		</skill>
+				<bullet cnName="投毒子弹">
+					<name>LaborZombiePoisonBullet</name>
+					<cnName>投毒子弹</cnName>
+					<noMagneticB>1</noMagneticB>
+					<hurtRatio>0.3</hurtRatio>
+					<shakeAngle>5</shakeAngle>
+					<bulletLife>5</bulletLife>
+					<lifeRandom>0.2</lifeRandom>
+					<bulletWidth>20</bulletWidth>
+					<hitType>rect</hitType>
+					<bulletAngle>-90</bulletAngle>
+					<bulletSpeed>0</bulletSpeed>
+					<boomD selfB="1" hurtMul="0"/>
+					<!--特别属性------------------------------------------------------------ -->	
+					<hitGap>0.2</hitGap>
+					<penetrationNum>9999</penetrationNum><![CDATA[9999代表穿透不衰减]]>
+					<penetrationGap>1000</penetrationGap>
+					<bulletImgUrl name="smallPoison"/>
+					<hitImgUrl name="poisonHit"/>
+					<![CDATA[<selfBoomImgUrl con="add">boomEffect/smoke2</selfBoomImgUrl>]]>stoneSeaWalk
+					<selfBoomImgUrl name="stoneSeaWalk"/>
+				</bullet>
+	</father>
+</data>

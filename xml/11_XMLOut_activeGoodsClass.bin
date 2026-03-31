@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="pumpkin" cnName="桂花糕" priceType="pumpkin" labelArr="all"><!-- 2025年中秋 -->
+		<type>
+			<goods  defineLabel="demBall" price="1" buyLimitNum="100" /><!-- 万能球*1 -->
+			<goods  defineLabel="demStone" price="2" buyLimitNum="80" /><!-- 无双水晶*1 -->
+			<goods  defineLabel="madheart" price="2" buyLimitNum="80" /><!-- 战神之心*1 -->
+			<goods  defineLabel="yaStone" price="3" buyLimitNum="30" /><!-- 氩石*1 -->
+			<goods  defineLabel="yaRock" price="3" buyLimitNum="30" /><!-- 氩岗岩*1 -->
+			<goods dataType="base" defineLabel="partsCoin" price="1" buyLimitNum="50" /><!-- 零件券*1 -->
+			<goods  defineLabel="partsChest87" price="10" buyLimitNum="14" /><!-- 87级零件箱*1 -->
+			<goods  defineLabel="partsChest84" price="4" buyLimitNum="24" /><!-- 84级零件箱*1 -->
+			<goods  defineLabel="highVehicleCard" price="3" buyLimitNum="25" /><!-- 神车卡片*1 -->
+			<goods  defineLabel="highPetCard" price="3" buyLimitNum="25" /><!-- 神宠卡片*1 -->
+			<goods  defineLabel="zodiacCash" price="2" num="2" buyLimitNum="80" /><!-- 万能生肖碎片*2 -->
+			<goods  defineLabel="yearSnake" price="1" buyLimitNum="100" /><!-- 巳蛇碎片*1 -->
+			<goods  defineLabel="yearPig" price="1" buyLimitNum="100" /><!-- 亥猪碎片*1 -->
+			<goods  defineLabel="yearMonkey" price="1" buyLimitNum="100" /><!-- 申猴碎片*1 -->
+			<goods  defineLabel="yearRabbit" price="1" buyLimitNum="100" /><!-- 卯兔碎片*1 -->
+			<goods  defineLabel="yearMouse" price="1" buyLimitNum="100" /><!-- 子鼠碎片*1 -->
+			<goods  defineLabel="yearCattle" price="1" buyLimitNum="100" /><!-- 丑牛碎片*1 -->
+			<goods  defineLabel="pianoGun" price="1" buyLimitNum="100" /><!-- 弦音碎片*1 -->
+			<goods  defineLabel="lightCone" price="1" buyLimitNum="100" /><!-- 光锥碎片*1 -->
+			<goods dataType="parts" defineLabel="huntParts_1" price="1" buyLimitNum="150" /><!-- 猎杀技能器*1 -->
+			<goods dataType="parts" defineLabel="acidicParts_1" price="1" buyLimitNum="150" /><!-- 腐蚀芯片*1 -->
+			<goods  defineLabel="soldiersStamp" price="2" buyLimitNum="20" /><!-- 募兵券*1 -->
+			<goods  defineLabel="arenaChest" price="2" buyLimitNum="20" /><!-- 竞技宝箱*1 -->
+
+		</type>
+	</father>
+	
+	
+	<![CDATA[新版粽子
+	<father name="pumpkin" cnName="粽子" priceType="pumpkin" labelArr="all">
+		<type>
+			<goods dataType="equip" defineLabel="loveShell_1" price="180" buyLimitNum="1" />
+			<goods dataType="parts" defineLabel="balloonParts_1" price="30" buyLimitNum="1" />
+			<goods defineLabel="doubleArmsCard" price="3" 			buyLimitNum="10" />
+			<goods defineLabel="doubleEquipCard" price="3" 			buyLimitNum="10" />
+			<goods defineLabel="doubleMaterialsCard" price="3" 			buyLimitNum="10" />
+			
+			<goods defineLabel="strengthenStone" num="10" price="1" 			buyLimitNum="200" />
+			<goods defineLabel="zodiacCash" price="3" 			buyLimitNum="30" />
+			<goods defineLabel="madheart" price="4" buyLimitNum="30" />
+			<goods defineLabel="demStone" price="4" buyLimitNum="30" />
+			<goods defineLabel="demBall" price="2" buyLimitNum="50" />
+			
+			<goods defineLabel="lightCone" price="2" buyLimitNum="25" />
+			<goods defineLabel="partsChest87" price="15" buyLimitNum="4" />
+			<goods defineLabel="partsChest84" price="5" buyLimitNum="4" />
+			
+			<goods defineLabel="highVehicleCard" price="3" buyLimitNum="5" />
+			<goods defineLabel="highPetCard" price="3" buyLimitNum="5" />
+			
+			<goods defineLabel="pianoGun" price="2" buyLimitNum="20" />
+			<goods defineLabel="yearSnake" price="2" buyLimitNum="50" />
+			<goods defineLabel="yearPig" price="2" buyLimitNum="50" />
+			<goods defineLabel="yearMonkey" price="2" buyLimitNum="50" />
+			<goods defineLabel="yearRabbit" price="2" buyLimitNum="50" />
+			<goods defineLabel="yearMouse" price="2" buyLimitNum="50" />
+			<goods defineLabel="yearCattle" price="2" buyLimitNum="50" />
+			<goods defineLabel="yearDog" price="1" buyLimitNum="50" />
+			<goods dataType="parts" defineLabel="huntParts_1" price="1" buyLimitNum="100" />
+			<goods dataType="parts" defineLabel="acidicParts_1" price="1" buyLimitNum="100" />
+			<goods defineLabel="allBlackCash" price="1" num="5"/>
+			<goods defineLabel="allBlackEquipCash" price="1" num="5" />
+		</type>
+		
+	</father>
+	]]>
+	<![CDATA[扩容前
+	<father name="pumpkin" cnName="桂花糕" priceType="pumpkin" labelArr="all"><!-- 2025年中秋 -->
+		<type>
+			<goods  defineLabel="demBall" price="1" buyLimitNum="50" /><!-- 万能球*1 -->
+			<goods  defineLabel="demStone" price="2" buyLimitNum="50" /><!-- 无双水晶*1 -->
+			<goods  defineLabel="madheart" price="2" buyLimitNum="50" /><!-- 战神之心*1 -->
+			<goods  defineLabel="yaStone" price="3" buyLimitNum="30" /><!-- 氩石*1 -->
+			<goods  defineLabel="yaRock" price="3" buyLimitNum="30" /><!-- 氩岗岩*1 -->
+			<goods dataType="base" defineLabel="partsCoin" price="1" buyLimitNum="50" /><!-- 零件券*1 -->
+			<goods  defineLabel="partsChest87" price="10" buyLimitNum="10" /><!-- 87级零件箱*1 -->
+			<goods  defineLabel="partsChest84" price="4" buyLimitNum="20" /><!-- 84级零件箱*1 -->
+			<goods  defineLabel="highVehicleCard" price="3" buyLimitNum="20" /><!-- 神车卡片*1 -->
+			<goods  defineLabel="highPetCard" price="3" buyLimitNum="20" /><!-- 神宠卡片*1 -->
+			<goods  defineLabel="zodiacCash" price="2" num="2" buyLimitNum="50" /><!-- 万能生肖碎片*2 -->
+			<goods  defineLabel="yearSnake" price="1" buyLimitNum="50" /><!-- 巳蛇碎片*1 -->
+			<goods  defineLabel="yearPig" price="1" buyLimitNum="50" /><!-- 亥猪碎片*1 -->
+			<goods  defineLabel="yearMonkey" price="1" buyLimitNum="50" /><!-- 申猴碎片*1 -->
+			<goods  defineLabel="yearRabbit" price="1" buyLimitNum="50" /><!-- 卯兔碎片*1 -->
+			<goods  defineLabel="yearMouse" price="1" buyLimitNum="50" /><!-- 子鼠碎片*1 -->
+			<goods  defineLabel="yearCattle" price="1" buyLimitNum="50" /><!-- 丑牛碎片*1 -->
+			<goods  defineLabel="pianoGun" price="1" buyLimitNum="50" /><!-- 弦音碎片*1 -->
+			<goods  defineLabel="lightCone" price="1" buyLimitNum="50" /><!-- 光锥碎片*1 -->
+			<goods dataType="parts" defineLabel="huntParts_1" price="1" buyLimitNum="50" /><!-- 猎杀技能器*1 -->
+			<goods dataType="parts" defineLabel="acidicParts_1" price="1" buyLimitNum="50" /><!-- 腐蚀芯片*1 -->
+			<goods  defineLabel="soldiersStamp" price="2" buyLimitNum="20" /><!-- 募兵券*1 -->
+			<goods  defineLabel="arenaChest" price="2" buyLimitNum="20" /><!-- 竞技宝箱*1 -->
+
+		</type>
+	</father>
+	]]>
+	
+	
+	<![CDATA[旧版粽子]]>
+	<![CDATA[
+	<father name="pumpkin" cnName="粽子" priceType="pumpkin" labelArr="all">
+		<type>
+			<goods dataType="parts" defineLabel="balloonParts_1" price="30" buyLimitNum="1" />
+			<goods defineLabel="doubleArmsCard" price="3" 			buyLimitNum="10" />
+			<goods defineLabel="doubleEquipCard" price="3" 			buyLimitNum="10" />
+			<goods defineLabel="doubleMaterialsCard" price="3" 			buyLimitNum="10" />
+			
+			<goods defineLabel="strengthenStone" num="10" price="1" 			buyLimitNum="200" />
+			<goods defineLabel="zodiacCash" price="2" 			buyLimitNum="30" />
+			<goods defineLabel="madheart" price="2" buyLimitNum="30" />
+			<goods defineLabel="demStone" price="2" buyLimitNum="30" />
+			
+			<goods defineLabel="lightCone" price="2" buyLimitNum="25" />
+			<goods defineLabel="partsChest87" price="15" buyLimitNum="4" />
+			<goods defineLabel="partsChest84" price="5" buyLimitNum="4" />
+			
+			<goods defineLabel="highVehicleCard" price="3" buyLimitNum="5" />
+			<goods defineLabel="highPetCard" price="3" buyLimitNum="5" />
+			
+			<goods defineLabel="pianoGun" price="2" buyLimitNum="20" />
+			<goods defineLabel="yearSnake" price="2" buyLimitNum="15" />
+			<goods defineLabel="yearPig" price="2" buyLimitNum="15" />
+			<goods defineLabel="yearMonkey" price="2" buyLimitNum="15" />
+			<goods defineLabel="yearRabbit" price="2" buyLimitNum="15" />
+			<goods defineLabel="yearMouse" price="2" buyLimitNum="15" />
+			<goods defineLabel="yearCattle" price="2" buyLimitNum="15" />
+			<goods defineLabel="yearDog" price="1" buyLimitNum="15" />
+			<goods dataType="parts" defineLabel="huntParts_1" price="2" buyLimitNum="50" />
+			<goods dataType="parts" defineLabel="acidicParts_1" price="2" buyLimitNum="50" />
+			<goods defineLabel="allBlackCash" price="1" num="5" buyLimitNum="30" />
+			<goods defineLabel="allBlackEquipCash" price="1" num="5" buyLimitNum="30" />
+		</type>
+		
+	</father>
+	
+	
+	<father name="pumpkin" cnName="小南瓜" priceType="pumpkin" labelArr="all" >
+		<type>
+			<goods dataType="fashion" inBagType="equip" defineLabel="pumpkinHead" price="10" buyLimitNum="2" />
+			<goods defineLabel="yaRock" price="3" buyLimitNum="15" />
+			<goods defineLabel="yaStone" price="3" buyLimitNum="15" />
+			<goods defineLabel="intensDrug" price="3" buyLimitNum="15" />
+			<goods defineLabel="madheart" price="2" buyLimitNum="20" />
+			<goods defineLabel="demStone" price="2" buyLimitNum="30" />
+			<goods defineLabel="arenaChest" price="3" 			buyLimitNum="10" />
+			<goods defineLabel="zodiacCash" price="2" 			buyLimitNum="10" />
+			<goods defineLabel="partsChest90" price="35" buyLimitNum="3" />
+			<goods defineLabel="partsChest87" price="20" buyLimitNum="3" />
+			<goods defineLabel="partsChest84" price="7" buyLimitNum="4" />
+			
+			<goods defineLabel="highVehicleCard" price="3" buyLimitNum="5" />
+			<goods defineLabel="highPetCard" price="3" buyLimitNum="5" />
+			
+			
+			<goods defineLabel="pianoGun" price="1" buyLimitNum="30" />
+			<goods defineLabel="yearSnake" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearPig" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearMonkey" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearRabbit" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearMouse" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearCattle" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearDog" price="1" buyLimitNum="20" />
+			<goods dataType="parts" defineLabel="huntParts_1" price="2" buyLimitNum="40" />
+			<goods dataType="parts" defineLabel="acidicParts_1" price="2" buyLimitNum="40" />
+			<goods defineLabel="allBlackCash" price="2" num="5" />
+			<goods defineLabel="allBlackEquipCash" price="2" num="5" />
+		</type>
+		
+	</father>
+	
+	
+	
+	
+	
+	
+	<father name="pumpkin" cnName="桂花糕" priceType="pumpkin" labelArr="all"><!-- 2023年中秋 -->
+		<type>
+			<goods dataType="parts" defineLabel="mooncakeParts_1" price="30" buyLimitNum="1" />
+			<goods defineLabel="demonSpreadCard" price="3" 			buyLimitNum="5" />
+			<goods defineLabel="superSpreadCard" price="3" 			buyLimitNum="5" />
+			<goods defineLabel="bigHurtCard" price="3" 			buyLimitNum="5" />
+			<goods defineLabel="profiStamp" price="10" 			buyLimitNum="5" />
+			
+			<goods defineLabel="doubleArmsCard" price="3" 			buyLimitNum="10" />
+			<goods defineLabel="doubleEquipCard" price="3" 			buyLimitNum="10" />
+			<goods defineLabel="doubleMaterialsCard" price="3" 			buyLimitNum="10" />
+			
+			<goods defineLabel="madheart" price="2" buyLimitNum="20" />
+			<goods defineLabel="demStone" price="2" buyLimitNum="25" />
+			<goods defineLabel="arenaChest" price="4" 			buyLimitNum="10" />
+			<goods defineLabel="zodiacCash" price="2" 			buyLimitNum="20" />
+			
+			<goods defineLabel="partsChest87" price="20" buyLimitNum="3" />
+			<goods defineLabel="partsChest84" price="7" buyLimitNum="4" />
+			
+			<goods defineLabel="highVehicleCard" price="3" buyLimitNum="5" />
+			<goods defineLabel="highPetCard" price="3" buyLimitNum="5" />
+			
+			<goods defineLabel="pianoGun" price="2" buyLimitNum="20" />
+			<goods defineLabel="yearSnake" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearPig" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearMonkey" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearRabbit" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearMouse" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearCattle" price="1" buyLimitNum="20" />
+			<goods defineLabel="yearDog" price="1" buyLimitNum="20" />
+			<goods defineLabel="allBlackCash" price="1" num="10" buyLimitNum="50" />
+			<goods defineLabel="allBlackEquipCash" price="1" num="10" buyLimitNum="50" />
+		</type>
+		
+		
+	</father>
+	
+	
+	
+	
+	
+	
+	
+	
+	<father name="pumpkin" cnName="糖果" priceType="pumpkin" labelArr="all">
+		<type>
+			<goods defineLabel="allBlackCash" num="5" price="1"    buyLimitNum="30" />
+			<goods defineLabel="allBlackEquipCash" num="5" price="1"    buyLimitNum="30" />
+			<goods defineLabel="PetIronChiefBook" price="1"    buyLimitNum="50" />
+			<goods defineLabel="PetBoomSkullBook" price="1"    buyLimitNum="50" />
+			<goods defineLabel="PetLakeBook" price="1"    buyLimitNum="50" />
+			<goods defineLabel="partsChest87" price="10"    buyLimitNum="3" />
+			<goods defineLabel="demStone" price="3"    buyLimitNum="10" />
+			<goods defineLabel="zodiacCash" price="2"    buyLimitNum="20" />
+			<goods defineLabel="armsGemChest" price="1"    buyLimitNum="30" />
+			<goods defineLabel="equipGemChest" price="1"    buyLimitNum="30" />
+			<goods defineLabel="yearSnake" price="1"    buyLimitNum="20" />
+			<goods defineLabel="yearPig" price="1"    buyLimitNum="20" />
+			<goods defineLabel="yearMonkey" price="1"    buyLimitNum="20" />
+			<goods defineLabel="yearRabbit" price="1"    buyLimitNum="20" />
+			<goods defineLabel="yearMouse" price="1"    buyLimitNum="20" />
+			<goods defineLabel="yearCattle" price="1"    buyLimitNum="20" />
+			<goods defineLabel="pianoGun" price="1"    buyLimitNum="20" />
+			<goods defineLabel="lightCone" price="1"    buyLimitNum="30" />
+			<goods dataType="parts" defineLabel="huntParts_1" price="1"    buyLimitNum="30" />
+			<goods dataType="parts" defineLabel="acidicParts_1" price="1"    buyLimitNum="30" />
+		</type>
+	<!-- 去掉type="other"就可以显示了 -->
+			
+
+
+	</father>
+	
+	
+	]]>
+	<![CDATA[
+	
+	]]>
+	
+	
+	
+</data>

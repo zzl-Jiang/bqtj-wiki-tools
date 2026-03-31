@@ -1,0 +1,62 @@
+<?xmlversion="1.0" encoding="utf-8" ?>
+<data>
+	<father name="deathArms">
+		<body name="deathArms_white" noEncodeB="1">
+			m4Rifle
+qsg92
+xm1014
+barrettM82
+		</body>
+		<body name="deathArms_blue" noEncodeB="1">
+			mammothDeath
+rocketDeath
+yearDogDea
+scorpionDea
+christmasDea
+fireFlamerDea
+xm1014Red
+xm1014Yellow
+awpYellow
+awpGreen
+yearRabbitDea
+iceConeDea
+akYellow
+akGreen
+dreamDieDea
+airCannon
+stopCannon
+waterFlamerDea
+		</body>
+		<body name="deathArms_purple" noEncodeB="1">
+			yearCattleDea
+rocketCateDea
+rocketSkyDea
+rocketSkyS
+roamDea
+lightConeDea
+starDea
+sandStormDea
+airCannonX
+bounceRocketDea
+yearMonkeyDea
+m4Red
+mambaGreen
+mambaYellow
+svdBlue
+destroyDie
+yearHourseDea
+shotgunRedDea
+crocodileDea
+shotgunFireDea
+		</body>
+		<body name="deathArms_orange" noEncodeB="1">
+			consLeoDea
+falconGunDea
+sniperSmilodonDea
+sniperGreenDea
+yearTigerDea
+gatling
+arcHowDea
+		</body>
+	</father>
+</data>

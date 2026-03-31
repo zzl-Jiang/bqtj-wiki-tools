@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="weather" cnName="气象枪">
+		<bullet name="申猴" kind="wind" color="black" evoB="0" composeLv="97" chipNum="150" chipB="1" dropLevelArr="999">
+			<name>yearMonkey</name>
+			<cnName>申猴</cnName>
+			<!--基本-->
+			<capacity>6</capacity> 
+			<attackGap>1.3</attackGap>
+			<reloadGap>3</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>75</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth><aiShootRange>500</aiShootRange>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.1</twoShootPro>
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			<skillArr>Hit_silence_ArmsSkill</skillArr>
+			<godSkillArr>yearMonkeySkill</godSkillArr>
+			<oneHitBodyB>1</oneHitBodyB>
+			<noMagneticB>1</noMagneticB>
+			<!--武器属性------------------------------------------------------------ -->
+			<gunNum>1</gunNum>
+			<armsArmMul>0.5</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>3</upValue>
+			<shootShakeAngle>15</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletSpeed>5</bulletSpeed>
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>10</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1.5</dpsMul>
+			<uiDpsMul>1.4</uiDpsMul>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/yearMonkeySound</shootSoundUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">generalEffect/windEffect</bulletImgUrl>
+			<hitImgUrl raNum="4" con="add">bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgUrl  raNum="1" con="add">specialGun/christmasGunBoom</fireImgUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearMonkey</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>生肖碎片包(活跃值礼包)、物品合成、纪念币商店、万能球商店、黄金商店、竞技宝箱</description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill><!-- dps-被动 -->
+			<name>yearMonkeySkill</name><noRandomListB>1</noRandomListB>
+			<cnName>龙卷</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<otherConditionArr>noDemon,noMainTask,noHardB,meHaveStateOr</otherConditionArr>
+			<conditionString>murderous_hero</conditionString>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>yearMonkeySkill</effectType>
+			<duration>4</duration>
+			<stateEffectImg partType="mouth" con="add">skillEffect/dizziness</stateEffectImg>
+			<!--图像------------------------------------------------------------ -->
+			<description>当你拥有嗜爪状态时，能让被龙卷风击中的敌人卷入风中，经过[duration]秒再落下。主线任务、修罗模式无效。</description>
+		</skill>
+	</father>
+</data>

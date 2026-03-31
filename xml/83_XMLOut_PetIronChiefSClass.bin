@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="pet" cnName="尸宠">
+		<body index="0" name="冥王" shell="metal">
+			
+			<name>PetIronChiefS</name>
+			<cnName>冥王</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/pet/PetIronChiefS.swf</swfUrl>
+			<headIconUrl>IconGather/PetIronChiefS</headIconUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1.3</lifeRatio>
+			<!-- 图像 -->
+			<imgType>bmp</imgType>
+			<imgArr>
+				stand,move
+				,normalAttack1,normalAttack2,shootAttack
+				,hurt1,die1
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-18,-86,36,86</hitRect>
+			<!-- 运动 -->
+			<maxVx>7</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<motionState>fly</motionState>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<flyType>tween</flyType>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr></bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack1</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit2">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>normalAttack2</imgLabel>
+					<hurtRatio>5</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/metal_hit1">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<bulletLabel>PetIronChiefS_shoot1</bulletLabel>
+					<grapRect>-360,-120,250,107</grapRect>
+					<hurtRatio>1</hurtRatio>
+					<attackType>direct</attackType>
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+		<bullet>
+			<name>PetIronChiefS_shoot1</name>
+			<cnName>冥王-光波</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>120</bulletWidth>
+			<hitType>longLine</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.8</attackGap>
+			<attackDelay>0.5</attackDelay>
+			<bulletAngle>179.9</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<twoHitGap>0.3</twoHitGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-67,-65</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetIronChiefS/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/vehicle_hit1" con="add">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	<father name="petBodySkill">
+		<skill>
+			<cnName>冥盾</cnName>
+			<name>ironShell</name>
+			<iconUrl>SkillIcon/ironShell</iconUrl>
+			<changeText>持续时间：[duration]秒</changeText>
+			<conditionType>passive</conditionType>
+			<condition>underHurt</condition>
+			<otherConditionArr>isMulHurt</otherConditionArr>
+			<target>me</target>
+			<addType>state</addType>
+			<effectType>invincible</effectType>
+			<duration>0.2</duration>
+			<stateEffectImg partType="body" con="add">generalEffect/invincibleShield</stateEffectImg>
+			<description>受到敌人百分比伤害后，无敌[duration]秒。</description>
+			<growth>
+				<skill><duration>0.2</duration></skill>
+				<skill><duration>0.3</duration></skill>
+				<skill><duration>0.4</duration></skill>
+				<skill><duration>0.5</duration></skill>
+				<skill><duration>0.6</duration></skill>
+				<skill><duration>0.8</duration></skill>
+				<skill><duration>1.0</duration></skill>
+				<skill><duration>1.2</duration></skill>
+				<skill><duration>1.4</duration></skill>
+			</growth>
+		</skill>
+	</father>
+	
+	
+</data>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+		
+		
+		
+	<father name="partsSkill" cnName="零件技能">
+		<skill name="猎击"><!-- dps-被动 -->
+			<name>huntParts</name>
+			<cnName>猎击</cnName><noSkillDodgeB>1</noSkillDodgeB>
+			<effectInfoArr>伤害,单体</effectInfoArr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>造成[mul]倍的伤害</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>lifePerMore</otherConditionArr>
+			<conditionRange>0.90</conditionRange>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<changeHurtB>1</changeHurtB>
+			<effectType>changeHurtNoCondition</effectType>
+			<mul>1.3</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>自身生命值大于90%时，对敌人造成[mul]的伤害。60%的概率无视技能免疫。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.3</mul></skill>
+				<skill><mul>2.0</mul></skill>
+				<skill><mul>3.0</mul></skill>
+				<skill><mul>3.2</mul></skill>
+				<skill><mul>3.4</mul></skill>
+			</growth>
+		</skill>
+		
+		<skill name="酸性腐蚀"><!-- dps-被动 -->
+			<name>acidicParts</name>
+			<cnName>酸性腐蚀</cnName>
+			<effectInfoArr>伤害,单体</effectInfoArr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>造成[mul]倍的伤害</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>raceType</otherConditionArr>
+			<conditionString>robot</conditionString>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>underHurtMul</effectType>
+			<duration>1</duration>
+			<mul>1.05</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>腐蚀机械体敌人的外壳，降低其[mul-1]的防御力。</description>
+			<stateEffectImg partType="body" con="add">generalEffect/bigPoison</stateEffectImg>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.05</mul></skill>
+				<skill><mul>1.2</mul></skill>
+				<skill><mul>1.4</mul></skill>
+				<skill><mul>1.55</mul></skill>
+				<skill><mul>1.65</mul></skill>
+			</growth>
+		</skill>
+		
+		
+		<skill name="爆裂弹"><!-- dps-被动 -->
+			<name>burstParts</name>
+			<cnName>爆裂</cnName>
+			<effectInfoArr>伤害,单体</effectInfoArr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>造成[mul]倍的伤害</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>loopClick</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>setBulletNum</effectType>
+			<effectProArr>0.06</effectProArr><!-- 这个乘以2就是伤害输出增加 -->
+			<value>3</value><!-- bulletNumMul -->
+			<mul>3</mul><!-- shootAngleMul -->
+			<duration>1</duration>
+			<!--图像------------------------------------------------------------ -->
+			<description>持续射击[duration]秒，将有[effectProArr.0]概率产生[duration]秒的[value]倍散射效果。</description>
+			<stateEffectImg name="burstParts"/>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><effectProArr>0.06</effectProArr></skill>
+				<skill><effectProArr>0.19</effectProArr></skill>
+			</growth>
+		</skill>
+		
+		<skill name="月饼子弹"><!-- dps-被动 -->
+			<name>mooncakeParts</name>
+			<cnName>吃月饼</cnName>
+			<effectInfoArr>伤害,单体</effectInfoArr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>额外造成[mul-1]的伤害</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><changeHurtB>1</changeHurtB>
+			<condition>hit</condition>
+			<otherConditionArr>sceneLabelHave</otherConditionArr>
+			<conditionString>月亮</conditionString>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtNoCondition</effectType>
+			<mul>1.2</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>把子弹型的子弹外观变为月饼。在有月亮的地图中，对敌人造成额外[mul-1]的伤害。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.2</mul></skill>
+			</growth>
+		</skill>
+		
+		
+		<skill name="修罗弹夹"><!-- dps-被动 -->
+			<name>demCapacityParts</name>
+			<cnName>弹药补充</cnName>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>[effectProArr.0]的概率</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>heroShoot</condition>
+			<otherConditionArr>isDemon3OrUnend</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>addCapacity</effectType>
+			<effectProArr>0.3</effectProArr>
+			<value>1</value>
+			<description>在修罗（独战、冷门、决斗）模式中，或虚天塔中，每次射击都有[effectProArr.0]的概率补充[value]颗弹药。</description>
+			<targetEffectImg name="addCapacity"/>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><effectProArr>0.3</effectProArr></skill>
+				<skill><effectProArr>0.5</effectProArr></skill>
+			</growth>
+		</skill>
+		
+		
+		<skill>
+			<name>bluntBallParts</name>
+			<cnName>钝化增强</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>额外造成[mul]倍的伤害</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>armsPenLess</otherConditionArr>
+			<conditionRange>10</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<changeHurtB>1</changeHurtB>
+			<effectType>changeHurtNoCondition</effectType>
+			<mul>1.3</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>对穿人个数和穿墙深度小于[conditionRange]的武器进行钝化增强，额外增加[mul-1]的伤害。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.3</mul></skill>
+			</growth>
+		</skill>
+		
+	</father>
+	
+</data>

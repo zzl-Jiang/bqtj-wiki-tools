@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="death">
+		<body shell="normal">
+			
+			<name>DieSpider</name>
+			<cnName>绝命毒蛛</cnName>
+			<raceType>zombies</raceType><headIconUrl>IconGather/SmallSpider</headIconUrl>
+			<swfUrl>swf/enemy/SmallSpider358.swf</swfUrl>
+			<swfName>SmallSpider</swfName>
+			<!-- 基本系数 -->
+			<lifeRatio>0.7</lifeRatio>
+			<!-- 图像 -->
+			<lifeBarExtraHeight>24</lifeBarExtraHeight>
+			<imgArr>
+				stand,move
+				,deathAttack,shootAttack,hurt1,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-20,-40,40,40</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>2</maxJumpNum>
+			<maxVx>6</maxVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0.5</nextAttackTime>
+			<extraAIClassLabel>SmallSpider_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr>fastForwardDeath</skillArr>
+			<bossSkillArr></bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>deathAttack</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<grapRect>-150,-111,150,105</grapRect>
+					<hitImgUrl name="clawHit"/>
+				</hurt>
+			</hurtArr>
+		</body>	
+	</father>
+</data>

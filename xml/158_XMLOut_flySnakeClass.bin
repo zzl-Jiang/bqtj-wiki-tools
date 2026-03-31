@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="pistol" cnName="手枪">
+		<![CDATA[
+		<bullet name="flySnake" color="black" dropLevelArr="999"  evoB="0" composeLv="97" chipB="1" chipNum="100">
+			<name>flySnake</name>
+			<cnName>飞行蛇</cnName>
+			<!--基本-->
+			<capacity>30</capacity>
+			<attackGap>1.2</attackGap>
+			<reloadGap>2.5</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletNum>60</bulletNum>
+			<shootAngle>150</shootAngle>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0</twoShootPro>
+			<penetrationGap>1000</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			
+			<skillArr>Hit_SlowMove_ArmsSkill,Hit_disabled_ArmsSkill</skillArr>
+			<godSkillArr>editBulletPath,greedySnakeSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>0.4</dpsMul>
+			<uiDpsMul>0.5</uiDpsMul>
+			<hurtRatio>1</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>1.05</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>0</upValue>
+			<shootShakeAngle>15</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<oneHitBodyB>1</oneHitBodyB>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletSpeed>20</bulletSpeed>
+			<bulletLife>3</bulletLife>
+			<hitType>rect</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->.
+			<shootSoundUrl>specialGun/greedySnakeSound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD editB="1" />
+			<bulletImgUrl raNum="30" con="filter">specialGun/greedySnakeBullet</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/greedySnake</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>活动获得</description>
+		</bullet>
+		]]>
+	</father>
+</data>

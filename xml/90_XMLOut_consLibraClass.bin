@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father  type="rocket" cnName="火炮-特殊">
+		<bullet cnName="天秤座" name="consLibra" kind="particle" color="darkgold" composeLv="99" chipB="1" chipNum="120" dropLevelArr="999">
+			<name>consLibra</name>
+			<cnName>天秤座</cnName>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>10</capacity>
+			<attackGap>0.8</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>40</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.60</armsArmMul>
+			<upValue>0</upValue>
+			<shootShakeAngle>40</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>3</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1</dpsMul>
+			<uiDpsMul>1.8</uiDpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>30</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.4</twoShootPro>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="2"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.3"/>
+			<skillArr>Hit_hitMissile_godArmsSkill,Hit_silence_ArmsSkill</skillArr>
+			<godSkillArr>Hit_finalkill_godArmsSkill,consLibraSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>newGun/consLibraIcon</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl name="consLibraBullet"/>
+			<smokeImgUrl name="consLibraSmoke"/>
+			<hitImgUrl name="consPurpleHit"/>
+			<fireImgUrl name="purpleSpurtingFire"/>
+			<shootSoundUrl>specialGun/yearMonkeySound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/consLibra</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>十一周年活动</description>
+		</bullet>
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill index="0" name="周一平衡"><!-- dps-被动 -->
+			<name>consLibraSkill</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>周一平衡</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>puWe,noMainTask,noBossEditB,dayPan,yearArmsFalse,targetUnitType,noUnionBattle</otherConditionArr>
+			<conditionRange>1</conditionRange>
+			<conditionString>boss</conditionString>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>consLibraSkill</effectType>
+			<!--图像------------------------------------------------------------ -->
+			<otherEffectImg />
+			<pointEffectImg name="consPurpleBoom"/>
+			<description>每周一你可以实现如下技能效果1次：击中首领时，将它的总生命值设置为和你一致，同时你将获得免伤的能力。主线任务、军队争霸、工厂中该技能无效。</description>
+		</skill>
+	</father>
+</data>

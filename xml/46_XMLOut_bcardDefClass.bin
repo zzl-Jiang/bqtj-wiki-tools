@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="active">
+		<body id="anniverSign9" n="Snowman" s="6" li="2000" dp="35" sr="32_1,13_9,13_10,31_1,31_3,31_6,31_9,32_2" o="{'specialPartsDropPro':0.10}" />
+		<body id="vipExcOreWorm" n="OreWorm" s="7" li="2533" dp="38" sr="21_1,34_10,23_10,12_2,22_10,21_4,12_11,34_2,32_3" o="{'lottery':10}" />
+		<body id="anniverSign10" n="DryFrog" s="7" li="2480" dp="39" sr="State_noAiFind,21_2,32_3,14_2,12_10,31_1,35_2,12_13,31_11" o="{'loveAdd':20}" />
+		<body id="su25" n="OreTaper" s="7" li="2620" dp="39" sr="13_9,13_8,32_8,13_6,13_7,13_1,13_3,13_4,21_3" o="{'lottery':8,'ranBlackArmsDropPro':0.2}" />
+	</father>
+	
+	<father name="achieveGift" cn="送魂卡">
+		<![CDATA[不能重名]]>
+		<body id="achieveGift100" n="BallLightning" s="3" li="394" dp="6" sr="22_5,31_10,13_5,21_4,21_8,21_9"/>
+		<body id="achieveGift300" n="IronDog" s="4" li="800" dp="16" sr="32_8,35_2,22_4,12_8,13_11,23_8,21_3"/>
+		<body id="achieveGift600" n="FightWolf" s="6" li="2083" dp="33" sr="13_9,31_4,31_11,14_1,34_14,22_6,42_5,23_9" 	o="{'dpsAllBlack':0.05}"/>
+		<body id="achieveGift900" n="VirtualScorpion" s="6" li="2293" dp="31" sr="14_5,21_2,42_1,21_3,31_2,11_1,35_4,21_9" 	o="{'dpsAllBlack':0.07}"/>
+		<body id="achieveGift1200" n="GasDefenseZombie" s="6" li="2049" dp="35" sr="13_9,32_8,41_1,21_8,13_2,31_13,31_9,11_1" 	o="{'dpsAllBlack':0.09}"/>
+		<body id="achieveGift1600" n="BallLightning" s="7" li="2708" dp="37" sr="23_1,31_12,13_8,13_11,14_1,12_1,41_4,32_5,22_5" 	o="{'dpsAllBlack':0.06,'hurtAll':0.06}"/>
+		<body id="achieveGift2000" n="ZombieBattle" s="7" li="2739" dp="37" sr="12_3,32_8,32_3,13_5,12_2,21_10,22_7,41_5,32_5" 	o="{'dpsAllBlack':0.10,'hurtAll':0.10}"/>
+		<body id="achieveGift2400" n="Salamander" s="7" li="2790" dp="39" sr="13_8,21_2,12_11,35_6,22_7,22_9,42_1,31_11,12_8" 	o="{'dpsAllBlack':0.10,'hurtAll':0.10}"/>
+		<body id="achieveGift2800" n="BoomSkullS" s="7" li="2795" dp="40" sr="12_3,21_2,12_11,12_7,22_2,34_11,32_6,35_4,11_1" 	o="{'moreDpsMul':0.05,'moreLifeMul':0.20}"/>
+		<body id="achieveGift3400" n="RifleHornetShooter" s="7" li="2800" dp="40" sr="32_1,strollCard,21_14,12_3,21_8,11_1,31_13" o="{'dpsAllBlack':0.11,'hurtAll':0.11}"/>
+		<body id="achieveGift4000"  n="TriceratopsEgg" s="7" li="2800" dp="40" sr="23_13,noBulletHurt,32_8,32_1,13_11,13_1,13_10" o="{'dpsMul_wavegun':0.05}"/>
+		<body id="achieveGift4400" n="RifleHornetShooter" s="7" li="2800" dp="40" sr="32_1,strollCard,21_14,12_3,21_8,11_1,31_13" o="{'dpsAllBlack':0.11,'hurtAll':0.11}"/>
+		<body id="achieveGift4800"  n="TriceratopsEgg" s="7" li="2800" dp="40" sr="23_13,noBulletHurt,32_8,32_1,13_11,13_1,13_10" o="{'dpsMul_wavegun':0.05}"/>
+		<![CDATA[
+		<body id="achieveGift1000" vip="8" n="ChristmasZombie" s="7" li="2700" dp="37" sr="32_8,32_1,31_4,13_11,13_2,13_3,13_4,13_5,32_2" o="{'rareGeneDropPro':0.30}"/>
+		<body id="achieveGift1300" vip="9" n="PoisonElves" s="7" li="2700" dp="37" sr="OreWormAI_sum,34_2,21_7,21_8,21_9,22_5,12_8,13_1,21_10" o="{'petBookDropPro':0.15}"/>
+		<body id="achieveGift1500" vip="10" n="mother" s="7" li="2700" dp="37" sr="32_1,21_2,13_9,23_3,34_14,21_3,12_12,31_6,34_9" o="{'blackEquipDropPro':0.20}"/>
+		]]>
+	</father>
+	
+	<father name="牛逼魂卡">
+		<body id="niubi1" n="Watchdog" s="5" li="1393" dp="29" sr="12_3,13_9,22_10,31_5,11_2,34_7,23_8,41_1"/>
+	</father>
+</data>

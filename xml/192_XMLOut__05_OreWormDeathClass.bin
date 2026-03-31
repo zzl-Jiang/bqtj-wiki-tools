@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="space" cn="单位">	
+		<body>
+			<name>OreWormDeath</name>
+			<cnName>贪吃蛇</cnName><lifeRatio>1</lifeRatio>
+			<raceType>ship</raceType>
+			<swfUrl>swf/ship/OreWorm.swf</swfUrl><headIconUrl>IconGather/OreWorm</headIconUrl>
+			<swfName>OreWorm</swfName>
+			<!-- 图像 -->
+			<dieImg name="bigSpace"/>
+			<dieJumpMul>0</dieJumpMul>
+			<imgType>normal</imgType>
+			
+			<imgArr>
+				stand,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-20,-20,40,40</hitRect>
+			<hurtRectArr>-42,-42,84,84</hurtRectArr>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			
+			<motionD vRan="0" F_AIR="2"   /><![CDATA[  imgRaB="1"  <lockLeftB>1</lockLeftB>]]>
+			<maxVx>7</maxVx>
+			<attackAIClass></attackAIClass><!--SimpleSpaceAttack_AI  -->
+			<skillArr>OreWormAI2</skillArr>
+			<bossSkillArr>noSR,OreWormWave2,deadlyArrowWorm</bossSkillArr>
+			<hurtArr>
+				<hurt>
+					<imgLabel>stand</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.2</hurtRatio>
+					<shakeValue>10</shakeValue>
+					<meBack>1</meBack>
+					<hitImgUrl name="oreWormHit"/>
+				</hurt>
+			</hurtArr>
+		</body>
+						<skill>
+							<name>OreWormAI2</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+							<cnName>响尾</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+							<conditionType>passive</conditionType>
+							<condition>add</condition>
+							<target>me</target>
+							<!--效果------------------------------------------------------------ -->
+							<addType>state</addType>
+							<effectType>OreWormAIDelay</effectType><effectFather>oreSpace</effectFather><summonedUnitsB>1</summonedUnitsB>
+							<value>5</value><!-- 初始尾巴数量 -->
+							<mul>0.02</mul><!-- 生命值每少于多少增加1个尾巴 -->
+							<secMul>50</secMul><!-- 最大数量的尾巴-->
+							<valueString>OreWormWave2</valueString><!-- 波动技能名-->
+							<duration>9999999</duration>
+							<obj>"cnName":"蛇型采矿机尾","num":1,"lifeMul":0.01,"dpsMul":0.6,"mulByFatherB":1,"lifeTime":-1</obj>
+							<pointEffectImg name="oreBombShowFlower"/>
+							<description>生命值每减少[mul]就会产生1个尾巴。</description>
+						</skill>
+						<skill>
+							<name>OreWormWave2</name>
+							<cnName>波动</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+							<conditionType>active</conditionType>
+							<condition>avtiveSkillCdOver</condition>
+							<target>me</target>
+							<cd>35</cd>
+							<firstCd>10</firstCd>
+							<!--效果------------------------------------------------------------ -->
+							<addType>state</addType>
+							<effectType>OreWormWave</effectType><effectFather>oreSpace</effectFather>
+							<mul>2</mul><!-- 速度增加多少 -->
+							<value>5</value><!-- 每圈需要多少秒 -->
+							<duration>10</duration>
+							<range>220</range><!-- 转圈半径 -->
+							<meEffectImg name="groupSpeedUp_enemy_me"/>
+							<stateEffectImg name="WarriorShield_state"/>
+						</skill>
+						<skill>
+							<name>deadlyArrowWorm</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+							<cnName>夺命箭</cnName>
+							<conditionType>passive</conditionType><noCopyB>1</noCopyB>
+							<condition>underAllHurt</condition>
+							<target>target</target>
+							<addType>instant</addType>
+							<effectType>bullet_deadlyArrow</effectType>
+							<extraValueType>producterDpsFactor</extraValueType>
+							<secMul>0.03</secMul><!-- 生命减少多少发射夺命箭，用mul会被设置成bullet的伤害值，所以用secmul-->
+							<obj>"name":"deadlyArrowWorm","site":"puToTarget","producerShootB":true,"ranX":25,"ranY":25</obj>
+							<pointEffectImg name="deadlyArrowDeathFire"/>
+							<otherEffectImg name="consVirgoLine"/>
+							<description>自身生命值每减少[secMul]就向敌人发出夺命箭。</description>
+						</skill>
+								<bullet>
+									<name>deadlyArrowWorm</name>
+									<cnName>夺命箭子弹</cnName><noMagneticB>1</noMagneticB>
+									<!--基本属性------------------------------------------------------------ -->
+									<hurtRatio>1</hurtRatio>
+									<bulletLife>4</bulletLife>
+									<bulletWidth>40</bulletWidth>
+									<hitType>rect</hitType>
+									<bulletSpeed>3</bulletSpeed>
+									<speedD min="3" max="20" a="15"/>
+									<!--特殊属性------------------------------------------------------------ -->	
+									<penetrationGap>1000</penetrationGap>
+									<bulletImgUrl raNum="30" con="add">bullet/redArrow</bulletImgUrl>
+									<smokeImgUrl raNum="30" con="filter">bullet/redArrow</smokeImgUrl>
+									<hitImgUrl soundUrl="sound/body_hit">bulletHitEffect/energyPurple</hitImgUrl><!-- 子弹图像【必备】 -->
+								</bullet>
+	</father>
+</data>

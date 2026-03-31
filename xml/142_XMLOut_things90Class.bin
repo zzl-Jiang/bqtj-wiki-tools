@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="materials" cnName="">
+		<things cnName="终级装备守护卡">
+			<name>ultiEquipEchelonCard</name>
+			<cnName>终级装备守护卡</cnName>
+			<iconUrl>ThingsIcon/ultiEquipEchelonCard</iconUrl><!-- 技能图标 -->
+			<description>
+				强化装备的保级道具，最高保级26级。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]高级装备守护卡合成
+				[n]商店购买
+				[n]优胜券兑换
+				[n]功勋牌兑换
+			</description>
+			<smeltD addType="equipChip" price="20"  maxNum="1"/>
+		</things>
+		<things cnName="终级武器守护卡">
+			<name>ultiArmsEchelonCard</name>
+			<cnName>终级武器守护卡</cnName>
+			<iconUrl>ThingsIcon/ultiArmsEchelonCard</iconUrl><!-- 技能图标 -->
+			<description>
+				强化武器的保级道具，最高保级26级。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]高级武器守护卡合成
+				[n]商店购买
+				[n]优胜券兑换
+				[n]功勋牌兑换
+			</description>
+			<smeltD addType="armsChip" price="20"  maxNum="1"/>
+		</things>
+		
+		<things cnName="终级武器守护卡">
+			<name>ultiArmsEchelonCard</name>
+			<cnName>终级武器守护卡</cnName>
+			<iconUrl>ThingsIcon/ultiArmsEchelonCard</iconUrl><!-- 技能图标 -->
+			<description>
+				强化武器的保级道具，最高保级26级。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]高级武器守护卡合成
+				[n]商店购买
+				[n]优胜券兑换
+				[n]功勋牌兑换
+			</description>
+			<smeltD addType="armsChip" price="20"  maxNum="1"/>
+		</things>
+		
+		<things cnName="装扮券">
+			<name>dressStamp</name>
+			<cnName>装扮券</cnName>
+			<iconUrl>ThingsIcon/dressStamp</iconUrl><!-- 技能图标 -->
+			<description>
+				增加主城装扮位所需。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]活跃礼包
+				[n]商店购买
+			</description>
+		</things>
+		<things cnName="高级装扮券">
+			<name>dressStampHigh</name><addDropDefineB>1</addDropDefineB>
+			<cnName>高级装扮券</cnName>
+			<iconUrl>ThingsIcon/dressStampHigh</iconUrl><!-- 技能图标 -->
+			<description>
+				增加主城装扮位所需。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]财宝僵尸掉落
+				[n]商店购买
+			</description>
+		</things>
+		<things cnName="黄金装扮券">
+			<name>dressStampGold</name>
+			<cnName>黄金装扮券</cnName>
+			<iconUrl>ThingsIcon/dressStampGold</iconUrl><!-- 技能图标 -->
+			<description>
+				增加主城装扮位所需。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]装扮券合成
+				[n]商店购买
+			</description>
+		</things>
+		<things cnName="魂卡券">
+			<name>bossCardStamp</name>
+			<cnName>魂卡券</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/bossCardNum</iconUrl><!-- 技能图标 -->
+			<loveD num="0"/>
+			<description>
+				购买魂卡券后，可直接增加1次抽魂卡次数，无需使用。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店购买
+			</description>
+		</things>
+		
+		
+		<things cnName="万能载具碎片">
+			<name>vehicleCash</name>
+			<cnName>万能载具碎片</cnName>
+			<iconUrl>ThingsIcon/vehicleCash</iconUrl><!-- 技能图标 -->
+			<description>
+				可在“锻造>合成”界面中合成指定载具碎片。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]四周年庆感恩礼包。
+			</description>
+			<loveD num="20"/>
+			<smeltD type="vehicle" grade="2" addType="box" price="20"  maxNum="1"/>
+		</things>
+		<things cnName="万能生肖碎片">
+			<name>zodiacCash</name>
+			<cnName>万能生肖碎片</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/zodiacCash</iconUrl><!-- 技能图标 -->
+			<description>
+				可在“锻造>合成”界面中合成指定生肖武器碎片。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]活跃度礼包。
+				[n]功勋牌兑换。
+			</description>
+			<loveD num="0"/>
+		</things>
+		
+		<things cnName="爆骷S图鉴">
+			<name>PetBoomSkullBook</name>
+			<cnName>爆骷S图鉴</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/PetBoomSkullBook</iconUrl><!-- 技能图标 -->
+			<description>
+				进化和培养爆骷所需的材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]秘境“爆骷S”
+			</description>
+			<loveD num="1"/>
+			<smeltD type="pet" />
+		</things>
+		<things cnName="冥王图鉴">
+			<name>PetIronChiefBook</name>
+			<cnName>冥王图鉴</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/PetIronChiefBook</iconUrl><!-- 技能图标 -->
+			<description>
+				进化和培养铁魁进化体所需的材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]消灭98级关卡“冥王”
+			</description>
+			<loveD num="1"/>
+			<smeltD type="pet" />
+		</things>
+		<things cnName="雷斯图鉴">
+			<name>PetLakeBook</name>
+			<cnName>雷斯图鉴</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/PetLakeBook</iconUrl><!-- 技能图标 -->
+			<description>
+				进化和培养雷克进化体所需的材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n][n]秘境“黑暗雷尔”
+			</description>
+			<loveD num="1"/>
+			<smeltD type="pet" />
+		</things>
+		<things cnName="技能熟练卡">
+			<name>profiStamp</name>
+			<cnName>技能熟练卡</cnName>
+			<iconUrl>ThingsIcon/profiStamp</iconUrl><!-- 技能图标 -->
+			<description>
+				增加技能3000点熟练度所需的材料，在技能升级界面中操作。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店购买
+			</description>
+			<loveD num="0"/>
+		</things>
+		<things>
+			<name>renameCard</name>
+			<cnName>改名卡</cnName>
+			<iconUrl>ThingsIcon/renameCard</iconUrl><!-- 技能图标 -->
+			<loveD num="0"/>
+			<description>
+				修改角色昵称、宠物昵称需要消耗的物品。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店购买
+			</description>
+		</things>
+		<things>
+			<name>partsGridCard</name>
+			<cnName>零件位卡</cnName>
+			<iconUrl>ThingsIcon/partsGridCard</iconUrl><!-- 技能图标 -->
+			<loveD num="0"/>
+			<description>
+				解锁武器其中1个零件位所需物品。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]零件券兑换
+				[n]黄金商店
+			</description>
+		</things>
+		<things>
+			<name>bagGridCard</name>
+			<cnName>背包位卡</cnName>
+			<iconUrl>ThingsIcon/bagGridCard</iconUrl><!-- 技能图标 -->
+			<loveD num="0"/>
+			<description>
+				解锁背包位所需物品。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]等级礼包
+				[n]黄金商店
+			</description>
+		</things>
+		<things>
+			<name>houseGridCard</name>
+			<cnName>仓库位卡</cnName>
+			<iconUrl>ThingsIcon/houseGridCard</iconUrl><!-- 技能图标 -->
+			<loveD num="0"/>
+			<description>
+				解锁仓库位所需物品。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]等级礼包
+				[n]黄金商店
+			</description>
+		</things>
+	</father>
+	
+	<father name="materials" cnName="宝石、无双水晶" smeltType="armsEquip">
+		<things cnName="氩岗岩">
+			<name>yaRock</name>
+			<cnName>氩岗岩</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/yaRock</iconUrl><!-- 技能图标 -->
+			<description>
+				部分武器进化所需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]反客任务。
+				[n]太空成就。
+			</description>
+			<loveD num="0"/>
+		</things>
+		<things cnName="氩石">
+			<name>yaStone</name>
+			<cnName>氩石</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/yaStone</iconUrl><!-- 技能图标 -->
+			<description>
+				武器进化至“氩星”级别的必需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]太空探索成就。
+				[n]击毙溪山顶首领“双头僵尸”。
+			</description>
+			<loveD num="0"/>
+		</things>
+		
+		<things cnName="战神之心">
+			<name>madheart</name><addDropDefineB>1</addDropDefineB>
+			<cnName>战神之心</cnName>
+			<iconUrl>madpur/heart</iconUrl><!-- 技能图标 -->
+			<description>
+				狂人进阶至战神的必需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]地图星谷“战神”。
+			</description>
+			<loveD num="0"/>
+		</things>
+		
+		<things cnName="无双水晶">
+			<name>demStone</name><addDropDefineB>1</addDropDefineB>
+			<cnName>无双水晶</cnName>
+			<iconUrl>ThingsIcon/demStone</iconUrl><!-- 技能图标 -->
+			<description>
+				武器进化至无双的必需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]修罗模式。
+			</description>
+			<loveD num="0"/>
+		</things>
+		<things cnName="万能球">
+			<name>demBall</name><addDropDefineB>1</addDropDefineB>
+			<cnName>万能球</cnName>
+			<iconUrl>ThingsIcon/demBall</iconUrl><!-- 技能图标 -->
+			<description>
+				可在锻造合成中合成指定物品。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]修罗模式。
+			</description>
+			<loveD num="0"/>
+		</things>
+		<things cnName="升化剂">
+			<name>intensDrug</name><addDropDefineB>1</addDropDefineB>
+			<cnName>升化剂</cnName>
+			<iconUrl>ThingsIcon/intensDrug</iconUrl><!-- 技能图标 -->
+			<description>
+				用于提升尸宠99级以后的强化等级。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]地图“绝壁窟”。
+			</description>
+			<loveD num="0"/>
+		</things>
+		<things cnName="聚魂石">
+			<name>ghostStone</name>
+			<cnName>聚魂石</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/ghostStone</iconUrl><!-- 技能图标 -->
+			<description>
+				用于重造8星魂卡。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]锻造>物品合成。
+				[n]纪念币兑换。
+			</description>
+			<loveD num="0"/>
+		</things>
+		
+		<things cnName="智慧宝石">
+			<name>wisdomGem</name><addDropDefineB>1</addDropDefineB>
+			<cnName>智慧宝石</cnName>
+			<iconUrl>ThingsIcon/wisdomGem</iconUrl><!-- 技能图标 -->
+			<description>
+				在“锻造>合成>装备”界面中合成暗金头盔所需材料，也是进化暗金头盔所需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]秘境“电棍僵尸”。
+			</description>
+			<loveD num="10"/>
+		</things>
+		<things cnName="敏捷宝石">
+			<name>agileGem</name><addDropDefineB>1</addDropDefineB>
+			<cnName>敏捷宝石</cnName>
+			<iconUrl>ThingsIcon/agileGem</iconUrl><!-- 技能图标 -->
+			<description>
+				在“锻造>合成>装备”界面中合成暗金战裤所需材料，也是进化暗金战裤所需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]97级首领“防毒僵尸”。
+			</description>
+			<loveD num="10"/>
+		</things>
+		<things cnName="守护宝石">
+			<name>defenceGem</name><addDropDefineB>1</addDropDefineB>
+			<cnName>守护宝石</cnName>
+			<iconUrl>ThingsIcon/defenceGem</iconUrl><!-- 技能图标 -->
+			<description>
+				在“锻造>合成>装备”界面中合成暗金战衣所需材料，也是进化宠物“铁魁”所需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]消灭98级关卡“冥王”
+			</description>
+			<loveD num="10"/>
+		</things>
+		<things cnName="戒备宝石">
+			<name>alertGem</name><addDropDefineB>1</addDropDefineB>
+			<cnName>戒备宝石</cnName>
+			<iconUrl>ThingsIcon/alertGem</iconUrl><!-- 技能图标 -->
+			<description>
+				在“锻造>合成>装备”界面中合成暗金腰带所需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]秘境“运毒尸”。
+			</description>
+			<loveD num="10"/>
+		</things>
+		
+		<things cnName="火焰宝石">
+			<name>fireGem</name><addDropDefineB>1</addDropDefineB>
+			<cnName>火焰宝石</cnName>
+			<iconUrl>ThingsIcon/fireGem</iconUrl><!-- 技能图标 -->
+			<description>
+				在“锻造>转化>武器元素”界面中给武器添加火焰元素伤害。也是进化部分武器、以及部分尸宠的材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]96级看门狗、秘境“多肉”。
+			</description>
+			<loveD num="10"/>
+		</things>
+		<things cnName="电磁宝石">
+			<name>electricGem</name><addDropDefineB>1</addDropDefineB>
+			<cnName>电磁宝石</cnName>
+			<iconUrl>ThingsIcon/electricGem</iconUrl><!-- 技能图标 -->
+			<description>
+				在“锻造>转化>武器元素”界面中给武器添加电磁元素伤害。也是进化部分武器、以及部分尸宠的材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]96级看门狗。
+			</description>
+			<loveD num="10"/>
+		</things>
+		<things cnName="冷冻宝石">
+			<name>frozenGem</name><addDropDefineB>1</addDropDefineB>
+			<cnName>冷冻宝石</cnName>
+			<iconUrl>ThingsIcon/frozenGem</iconUrl><!-- 技能图标 -->
+			<description>
+				在“锻造>转化>武器元素”界面中给武器添加冷冻元素伤害。也是进化部分武器、以及部分尸宠的材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]98级冥王。
+			</description>
+			<loveD num="10"/>
+		</things>
+		<things cnName="生化宝石">
+			<name>poisonGem</name><addDropDefineB>1</addDropDefineB>
+			<cnName>生化宝石</cnName>
+			<iconUrl>ThingsIcon/poisonGem</iconUrl><!-- 技能图标 -->
+			<description>
+				在“锻造>转化>武器元素”界面中给武器添加生化元素伤害。也是进化部分武器、以及部分尸宠的材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]98级首领“球形闪电”。
+			</description>
+			<loveD num="10"/>
+		</things>
+		
+		
+	</father>
+	
+	<father name="props" cnName="新道具">
+		<things cnName="扫荡卡">
+			<name>sweepingCard</name>
+			<cnName>扫荡卡</cnName>
+			<zuobiNum>30000</zuobiNum>
+			<iconUrl>ThingsIcon/sweepingCard</iconUrl><!-- 技能图标 -->
+			<description>使用后添加1次扫荡机会，今天如果没用完，第二天次数将消失。</description>
+			<effectD type="addGift" dayUseLimit="7" />
+			<gift>base;daySweeping;1</gift>
+			<loveD num="0"/>
+		</things>
+		<things cnName="电磁铁">
+			<name>electromagnet</name><addDropDefineB>1</addDropDefineB>
+			<cnName>电磁铁</cnName>
+			<iconUrl>ThingsIcon/electromagnet</iconUrl><!-- 技能图标 -->
+			<stateD skill="electromagnet" time="120" gamingB="1"  demNoneB="1"/>
+			<description>使用后将在战斗中不断释放磁力场（主线任务、修罗模式无效），扰乱敌人子弹轨迹，持续120秒。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="骷髅卡">
+			<name>skeletonCard</name><addDropDefineB>1</addDropDefineB>
+			<cnName>骷髅卡</cnName>
+			<iconUrl>ThingsIcon/skeletonCard</iconUrl><!-- 技能图标 -->
+			<stateD skill="skeletonCard" time="30" gamingB="1" demNoneB="1" />
+			<description>使用后在关卡中（任务、修罗模式无效）让敌人每秒损失2%的生命值（首领每秒损失1%，生命低于15%时不再损失），持续30秒。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="超级散射卡">
+			<name>superSpreadCard</name><addDropDefineB>1</addDropDefineB>
+			<cnName>超级散射卡</cnName>
+			<iconUrl>ThingsIcon/superSpreadCard</iconUrl><!-- 技能图标 -->
+			<stateD skill="superSpreadCard" time="40" gamingB="1" demNoneB="1" />
+			<description>使用后，让自己在战斗中进入超级散射状态，持续40秒。99级任务、争霸、修罗模式无效。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="修罗散射卡">
+			<name>demonSpreadCard</name><addDropDefineB>1</addDropDefineB>
+			<cnName>修罗散射卡</cnName>
+			<iconUrl>ThingsIcon/demonSpreadCard</iconUrl><!-- 只能修罗模式 -->
+			<stateD skill="superSpreadCard" time="40" gamingB="1" demO="1" />
+			<description>在修罗模式、星谷地图中使用该道具，会让自己在战斗中进入超级散射状态，持续40秒。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="首领召唤卡">
+			<name>bossSumCard</name><btnList>use</btnList>
+			<cnName>首领召唤卡</cnName>
+			<iconUrl>ThingsIcon/bossSumCard</iconUrl><!-- 技能图标 -->
+			<description>
+				该物品可让你在关卡中召唤自己的主力首领（不能召唤战神、宠物、载具以及我方单位），每周该道具有使用上限。在任务、争霸、以及星谷以上地图无法使用。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]魂卡送卡中获得
+			</description>
+			<loveD num="0"/>
+			<effectD type="bossSumCard" value="1" useInLevelB="1" levelUseLimitNum="1" effectLabel="boomEffect/showLight" effectSound="uiSound/swapHero" />
+		</things>
+		<things cnName="放大药剂">
+			<name>bigDrug</name>
+			<cnName>放大药剂</cnName>
+			<iconUrl>ThingsIcon/bigDrug</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="bigDrug" useInLevelB="1" levelUseLimitNum="1"  sTaskNoB="1" />
+			<description>自己的身体放大3倍，惊吓周围的敌人。部分任务无法使用。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="缩小药剂">
+			<name>smallDrug</name>
+			<cnName>缩小药剂</cnName>
+			<iconUrl>ThingsIcon/smallDrug</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="smallDrug" useInLevelB="1" levelUseLimitNum="1"  sTaskNoB="1" />
+			<description>自己的身体缩小2倍，让敌人无法发现自己。部分任务无法使用。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="加速药剂">
+			<name>speedDrug</name>
+			<cnName>加速药剂</cnName>
+			<iconUrl>ThingsIcon/speedDrug</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="speedDrug" useInLevelB="1" levelUseLimitNum="1"  sTaskNoB="1" />
+			<description>把自身的速度提升至无限大。部分任务无法使用。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="失重卡片">
+			<name>zeroGravityCard</name>
+			<cnName>失重卡片</cnName>
+			<iconUrl>ThingsIcon/zeroGravityCard</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="zeroGravityCard" useInLevelB="1" levelUseLimitNum="1" sTaskNoB="1" />
+			<description>使游戏里的重力降低至10%。部分任务无法使用。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="巨伤卡">
+			<name>bigHurtCard</name>
+			<cnName>巨伤卡</cnName>
+			<iconUrl>ThingsIcon/bigHurtCard</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="bigHurtCard" useInLevelB="1" levelUseLimitNum="1"  sTaskNoB="1" />
+			<description>使自身伤害提高30倍，受到伤害也提高30倍。部分任务无法使用。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		<things cnName="圣诞铁箱">
+			<name>iconGiftCase</name>
+			<cnName>圣诞铁箱</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/iconGiftBox</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="iconGiftBox" useInLevelB="1" sTaskNoB="1" />
+			<description>释放存在120秒的圣诞铁盒，铁盒将强制吸引所有僵尸的攻击，直到铁盒消失。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		
+		<things cnName="辣椒糯米饭">
+			<name>glutinous</name>
+			<cnName>辣椒糯米饭</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>ThingsIcon/glutinous</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="glutinous" useInLevelB="1" levelUseLimitNum="1" sTaskNoB="1" />
+			<description>在关卡中食用该物品，爆辣的风味将使角色嘴巴冒烟，获得无限怒气，并且近战伤害增加50%。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		
+		<things cnName="僵尸血瓶">
+			<name>zombieBottle</name>
+			<cnName>僵尸血瓶</cnName>
+			<iconUrl>ThingsIcon/zombieBottle</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="zombieBottle" useInLevelB="1" levelUseLimitNum="1"  sTaskNoB="1" />
+			<description>给在场所有我方单位抹上僵尸血液，使其不会成为敌人的攻击目标。部分任务无法使用。</description> 
+			<loveD num="0"/>
+			<smeltD type="festival" />
+		</things>
+		
+		<things>
+			<name>bigWeaponCard</name>
+			<cnName>巨刃卡</cnName>
+			<iconUrl>NewIcon/bigWeaponCard</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="bigWeaponCard" useInLevelB="1" levelUseLimitNum="1"  limit="onlyUnionBattle" />
+			<description>使自己的近战（包括副手）伤害范围扩大3倍，当前关卡有效。只能在军队争霸中使用。</description> 
+			<loveD num="0"/><smeltD type="festival" />
+		</things>
+		<things>
+			<name>slowTimeCard</name>
+			<cnName>缓时卡</cnName>
+			<iconUrl>NewIcon/slowTimeCard</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="slowTimeCard" useInLevelB="1" levelUseLimitNum="1"  limit="onlyUnionBattle" />
+			<description>使关卡计时变慢15%，当前关卡有效。只能在军队争霸中使用。</description> 
+			<loveD num="0"/><smeltD type="festival" />
+		</things>
+		<things>
+			<name>fastEnemyCard</name>
+			<cnName>速怪卡</cnName>
+			<iconUrl>NewIcon/fastEnemyCard</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="fastEnemyCard" useInLevelB="1" levelUseLimitNum="1"  limit="onlyUnionBattle" />
+			<description>这波怪物死后0.7秒即可刷新下一波怪，不用等待它们尸体消失，当前关卡有效。只能在军队争霸中使用。</description> 
+			<loveD num="0"/><smeltD type="festival" />
+		</things>
+		<things>
+			<name>lockEnemyCard</name>
+			<cnName>锁怪卡</cnName>
+			<iconUrl>NewIcon/lockEnemyCard</iconUrl><!-- 技能图标 -->
+			<effectD type="skill" skillArr="lockEnemyCard" useInLevelB="1" levelUseLimitNum="1"  limit="onlyUnionBattle" />
+			<description>怪物的出生点有80%的概率被锁定在一个区域（每个地图不同，有时光洞特效），当前关卡有效。只能在军队争霸中使用。</description> 
+			<loveD num="0"/><smeltD type="festival" />
+		</things>
+		
+		
+		
+		
+		
+		
+		<things cnName="队友功勋牌">
+			<name>exploitCard</name>
+			<cnName>队友功勋牌</cnName><btnList>use</btnList>
+			<iconUrl>ThingsIcon/exploitCard</iconUrl><!-- 技能图标 -->
+			<description>使用后添加10000当前角色的功勋值。</description>
+			<effectD type="addGift"/>
+			<gift>base;exploit;10000</gift>
+		</things>
+		
+		
+		
+		
+		
+		
+		
+		<things cnName="募兵券">
+			<name>soldiersStamp</name><addDropDefineB>1</addDropDefineB>
+			<cnName>募兵券</cnName>
+			<iconUrl>ThingsIcon/soldiersStamp</iconUrl><!-- 技能图标 -->
+			<description>
+				开启支线任务“队友齐上阵”的必需品。把它赠送给表哥或者藏师还将获得180点左右的忠诚度。直接使用将给小樱添加170点好感度。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]周年庆签到礼包
+			</description> 
+			<loveD num="1"/>
+			<effectD type="addLove" value="170"/>
+		</things>
+		
+		<things cnName="红包">
+			<name>redBag</name><addDropDefineB>1</addDropDefineB>
+			<cnName>红包</cnName>
+			<iconUrl>ThingsIcon/redBag</iconUrl><!-- 技能图标 -->
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]周年庆活动期间，消灭首领有几率掉落。
+				[n][n]使用后将随机获得以下物品中的1种：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<useSave>chest</useSave>
+			<loveD num="2"/>
+			<smeltD grade="-1"/>
+			<giftRandomB>1</giftRandomB><!-- 随机物品，根据pro概率 -->
+			<gift pro="150">base;anniCoin;6</gift>
+			<gift pro="100">things;yearMonkey;3</gift>
+			<gift pro="100">things;yearCattle;3</gift>
+			<gift pro="100">things;yearPig;3</gift>
+			<gift pro="100">things;yearHourse;3</gift>
+			<gift pro="100">things;yearMouse;3</gift>
+			<gift pro="100">things;yearRabbit;3</gift>
+			<gift pro="100">things;yearSnake;3</gift>
+			<gift pro="100">things;yearDog;3</gift>
+			<gift pro="50">parts;huntParts_1;5</gift>
+			<gift pro="50">parts;acidicParts_1;5</gift>
+			<gift pro="15">equip;cyanArmy;1</gift>
+		</things>
+	</father>
+	<father name="props" cnName="经验卡">
+		<things cnName="初级经验卡">
+			<name>expCard1</name>
+			<cnName>初级经验卡</cnName>
+			<iconUrl>ThingsIcon/expCard1</iconUrl><!-- 技能图标 -->
+			<description>使用后添加100万所有角色的经验，人物40级以后可以使用。</description>
+			<effectD type="addGift" minLv="40" />
+			<gift>base;exp;3000000</gift>
+		</things>
+		<things cnName="中级经验卡">
+			<name>expCard2</name>
+			<cnName>中级经验卡</cnName>
+			<iconUrl>ThingsIcon/expCard2</iconUrl><!-- 技能图标 -->
+			<description>使用后添加1000万所有角色的经验，人物60级以后可以使用。</description>
+			<effectD type="addGift" minLv="60" />
+			<gift>base;exp;10000000</gift>
+		</things>
+		<things cnName="高级经验卡">
+			<name>expCard3</name>
+			<cnName>高级经验卡</cnName>
+			<iconUrl>ThingsIcon/expCard3</iconUrl><!-- 技能图标 -->
+			<description>使用后添加3000万所有角色的经验，人物80级以后可以使用。</description>
+			<effectD type="addGift" minLv="80" />
+			<gift>base;exp;30000000</gift>
+		</things>
+		<things cnName="神宠卡片">
+			<name>highPetCard</name>
+			<cnName>神宠卡片</cnName>
+			<zuobiNum>1000</zuobiNum>
+			<iconUrl>ThingsIcon/highPetCard</iconUrl><!-- 技能图标 -->
+			<stateD skill="highPetCard" time="300" gamingB="1"  demNoneB="1"/>
+			<smeltD price="30" />
+			<description>使用后在战斗中增加宠物400%的伤害，持续5分钟。</description> 
+			<loveD num="1"/>
+		</things>
+		<things cnName="神车卡片">
+			<name>highVehicleCard</name>
+			<cnName>神车卡片</cnName>
+			<zuobiNum>1000</zuobiNum>
+			<iconUrl>ThingsIcon/highVehicleCard</iconUrl><!-- 技能图标 -->
+			<stateD skill="highVehicleCard" time="300" gamingB="1"  demNoneB="1"/>
+			<smeltD price="30" />
+			<description>使用后在战斗中增加载具400%的伤害，持续5分钟。</description> 
+			<loveD num="1"/>
+		</things>
+		<things cnName="神队卡片">
+			<name>highPartnerCard</name>
+			<cnName>神队卡片</cnName>
+			<zuobiNum>10000</zuobiNum>
+			<iconUrl>ThingsIcon/highPartnerCard</iconUrl><!-- 技能图标 -->
+			<stateD skill="highPartnerCard" time="60" gamingB="1"  demNoneB="1"/>
+			<smeltD price="50" />
+			<description>使用后在战斗中增加队友100%的伤害，持续1分钟。</description> 
+			<loveD num="1"/>
+		</things>
+	</father>
+	
+	<father name="materials" cnName="特别物品">
+		<things cnName="凯旋徽章">
+			<name>battleMedel</name>
+			<cnName>凯旋徽章</cnName>
+			<iconUrl>ThingsIcon/battleMedel</iconUrl><!-- 技能图标 -->
+			<description>每周争霸分数到达960分时，可获得一个。该物品无任何效果，仅为纪念之用。</description> 
+			<loveD num="1"/>
+		</things>
+		<things cnName="爆石">
+			<name>implodingSkill</name>
+			<cnName>爆石</cnName>
+			<iconUrl>ThingsIcon/extremeGem</iconUrl><!-- 技能图标 -->
+			<description>可使武器增加爆石技能。</description> 
+			<loveD num="1"/>
+		</things>
+		
+		
+		<things>
+			<name>dieMedal1</name>
+			<cnName>骷髅勋章V1</cnName>
+			<iconUrl>NewIcon/dieMedal1</iconUrl><!-- 技能图标 -->
+			<description>未来版本可开启更高难度的肉鸽模式。</description> 
+			<loveD num="1"/>
+		</things>
+	</father>
+	
+	
+	<father name="props" cnName="节日礼包">
+		
+		<things cnName="周年畅玩礼包">
+			<name>anniver2025_1</name>
+			<cnName>周年畅玩礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>base;anniCoin;15</gift>
+			<gift>things;normalChest;5</gift>
+			<gift>things;magicChest;5</gift>
+			<gift>things;dragonChest;5</gift>
+			<gift>things;tigerChest;5</gift>
+			<gift>things;allBlackCash;25</gift>
+			<gift>things;allBlackEquipCash;25</gift>
+			<gift>things;armsGemChest;10</gift>
+			<gift>things;equipGemChest;10</gift>
+			<gift>things;yaStone;4</gift>
+			<gift>things;yaRock;3</gift>
+			<gift>things;zodiacBag;2</gift>
+		</things>
+		
+		<things cnName="周年特惠礼包">
+			<name>anniver2025_2</name>
+			<cnName>周年豪华礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店黄金购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;zodiacCash;25</gift>
+			<gift>things;demonChest;1</gift>
+			<gift>things;madheart;15</gift>
+			<gift>things;demStone;15</gift>
+			<gift>things;yaStone;15</gift>
+			<gift>things;yaRock;15</gift>
+			<gift>things;armsGemChest;25</gift>
+			<gift>things;equipGemChest;25</gift>
+			<gift>base;partsCoin;10</gift>
+			<gift>base;wilderKey;2</gift>
+			<gift>things;ghostStone;5</gift>
+			<gift>things;partsChest90;1</gift>
+		</things>
+		
+		<things cnName="bug补偿礼包">
+			<name>offset2025_7</name>
+			<cnName>bug补偿礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>head;maxBug;1</gift>
+			<gift>things;demStone;15</gift>
+			<gift>things;demBall;20</gift>
+			<gift>things;madheart;15</gift>
+			<gift>things;yaStone;15</gift>
+			<gift>things;yaRock;15</gift>
+			<gift>things;nuclearStone;20</gift>
+			<gift>base;partsCoin;30</gift>
+			<gift>things;bossCardStamp;20</gift>
+			<gift>base;wilderKey;10</gift>
+		</things>
+		
+		<things cnName="游戏盒签到补偿">
+			<name>gameBoxOffset26_1</name>
+			<cnName>游戏盒签到补偿</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;demonChest;5</gift>
+		</things>
+		<![CDATA[
+		
+		<things cnName="十月特惠礼包">
+			<name>guoqing2024</name>
+			<cnName>十月特惠礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店黄金购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;zodiacCash;100</gift>
+			<gift>things;armsGemChest;200</gift>
+			<gift>things;equipGemChest;200</gift>
+			<gift>things;demStone;100</gift>
+			<gift>things;demBall;100</gift>
+			<gift>things;intensDrug;120</gift>
+			<gift>base;wilderKey;10</gift>
+			<gift>things;bossCardStamp;10</gift>
+			<gift>things;partsChest90;1</gift>
+			<gift>things;allBlackEquipCash;300</gift>
+			<gift>things;allBlackCash;300</gift>
+		</things>
+		
+		<things cnName="周年畅玩礼包">
+			<name>anniver2024_1</name>
+			<cnName>周年畅玩礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>base;anniCoin;10</gift>
+			<gift>things;normalChest;2</gift>
+			<gift>things;magicChest;2</gift>
+			<gift>things;dragonChest;2</gift>
+			<gift>things;tigerChest;2</gift>
+			<gift>things;anniversaryCash;10</gift>
+			<gift>things;armsRadium;20</gift>
+			<gift>things;armsTitanium;20</gift>
+		</things>
+		<things>
+			<name>gift2023_9</name>
+			<cnName>初秋礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;bossCardStamp;10</gift>
+			<gift>things;exploitCard;5</gift>
+			<gift>things;profiStamp;5</gift>
+			<gift>things;sweepingCard;10</gift>
+			<gift>equip;sprintSword_1;1</gift>
+			<gift>gene;PetLake;1;;;super</gift>
+			<gift>gene;PetIronChief;1;;;super</gift>
+			<gift>gene;PetBoomSkull;1;;;super</gift>
+			
+		</things>
+		
+		<things cnName="特惠礼包">
+			<name>dis23_12</name>
+			<cnName>12月特惠礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="0"/>
+			<useSave>shopAuto</useSave>
+			<showGiftB>1</showGiftB>
+			<gift>things;zodiacCash;150</gift>
+			<gift>things;armsGemChest;300</gift>
+			<gift>things;equipGemChest;200</gift>
+			<gift>things;demStone;60</gift>
+			<gift>things;madheart;40</gift>
+		</things>
+		
+		<things cnName="周年畅玩礼包">
+			<name>anniver2023_1</name>
+			<cnName>周年畅玩礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>base;anniCoin;10</gift>
+			<gift>things;normalChest;2</gift>
+			<gift>things;magicChest;2</gift>
+			<gift>things;dragonChest;2</gift>
+			<gift>things;tigerChest;2</gift>
+			<gift>things;anniversaryCash;10</gift>
+			<gift>things;armsRadium;20</gift>
+			<gift>things;armsTitanium;20</gift>
+		</things>
+		
+		<things cnName="周年豪华礼包">
+			<name>anniver2023_2</name>
+			<cnName>周年豪华礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店黄金购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;zodiacCash;8</gift>
+			<gift>things;demStone;5</gift>
+			<gift>things;armsGemChest;20</gift>
+			<gift>things;equipGemChest;20</gift>
+			<gift>things;lightCone;5</gift>
+			<gift>things;arenaChest;5</gift>
+			<gift>things;geneBox;3</gift>
+			<gift>things;sweepingCard;2</gift>
+		</things>
+		
+		
+		
+		
+		
+		
+		<things cnName="特惠礼包">
+			<name>dis22_7</name>
+			<cnName>特惠礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<useSave>shopAuto</useSave>
+			<showGiftB>1</showGiftB>
+			<gift>things;zodiacCash;60</gift>
+			<gift>parts;huntParts_1;20</gift>
+			<gift>parts;acidicParts_1;20</gift>
+			<gift>things;armsEchelonCard;100</gift>
+			<gift>things;equipEchelonCard;100</gift>
+			<gift>things;allBlackCash;100</gift>
+			<gift>things;allBlackEquipCash;100</gift>
+			<gift>things;anniversaryCash;100</gift>
+			<gift>things;armsRadium;150</gift>
+			<gift>things;armsTitanium;150</gift>
+		</things>
+		
+		]]>
+		
+		<![CDATA[
+		
+		
+		<things cnName="周年畅玩礼包">
+			<name>anniver2022_1</name>
+			<cnName>周年畅玩礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>base;anniCoin;10</gift>
+			<gift>things;normalChest;2</gift>
+			<gift>things;magicChest;2</gift>
+			<gift>things;dragonChest;2</gift>
+			<gift>things;tigerChest;2</gift>
+		</things>
+		
+		<things cnName="周年豪华礼包">
+			<name>anniver2022_2</name>
+			<cnName>周年豪华礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店黄金购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;skyArch;5</gift>
+			<gift>things;armsGemChest;20</gift>
+			<gift>things;equipGemChest;20</gift>
+			<gift>things;lightCone;5</gift>
+			<gift>things;arenaChest;5</gift>
+		</things>
+		]]>
+		
+		
+		<![CDATA[3-15号之前可以去掉
+		<things cnName="初春礼包">
+			<name>kaiXue22_2</name>
+			<cnName>初春礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<useSave>shopAuto</useSave>
+			<showGiftB>1</showGiftB>
+			<gift>things;zodiacCash;10</gift>
+			<gift>things;armsGemChest;50</gift>
+			<gift>things;allBlackCash;50</gift>
+		</things>
+		]]>
+		
+		<![CDATA[
+		<things cnName="六一礼包">
+			<name>liuyi2021_6</name>
+			<cnName>六一礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<useSave>shopAuto</useSave>
+			<showGiftB>1</showGiftB>
+			<gift>things;bloodStone;20</gift>
+			<gift>things;deviceChest;3</gift>
+			<gift>things;highArmsEchelonCard;3</gift>
+			<gift>things;highEquipEchelonCard;3</gift>
+			<gift>things;armsTitanium;20</gift>
+			<gift>things;armsRadium;20</gift>
+			<gift>things;allBlackCash;20</gift>
+			<gift>things;allBlackEquipCash;20</gift>
+
+		</things>
+		
+		
+		]]>
+		
+		
+		
+	</father>
+	<father name="props" cnName="特惠礼包-下架后就可以删掉了，因为是每日限购，所以不删掉也可以，作为日后只用">
+		<things>
+			<name>zodiacDis</name>
+			<cnName>生肖特惠包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店黄金购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<useSave>shopAuto</useSave>
+			<showGiftB>1</showGiftB>
+			<gift>things;yearMonkey;10</gift>
+			<gift>things;yearPig;5</gift>
+			<gift>things;yearRabbit;5</gift>
+			<gift>things;yearMouse;5</gift>
+			<gift>things;yearSnake;3</gift>
+			<gift>things;yearHourse;3</gift>
+			<gift>things;yearDog;3</gift>
+			<gift>things;yearCattle;3</gift>
+		</things>
+		
+		<things cnName="狂怒盖亚特惠包">
+			<name>gaiaGift</name>
+			<cnName>狂怒盖亚特惠包</cnName>
+			<iconUrl>ThingsIcon/gaiaGift</iconUrl><!-- 技能图标 -->
+			<description>
+				特惠包内含载具“泰坦”、以及将它进化至“狂怒盖亚”所需的所有材料。使用后获得以下所有物品：
+			</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<showGiftB>1</showGiftB>
+			<loveD num="4"/>
+			<gift>equip;Titans;1</gift>
+			<gift>things;TitansCash;1200</gift>
+			<gift>things;NianCarCash;205</gift>
+		</things>
+		
+		<things cnName="碎片特惠包">
+			<name>chipDis</name>
+			<cnName>碎片特惠包</cnName>
+			<iconUrl>ThingsIcon/chipDis</iconUrl><!-- 技能图标 -->
+			<description>
+				使用后获得以下所有物品：
+			</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<showGiftB>1</showGiftB>
+			<loveD num="4"/>
+			<gift>things;allBlackCash;10</gift>
+			<gift>things;allBlackEquipCash;10</gift>
+			<gift>things;anniversaryCash;20</gift>
+		</things>
+		
+		<things cnName="升级特惠包">
+			<name>upgradeDis</name>
+			<cnName>升级特惠包</cnName>
+			<iconUrl>ThingsIcon/upgradeDis</iconUrl><!-- 技能图标 -->
+			<description>
+				使用后获得以下所有物品：
+			</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<showGiftB>1</showGiftB>
+			<loveD num="4"/>
+			<gift>things;doubleHighCard;5</gift>
+			<gift>things;doubleArmsCard;5</gift>
+			<gift>things;doubleEquipCard;5</gift>
+			<gift>things;doubleMaterialsCard;5</gift>
+		</things>
+		
+		<things cnName="零件特惠包">
+			<name>partsDis</name>
+			<cnName>零件特惠包</cnName>
+			<iconUrl>ThingsIcon/partsDis</iconUrl><!-- 技能图标 -->
+			<description>
+				使用后获得以下所有物品：
+			</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<showGiftB>1</showGiftB>
+			<loveD num="4"/>
+			<gift>parts;huntParts_1;5</gift>
+			<gift>parts;acidicParts_1;5</gift>
+		</things>
+	</father>
+	
+	
+	<father name="props" cnName="永久礼包">
+		<things cnName="噬原补偿礼包">
+			<name>disEver22_10</name>
+			<cnName>噬原补偿礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<description>
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="0"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;zodiacCash;60</gift>
+			<gift>things;demStone;30</gift>
+			<gift>things;equipGemChest;150</gift>
+			<gift>things;armsGemChest;150</gift>
+		</things>
+		<things cnName="圣诞畅玩礼包">
+			<name>normalChristmasGift</name>
+			<cnName>圣诞畅玩礼包</cnName>
+			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店银币购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;strengthenStone;10</gift>
+			<gift>things;doubleCard;5</gift>
+			<gift>things;weaponChest;3</gift>
+			<gift>things;doubleMaterialsCard;5</gift>
+			<gift>things;doubleEquipCard;5</gift>
+			<gift>things;skillFleshCard;3</gift>
+			<gift>things;anniversaryCash;50</gift>
+			<gift>things;coinHeap_1;2</gift>
+			<gift>things;normalChest;1</gift>
+		</things>
+		
+		
+		
+		
+		<things cnName="圣诞豪华礼包">
+			<name>goldChristmasGift</name>
+			<cnName>圣诞豪华礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店黄金购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;weaponChest;5</gift>
+			<gift>things;coinHeap_2;1</gift>
+			<gift>things;strengthenDrug;50</gift>
+			<gift>things;strengthenStone;20</gift>
+			<gift>things;skillFleshCard;5</gift>
+			<gift>things;armsEchelonCard;20</gift>
+			<gift>things;equipEchelonCard;20</gift>
+			<gift>things;doubleArmsCard;5</gift>
+			<gift>things;armsRadium;30</gift>
+			<gift>things;allBlackCash;20</gift>
+		</things>
+	</father>
+</data>

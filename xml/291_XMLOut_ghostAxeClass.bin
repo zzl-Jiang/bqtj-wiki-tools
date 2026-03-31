@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="shotgun" cnName="散弹枪">
+		<bullet name="ghostAxe" color="black" composeLv="90" chipB="1" chipNum="50" dropLevelArr="999">
+			<name>ghostAxe</name>
+			<cnName>鬼斧</cnName>
+			<whippB>0</whippB>
+			<dpsMul>1.2</dpsMul>
+			<uiDpsMul>1.2</uiDpsMul>
+			<!--基本-->
+			<capacity>6</capacity>
+			<attackGap>1.2</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>500</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>13</bulletNum>				
+			<shootAngle>30</shootAngle>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>0</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="4" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.25"/>
+			
+			<skillArr>Hit_Spurting_ArmsSkill,Hit_AddLifeMul_ArmsSkill</skillArr>
+			<godSkillArr>Hit_imploding_godArmsSkill,shotgunBlade_ArmsSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>4</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>4</upValue>
+			<shootShakeAngle>70</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/ghostAxeIcon</iconUrl>
+			<shootSoundUrl>specialGun/shotgunRed_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0x0099FF" size="2" lightSize="6" blendMode="add"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgType></fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/ghostAxe</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>神器宝箱中有一定几率获得</description>
+		</bullet>
+	</father>
+</data>

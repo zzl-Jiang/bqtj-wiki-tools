@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="laser">
+		<bullet color="purgold">
+			<name>extremeLaser</name><![CDATA[ 该武器英文名不可修改]]>
+			<cnName>激光极源</cnName><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+			<aiShootRange>800</aiShootRange><!-- ai射程 -->
+			<attackType>holy</attackType>
+			<dpsMul>0.1</dpsMul>
+			<!--基本-->
+			<capacity>30</capacity> 
+			<attackGap>0.7</attackGap>
+			<reloadGap>0.5</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>900</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<penetrationNum>999</penetrationNum>
+			<bounceD floor="0" body="0" noDieB="1" />	<!-- 反弹 -->
+			<skillArr>invincibleEmp</skillArr>
+			<godSkillArr>extremeLaserFire</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>15</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.5</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>3</upValue>
+			<shootRecoil>2</shootRecoil>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.7</bulletLife>
+			<hitType>longLine</hitType>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/lightConeSound</shootSoundUrl>
+			<flipX>1</flipX>
+			<fireImgUrl cacheB="1" imgDieType="die" con="add">bulletHitEffect/purLaser</fireImgUrl>
+			<bulletImgUrl raNum="60" con="add" len="28" everFleshB="1" imgDieType="die" time="-1"  bottomLayerB="1">bullet/purLaserBig</bulletImgUrl>
+			<hitImgUrl cacheB="1" imgDieType="die" con="add">bulletHitEffect/purLaser</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/extremeLaser</bodyImgRange>
+		</bullet>
+	</father>
+	
+</data>

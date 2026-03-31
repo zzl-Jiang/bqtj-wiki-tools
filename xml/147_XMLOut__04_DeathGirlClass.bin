@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="death" info="单位">
+		<body index="0" name="勾魂尸" shell="normal">
+			
+			<name>DeathGirl</name>
+			<cnName>勾魂尸</cnName>
+			<raceType>zombies</raceType><headIconUrl>IconGather/SnowGirl</headIconUrl>
+			<swfUrl>swf/enemy/SnowGirl358.swf</swfUrl>
+			<swfName>SnowGirl</swfName>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move
+				,normalAttack2,hookAttack2,hurt1,hurt2,die1,die2
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+				,__fill2_Up,fill2_Up,fill2_Up__fill2_Down,fill2_Down,fill2_Down__die2
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-76,28,76</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>8</maxVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack2</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>hookAttack2</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>1</hurtRatio>
+					<skillArr>SnowGirlHook</skillArr>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>	
+	</father>
+</data>

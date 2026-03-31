@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="weather" cnName="气象枪">
+		<bullet cnName="降雨炮" name="iceCone" kind="water" color="black" composeLv="99" chipB="1" chipNum="100" dropLevelArr="999">
+			<name>rainGun</name>
+			<cnName>降雨炮</cnName>
+			<noHitB>1</noHitB>
+			<noMagneticB>1</noMagneticB>
+			<noBeClearB>1</noBeClearB>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>9</capacity>
+			<attackGap>2</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>35</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>1.5</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1</dpsMul>
+			<uiDpsMul>5</uiDpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>20</bulletSpeed>
+			<skillArr></skillArr>
+			<godSkillArr>rainGunSkill</godSkillArr>
+			<bulletSkillArr>rainGunDieEvent</bulletSkillArr>
+			<boomD selfB="1" hurtMul="0"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>newGun/rainGunChip</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl name="rainGunBullet"/>
+			<hitImgUrl name="iceConeHit" /><!-- 子弹图像【必备】 -->
+			<fireImgUrl name="enegryGunFire"/>
+			<selfBoomImgUrl name="waterHit"/>
+			<shootSoundUrl>sound/snowHit</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/rainGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>2025年暑期签到</description>
+		</bullet>
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill><!-- dps-被动 -->
+			<name>rainGunSkill</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>人工降雨</cnName><noRandomListB>1</noRandomListB><noBeClearB>1</noBeClearB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>no</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<pointEffectImg name="rainBulletBoom"/>
+			<description>射出炮弹将制造持续10分钟的小雨，地下、室内地图无法使用。降雨将影响武器、副手怒气等各方面特性，将鼠标放置游戏右上角的天气图标上可查看详情。</description>
+		</skill>
+	</father>
+</data>

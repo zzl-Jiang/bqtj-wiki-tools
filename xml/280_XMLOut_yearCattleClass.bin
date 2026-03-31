@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father  type="rocket" cnName="火炮-特殊">
+		<bullet index="40" cnName="丑牛"  kind="poison" name="yearCattle" color="black" composeLv="95" chipB="1" chipNum="110" dropLevelArr="999">
+			<name>yearCattle</name>
+			<cnName>丑牛</cnName>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>5</capacity>
+			<attackGap>1.3</attackGap>
+			<reloadGap>4</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>40</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>2</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1.8</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>25</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.4</twoShootPro>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.3"/>
+			
+			
+			<skillArr>Hit_Poison_ArmsSkill,Hit_Paralysis_ArmsSkill</skillArr>
+			<godSkillArr>yearCattleSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/yearCattleIcon</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="1">specialGun/yearCattleBullet</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="HugePoison/shoot_hit">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/poisonClaw_enemy</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/yearCattleSound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearCattle</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>生肖碎片包(活跃值礼包)、物品合成、纪念币商店、万能球商店、黄金商店、竞技宝箱</description>
+		</bullet>
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill index="0" name="牛年大吉"><!-- dps-被动 -->
+			<name>yearCattleSkill</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>周二大吉</cnName><noRandomListB>1</noRandomListB><noBeClearB>1</noBeClearB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>puWe,noDemonOnlyBoss,noMainTask,noHardB,dayPan,yearArmsFalse,targetUnitType,noUnionBattle</otherConditionArr>
+			<conditionRange>2</conditionRange>
+			<conditionString>boss</conditionString>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>yearCattleSkill</effectType>
+			<mul>0.02</mul>
+			<doGap>1</doGap>
+			<duration>999</duration>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg></meEffectImg>
+			<stateEffectImg partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="filter" raNum="30">skillEffect/poisonousFog_hero</stateEffectImg>
+			<description>每周二可以使一位首领慢性中毒，每秒损失2%的生命值，直至它倒下。无视技能免疫、不会被清除。主线任务、修罗决斗模式、军队争霸中该技能无效。</description>
+		</skill>
+	</father>
+</data>

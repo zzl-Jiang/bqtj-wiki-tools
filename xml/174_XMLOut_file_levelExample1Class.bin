@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- id是唯一识别码，必须防止和其他关卡集合重复，不设置的话默认为文件名。 -->
+<data id="fileLevelExample1" cnName="标准示例" author="沃龙先生">
+	<!-- 关卡集介绍。 -->
+	<info>这是一个关卡编辑的示例，代码中详细标注了注释，需要结合开发文档进行编写。</info>
+	<father name="normal" cn="关卡">
+		<gather>
+			<level name="levelExample1" cnName="第一关" descrip="看啥呢？点进去，这就是第一关。">
+				<!-- info参数【更多参数参考“开发文档_关卡.xls的info参数”】-->
+				<info enemyLv="99" />
+				<!-- 场景 -->
+				<sceneLabel>WoTu</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG>
+					<!-- 设置全部单位id命令为patrolGlobal（巡逻全图） -->
+					<allDefault aiOrder="patrolGlobal"></allDefault>
+					<!-- 创建id为enemy1的发兵集。 camp="enemy"代表阵营设为敌方，要设为我方请用"we"，不设置的话默认为敌方。-->
+					<unitOrder id="enemy1" camp="enemy">
+						<!-- number（按照num数量发兵），pro就是按照（按照num数量进行概率发兵） -->
+						<numberType>number</numberType>
+						<unit cnName="肥胖僵尸" num="2" />
+						<unit cnName="战斗僵尸" num="3" />
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<numberType>pro</numberType>
+						<unit cnName="肥胖僵尸" num="3" />
+						<unit cnName="战斗僵尸" num="4" />
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<numberType>pro</numberType>
+						<unit cnName="肥胖僵尸" num="8" />
+						<unit cnName="战斗僵尸" num="8" />
+						<unit cnName="携弹僵尸" num="1" />
+					</unitOrder>
+					<unitOrder id="enemy4">
+						<!-- unitType：单位类型，boss（首领），super（精英怪），normal（小怪，默认值） -->
+						<!-- lifeMul：生命倍数，dpsMul：伤害倍数 -->
+						<!-- skillArr：设置额外技能 ，格式="技能1英文名,技能2英文名..." -->
+						<!-- 【更多参数参考“开发文档_关卡.xls的unit参数”】 -->
+						<unit cnName="携弹僵尸" num="1" unitType="boss" lifeMul="2" dpsMul="3" skillArr="groupCrazy_enemy,groupLight_enemy" />
+					</unitOrder>
+				</unitG>
+				
+				<!-- 区域集，以下所有区域如果全部删除，则系统将使用默认值****** -->
+				<rectG>
+					<!-- 角色出生区域，id必须为r_birth -->
+					<rect id="r_birth">600,290,200,117</rect>
+					<!-- 关卡通关点，id必须为r_over -->
+					<rect id="r_over">2940,563,60,125</rect>
+					<!-- 必须拥有r1、r2、r3三个刷怪点，id也不能修改。-->
+					<rect id="r1">1500,180,500,80</rect>
+					<rect id="r2">2000,180,500,80</rect>
+					<rect id="r3">2500,180,500,80</rect>
+					<!-- 弹药刷新点，不用设置id，但是label必须为addCharger -->
+					<rect label="addCharger">491,504,78,30</rect>
+					<rect label="addCharger">2507,504,78,30</rect>
+				</rectG>
+				
+				<!-- 事件集，每个事件集内的event按照顺序运行，上个event执行结束后才会进行下一个。而事件集1和事件集2则同时运行。 -->
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<order>say; startList:s1</order>
+						</event>
+						<!-- 对话结束后继续，其他condition参数【参考“开发文档_关卡.xls的condtion条件”】 -->
+						<event><condition>say:listOver</condition></event>
+						<!-- 倒计时2秒后继续 -->
+						<!-- 当敌人数量少于1时，发兵enemy1在区域r123（r1、r2、r3中随机），循环执行3次 （doNumber="3"）-->
+						<event>
+							<condition doNumber="3">enemyNumber:less_1</condition>
+							<order>createUnit:enemy1; r123</order>
+							<order>allBody:enemyRandom; addSkillLock:onlyWeaponHurtBattle</order>
+						</event>
+						<event>
+							<condition doNumber="3">enemyNumber:less_1</condition>
+							<order>createUnit:enemy2; r123</order>
+						</event>
+						<event>
+							<condition doNumber="3">enemyNumber:less_1</condition>
+							<order>createUnit:enemy3; r123</order>
+						</event>
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>createUnit:enemy4; r123</order>
+						</event>
+						<!-- 当敌人数量少于1时继续-->
+						<event><condition>enemyNumber:less_1</condition></event>
+						<!-- 倒计时1秒后开启对话s2-->
+						<event>
+							<condition delay="1"></condition>
+							<order>say; startList:s2</order>
+						</event>
+						
+						
+						<!-- 对话完毕后显示通关箭头在区域r_over -->
+						<event>
+							<condition>say:listOver</condition>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+					<group id="group2"  cnName="事件集2">
+						
+					</group>
+				</eventG>
+			</level>
+		</gather>
+	</father>	
+	
+	<father name="normal" cn="对话">
+		<level name="levelExample1"><!-- name要和level 的name同名 -->
+			<sayList name="s1">
+				<say target="p1"><content>这是哪里？</content></say>
+				<say target="p1"><content>原来是关卡编辑器。</content></say>
+			</sayList>
+			<sayList name="s2">
+				<say target="文杰表哥"><content>表弟！中部最大的城市已经沦为僵尸城，现在到处都是行尸！这里很危险！</content></say>
+				<say target="我"><content>我们这里以前不是安全区吗？</content></say>
+				<say target="文杰表哥"><content>现在没时间跟你解释这些。</content></say>
+				<say target="我"><content>你的武器火力好强啊！能把它送给我吗？</content></say>
+				<say target="文杰表哥"><content>想得美！这可是我辛辛苦苦找到的！</content></say>
+				<say target="文杰表哥"><content>想要新武器，你得去杨梅岭看看。</content></say>
+				<say target="文杰表哥"><content>不过那里离沦陷的南唐镇更近，更危险！</content></say>
+				<say target="我"><content>好！知道了，我这就去！</content></say>
+				<say target="文杰表哥"><content>姨妈让我看着你，你不要乱跑！</content></say>
+			</sayList>
+		</level>
+	</father>
+	
+</data>

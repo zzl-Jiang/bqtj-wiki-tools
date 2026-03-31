@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father  type="rocket" cnName="火炮-特殊">
+		<bullet cnName="猩焰" name="redFire" kind="fire" color="black" dropLevelArr="93" dropBodyArr="HookWitch" evoMaxLv="12" evoMustFirstLv="4" composeLv="93" chipNum="150">
+			<name>redFire</name>
+			<cnName>猩焰</cnName><extraMul>1.5</extraMul>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>7</capacity>
+			<attackGap>1.3</attackGap>
+			<reloadGap>3</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>40</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>2</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1.8</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>35</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  bodyB="1" floorB="1" selfB="1" radius="150"/>
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>2</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			
+			<skillArr>Hit_blindness_ArmsSkill,Hit_disabled_ArmsSkill</skillArr>
+			<godSkillArr>Hit_imploding_godArmsSkill,redFireSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl></iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="30">bullet/fireball</bulletImgUrl>
+			<hitImgUrl name="redFire_hit">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl name="redFire_hitFloor"></hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bullet/fireballSmoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/redFire_sound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/redFire</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>消灭首领斩之使者(93级)</description>
+		</bullet>
+		
+		
+		<bullet name="redFireYa" color="yagold">
+			<name>redFireYa</name>
+			<cnName>氩星猩焰</cnName>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>35</capacity>
+			<attackGap>0.6</attackGap>
+			<reloadGap>0.5</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>40</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>2</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1</dpsMul>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>35</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  bodyB="1" floorB="1" selfB="1" radius="170" noExcludeBodyB="1" maxHurtNum="999" />
+			
+			<iconUrl></iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="30">bullet/fireball</bulletImgUrl>
+			<hitImgUrl name="yearDog_boom"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bullet/fireballSmoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/redFire_sound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/redFire6</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	<father>
+		<otherBullet  kind="fire">
+			<name>redFireBullet</name>
+			<cnName>猩焰火攻</cnName><armsType>rocket</armsType>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1.5</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletNum>4</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootAngle>10</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="2" delay="0.1" />	 
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<speedD random="0.2"/>
+			<gravity>0</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl con="filter" raNum="30">bullet/fireballSmoke</bulletImgUrl>
+			<hitImgUrl  soundUrl="sound/fireHit1">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+		</otherBullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill index="0" name="火攻"><!-- dps-被动 -->
+			<name>redFireSkill</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>火攻</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>redFireSkill</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<effectProArr>0.25,0.15,0.10</effectProArr>
+			<extraValueType>nowArmsDps</extraValueType><!-- 附加值类型为当前武器dps比例 -->
+			<!-- 子弹所需 -->
+			<obj>"name":"redFireBullet","site":"shootPoint","flipB":false,"producerShootB":true</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg></meEffectImg>
+			<targetEffectImg></targetEffectImg>
+			<description>击中敌人有25%的概率（击中小怪时概率降低）发起多次火攻。</description>
+		</skill>
+		<skill>
+			<name>redFireSkill2</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>炎攻</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>redFireSkill</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet_redFireSkill</effectType>
+			<effectProArr>0.15,0.20,0.15</effectProArr>
+			<extraValueType>nowArmsDps</extraValueType><!-- 附加值类型为当前武器dps比例 -->
+			<!-- 子弹所需 -->
+			<obj>"name":"redFireBullet","site":"shootPoint","flipB":false,"producerShootB":true</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg></meEffectImg>
+			<targetEffectImg></targetEffectImg>
+			<description>击中敌人有35%的概率（击中小怪时概率降低）发起多次火攻；对于有防弹技能的敌人，火攻自动取消跟踪。</description>
+		</skill>
+		
+		
+		<skill>
+			<name>redFireDem</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>焚化</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>heroOneShoot</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>redFireDem</effectType>
+			<extraValueType>nowArmsHurt</extraValueType>
+			<mul>4</mul><!-- 伤害倍数 -->
+			<range>600</range>
+			<pointEffectImg name="bulletHitRed"></pointEffectImg>
+			<otherEffectImg name="yearDog_boom"></otherEffectImg>
+			<description>每次射击，都会焚化周围敌人的反击子弹（包括夺命魂、夺命箭、反击导弹），并对敌人造成伤害，焚化数量越多伤害越高。</description>
+		</skill>
+		<![CDATA[
+		<skill>
+			<name>redFireDem</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>点燃</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>redFireDem</effectType>
+			<extraValueType>nowArmsHurt</extraValueType>
+			<mul>3</mul><!-- 伤害倍数 -->
+			<pointEffectImg name="bulletHitRed"></pointEffectImg>
+			<description>击中敌人时，点燃其反击子弹（包括夺命魂、夺命箭、反击导弹），并对敌人造成伤害，点燃数量越多伤害越高。</description>
+		</skill>
+		]]>
+	</father>
+</data>

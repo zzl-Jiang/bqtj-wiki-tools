@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father>
+		<gene name="PetZombieKing" cnName="僵尸王" targetBodyName="ZombieKing" type="boss" evolutionLabel="PetIronZombieKing" evolutionMustMul="1,0.8,0.8">
+			<dpsMul>0.5</dpsMul><lifeMul>6</lifeMul>
+			<talentSkillArr>crazy_pet,trueshot_pet,shelling_ZombieKing</talentSkillArr>
+			<highDispaArr>神车卡片</highDispaArr>
+			<lowDispaArr>转化石</lowDispaArr>
+		</gene>
+		
+		<gene name="PetFightKing" cnName="狂战尸" targetBodyName="FightKing" type="boss" evolutionLabel="PetChaosKing"  evolutionMustMul="0.8,0.8,1">
+			<dpsMul>1</dpsMul><lifeMul>4</lifeMul>
+			<talentSkillArr>shake_FightKing,whirlwind_FightKing,shoot_FightKing</talentSkillArr>
+			<highDispaArr>精石</highDispaArr>
+			<lowDispaArr>血石</lowDispaArr>
+		</gene>
+		
+		<gene name="PetZombieCleaver" cnName="屠刀僵尸" targetBodyName="ZombieCleaver">
+			<dpsMul>1.5</dpsMul><lifeMul>3</lifeMul>
+			<talentSkillArr>hyperopia_pet,slowMoveHalo_pet,silence_pet</talentSkillArr>
+			<highDispaArr>78级零件箱</highDispaArr>
+			<lowDispaArr>强化石,副手箱</lowDispaArr>
+		</gene>
+		
+		<gene name="PetZombieBattle" cnName="战斗僵尸" targetBodyName="ZombieBattle">
+			<dpsMul>1</dpsMul><lifeMul>4</lifeMul>
+			<talentSkillArr>flash_pet,gngerFire_pet,paralysis_pet</talentSkillArr>
+			<highDispaArr>光能石</highDispaArr>
+			<lowDispaArr>超能石,神能石</lowDispaArr>
+		</gene>
+		
+		<gene name="PetZombieFootball" cnName="橄榄僵尸" targetBodyName="ZombieFootball" evolutionLabel="PetZombieHelmet"  evolutionMustMul="1,1,1">
+			<dpsMul>0.5</dpsMul><lifeMul>6</lifeMul>
+			<talentSkillArr>helmet_PetZombieFootball,shoot_PetZombieFootball,globalLight_PetZombieFootball</talentSkillArr>
+			<highDispaArr>高级装备守护卡</highDispaArr>
+			<lowDispaArr>装置箱</lowDispaArr>
+		</gene>
+		
+		<gene name="PetTyphoonWitch" cnName="飓风巫尸" targetBodyName="TyphoonWitch"  type="boss">
+			<dpsMul>1.5</dpsMul><lifeMul>3</lifeMul>
+			<talentSkillArr>shoot2_PetTyphoonWitch,wind_PetTyphoonWitch,wizardAnger_PetTyphoonWitch</talentSkillArr>
+			<highDispaArr>高级装备守护卡</highDispaArr>
+			<lowDispaArr>装置箱</lowDispaArr>
+		</gene>
+		
+		<gene name="PetZombieWolf" cnName="嗜血尸狼" targetBodyName="ZombieWolf" type="boss" evolutionLabel="PetFightWolf"  evolutionMustMul="2,1.6,1.6" growMust="1">
+			<dpsMul>1.2</dpsMul><lifeMul>4.2</lifeMul>
+			<talentSkillArr>summon_PetFightWolf,laser_PetFightWolf,treater_PetFightWolf</talentSkillArr>
+			<laterSkillArr>strong_pet,recoveryHalo_pet,feedback_pet,poisonousFog_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,cdMul,dodge,fightDedut</talentProArr>
+			<highDispaArr>神宠卡片</highDispaArr>
+			<lowDispaArr>生命催化剂,能量催化剂,变异催化剂,强化剂</lowDispaArr>
+		</gene>
+		
+		<![CDATA[顶级宠物]]>
+		<gene name="PetIronChief" cnName="铁魁" targetBodyName="PetIronChief" grade="1"  type="boss" evolutionLabel="PetIronChiefSecond"  evolutionMustMul="1,1,1.4">
+			<dpsMul>1</dpsMul><lifeMul>7</lifeMul>
+			<talentSkillArr>sacrifice_PetIronChief,defenceAuras_PetIronChief,godHand_PetIronChief</talentSkillArr>
+			<laterSkillArr>disabledHalo_pet,recoveryHalo_pet,strong_pet,feedback_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,dodge,fightDedut</talentProArr>
+			<highDispaArr>神护碎片,神谕战衣碎片,神谕头盔碎片,神谕腰带碎片,烟花弩碎片</highDispaArr>
+			<lowDispaArr>雷霆战衣碎片,雷霆战裤碎片,雷霆头盔碎片,雷霆腰带碎片,鬼鲛战衣碎片,鬼鲛战裤碎片,鬼鲛头盔碎片,鬼鲛腰带碎片</lowDispaArr>
+		</gene>
+		<gene name="PetBoomSkull" cnName="爆骷" targetBodyName="PetBoomSkull" grade="1"  type="boss" evolutionLabel="PetBoomSkullSecond"  evolutionMustMul="1,1.4,1">
+			<dpsMul>2</dpsMul><lifeMul>4.5</lifeMul>
+			<talentSkillArr>endlessBombing_skull,current_skull,degradation_PetBoomSkull</talentSkillArr>
+			<laterSkillArr>disabledHalo_pet,trueshot_pet,slowMoveHalo_pet,groupReverseHurt_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,cdMul,dodge</talentProArr>
+			<highDispaArr>神武碎片,银狐之眼,蚀骨碎片,狩猎者碎片</highDispaArr>
+			<lowDispaArr>青蜂之触,金蝉之翼,赤鼬之心</lowDispaArr>
+		</gene>
+		
+		<gene name="PetLake" cnName="雷克" targetBodyName="PetLake" grade="1"  type="boss" evolutionLabel="PetLaer" evolutionMustMul="6,4,4" growMust="1.8">
+			<dpsMul>2.4</dpsMul><lifeMul>9</lifeMul>
+			<talentSkillArr>charged_PetLake,lightBall_PetLake,static_PetLake</talentSkillArr>
+			<laterSkillArr>agile_PetLake,flash_pet,strong_pet,groupReverseHurt_pet,recoveryHalo_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,critPro3,lifeRate,cdMul,dodge,fightDedut,moveMul</talentProArr>
+			<highDispaArr>镭晶,稀有宝箱,传奇宝箱,远古宝箱</highDispaArr>
+			<lowDispaArr>钛晶,周年碎片</lowDispaArr>
+		</gene>
+		
+		<gene lv="2" name="PetLaer" cnName="雷尔" targetBodyName="PetLaer" grade="1"  type="boss" evolutionLabel="PetLaerS"  growMust="2.2">
+			<dpsMul>3.5</dpsMul><lifeMul>12</lifeMul>
+			<talentSkillArr>charged_PetLake,lightBall_PetLake,static_PetLake</talentSkillArr>
+			<laterSkillArr>agile_PetLake,flash_pet,strong_pet,groupReverseHurt_pet,recoveryHalo_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,critPro3,lifeRate,cdMul,dodge,fightDedut,moveMul</talentProArr>
+		</gene>
+		
+		<gene lv="3" name="PetLaerS" cnName="雷斯" targetBodyName="PetLaerS" grade="1"  type="boss" >
+			<dpsMul>4.5</dpsMul><lifeMul>15</lifeMul>
+			<talentSkillArr>lightLake,charged_PetLake,lightBall_PetLake,static_PetLake</talentSkillArr>
+			<laterSkillArr>agile_PetLake,flash_pet,strong_pet,groupReverseHurt_pet,recoveryHalo_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,critPro3,lifeRate,cdMul,dodge,fightDedut,moveMul</talentProArr>
+		</gene>
+	</father>
+	
+	
+	<father info="升级后的宠物">
+		<gene lv="2" name="PetIronZombieKing" cnName="钢铁僵尸王" type="boss">
+			<dpsMul>0.8</dpsMul><lifeMul>9</lifeMul>
+			<talentSkillArr>crazy_pet,trueshot_pet,shelling_ZombieKing</talentSkillArr>
+		</gene>
+		<gene lv="2" name="PetChaosKing" cnName="混沌狂战尸" type="boss">
+			<dpsMul>1.7</dpsMul><lifeMul>6</lifeMul>
+			<talentSkillArr>shake_FightKing,whirlwind_FightKing,shoot_FightKing</talentSkillArr>
+		</gene>
+		<gene lv="2" name="PetZombieHelmet" cnName="金盔僵尸" >
+			<dpsMul>0.8</dpsMul><lifeMul>9</lifeMul>
+			<talentSkillArr>helmet_PetZombieFootball,shoot_PetZombieFootball,globalLight_PetZombieFootball</talentSkillArr>
+		</gene>
+		<gene lv="2" name="PetFightWolf" cnName="狂战狼" type="boss">
+			<dpsMul>2</dpsMul><lifeMul>7</lifeMul>
+			<talentSkillArr>summon_PetFightWolf,laser_PetFightWolf,treater_PetFightWolf,anger_PetFightWolf</talentSkillArr>
+		</gene>
+		
+		<gene lv="2" name="PetIronChiefSecond" cnName="铁魁X2" grade="1"  type="boss" evolutionLabel="PetIronChiefThird"  evolutionMustMul="4,4,6" growMust="1.8">
+			<dpsMul>1.4</dpsMul><lifeMul>11</lifeMul>
+			<talentSkillArr>sacrifice_PetIronChief,defenceAuras_PetIronChief,godHand_PetIronChief</talentSkillArr>
+			<laterSkillArr>disabledHalo_pet,recoveryHalo_pet,strong_pet,feedback_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,dodge,fightDedut</talentProArr>
+		</gene>
+		<gene lv="3" name="PetIronChiefThird" cnName="哈迪斯" grade="1"  type="boss" evolutionLabel="PetIronChiefS" growMust="2.2">
+			<dpsMul>1.7</dpsMul><lifeMul>15</lifeMul>
+			<talentSkillArr>sacrifice_PetIronChief,defenceAuras_PetIronChief,godHand_PetIronChief</talentSkillArr>
+			<laterSkillArr>disabledHalo_pet,recoveryHalo_pet,strong_pet,feedback_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,dodge,fightDedut</talentProArr>
+		</gene>
+		<gene lv="4" name="PetIronChiefS" cnName="冥王" grade="1"  type="boss">
+			<dpsMul>2.3</dpsMul><lifeMul>19</lifeMul>
+			<talentSkillArr>ironShell,sacrifice_PetIronChief,defenceAuras_PetIronChief,godHand_PetIronChief</talentSkillArr>
+			<laterSkillArr>disabledHalo_pet,recoveryHalo_pet,strong_pet,feedback_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,dodge,fightDedut</talentProArr>
+		</gene>
+		
+		
+		<gene lv="2" name="PetBoomSkullSecond" cnName="爆骷X2" grade="1"  type="boss" evolutionLabel="PetBoomSkullThird"  evolutionMustMul="4,6,4" growMust="1.8">
+			<dpsMul>3</dpsMul><lifeMul>7</lifeMul>
+			<talentSkillArr>endlessBombing_skull,current_skull,degradation_PetBoomSkull</talentSkillArr>
+			<laterSkillArr>disabledHalo_pet,trueshot_pet,slowMoveHalo_pet,groupReverseHurt_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,cdMul,dodge</talentProArr>
+		</gene>
+		<gene lv="3" name="PetBoomSkullThird" cnName="爆骷X3" grade="1"  type="boss" evolutionLabel="PetBoomSkullS" growMust="2.2">
+			<dpsMul>4.5</dpsMul><lifeMul>9</lifeMul>
+			<talentSkillArr>endlessBombing_skull,current_skull,degradation_PetBoomSkull</talentSkillArr>
+			<laterSkillArr>disabledHalo_pet,trueshot_pet,slowMoveHalo_pet,groupReverseHurt_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,cdMul,dodge</talentProArr>
+		</gene>
+		<gene lv="4" name="PetBoomSkullS" cnName="爆骷S" grade="1"  type="boss">
+			<dpsMul>6</dpsMul><lifeMul>11</lifeMul>
+			<talentSkillArr>babyBoom_skull,endlessBombing_skull,current_skull,degradation_PetBoomSkull</talentSkillArr>
+			<laterSkillArr>disabledHalo_pet,trueshot_pet,slowMoveHalo_pet,groupReverseHurt_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,cdMul,dodge</talentProArr>
+		</gene>
+		
+	</father>	
+	<father info="神圣尸宠">
+		<gene name="DollRabbit" cnName="勇者兔" targetBodyName="DollRabbit" iconUrl="BodyImg/DollRabbit_icon" grade="2"  type="boss" evolutionLabel=""  evolutionMustMul="">
+			<dpsMul>8</dpsMul><lifeMul>13</lifeMul>
+			<talentSkillArr>DollRabbitShelling,dpsConnect,alloyShellP</talentSkillArr>
+			<laterSkillArr>crazy_pet,bullying_pet,pioneer_pet,skillGift_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,cdMul,dodge</talentProArr>
+			<highDispaArr>神武碎片,银狐之眼,蚀骨碎片,狩猎者碎片</highDispaArr>
+			<lowDispaArr>青蜂之触,金蝉之翼,赤鼬之心</lowDispaArr>
+		</gene>
+	</father>
+	
+	
+</data>

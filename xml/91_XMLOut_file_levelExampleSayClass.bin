@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- id是唯一识别码，必须防止和其他关卡集合重复，不设置的话默认为文件名。 -->
+<data id="fileLevelExampleSay" cnName="添加角色对话" author="沃龙先生">
+	<!-- 关卡集介绍。 -->
+	<info>演示了如何添加角色对话。</info>
+	
+	
+	<father name="normal" cn="">
+		<gather>
+			<level name="fileLevelExampleSay1" cnName="成语接龙" descrip="展示对话玩法，修改代码中的对话即可。">
+				<!-- info参数 allMoreB="1"所有角色必须上场-->
+				<info enemyLv="99" allMoreB="1" mustSingleB="1"noAIB="1" />
+				<!-- 场景 -->
+				<sceneLabel>MainUpland</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG>
+					<!-- 设置全部单位id命令为patrolGlobal（巡逻全图） -->
+					<allDefault aiOrder="patrolGlobal"></allDefault>
+					<!-- 创建战神的发兵集， -->
+					<unitOrder id="we1" camp="we">
+						<unit cnName="玉晴"  aiOrder="followBody:p1"/>
+						<unit cnName="制毒师" aiOrder="followBody:制毒师"/>
+						<unit cnName="雇佣兵" aiOrder="followBody:雇佣兵"/>
+					</unitOrder>
+				</unitG>
+				<!-- 区域集************************************************ -->
+				<rectG>
+					<rect id="rHide">-551,587,300,200</rect>
+				</rectG>
+				<!-- 事件集，每个事件集内的event按照顺序运行，上个event执行结束后才会进行下一个。而事件集1和事件集2则同时运行。 -->
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<order>createUnit:we1; r_over</order>
+						</event>
+						
+						<event>
+							<!-- p1和玉晴距离小于250码时开启对话-->
+							<condition delay="1">bodyGap:less_250; p1:玉晴</condition>
+							<order>say; startList:s1</order>
+							<!-- 恢复视野为标准，避免受远视镜影响。 -->
+							<order>sceneScale:1</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>alert:yes; 此次成语接龙活动圆满成功！</order>
+							<!-- 所有我方单位边界关闭，除了p1 -->
+							<order>allBody:we; rangeLimit:close</order>
+							<order>body:p1; rangeLimit:open</order>
+							<!-- 所有我方单位跟随到rHide区域 -->
+							<order>allBody:we; followPoint:rHide</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<level name="levelExampleSay" cn="对话"><!-- name要和level 的name同名 -->
+			<sayList name="s1">
+				<say target="玉晴"><content>我们开始成语接龙吧！</content></say>
+				<say target="我"><content>我先开始，一帆风顺。</content></say>
+				<say target="文杰表哥"><content>顺手牵羊</content></say>
+				<say target="藏师将军"><content>羊肠小道</content></say>
+				<say target="小樱"><content>道听途说</content></say>
+				<say target="心零"><content>说一不二</content></say>
+				<say target="天鹰小美"><content>二龙戏珠</content></say>
+				<say target="玉晴"><content> 珠联璧合</content></say>
+				<say target="制毒师"><content>合情合理</content></say>
+				<say target="雇佣兵"><content>理直气壮</content></say>
+				
+				<say target="我"><content>壮志凌云</content></say>
+				<say target="文杰表哥"><content>云开雾散</content></say>
+				<say target="藏师将军"><content>散兵游勇</content></say>
+				<say target="小樱"><content>勇往直前</content></say>
+				<say target="心零"><content>前功尽弃</content></say>
+				<say target="天鹰小美"><content>弃暗投明</content></say>
+				<say target="玉晴"><content> 明察秋毫</content></say>
+				<say target="制毒师"><content>毫不在意</content></say>
+				<say target="雇佣兵"><content>意气风发</content></say>
+				
+				<say target="文杰表哥"><content>好无聊啊，我不玩了。</content></say>
+				<say target="心零"><content>是啊是啊，我也不玩了。</content></say>
+				<say target="玉晴"><content>那就这样吧！</content></say>
+			</sayList>
+		</level>
+	</father>	
+	
+	
+	
+</data>

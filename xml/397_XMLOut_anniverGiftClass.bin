@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<anniverEgg>
+		<one name="anniverEgg" cnName="拆红包">
+			
+			<gift pro="70">base;anniCoin;6</gift>
+<gift pro="50">base;tenCoin;5</gift>
+<gift pro="5">things;soldiersStamp;1</gift>
+<gift pro="5">things;lily;1</gift>
+<gift pro="2">things;exploitCard;1</gift>
+<gift pro="2">things;profiStamp;1</gift>
+<gift pro="5">things;demBall;10</gift>
+<gift pro="5">things;demStone;5</gift>
+<gift pro="5">things;zodiacCash;8</gift>
+<gift pro="1">equip;zombieMask;1</gift>
+<gift pro="3">things;ghostStone;3</gift>
+<gift pro="1">things;partsChest90;10</gift>
+
+		</one>
+	</anniverEgg>
+	<anniverSign>
+		<one name="anniverSign1" cnName="每日" mustLevel="1">
+			<gift>base;anniCoin;8</gift>
+<gift>base;tenCoin;5</gift>
+<gift>things;strengthenStone;10</gift>
+<gift>things;allBlackCash;5</gift>
+<gift>things;allBlackEquipCash;5</gift>
+<gift>things;armsGemChest;10</gift>
+<gift>things;equipGemChest;10</gift>
+<gift>things;bagGridCard;1</gift>
+<gift>base;pumpkin;20</gift>
+
+		</one>
+		<one name="anniverSign5" mustLevel="3">
+			<gift>base;anniCoin;12</gift>
+<gift>base;tenCoin;24</gift>
+<gift>things;strengthenStone;24</gift>
+<gift>things;allBlackCash;12</gift>
+<gift>things;allBlackEquipCash;12</gift>
+<gift>base;pumpkin;25</gift>
+<gift>things;demStone;8</gift>
+<gift>things;madheart;8</gift>
+
+		</one>
+		<one name="anniverSign10" mustLevel="5">
+			<gift>base;anniCoin;18</gift>
+<gift>base;tenCoin;36</gift>
+<gift>things;strengthenStone;36</gift>
+<gift>things;allBlackCash;18</gift>
+<gift>things;allBlackEquipCash;18</gift>
+<gift>base;pumpkin;35</gift>
+<gift>things;demStone;12</gift>
+<gift>things;madheart;12</gift>
+
+		</one>
+		<one name="anniverSign15" mustLevel="7">
+			<gift>base;anniCoin;25</gift>
+<gift>base;tenCoin;50</gift>
+<gift>things;strengthenStone;50</gift>
+<gift>things;allBlackCash;25</gift>
+<gift>things;allBlackEquipCash;25</gift>
+<gift>base;pumpkin;50</gift>
+<gift>things;demStone;16</gift>
+<gift>things;madheart;16</gift>
+
+		</one>
+		<one name="anniverSign20" mustLevel="10">
+			<gift>base;anniCoin;37</gift>
+<gift>base;tenCoin;74</gift>
+<gift>things;strengthenStone;74</gift>
+<gift>things;allBlackCash;37</gift>
+<gift>things;allBlackEquipCash;37</gift>
+<gift>base;pumpkin;75</gift>
+<gift>things;demStone;20</gift>
+<gift>things;madheart;20</gift>
+		</one>
+		<one name="anniverSign25" mustLevel="14">
+			<gift>base;anniCoin;50</gift>
+<gift>base;tenCoin;100</gift>
+<gift>things;strengthenStone;100</gift>
+<gift>things;allBlackCash;50</gift>
+<gift>things;allBlackEquipCash;50</gift>
+<gift>base;pumpkin;100</gift>
+<gift>things;demStone;24</gift>
+<gift>things;madheart;24</gift>
+
+		</one>
+		<one name="anniverSign30" mustLevel="18">
+			<gift>base;anniCoin;62</gift>
+<gift>base;tenCoin;124</gift>
+<gift>things;strengthenStone;124</gift>
+<gift>things;allBlackCash;62</gift>
+<gift>things;allBlackEquipCash;62</gift>
+<gift>base;pumpkin;125</gift>
+<gift>things;demStone;28</gift>
+<gift>things;madheart;28</gift>
+<gift>parts;addAiRangeParts_1;1</gift>
+		</one>
+		<one name="anniverSign35" mustLevel="22">
+			<gift>base;anniCoin;75</gift>
+<gift>base;tenCoin;150</gift>
+<gift>things;strengthenStone;150</gift>
+<gift>things;allBlackCash;75</gift>
+<gift>things;allBlackEquipCash;75</gift>
+<gift>base;pumpkin;150</gift>
+<gift>things;demStone;32</gift>
+<gift>things;madheart;32</gift>
+<gift>things;renameCard;1</gift>
+<gift>head;anniver12;1</gift>
+<gift>parts;oldBulletCube_1;1</gift>
+		</one>
+	</anniverSign>
+	
+	<anniverOther>
+		
+	</anniverOther>
+</data>

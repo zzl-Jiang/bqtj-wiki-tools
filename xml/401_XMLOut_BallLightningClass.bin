@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="enemy">
+		<body name="球形闪电" shell="normal">
+			
+			<name>BallLightning</name>
+			<cnName>球形闪电</cnName><headIconUrl>IconGather/BallLightning</headIconUrl>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/BallLightning.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>99</rosRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move
+				,hurt1,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-30,60,60</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>7</maxVx>
+			<motionState>fly</motionState>
+			<!-- AI属性 -->
+			<preBulletArr>BallLightning_fire,BallLightning_electric,BallLightning_frozen,BallLightning_frozenLine</preBulletArr>
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>BallLightning_AIExtra</extraAIClassLabel>
+			<bossSkillArr>BallLightningHurt,BallLightningCd,BallLightningUnder,BallLightningSkillUnder,BallLightning_fire,BallLightning_electric,BallLightning_frozen,noSpeedReduce,cmldef2_enemy,fightReduct,defenceBounce_enemy</bossSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>stand</imgLabel><cn>无攻击</cn>
+					<hurtRatio>0.25</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>holy</attackType>
+					<skillArr></skillArr>
+					<hitImgUrl con="add" soundUrl="sound/paralysis_enemy_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>move</imgLabel><cn>无攻击</cn>
+					<hurtRatio>0.25</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>holy</attackType>
+					<skillArr></skillArr>
+					<hitImgUrl con="add" soundUrl="sound/paralysis_enemy_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+		<skill>
+			<name>BallLightningHurt</name>
+			<cnName>歧视</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>noMainPlayer</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtNoCondition</effectType>
+			<mul>3</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>对除玩家之外的队友造成额外[mul-1]的伤害。</description>
+		</skill>
+		<skill>
+			<name>BallLightningCd</name>
+			<cnName>技能衰减</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<conditionType>passive</conditionType><noBeClearB>1</noBeClearB><ignoreImmunityB>1</ignoreImmunityB>
+			<condition>interval</condition>
+			<target>me,range,enemy</target>
+			<iconUrl>SkillIcon/BallLightningCd</iconUrl>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>cdMulAndMinTrigger</effectType>
+			<mul>2</mul>
+			<duration>2</duration>
+			<range>99999</range>
+			<description>使周围所有敌人的技能冷却时间延长1倍。</description>
+		</skill>
+		<skill>
+			<name>BallLightningUnder</name>
+			<cnName>元素操控</cnName><noCopyB>1</noCopyB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<conditionType>passive</conditionType><condition>underHit</condition><target>me</target>
+			<addType>instant</addType><effectType>BallLightningUnder</effectType>
+			<description>每隔一段时间随机切换体表元素，同时切换不同攻击方式。切换至红色时，更容易受到火焰伤害；切换至黄色时，更容易受到电磁伤害；切换至蓝色时，更容易受到冷冻伤害。</description>
+		</skill>
+				<skill>
+					<name>BallLightningSkillUnder</name>
+					<cnName>元素切换-技能</cnName>
+					<conditionType>passive</conditionType><condition>underSkillHit</condition><target>me</target>
+					<addType>instant</addType><effectType>BallLightningUnder</effectType>
+					<description>。</description>
+				</skill>
+		
+				<skill cnName="火焰敏感">
+					<name>BallLightning_fire</name>
+					<cnName>火焰敏感</cnName><noBeClearB>1</noBeClearB>
+					<conditionType>passive</conditionType><condition>no</condition><target>me</target>
+					<addType>state</addType><effectType>no</effectType><duration>99999</duration>
+					<stateEffectImg partType="body" con="add">generalEffect/fireBallBig</stateEffectImg>
+				</skill>
+				<skill cnName="电磁敏感">
+					<name>BallLightning_electric</name>
+					<cnName>电磁敏感</cnName><noBeClearB>1</noBeClearB>
+					<conditionType>passive</conditionType><condition>no</condition><target>me</target>
+					<addType>state</addType><effectType>no</effectType><duration>99999</duration>
+					<stateEffectImg partType="body" con="add">generalEffect/electricBallBig</stateEffectImg>
+				</skill>
+				<skill cnName="冷冻敏感">
+					<name>BallLightning_frozen</name>
+					<cnName>冷冻敏感</cnName><noBeClearB>1</noBeClearB>
+					<conditionType>passive</conditionType><condition>no</condition><target>me</target>
+					<addType>state</addType><effectType>no</effectType><duration>99999</duration>
+					<stateEffectImg partType="body" con="add">generalEffect/frozenBallBig</stateEffectImg>
+				</skill>
+		
+	</father>		
+		
+		
+		
+		
+	<father type="zombie">
+		<bullet>
+			<name>BallLightning_fire</name>
+			<cnName>火焰球</cnName>
+			<attackType>holy</attackType><hurtRatio>1.5</hurtRatio>
+			<bulletAngle>0</bulletAngle>
+			<bulletAngleRange>360</bulletAngleRange>
+			<bulletLife>5</bulletLife><bulletWidth>50</bulletWidth><hitType>rect</hitType>	
+			<penetrationGap>1000</penetrationGap>
+			<noMagneticB>1</noMagneticB>
+			<bulletSpeed>20</bulletSpeed>
+			<speedD random="0.3"/>
+			<hitGap>0.06</hitGap>
+			<bounceD floor="20"/>
+			<flipX>1</flipX><bulletImgUrl raNum="1" con="add">generalEffect/fireBall</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/paralysis_enemy_hit">bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl>no</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		
+		
+		<bullet>
+			<name>BallLightning_electric</name>
+			<cnName>电磁球</cnName><bulletSkillArr>BallLightning_electric</bulletSkillArr>
+			<attackType>holy</attackType><hurtRatio>1</hurtRatio>
+			<bulletAngle>0</bulletAngle><bulletLife>99999</bulletLife><bulletWidth>70</bulletWidth><hitType>rect</hitType>	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+			<bulletSpeed>0</bulletSpeed>
+			<flipX>1</flipX><bulletImgUrl con="add" raNum="1">generalEffect/electricBall</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/paralysis_enemy_hit">bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		
+		<bullet>
+			<name>BallLightning_frozen</name>
+			<cnName>冰冻球</cnName><bulletSkillArr>BallLightning_electric</bulletSkillArr>
+			<attackType>holy</attackType><hurtRatio>0.5</hurtRatio>
+			<bulletAngle>0</bulletAngle><bulletLife>99999</bulletLife><bulletWidth>50</bulletWidth><hitType>rect</hitType>	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+			<bulletSpeed>0</bulletSpeed>
+			<flipX>1</flipX><bulletImgUrl con="add" raNum="1">generalEffect/frozenBall</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/paralysis_enemy_hit">bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+				<bullet>
+					<name>BallLightning_frozenLine</name>
+					<cnName>冰冻连线</cnName>
+					<attackType>holy</attackType><hurtRatio>0.15</hurtRatio>
+					<bulletAngle>0</bulletAngle><bulletLife>0.034</bulletLife><bulletWidth>530</bulletWidth><hitType>longLine</hitType>	
+					<penetrationGap>1000</penetrationGap>
+					<penetrationNum>999</penetrationNum>
+					<noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+					<bulletSpeed>0</bulletSpeed>
+					<flipX>1</flipX>
+					<bulletImgUrl raNum="30" con="add" len="50" time="0.034" waveAn="30" imgDieType="ranPlay">generalEffect/lineLightning</bulletImgUrl>
+					<hitImgUrl con="add" soundUrl="sound/paralysis_enemy_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</bullet>
+	</father>	
+	
+	
+</data>

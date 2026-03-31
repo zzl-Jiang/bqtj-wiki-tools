@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	
+	<father  type="rocket" cnName="火炮-特殊">
+		<bullet index="44" cnName="钢笔枪" name="penGun"  kind="water" color="black" composeLv="95" chipB="1" chipNum="400" dropLevelArr="999">
+			<name>penGun</name>
+			<cnName>钢笔枪</cnName>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>25</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>7</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth><aiShootRange>610</aiShootRange>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<upValue>0</upValue>
+			<shootShakeAngle>45</shootShakeAngle>
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>3</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>2</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>26</bulletSpeed>
+			<speedD min="23" max="29" random="0.2"/>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.2</twoShootPro>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.3"/>
+			
+			
+			<skillArr>Hit_disabled_ArmsSkill,Hit_SlowMove_ArmsSkill</skillArr>
+			<godSkillArr>Hit_crazy_godArmsSkill,penGunSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/penGunIcon</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="30">specialGun/penGunBullet</bulletImgUrl>
+			<smokeImgUrl con="filter" raNum="30">specialGun/penGunSmoke</smokeImgUrl>
+			
+			<hitImgUrl soundUrl="specialGun/water_hit">specialGun/christmasGunBoom</hitImgUrl>
+			<hitFloorImgUrl>no</hitFloorImgUrl>
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/waterShoot</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/penGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>秘境“古惑僵尸”</description>
+		</bullet>
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill index="0" name="封眼"><!-- dps-被动 -->
+			<name>penGunSkill</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>封眼</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectProArr>0.04</effectProArr>
+			<effectType>lostPro</effectType>
+			<mul>99</mul>
+			<duration>5</duration>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg partType="2eye" con="add">specialGun/penGunBuff</stateEffectImg>
+			<description>有[effectProArr.0]的几率封住敌人的眼睛，让它攻击成功率降低99%，持续[duration]秒，无视技能免疫。</description>
+		</skill>
+	</father>
+	
+</data>

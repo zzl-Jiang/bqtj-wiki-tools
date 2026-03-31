@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="car" cnName="战车定义">
+		<equip name="DesertTank" cnName="沙漠进袭者" evolutionLabel="ForestTank">
+			<canComposeB>1</canComposeB>
+			<main dpsMul="1.1" len="55" minRa="174" maxRa="-138" />
+			<sub dpsMul="0.6" len="45" />
+			<lifeMul>1.3</lifeMul>
+			<attackMul>1</attackMul>
+			<duration>40</duration>
+			<cd>120</cd>
+			<mustCash>90</mustCash>
+			<addObjJson>{'dpsAll':0.03,'lifeAll':0.03}</addObjJson>
+		</equip>
+		<equip name="ForestTank" cnName="丛林狂袭者" evolutionLabel="DarkTank">
+			<evolutionLv>2</evolutionLv>
+			<main label="DesertTank_main" dpsMul="1.3" len="55" minRa="174" maxRa="-138" />
+			<sub label="DesertTank_sub" dpsMul="0.8" len="45" />
+			<lifeMul>1.3</lifeMul>
+			<attackMul>1.3</attackMul>
+			<duration>40</duration>
+			<cd>120</cd>
+			<mustCash>90</mustCash>
+			<addObjJson>{'dpsAll':0.05,'lifeAll':0.05}</addObjJson>
+			<skillArr>vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="DarkTank" cnName="暗夜侵袭者" evolutionLabel="FloorTank">
+			<evolutionLv>4</evolutionLv>
+			<main label="DesertTank_main" dpsMul="1.6" len="55" minRa="174" maxRa="-138" />
+			<sub label="DesertTank_sub" dpsMul="1.1" len="45" />
+			<lifeMul>1.8</lifeMul>
+			<attackMul>1.5</attackMul>
+			<duration>40</duration>
+			<cd>120</cd>
+			<mustCash>120</mustCash>
+			<addObjJson>{'dpsAll':0.09,'lifeAll':0.09}</addObjJson>
+			<skillArr>vehicleFit_Civilian</skillArr>
+		</equip>
+		
+		<equip name="FloorTank" cnName="大地掠袭者">
+			<evolutionLv>5</evolutionLv>
+			<main label="DesertTank_main" dpsMul="2.3" len="74" minRa="164" maxRa="-55" />
+			<sub label="DesertTank_sub" dpsMul="1.5" len="53" />
+			<lifeMul>2.3</lifeMul>
+			<attackMul>1.9</attackMul>
+			<duration>40</duration>
+			<cd>120</cd>
+			<mustCash>120</mustCash>
+			<addObjJson>{'dpsAll':0.16,'lifeAll':0.16}</addObjJson>
+			<skillArr>floorTankSkill,vehicleFit_Civilian</skillArr>
+		</equip>
+		
+		<bullet cnName="沙漠进袭者-主炮">
+			<name>DesertTank_main</name>
+			<cnName>沙漠进袭者主炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>2.2</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.5</attackGap>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<bulletSpeed>45</bulletSpeed>
+			<boomD  bodyB="1" floorB="1" radius="120"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">rocket/rocketBullet</bulletImgUrl>
+			<fireImgUrl raNum="30" soundUrl="rocket/barrel2_sound" con="add">gunFire/rocket</fireImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom1"  shake="2,0.2,10">boomEffect/boom3</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="沙漠进袭者-副炮">
+			<name>DesertTank_sub</name>
+			<cnName>沙漠进袭者副炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.15</attackGap>
+			<attackDelay>0</attackDelay>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0xFFFF00" size="2" lightSize="6"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<fireImgUrl raNum="30" soundUrl="pistol1/barrel4_sound">gunFire/f</fireImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	<father name="vehicleSkill" cnName="技能">
+		<skill>
+			<name>floorTankSkill</name><noBeClearB>1</noBeClearB>
+			<cnName>威猛火药</cnName><iconUrl>SkillIcon/floorTankSkill</iconUrl>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>70</cd>
+			<changeText>主炮射速提升[mul-1]</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>beforeAttack</condition><!-- 在准备攻击之前触发 -->
+			<target>me</target>
+			<passiveSkillArr>floorTankSkill_link</passiveSkillArr>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>floorTankSkill</effectType><effectFather>vehicle</effectFather>
+			<mul>1.3</mul>
+			<secMul>3</secMul>
+			<duration>5</duration>
+			
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="through_hero_me"/>
+			<stateEffectImg name="burstParts"/>
+			<description>开启技能后，主炮射速提升[mul-1]，主炮对生化敏感的敌人提升[secMul]的伤害，持续[duration]秒。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.3</mul></skill>
+				<skill><mul>1.6</mul></skill>
+				<skill><mul>2</mul></skill>
+				<skill><mul>2.4</mul></skill>
+				<skill><mul>2.8</mul></skill>
+				<skill><mul>3.2</mul></skill>
+				<skill><mul>3.6</mul></skill>
+				<skill><mul>4</mul></skill>
+				<skill><mul>4.5</mul></skill>
+				<skill><mul>6</mul></skill>
+			</growth>
+		</skill>
+				<skill>
+					<name>floorTankSkill_link</name>
+					<cnName>对生化敏感提升</cnName><noRandomListB>1</noRandomListB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType><changeHurtB>1</changeHurtB>
+					<condition>hit</condition>
+					<conditionString>normal</conditionString>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>vehicleSkillEle</effectType><effectFather>vehicle</effectFather>
+					<valueString>DesertTank_main</valueString><!-- 指定子弹名字，attack就是碰撞伤害，不指定就是全部伤害 -->
+					<mul>2.3</mul>
+					<pointEffectImg name="orangeWaveBoom"/>
+				</skill>
+	</father>
+	
+	
+	
+	
+	
+	<father name="vehicle" cnName="战车body">
+		<body index="0" name="沙漠进袭者" shell="metal">
+			
+			<name>DesertTank</name>
+			<cnName>沙漠进袭者</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/DesertTank38.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.6" jumpDelayT="0.15" F_I="0.2" F_F="0.9" moveWhenVB="1" />
+			<maxVx>14</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body name="丛林狂袭者" fixed="DesertTank" shell="metal">
+			<name>ForestTank</name>
+			<cnName>丛林狂袭者</cnName>
+			<swfUrl>swf/vehicle/ForestTank59.swf</swfUrl>
+			<bmpUrl>BodyImg/ForestTank</bmpUrl>
+		</body>	
+		<body name="暗夜侵袭者" fixed="DesertTank" shell="metal">
+			<name>DarkTank</name>
+			<cnName>暗夜侵袭者</cnName>
+			<swfUrl>swf/vehicle/DarkTank.swf</swfUrl>
+			<bmpUrl>BodyImg/DarkTank</bmpUrl>
+		</body>	
+		<body name="大地掠袭者" fixed="DesertTank" shell="metal">
+			<name>FloorTank</name>
+			<cnName>大地掠袭者</cnName>
+			<swfUrl>swf/vehicle/FloorTank342.swf</swfUrl>
+			<bmpUrl>BodyImg/FloorTank</bmpUrl>
+			<bossSkillArr>floorTankSkill_8</bossSkillArr>
+			<motionD F_G="0.6" jumpDelayT="0.15" F_I="0.7" F_F="0.6" moveWhenVB="1" />
+		</body>	
+	</father>
+</data>

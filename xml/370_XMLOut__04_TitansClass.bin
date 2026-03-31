@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="car" cnName="战车定义">
+		<equip name="Titans" cnName="泰坦" evolutionLabel="BlackTitans">
+			<canComposeB>1</canComposeB>
+			<shopB>1</shopB>
+			<main dpsMul="1.7" len="130" minRa="164" maxRa="17" />
+			<sub dpsMul="1.7" len="55" />
+			<lifeMul>1.9</lifeMul>
+			<attackMul>1.7</attackMul>
+			<duration>90</duration>
+			<cd>120</cd>
+			<mustCash>300</mustCash>
+			<addObjJson>{'dpsAll':0.14,'lifeAll':0.14}</addObjJson>
+		</equip>
+		<equip name="BlackTitans" cnName="黑暗泰坦" evolutionLabel="Gaia">
+			<evolutionLv>2</evolutionLv>
+			<evolutionThingsLabel>TitansCash</evolutionThingsLabel>
+			<main label="Titans_main" dpsMul="2" len="130" minRa="150" maxRa="30" />
+			<sub label="Titans_sub" dpsMul="2" len="55" />
+			<lifeMul>1.9</lifeMul>
+			<attackMul>2</attackMul>
+			<duration>90</duration>
+			<cd>120</cd>
+			<mustCash>300</mustCash>
+			<addObjJson>{'dpsAll':0.18,'lifeAll':0.18}</addObjJson>
+			<skillArr>vehicleFit_Gaia,vehicleFit_fly,vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="Gaia" cnName="盖亚" evolutionLabel="RedGaia">
+			<evolutionLv>3</evolutionLv>
+			<main label="Gaia_main" dpsMul="2.3" len="144" minRa="164" maxRa="17" />
+			<sub label="Titans_sub" dpsMul="2.3" len="55" />
+			<lifeMul>2.4</lifeMul>
+			<attackMul>2.3</attackMul>
+			<duration>90</duration>
+			<cd>120</cd>
+			<mustCash>450</mustCash>
+			<addObjJson>{'dpsAll':0.22,'lifeAll':0.22}</addObjJson>
+			<skillArr>vehicleFit_Gaia,vehicleFit_fly,vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="RedGaia" cnName="狂怒盖亚" evolutionLabel="GoldGaia">
+			<evolutionLv>4</evolutionLv>
+			<main label="Gaia_main" dpsMul="2.7" len="144" minRa="164" maxRa="17" />
+			<sub label="Titans_sub" dpsMul="2.7" len="55" />
+			<mainFrontB>1</mainFrontB>
+			<lifeMul>3</lifeMul>
+			<attackMul>2.7</attackMul>
+			<duration>90</duration>
+			<cd>120</cd>
+			<mustCash>450</mustCash>
+			<addObjJson>{'dpsAll':0.25,'lifeAll':0.25}</addObjJson>
+			<skillArr>vehicleFit_Gaia,vehicleFit_fly,vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="GoldGaia" cnName="神圣盖亚">
+			<evolutionLv>5</evolutionLv>
+			<main label="goldGaia_main" dpsMul="3.3" len="174" />
+			<sub label="Titans_sub" dpsMul="3.3" len="76" />
+			<mainFrontB>1</mainFrontB>
+			<lifeMul>3.4</lifeMul>
+			<attackMul>3.3</attackMul>
+			<duration>90</duration>
+			<cd>120</cd>
+			<mustCash>450</mustCash>
+			<addObjJson>{'dpsAll':0.30,'lifeAll':0.30}</addObjJson>
+			<skillArr>goldGaiaSkill,vehicleFit_Gaia,vehicleFit_fly,vehicleFit_Civilian</skillArr>
+		</equip>
+		
+		
+		<bullet cnName="泰坦-主炮">
+			<name>Titans_main</name>
+			<cnName>泰坦-主炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.83</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.5</attackGap>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<bulletSpeed>45</bulletSpeed>
+			<boomD  bodyB="1" floorB="1" radius="120"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">rocket/rocketBullet</bulletImgUrl>
+			<fireImgUrl raNum="30" soundUrl="rocket/barrel_sound" con="add">gunFire/rocket</fireImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom1"  shake="2,0.2,10">boomEffect/boom3</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="泰坦-副炮">
+			<name>Titans_sub</name>
+			<cnName>泰坦-副炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.66</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.1</attackGap>
+			<attackDelay>0</attackDelay>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0x00FFFF" size="2" lightSize="6"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<fireImgUrl raNum="30" soundUrl="ak/barrel5_sound">gunFire/f1</fireImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="盖亚-主炮">
+			<name>Gaia_main</name>
+			<cnName>盖亚-主炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.83</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.5</attackGap>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<bulletSpeed>45</bulletSpeed>
+			<boomD  bodyB="1" floorB="1" radius="120"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">bullet/gaiaBullet</bulletImgUrl>
+			<fireImgUrl raNum="30" soundUrl="rocket/barrel_sound" con="add">gunFire/rocket</fireImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom1"  shake="2,0.2,10">boomEffect/boom3</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="神圣盖亚-主炮">
+			<name>goldGaia_main</name>
+			<cnName>神圣盖亚-主炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.83</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.5</attackGap>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<bulletSpeed>45</bulletSpeed>
+			<boomD  bodyB="1" floorB="1" radius="120"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="gaiaBigBullet"/>
+			<fireImgUrl raNum="30" soundUrl="rocket/barrel_sound" con="add">gunFire/rocket</fireImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom1"  shake="2,0.2,10">boomEffect/boom3</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="FireWolf_noName_smoke"/><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		<bullet cnName="装甲压制">
+			<name>goldGaiaSkillBullet</name>
+			<cnName>装甲压制</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletWidth>90</bulletWidth>
+			<bulletAngle>90</bulletAngle>
+			<bulletLife>0.5</bulletLife>
+			<hitType>rect</hitType>
+			<shootPoint>0,-300</shootPoint>
+			
+			<!--特殊属性------------------------------------------------------------ -->	
+			<gravity>3</gravity>
+			<boomD  bodyB="1" radius="300" noExcludeBodyB="1"/>
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>15</bulletSpeed>
+			<speedD max="40"/>
+			<skillArr>goldGaiaSkillBullet</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="goldGaiaSkillBullet"/>
+			<selfBoomImgUrl soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</selfBoomImgUrl><!-- 子弹图像【必备】 -->
+			
+		</bullet>
+	</father>
+	
+	
+	<father name="vehicleSkill" cnName="技能">
+		<skill>
+			<name>goldGaiaSkill</name><noBeClearB>1</noBeClearB>
+			<cnName>装甲压制</cnName><iconUrl>SkillIcon/goldGaiaSkill</iconUrl>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<cd>90</cd>
+			<conditionType>active</conditionType>
+			<condition>beforeAttack</condition><!-- 在准备攻击之前触发 -->
+			<target>me</target>
+			<changeText>造成碾压伤害的[mul]</changeText>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>bullet_goldGaia</effectType><effectFather>vehicle</effectFather>
+			<extraValueType>meDpsFactor</extraValueType>
+			<mul>9</mul>
+			<duration>1.5</duration>
+			<!-- 子弹所需 -->
+			<obj>"name":"goldGaiaSkillBullet","site":"mouse","flipB":true</obj>
+			<description>在鼠标处连续召唤4台狂怒盖亚，砸向敌人，每台造成碾压伤害[mul]的伤害（对冷冻敏感敌人再增加50%的伤害）。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>6</mul></skill>
+				<skill><mul>9</mul></skill>
+				<skill><mul>12</mul></skill>
+				<skill><mul>15</mul></skill>
+				<skill><mul>18</mul></skill>
+				<skill><mul>21</mul></skill>
+				<skill><mul>27</mul></skill>
+				<skill><mul>33</mul></skill>
+				<skill><mul>40</mul></skill>
+				<skill><mul>50</mul></skill>
+			</growth>
+		</skill>
+				<skill>
+					<name>goldGaiaSkillBullet</name>
+					<cnName>对冷冻敏感提升</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType><changeHurtB>1</changeHurtB>
+					<condition>hit</condition>
+					<otherConditionArr>targetShell</otherConditionArr>
+					<conditionString>variation</conditionString><!-- 变异外壳 冷冻敏感 -->
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>changeHurtNoCondition</effectType>
+					<mul>1.5</mul>
+					<pointEffectImg name="orangeWaveBoom"/>
+					<targetPointEffectB>1</targetPointEffectB>
+				</skill>
+	</father>
+	
+	<father name="vehicle" cnName="战车body">
+		<body index="0" name="泰坦" shell="compound">
+			
+			<name>Titans</name>
+			<cnName>泰坦</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/Titans38.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.6" jumpDelayT="0.2" F_I="1" F_F="0.9" moveWhenVB="1" />
+			<maxVx>18</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<bossSkillArr>crazy_vehicle_5,noSpeedReduce</bossSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit1">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		<body index="0" name="黑暗泰坦" shell="compound">
+			
+			<name>BlackTitans</name>
+			<cnName>黑暗泰坦</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/BlackTitans.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.6" jumpDelayT="0.2" F_I="1" F_F="0.9" moveWhenVB="1" />
+			<maxVx>18</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			
+			<!-- 技能 -->
+			<bossSkillArr>imploding_enemy,pointBoom_enemy,sweep_enemy,moreMissile_enemy,through_hero_7,noSpeedReduce</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<extraDropArmsB>1</extraDropArmsB>
+			
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit1">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body name="盖亚" fixed="BlackTitans" shell="compound">
+			<name>Gaia</name>
+			<cnName>盖亚</cnName>
+			<swfUrl>swf/vehicle/Gaia.swf</swfUrl>
+			<bmpUrl>BodyImg/Gaia</bmpUrl>
+		</body>
+		<body name="狂怒盖亚" fixed="BlackTitans" shell="compound">
+			<name>RedGaia</name>
+			<cnName>狂怒盖亚</cnName>
+			<swfUrl>swf/vehicle/RedGaia.swf</swfUrl>
+			<bmpUrl>BodyImg/RedGaia</bmpUrl>
+		</body>
+		<body name="神圣盖亚" fixed="BlackTitans" shell="compound">
+			<name>GoldGaia</name>
+			<cnName>神圣盖亚</cnName>
+			<swfUrl>swf/vehicle/GoldGaia.swf</swfUrl>
+			<bmpUrl>BodyImg/GoldGaia</bmpUrl>
+			<lifeBarExtraHeight>-50</lifeBarExtraHeight>
+			<motionD F_G="0.6" jumpDelayT="0.2" F_I="1" F_F="0.9" moveWhenVB="1" />
+		</body>
+	</father>
+</data>

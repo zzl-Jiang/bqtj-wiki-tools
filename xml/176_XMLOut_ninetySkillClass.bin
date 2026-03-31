@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="enemy" cnName="童灵尸">
+		<skill index="0" name="雪藏">
+			<name>SnowThinRuin</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>雪藏</cnName><iconUrl36>SkillIcon/redMoto3Skill_36</iconUrl36>
+			<cd>10</cd>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>500</conditionRange><target>me</target>
+			
+			<addType>state</addType>
+			<effectType>invincible</effectType>
+			<duration>1.4</duration>
+			<meActionLabel>rotateAttack</meActionLabel>
+			<description>童灵尸抓起一把雪球向地面撒去，对经过的敌人造成伤害。动作过程中童灵尸处于无敌状态。</description>
+		</skill>
+		<skill cnName="近战防御"><!-- dps -->
+			<name>fightReduct2</name>
+			<cnName>近战防御</cnName>
+			<noBeClearB>1</noBeClearB>
+			<ignoreSilenceB>1</ignoreSilenceB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>fightDedut</effectType>
+			<mul>0</mul>
+			<duration>9999999</duration>
+			<!--图像------------------------------------------------------------ -->
+			<description>受到近战伤害减少[mul]。</description>
+		</skill>
+		
+	</father>	
+	<father name="enemy" cnName="关东尸">
+		<skill index="0" name="千斤顶">
+			<name>SnowFattySprint</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>千斤顶</cnName><iconUrl36>SkillIcon/IceManStrike_36</iconUrl36>
+			<cd>10</cd>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>500</conditionRange><target>me</target>
+			<addType>state</addType>
+			<effectType>invincible</effectType>
+			<duration>1.1</duration>
+			<meActionLabel>sprintShootAttack</meActionLabel>
+			<stateEffectImg partType="2hand" con="add" raNum="30">bulletHitEffect/smoke_small</stateEffectImg>
+			<description>丢出斧头，命中后冲向目标，并用大肚猛烈顶撞。</description>	
+		</skill>
+		
+		<skill cnName="冲撞前飞刀"><!-- dps -->
+			<name>SnowFattySprintHit</name>
+			<cnName>千斤顶</cnName>
+			<noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>SnowFattySprintHit</effectType>
+		</skill>
+		<skill cnName="白色血液效果"><!-- dps -->
+			<name>hitBloodWhite</name>
+			<cnName>白色血液效果</cnName>
+			<noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>hitBlood</effectType>
+			<valueString>whiteBlood</valueString>
+			<value>30</value>
+			<mul>12</mul>
+			<range>2.5</range>
+		</skill>
+		<skill cnName="绿色血液效果"><!-- dps -->
+			<name>hitBloodGreen</name>
+			<cnName>绿色血液效果</cnName>
+			<noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>hitBlood</effectType>
+			<valueString>greenBlood</valueString>
+			<value>30</value>
+			<mul>12</mul>
+			<range>2.5</range>
+		</skill>
+	</father>
+	<father name="enemy" cnName="卫队尸">
+		<skill index="0" name="击中沉默"><!-- dps -->
+			<name>silence_SnowSoldiers</name>
+			<cnName>击中沉默</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>silenceB</effectType>
+			<value>1</value>
+			<duration>3</duration>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg partType="mouth" con="add">skillEffect/silence_enemy</stateEffectImg>
+			<description>击中目标后使其无法释放技能，持续[duration]秒。</description>
+		</skill> 
+		
+		<skill index="0" name="分身">
+			<name>clonedSnowSoldiers</name>
+			<cnName>分身</cnName><iconUrl36>SkillIcon/cloned_36</iconUrl36>
+			<cd>30</cd>
+			<showInLifeBarB>1</showInLifeBarB><noInClonedB>1</noInClonedB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>700</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>cloned</effectType>
+			<value>1</value>
+			<mul>0.02</mul>
+			<secMul>0.75</secMul>
+			<duration>16</duration>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg soundUrl="sound/cloned_enemy" con="add">skillEffect/hiding_hero</meEffectImg>
+			<description>产生[value]个分身，攻击力与自身同等，血量为自身的[mul]，持续[duration]秒。</description>
+		</skill>
+		<skill cnName="风暴突袭"><!-- 限制 -->
+			<name>teleport_SnowSoldiers</name>
+			<cnName>风暴突袭</cnName><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>6</cd><iconUrl36>SkillIcon/HookWitchShake_36</iconUrl36>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>1000</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>teleport_SnowSoldiers</effectType>
+			<valueString>attackTarget</valueString>
+			<duration>2.5</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<meActionLabel>rotateAttack</meActionLabel>
+			<meEffectImg soundUrl="sound/teleport_enemy" con="add">lightEffect/basinShow</meEffectImg>
+			<description>瞬间突袭到敌人身边，发动锤旋风暴。</description>
+		</skill>
+		<skill index="0" name="收到攻击打断风暴突袭"><!-- dps -->
+			<name>underCrossbow_SnowSoldiers</name>
+			<cnName>收到攻击打断风暴突袭</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underHit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>underCrossbow_SnowSoldiers</effectType>
+			<valueString>rotateAttack</valueString>
+			<!--图像------------------------------------------------------------ -->
+			<description>击中目标后使其无法释放技能，持续[duration]秒。</description>
+		</skill>
+	</father>	
+	<father name="enemy" cnName="女爵尸">
+		<skill index="0" name="钩拉"><!-- dps -->
+			<name>SnowGirlHook</name>
+			<cnName>钩拉</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>SnowGirlHook</effectType>
+			<duration>0.3</duration>
+			<!--图像------------------------------------------------------------ -->
+			<description>击中目标后，把自己勾至敌人面前。</description>
+		</skill>
+		
+		<skill name="钩雪莲华">
+			<name>SnowGirlPull</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>钩雪莲华</cnName><iconUrl36>SkillIcon/IronDogFive_36</iconUrl36>
+			<cd>6</cd>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>700</conditionRange><target>me</target>
+			<addType>no</addType>
+			<meActionLabel>pullAttack</meActionLabel>
+			<description>将敌人拉至身边，一顿乱斩之后，将其抛掷高空。</description>	
+		</skill>
+		
+		
+		
+		<skill index="0" name="钩拉-击中麻痹"><!-- dps -->
+			<name>SnowGirlHookHit</name>
+			<cnName>钩拉-击中麻痹</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>moveSpeed</effectType>
+			<mul>0</mul>
+			<duration>1</duration>
+			<applyArr>hookAttack</applyArr>
+			<!--图像------------------------------------------------------------ --> 
+			<stateEffectImg con="add" soundUrl="sound/paralysis_enemy_hit">skillEffect/paralysis_enemy</stateEffectImg>
+		</skill>
+		
+		<skill index="0" name="钩雪莲华-击中"><!-- dps -->
+			<name>SnowGirlPullHit</name>
+			<cnName>钩雪莲华-击中</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>SnowGirlPullHit</effectType>
+			<mul>23</mul>
+			<secMul>28</secMul>
+			<valueString>hand_left</valueString>
+			<duration>0.2</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<stateEffectImg partType="mouth" con="add">skillEffect/dizziness</stateEffectImg>
+		</skill>
+		<skill index="0" name="钩雪莲华-抛空中"><!-- dps -->
+			<name>SnowGirlAfterPullHit</name>
+			<cnName>钩雪莲华-抛空中</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>SnowGirlAfterPullHit</effectType>
+			<duration>1.5</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<stateEffectImg partType="mouth" con="add">skillEffect/dizziness</stateEffectImg>
+		</skill>
+	</father>	
+	<father name="enemy" cnName="野帝">
+		<skill index="0" cnName="腐蚀">
+			<name>IceManCorrosion</name>
+			<cnName>腐蚀</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>attackGapMul</effectType>
+			<mul>0.2</mul>
+			<duration>5</duration>
+			<applyArr>shootAttack,normalAttack1,normalAttack2</applyArr>
+			<stateEffectImg partType="shootPoint" raNum="25" followPartRaB="1">bulletHitEffect/smoke_black</stateEffectImg>
+			<description>击中目标后腐蚀对方手上的枪支，降低枪支[1-mul]的射击速度，持续[duration]秒。</description>
+		</skill>
+		<skill index="0" name="飞雪连舞">
+			<name>IceManRotate</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>飞雪连舞</cnName><iconUrl36>SkillIcon/IceManRotate_36</iconUrl36>
+			<cd>18</cd>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>800</conditionRange><target>me</target>
+			
+			<addType>state</addType>
+			<effectType>invincible</effectType>
+			<duration>1.4</duration>
+			<meActionLabel>smashAttack</meActionLabel>
+			<description>跳向目标，挥舞生化罐，对范围内的敌方单位造成持续伤害。</description>
+		</skill>
+		<skill index="0" name="雪引冲锋">
+			<name>IceManStrike</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>雪引冲锋</cnName><iconUrl36>SkillIcon/IceManStrike_36</iconUrl36>
+			<cd>17</cd>
+			<delay>0.5</delay>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>200</conditionRange><target>me,range,enemy</target>
+			<addType>state</addType>
+			<effectType>IceManStrike</effectType>
+			<value>14</value>
+			<mul>0.6</mul>
+			<duration>1.1</duration>
+			<range>999999</range>
+			<meActionLabel>strikeAttack</meActionLabel>
+			<description>向敌方发起冲锋，强大的引力使周围敌人全部向其聚拢，最后一击猛踢生化罐，射出生化球击飞全部敌人。</description>
+		</skill>
+		<skill index="0" name="爆怒一击">
+			<name>IceManShake</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>爆怒一击</cnName><iconUrl36>SkillIcon/IceManShake_36</iconUrl36>
+			<cd>19</cd>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<addType>state</addType>
+			<effectType>invincible</effectType>
+			<duration>4.9</duration>
+			<meActionLabel>shakeAttack</meActionLabel>
+			<description>用生化罐猛捶地面，一段时间后，制造雪崩对所有敌人造成百分比伤害。</description>
+			<pointEffectImg>IceMan/boom</pointEffectImg>
+		</skill>
+		<skill index="0" name="踢爆">
+			<name>IceManKick</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>踢爆</cnName><iconUrl36>SkillIcon/IceManKick_36</iconUrl36>
+			<cd>20</cd>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>200</conditionRange><target>me</target>
+			<addType>state</addType>
+			<effectType>invincible</effectType>
+			<duration>2</duration>
+			<meActionLabel>kickAttack</meActionLabel>
+			<description>野帝猛踢生化罐，让其内部的雪汇聚成子弹向前发射。</description>
+		</skill>
+		
+		<skill cnName="召唤雪人"><!-- dps -->
+			<name>IceManSnowman</name>
+			<cnName>召唤雪人</cnName><iconUrl36>SkillIcon/IceManSnowman_36</iconUrl36>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>15</cd>
+			<summonedUnitsB>1</summonedUnitsB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>Triceratops_oasis</effectType>
+			<obj>"cnName":"雪人","num":5,"lifeMul":1000,"maxNum":100,"noUnderHurtB":1,"noAiFindB":1,"noUnderHitB":1,"skillArr":["State_SpellImmunity"]</obj>
+			<duration>15</duration>
+			<!--图像------------------------------------------------------------ -->
+			<description>召唤雪人。</description>
+		</skill>
+		<skill name="飞雪连舞-动作引用-避免被其他技能打断">
+			<name>IceManRotateLink</name>
+			<cnName>飞雪连舞</cnName>
+			<conditionType>active</conditionType>
+			<condition>no</condition>
+			<cd>99999999999</cd>
+			<target>me</target>
+			<addType>no</addType>
+			<meActionLabel>rotateAttack</meActionLabel>
+		</skill>
+		<skill index="0" name="雪引冲锋-冲撞"><!-- dps -->
+			<name>IceManStrikeHit</name>
+			<cnName>雪引冲锋-冲撞</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>IceManStrikeHit</effectType>
+			<duration>0.2</duration>
+			<!--图像------------------------------------------------------------ -->
+			<description>冲撞目标。</description>
+		</skill>
+		<skill index="0" name="踢爆-冲撞"><!-- dps -->
+			<name>IceManKickHit</name>
+			<cnName>踢爆-冲撞</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>IceManKickHit</effectType>
+			<value>25</value>
+			<duration>1.4</duration>
+			<stateEffectImg partType="mouth" con="add">skillEffect/dizziness</stateEffectImg>
+			<!--图像------------------------------------------------------------ -->
+			<description>冲撞目标。</description>
+		</skill>
+	</father>	
+	<father name="enemy" cnName="其他">
+		<skill index="0" name="飓风载体">
+			<name>snowWind</name>
+			<cnName>飓风载体</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>no</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<obj>"name":"snowWind"</obj>
+		</skill>
+		
+		<skill index="0" name="诱击对玩家单位伤害降低"><!-- dps-被动 -->
+			<name>RifleHornetShooterHurt</name>
+			<cnName>诱击对玩家单位伤害降低</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurt</effectType>
+			<mul>0.1</mul>
+			<!-- 修改伤害所需 -->
+			<obj>"type":"player"</obj>
+		</skill>
+		
+		<skill index="0" cnName="摩卡护体"><!-- dps -->
+			<name>escapeInvincible</name>
+			<cnName>摩卡护体</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>beforeDie</condition><!-- 被攻击后触发 -->
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>escapeInvincible</effectType>
+			<duration>8</duration>
+		</skill>
+	</father>		
+</data>

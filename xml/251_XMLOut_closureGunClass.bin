@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="sniper" cnName="狙击枪">
+		<bullet name="围墙" color="black" composeLv="99">
+			<name>closureGun</name>
+			<cnName>围墙</cnName>
+			<!--基本-->
+			<capacity>1</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>5</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>400</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>				
+			<beatBack>10</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>1</dpsMul>
+			<hurtRatio>15</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.5</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>3</upValue>
+			<shootShakeAngle>15</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			
+			<godSkillArr>closureGunSkill</godSkillArr>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>5</bulletLife>
+			<hitType>longLine</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<bounceD floor="0" body="0" noDieB="1" />
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>10000</penetrationGap>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>hitSound/bigLaser1</shootSoundUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl name="peacockLine"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/closureGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill name="墙">
+			<name>closureGunSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>墙</cnName><changeHurtB>1</changeHurtB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>closureGunSkill</effectType>
+			<description>生成一道墙，挡住目标前进，对尸体无效。</description>
+		</skill>
+	</father>
+</data>

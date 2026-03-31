@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- id是唯一识别码，必须防止和其他关卡集合重复，不设置的话默认为文件名。 -->
+<data id="levelExamplePng" cnName="使用外部图片" author="沃龙先生">
+	<!-- 关卡集介绍。 -->
+	<info>展示如何用外部图片用替换角色头部、对话框头像、掉落物图像。目前只支持4399游戏吧相册的图片。</info>
+	
+	<father name="normal" cnName="使用外部图片">
+		<!-- 定义名字name，使用时用“png/name”来作为模型地址。url为图片网址，目前只支持4399论坛上的图片。 -->
+		<png name="wenJieHead50" cnName="表情头" x="-26" y="-40" url="https://fs.img4399.com/bbs/202511/28/2025006509812/ZV5zAQk0Wf.45x45.png"/>
+		<!-- x、y为图片的坐标位置，scaleX、scaleY为横轴纵轴的缩放，scaleX="-1"代表左右翻转。 -->
+		<png name="wenJieHeadIcon" cnName="表情头图标" scaleX="-1" url="https://fs.img4399.com/bbs/202511/28/2025006509812/ZV5zAQk0Wf.45x45.png"/>
+		<!-- 修改掉落物url时需要重启游戏才能生效 -->
+		<png name="wenJieHeadDrop" cnName="表情头掉落" x="-22" y="-22" url="https://fs.img4399.com/bbs/202511/28/2025006509812/ZV5zAQk0Wf.45x45.png"/>
+		<gather>
+			<level name="levelExamplePng1" cnName="使用外部图片" descrip="">
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1" />
+				<!-- 场景 -->
+				<sceneLabel>XiShan2</sceneLabel>
+				
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<!-- 把外观改成铁犬。 -->
+							<order>changePart:p1; head:png:wenJieHead50</order>
+							<order>dropMapSpider:wenJieHead; 1</order>
+							<!-- 背包不可用，避免形象被改变 -->
+							<order>noWearShop</order>
+						</event>
+						<event>
+							<order>say; startList:s1</order>
+						</event>
+						<event>
+							<condition>say:listOver</condition>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		<level name="levelExamplePng1" cn="对话"><!-- name要和level 的name同名 -->
+			<sayList name="s1">
+				<say target="沃龙"><content>用外部图片，给你换了一个头。地上的掉落物也是你的头。</content></say>
+				<say target="可爱的你" iconUrl="png/wenJieHeadIcon"><content>感觉还挺新奇的。</content></say>
+				<say target="沃龙"><content>只支持4399论坛上传的图片。</content></say>
+				<say target="可爱的你" iconUrl="png/wenJieHeadIcon"><content>知道了。</content></say>
+			</sayList>
+		</level>
+	</father>
+	<!-- type="effect"是掉落物的类型，必须有这个参数 -->
+	<father type="effect">
+		<drop>
+			<name>wenJieHead</name>
+			<cnName>表情头</cnName>
+			<!-- 图标地址 -->
+			<imgUrl>png/wenJieHeadDrop</imgUrl>
+			<!-- 附带技能效果 -->
+			<extraSkill>invincibleDrugDrop</extraSkill>
+			<!-- 1不会有跟踪效果 0有跟踪效果 -->
+			<noFollowHeroB>1</noFollowHeroB>
+			<!-- 持续时间，不设置就是无限时间 -->
+			<lifetime>60</lifetime>
+			<!-- 在地图中显示的颜色 -->
+			<smallMapColor>0xFF00FFFF</smallMapColor>
+		</drop>
+	</father>
+</data>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- id是唯一识别码，必须防止和其他关卡集合重复，不设置的话默认为文件名。 -->
+<data id="levelExampleWeapon" cnName="添加新技能" author="沃龙先生">
+	<!-- 关卡集介绍。 -->
+	<info>通过添加新技能，使角色拥有全副手招式：切换不同种类的枪后使用副手，可执行各种S级时装的招式：噬原斩、刹鬼连、大圣劈、阎罗旋。</info>
+	
+	<father name="normal">
+		<gather>
+			<level name="levelExampleWeapon1" cnName="全副手招式" descrip="">
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1" />
+
+				<!-- 场景 -->
+				<sceneLabel>XiShan4</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG>
+					<allDefault aiOrder="patrolGlobal" noSuperB="1"></allDefault>
+					<unitOrder id="enemy1">
+						<numberType>pro</numberType>
+						<unit cnName="战斗僵尸" num="2" skillArr="State_AddMove" lifeMul="0.1" dpsMul="0.05" />
+						<unit cnName="无头自爆僵尸" num="1" skillArr="State_AddMove" lifeMul="0.1" dpsMul="0.05" />
+						<unit cnName="鬼目游尸" num="1" skillArr="State_AddMove" lifeMul="0.1" dpsMul="0.05" />
+						<unit cnName="吸血蝙蝠" num="1" skillArr="State_AddMove" lifeMul="0.1" dpsMul="0.05" />
+					</unitOrder>
+				</unitG>
+				
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<!-- 给p1添加锁定技能：噬原斩、刹鬼连、大圣劈、阎罗旋、怒气回复100倍 -->
+							<order>body:p1; addSkillLock:phageWeapon,hundredGhostsWeapon,greatWeapon,yanluoWeapon,angerAdd100,cowboyYingSuper</order>
+						</event>
+						<event><condition delay="1"></condition></event>
+						<event>
+							<condition doNumber="8">enemyNumber:less_40</condition>
+							<order>createUnit:enemy1; r_topLong</order>
+						</event>
+						<event>
+							<condition doNumber="20">enemyNumber:less_50</condition>
+							<order>createUnit:enemy1; r_topLong</order>
+						</event>
+						<event>
+							<condition doNumber="40">enemyNumber:less_60</condition>
+							<order>createUnit:enemy1; r_topLong</order>
+						</event>
+						<event>
+							<condition doNumber="1000">enemyNumber:less_70</condition>
+							<order>createUnit:enemy1; r_topLong</order>
+						</event>
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		
+		<![CDATA[时装招式技能]]>
+		<skill>
+			<name>phageWeapon</name>
+			<cnName>噬原斩</cnName>
+			<showInLifeBarB>1</showInLifeBarB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<conditionType>passive</conditionType><ignoreImmunityB>1</ignoreImmunityB>
+			<condition>useWeapon</condition>
+			<otherConditionArr>targetArmsType</otherConditionArr>
+			<!-- 持有狙击枪限定 -->
+			<conditionString>sniper</conditionString>
+			<!-- 动作特效预处理 -->
+			<preEffectArr>sec_bladeAttack_e,sec_bladeAttack_el</preEffectArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>stopAndPlayLabel</effectType>
+			<!-- 播放动作sec_bladeAttack（噬原斩指定动作），副手替换模型为：Madgod/sprintSword_1（狂战神之刃） -->
+			<valueString>sec_bladeAttack,Madgod/sprintSword_1</valueString>
+			<!-- 副手图像缩放大小 -->
+			<mul>3</mul>
+			<!-- 攻击区域放大+ -->
+			<value>0.3</value>
+			<duration>1</duration>
+			<description>持有狙击枪时，使用副手将触发噬原斩。只适合于男性外观。</description>
+		</skill>
+		
+		<skill>
+			<name>hundredGhostsWeapon</name>
+			<cnName>刹鬼连</cnName>
+			<showInLifeBarB>1</showInLifeBarB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<conditionType>passive</conditionType><ignoreImmunityB>1</ignoreImmunityB>
+			<condition>useWeapon</condition>
+			<otherConditionArr>targetArmsType</otherConditionArr>
+			<conditionString>laser</conditionString>
+			<preEffectArr>ghost_swordAttack_r1,ghost_swordAttack_r2,ghost_swordAttack_l1,ghost_swordAttack_l2</preEffectArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>stopAndPlayLabel</effectType>
+			<valueString>ghost_swordAttack</valueString>
+			<description>持有激光枪时，使用副手将触发噬原斩。只适合于男性外观。</description>
+		</skill>
+		<skill>
+			<name>greatWeapon</name>
+			<cnName>大圣劈</cnName>
+			<showInLifeBarB>1</showInLifeBarB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<conditionType>passive</conditionType><ignoreImmunityB>1</ignoreImmunityB>
+			<condition>useWeapon</condition>
+			<otherConditionArr>targetArmsType</otherConditionArr>
+			<conditionString>rocket</conditionString>
+			<preEffectArr>ghost_swordAttack_r1,ghost_swordAttack_r2,ghost_swordAttack_l1,ghost_swordAttack_l2</preEffectArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>stopAndPlayLabel</effectType>
+			<valueString>great_stickAttack,Madgod/sprintSword_1</valueString>
+			<!-- 副手图像缩放大小 -->
+			<mul>3</mul>
+			<!-- 攻击区域放大+ -->
+			<value>0.5</value>
+			<duration>1</duration>
+			<description>持有火炮时，使用副手将触发大圣劈。只适合于男性外观。</description>
+		</skill>
+		<skill>
+			<name>yanluoWeapon</name>
+			<cnName>阎罗旋</cnName>
+			<showInLifeBarB>1</showInLifeBarB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<conditionType>passive</conditionType><ignoreImmunityB>1</ignoreImmunityB>
+			<condition>useWeapon</condition>
+			<otherConditionArr>targetArmsType</otherConditionArr>
+			<conditionString>flamer</conditionString>
+			<preEffectArr>yanluoAttack_e,yanluoAttack_e2,yanluoAttack_e3,hookDeviceYanluo</preEffectArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>stopAndPlayLabel</effectType>
+			<valueString>yanluoAttack,,Madgod/sprintSword_1</valueString>
+			<!-- 副手图像缩放大小 -->
+			<mul>3</mul>
+			<!-- 攻击区域放大+ -->
+			<value>0.5</value>
+			<duration>1</duration>
+			<description>持有喷火器时，使用副手将触发阎罗旋。只适合于男性外观。</description>
+		</skill>
+		
+		
+		
+		
+		
+		
+		<skill>
+			<name>snowShadowWeapon</name>
+			<cnName>雪影刺</cnName><!-- 女性专属 -->
+			<showInLifeBarB>1</showInLifeBarB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<conditionType>passive</conditionType><ignoreImmunityB>1</ignoreImmunityB>
+			<condition>useWeapon</condition>
+			<otherConditionArr>targetArmsType</otherConditionArr>
+			<conditionString>rifle</conditionString>
+			<preEffectArr>snow_daggerAttack_e,snow_daggerAttack_e2,snow_daggerAttack_e3,snow_daggerAttack_el,snow_daggerAttack_e2l,snow_daggerAttack_e3l</preEffectArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>stopAndPlayLabel</effectType>
+			<valueString>snow_daggerAttack,weapon/totem</valueString>
+			<description>持有步枪时，使用副手将触发雪影刺。只适合于女性外观。</description>
+		</skill>
+		<skill>
+			<name>angerAdd100</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>怒气回复100倍</cnName>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>angerAddMul</effectType>
+			<mul>100</mul>
+			<duration>99999999</duration>
+			<description>怒气回复速度增加100倍。</description>
+		</skill>
+					
+		<skill>
+			<name>setMaxLifeMulByBo2</name>
+			<cnName>根据波数设置血量2</cnName>
+			<conditionType>passive</conditionType><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>setMaxLifeMulPow</effectType>
+			<!-- nowEnemyBo指的是当前怪物波数 -->
+			<extraValueType>nowEnemyBo</extraValueType>
+			<!-- 血量倍数=1.05^当前已经刷出怪物波数 -->
+			<value>1.05</value>
+			<description>血量倍数=[value]^当前已经刷出怪物波数。</description>
+		</skill>
+		<skill>
+			<name>killCharm2</name>
+			<cnName>超级破魅</cnName><showInLifeBarB>1</showInLifeBarB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurt</effectType>
+			<mul>1000000</mul>
+			<!-- 修改伤害所需 -->
+			<obj>"type":"killCharm"</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg></meEffectImg>
+			<targetEffectImg></targetEffectImg>
+			<description>对魅惑单位造成1000000倍的伤害。</description>
+		</skill>
+	</father>
+</data>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="snake" cnName="血蟒">
+		<body  shell="metal">
+			<name>PythonArmor</name><movieLink>CrossBone</movieLink>
+			<cnName>血蟒重甲兵</cnName><headIconUrl>IconGather/PythonArmor</headIconUrl>
+			<raceType>human</raceType>
+			<swfUrl>swf/hero/PythonArmor.swf</swfUrl>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<lifeRatio>2.5</lifeRatio>
+			<showLevel>9999</showLevel>
+			<lifeBarExtraHeight>-20</lifeBarExtraHeight>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-20, -110, 40, 110</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>8</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<!-- AI属性 -->
+			<armsNumber>1</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>shotgun1</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<extraAIClassLabel></extraAIClassLabel>
+			<oneAiLabel>FightShooter</oneAiLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>selfBurn_enemy</bossSkillArr>
+			<extraDropArmsB>1</extraDropArmsB>
+			
+			<!-- 攻击数据 -->
+			<hurtArr>
+				
+			</hurtArr>
+		</body>
+	</father>	
+	
+</data>

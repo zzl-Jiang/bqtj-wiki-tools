@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="other">
+		<body name="火种" shell="other">
+			<name>Madfire</name>
+			<cnName>火种</cnName>
+			<raceType>human</raceType>
+			<swfUrl>swf/enemy/Madfire.swf</swfUrl>
+			<dieJumpMul>0</dieJumpMul>
+			
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move,die1
+			</imgArr>
+			
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<motionState>fly</motionState>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<flyType>tween</flyType>
+			<!-- 技能 -->
+			<skillArr>State_SpellImmunity,noAiFindAndHit</skillArr>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				
+			</hurtArr>
+		</body>
+		
+		<skill>
+			<name>noAiFindAndHit</name>
+			<cnName>不受ai发现和伤害</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>noAiFindAndHit</effectType>
+			<![CDATA[特效和音效的备用]]>
+			<otherEffectImg soundUrl="sound/earthquake"></otherEffectImg>
+			<pointEffectImg soundUrl="boomSound/bigBoom"></pointEffectImg>
+		</skill>
+		<skill name="附身">
+			<name>firePossession</name>
+			<cnName>附身</cnName>
+			<noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<iconUrl>SkillIcon/possession_hero</iconUrl>
+			<iconUrl36>SkillIcon/possession_hero_36</iconUrl36>
+			
+			<cd>10</cd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>0</conditionRange>
+			<target alert="wePossession">alertTarget</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>firePossession</effectType>
+			<duration>99999</duration><!-- 我方单位持续时间 -->
+			<range>200</range><!-- 鼠标范围 -->
+			<value>0</value><!-- 敌方单位持续时间 -->
+			<mul>2</mul><!-- 防御力增加 -->
+			<secMul>0</secMul><!-- 反弹伤害 -->
+			<!--图像------------------------------------------------------------ --> 
+			<meEffectImg soundUrl="skillEffect/possession_s"></meEffectImg>
+			<targetEffectImg con="add" partType="head">skillEffect/possession</targetEffectImg>
+			<pointEffectImg partType="head">generalEffect/headTip</pointEffectImg>
+			<otherEffectImg partType="head,body" soundUrl="sound/vehicleFit">generalEffect/blackHoleHide</otherEffectImg>
+			<description>附身鼠标处的我方宠物，控制其攻击、技能，持续[duration]秒。6级之后可附身敌方首领。</description><![CDATA[附身敌人，敌人攻击力会降低至20%，这样打队友不会疼。]]>
+		</skill>
+		
+		<skill name="僵尸隐身"><!-- 限制 -->
+			<name>madfireHiding</name>
+			<cnName>隐身</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>15</cd><iconUrl36>SkillIcon/hiding_hero_36</iconUrl36>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>1000</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>hidingB_hugePosion</effectType>
+			<value>1</value>
+			<mul>1.6</mul>
+			<duration>7</duration>
+			<meEffectImg soundUrl="sound/hiding_hero" con="add">skillEffect/hiding_hero</meEffectImg>
+		</skill>
+		<skill name="被敌人麻痹">
+			<name>madfireParalysis</name>
+			<cnName>被敌人麻痹</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>no</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>madfireParalysis</effectType>
+			<duration>99999</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<stateEffectImg con="add">skillEffect/paralysis_enemy</stateEffectImg>
+		</skill>
+	</father>
+	
+	
+	<father name="task">
+		<bullet cnName="超能-麻痹闪电球">
+			<name>zomSkillBullet</name><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+			<cnName>闪电球</cnName>
+			<hurtRatio>1</hurtRatio>
+			<attackType>holy</attackType>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>20</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<bulletAngle>180</bulletAngle>
+			<bulletSpeed>7</bulletSpeed>
+			<speedD random="0.3" />
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>zomSkillBulletHit</skillArr><![CDATA[减速4秒 paralysis_enemy_link]]>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl con="add">skillEffect/paralysis_enemy_bullet</bulletImgUrl>
+			<hitImgUrl  soundUrl="sound/paralysis_enemy_hit"></hitImgUrl>
+		</bullet>
+		<skill name="闪电球减速">
+			<name>zomSkillBulletHit</name>
+			<cnName>闪电球减速</cnName>
+			<conditionType>passive</conditionType><condition>hit</condition>
+			<target>target</target>
+			<addType>state</addType>
+			<effectType>moveSpeed</effectType>
+			<value>0</value>
+			<mul>0.3</mul>
+			<duration>3</duration>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg con="add">skillEffect/paralysis_enemy</stateEffectImg>
+			<description>击中目标后降低其70%的移动速度，持续3秒。</description>
+		</skill>
+		<skill><!-- 限制 -->
+			<name>madfireTeleport</name>
+			<cnName>瞬移</cnName><iconUrl36>SkillIcon/flash_pet_36</iconUrl36>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>8</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>1000</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>teleport</effectType>
+			<valueString>attackTarget</valueString>
+			<!--图像------------------------------------------------------------ --> 
+			<pointEffectImg noFollowB="1" soundUrl="sound/skillCopy_enemy" con="add">generalEffect/vehicleFit</pointEffectImg>
+			<meEffectImg soundUrl="sound/teleport_enemy" con="add">lightEffect/basinShow</meEffectImg>
+			<description>瞬间移动到单位攻击目标的位置，不适用与远战单位。</description>
+		</skill>
+	</father>
+</data>

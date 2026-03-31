@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father  type="rocket" cnName="火炮-特殊">
+		<bullet index="40" cnName="卡特巨炮" name="rocketCate" color="black" dropLevelArr="94" dropBodyArr="FireDragon" evoMaxLv="10" evoMustFirstLv="4" composeLv="94" chipNum="150">
+			<name>rocketCate</name>
+			<cnName>卡特巨炮</cnName>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>7</capacity>
+			<attackGap>1.4</attackGap>
+			<reloadGap>3</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>10</bulletNum>
+			<shootAngle>60</shootAngle>
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>40</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.9</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1.8</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>35</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  bodyB="1" floorB="1" selfB="1" radius="130"/>
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>2</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="3"/>	<!-- 反弹 -->
+			<followD value="0.5"/>
+			<critD mul="2" pro="0.2"/>
+			
+			
+			<skillArr>Hit_blindness_ArmsSkill,Hit_disabled_ArmsSkill</skillArr>
+			<godSkillArr>Hit_imploding_godArmsSkill,cate_ArmsSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl></iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">bullet/gaiaBullet</bulletImgUrl>
+			<hitImgUrl name="rocketCate_hit"></hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl name="redFire_hitFloor"></hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bullet/fireballSmoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>specialGun/rocketHummer_sound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/rocketCate</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>消灭首领异火龙(94级)、纪念币商店</description>
+		</bullet>
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill index="7" cnName="散射"><!-- dps -->
+			<name>cate_ArmsSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>散射</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<description>一次射击发出10个跟踪炮弹。</description>
+		</skill>
+		
+		<skill>
+			<name>catePurgold</name><noRandomListB>1</noRandomListB>
+			<cnName>尸变免疫</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<description>携带当前武器时，不会被变蛛变尸，并且无视所有敌人的防弹外壳、防弹钢甲。</description>
+		</skill>
+	</father>
+</data>

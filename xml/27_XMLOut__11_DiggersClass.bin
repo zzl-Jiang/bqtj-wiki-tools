@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="car" cnName="战车定义">
+		<equip name="Diggers" cnName="挖掘者"  evolutionLabel="SecDiggers">
+			<canComposeB>1</canComposeB><shopB>1</shopB>
+			<mustCash>400</mustCash>
+			<specialInfoArr>动能推撞</specialInfoArr>
+			<main label="Diggers_main" dpsMul="0.6" len="100"/>
+			<sub label="Diggers_sub" dpsMul="0" len="47" actionLabel="subAttack" swapLabel="subChangeAttack"/>
+			<mainFrontB>1</mainFrontB><firstArmsIsSubB>1</firstArmsIsSubB>
+			<lifeMul>1.9</lifeMul>
+			<attackMul>0.8</attackMul><attackBulletNum>2</attackBulletNum>
+			<duration>70</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.11,'lifeAll':0.11}</addObjJson>
+		</equip>
+		<equip name="SecDiggers" cnName="腥红挖掘者" evolutionLabel="ThirdDiggers">
+			<mustCash>400</mustCash>
+			<evolutionLv>2</evolutionLv>
+			<specialInfoArr>超能推撞</specialInfoArr>
+			<main label="Diggers_main" dpsMul="0.9" len="100"/>
+			<sub label="Diggers_sub" dpsMul="0" len="47" actionLabel="subAttack" swapLabel="subChangeAttack"/>
+			<mainFrontB>1</mainFrontB><firstArmsIsSubB>1</firstArmsIsSubB>
+			<lifeMul>2.3</lifeMul>
+			<attackMul>1</attackMul><attackBulletNum>2</attackBulletNum>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.18,'lifeAll':0.18}</addObjJson>
+			<skillArr>vehicleFit_Gaia</skillArr>
+		</equip>
+		<equip name="ThirdDiggers" cnName="炙热挖掘者" evolutionLabel="FourDiggers">
+			<mustCash>500</mustCash>
+			<evolutionLv>4</evolutionLv>
+			<specialInfoArr>超能推撞</specialInfoArr>
+			<main label="Diggers_main" dpsMul="1.2" len="100"/>
+			<sub label="Diggers_sub" dpsMul="0" len="47" actionLabel="subAttack" swapLabel="subChangeAttack"/>
+			<mainFrontB>1</mainFrontB><firstArmsIsSubB>1</firstArmsIsSubB>
+			<lifeMul>2.7</lifeMul>
+			<attackMul>1.3</attackMul><attackBulletNum>2</attackBulletNum>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.20,'lifeAll':0.20}</addObjJson>
+			<skillArr>vehicleFit_Gaia</skillArr>
+		</equip>
+		<equip name="FourDiggers" cnName="血锯挖掘者">
+			<mustCash>300</mustCash>
+			<evolutionLv>5</evolutionLv>
+			<specialInfoArr>血锯推撞</specialInfoArr>
+			<main label="Diggers_main" dpsMul="1.6" len="100"/>
+			<sub label="Diggers_sub" dpsMul="0" len="47" actionLabel="subAttack" swapLabel="subChangeAttack"/>
+			<mainFrontB>1</mainFrontB><firstArmsIsSubB>1</firstArmsIsSubB>
+			<lifeMul>3</lifeMul>
+			<attackMul>1.5</attackMul><attackBulletNum>2</attackBulletNum>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.24,'lifeAll':0.24}</addObjJson>
+			<skillArr>vehicleFit_Gaia,FourDiggersSkill</skillArr>
+		</equip>
+		
+		
+		<bullet cnName="挖掘者-散弹">
+			<name>Diggers_main</name>
+			<cnName>挖掘者-散弹</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.66</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.15</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletNum>3</bulletNum>
+			<shootAngle>10</shootAngle>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>2</shootRecoil>
+			<screenShakeValue>3</screenShakeValue>
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0x00FFFF" size="2" lightSize="6"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<fireImgUrl raNum="30" soundUrl="ak/barrel5_sound">gunFire/f</fireImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="挖掘者-空炮">
+			<name>Diggers_sub</name>
+			<cnName>挖掘者-空炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>0</bulletWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.4</attackGap>
+			<attackDelay>0</attackDelay>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0xFFFF00" size="2" lightSize="6"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+		</bullet>
+		<![CDATA[轮刺]]>
+				<bullet>
+					<name>wheelStabsDiggersBullet</name>
+					<cnName>轮刺</cnName><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.04</hurtMul>
+					<attackType>holy</attackType>
+					<shakeAngle>5</shakeAngle>
+					<bulletLife>12</bulletLife>
+					<bulletWidth>50</bulletWidth>
+					<hitType>rect</hitType>
+					<bulletAngle>-90</bulletAngle>
+					<bulletSpeed>0</bulletSpeed>
+					<boomD selfB="1" hurtMul="0"/>
+					<skillArr>offAllSkill</skillArr>
+					<!--特别属性------------------------------------------------------------ -->	
+					<hitGap>0.2</hitGap>
+					<penetrationNum>999</penetrationNum>
+					<penetrationGap>1000</penetrationGap>
+					<bulletImgUrl name="wheelStabsDiggersBullet"/>
+					<hitImgUrl name="IronDogFiveHit"/>
+					<selfBoomImgUrl con="add">boomEffect/smoke2</selfBoomImgUrl>
+				</bullet>
+	</father>
+	
+	
+	<father name="vehicleSkill" cnName="技能">
+		<skill>
+			<name>FourDiggersSkill</name>
+			<cnName>风驰血锯</cnName>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>100</cd>
+			<changeText>碾压伤害提升：[mul-1]</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>beforeAttack</condition><!-- 在准备攻击之前触发 -->
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>attackMul</effectType>
+			<mul>1.5</mul>
+			<duration>5</duration>
+			<!-- 修改伤害所需 -->
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg soundUrl="sound/murderous_hero"></meEffectImg>
+			<stateEffectImg name="FourDiggersSkill" />
+			<description>释放技能后，普通伤害、碾压伤害提升[mul-1]，持续[duration]秒。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.5</mul></skill>
+				<skill><mul>1.9</mul></skill>
+				<skill><mul>2.3</mul></skill>
+				<skill><mul>2.7</mul></skill>
+				<skill><mul>3.1</mul></skill>
+				<skill><mul>3.5</mul></skill>
+				<skill><mul>3.9</mul></skill>
+				<skill><mul>4.3</mul></skill>
+				<skill><mul>4.8</mul></skill>
+				<skill><mul>5.2</mul></skill>
+			</growth>
+		</skill>
+		
+		
+		
+	</father>
+	<father name="enemySkill" cnName="首领技能">
+		<skill>
+			<name>wheelStabsDiggers</name><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<cnName>轮刺</cnName><iconUrl36>SkillIcon/redWiperSkill_36</iconUrl36>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>25</cd>
+			<firstCd>24</firstCd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition><!-- cd结束后触发 -->
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>bullet_wheelStabsDiggers</effectType><effectFather>vehicle</effectFather>
+			<obj>"name":"wheelStabsDiggersBullet"</obj>
+			<duration>10</duration>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="through_hero_me"/>
+			<stateEffectImg name="wheelStabsDiggers"/>
+			<description>释放技能后，挖掘者的后轮会持续在地面上释放持续12秒的尖刺。敌人被尖刺触碰后将受到伤害，同时被封锁。</description>
+		</skill>
+		<skill>
+			<name>FourDiggersSprint</name>
+			<cnName>聚力血锯</cnName><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>8</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>FourDiggersSprint</effectType><effectFather>vehicle</effectFather>
+			<mul>0.1</mul>
+			<duration>1.5</duration>
+			<meActionLabel>sprintAttack</meActionLabel>
+			<description>挖掘者疯狂转动血锯聚集能量，随后向前发出猛烈一击，最敌人造成重大伤害。</description>
+		</skill>
+	</father>
+	<father name="vehicle" cnName="战车body">
+		<body index="0" name="挖掘者" shell="metal">
+			
+			<name>Diggers</name>
+			<cnName>挖掘者</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/Diggers.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1,subAttack,subChangeAttack
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.8" jumpDelayT="0.15" F_I="0.6" F_F="0.7" moveWhenVB="1" />
+			<maxVx>17</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<!-- 攻击数据 -->
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>subAttack</imgLabel>
+					<skillArr>highDrill,highDrillHit</skillArr>
+					<hurtRatio>0.69</hurtRatio><ingfollowB>1</ingfollowB>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>1</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		
+		
+		<body index="0" name="腥红挖掘者" shell="metal">
+			
+			<name>SecDiggers</name>
+			<cnName>腥红挖掘者</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/SecDiggers.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1,subAttack,subChangeAttack
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.8" jumpDelayT="0.15" F_I="0.6" F_F="0.7" moveWhenVB="1" />
+			<maxVx>17</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<!-- 攻击数据 -->
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>subAttack</imgLabel>
+					<skillArr>superHighDrill,highDrillHit</skillArr>
+					<hurtRatio>0.69</hurtRatio><ingfollowB>1</ingfollowB>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>1</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body name="炙热挖掘者" fixed="SecDiggers" shell="metal">
+			<name>ThirdDiggers</name>
+			<cnName>炙热挖掘者</cnName>
+			<swfUrl>swf/vehicle/ThirdDiggers.swf</swfUrl>
+			<bmpUrl>BodyImg/ThirdDiggers</bmpUrl>
+		</body>
+		<![CDATA[
+		
+		<body name="血锯挖掘者" fixed="SecDiggers" shell="metal">
+			<name>FourDiggers</name>
+			<cnName>血锯挖掘者</cnName>
+			<swfUrl>swf/vehicle/FourDiggers.swf</swfUrl>
+			<bmpUrl>BodyImg/FourDiggers</bmpUrl>
+		</body>
+		]]>
+		<body name="血锯挖掘者" shell="metal">
+			<name>FourDiggers</name>
+			<cnName>血锯挖掘者</cnName>
+			<swfUrl>swf/vehicle/FourDiggers333.swf</swfUrl>
+			<bmpUrl>BodyImg/FourDiggers</bmpUrl>
+			<raceType>robot</raceType>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			
+			<imgArr>
+				stand,move,die1,subAttack,subChangeAttack,sprintAttack
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.8" jumpDelayT="0.15" F_I="0.6" F_F="0.7" moveWhenVB="1" />
+			<maxVx>17</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<bossSkillArr>FourDiggersSprint,wheelStabsDiggers,KingRabbitTreater,thorns_pig,treater_knights,toLand</bossSkillArr>
+			<!-- 攻击数据 -->
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>subAttack</imgLabel>
+					<skillArr>superHighDrill,highDrillHit</skillArr>
+					<hurtRatio>0.69</hurtRatio><ingfollowB>1</ingfollowB>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>1</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>7</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				
+				
+				<hurt >
+					<imgLabel>sprintAttack</imgLabel><cn>聚力血锯</cn>
+					<hurtRatio>0.00000001</hurtRatio>
+					<hurtMul>0.20</hurtMul>
+					<attackType>holy</attackType>
+					<shakeValue>10</shakeValue><meBack>1</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		
+	</father>
+</data>

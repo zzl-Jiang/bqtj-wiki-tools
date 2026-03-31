@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="wilder">
+		<body index="0" name="棍棒僵尸">
+			
+			<name>BaseballZombie</name>
+			<cnName>棍棒僵尸</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/BaseballZombie345.swf</swfUrl>
+			<lifeRatio>0.8</lifeRatio>
+			<showLevel>9999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,run
+				,normalAttack1,normalAttack2,hurt1,hurt2,die1
+				,magicAttack,shakeAttack,impactAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<bossImgArr>magicAttack,shakeAttack,impactAttack</bossImgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-76,28,76</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel></extraAIClassLabel>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 技能 -->
+			<skillArr>UnderRos_AddMove_Battle,noSpeedReduce</skillArr>
+			<bossSkillArr>FoggyZombieShake,FoggyZombieImpact,noUnderMulHurt,defenceInvi,noDegradation,gridBlock,cardNoAttackSkill</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack1</imgLabel><cn>棒连击</cn>
+					<hurtRatio>1.5</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="fistHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>normalAttack2</imgLabel><cn>棒锤击</cn>
+					<hurtRatio>2</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<skillArr>hammer_hit</skillArr>
+					<hitImgUrl name="fistHit"/>
+				</hurt>
+				
+				<hurt info="斩击">
+					<imgLabel>shakeAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtMul>0.5</hurtMul>
+					<skillArr>FoggyShakeHit</skillArr>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue><noUseOtherSkillB>1</noUseOtherSkillB>
+					<hitImgUrl name="fistHit"/>
+				</hurt>
+				<hurt info="钝击">
+					<imgLabel>impactAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtMul>0.3</hurtMul>
+					<skillArr>FoggyImpactHit</skillArr>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue><noUseOtherSkillB>1</noUseOtherSkillB>
+					<hitImgUrl name="fistHit"/>
+				</hurt>
+			</hurtArr>
+		</body>
+	</father>
+	<father name="enemy">
+		<skill>
+			<name>defenceInvi</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>遇强则刚</cnName><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit</condition>
+			<otherConditionArr>hurtPuInviB</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtAndMul</effectType>
+			<mul>0.4</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>受到无敌攻击者的伤害降低[1-mul]。</description>
+		</skill>
+		
+		
+		<skill>
+			<name>sumFoggyX</name>
+			<cnName>古惑大军</cnName>
+			<showInLifeBarB>1</showInLifeBarB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>2</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>1000</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>summonedUnits</effectType>
+			<!-- 子弹所需 -->
+			<obj>"cnName":"古惑僵尸","num":2,"lifeMul":0.05,"dpsMul":3,"maxNum":20,"mulByFatherB":1,"pointEf":1,"skillArr":["State_AddMove100","State_SpellImmunity","feeding_spider"]</obj>
+			<!--图像------------------------------------------------------------ -->
+			<pointEffectImg name="oreBombShowFlower"/>
+			<description>召唤[obj.num]只伤害超高的[obj.cnName]参加战斗，最多同时存在[obj.maxNum]只[obj.cnName]。[obj.cnName]死后会补充主人的生命值。</description>
+		</skill>
+	</father>	
+	
+	
+</data>

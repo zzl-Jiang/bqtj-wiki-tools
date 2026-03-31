@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="device" cnName="装置">
+		<![CDATA[次数装置，用完后自动删除]]>
+		<equip rareB="1" canNum="1" name="hurtMine" cnName="致命地雷T" skill="hurtMine" iconLabel="dropEffect/hurtMine" />
+	</father>
+	<father name="deviceSkill" cnName="装置技能">
+		<skill cnName="致命地雷">
+			<name>hurtMine</name>
+			<cnName>致命地雷</cnName>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>20</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<doCondition>nearNoMine</doCondition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<extraValueType>showDps</extraValueType>
+			<mul>10</mul>
+			<obj>"name":"hurtMineBullet","site":"meMid","minYB":true</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="putMineEffect"/>
+			<description>埋下可敌人造成重大伤害的致命地雷。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><cd>20</cd></skill>
+				<skill><cd>15</cd></skill>
+				<skill><cd>10</cd></skill>
+				<skill><cd>8</cd></skill>
+				<skill><cd>6</cd></skill>
+				<skill><cd>1</cd></skill>
+			</growth>
+		</skill>
+		
+		
+		<bullet>
+			<name>hurtMineBullet</name>
+			<cnName>致命地雷-子弹</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<attackType>holy</attackType>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>90</bulletAngle>
+			<bulletLife>9999999</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<noHitTime>1</noHitTime>
+			<hideTime>5</hideTime>
+			<boomD  selfB="1" radius="240" bodyB="1" maxHurtNum="999"/>
+			<bounceD glueFloorB="1" />
+			<bulletSkillArr></bulletSkillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed> 
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="hurtMineBulletEnemy"/>
+			<bulletLeftImgUrl name="hurtMineBullet"/>
+			<selfBoomImgUrl name="bigBoomSputtering"/>
+		</bullet>
+	</father>
+	<father name="dropEffect" cnName="掉落的效果物品">
+		<skill>
+			<name>hurtMineDrop</name>
+			<cnName>获得致命地雷</cnName>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>addTempDevice</effectType>
+			<value>2</value>
+			<valueString>hurtMine_6</valueString>
+		</skill>
+	</father>
+</data>

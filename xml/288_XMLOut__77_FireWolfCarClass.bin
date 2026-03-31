@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="car" cnName="战车定义">
+		<equip name="FireWolfCar" cnName="虚炎狼"  rideLabel="RedMotoRide">
+			<main label="Diggers_sub" hideB="1" dpsMul="0"/>
+			<sub label="Diggers_sub" hideB="1" dpsMul="0"/>
+			<specialInfoArr>践踏</specialInfoArr>
+			<lifeMul>2.5</lifeMul>
+			<attackMul>1.6</attackMul><attackActionLabel>sprintAttack</attackActionLabel>
+			<duration>50</duration>
+			<cd>100</cd>
+			<addObjJson>{'dpsAll':0.07,'lifeAll':0.07}</addObjJson>
+			<onceB>1</onceB>
+		</equip>
+	</father>
+	<father name="vehicle" cnName="战车body">
+		<body index="0" name="虚炎狼坐骑" shell="compound">
+			
+			<name>FireWolfCar</name>
+			<cnName>虚炎狼坐骑</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/FireWolfCar.swf</swfUrl>
+			<!-- 图像 -->
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move,die1
+				,sprintAttack
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<lifeBarExtraHeight>-120</lifeBarExtraHeight>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>9</maxVx>
+			<!-- 技能 -->
+			<attackAIClass></attackAIClass>
+			<keyClass>VehicleBodyKey</keyClass>
+			<bulletLauncherClass>VehicleBulletLauncher</bulletLauncherClass>
+			<extraAIClassLabel>FireWolf_AIExtra</extraAIClassLabel>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.39</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit2">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.39</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.39</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>sprintAttack</imgLabel>
+					<hurtRatio>1.6</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>3</meBack>
+					<hitImgUrl con="add" soundUrl="sound/body_hit" raNum="30">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				
+			</hurtArr>
+		</body>
+	</father>
+</data>

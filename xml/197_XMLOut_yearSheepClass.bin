@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="wavegun">
+		<bullet name="未羊" color="darkgold" composeLv="99" dropLevelArr="999" evoMaxLv="2">
+			<name>yearSheep</name>
+			<cnName>未羊</cnName><iconUrl>specialGun/yearSheepIcon</iconUrl>
+			<dpsMul>1.9</dpsMul>
+			<uiDpsMul>2.5</uiDpsMul>
+			<extraMul>1.1</extraMul>
+			<!--基本-->
+			<capacity>6</capacity> 
+			<attackGap>1</attackGap>
+			<reloadGap>3</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>900</bulletWidth>
+			<bulletShakeWidth>50</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>				
+			<beatBack>10</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.2</twoShootPro>
+			<penetrationNum>12</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			<skillArr>Hit_Spurting_ArmsSkill</skillArr>
+			<godSkillArr>yearSheepSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>15</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.5</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>3</upValue>
+			<shootShakeAngle>15</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>sound/waveShoot</shootSoundUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="filter" len="30" time="0.03" imgDieType="die">specialGun/yearSheepBullet</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearSheep</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill><!-- dps-被动 -->
+			<name>yearSheepSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>周末无双</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<otherConditionArr>puWe,noHardB,sheepWeekend,noUnendLevelB</otherConditionArr>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>yearSheepSkill</effectType>
+			<mul>0.30</mul>
+			<!--图像------------------------------------------------------------ -->
+			<pointEffectImg partType="body" soundUrl="sound/magicHit1">bulletHitEffect/purpleLaser</pointEffectImg>
+			<description>每周一、周六、周日，瞬秒生命值低于[mul]的敌人，无视技能免疫。99级主线任务、虚天塔中无效。</description>
+		</skill>
+		
+		<skill><!-- dps-被动 -->
+			<name>yearSheepPurgold</name><noRandomListB>1</noRandomListB>
+			<cnName>五日无双</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<otherConditionArr>puWe,noHardB,sheepPurgold,noUnendLevelB</otherConditionArr>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>yearSheepSkill</effectType>
+			<mul>0.30</mul>
+			<!--图像------------------------------------------------------------ -->
+			<pointEffectImg partType="body" soundUrl="sound/magicHit1">bulletHitEffect/purpleLaser</pointEffectImg>
+			<description>每周一、周四、周五、周六、周日，瞬秒生命值低于[mul]的敌人，无视技能免疫。99级主线任务、困难模式、虚天塔中无效。</description>
+		</skill>
+	</father>
+</data>

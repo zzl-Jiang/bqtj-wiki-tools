@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="weather" cnName="气象枪">
+		<bullet cnName="冰锥" name="iceCone"  kind="water" color="black" composeLv="99" chipB="1" chipNum="100" dropLevelArr="999">
+			<name>iceCone</name>
+			<cnName>冰锥</cnName>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>9</capacity>
+			<attackGap>0.7</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>35</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.9</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>2</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1.8</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>35</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.4</twoShootPro>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.3"/>
+			
+			<skillArr>Hit_Paralysis_ArmsSkill</skillArr>
+			<godSkillArr>Hit_Hammer_godArmsSkill,iceConeSkill</godSkillArr>
+			
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/iceConeIcon</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl name="iceConeBullet"/>
+			<hitImgUrl name="iceConeHit" /><!-- 子弹图像【必备】 -->
+			<fireImgUrl name="iceConeFire"/>
+			<shootSoundUrl>sound/snowHit</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/iceCone</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>纪念币兑换</description>
+		</bullet>
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill><!-- dps-被动 -->
+			<name>iceConeSkill</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>周六大吉</cnName><noRandomListB>1</noRandomListB><noBeClearB>1</noBeClearB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>puWe,noDemonOnlyBoss,noMainTask,noHardB,dayPan,yearArmsFalse,targetUnitType,noUnionBattle</otherConditionArr>
+			<conditionRange>6</conditionRange>
+			<conditionString>boss</conditionString>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>iceConeSkill</effectType>
+			<duration>300</duration>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg name="frozenState"/>
+			<description>每周六可以冰冻一个首领，让他无法动弹，持续[duration]秒，无视技能免疫、不会被清除。主线任务、修罗决斗模式、军队争霸、困难模式下该技能无效。</description>
+		</skill>
+	</father>
+</data>

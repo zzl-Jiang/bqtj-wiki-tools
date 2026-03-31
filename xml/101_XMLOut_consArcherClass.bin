@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="crossbow">
+		<bullet color="yagold" kind="particle" composeLv="99" dropLevelArr="999">
+			<name>consArcher</name><dpsMul>2.5</dpsMul><uiDpsMul>7.7</uiDpsMul>
+			<cnName>射手座</cnName><iconUrl>newGun/consArcherIcon</iconUrl>
+			<attackType>holy</attackType><noMagneticB>1</noMagneticB>
+			<aiShootRange>600</aiShootRange><!-- ai射程 -->
+			<!--基本-->
+			<capacity>50</capacity>
+			<attackGap>1.6</attackGap>
+			<attackDelay>1.6</attackDelay>
+			<crossbowD focoB="1" minDelayMul="0.4" vAtt="1" />
+			<reloadGap>1.5</reloadGap>
+			<bulletWidth>40</bulletWidth>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>10</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>7</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>16</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>10</bulletSpeed>
+			<speedD />
+			<followD value="0.15" delay="10" />
+			<!--特殊------------------------------------------------------------ -->
+			<gravity>0.05</gravity>
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>Hit_Spurting_ArmsSkill</skillArr>
+			<godSkillArr>oldSugarArcher,fullCrushGod</godSkillArr>
+			<boomD bodyB="1" radius="150" />
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="consArcherBullet"></bulletImgUrl>
+			<smokeImgUrl name="smallMissleSmokeSm"></smokeImgUrl>
+			<hitImgUrl name="yearDog_boom"></hitImgUrl>
+			<fireImgUrl name="enegryGunFire"></fireImgUrl>
+			<shootSoundUrl>specialGun/skyArchSound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/consArcher</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>子弹如流星划出优雅抛物线，滞空越久，聚集的能量越高。当坠落的星光最终触及目标，积蓄的星芒之力将对敌人造成毁灭性打击。</info>
+			<description></description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill name="星芒之力">
+			<name>oldSugarArcher</name>
+			<cnName>星芒之力</cnName><noRandomListB>1</noRandomListB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><changeHurtB>1</changeHurtB>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>oldSugar</effectType>
+			<mul>3</mul>
+			<secMul>48</secMul>
+			<description>借助星芒之力对敌人造成毁灭性打击！子弹每存在1秒，就增加[mul]的伤害，最高增加[secMul]的伤害。10秒后子弹开始对敌人进行弱跟踪。</description>
+		</skill>
+	</father>
+</data>

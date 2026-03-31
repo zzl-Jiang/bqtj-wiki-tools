@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	
+	<father  type="rocket" cnName="火炮-特殊">
+		<bullet index="44" cnName="弦音" name="pianoGun"  kind="wave" color="black" composeLv="95" chipB="1" chipNum="150" dropLevelArr="999">
+			<name>pianoGun</name>
+			<cnName>弦音</cnName>
+			<recordD piano="123112313453455654315654312+512+51"/>
+			<!--基本-->
+			<capacity>40</capacity>
+			<attackGap>0.5</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>7</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<gunNum>1</gunNum>
+			
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.6</armsArmMul>
+			<upValue>15</upValue>
+			<upValue>0</upValue>
+			<shootShakeAngle>45</shootShakeAngle>
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>3</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>2</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>30</bulletSpeed>
+			<speedD selfVra="0.5"/>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0</twoShootPro>
+			<penetrationGap>1000</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="0" pro="0"/>
+			<skillArr>Hit_Paralysis_ArmsSkill,Hit_SlowMove_ArmsSkill</skillArr>
+			<godSkillArr>Hit_crazy_godArmsSkill,pianoGunSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/pianoGunIcon</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="30" urlRandomValue="3">specialGun/pianoGunBullet</bulletImgUrl>
+			
+			<hitImgUrl soundUrl="">specialGun/christmasGunBoom</hitImgUrl>
+			<hitFloorImgUrl>no</hitFloorImgUrl>
+			<fireImgType></fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/pianoGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>纪念币兑换</description>
+		</bullet>
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill index="0" name="音爆"><!-- dps-被动 -->
+			<name>pianoGunSkill</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>音爆</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>noMainTask,noHardB</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>stateAndInstant</addType>
+			<effectType>pianoGunSkill</effectType>
+			<duration>3</duration>
+			<!--图像------------------------------------------------------------ -->
+			<stateEffectImg partType="head" con="add">specialGun/pianoGunBuff</stateEffectImg>
+			<pointEffectImg partType="body,head" soundUrl="sound/pointBoom_hero">boomEffect/bigCircle</pointEffectImg>
+			<description>把一段乐谱的音符完整地打到一个敌人身上，将对它造成音爆伤害，伤害=(乐谱长度x0.6%-0.4%)x敌人当前生命值。主线任务、修罗模式效果受限。</description>
+		</skill>
+	</father>
+	
+</data>

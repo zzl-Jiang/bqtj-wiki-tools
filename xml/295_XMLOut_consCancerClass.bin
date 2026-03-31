@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="sniper">
+		<bullet color="purgold" kind="electric" evoMaxLv="2" evoMustFirstLv="13" composeLv="99" chipNum="300">
+			<name>consCancer</name><extraMul>2.5</extraMul><dpsMul>2.4</dpsMul><uiDpsMul>1.525</uiDpsMul>
+			<cnName>巨蟹座</cnName><iconUrl>newGun/consCancerIcon</iconUrl>
+			<!--基本-->
+			<capacity>8</capacity>
+			<attackGap>0.8</attackGap>
+			<reloadGap>2.5</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>1700</bulletWidth>
+			<bulletShakeWidth>50</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>				
+			<beatBack>10</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>0</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<critD mul="2" pro="0.2"/>
+			
+			<skillArr>Hit_Spurting_ArmsSkill,Kill_AddLifeMul_ArmsSkill</skillArr>
+			<godSkillArr>consCancerSkill,Hit_crazy_godArmsSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>15</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.5</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>3</upValue>
+			<shootShakeAngle>15</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>newGun/consCancerSound</shootSoundUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl name="consCancerLine"/>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/consCancer</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>消灭首领黑暗骑士(99级)</description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill><!-- dps-被动 -->
+			<name>consCancerSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>电离层</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><noBeClearB>1</noBeClearB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><overlyingB>1</overlyingB>
+			<effectType>cold_arms</effectType>
+			<value>3</value>
+			<mul>0.1</mul>
+			<duration>5</duration>
+			<stateEffectImg bodyColor="0xFFB600"></stateEffectImg>
+			<description>每次伤害都会给目标叠加1层持续[duration]秒的“电离层”，每层降低目标[mul]的防御力，最高叠加[value]层。无视技能免疫、免疫、净化器。</description>
+		</skill>
+	</father>
+</data>

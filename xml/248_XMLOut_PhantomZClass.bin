@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="wilder">
+		<body index="0" name="幻影Z" shell="metal">
+			
+			<name>PhantomZ</name>
+			<cnName>幻影Z</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/PhantomZ.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move
+				,normalAttack,shootAttack,comboAttack,lightAttack,ballAttack
+				,hurt1,die1
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<lifeBarExtraHeight>-70</lifeBarExtraHeight>
+			<!-- 碰撞体积 -->
+			<hitRect>-25,-50,50,50</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>9</maxVx>
+			<motionState>fly</motionState>
+			<flyUseSpiderB>1</flyUseSpiderB>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>PhantomZ_AIExtra</extraAIClassLabel>
+			<bossSkillArr>comboPhantomZ,ballPhantomZ,blindnessPhantomZ,noSpeedReduce,treater_knights,fightReduct2,defenceBounce_enemy</bossSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<attackType>direct</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/fitHit</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<bulletLabel>shoot_PhantomZ</bulletLabel>
+					<grapRect>-450,-88,351,77</grapRect>
+				</hurt>
+				
+				<hurt info="不加入ai选择-猛击">
+					<imgLabel>comboAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.08</hurtMul>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<skillArr>comboPhantomZHit</skillArr>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				
+				<hurt info="不加入ai选择-哨兵之门">
+					<imgLabel>lightAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.1</hurtMul>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<skillArr>blindnessPhantomZHit</skillArr>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<![CDATA[
+				
+				<hurt info="不加入ai选择-旋击">
+					<imgLabel>rotateAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0</hurtRatio>
+					<hurtMul>0.1</hurtMul>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/body_hit">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				]]>
+			</hurtArr>
+		</body>	
+		
+	</father>
+	<father name="enemy">	
+		<bullet>			
+			<name>shoot_PhantomZ</name>
+			<cnName>幻影Z型-激光炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ --> 
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>700</bulletWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<shootPoint>-60,-60</shootPoint>
+			<bulletAngle>179.9</bulletAngle>
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.33</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD size="0"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl con="add">bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!-- <smokeImgUrl>sub/missile_bullet_smoke</smokeImgUrl>--><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		
+	</father>
+	
+	<father name="enemy">
+		<skill index="0" cnName="三连击"><!-- 限制 -->
+			<name>comboPhantomZ</name>
+			<cnName>三连击</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>7</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<effectType>noUnderHurtB</effectType>
+			<duration>1.4</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<description>向目标猛力发起3连击，击中1次使目标减速，击中2次使目标无法移动，击中3次使目标惊吓失去控制。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<meActionLabel>comboAttack</meActionLabel>
+		</skill>
+				<skill cnName="三连击-减速">
+					<name>comboPhantomZHit</name>
+					<cnName>减速</cnName>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB>
+					<overlyingB>1</overlyingB>
+					<effectType>comboPhantomZHit</effectType>
+					<duration>5</duration>
+					<!--图像------------------------------------------------------------ -->
+					<stateEffectImg partType="mouth" con="add">skillEffect/screaming_hero_target</stateEffectImg>
+					<description>。</description>
+				</skill>
+		
+		
+		<skill cnName="哨兵之光"><!-- 限制 -->
+			<name>blindnessPhantomZ</name>
+			<cnName>哨兵之光</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>10</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<effectType>noUnderHurtB</effectType>
+			<duration>1.8</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<description>哨兵之光照射目标时会召唤“哨兵”。哨兵的每颗导弹会对目标造成10%的生命伤害。哨兵拥有狙击敏感技能。消灭哨兵会打破幻影Z的闪电外壳。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<meActionLabel>lightAttack</meActionLabel>
+		</skill>
+				<skill cnName="哨兵之门-击中召唤哨兵">
+					<name>blindnessPhantomZHit</name>
+					<cnName>哨兵之门-击中召唤哨兵</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>me</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<summonedUnitsB>1</summonedUnitsB>
+					<effectType>summonedUnits</effectType>
+					<!-- 子弹所需 -->
+					<obj>"cnName":"哨兵","num":1,"lifeMul":0.006,"dpsMul":0.05,"mulByFatherB":1,"maxNum":5,"skillArr":["missile_Sentry","State_SpellImmunity","blindnessPhantomZDie","SentryUnderSniper"],"position":"hurtPoint"</obj>
+					<!--图像------------------------------------------------------------ -->
+					<meEffectImg soundUrl="sound/cloned_enemy"></meEffectImg>
+					<description>蝙蝠。</description>
+				</skill>
+				<skill><!-- 限制 -->
+					<name>blindnessPhantomZDie</name>
+					<cnName>破除闪电外壳</cnName>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>die</condition>
+					<target targetMustLiveB="1">meSummonedFather</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>clearStateByBaseLabelArr</effectType>
+					<valueString>ballPhantomZ</valueString>
+				</skill>
+				<skill cnName="只受狙击攻击"><!-- 生存-被动 -->
+						<name>SentryUnderSniper</name>
+						<cnName>只受狙击攻击</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+						<!--触发条件与目标------------------------------------------------------------ -->
+						<conditionType>passive</conditionType>
+						<condition>underAllHit</condition>
+						<target>target</target>
+						<!--效果------------------------------------------------------------ -->
+						<addType>instant</addType>
+						<effectType>SentryUnderSniper</effectType>
+						<valueString>sniper</valueString>
+					</skill>
+				
+				
+		<skill index="0" cnName="闪电外壳"><!-- 限制 -->
+			<name>ballPhantomZ</name>
+			<cnName>闪电外壳</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>6</cd>
+			<delay>0.7</delay>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<doCondition>noState</doCondition>
+			<conditionString>ballPhantomZ</conditionString>
+			
+			<otherConditionArr>lifePerLess</otherConditionArr>
+			<conditionRange>0.5</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>ballPhantomZ</effectType>
+			<duration>12</duration>
+			<range>400</range>
+			<!--技能链接或者需要添加的被动技能------------------------------------------------------------ --> 
+			<passiveSkillArr>ballPhantomZ_link</passiveSkillArr>
+			<!--图像------------------------------------------------------------ --> 
+			<meEffectImg soundUrl="sound/magneticField"></meEffectImg>
+			<stateEffectImg  partType="head" con="add">generalEffect/frozenBallBig</stateEffectImg>
+			<description>生命值低于50%时，开启闪电外壳，使自身对技能免疫，不受子弹伤害，同时向外释放磁力场，周围敌方子弹偏离轨道，持续[duration]秒。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<meActionLabel>ballAttack</meActionLabel>
+		</skill>
+					<skill><!-- 生存-主动 -->
+						<name>ballPhantomZ_link</name>
+						<cnName>闪电外壳-曲扭光环</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><noBeClearB>1</noBeClearB>
+						<!--触发条件与目标------------------------------------------------------------ -->
+						<conditionType>active</conditionType>
+						<condition>interval</condition>
+						<target>me,range,enemy</target>
+						<!--效果------------------------------------------------------------ -->
+						<addType>state</addType>
+						<effectType>magneticField</effectType>
+						<range>1000</range>
+						<duration>0.5</duration>
+						<!--图像------------------------------------------------------------ --> 
+						<stateEffectImg partType="shootPoint" con="add" raNum="30" followPartRaB="1">skillEffect/magneticField_paralysis</stateEffectImg>
+						<description>使目标射出的子弹偏离轨道，持续[duration]秒。</description>
+					</skill>
+	</father>
+	
+</data>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="ore" cnName="通用技能">
+		<skill>
+			<name>rotateLighting</name>
+			<cnName>旋转闪电</cnName><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<addType>state</addType>
+			<effectType>bullet_rotateLighting</effectType>
+			<extraValueType>meDpsFactor</extraValueType>
+			<mul>0.3</mul>
+			<obj>"name":"rotateLighting","site":"meMid","flipB":false</obj>
+			<duration>9999999</duration>
+			<description>身上永久环绕着一条超长闪电。</description>
+		</skill>
+				<bullet>
+					<name>rotateLighting</name>
+					<cnName>旋转闪电-子弹</cnName><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+					<attackType>holy</attackType>
+					<hurtRatio>1</hurtRatio>
+					<bulletLife>0.5</bulletLife>
+					<bulletWidth>1000</bulletWidth>
+					<hitType>longLine</hitType>		
+					<!--运动属性------------------------------------------------------------ -->	
+					<shootPoint>0,0</shootPoint>
+					<bulletSpeed>0</bulletSpeed>
+					<bulletAngle>90</bulletAngle>
+					<penetrationGap>1000</penetrationGap>
+					<penetrationNum>999</penetrationNum>
+					<bulletImgUrl name="BallLightning_frozenLine_bullet" />
+					<hitImgUrl name="paralysisHit" />
+				</bullet>
+				
+		<skill>
+			<name>crossOreBlade</name>
+			<cnName>十字刃</cnName> <showInLifeBarB>1</showInLifeBarB>
+			<cd>2</cd><cdRandomRange>3</cdRandomRange>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<extraValueType>meDpsFactor</extraValueType>
+			<mul>4</mul>
+			<!-- 子弹所需 -->
+			<obj>"name":"crossOreBlade","site":"meMid"</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="yearTigerSound"/>
+			<description>向四个方向发射矿刃。</description>
+		</skill>
+				<bullet>
+					<name>crossOreBlade</name>
+					<cnName>十字刃-子弹</cnName>
+					<hurtRatio>1</hurtRatio>
+					<bulletLife>4</bulletLife>
+					<bulletWidth>30</bulletWidth>
+					<bulletAngle>0</bulletAngle>
+					
+					<hitType>rect</hitType>
+					<bulletNum>4</bulletNum>
+					<shootAngle>135</shootAngle>					
+					<!--运动属性------------------------------------------------------------ -->	
+					<shootPoint>0,0</shootPoint>
+					<bulletSpeed>20</bulletSpeed>
+					<extendGap>20</extendGap>
+					
+					<bulletImgUrl name="yearTiger_bulletFilter"/>
+					<hitImgUrl name="oreWormHit" />
+				</bullet>
+				
+		
+		<skill>
+			<name>targetBlade</name>
+			<cnName>制导飞刃</cnName> <showInLifeBarB>1</showInLifeBarB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>interval</condition><intervalT>1</intervalT>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<extraValueType>meDpsFactor</extraValueType>
+			<mul>2</mul>
+			<obj>"name":"targetBlade","site":"meMidToTarget","flipB":false</obj>
+			<description>每隔[intervalT]秒向目标发射飞刃。</description>
+		</skill>
+				<bullet>
+					<name>targetBlade</name>
+					<cnName>飞刃-子弹</cnName>
+					<hurtRatio>1</hurtRatio>
+					<bulletLife>4</bulletLife>
+					<bulletWidth>30</bulletWidth>
+					<bulletAngle>0</bulletAngle>
+					<hitType>rect</hitType>		
+					<!--运动属性------------------------------------------------------------ -->	
+					<shootPoint>0,0</shootPoint>
+					<bulletSpeed>25</bulletSpeed>
+					<extendGap>70</extendGap>
+					
+					<bulletImgUrl name="yearTiger_bulletFilter"/>
+					<hitImgUrl name="oreWormHit" />
+				</bullet>		
+				
+				
+				
+				
+		<skill>
+			<name>spaceDiffBuff</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>太空难度buff</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>spaceDiffBuff</effectType><effectFather>oreSpace</effectFather>
+			<duration>9999999</duration>
+		</skill>
+		
+		
+		<skill>
+			<name>oreAutoAttack</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>自动释放attack</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>oreAutoAttack</effectType><effectFather>oreSpace</effectFather>
+			<mul>3</mul><!-- 碰撞伤害=mul* lifeRatio*dpsFactor-->
+			<value>2</value><!--lifeRatio的最大值-->
+			<duration>9999999</duration>
+		</skill>
+		
+		<skill>
+			<name>spaceMoveLeft</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>自动向左移动-不关闭AI</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>spaceMoveLeft</effectType>
+			<duration>9999999</duration>
+		</skill>
+		<skill>
+			<name>spaceMoveLeftNoAI</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>自动向左移动-关闭AI</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>spaceMoveLeftNoAI</effectType>
+			<duration>9999999</duration>
+		</skill>
+		
+		
+		<skill>
+			<name>hitCheckDie</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>碰撞自爆</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>hitBoom</effectType>
+			<mul>3</mul><!-- 碰撞伤害=mul* lifeRatio*dpsFactor-->
+			<value>2</value><!--lifeRatio的最大值-->
+			<duration>9999999</duration>
+		</skill>
+					<skill>
+						<name>hitCheckDie6</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+						<cnName>碰撞自爆</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+						<conditionType>passive</conditionType><condition>add</condition><target>me</target>
+						<addType>state</addType><effectType>hitBoom</effectType><duration>9999999</duration>
+						<mul>6</mul><!-- 碰撞伤害=mul*dpsFactor* lifeRatio-->
+						<value>2</value><!--lifeRatio的最大值-->
+					</skill>
+					<skill>
+						<name>hitCheckDie10</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+						<cnName>碰撞自爆</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+						<conditionType>passive</conditionType><condition>add</condition><target>me</target>
+						<addType>state</addType><effectType>hitBoom</effectType><duration>9999999</duration>
+						<mul>10</mul><!-- 碰撞伤害=mul*dpsFactor* lifeRatio-->
+						<value>2</value><!--lifeRatio的最大值-->
+					</skill>
+		
+		<skill>
+			<name>hitDie</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>碰撞自爆</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>meToDie</effectType>
+		</skill>
+		
+		<skill>
+			<name>addTeleportEnemyY</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>出生移动到最近敌人的Y轴上</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>bodyAdd</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>addTeleportEnemyY</effectType>
+			<range>50</range>
+		</skill>
+					
+	</father>
+	
+	
+	
+	<![CDATA[############################################################]]>
+	<father name="friable">
+		<body>
+			<name>spaceZero</name>
+			<cnName>太空空单位</cnName>
+			<raceType>robot</raceType>
+			<swfName>Zero</swfName>
+			<swfUrl>swf/enemy/Zero.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.7</lifeRatio>
+			<dieImg name="stoneBoom"/>
+			<dieJumpMul>0</dieJumpMul>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-30,28,30</hitRect>
+			<!-- 运动 -->
+			<motionState>fly</motionState>
+			<maxJumpNum>0</maxJumpNum>
+			<maxVx>0</maxVx>
+			<!-- AI属性 -->
+			<defaultAiOrder>no</defaultAiOrder>
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<skillArr>State_SpellImmunity</skillArr>
+			<avtiveSkillCdOverT>0</avtiveSkillCdOverT>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<grapRect>-50,-111,100,105</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+		<body>
+			<name>MeteoriteFast</name>
+			<cnName>飞速陨石</cnName><lifeRatio>0.6</lifeRatio>
+			<raceType>stone</raceType>
+			<swfUrl>swf/ship/MeteoriteFast.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="stoneBoom"/>
+			<dieJumpMul>0</dieJumpMul>
+			<lockLeftB>1</lockLeftB>
+			<imgArr>
+				stand,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-20,-20,40,40</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<maxVx>20</maxVx>
+			<skillArr>hitCheckDie,spaceMoveLeftNoAI,boomMoveSmokeState,addTeleportEnemyY</skillArr>
+		</body>
+					
+					<skill>
+						<name>boomMoveSmokeState</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+						<cnName>火烟特效</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+						<conditionType>passive</conditionType>
+						<condition>add</condition>
+						<target>me</target>
+						<!--效果------------------------------------------------------------ -->
+						<addType>state</addType>
+						<effectType>no</effectType>
+						<stateEffectImg name="stoneSmoke"/>
+						<duration>9999999</duration>
+					</skill>
+					
+		<body>
+			<name>MeteoriteGold</name>
+			<cnName>矿船矿石</cnName><lifeRatio>0.8</lifeRatio>
+			<raceType>stone</raceType>
+			<swfUrl>swf/ship/MeteoriteGold.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="stoneBoom"/>
+			<dieJumpMul>0</dieJumpMul>
+			<lockLeftB>1</lockLeftB>
+			<imgArr>
+				stand1,stand2,stand3,stand4,stand5,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-20,-20,40,40</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<maxVx>8</maxVx>
+			<skillArr>hitCheckDie,spaceMoveLeftNoAI</skillArr>
+		</body>
+		
+		
+		<body>
+			<name>MeteoriteSmall</name>
+			<cnName>小陨石</cnName>
+			<raceType>stone</raceType>
+			<swfUrl>swf/ship/MeteoriteSmall.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="stoneBoom"/>
+			<dieJumpMul>0</dieJumpMul>
+			<lockLeftB>1</lockLeftB>
+			<imgArr>
+				stand1,stand2,stand3,stand4,stand5,stand6,stand7,stand8,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-20,-20,40,40</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<maxVx>6</maxVx>
+			<skillArr>hitCheckDie,spaceMoveLeftNoAI</skillArr>
+		</body>
+		<body>
+			<name>MeteoriteMid</name>
+			<cnName>中陨石</cnName><lifeRatio>2</lifeRatio>
+			<raceType>stone</raceType>
+			<swfUrl>swf/ship/MeteoriteMid.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="stoneBoom"/>
+			<dieJumpMul>0</dieJumpMul>
+			<lockLeftB>1</lockLeftB>
+			<imgArr>
+				stand1,stand2,stand3,stand4,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-25,-25,50,50</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<maxVx>5</maxVx>
+			<skillArr>hitCheckDie,spaceMoveLeftNoAI</skillArr>
+		</body>
+		
+		<body>
+			<name>MeteoriteOre</name>
+			<cnName>陨石矿</cnName><lifeRatio>5</lifeRatio>
+			<raceType>stone</raceType>
+			<swfUrl>swf/ship/MeteoriteOre.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="midSpace"/>
+			<dieJumpMul>0</dieJumpMul>
+			<lockLeftB>1</lockLeftB>
+			<imgType>normal</imgType>
+			<imgArr>
+				stand1,stand2,stand3,stand4,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-80,-60,160,140</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<maxVx>4</maxVx>
+			<skillArr>hitCheckDie,spaceMoveLeftNoAI</skillArr>
+		</body>
+		
+		
+		
+		
+		
+	</father>
+</data>

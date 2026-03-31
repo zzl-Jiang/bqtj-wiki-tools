@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="snake" cnName="血蟒">
+		<body index="0" name="旺达" shell="normal">
+			
+			<name>WangLuo</name><movieLink>XiaoHu</movieLink>
+			<cnName>旺达</cnName>
+			<raceType>human</raceType>
+			<swfUrl>swf/hero/WangLuo.swf</swfUrl>
+			<!-- 基本系数 -->
+			<showLevel>9999</showLevel>
+			<headIconUrl>IconGather/WangLuo</headIconUrl>
+			<lifeBarExtraHeight>-20</lifeBarExtraHeight>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-15,-38,30,38</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -100, 24, 95</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -50, 24, 50</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>11</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<maxJumpNum>2</maxJumpNum>
+			<flyType>space</flyType><motionD F_AIR="6" />
+			<!-- AI属性 -->
+			<armsNumber>1</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>yearDragon</randomArmsRange>
+			<!-- 技能 -->
+			<skillArr>hyperopia_incapable</skillArr>
+			<bossSkillArr>sumLandDog,slowMove_enemy</bossSkillArr>
+		</body>
+	</father>
+	<father name="snake" cnName="血蟒">
+		
+	</father>
+</data>

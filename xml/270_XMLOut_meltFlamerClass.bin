@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="flamer" cnName="喷火器">
+		<bullet index="24" name="铄金"  color="black" dropLevelArr="95" dropBodyArr="Warrior" evoMaxLv="12" evoMustFirstLv="4" composeLv="95" chipNum="150">
+			<name>meltFlamer</name><cnName>铄金</cnName><extraMul>1.4</extraMul>
+			<dpsMul>2.4</dpsMul>
+			<uiDpsMul>1.92</uiDpsMul><aiShootRange>600</aiShootRange><!-- ai射程 -->
+			<!--基本-->
+			<capacity>70,80</capacity>
+			<attackGap>0.07,0.15</attackGap>
+			<reloadGap>2.5,3</reloadGap>
+			<shakeAngle>3,5</shakeAngle>
+			<bulletWidth>25</bulletWidth>
+			<bulletNum>1</bulletNum>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<beatBack>3</beatBack>
+			<targetShakeValue>5</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul><upValue>20</upValue><shootShakeAngle>5</shootShakeAngle><shootRecoil>3</shootRecoil><screenShakeValue>4</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime><bulletLife>0.62</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<speedD random="0.1" a="10" max="45" />
+			<bulletSpeed>35</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->	
+			<oneHitBodyB>1</oneHitBodyB>
+			<penetrationNum>1000</penetrationNum>
+			<godSkillArr>Hit_imploding_godArmsSkill,addFlamer_ArmsSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl></shootSoundUrl>
+			<bulletImgUrl name="fireFlamer_bullet"/>
+			<hitImgUrl raNum="30">bulletHitEffect/smoke_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl raNum="30">bulletHitEffect/smoke_motion</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgType>no</fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/meltFlamer</bodyImgRange><bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>消灭首领狂人机器(95级)</description>
+		</bullet>
+		
+		
+		
+		<bullet name="meltFlamerYa"  color="yagold">
+			<name>meltFlamerYa</name><cnName>氩星铄金</cnName>
+			
+			<capacity>100</capacity>
+			<attackGap>0.07</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>3</shakeAngle>
+			<bulletWidth>25</bulletWidth>
+			<bulletNum>1</bulletNum>
+			<bulletShakeWidth>0</bulletShakeWidth>
+			<beatBack>3</beatBack>
+			<targetShakeValue>5</targetShakeValue>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul><upValue>20</upValue><shootShakeAngle>5</shootShakeAngle><shootRecoil>3</shootRecoil><screenShakeValue>4</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime><bulletLife>0.62</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<speedD random="0.1" a="10" max="45" />
+			<bulletSpeed>35</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->	
+			<oneHitBodyB>1</oneHitBodyB>
+			<penetrationNum>1000</penetrationNum>
+			<skillArr>Hit_AddLifeMul_ArmsSkill</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl></shootSoundUrl>
+			<bulletImgUrl name="fireFlamer_bullet"/>
+			<hitImgUrl raNum="30">bulletHitEffect/smoke_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl raNum="30">bulletHitEffect/smoke_motion</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgType>no</fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/meltFlamer6</bodyImgRange><bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill>
+			<name>addFlamer_ArmsSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>高温</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><overlyingB>1</overlyingB>
+			<effectType>burn_arms</effectType>
+			<valueString>addFlamer_ArmsSkill_link</valueString>
+			<value>20</value>
+			<duration>2</duration>
+			<stateEffectImg bodyColor="0xFF0000"></stateEffectImg>
+			<description>每次伤害都会给目标叠加1层铄火，当叠加到[value]层时对目标造成27*武器面板伤害*射速的伤害，无视技能免疫。</description>
+		</skill>
+		<skill>
+			<name>addFlamer_ArmsSkill2</name><noRandomListB>1</noRandomListB>
+			<cnName>超温</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType><overlyingB>1</overlyingB>
+			<effectType>burn_arms</effectType>
+			<valueString>addFlamer_ArmsSkill_link</valueString>
+			<value>9</value>
+			<duration>2</duration>
+			<stateEffectImg bodyColor="0xFF0000"></stateEffectImg>
+			<description>每次伤害都会给目标叠加1层铄火，当叠加到[value]层时对目标造成27*武器面板伤害*射速的伤害，无视技能免疫。</description>
+		</skill>
+		
+		<skill>
+			<name>meltFlamerPurgold</name><noRandomListB>1</noRandomListB>
+			<cnName>化锁</cnName><showInLifeBarB>1</showInLifeBarB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>no</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<description>可抵挡敌人的封锁、枷锁技能。不能消除已经触发的封锁效果；对“永久封锁”技能无效。</description>
+		</skill>
+		<![CDATA[
+		<skill index="1" name="众口铄金">
+			<name>addFlamer_ArmsSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>众口铄金</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>addFlamer_ArmsSkill</effectType>
+			<mul>0.1</mul>
+			<description>对目标造成的额外伤害等于目标身上所有喷火器技能效果（炎爆、冷凝、蚀骨）的层数之和乘以10%。</description>
+		</skill>
+		<skill name="积毁销骨">
+			<name>addFlamer_ArmsSkill2</name><noRandomListB>1</noRandomListB>
+			<cnName>积毁销骨</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>addFlamer_ArmsSkill</effectType>
+			<mul>0.25</mul>
+			<description>对目标造成的额外伤害等于目标身上所有喷火器技能效果（炎爆、冷凝、蚀骨）的层数之和乘以25%。</description>
+		</skill>
+		]]>
+	</father>
+	<father name="godArmsSkill_link" cnName="链接">
+		<skill name="大炎爆-爆">
+			<name>addFlamer_ArmsSkill_link</name>
+			<cnName>大炎爆-爆</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<extraValueType>nowArmsTrueDps</extraValueType>
+			<effectType>crit</effectType>
+			<value>1</value>
+			<mul>27</mul>
+			<targetEffectImg partType="body" soundUrl="boomSound/midBoom">boomEffect/bigCircle</targetEffectImg>
+			<description>火焰爆炸伤害。</description>
+		</skill>
+	</father>
+</data>

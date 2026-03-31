@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="laser" cnName="激光枪">
+		<bullet name="致盲·光锥" color="purple">
+			<name>lightConeDea</name>
+			<cnName>致盲·光锥</cnName><dpsMul>0.06</dpsMul>
+			<iconUrl>specialGun/lightConeIcon</iconUrl>
+			<!--基本-->
+			<capacity>142</capacity> 
+			<attackGap>0.7</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>1000</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<bounceD floor="0" body="0" noDieB="1" />	<!-- 反弹 -->
+			<skillArr>Hit_disabled_ArmsSkill</skillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio><armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootRecoil>2</shootRecoil>
+			<bulletLife>0.7</bulletLife>
+			<hitType>longLine</hitType>
+			<shootSoundUrl>specialGun/lightConeSound</shootSoundUrl>
+			<fireImgUrl cacheB="1" imgDieType="die" con="add">bulletHitEffect/blueLaser</fireImgUrl>
+			<bulletImgUrl raNum="60" con="add" len="20" everFleshB="1" imgDieType="die" time="-1"  bottomLayerB="1">bullet/blueLaser</bulletImgUrl>
+			<hitImgUrl cacheB="1" imgDieType="die" con="add">bulletHitEffect/blueLaser</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/lightCone</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description></description>
+		</bullet>
+		
+		
+		
+		<bullet name="星环" color="purple" >
+			<name>starDea</name>
+			<cnName>星环</cnName><dpsMul>0.13</dpsMul>
+			<iconUrl>specialGun/starTrailsChip</iconUrl>
+			<!--基本-->
+			<capacity>200</capacity> 
+			<attackGap>0.5</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>350</bulletWidth>
+			<bulletNum>3</bulletNum>
+			<shootAngle>120</shootAngle>	
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<bulletLife>0.5</bulletLife>
+			<hitType>longLine</hitType>
+			<speedD vra="0.28" />
+			<bounceD floor="0" body="0" noDieB="1" />
+			<followD aiStopGap="110" shootTween="0.4"/><aiShootRange>900</aiShootRange>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootRecoil>2</shootRecoil>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<fireImgUrl cacheB="1" imgDieType="die" con="add">bulletHitEffect/blueLaser</fireImgUrl>
+			<bulletImgUrl raNum="60" con="add" len="20" everFleshB="1" imgDieType="die" time="-1"  bottomLayerB="1">bullet/blueLaser</bulletImgUrl>
+			<hitImgUrl cacheB="1" imgDieType="die" con="add">bulletHitEffect/blueLaser</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/starTrails</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<shootSoundUrl>specialGun/lightConeSound</shootSoundUrl>
+			<info>2束短激光不断在枪口旋转，攻击附近的敌人。</info>
+		</bullet>
+		
+	</father>
+</data>

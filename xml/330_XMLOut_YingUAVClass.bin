@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="other">
+		<body index="0" name="怒蜂" shell="metal">
+			
+			<name>YingUAV</name>
+			<cnName>怒蜂</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/YingUAV347.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.6</lifeRatio>
+			<rosRatio>99</rosRatio>
+			<showLevel>9999</showLevel>
+			<motionState>fly</motionState><flyType>tween</flyType>
+			<dieImg name="midSpace"/><dieJumpMul>0</dieJumpMul>
+			<lifeBarExtraHeight>45</lifeBarExtraHeight>
+			<imgArr>
+				stand,move
+				,shootAttack
+				,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-45,28,45</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>10</maxVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<skillArr>spellImmunityMax,toFlyCd,alloyShell_9,birthInvi5</skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel><cn>射击</cn>
+					<hurtRatio>1.8</hurtRatio>
+					<bulletLabel>YingUAVShoot</bulletLabel>
+					<grapRect>-35,114,85,250</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+	</father>		
+	<father name="we">
+		<bullet cnName="怒蜂-射击">
+			<name>YingUAVShoot</name>
+			<cnName>怒蜂-射击</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>0.8</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.5</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletAngle>90</bulletAngle>
+			<bulletAngleRange>12</bulletAngleRange>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<followD value="1"/>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,24</shootPoint>
+			<bulletSpeed>45</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="shoot_Watchdog_bullet"/>
+			<hitImgUrl name="fireFlamer_hit"/>
+		</bullet>
+		
+		
+		<skill>
+			<name>birthInvi5</name>
+			<cnName>出生无敌5秒</cnName><noBeClearB>1</noBeClearB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>invincibleAndThrough</effectType>
+			<duration>5</duration>
+			<description>出生时无敌5秒。</description>
+		</skill>
+	</father>	
+	
+	
+</data>

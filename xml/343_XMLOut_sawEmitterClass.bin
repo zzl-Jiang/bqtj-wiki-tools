@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="cutter">
+		<bullet color="yagold">
+			<name>sawEmitter</name><![CDATA[ 该武器英文名不可修改]]>
+			<cnName>矿锯发射器</cnName><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+			<aiShootRange>900</aiShootRange><!-- ai射程 -->
+			<attackType>holy</attackType>
+			<dpsMul>1</dpsMul>
+			<!--基本-->
+			<capacity>5</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>45</bulletWidth>
+			<bulletNum>2</bulletNum>
+			<shootAngle>5</shootAngle>
+			<shakeAngle>3</shakeAngle>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.7</armsArmMul>
+			<upValue>10</upValue>
+			<shootShakeAngle>20</shootShakeAngle>
+			<shootRecoil>20</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>5</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>20</bulletSpeed>
+			<speedD  random="0.2" min="8" max="20" a="-20"/>
+			<followD value="2" delay="1" maxTime="2"/>
+			<bindingD cnName="太空空单位" lifeMul="0.01"/>
+			<penetrationGap>1000</penetrationGap>
+			<!--特殊------------------------------------------------------------ -->
+			<skillArr>enemyEmp,killPet</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<fireImgUrl con="add">boomEffect/boom2</fireImgUrl>
+			<shootSoundUrl>specialGun/yearCattleSound</shootSoundUrl>
+			<bulletImgUrl name="oreSawBullet"/>
+			<smokeImgUrl name="oreBombState"/>
+			<hitImgUrl name="oreWormHit"/>
+			
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/sawEmitter</bodyImgRange>
+		</bullet>
+	</father>
+	
+</data>

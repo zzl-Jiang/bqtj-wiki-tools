@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="pistol" cnName="手枪">
+		<bullet index="30" name="pistolFox" color="black" dropLevelArr="90" dropBodyArr="PoisonDemon" evoMaxLv="12" evoMustFirstLv="4" composeLv="90" chipNum="150">
+			<name>pistolFox</name>
+			<cnName>银狐</cnName><extraMul>1.5</extraMul>
+			<!--基本-->
+			<capacity>19</capacity>
+			<attackGap>0.25</attackGap>
+			<reloadGap>1.5</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>500</bulletWidth>
+			<bulletShakeWidth>0,50</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>2</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.3"/>
+			
+			<skillArr>Hit_SlowMove_ArmsSkill,Hit_Paralysis_ArmsSkill</skillArr>
+			<godSkillArr>fox_godArmsSkill,Hit_crazy_godArmsSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>1.6</dpsMul>
+			<uiDpsMul>1.4</uiDpsMul>
+			<hurtRatio>5</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>1.05</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>0</upValue>
+			<shootShakeAngle>45</shootShakeAngle>
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->.
+			<shootSoundUrl>pistol1/barrel5_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0x00BFEE" size="2" lightSize="6" blendMode="add" type="one" />
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/pistolFox</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>消灭首领毒魔(90级)</description>
+		</bullet>
+	</father>
+	
+	
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill index="0" name="召唤蝙蝠"><!-- dps-被动 -->
+			<name>fox_godArmsSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>无敌蝙蝠</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>summonedUnits</effectType>
+			<summonedUnitsB>1</summonedUnitsB>
+			<effectProArr>1</effectProArr><!--  -->
+			<extraValueType>nowArmsTrueDps</extraValueType><!-- 附加值类型为单位dps系数 -->
+			
+			<obj>"cnName":"吸血蝙蝠","num":1,"lifeMul":2,"dpsMul":1,"mulByFatherB":1,"cx":0,"cy":-80,"firstVx":10,"maxNum":10,"maxFromWeAllB":1,"noUnderHurtB":1,"noAiFindB":1,"noUnderHitB":1,"skillArr":["State_SpellImmunity","State_AddMove"]</obj>
+			<duration>90</duration>
+			<!--图像------------------------------------------------------------ -->
+			<description>消灭敌人后将召唤无敌吸血蝙蝠（上限10只）。</description>
+		</skill>
+		<skill name="强击蝙蝠"><!-- dps-被动 -->
+			<name>fox_godArmsSkill2</name><noRandomListB>1</noRandomListB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+			<cnName>强击蝙蝠</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><ignoreSilenceB>1</ignoreSilenceB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition><![CDATA[  <condition>killTarget</condition>   测试技能，记得改回去]]>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType><overlyingB>1</overlyingB>
+			<effectType>summonedUnitsFox</effectType>
+			<summonedUnitsB>1</summonedUnitsB>
+			<effectProArr>1</effectProArr><!--  -->
+			<extraValueType>nowArmsTrueDps</extraValueType><!-- 附加值类型为单位dps系数 -->
+			<obj>"cnName":"吸血蝙蝠","num":1,"lifeMul":2,"dpsMul":1.25,"mulByFatherB":1,"cx":0,"cy":-80,"firstVx":10,"maxNum":10,"maxFromWeAllB":1,"noUnderHurtB":1,"noAiFindB":1,"noUnderHitB":1,"skillArr":["State_SpellImmunity","State_AddMove"]</obj>
+			<duration>90</duration>
+			<mul>0.05</mul><!-- 每杀一个敌人，永久增加的伤害 -->
+			<secMul>1</secMul><!-- 最高伤害增加值 -->
+			<stateEffectImg partType="arm_right_1,arm_left_1" con="add" raNum="30" followPartRaB="1">skillEffect/trueshot_enemy</stateEffectImg>
+			<!--图像------------------------------------------------------------ -->
+			<description>消灭敌人后将召唤无敌吸血蝙蝠（上限10只），同时永久增加银狐[mul]的伤害（最多可累加到[secMul]）。</description>
+		</skill>
+		
+		<skill name="群攻">
+			<name>purgoldFox</name><noBeClearB>1</noBeClearB>
+			<cnName>群攻</cnName><noRandomListB>1</noRandomListB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><haveEffectBuletHitNum>1</haveEffectBuletHitNum>
+			<condition>hit</condition><changeHurtB>1</changeHurtB>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>purgoldFox</effectType>
+			<extraValueType>nowArmsHurt</extraValueType>
+			<mul>3</mul><!-- 伤害倍数 -->
+			<range>1000</range>
+			<pointEffectImg soundUrl="specialGun/purgoldFoxSound"></pointEffectImg>
+			<description>射击时有几率让[range]码内的所有我方单位对敌人发起攻击，并清除陨石雨，封锁旋转电球。</description>
+		</skill>
+		<![CDATA[
+		<skill name="群攻">
+			<name>purgoldFox</name><noBeClearB>1</noBeClearB>
+			<cnName>群攻</cnName><noRandomListB>1</noRandomListB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition><changeHurtB>1</changeHurtB>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet_purgoldFox</effectType>
+			<extraValueType>nowArmsHurt</extraValueType>
+			<mul>1</mul><!-- 伤害倍数 -->
+			
+			<obj>"name":"purgoldFoxBullet"</obj>
+			<description>射击时有几率让所有我方单位远程攻击敌人。</description>
+		</skill>
+		
+					<otherBullet>
+						<name>purgoldFoxBullet</name>
+						<cnName>银狐群攻</cnName>
+						<!--伤害属性------------------------------------------------------------ -->
+						<hurtRatio>1</hurtRatio>
+						<bulletLife>4</bulletLife>
+						<bulletWidth>40</bulletWidth>
+						<hitType>rect</hitType>
+						<!--攻击时的属性------------------------------------------------------------ -->
+						<extendGap>30</extendGap>
+						<!--运动属性------------------------------------------------------------ -->	
+						<bulletAngle>0</bulletAngle>
+						<bulletSpeed>40</bulletSpeed>
+						<speedD random="0.2"/>
+						<bulletImgUrl raNum="1">bullet/blackRedPoint</bulletImgUrl>
+						<hitImgUrl con="add">bulletHitEffect/fireHit</hitImgUrl><!-- 子弹图像【必备】 -->
+					</otherBullet>
+		]]>
+	</father>
+	
+	
+	<father type="pistol" cnName="手枪">
+		<bullet name="pistolFoxYa" color="yagold">
+			<name>pistolFoxYa</name>
+			<cnName>氩星银狐</cnName>
+			<!--基本-->
+			<capacity>30</capacity>
+			<attackGap>0.16</attackGap>
+			<reloadGap>0.8</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>950</bulletWidth>
+			<bulletShakeWidth>0,50</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<!--特殊------------------------------------------------------------ -->
+			<!--武器属性------------------------------------------------------------ -->
+			<dpsMul>1</dpsMul>
+			<uiDpsMul>1</uiDpsMul>
+			<hurtRatio>5</hurtRatio>
+			
+			<armsArmMul>0.9</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>0</upValue>
+			<shootShakeAngle>45</shootShakeAngle>
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.2</twoShootPro>
+			<skillArr>Hit_Paralysis_ArmsSkill2</skillArr>
+			
+			<!--图像动画属性------------------------------------------------------------ -->.
+			<shootSoundUrl>pistol1/barrel5_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0x00BFEE" size="2" lightSize="6" blendMode="add" type="one" />
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/pistolFox6</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+</data>

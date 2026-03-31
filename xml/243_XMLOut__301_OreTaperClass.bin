@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="space">
+		<body>
+			<name>OreTaperFly</name><headIconUrl>IconGather/OreTaper</headIconUrl>
+			<cnName>浮游矿锥</cnName><lifeRatio>1.3</lifeRatio>
+			<raceType>ship</raceType>
+			<swfUrl>swf/ship/OreTaperFly.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="stoneBoom"/>
+			<dieJumpMul>0</dieJumpMul>
+			<imgArr>
+				stand,normalAttack,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-33,-22,66,44</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<motionD F_AIR="4"/>
+			<maxVx>5</maxVx>
+			<skillArr>OreTaperFlyAI,hitDie</skillArr>
+			<hurtArr>
+				<hurt cd="3">
+					<imgLabel>normalAttack</imgLabel>
+					<hurtRatio>1</hurtRatio>
+					<grapRect>-400,-20,350,40</grapRect><mustGrapRectB>1</mustGrapRectB>
+					<shakeValue>10</shakeValue>
+				</hurt>
+				<hurt>
+					<imgLabel>stand</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>1</hurtRatio>
+					<shakeValue>10</shakeValue>
+				</hurt>
+			</hurtArr>
+		</body>
+					<skill>
+						<name>OreTaperFlyAI</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+						<cnName>浮游矿锥AI</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+						<conditionType>passive</conditionType>
+						<condition>add</condition>
+						<target>me</target>
+						<!--效果------------------------------------------------------------ -->
+						<addType>state</addType>
+						<effectType>OreTaperFlyAI</effectType><effectFather>oreSpace</effectFather>
+						<value>22</value><!-- 冲击速度 -->
+						<mul>1.3</mul><!-- 冲刺多久停下 -->
+						<valueString>normalAttack</valueString><!-- 循环的动作 -->
+						<duration>9999999</duration>
+					</skill>
+		
+		<body>
+			<name>OreTaper</name>
+			<cnName>矿锥</cnName>
+			<raceType>ship</raceType>
+			<swfUrl>swf/ship/OreTaper.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="stoneBoom"/>
+			<dieJumpMul>0</dieJumpMul>
+			<lockLeftB>1</lockLeftB>
+			<imgArr>
+				stand,normalAttack,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-33,-22,66,44</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<motionD F_AIR="4"/>
+			<maxVx>6</maxVx>
+			<skillArr>OreTaperBuff,hitDie</skillArr>
+			<hurtArr>
+				
+				<hurt>
+					<imgLabel>normalAttack</imgLabel>
+					<hurtRatio>1</hurtRatio>
+					<grapRect>-500,-20,500,40</grapRect><mustGrapRectB>1</mustGrapRectB>
+					<shakeValue>10</shakeValue>
+				</hurt>
+				<hurt>
+					<imgLabel>stand</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>1</hurtRatio>
+					<shakeValue>10</shakeValue>
+				</hurt>
+			</hurtArr>
+		</body>
+					<skill>
+						<name>OreTaperBuff</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+						<cnName>矿锥buff</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+						<conditionType>passive</conditionType>
+						<condition>add</condition>
+						<target>me</target>
+						<!--效果------------------------------------------------------------ -->
+						<addType>state</addType>
+						<effectType>OreTaperBuff</effectType>
+						<value>18</value><!-- 冲击速度 -->
+						<mul>15</mul><!-- 超过多长时间，自动冲击 -->
+						<valueString>normalAttack</valueString><!-- 无限循环的动作 -->
+						<duration>9999999</duration>
+					</skill>
+	</father>
+</data>

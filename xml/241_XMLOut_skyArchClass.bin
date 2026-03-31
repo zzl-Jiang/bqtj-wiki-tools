@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="crossbow" cnName="弩">
+		<bullet name="天弓" color="black" dropLevelArr="999"  evoMaxLv="2" composeLv="99" chipB="1" chipNum="200">
+			<name>skyArch</name><cnName>天弓</cnName>
+			<dpsMul>1.1</dpsMul>
+			<uiDpsMul>1.1</uiDpsMul>
+			<!--基本-->
+			<capacity>15</capacity>
+			<attackGap>5</attackGap>
+			<reloadGap>1.5</reloadGap>
+			<shakeAngle>0,0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>1</shootAngle>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul><upValue>10</upValue><shootShakeAngle>30</shootShakeAngle><shootRecoil>7</shootRecoil><screenShakeValue>10</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime><bulletLife>2.5</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>28</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->	
+			<attackDelay>5.1</attackDelay>
+			<crossbowD focoB="1" minDelayMul="0.02"/>
+			<godSkillArr>Hit_pointBoom_godArmsSkill,skyArchSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/skyArchSound</shootSoundUrl>
+			<bulletImgUrl con="add">bulletHitEffect/blueLaser</bulletImgUrl>
+			<smokeImgUrl raNum="60" con="filter">bullet/blueLaser</smokeImgUrl>
+			<hitImgUrl soundUrl="specialGun/arrowImpact">bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl>bulletHitEffect/yellow_motion</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgType>no</fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/skyArch</bodyImgRange><bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>纪念币兑换</description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill name="核爆">
+			<name>skyArchSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>核爆</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>focoMulMore</otherConditionArr>
+			<conditionRange>0.3</conditionRange>
+			<target>target,range,enemy</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>skyArchSkill</effectType>
+			<extraValueType>hurtValue</extraValueType>
+			<value>0</value>
+			<mul>3</mul>
+			<range>99999</range>
+			<meEffectImg soundUrl="boomSound/bigBoom"></meEffectImg>
+			<targetEffectImg partType="body">boomEffect/boom1</targetEffectImg>
+			<description>天弓蓄力30%以上发射出的箭矢将造成核爆，对地图内的所有敌人造成巨大伤害。</description>
+		</skill>
+		<![CDATA[
+		<skill name="核爆-原版">
+			<name>skyArchSkill22</name><noRandomListB>1</noRandomListB>
+			<cnName>核爆-原版</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>focoMulMore</otherConditionArr>
+			<conditionRange>1</conditionRange>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>skyArchSkill</effectType>
+			<mul>4</mul>
+			<value>0.5</value>
+			<targetEffectImg soundUrl="boomSound/bigBoom" partType="body">boomEffect/bigCircle</targetEffectImg>
+			<otherEffectImg soundUrl="boomSound/midBoom2" partType="body">boomEffect/boom3</otherEffectImg>
+			<pointEffectImg partType="body">boomEffect/boom1</pointEffectImg>
+			<description>天弓完全蓄力后发射出的箭矢将造成核爆，对地图内的所有敌人造成巨大伤害。</description>
+		</skill>
+		]]>
+	</father>
+</data>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="state">
+		<body cnName="伤害" 			name="allHurtMul" 	add="0.01" 		max="50" />
+		<body cnName="技能回速" 		name="cdMul" 			add="0.003" 		max="40" />
+		<body cnName="怒气回速" 		name="angerMul" 	add="0.02" 		max="50" />
+		<body cnName="防御力" 			name="defenceMul" add="0.03" 		max="60" />
+	</father>
+	<father name="parnter">
+		<body cnName="队友生效加点" 			name="parnterPoint" 		add="1" 				max="1" point="50" unit="" descrip="伤害、技能回速、怒气回速、防御力的加点属性对队友、尸宠、载具生效。" />
+	</father>
+	<father name="levelInfo">
+		<body cnName="倒计时/秒" 	name="tm" 				add="1" 				max="80" unit="" />
+	</father>
+	<father name="props">
+		<body cnName="弹药箱" 			name="caisson" 		add="1" 				max="6" point="4" unit=""/>
+		<body cnName="重生石" 			name="rebirthStone" 		add="1" 				max="2" point="5" unit=""/>
+		<body cnName="队友重生卡" 	name="teamRebirthCard" 		add="1" 				max="2" point="5" unit=""/>
+		
+		<![CDATA[
+		<body cnName="生命药瓶" 		name="lifeBottle" 		add="1" 				max="3" point="4" unit=""/>
+		<body cnName="技能刷新卡" 	name="skillFleshCard" add="1" 			max="1" point="12" unit=""/>
+		]]>
+	</father>
+	<father name="other">
+		<body cnName="首领全出场" 			name="allBossShow" 		add="1" 				max="1" point="2" unit=""/>
+	</father>
+</data>

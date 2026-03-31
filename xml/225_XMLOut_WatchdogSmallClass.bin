@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="snake" cnName="血蟒">
+		<body index="0" name="巡逻狗" shell="metal">
+			
+			<name>WatchdogSmall</name>
+			<cnName>巡逻狗</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/WatchdogSmall358.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.8</lifeRatio>
+			<showLevel>9999</showLevel>
+			<dieImg name="midSpace"/><dieJumpMul>0</dieJumpMul>
+			<imgArr>
+				stand,move
+				,shootAttack,lightningAttack
+				,hurt1,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-50,28,50</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>8</maxVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<bossSkillArr>noSpeedReduce,silence_enemy,defenceBounce_enemy</bossSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel><cn>射击</cn>
+					<hurtRatio>1</hurtRatio>
+					<bulletLabel>WatchdogSmallShoot</bulletLabel>
+					<grapRect>-280,-91,179,93</grapRect>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>lightningAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<grapRect>-280,-82,210,93</grapRect>
+				</hurt>
+			</hurtArr>
+		</body>	
+	</father>		
+	<father name="enemy">
+		<bullet cnName="小看门狗-射击">
+			<name>WatchdogSmallShoot</name>
+			<cnName>小看门狗-射击</cnName>
+			<hurtRatio>0.2</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>3</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.9</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<shootNum>6</shootNum>
+			<shootGap>0.077</shootGap>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-37,-48</shootPoint>
+			<bulletSpeed>14</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="shoot_Watchdog_bullet"/>
+			<hitImgUrl name="gun_hit"/>
+		</bullet>
+	</father>	
+	
+	
+</data>

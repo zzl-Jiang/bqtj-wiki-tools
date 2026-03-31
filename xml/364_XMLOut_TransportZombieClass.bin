@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="wilder">
+		<body index="0" name="运毒尸" shell="normal">
+			
+			<name>TransportZombie</name>
+			<cnName>运毒尸</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/TransportZombie.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1.8</lifeRatio>
+			<showLevel>999</showLevel>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,move
+				,normalAttack,shootAttack
+				,shakeAttack,walkAttack,throwAttack
+				,hurt1,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<lifeBarExtraHeight>-30</lifeBarExtraHeight>
+			<handAddRa>90</handAddRa>
+			<!-- 碰撞体积 -->
+			<hitRect>-18,-96,36,96</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>12</maxVx>
+			<runStartVx>12</runStartVx>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<extraAIClassLabel>TransportZombie_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>desertedHalo_enemy,silence_enemy,skillCopyTransport,TransportZombieThrow,TransportZombieShake,fightReduct2,defenceBounce_enemy</bossSkillArr>
+			<bossSkillArrCn>70%近战防御、80%防毒、胶性表皮</bossSkillArrCn>
+			<extraDropArmsB>1</extraDropArmsB>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel>
+					<hurtRatio>1</hurtRatio>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit2">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>shootAttack</imgLabel>
+					<bulletLabel>TransportZombieShoot</bulletLabel>
+					<grapRect>-400,-111,350,105</grapRect>
+					<hurtRatio>2</hurtRatio>
+					<attackType>holy</attackType>
+					<skillArr>poisonClaw_enemy</skillArr>
+				</hurt>
+				<hurt info="重砸"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>shakeAttack</imgLabel>
+					<grapRect>-518,-147,150,127</grapRect>
+					<hurtMul>0.2</hurtMul>
+					<skillArr>TransportZombieShakeHit</skillArr>
+					<attackType>holy</attackType>
+					<noUseOtherSkillB>1</noUseOtherSkillB>
+				</hurt>
+				<hurt info="击退"><noAiChooseB>1</noAiChooseB>
+					<imgLabel>throwAttack</imgLabel>
+					<hurtRatio>0.5</hurtRatio>
+					<attackType>holy</attackType>
+					<skillArr>TransportZombieThrowHit</skillArr>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit1">bulletHitEffect/energy</hitImgUrl>
+					<noUseOtherSkillB>1</noUseOtherSkillB>
+				</hurt>
+			</hurtArr>
+		</body>
+	</father>
+	<father name="enemy">	
+		<skill>
+			<name>TransportZombieShake</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>重砸</cnName>
+			<cd>8</cd>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<addType>state</addType>
+			<effectType>no</effectType>
+			<meActionLabel>shakeAttack</meActionLabel>
+			<description>用毒罐猛捶敌人造成重大伤害，并让目标射击速度降低。</description>
+		</skill>
+				<skill cnName="重砸降低攻速">
+					<name>TransportZombieShakeHit</name>
+					<cnName>重砸降低攻速</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>attackGapMul</effectType>
+					<mul>0.2</mul>
+					<duration>5</duration>
+					<stateEffectImg partType="shootPoint" raNum="25" followPartRaB="1">bulletHitEffect/smoke_black</stateEffectImg>
+				</skill>
+				
+		<skill>
+			<name>TransportZombieThrow</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>踢爆</cnName>
+			<cd>7</cd>
+			<conditionType>active</conditionType><condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>200</conditionRange><target>me</target>
+			<addType>state</addType>
+			<effectType>invincible</effectType>
+			<duration>1.5</duration>
+			<meActionLabel>throwAttack</meActionLabel>
+			<description>扔出毒罐将目标击退，目标将向后滑行一段距离，滑行距离越远，伤害越大。</description>
+		</skill>
+				<skill cnName="击退">
+					<name>TransportZombieThrowHit</name>
+					<cnName>击退</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>TransportZombieThrowHit</effectType>
+					<mul>0.5</mul>
+					<duration>1.5</duration>
+					<range>900</range>
+					<stateEffectImg partType="2foot" con="filter" raNum="30">skillEffect/poisonClaw_enemy</stateEffectImg>
+					<pointEffectImg raNum="1" soundUrl="TransportZombie/throwBoom">boomEffect/posion3</pointEffectImg>
+				</skill>
+				
+		<skill><!-- 限制 -->
+			<name>skillCopyTransport</name>
+			<cnName>技能复制</cnName><iconUrl36>SkillIcon/skillCopy_enemy_36</iconUrl36>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>10</cd>
+			<firstCd>10</firstCd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget,skillCopyNumLess</otherConditionArr>
+			<conditionRange>800</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<value>15</value>
+			<!-- 子弹所需 -->
+			<obj>"name":"skillCopy_enemy","site":"me","flipB":true</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg soundUrl="sound/skillCopy_enemy"></meEffectImg>
+			<description>从单位背后发出一颗红色球，击中目标后将复制目标身上的一个技能。</description>
+		</skill>
+	</father>
+	<father type="zombie" cnName="子弹集合">
+		<bullet>
+			<name>TransportZombieShoot</name>
+			<cnName>飞刀</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>15</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.1</attackGap>
+			<attackDelay>0.63</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-85,-110</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>0.4</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">TransportZombie/bullet</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/vehicle_hit2">bulletHitEffect/energy</hitImgUrl>
+			<smokeImgUrl con="filter" raNum="30">skillEffect/poisonClaw_enemy</smokeImgUrl>
+			
+		</bullet>
+	</father>
+</data>

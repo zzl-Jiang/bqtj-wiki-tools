@@ -1,0 +1,4009 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="life">
+		
+<ask author="橙子">
+ <title>以下哪种副手的相关武器是步枪？</title>
+ <correct>月刺</correct>
+ <error>凯撒</error>
+ <error>沃龙牌棍棒</error>
+ <error>黄金镐</error>
+</ask> 
+
+<ask author="俞闫">
+ <title>进入军队后需要多少贡献才能开启争霸？</title>
+ <correct>1000</correct>
+ <error>500</error>
+ <error>1100</error>
+ <error>不需要</error>
+</ask> 
+
+<ask author="红颜夕下">
+ <title>为什么北极熊不能和企鹅一起愉快的玩耍呢</title>
+ <correct>因为企鹅在南极，北极熊在北极</correct>
+ <error>北极熊吃肉，企鹅吃素</error>
+ <error>企鹅吃肉，北极熊吃素</error>
+ <error>企鹅会吃掉北极熊</error>
+</ask> 
+
+<ask author="i这是什么玩意i">
+ <title>分解1个78级零件箱可以得到多少个75级零件箱?</title>
+ <correct>4</correct>
+ <error>8</error>
+ <error>6</error>
+ <error>2</error>
+</ask>
+
+
+
+<ask author="【觉醒】屑狐狸">
+ <title>小美的技能复制无法复制以下哪个技能？</title>
+ <correct>潮汐护甲</correct>
+ <error>反物质</error>
+ <error>融弹回血</error>
+ <error>无名火</error>
+</ask>
+
+
+<ask author="萌新捏">
+ <title>称号“学霸”的获取条件是？</title>
+ <correct>连续5天答题全对</correct>
+ <error>连续10天答题全对</error>
+ <error>使用黄金购买</error>
+ <error>拳击击败沃龙</error>
+</ask>
+
+
+<ask author="『永夜』鹏鹏">
+ <title>下列哪一项不是判定三角形全等的方式？</title>
+ <error>边边边</error>
+ <error>角角边</error>
+ <correct>边边角</correct>
+ <error>斜边、直角边</error>
+</ask> 
+
+<ask author="NRD.硬糖">
+ <title>“隐形战机”的“隐形”是指？</title>
+ <correct>雷达测不到</correct>
+ <error>肉眼看不到</error>
+ <error>人耳听不到</error>
+ <error>子弹打不到</error>
+</ask>
+<ask author="『小可爱』沧海">
+ <title>万能载具碎片不能合成哪种载具碎片？</title>
+ <correct>异齿虎碎片</correct>
+ <error>泰坦碎片</error>
+ <error>挖掘者碎片</error>
+ <error>破晓碎片</error>
+</ask> 
+
+<ask author="『小可爱』沧海">
+ <title>以下哪个节日称号不是永久称号？</title>
+ <correct>七夕眷侣</correct>
+ <error>粽叶飘香</error>
+ <error>春节快乐</error>
+ <error>六一快乐</error>
+</ask> 
+
+<ask author="『小可爱』沧海">
+ <title>以下物品中，无法在神秘商人处购买获得的是？</title>
+ <correct>战神之心</correct>
+ <error>冥王图鉴</error>
+ <error>生化宝石</error>
+ <error>光锥碎片</error>
+</ask> 
+
+<ask author="影剑·凌逍遥">
+ <title>无双光锥的“驱魂”会封锁以下哪个技能？</title>
+ <correct>重生</correct>
+ <error>夺命魂</error>
+ <error>复仇之魂</error>
+ <error>短命之仇</error>
+</ask> 
+
+<ask author="『小可爱』沧海">
+ <title>重置技能时，无法返还的是</title>
+ <correct>技能熟练度</correct>
+ <error>神能石</error>
+ <error>光能石</error>
+ <error>申猴碎片</error>
+</ask>
+
+<ask author="NRD.硬糖">
+ <title>下列哪个时装没有与副手相关的技能？</title>
+ <correct>狼首</correct>
+ <error>噬魂时装</error>
+ <error>大Boss时装</error>
+ <error>雪影时装</error>
+</ask>
+
+<ask author="掠光">
+ <title>十周年庆封面中，主角手持的武器是？</title>
+ <correct>辰龙</correct>
+ <error>寅虎</error>
+ <error>赤鼬</error>
+ <error>极源</error>
+</ask>
+
+<ask author="『永恒』夏日的忧">
+ <title>下列哪个载具不能学习轰天聚合</title>
+ <correct>暗夜侵袭者</correct>
+ <error>雷鸣</error>
+ <error>冰霜祖龙</error>
+ <error>炙热挖掘者</error>
+</ask> 
+
+<ask author="是豪豪吖">
+ <title>天鹰小美的好感度达到24000后，每日可领取的物品是?</title>
+ <correct>尸牙碎片</correct>
+ <error>生化宝石</error>
+ <error>海绵碎片</error>
+ <error>镭射穿梭器</error>
+</ask>
+
+<ask author="qibaan">
+ <title>小肠上皮细胞吸收葡萄糖属于什么运输方式？</title>
+ <correct>主动运输</correct>
+ <error>被动运输</error>
+ <error>胞吞</error>
+ <error>胞吐</error>
+</ask>
+
+<ask author="仰">
+ <title>双人模式中，P2玩家的武器如何瞄准？</title>
+ <correct>自动瞄准</correct>
+ <error>鼠标控制</error>
+ <error>随机乱摆</error>
+ <error>方向键控制</error>
+</ask>
+
+<ask author="仰">
+ <title>秘境“GM三人组中，丛安是戴着面具的哪一个首领”</title>
+ <correct>掘金尸</correct>
+ <error>矿工僵尸</error>
+ <error>巨毒尸</error>
+ <error>狂战尸</error>
+</ask>
+
+<ask author="消失的强化石">
+ <title>下列哪个不是获得终极武器“辰龙”要集齐的相关武器</title>
+ <correct>丑牛</correct>
+ <error>亥猪</error>
+ <error>光锥</error>
+ <error>巳蛇</error>
+</ask>
+
+
+		
+		
+		
+<ask author="动情">
+ <title>红色品质的雷克基因体有多少条资质</title>
+ <correct>9条</correct>
+ <error>7条</error>
+ <error>8条</error>
+ <error>10条</error>
+</ask>
+
+<ask author="言辞偏稽">
+ <title>武器的属性“寿命”是指</title>
+ <correct>发射的武器子弹最多存在几秒，过后消失</correct>
+ <error>该武器还能射击几次，此后损坏，需要修理</error>
+ <error>该武器最多存在几天，过后消失</error>
+ <error>持有该武器可以延年益寿，延长几天</error>
+</ask>
+
+
+<ask author="NRD.硬糖">
+ <title>“江南三大名楼”不包括？</title>
+ <correct>鹳雀楼</correct>
+ <error>滕王阁</error>
+ <error>黄鹤楼</error>
+ <error>岳阳楼</error>
+</ask>
+
+<ask author="NRD.硬糖">
+ <title>汉字“凹”和“凸”分别有几个笔画？</title>
+ <correct>5、5</correct>
+ <error>4、5</error>
+ <error>4、4</error>
+ <error>5、4</error>
+</ask>
+
+<ask author="NRD.硬糖">
+ <title>以下哪种树木可以独木成林？</title>
+ <correct>榕树</correct>
+ <error>梧桐树</error>
+ <error>樟树</error>
+ <error>松树</error>
+</ask>
+
+<ask author="『小可爱』沧海">
+ <title>以下称号里，提升荣誉值最高的是</title>
+ <correct>成就之皇</correct>
+ <error>群组达人</error>
+ <error>超能英雄</error>
+ <error>十项全能</error>
+</ask>
+
+<ask author="『小可爱』沧海">
+ <title>爆枪突击推出的第一把生肖武器是</title>
+ <correct>亥猪</correct>
+ <error>沃龙</error>
+ <error>辰龙</error>
+ <error>酉鸡</error>
+</ask>
+
+<ask author="消失の星期三">
+ <title>学习技能最低等级是多少</title>
+ <correct>5级</correct>
+ <error>10级</error>
+ <error>6级</error>
+ <error>1级</error>
+</ask>
+
+<ask author="言辞偏稽">
+ <title>载具的属性“耐久”指</title>
+ <correct>载具能承受多少点伤害，类似生命值</correct>
+ <error>操作载具需要消耗一定的耐久，耗尽后损坏，需要修理</error>
+ <error>操作载具需要消耗一定的耐久，耗尽后永久损坏</error>
+ <error>载具还能在背包中存在几秒，过后消失</error>
+</ask>
+
+<ask author="Q点Q">
+ <title>在锻造界面合成一件小卡时装需要多少个稀有宝箱</title>
+ <correct>400</correct>
+ <error>320</error>
+ <error>300</error>
+ <error>350</error>
+</ask>
+
+<ask author="Q点Q">
+ <title>以下哪个成就具有战斗力加成</title>
+ <correct>屠尸大帝</correct>
+ <error>好人缘</error>
+ <error>称霸秘境</error>
+ <error>劫后余生</error>
+</ask>
+
+<ask author="云轩阁丨落星">
+ <title>以下哪个时装能增加装备碎片掉率</title>
+ <correct>刹鬼时装</correct>
+ <error>工人帽</error>
+ <error>小娜时装</error>
+ <error>军长时装</error>
+</ask>
+
+<ask author="葭莩">
+ <title>以下哪种情况会让时装左下角会红色三角的标志</title>
+ <correct>时装被使用了外观</correct>
+ <error>时装是限时的</error>
+ <error>时装被沃龙偷走了</error>
+ <error>三个同样的时装合成了二星时装</error>
+</ask>
+
+<ask author="『酱油』孤星">
+ <title>下列哪把武器是终极武器</title>
+ <correct>辰龙</correct>
+ <error>沃龙</error>
+ <error>异祖龙</error>
+ <error>霸王龙</error>
+</ask>
+		
+<ask author="消失の星期三">
+ <title>红色品质的雷克基因体怎么获取？</title>
+ <correct>商店购买</correct>
+ <error>秘境掉落</error>
+ <error>竞技场兑换</error>
+ <error>功勋商店兑换</error>
+</ask>
+<ask author="Rainy_忧雨">
+ <title>以下技能哪种可以通过重造功能洗出？</title>
+ <correct>击中溅射</correct>
+ <error>爆石</error>
+ <error>七步毒</error>
+ <error>快感</error>
+</ask>
+
+<ask author="红颜夕下">
+ <title>在19世纪，为发电机和电动机提供了理论基础的科学家是？</title>
+ <correct>法拉第</correct>
+ <error>吉尔特</error>
+ <error>西门子</error>
+ <error>奥斯特</error>
+</ask>
+
+<ask author="Rainy_忧雨">
+ <title>以下哪种不是火焰宝石的获取途径？</title>
+ <correct>装备宝石箱</correct>
+ <error>看门狗关卡</error>
+ <error>秘境多肉</error>
+ <error>军队功勋兑换</error>
+</ask>
+
+<ask author="【觉醒】屑狐狸">
+ <title>无双赤鼬无法克制以下哪个技能？</title>
+ <correct>夺命魂</correct>
+ <error>复仇之箭</error>
+ <error>尸毒</error>
+ <error>短命之仇</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>明朝由盛转衰的转折点是</title>
+ <correct>土木堡之变</correct>
+ <error>靖难之役</error>
+ <error>红丸案</error>
+ <error>明末党争</error>
+</ask>
+
+<ask author="安晓卡儿~">
+ <title>心零的好感度加成在星期三时指定哪种敏感加成？</title>
+ <correct>冷冻敏感</correct>
+ <error>电磁敏感</error>
+ <error>生化敏感</error>
+ <error>火焰敏感</error>
+</ask>
+
+<ask author="因狐之言">
+ <title>军队建筑-地质研究所的第12级效果是什么？</title>
+ <correct>人物移动速度+25%</correct>
+ <error>人物移动速度+30%</error>
+ <error>人物移动速度+35%</error>
+ <error>人物移动速度+40%</error>
+</ask>
+
+<ask author="Rainy_忧雨">
+ <title>以下哪种不是无双水晶的获取途径？</title>
+ <correct>趣味问答全对</correct>
+ <error>盖亚特惠礼包</error>
+ <error>修罗模式</error>
+ <error>太空探索成就</error>
+</ask>
+
+<ask author="【觉醒】屑狐狸">
+ <title>当雷霆鬼鲛强化相同时，合成狂人会继承谁的技能和附加属性？</title>
+ <correct>鬼鲛</correct>
+ <error>雷霆</error>
+ <error>随机选择，大概率鬼鲛</error>
+ <error>随机选择，大概率雷霆</error>
+</ask>
+
+<ask author="未羊碎片">
+ <title>4399游戏吧是哪一年成立的？</title>
+ <correct>2009</correct>
+ <error>2008</error>
+ <error>2010</error>
+ <error>2011</error>
+</ask>
+
+<ask author="未羊碎片">
+ <title>在哪一年的周年庆活动中充值返利为25%？ </title>
+ <correct>2019</correct>
+ <error>2018</error>
+ <error>2020</error>
+ <error>2021</error>
+</ask>
+
+<ask author="MC~天铭">
+ <title>在常规条件下，铜可以与下列哪种酸反应？</title>
+ <correct>稀硝酸</correct>
+ <error>稀硫酸</error>
+ <error>稀盐酸</error>
+ <error>乙酸</error>
+</ask>
+
+
+<ask author="【暮雨】 2">
+ <title>以下哪种途径不会存档？</title>
+ <error>当天第一次进入黑市</error>
+ <error>打开远古宝箱</error>
+ <error>领取军队贡献</error>
+ <correct>制作美食</correct>
+</ask>
+
+<ask author=" 【身法】小豪° ">
+ <title>我国的地形分布特点是什么？</title>
+ <correct>西高东低</correct>
+ <error>东高西低</error>
+ <error>北高南低</error>
+ <error>南高北低</error>
+</ask>
+
+<ask author="【觉醒】屑狐狸">
+ <title>合成一个四级特殊零件需要多少个一级特殊零件？</title>
+ <correct>450</correct>
+ <error>400</error>
+ <error>900</error>
+ <error>550</error>
+</ask>
+
+<ask author="MC~天铭">
+ <title>《水浒传》中一共有多少位好汉</title>
+ <correct>108</correct>
+ <error>107</error>
+ <error>120</error>
+ <error>110</error>
+</ask>
+
+<ask author="冰梦愚者°">
+ <title>爆枪突击游戏里从多少级主线关卡开始出现增伤技能的衰减？</title>
+ <correct>86级</correct>
+ <error>87级</error>
+ <error>88级</error>
+ <error>89级</error>
+</ask>
+
+<ask author="【觉醒】屑狐狸">
+ <title>未携带相关武器时，副手面板伤害如何计算？</title>
+ <correct>已装备的最高战力武器战斗力×副手倍数÷4</correct>
+ <error>已装备的最高战力武器战斗力x副手倍数÷2</error>
+ <error>背包中相关武器战斗力×副手倍数</error>
+ <error>背包中相关武器战斗力×副手倍数÷4</error>
+</ask>
+
+<ask author="冰梦愚者°">
+ <title>爆枪突击里纪念币是几周年活动开始出现的</title>
+ <correct>5周年</correct>
+ <error>6周年</error>
+ <error>4周年</error>
+ <error>7周年</error>
+</ask>
+
+<ask author="冰梦愚者°">
+ <title>可以通过下面哪个渠道获得神谕战裤碎片？</title>
+ <correct>熔炼</correct>
+ <error>稀有宝箱的开启</error>
+ <error>神器宝箱的开启</error>
+ <error>秘境</error>
+</ask>
+
+<ask author="红尘家、反某人">
+ <title>以下哪个不是特殊零件的获取渠道？</title>
+ <correct>擒王任务</correct>
+ <error>副本任务“变种毒魔”</error>
+ <error>关卡寒光入口和寒光西城</error>
+ <error>纪念币商店</error>
+</ask>
+
+<ask author="小槍槍~~~">
+ <title>修罗模式难度7中的冷门以下哪种武器不可使用</title>
+ <correct>火龙</correct>
+ <error>辰龙</error>
+ <error>贪吃蛇</error>
+ <error>金蝉</error>
+</ask>
+
+<ask author="冰梦愚者°">
+ <title>下面哪一个方法不能对异齿虎第一阶段造成伤害？</title>
+ <correct>原地用剑齿镖进行攻击</correct>
+ <error>触发巨像套件并攻击异齿虎</error>
+ <error>烁金的神级技能高温</error>
+ <error>赤鼬的神级技能鼬灭</error>
+</ask>
+
+<ask author="MC~天铭">
+ <title>三国灭亡的顺序是</title>
+ <correct>蜀、魏、吴</correct>
+ <error>魏、蜀、吴</error>
+ <error>吴、魏、蜀</error>
+ <error>蜀、吴、魏</error>
+</ask>
+
+<ask author="日常挂机摆烂">
+ <title>“曲沃代翼”是发生在哪个时期的历史事件？</title>
+ <correct>春秋时期</correct>
+ <error>战国时期</error>
+ <error>南北朝时期</error>
+ <error>五代十国时期</error>
+</ask>
+
+<ask author="言辞偏稽">
+ <title>以下武器哪个不是火炮？</title>
+ <correct>炮仗</correct>
+ <error>苍弩</error>
+ <error>弦音</error>
+ <error>钢笔枪</error>
+</ask>
+
+<ask author="紫夜喵✿">
+ <title>正常倍速时游戏中1秒对应了多少帧？</title>
+ <correct>30</correct>
+ <error>15</error>
+ <error>45</error>
+ <error>60</error>
+</ask>
+
+<ask author="巴笑白">
+ <title>5号武器格的黄金价格和达到VIP1的所需充值黄金分别为？</title>
+ <correct>20、100</correct>
+ <error>300、100</error>
+ <error>250、200</error>
+ <error>我不知道，反正前者肯定大于后者</error>
+</ask>
+
+<ask author="言辞偏稽">
+ <title>以下武器哪个是喷火器？</title>
+ <correct>寒霜</correct>
+ <error>猩焰</error>
+ <error>火龙</error>
+ <error>熔炉</error>
+</ask>
+
+<ask author="NRD.硬糖">
+ <title>标准围棋棋盘的中心点称为什么？</title>
+ <correct>天元</correct>
+ <error>星</error>
+ <error>眼</error>
+ <error>空</error>
+</ask>
+
+<ask author="影剑·凌逍遥">
+ <title>以下哪一个地图是“太空探索”中的关卡？</title>
+ <correct>木卫三洞穴</correct>
+ <error>沃土镇</error>
+ <error>星谷</error>
+ <error>倒塔村</error>
+</ask>
+
+<ask author="影剑·凌逍遥">
+ <title>军队争霸中的战地积分计算公式为？</title>
+ <correct>(100-通关时间)÷2</correct>
+ <error>(100＋通关时间)×2</error>
+ <error>(100×通关时间)÷65</error>
+ <error>(125－25)×通关时间</error>
+</ask>
+
+<ask author="论坛名字七个字">
+ <title>末日坦克本体、大炮、机关枪、导弹发射器、后轮的敏感顺序分别是什么</title>
+ <correct>电磁敏感、生化敏感、冷冻敏感、电磁敏感、火焰敏感</correct>
+ <error>电磁敏感、火焰敏感、冷冻敏感、生化敏感、电磁敏感</error>
+ <error>火焰敏感、电磁敏感、生化敏感、冷冻敏感、电磁敏感</error>
+ <error>火焰敏感、电磁敏感、生化敏感、火焰敏感、电磁敏感</error>
+</ask>
+
+<ask author="天龙*小战士">
+ <title>苯环的不饱和度是多少？</title>
+ <correct>4</correct>
+ <error>3</error>
+ <error>2</error>
+ <error>1</error>
+</ask>
+
+<ask author="影剑·凌逍遥">
+ <title>第一届问答征集活动在什么时候开启？</title>
+ <correct>2023年8月4日</correct>
+ <error>2019年7月27日</error>
+ <error>2023年7月4日</error>
+ <error>2020年10月10日</error>
+</ask>
+
+<ask author="血瞳0404">
+ <title>敏捷宝石可在哪个关卡中获得？</title>
+ <correct>实验室底层</correct>
+ <error>实验室入口</error>
+ <error>实验室中层</error>
+ <error>实验室顶层</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>“落霞与孤鹜齐飞”出自哪篇著作？</title>
+ <correct>《滕王阁序》</correct>
+ <error>《逍遥游》</error>
+ <error>《阿房宫赋》</error>
+ <error>《兰亭集序》</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>“四大文明古国”这一概念最早由谁提出？</title>
+ <correct>梁启超</correct>
+ <error>辜鸿铭</error>
+ <error>蔡元培</error>
+ <error>傅斯年</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>《论语》中“有朋自远方来”的下一句是？ </title>
+ <error>虽远必诛</error>
+ <correct>不亦说乎</correct>
+ <error>必先苦其心志，劳其筋骨</error>
+ <error>鞭数十，驱之别院</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>我国东北地区的气候类型主要为</title>
+ <error>温带大陆性气候</error>
+ <error>温带海洋性气候</error>
+ <correct>温带季风气候</correct>
+ <error>温带草原气候</error>
+</ask>
+
+<ask author="GT-猛星">
+ <title>我国四大直辖市是哪四个城市？</title>
+ <correct>北京、上海、天津、重庆</correct>
+ <error>北京、上海、重庆、深圳</error>
+ <error>成都、上海、北京、济南</error>
+ <error>成都、大连、深圳、杭州</error>
+</ask>
+
+<ask author="秋晚·枫叶">
+ <title>打造一把超凡三阶段的光锥共需要多少光锥碎片？</title>
+ <correct>2005</correct>
+ <error>2000</error>
+ <error>1995</error>
+ <error>1985</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>“我消灭你，与你无关”这句话出自哪本小说？</title>
+ <error>《流浪地球》</error>
+ <correct>《三体》</correct>
+ <error>《高堡奇人》</error>
+ <error>《盗梦空间》</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>首领工厂战场中第一个上架的的Boss是？</title>
+ <error>战斗僵尸</error>
+ <correct>财宝僵尸</correct>
+ <error>飓风巫师</error>
+ <error>末日坦克</error>
+</ask>
+
+<ask author="碳化欧鳇">
+ <title>以下哪个是氧化物</title>
+ <correct>水</correct>
+ <error>黄金</error>
+ <error>碳酸氢铵</error>
+ <error>臭氧</error>
+</ask>
+
+<ask author=" ゛永恆の审判日">
+ <title>科幻小说中常见的光速飞船的驱动方式是以下哪种</title>
+ <correct>空间曲率驱动</correct>
+ <error>核聚变发动机驱动</error>
+ <error>喷气式发动机驱动</error>
+ <error>沃龙助推驱动</error>
+</ask>
+
+<ask author="NRD.硬糖"> 
+ <title>名句“落霞与孤鹜齐飞，秋水共长天一色”出自哪种体裁的作品</title>
+ <correct>骈体文</correct>
+ <error>诗</error>
+ <error>词</error>
+ <error>曲</error>
+</ask>
+
+<ask author="『小可爱』云兮 ">
+ <title>以下条约中，哪个是平等条约 </title>
+ <correct>《尼布楚条约》</correct>
+ <error>《望厦条约》</error>
+ <error>《黄埔条约》</error>
+ <error>《马关条约》</error>
+</ask>
+
+<ask author="『小可爱』云兮 ">
+ <title>我国第一部国别体史书是</title>
+ <correct>《国语》</correct>
+ <error>《战国策》</error>
+ <error>《春秋》</error>
+ <error>《史记》</error>
+</ask>
+
+<ask author="『小可爱』云兮 ">
+ <title>以下不是四大名著的是</title>
+ <correct>《西厢记》</correct>
+ <error>《西游记》</error>
+ <error>《红楼梦》</error>
+ <error>《三国演义》</error>
+</ask>
+
+<ask author="『羁绊』·豆包"> 
+<title>以下哪个是河北的本土乐队</title>
+ <correct>万能青年旅店乐队</correct>
+ <error>丢火车乐队</error>
+ <error>萨满乐队</error>
+ <error>飘乐队</error>
+</ask>
+
+<ask author="白了卡">
+ <title>在爆枪30.4版本，冷冻宝石在以下哪个关卡掉落</title>
+ <correct>98级天空顶</correct>
+ <error>96级实验室入口</error>
+ <error>99级实验室顶层</error>
+ <error>98级实验室中层</error>
+</ask>
+
+<ask author="Rainy_忧雨">
+ <title>94版电视剧《三国演义》中“我被酒色所伤，竟然如此憔悴”是谁的台词？</title>
+ <correct>吕布</correct>
+ <error>张飞</error>
+ <error>袁术</error>
+ <error>沃龙</error>
+</ask>
+
+<ask author="zhrh141516">
+ <title>联合国设立的“国际禁毒日”是每年的</title>
+ <correct>6月26日</correct>
+ <error>7月3日</error>
+ <error>6月1日</error>
+ <error>5月17日</error>
+</ask>
+
+<ask author="zhrh141516">
+ <title>在路上有陌生人给你一种像糖果的东西，你的选择应该是</title>
+ <correct>干脆拒绝</correct>
+ <error>碍于面子，勉强吃下</error>
+ <error>相信他，直接吞下</error>
+ <error>好奇，尝试一下也没关系</error>
+</ask>
+
+<ask author="粉红色的回忆hpc">
+ <title>被称为“交流电之父”的科学家是</title>
+ <correct>法拉第</correct>
+ <error>特斯拉</error>
+ <error>爱迪生</error>
+ <error>爱因斯坦</error>
+</ask>
+
+ <ask author="空闲又淡定的盒饭mdra">
+ <title>以下哪个技能能对有“红武敏感”的敌人造成伤害</title>
+ <correct>全域光波</correct>
+ <error>电离折射</error>
+ <error>毒雾</error>
+ <error>群体自燃</error>
+</ask>
+
+<ask author="随波逐流---">
+ <title>boss战神在血量为24.5%时属于什么敏感类型</title>
+ <correct>火炮敏感</correct>
+ <error>副手敏感</error>
+ <error>狙击敏感</error>
+ <error>尸宠敏感</error>
+</ask>
+
+<ask author="王颖">
+ <title>充值返利获得的返利黄金是否会纳入VIP累计金额？</title>
+ <correct>会</correct>
+ <error>不会</error>
+ <error>分情况</error>
+ <error>不一定</error>
+</ask>
+
+<ask author="王颖">
+ <title>以下哪个时装是覆盖全身的？</title>
+ <correct>小鸣时装</correct>
+ <error>虚化面具</error>
+ <error>神烦狗</error>
+ <error>小贝头盔</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>“唐宋八大家”不包括</title>
+ <correct>白居易</correct>
+ <error>柳宗元</error>
+ <error>韩愈</error>
+ <error>曾巩</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>《七子之歌》中的“七子”不包括</title>
+ <correct>外东北</correct>
+ <error>大连</error>
+ <error>广州湾</error>
+ <error>威海卫</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>以下哪个不是国产动画片？</title>
+ <correct>《铁臂阿童木》</correct>
+ <error>《黑猫警长》</error>
+ <error>《葫芦娃》</error>
+ <error>《舒克和贝塔》</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>以下属于偶函数的是</title>
+ <correct>f（x）=cosx</correct>
+ <error>f（x）=sinx</error>
+ <error>f（x）=tanx</error>
+ <error>f（x）=2x</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>成语三马食槽中的“三马”不包括</title>
+ <correct>司马徽</correct>
+ <error>司马懿</error>
+ <error>司马师</error>
+ <error>司马昭</error>
+</ask>
+
+<ask author="NRD.硬糖">
+ <title>著名篮球运动员科比·布莱恩特曾在对战哪只球队时狂砍81分？</title>
+ <correct>猛龙</correct>
+ <error>勇士</error>
+ <error>火箭</error>
+ <error>湖人</error>
+</ask>
+
+<ask author="天翼诺西亚">
+ <title>“英国”的全称是什么</title>
+ <correct>大不列颠及北爱尔兰联合王国</correct>
+ <error>英吉利国</error>
+ <error>英特尔联合王国</error>
+ <error>带嘤帝国</error>
+</ask>
+
+<ask author="穹之顶·雨安">
+ <title>2000年，福布斯排行榜上第一位是哪位富豪</title>
+ <correct>比尔·盖茨</correct>
+ <error>沃伦·巴菲特</error>
+ <error>沃龙·先生</error>
+ <error>拉里·埃里森</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>以下细胞器中含有DNA的是</title>
+ <correct>线粒体</correct>
+ <error>内质网</error>
+ <error>高尔基体</error>
+ <error>核糖体</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>“立木南门”源于以下哪个历史事件？</title>
+ <correct>商鞅变法</correct>
+ <error>大禹治水</error>
+ <error>淝水之战</error>
+ <error>黄巢起义</error>
+</ask>
+
+<ask author="『小可爱』沧海 ">
+ <title>爆枪GM三人组不包括</title>
+ <correct>巨毒尸</correct>
+ <error>沃龙先生</error>
+ <error>花火</error>
+ <error>丛安</error>
+</ask>
+
+<ask author="影剑·凌逍遥">
+ <title>辰龙进阶到无双阶段获得技能为</title>
+ <correct>散射电爆</correct>
+ <error>穿甲虎刃</error>
+ <error>突袭</error>
+ <error>化锁</error>
+</ask>
+
+
+	<![CDATA[	
+<ask>
+	<title>三阶魔方的变化总数的数量级为</title>
+	<correct>10^19</correct>
+	<error>10^17</error>
+	<error>10^18</error>
+	<error>10^20</error>
+	<error>10^21</error>
+</ask>
+<ask>
+	<title>黄河不流经以下哪个省级行政单位</title>
+	<correct>重庆</correct>
+	<error>内蒙古</error>
+	<error>青海</error>
+	<error>四川</error>
+	<error>宁夏</error>
+</ask>
+<ask author="沃龙">
+	<title>以下哪种能源是可再生能源</title>
+	<correct>氢能</correct>
+	<error>核能</error>
+	<error>煤炭</error>
+	<error>石油</error>
+</ask>
+<ask>
+	<title>以下哪种物质不能做食品添加剂</title>
+	<correct>三聚氰胺</correct>
+	<error>二氧化硫</error>
+	<error>谷氨酸钠</error>
+	<error>亚硝酸钠</error>
+	<error>苯甲酸钾</error>
+</ask>
+<ask>
+	<title>以下哪种物质能使蛋白质变性</title>
+	<correct>硫酸铜</correct>
+	<error>氯化铵</error>
+	<error>氯化钠</error>
+	<error>硝酸钾</error>
+</ask>
+<ask>
+	<title>水滴在叶片表面呈球形是因为水滴受到</title>
+	<correct>表面张力</correct>
+	<error>万有引力</error>
+	<error>强相互作用</error>
+	<error>分子斥力</error>
+	<error>洛伦兹力</error>
+</ask>
+<ask>
+	<title>引起北方地区沙尘暴的天气系统主要是</title>
+	<correct>冷锋</correct>
+	<error>暖锋</error>
+	<error>反气旋</error>
+	<error>台风</error>
+</ask>
+<ask>
+	<title>我国国道命名中，首位数字3表示该国道为</title>
+	<correct>东西走向</correct>
+	<error>南北走向</error>
+	<error>西北-东南走向</error>
+	<error>东北-西南走向</error>
+</ask>
+<ask>
+	<title>下列哪个实验测定了万有引力常量的值</title>
+	<correct>扭秤实验</correct>
+	<error>理想斜面实验</error>
+	<error>光电效应实验</error>
+	<error>月-地检验</error>
+	<error>油滴实验</error>
+</ask>
+<ask>
+	<title>根据人造地球卫星的周期和运动半径可以测出</title>
+	<correct>地球的质量</correct>
+	<error>地球的半径</error>
+	<error>人造卫星的质量</error>
+	<error>地球的密度</error>
+</ask>
+<ask>
+	<title>“连中三元”中，“三元”的取得顺序依次为</title>
+	<correct>解元，会元，状元</correct>
+	<error>解元，状元，会元</error>
+	<error>会元，解元，状元</error>
+	<error>会元，状元，解元</error>
+	<error>状元，会元，解元</error>
+	<error>状元，解元，会元</error>
+</ask>
+<ask>
+	<title>下列哪项不是兵部管辖的内容</title>
+	<correct>军饷</correct>
+	<error>军令</error>
+	<error>军队</error>
+	<error>军械</error>
+</ask>
+<ask>
+	<title>在我国古代，“总角”是指</title>
+	<correct>少年儿童</correct>
+	<error>婴儿</error>
+	<error>青年男性</error>
+	<error>成年女性</error>
+</ask>
+<ask>
+	<title>“壬戌之秋，七月既望”中，“既望”是指每月的农历</title>
+	<correct>十六</correct>
+	<error>初一</error>
+	<error>十五</error>
+	<error>廿九</error>
+	<error>三十</error>
+</ask>
+<ask>
+	<title>下列哪项是管理监察事务的官职</title>
+	<correct>御史大夫</correct>
+	<error>国子监</error>
+	<error>礼部尚书</error>
+	<error>太守</error>
+</ask>
+<ask>
+	<title>在下列长度的正式跑步比赛中，必须使用蹲踞式起跑的是</title>
+	<correct>400米</correct>
+	<error>800米</error>
+	<error>1500米</error>
+	<error>3000米</error>
+</ask>
+<ask>
+	<title>在现行花样滑冰规则中，分值最高的单个跳跃名称为</title>
+	<correct>4A</correct>
+	<error>4T</error>
+	<error>4S</error>
+	<error>4Lo</error>
+	<error>4Lz</error>
+</ask>
+<ask>
+	<title>世界杯足球赛共有多少场正赛</title>
+	<correct>64</correct>
+	<error>63</error>
+	<error>32</error>
+	<error>127</error>
+	<error>128</error>
+	<error>31</error>
+</ask>
+<ask>
+	<title>世界首个同时举办过夏季和冬季奥运会的城市为</title>
+	<correct>北京</correct>
+	<error>华盛顿</error>
+	<error>伦敦</error>
+	<error>里约热内卢</error>
+	<error>东京</error>
+</ask>
+<ask>
+	<title>目前，男子100米跑的世界纪录为多少秒</title>
+	<correct>9.58</correct>
+	<error>9.48</error>
+	<error>9.53</error>
+	<error>9.63</error>
+	<error>9.68</error>
+	<error>9.73</error>
+	<error>9.83</error>
+</ask>
+<ask>
+	<title>我国的“十四五”规划的起止年份分别为</title>
+	<correct>2021,2025</correct>
+	<error>2020,2024</error>
+	<error>2022,2026</error>
+	<error>2023,2027</error>
+</ask>
+<ask>
+	<title>下列哪个不属于2021年感动中国十大人物</title>
+	<correct>张定宇</correct>
+	<error>顾诵芬</error>
+	<error>朱彦夫</error>
+	<error>陈贝儿</error>
+	<error>杨振宁</error>
+</ask>
+<ask>
+	<title>世界最大的单口径球面射电望远镜名称为</title>
+	<correct>FAST</correct>
+	<error>SKA</error>
+	<error>RATAN-600</error>
+	<error>Arecibo</error>
+</ask>
+<ask>
+	<title>民航客机起飞过程中，飞机客舱内的气压</title>
+	<correct>逐渐降低</correct>
+	<error>保持不变</error>
+	<error>逐渐升高</error>
+	<error>在某一高度突然下降</error>
+</ask>
+<ask>
+	<title>相比青藏铁路，川藏铁路在建设时需额外关注</title>
+	<correct>复杂地质</correct>
+	<error>高寒冻土</error>
+	<error>高原反应</error>
+	<error>沿线民生</error>
+</ask>
+<ask>
+	<title>下列不属于危险户外运动的是</title>
+	<correct>铁人三项</correct>
+	<error>徒手攀岩</error>
+	<error>翼装飞行</error>
+	<error>低空跳伞</error>
+</ask>
+<ask>
+	<title>目前，上海市较低文化人口迁出上海，主要是因为上海</title>
+	<correct>产业转型升级</correct>
+	<error>环境污染严重</error>
+	<error>接受产业转移</error>
+	<error>居住政策限制</error>
+</ask>
+<ask>
+	<title>下列省级行政区中，省会GDP占全省GDP总值最高的是</title>
+	<correct>湖北省</correct>
+	<error>江苏省</error>
+	<error>浙江省</error>
+	<error>山东省</error>
+</ask>
+<ask>
+	<title>黄土高原地区的农业生产特点包括</title>
+	<correct>坡耕地比例大</correct>
+	<error>农业类型多样</error>
+	<error>生产精耕细作</error>
+	<error>耕作条件优越</error>
+</ask>
+<ask>
+	<title>我国北方某城市主干道两侧绿化带一侧植被齐整，另一侧杂草丛生，原因是主干道两侧</title>
+	<correct>行政管辖不同</correct>
+	<error>用地类型差异</error>
+	<error>景观规划不同</error>
+	<error>居民爱好差异</error>
+</ask>
+<ask>
+	<title>青海冷湖观测站作为优秀星空观测站点的优势条件不包括</title>
+	<correct>交通运输便利</correct>
+	<error>大气洁净度高</error>
+	<error>人类活动较少</error>
+	<error>距离星空较近</error>
+</ask>
+<ask>
+	<title>短视频在传播城市文化地标方面的优势包括</title>
+	<correct>创作主体丰富</correct>
+	<error>传播途径多样</error>
+	<error>传播更加正式</error>
+	<error>官方认可度高</error>
+</ask>
+<ask>
+	<title>喜马拉雅山脉南坡植被垂直带谱更丰富的原因包括</title>
+	<correct>海拔落差更大</correct>
+	<error>各地积温更高</error>
+	<error>大陆气团控制</error>
+	<error>冰雪融水丰富</error>
+</ask>
+<ask>
+	<title>低纬度海区的人工岛下部存在淡水存储，其特点包括</title>
+	<correct>淡水储量较少</correct>
+	<error>淡水难于开采</error>
+	<error>淡水难于保存</error>
+	<error>淡水水质较差</error>
+</ask>
+<ask>
+	<title>在地势低平的河流入海口处修建水闸的目的包括</title>
+	<correct>减少泥沙淤积</correct>
+	<error>促进潮流冲淤</error>
+	<error>加速洪水下泄</error>
+	<error>拦截入海泥沙</error>
+</ask>
+<ask>
+	<title>在日本家电产业转移至东南亚的背景下，我国家电产业的发展方向是</title>
+	<correct>加强技术研发</correct>
+	<error>进口国外产品</error>
+	<error>扩大生产规模</error>
+	<error>吸引日资回归</error>
+</ask>
+<ask>
+	<title>近年来，我国东北地区用于运输木材的铁路几乎废弃的原因包括</title>
+	<correct>运输需求过小</correct>
+	<error>设施过于陈旧</error>
+	<error>资金供给不足</error>
+	<error>铁路线路过密</error>
+</ask>
+<ask>
+	<title>2021年我国第七次人口普查的结果表明我国人口</title>
+	<correct>增长速度放缓</correct>
+	<error>性别严重失衡</error>
+	<error>总量开始下降</error>
+	<error>地区分布均匀</error>
+</ask>
+<ask>
+	<title>巢湖平原某乡镇过去种植双季稻，近年来随着城镇化发展改为种植单季稻，表现该地近年来</title>
+	<correct>种田大户增多</correct>
+	<error>种植结构复杂</error>
+	<error>复种指数增加</error>
+	<error>田间管理精细</error>
+</ask>
+<ask>
+	<title>下列高校中，属于“985”院校的是</title>
+	<correct>西北农林科技大学</correct>
+	<error>武汉理工大学</error>
+	<error>上海财经大学</error>
+	<error>华北电力大学</error>
+	<error>河北工业大学</error>
+</ask>
+<ask>
+	<title>相比正常投档录取考生，“强基计划”录取考生的不同之处不包括</title>
+	<correct>不参加高考</correct>
+	<error>限制转专业</error>
+	<error>小班化培养</error>
+	<error>本硕博连读</error>
+</ask>
+<ask>
+	<title>下列哪一项属于人体拥有的微量元素</title>
+	<correct>铁</correct>
+	<error>碳</error>
+	<error>钙</error>
+	<error>镁</error>
+	<error>硫</error>
+</ask>
+<ask>
+	<title>门捷列夫制作的第一张元素周期表的特点是</title>
+	<correct>按照原子质量排序</correct>
+	<error>拥有七个完整周期</error>
+	<error>相对原子质量准确</error>
+	<error>原子序数标示清晰</error>
+</ask>
+<ask>
+	<title>近年高考中，出现了大规模争议题目，且因此修改了标准答案的年份是</title>
+	<correct>2018</correct>
+	<error>2017</error>
+	<error>2019</error>
+	<error>2015</error>
+	<error>2016</error>
+</ask>
+<ask>
+	<title>下列符号与名称对应的是</title>
+	<correct>A——腺嘌呤</correct>
+	<error>G——胞嘧啶</error>
+	<error>C——鸟嘌呤</error>
+	<error>U——胸腺嘧啶</error>
+</ask>
+<ask>
+	<title>在新冠肺炎传播期间，以下哪种做法是不正确的</title>
+	<correct>积极参加聚集活动</correct>
+	<error>及时完成核酸检测</error>
+	<error>保持一米社交距离</error>
+	<error>坚持公筷公勺进餐</error>
+	<error>加强室内开窗通风</error>
+</ask>
+<ask>
+	<title>现有文献记载表明，下列哪种疾病一旦发病致死率为100%</title>
+	<correct>狂犬病</correct>
+	<error>包虫病</error>
+	<error>小儿麻痹症</error>
+	<error>天花</error>
+</ask>
+<ask>
+	<title>现在常用氯仿灭活病毒，氯仿的化学名称是</title>
+	<correct>三氯甲烷</correct>
+	<error>一氯甲烷</error>
+	<error>二氯甲烷</error>
+	<error>三氯甲苯</error>
+	<error>四氯化碳</error>
+</ask>
+<ask>
+	<title>阿波罗尼斯发现，到两定点距离之比为不为1的常数的点的轨迹是</title>
+	<correct>圆</correct>
+	<error>椭圆</error>
+	<error>双曲线</error>
+	<error>抛物线</error>
+	<error>双曲螺旋线</error>
+</ask>
+<ask>
+	<title>相比唐朝，我国在宋朝时期</title>
+	<correct>城市经济发展迅速</correct>
+	<error>知行合一学说盛行</error>
+	<error>诗歌文学空前壮大</error>
+	<error>罢黜百家独尊儒术</error>
+</ask>
+<ask>
+	<title>在《论语》中，孔子给予了《诗经》怎样的评价</title>
+	<correct>思无邪</correct>
+	<error>致良知</error>
+	<error>存天理</error>
+	<error>灭人欲</error>
+</ask>
+<ask>
+	<title>“落霞与孤鹜齐飞，秋水共长天一色”的创作，借鉴了先辈的哪一首诗</title>
+	<correct>马射赋</correct>
+	<error>思旧赋</error>
+	<error>洛神赋</error>
+	<error>滕王阁序</error>
+	<error>赤壁赋</error>
+</ask>
+<ask>
+	<title>我国明清代的科举考试所用《四书章句集注》是谁所编纂</title>
+	<correct>朱熹</correct>
+	<error>王阳明</error>
+	<error>程颐</error>
+	<error>董仲舒</error>
+	<error>王安石</error>
+</ask>
+<ask>
+	<title>意大利文艺复兴时期的社会特点包括</title>
+	<correct>人文主义广泛传播</correct>
+	<error>法律面前人人平等</error>
+	<error>天赋人权深入人心</error>
+	<error>电气工业发展迅速</error>
+	<error>社会主义开始萌芽</error>
+</ask>
+<ask>
+	<title>极度震撼人心的舞蹈诗剧《只此青绿》取材于</title>
+	<correct>《千里江山图》</correct>
+	<error>《清明上河图》</error>
+	<error>《唐宫仕女图》</error>
+	<error>《汉宫春晓图》</error>
+</ask>
+<ask>
+	<title>随着社会的发展，相比于传统小说，现代小说的特点不包括</title>
+	<correct>人物描写细腻具体</correct>
+	<error>主题宏大直击人性</error>
+	<error>善于调动读者动力</error>
+	<error>更加注重心理活动</error>
+</ask>
+<ask>
+	<title>倡导“文章合为时而著，歌诗合为事而作”的著名诗人是</title>
+	<correct>白居易</correct>
+	<error>杜甫</error>
+	<error>王勃</error>
+	<error>苏轼</error>
+	<error>李白</error>
+	<error>王安石</error>
+</ask>
+<ask>
+	<title>对下列地名注音正确的一项是</title>
+	<correct>日喀（ka）则</correct>
+	<error>六（liu）安</error>
+	<error>蚌埠（pu）</error>
+	<error>临沂（qi）</error>
+	<error>亳（hao）州</error>
+</ask>
+<ask>
+	<title>在我国古代，“孤”是指</title>
+	<correct>幼年丧父</correct>
+	<error>老无终养</error>
+	<error>孤独无依</error>
+	<error>中年丧偶</error>
+</ask>
+<ask>
+	<title>著名的马德堡半球实验发现了大气压强的存在，马德堡是</title>
+	<correct>地名</correct>
+	<error>人名</error>
+	<error>军队名</error>
+	<error>官职名</error>
+</ask>
+<ask>
+	<title>2010-2020年，上证指数（000001）的最高点数为</title>
+	<correct>5178.19</correct>
+	<error>3373.54</error>
+	<error>6124.04</error>
+	<error>3731.69</error>
+	<error>4570.58</error>
+</ask>
+<ask>
+	<title>下列哪个代号表示鄂尔多斯市</title>
+	<correct>蒙K</correct>
+	<error>鄂A</error>
+	<error>鄂D</error>
+	<error>鄂E</error>
+	<error>鄂R</error>
+</ask>
+<ask>
+	<title>著名的桂林山水地貌形成的过程主要包括</title>
+	<correct>流水溶蚀地表</correct>
+	<error>火山强烈喷发</error>
+	<error>风力侵蚀搬运</error>
+	<error>冰川碎屑沉积</error>
+</ask>
+<ask>
+	<title>单词“critical”的中文释义中不包括</title>
+	<correct>有价值的</correct>
+	<error>批判的</error>
+	<error>审慎的</error>
+	<error>关键的</error>
+	<error>极重要的</error>
+	<error>严重的</error>
+</ask>
+<ask>
+	<title>FAT32格式的硬盘中，单个文件理论最大为</title>
+	<correct>4194304K</correct>
+	<error>32K</error>
+	<error>2147483648K</error>
+	<error>1048576K</error>
+	<error>65536K</error>
+</ask>
+<ask>
+	<title>下列诗句中，蕴含了化学变化的是</title>
+	<correct>蜡炬成灰泪始干</correct>
+	<error>千树万树梨花开</error>
+	<error>星河欲转千帆舞</error>
+	<error>无边落木萧萧下</error>
+	<error>沧海月明珠有泪</error>
+</ask>
+<ask>
+	<title>在湖北西部山区的高速公路隧道上，为了防止货车超速，高速公路经过了怎样的处理</title>
+	<correct>封闭单条车道</correct>
+	<error>增设加气提醒</error>
+	<error>减缓弯道坡度</error>
+	<error>拓宽车道范围</error>
+	<error>增加隧道数量</error>
+</ask>
+<ask>
+	<title>下列不是能量单位的是</title>
+	<correct>千焦每摩尔</correct>
+	<error>千瓦时</error>
+	<error>电子伏特</error>
+	<error>卡路里</error>
+</ask>
+<ask>
+	<title>首先发现光电效应的伟大科学家是</title>
+	<correct>赫兹</correct>
+	<error>爱因斯坦</error>
+	<error>法拉第</error>
+	<error>奥斯特</error>
+	<error>库仑</error>
+</ask>
+<ask>
+	<title>下列不属于杜甫诗歌特点的是</title>
+	<correct>想象丰富瑰丽</correct>
+	<error>关照现实民生</error>
+	<error>寄托理想抱负</error>
+	<error>阐发时代特点</error>
+	<error>语言沉郁顿挫</error>
+</ask>
+<ask>
+	<title>目前，能够接种第3针新冠疫苗的有</title>
+	<correct>19岁的大学生小明</correct>
+	<error>17岁的高中生小红</error>
+	<error>15岁的初中生小李</error>
+	<error>11岁的小学生小张</error>
+</ask>
+<ask>
+	<title>2021年，以下哪个省份的普通高中录取率最低</title>
+	<correct>江苏</correct>
+	<error>北京</error>
+	<error>黑龙江</error>
+	<error>湖北</error>
+	<error>天津</error>
+</ask>
+<ask>
+	<title>著名的高考数学命题人葛军参与了以下哪个年份的高考命题</title>
+	<correct>2004</correct>
+	<error>2019</error>
+	<error>1999</error>
+	<error>2013</error>
+	<error>2021</error>
+</ask>
+<ask>
+	<title>在西藏阿里地区，人们普遍信奉的神山名称为</title>
+	<correct>冈仁波齐</correct>
+	<error>梅里雪山</error>
+	<error>南迦巴瓦</error>
+	<error>珠穆朗玛</error>
+	<error>雅拉雪山</error>
+</ask>
+<ask>
+	<title>在穿越珠峰的冰川区时，为了减少冰川消融影响，一般于什么时间开始穿越</title>
+	<correct>1:00</correct>
+	<error>7:00</error>
+	<error>10:00</error>
+	<error>14:00</error>
+	<error>18:00</error>
+</ask>
+<ask>
+	<title>下列哪种酸的酸性最强</title>
+	<correct>六氟合锑酸</correct>
+	<error>高氯酸</error>
+	<error>重铬酸</error>
+	<error>邻二苯甲酸</error>
+	<error>发烟硝酸</error>
+</ask>
+<ask>
+	<title>下列哪个物质不能用于抗氧化剂</title>
+	<correct>过氧化氢</correct>
+	<error>维生素C</error>
+	<error>还原铁粉</error>
+	<error>二氧化硫</error>
+	<error>EDTA</error>
+</ask>
+<ask>
+	<title>皇帝临行时祭祖以祈求平安，“祭祖”指的是</title>
+	<correct>祭祀路神</correct>
+	<error>祭祀祖先</error>
+	<error>祭祀父辈</error>
+	<error>祭祀土神</error>
+	<error>祭祀谷神</error>
+</ask>
+<ask>
+	<title>拥有世界上最大高原的国家是</title>
+	<correct>以上均不是</correct>
+	<error>中国</error>
+	<error>美国</error>
+	<error>巴基斯坦</error>
+	<error>南非</error>
+                <error>巴西</error>
+</ask>
+<ask>
+	<title>下列哪两届夏季奥运会的间隔不为4年</title>
+	<correct>31,32</correct>
+	<error>16,17</error>
+	<error>28,29</error>
+	<error>20,21</error>
+	<error>23,24</error>
+</ask>
+<ask>
+	<title>在cmd命令中，表示关机的是</title>
+	<correct>shutdown -s</correct>
+	<error>shutoff -s</error>
+	<error>shutback -s</error>
+	<error>shutin -s</error>
+	<error>shutout -s</error>
+</ask>
+<ask>
+	<title>下列哪个不是高考理科综合中三科满分的数值</title>
+	<correct>120,90,90</correct>
+	<error>120,108,72</error>
+	<error>120,100,80</error>
+	<error>110,100,90</error>
+</ask>
+<ask>
+	<title>一般地，气象意义的夏季是指连续5天滑动平均气温不低于</title>
+	<correct>22摄氏度</correct>
+	<error>25摄氏度</error>
+	<error>20摄氏度</error>
+	<error>27摄氏度</error>
+	<error>30摄氏度</error>
+</ask>
+<ask>
+	<title>下列哪个不是单细胞生物</title>
+	<correct>流感病毒</correct>
+	<error>变形虫</error>
+	<error>大肠杆菌</error>
+	<error>衣藻</error>
+	<error>草履虫</error>
+</ask>
+<ask>
+	<title>一粒花生仁属于生命系统的哪个层次</title>
+	<correct>器官</correct>
+	<error>细胞</error>
+	<error>个体</error>
+	<error>组织</error>
+	<error>系统</error>
+</ask>
+<ask>
+	<title>下列哪两个地点间可以推进错时共享停车位</title>
+	<correct>居民小区，行政局</correct>
+	<error>高级酒店，购物中心</error>
+	<error>普通高中，大型医院</error>
+	<error>加油站，豪华餐馆</error>
+</ask>
+<ask>
+	<title>下列交通方式中，以运行相同距离计算，最危险的是</title>
+	<correct>步行</correct>
+	<error>飞机</error>
+	<error>轮船</error>
+	<error>公共汽车</error>
+	<error>自行车</error>
+</ask>
+<ask>
+	<title>下列做法中，可行的是</title>
+	<correct>用热纯碱溶液洗涤油污</correct>
+	<error>家中电解自来水制氢气</error>
+	<error>用水扑灭活泼金属着火</error>
+	<error>随意填埋聚氯乙烯塑料</error>
+	<error>84消毒液与洁厕灵混用</error>
+</ask>
+<ask>
+	<title>在遭遇地震预警时，下列做法正确的是</title>
+	<correct>抓牢稳定物体</correct>
+	<error>迅速躲进电梯</error>
+	<error>开窗跳楼逃生</error>
+	<error>重复预警内容</error>
+	<error>抱紧身旁树干</error>
+</ask>
+
+
+
+
+
+
+
+		<ask id="1">
+			<title>国土面积排名第四的国家是？</title>
+			<correct>美国</correct>
+			<error>中国</error>
+			<error>加拿大</error>
+			<error>澳大利亚</error>
+			<error>印度</error>
+			<error>巴西</error>
+		</ask>
+		<ask id="2">
+			<title>人口数量排名第四的国家是？</title>
+			<correct>印度尼西亚</correct>
+			<error>巴西</error>
+			<error>美国</error>
+			<error>巴基斯坦</error>
+			<error>尼日利亚</error>
+			<error>俄罗斯</error>
+		</ask>
+		<ask id="3">
+			<title>地球流域最广的河流是？</title>
+			<correct>亚马逊河</correct>
+			<error>尼罗河</error>
+			<error>长江</error>
+			<error>密西西比河</error>
+			
+		</ask>
+		<ask id="4">
+			<title>哪个国家拥有世界上最大的平原面积？</title>
+			<correct>巴西</correct>
+			<error>美国</error>
+			<error>加拿大</error>
+			<error>中国</error>
+		</ask>
+		<ask id="5">
+			<title>世界上最小的国家是？</title>
+			<correct>梵蒂冈</correct>
+			<error>瑙鲁</error>
+			<error>图瓦卢</error>
+			<error>圣马力诺</error>
+		</ask>
+		
+		<ask id="6">
+			<title>科举制度于哪一年被正式废除？</title>
+			<correct>1906年</correct>
+			<error>1909年</error>
+			<error>1907年</error>
+			<error>1904年</error>
+		</ask>
+		<ask id="7">
+			<title>中国历史上第一位女皇帝是？</title>
+			<correct>元姑娘</correct>
+			<error>陈硕真</error>
+			<error>武则天</error>
+			<error>耶律普速完</error>
+			<error>慈禧</error>
+		</ask>
+		<ask id="8">
+			<title>中国历史上在位时间排名第二的皇帝是？</title>
+			<correct>乾隆</correct>
+			<error>康熙</error>
+			<error>雍正</error>
+			<error>汉武帝</error>
+			<error>秦始皇</error>
+		</ask>
+		<ask id="9">
+			<title>以下哪个朝代的GDP在当时的全世界占比最高？</title>
+			<correct>宋朝</correct>
+			<error>汉朝</error>
+			<error>明朝</error>
+			<error>清朝</error>
+		</ask>
+		<ask id="10">
+			<title>世界上面积排名第四的岛屿是？</title>
+			<correct>马达加斯加岛</correct>
+			<error>格陵兰岛</error>
+			<error>日本本州岛</error>
+			<error>台湾岛</error>
+			<error>大不列颠岛</error>
+		</ask>
+		<ask id="11">
+			<title>人体最大的器官是</title>
+			<correct>皮肤</correct>
+			<error>胃</error>
+			<error>肺</error>
+			<error>肠</error>
+		</ask>
+		<ask id="12">
+			<title>世界上面积排名第四的沙漠是？</title>
+			<correct>澳大利亚沙漠</correct>
+			<error>撒哈拉沙漠</error>
+			<error>利比亚沙漠</error>
+			<error>戈壁沙漠</error>
+		</ask>
+		<ask id="13">
+			<title>以下哪个国家森林覆盖率最高</title>
+			<correct>日本</correct>
+			<error>韩国</error>
+			<error>巴西</error>
+			<error>美国</error>
+		</ask>
+		<ask id="14">
+			<title>中国森林覆盖率最高的省份是？</title>
+			<correct>福建省</correct>
+			<error>浙江省</error>
+			<error>江西省</error>
+			<error>广东省</error>
+		</ask>
+		<ask id="15">
+			<title>2017年中国人口密度最高的省份是？</title>
+			<correct>澳门</correct>
+			<error>香港</error>
+			<error>上海</error>
+			<error>北京</error>
+			<error>天津</error>
+		</ask>
+		<ask id="16">
+			<title>2017年中国人口密度最低的省份是？ </title>
+			<correct>西藏</correct>
+			<error>青海</error>
+			<error>新疆</error>
+			<error>内蒙古</error>
+		</ask>
+		<ask id="17">
+			<title>2016年中国经济总量最高的省份是？</title>
+			<correct>广东省</correct>
+			<error>江苏省</error>
+			<error>山东省</error>
+			<error>浙江省</error>
+			
+		</ask>
+		<ask id="18">
+			<title>2017年中国第一高楼是？</title>
+			<correct>上海中心大厦</correct>
+			<error>天津117大厦</error>
+			<error>深圳平安国际金融中心</error>
+			<error>广州周大福中心</error>
+		</ask>
+		<ask id="19">
+			<title>2017年世界第一已建成高楼是？</title>
+			<correct>哈利法塔</correct>
+			<error>上海中心大厦</error>
+			<error>天津117大厦</error>
+			<error>麦加皇家钟塔饭店</error>
+			
+		</ask>
+		<ask id="21">
+			<title>中国第一部票房过亿的电影是？</title>
+			<correct>少林寺</correct>
+			<error>英雄</error>
+			<error>十面埋伏</error>
+			<error>天下无贼</error>
+		</ask>
+		<ask id="22">
+			<title>中国全面抗日战争开始于？ </title>
+			<correct>卢沟桥事变</correct>
+			<error>淞沪会战</error>
+			<error>918事变</error>
+			<error>上高会战</error>
+		</ask>
+		<ask id="23">
+			<title>哪个网站或APP不能购买动车票？ </title>
+			<correct>滴滴</correct>
+			<error>12306</error>
+			<error>支付宝</error>
+			<error>微信</error>
+			<error>携程</error>
+			<error>京东</error>
+		</ask>
+		<ask id="24">
+			<title>以下哪种水果含糖量最低？</title>
+			<correct>牛油果</correct>
+			<error>葡萄</error>
+			<error>荔枝</error>
+			<error>香蕉</error>
+			
+		</ask>
+		<ask id="25">
+			<title>中国历史上最长寿的皇帝是？</title>
+			<correct>乾隆</correct>
+			<error>康熙</error>
+			<error>梁武帝</error>
+			<error>武则天</error>
+			<error>忽必烈</error>
+		</ask>
+		<ask id="26">
+			<title>以下哪些不属于垃圾食品？</title>
+			<correct>原味瓜子</correct>
+			<error>可乐</error>
+			<error>糖果</error>
+			<error>油条</error>
+			<error>罐头</error>
+		</ask>
+		<ask id="27">
+			<title>旁系血亲几代之后可以结婚？</title>
+			<correct>三代</correct>
+			<error>两代</error>
+			<error>一代</error>
+			<error>四代</error>
+		</ask>
+		<ask id="28">
+			<title>2017年黄金储备量最高的国家是？</title>
+			<correct>美国</correct>
+			<error>德国</error>
+			<error>意大利</error>
+			<error>法国</error>
+			<error>中国</error>
+		</ask>
+		<ask id="29">
+			<title>埃及最高金字塔的高度是？</title>
+			<correct>147米</correct>
+			<error>177米</error>
+			<error>157米</error>
+			<error>167米</error>
+		</ask>
+		<ask id="30">
+			<title>光合作用发现于？</title>
+			<correct>1771年</correct>
+			<error>1761年</error>
+			<error>1781年</error>
+			<error>1791年</error>
+		</ask>
+		<ask id="31">
+			<title>中国消费量最大的茶类是？</title>
+			<correct>绿茶</correct>
+			<error>红茶</error>
+			<error>乌龙茶</error>
+			<error>花茶</error>
+		</ask>
+		<ask id="32">
+			<title>男士戒指戴在哪根手指表示求爱？</title>
+			<correct>食指</correct>
+			<error>中指</error>
+			<error>无名指</error>
+			<error>小母指</error>
+		</ask>
+		<ask id="33">
+			<title>以下哪个朝代持续时间最长？</title>
+			<correct>商朝</correct>
+			<error>汉朝</error>
+			<error>唐朝</error>
+			<error>宋朝</error>
+		</ask>
+		<ask id="34">
+			<title>太阳系八大行星中哪个质量最小？</title>
+			<correct>水星</correct>
+			<error>金星</error>
+			<error>火星</error>
+			<error>天王星</error>
+			
+		</ask>
+		<ask id="35">
+			<title>夜空中最明亮的星星“天狼星”直径是太阳的几倍？</title>
+			<correct>1.8倍</correct>
+			<error>0.1倍</error>
+			<error>0.5倍</error>
+			<error>0.8倍</error>
+		</ask>
+		<ask id="36">
+			<title>以下哪些不是爆米花制作原材料？</title>
+			<correct>稻米</correct>
+			<error>玉米</error>
+			<error>大米</error>
+			<error>小米</error>
+		</ask>
+		<ask id="37">
+			<title>在所有英语单词中，哪个字母使用率最低？</title>
+			<correct>Z</correct>
+			<error>Q</error>
+			<error>X</error>
+			<error>J</error>
+		</ask>
+		<ask id="38">
+			<title>以下哪个是时间单位？</title>
+			<correct>卡尔巴</correct>
+			<error>光年</error>
+			<error>秒差距</error>
+			<error>天文单位</error>
+		</ask>
+		<ask id="39">
+			<title>在大气压101325帕下，水的沸点是多少度？</title>
+			<correct>100</correct>
+			<error>98</error>
+			<error>95</error>
+			<error>90</error>
+		</ask>
+		
+		
+		
+		
+		<ask id="40">
+			<title>以下哪些不是北京的别称？</title>
+			<correct>汴梁</correct>
+			<error>燕京</error>
+			<error>蓟城</error>
+			<error>涿郡</error>
+			<error>幽州</error>
+			
+		</ask>
+		<ask id="41">
+			<title>以下不是十大竹子之乡之一的是？</title>
+			<correct>四川乐山</correct>
+			<error>浙江临安</error>
+			<error>江西宜丰</error>
+			<error>湖南桃江</error>
+			<error>贵州赤水</error>
+			<error>福建建瓯</error>
+		</ask>
+		<ask id="42">
+			<title>太阳系中含水量最高的星球是？</title>
+			<correct>木卫二</correct>
+			<error>地球</error>
+			<error>天王星</error>
+			<error>水星</error>
+		</ask>
+		<ask id="43">
+			<title>地球最小的大洋是？</title>
+			<correct>北冰洋</correct>
+			<error>印度洋</error>
+			<error>大西洋</error>
+			<error>太平洋</error>
+		</ask>
+		<ask id="44">
+			<title>牛顿获得过几次诺贝尔奖？</title>
+			<correct>0次</correct>
+			<error>1次</error>
+			<error>2次</error>
+			<error>3次</error>
+		</ask>
+		<ask id="45">
+			<title>以下哪个国家是玉米的原产地？</title>
+			<correct>墨西哥</correct>
+			<correct>秘鲁</correct>
+			<error>中国</error>
+			<error>印度</error>
+			<error>埃及</error>
+		</ask>
+		<ask id="46">
+			<title>大部分人最喜欢以下哪家餐厅的汉堡？</title>
+			<correct>麦当劳</correct>
+			<error>肯德基</error>
+			<error>德克士</error>
+			<error>华莱士</error>
+			
+		</ask>
+		<ask id="47">
+			<title>西方厨房中一般没有以下哪种调料？</title>
+			<correct>酱油</correct>
+			<correct>醋</correct>
+			<error>沙拉酱</error>
+			<error>胡椒粉</error>
+			<error>盐</error>
+		</ask>
+		<ask id="48">
+			<title>以下哪些不是狗？</title>
+			<correct>水濑</correct>
+			<error>猴头梗</error>
+			<error>藏獒</error>
+			<error>哈奇士</error>
+			<error>狼狗</error>
+		</ask>
+		<ask id="1">
+			<title>工笔是哪种绘画形式的技法？</title>
+			<correct>国画</correct>
+			<error>水粉画</error>
+			<error>油画</error>
+			<error>水彩画</error>
+		</ask>
+		<ask id="2">
+			<title>“冰激凌”是从哪国传进的外来语？</title>
+			<correct>英国</correct>
+			<error>法国</error>
+			<error>美国</error>
+			<error>俄国</error>
+		</ask>
+		<ask id="3">
+			<title>“席梦思”三个字源于什么</title>
+			<correct>人名</correct>
+			<error>动物名</error>
+			<error>地名</error>
+			<error>其他</error>
+			
+		</ask>
+		<ask id="4">
+			<title>“八仙过海”中八仙出了铁拐李、张果老、吕洞宾、曹国舅还有</title>
+			<correct>韩湘子、蓝采和、汉钟离、何仙姑</correct>
+			<error>韩非子、蓝采和、汉钟离、红孩儿</error>
+			<error>蓝采和、何仙姑、韩非子、汉钟离</error>
+			<error>韩湘子、蓝采和、何仙姑、红孩儿</error>
+		</ask>
+		<ask id="5">
+			<title>“无冕之王”的由来与下列哪一个有关</title>
+			<correct>英国《泰晤士报》</correct>
+			<error>法国《费加罗报》</error>
+			<error>美国《太阳报》</error>
+			<error>德国《明镜》周刊</error>
+		</ask>
+		<ask id="6">
+			<title>老三届指的是哪几年毕业的初、高中毕业生</title>
+			<correct>1966-1968</correct>
+			<error>1964-1966</error>
+			<error>1969-1971</error>
+			<error>1971-1973</error>
+		</ask>
+		<ask id="7">
+			<title>博士作为官名最早出现在</title>
+			<correct>秦</correct>
+			<error>汉</error>
+			<error>唐</error>
+			<error>宋</error>
+		</ask>
+		<ask id="8">
+			<title>“谬种流传”最早是宋朝人批评当时的</title>
+			<correct>科举制度</correct>
+			<error>官场黑暗</error>
+			<error>社会风气</error>
+			<error>诗词风格</error>
+		</ask>
+		<ask id="9">
+			<title>《在那遥远的地方》是哪里的民歌</title>
+			<correct>青海民歌</correct>
+			<error>四川民歌</error>
+			<error>蒙古民歌</error>
+			<error>江苏民歌</error>
+		</ask>
+		<ask id="10">
+			<title>人体含水量百分比最高的器官是</title>
+			<correct>眼球</correct>
+			<error>肝</error>
+			<error>肺</error>
+			<error>肾</error>
+		</ask>
+		<ask id="11">
+			<title>人体最大的解毒器官是</title>
+			<correct>肝脏</correct>
+			<error>胃</error>
+			<error>肾脏</error>
+			<error>脾</error>
+		</ask>
+		<ask id="12">
+			<title>下半旗是把旗子下降到</title>
+			<correct>距离旗杆顶三分之一处</correct>
+			<error>旗杆一半的地方</error>
+			<error>下降一米</error>
+			<error>下降一米半</error>
+		</ask>
+		<ask id="13">
+			<title>下列地点与电影奖搭配不正确的是</title>
+			<correct>柏林-圣马可金狮</correct>
+			<error>戛纳-金棕榈</error>
+			<error>亚洲-金马</error>
+			<error>洛杉矶-奥斯卡</error>
+		</ask>
+		<ask id="14">
+			<title>下列哪种邮件如果丢失了，邮局不负赔偿责任</title>
+			<correct>平信</correct>
+			<error>挂号信</error>
+			<error>保价邮件</error>
+			<error>非保价邮件</error>
+		</ask>
+		<ask id="15">
+			<title>下面哪种酸，人在品尝时不是酸味的</title>
+			<correct>单宁酸</correct>
+			<error>柠檬酸</error>
+			<error>苹果酸</error>
+			<error>琥珀酸</error>
+		</ask>
+		<ask id="16">
+			<title>土豆不宜存放在什么地方 </title>
+			<correct>日光照射处</correct>
+			<error>干燥处</error>
+			<error>室内</error>
+			<error>通风处</error>
+		</ask>
+		<ask id="17">
+			<title>小华家的电灯丝断了，他把灯泡晃了晃使灯丝又搭上了，再用的时候会发现：</title>
+			<correct>灯比原来亮了</correct>
+			<error>灯比原来暗了</error>
+			<error>跟原来一样</error>
+			<error>不亮了</error>
+			
+		</ask>
+		<ask id="18">
+			<title>飞机票头等舱的票价一般为普通舱票价的</title>
+			<correct>150%</correct>
+			<error>200%</error>
+			<error>180%</error>
+			<error>120%</error>
+		</ask>
+		<ask id="19">
+			<title>马拉松赛跑中的“马拉松”一词是指</title>
+			<correct>地名</correct>
+			<error>动物名</error>
+			<error>人名</error>
+			<error>其他</error>
+			
+		</ask>
+		<ask id="20">
+			<title>中国无声影片的最高峰《神女》是谁的代表作</title>
+			<correct>阮玲玉</correct>
+			<error>王人美</error>
+			<error>上官云珠</error>
+			<error>张瑞芳</error>
+		</ask>
+		<ask id="21">
+			<title>中国民间“送灶神”时要吃粘牙的甜食，这是为了</title>
+			<correct>用糖粘住灶神的牙</correct>
+			<error>容易打发小孩子</error>
+			<error>是灶神喜欢的食品</error>
+			<error>甜为吉利</error>
+		</ask>
+		<ask id="22">
+			<title>中国抗日战争中，最早为抗击日寇牺牲的中国将领是 </title>
+			<correct>赵登禹</correct>
+			<error>张治中</error>
+			<error>张自忠</error>
+			<error>左权</error>
+		</ask>
+		<ask id="23">
+			<title>中国铁路车票一般分为几种 </title>
+			<correct>3种</correct>
+			<error>4种</error>
+			<error>5种</error>
+			<error>6种</error>
+		</ask>
+		<ask id="24">
+			<title>什么时间吃水果较好</title>
+			<correct>饭前</correct>
+			<error>饭后</error>
+			<error>睡前</error>
+			<error>刚起床</error>
+			
+		</ask>
+		<ask id="25">
+			<title>从何时起，对最高统治者称“王”</title>
+			<correct>商</correct>
+			<error>夏</error>
+			<error>春秋</error>
+			<error>周</error>
+		</ask>
+		<ask id="26">
+			<title>方便面里必然有哪种食品添加剂</title>
+			<correct>合成抗氧化剂</correct>
+			<error>防腐剂</error>
+			<error>食用色素</error>
+			<error>调料包</error>
+		</ask>
+		<ask id="27">
+			<title>父母和一个已婚子女及其配偶、后代所组成的家庭属于什么类型的家庭</title>
+			<correct>直系家庭</correct>
+			<error>复合家庭</error>
+			<error>单身家庭</error>
+			<error>核心家庭</error>
+		</ask>
+		<ask id="28">
+			<title>世界上最大最贵的钻石藏在</title>
+			<correct>英国王室</correct>
+			<error>中国紫禁城</error>
+			<error>美国华尔街</error>
+			<error>埃及金字塔</error>
+		</ask>
+		<ask id="29">
+			<title>世界上最高的立式佛像--巴米杨佛在哪个国家</title>
+			<correct>阿富汗</correct>
+			<error>印度尼西亚</error>
+			<error>伊拉克</error>
+			<error>中国</error>
+		</ask>
+		<ask id="30">
+			<title>仙人掌进行光合作用是依靠</title>
+			<correct>茎</correct>
+			<error>叶</error>
+			<error>根</error>
+			<error>花</error>
+		</ask>
+		<ask id="31">
+			<title>以下哪一类茶是半发酵茶</title>
+			<correct>乌龙茶</correct>
+			<error>红茶</error>
+			<error>绿茶</error>
+			<error>花茶</error>
+		</ask>
+		<ask id="32">
+			<title>古时戒指用来表示</title>
+			<correct>禁戒</correct>
+			<error>荣誉</error>
+			<error>富贵</error>
+			<error>婚否</error>
+		</ask>
+		<ask id="33">
+			<title>汉朝最先下诏废除肉刑的皇帝是</title>
+			<correct>汉文帝</correct>
+			<error>汉武帝</error>
+			<error>汉成帝</error>
+			<error>汉景帝</error>
+		</ask>
+		<ask id="35">
+			<title>全世界最大的石佛像在</title>
+			<correct>四川乐山</correct>
+			<error>河南洛阳</error>
+			<error>四川屏山</error>
+			<error>四川江津</error>
+		</ask>
+		<ask id="36">
+			<title>吃太多手摇爆米花机爆出的米花会导致：</title>
+			<correct>铅中毒</correct>
+			<error>锡中毒</error>
+			<error>铬中毒</error>
+			<error>无反应</error>
+		</ask>
+		<ask id="37">
+			<title>在英语当中，哪两个字母的出现频率最高</title>
+			<correct>(e,t)</correct>
+			<error>(t,h)</error>
+			<error>(h,m)</error>
+			<error>(m,e)</error>
+		</ask>
+		<ask id="38">
+			<title>多大的数字被称为天文数字</title>
+			<correct>亿以上</correct>
+			<error>百万以上</error>
+			<error>千万以上</error>
+			<error>千亿以上</error>
+		</ask>
+		<ask id="41">
+			<title>竹子是：</title>
+			<correct>草</correct>
+			<error>树</error>
+			<error>叶</error>
+			<error>其他</error>
+		</ask>
+		<ask id="42">
+			<title>自来水表上的一度水表示耗水量为</title>
+			<correct>一立方米水</correct>
+			<error>10公斤水</error>
+			<error>100公斤水</error>
+			<error>10吨水</error>
+		</ask>
+		<ask id="43">
+			<title>西印度群岛位于</title>
+			<correct>大西洋西部</correct>
+			<error>印度西部</error>
+			<error>印度洋西部</error>
+			<error>太平洋西部</error>
+		</ask>
+		<ask id="44">
+			<title>【没有】两次获得诺贝尔奖的有</title>
+			<correct>格林加德</correct>
+			<error>居里夫人</error>
+			<error>桑格</error>
+			<error>巴丁</error>
+		</ask>
+		<ask id="45">
+			<title>我国最先出现的纸币是：</title>
+			<correct>宋代“交子”</correct>
+			<error>元代“交子”</error>
+			<error>宋代“宝钞”</error>
+			<error>元代“宝钞”</error>
+		</ask>
+		<ask id="46">
+			<title>麦当劳的经营方式是什么</title>
+			<correct>全球化特许经营</correct>
+			<error>全球化的直营连锁</error>
+			
+			
+		</ask>
+		<ask id="47">
+			<title>味精的主要成分是什么</title>
+			<correct>谷氨酸钠</correct>
+			<error>醋酸</error>
+			<error>盐</error>
+			<error>氯化钠</error>
+		</ask>
+		<ask id="48">
+			<title>狗热的时候用什么散热</title>
+			<correct>舌头</correct>
+			<error>眼睛</error>
+			<error>耳朵</error>
+			<error>皮肤</error>
+		</ask>
+		<ask id="49">
+			<title>现在美国国旗星条旗上有多少颗星</title>
+			<correct>50</correct>
+			<error>25</error>
+			<error>30</error>
+			<error>60</error>
+		</ask>
+		<ask id="50">
+			<title>苹果中含有增强记忆力的微量元素是</title>
+			<correct>锌</correct>
+			<error>铁</error>
+			<error>盖</error>
+			<error>蛋白</error>
+		</ask>
+		<ask id="51">
+			<title>陕西乾陵武则天墓碑上有几个字 </title>
+			<correct>无一字</correct>
+			<error>800字</error>
+			<error>900字</error>
+			<error>1000字</error>
+		</ask>
+		<ask id="52">
+			<title>鱼、蛙、蛇等冷血动物的体温是</title>
+			<correct>随外界温度变化而变化</correct>
+			<error>固定不变</error>
+			<error>随体型大小变化</error>
+			<error>随时间变化</error>
+		</ask>
+		<ask id="53">
+			<title>举世闻名的泰姬陵在：</title>
+			<correct>印度</correct>
+			<error>泰国</error>
+			<error>中国</error>
+			<error>美国</error>
+		</ask>
+		<ask id="54">
+			<title>“四不像”是指哪个动物</title>
+			<correct>麋鹿</correct>
+			<error>斑马</error>
+			<error>白唇鹿</error>
+			<error>张月鹿</error>
+		</ask>
+		<ask id="55">
+			<title>按照风俗习惯戒指戴在中指上表示</title>
+			<correct>正在恋爱中</correct>
+			<error>正在寻找对象</error>
+			<error>表示独生</error>
+			<error>表示结婚</error>
+		</ask>
+		<ask id="56">
+			<title>树干为什么常常刷成白色 </title>
+			<correct>灭菌</correct>
+			<error>防火</error>
+			<error>防牲畜啃食</error>
+			<error>区分树木</error>
+		</ask>
+		<ask id="57">
+			<title>洗鱼后手上有腥味用下列哪种东西可以去除</title>
+			<correct>牙膏</correct>
+			<error>奶粉</error>
+			<error>洗洁精</error>
+			<error>清水</error>
+		</ask>
+		<ask id="58">
+			<title>相传我国古代能作“掌上舞”的人是</title>
+			<correct>赵飞燕</correct>
+			<error>杨玉环</error>
+			<error>西施</error>
+			<error>貂蝉</error>
+		</ask>
+		<ask id="59">
+			<title>美国的纳斯达克股票市场属于</title>
+			<correct>主板股票市场</correct>
+			<error>创业板股票市场</error>
+			<error>普通股票市场</error>
+			
+		</ask>
+		<ask id="60">
+			<title>骨折时伴随休克发生，应先治</title>
+			<correct>休克</correct>
+			<error>骨折</error>
+			<error>其他</error>
+			
+		</ask>
+		<ask id="61">
+			<title>射出去的子弹头是直着飞行还是旋转飞行</title>
+			<correct>旋转飞行</correct>
+			<error>直着飞行</error>
+			<error>不固定</error>
+			
+		</ask>
+		<ask id="62">
+			<title>被公认为体育运动和健美体魄象征的雕像是：</title>
+			<correct>掷铁饼者</correct>
+			<error>维纳斯</error>
+			<error>大卫</error>
+			<error>思考者</error>
+		</ask>
+		<ask id="63">
+			<title>菊花在秋天开，如果把菊花一直放在温暖的环境里，这些菊花会怎么样</title>
+			<correct>不会开花</correct>
+			<error>都会开花</error>
+			<error>开得更多</error>
+			<error>开得更少</error>
+		</ask>
+		<ask id="64">
+			<title>智力的核心是 </title>
+			<correct>思维能力</correct>
+			<error>知识</error>
+			<error>智育</error>
+			<error>智力</error>
+		</ask>
+		<ask id="65">
+			<title>最初“糖果”的糖取自</title>
+			<correct>蜂蜜</correct>
+			<error>甜菜</error>
+			<error>甘蔗</error>
+			<error>普通水果</error>
+		</ask>
+		<ask id="66">
+			<title>遗产继承的第二顺序是</title>
+			<correct>兄弟姐妹、祖父母、外 祖父母</correct>
+			<error>祖父母、外祖父母、兄弟姐妹 </error>
+			<error>兄弟姐妹、外祖父母、祖父母</error>
+			
+		</ask>
+		<ask id="67">
+			<title>数学符号中的“0”起源于</title>
+			<correct>古印度</correct>
+			<error>古希腊</error>
+			<error>古埃及</error>
+			<error>古罗马</error>
+		</ask>
+		<ask id="68">
+			<title>馒头起源于</title>
+			<correct>南方</correct>
+			<error>北方</error>
+			<error>东北方</error>
+			<error>东南方</error>
+		</ask>
+		<ask id="69">
+			<title>醋放久了会生白，为了防止其生白，最好在醋内加一些黄酒后再掺入少许</title>
+			<correct>精盐</correct>
+			<error>姜末</error>
+			<error>白糖</error>
+			<error>味精</error>
+		</ask>
+		<ask id="70">
+			<title>燕窝中最珍贵的是</title>
+			<correct>血燕</correct>
+			<error>官燕</error>
+			<error>毛燕</error>
+			<error>草燕</error>
+		</ask>
+		<ask id="71">
+			<title>二十八星宿中南方七宿是：</title>
+			<correct>井、鬼、柳、星、张、翼、轸</correct>
+			<error>奎、娄、胃、昂、毕、觜、参</error>
+			<error>斗、牛、女、虚、危、室、壁</error>
+			<error>角、亢、氏、房、心、尾、箕</error>
+		</ask>
+		<ask id="72">
+			<title>国防主要手段是</title>
+			<correct>军事</correct>
+			<error>经济</error>
+			<error>经济和外交</error>
+			<error>外交</error>
+		</ask>
+		<ask id="73">
+			<title>公元589年随军南下，灭掉南朝最后一个朝代陈，南北重归统一，在这过程中发挥重要作用的是</title>
+			<correct>隋文帝</correct>
+			<error>秦始皇</error>
+			<error>隋炀帝</error>
+			<error>汉武帝</error>
+		</ask>
+		<ask id="74">
+			<title>隋朝能实现全国重新统一的原因不包括：</title>
+			<correct>隋朝开通贯穿南北的大运河</correct>
+			<error>隋朝皇帝励精图治</error>
+			<error>人民渴望国家统一</error>
+			<error>南朝陈政权统治腐朽</error>
+		</ask>
+		<ask id="75">
+			<title>隋炀帝开通大运河的目的，观点不正确的是</title>
+			<correct>开发岭南地区</correct>
+			<error>加强南北交通</error>
+			<error>巩固王朝统治</error>
+			<error>促进经济发展</error>
+		</ask>
+		<ask id="76">
+			<title>以下最能体现中国人学习外国文化开放意识和刻苦精神的是：</title>
+			<correct>玄奘西行</correct>
+			<error>文成公主入藏</error>
+			<error>鉴真东渡</error>
+			<error>遣唐使到来</error>
+		</ask>
+		<ask id="77">
+			<title>隋唐时期，与中国有外交来往的国家主要分布在</title>
+			<correct>亚洲、非洲、欧洲</correct>
+			<error>亚洲、非洲、美洲</error>
+			<error>非洲、欧洲、美洲</error>
+			<error>亚洲、欧洲、美洲</error>
+		</ask>
+		<ask id="78">
+			<title>唐朝时期，物产居唐朝进口首位的国家是：</title>
+			<correct>新罗</correct>
+			<error>日本</error>
+			<error>天竺</error>
+			<error>波斯</error>
+		</ask>
+		<ask id="79">
+			<title>世界上现存最早，标有明确日期的雕版印刷品是：</title>
+			<correct>隋朝的《金刚经》</correct>
+			<error>唐朝的《金刚经》</error>
+			<error>隋朝的《道德经》</error>
+			<error>唐朝的《西游记》</error>
+		</ask>
+		<ask id="80">
+			<title>宋朝逐渐跃居粮食产量首位的是</title>
+			<correct>水稻</correct>
+			<error>小麦</error>
+			<error>高粱</error>
+			<error>大豆</error>
+		</ask>
+	</father>
+	<father name="life2">
+		<ask id="81">
+			<title>公元前218年4月，汉尼拔率领90000步兵、12000骑兵和37头战象，开始了对哪里的远征？</title>
+			<correct>罗马</correct>
+			<error>希腊</error>
+			<error>印度</error>
+			<error>波斯</error>
+		</ask>
+		<ask id="82">
+			<title>“围魏救赵”战术的始创者是？</title>
+			<correct>孙膑</correct>
+			<error>孙武</error>
+			<error>庞涓</error>
+			<error>句践</error>
+		</ask>
+		<ask id="83">
+			<title>被称为“绞肉机战役”的是？</title>
+			<correct>凡尔登战役</correct>
+			<error>斯大林格勒战役</error>
+			<error>马恩河战役</error>
+			<error>索姆河战役</error>
+		</ask>
+		<ask id="84">
+			<title>第一次世界大战中德国的盟友是？</title>
+			<correct>奥匈帝国、土耳其</correct>
+			<error>奥匈帝国、意大利</error>
+			<error>日本、意大利</error>
+			<error>俄国、土耳其</error>
+		</ask>
+		<ask id="85">
+			<title>下面哪个不是以少胜多的战例？</title>
+			<correct>长平之战</correct>
+			<error>赤壁之战</error>
+			<error>牧野之战</error>
+			<error>柏举之战</error>
+		</ask>
+		<ask id="86">
+			<title>希特勒在一次世界大战中是？</title>
+			<correct>普通士兵</correct>
+			<error>团长</error>
+			<error>师长</error>
+			<error>总参谋长</error>
+		</ask>
+		<ask id="87">
+			<title>二战中的“芭芭罗萨”计划是指？</title>
+			<correct>德国入侵苏联</correct>
+			<error>德国闪击波兰</error>
+			<error>盟军登陆欧洲</error>
+			<error>苏军反攻德军</error>
+		</ask>
+		<ask id="88">
+			<title>一次大战谁是最大的赢家？</title>
+			<correct>美国</correct>
+			<error>德国</error>
+			<error>法国</error>
+			<error>日本</error>
+		</ask>
+		<ask id="89">
+			<title>元朝是哪个皇帝远征日本？ </title>
+			<correct>忽必烈</correct>
+			<error>成吉思汗</error>
+			<error>窝阔台</error>
+			<error>拔都</error>
+		</ask>
+		<ask id="90">
+			<title>孙武是齐国人，但他的抱负是在哪国实现的？</title>
+			<correct>吴国</correct>
+			<error>楚国</error>
+			<error>晋国</error>
+			<error>燕国</error>
+		</ask>
+		<ask id="91">
+			<title>《战争论》的作者是？</title>
+			<correct>克劳塞维茨</correct>
+			<error>利德尔·哈特</error>
+			<error>约翰·柯斯林</error>
+			<error>拿破仑</error>
+		</ask>
+		<ask id="92">
+			<title>《纪效新书》、《练兵实纪》两部兵书作者是？</title>
+			<correct>戚继光</correct>
+			<error>岳飞</error>
+			<error>袁宗焕</error>
+			<error>俞大猷</error>
+		</ask>
+		<ask id="93">
+			<title>“尽管我们在战争浩劫中相互屠戮，请准许我说，他是一位伟大的将军”丘吉尔曾这样评价的是？</title>
+			<correct>隆美尔</correct>
+			<error>希特勒</error>
+			<error>古德里安</error>
+			<error>鲁登道夫</error>
+		</ask>
+		<ask id="94">
+			<title>织田信长殒命于？</title>
+			<correct>本能寺之变</correct>
+			<error>天正伊贺之乱</error>
+			<error>长筱之战</error>
+			<error>明治维新</error>
+		</ask>
+		<ask id="95">
+			<title>韩信参与指挥了什么决战，击灭楚军？</title>
+			<correct>垓下之战</correct>
+			<error>荥阳之战</error>
+			<error>彭城之战</error>
+			<error>巨鹿之战</error>
+		</ask>
+		<ask id="96">
+			<title>1938年，中国空军第一次打出国境，远征日本，他们轰炸时使用的是？</title>
+			<correct>传单</correct>
+			<error>炸弹</error>
+			<error>原子弹</error>
+			<error>毒气弹</error>
+		</ask>
+		<ask id="97">
+			<title>斯巴达克起义是世界古代史上最大的一次奴隶起义，其反抗的是哪一个帝国？</title>
+			<correct>罗马</correct>
+			<error>波斯</error>
+			<error>希腊</error>
+			<error>马其顿</error>
+		</ask>
+		<ask id="98">
+			<title>以下城市在二战中没有被德军占领的是？</title>
+			<correct>列宁格勒</correct>
+			<error>明斯克</error>
+			<error>华沙</error>
+			<error>基辅</error>
+		</ask>
+		<ask id="99">
+			<title>蒙古军纵横亚欧大陆，最远向西到过？</title>
+			<correct>匈牙利</correct>
+			<error>俄罗斯</error>
+			<error>德国</error>
+			<error>意大利</error>
+		</ask>
+		<ask id="100">
+			<title>“夫兵者，非恃恒势也。”出自：</title>
+			<correct>《孙膑兵法》</correct>
+			<error>《吴子兵法》</error>
+			<error>《孙子兵法》</error>
+			<error>《尉缭子》</error>
+		</ask>
+		<ask id="101">
+			<title>Windows自带的只能处理纯文本的文字编辑工具是</title>
+			<correct>写字板</correct>
+			<error>记事本</error>
+			<error>剪贴板</error>
+			<error>Word</error>
+		</ask>
+		<ask id="102">
+			<title>在Excel中，“Σ”按钮的意思是</title>
+			<correct>自动求和</correct>
+			<error>自动求积</error>
+			<error>自动求差</error>
+			<error>自动求除</error>
+		</ask>
+		<ask id="103">
+			<title>在Excel中要选择多个相邻的工作表，需要按住什么键</title>
+			<correct>Shift</correct>
+			<error>Tab</error>
+			<error>Alt</error>
+			<error>Ctrl</error>
+		</ask>
+		<ask id="104">
+			<title>在Windows中，按住什么键可以选择多个不连续的文件或者文件夹</title>
+			<correct>Ctrl</correct>
+			<error>Alt</error>
+			<error>Tab</error>
+			<error>Shift</error>
+		</ask>
+		<ask id="105">
+			<title>能够全屏显示的视图是</title>
+			<correct>幻灯片放映视图</correct>
+			<error>普通视图</error>
+			<error>幻灯片浏览视图</error>
+			<error>大纲视图</error>
+		</ask>
+		<ask id="106">
+			<title>在Word中系统默认字体是</title>
+			<correct>宋体</correct>
+			<error>黑体</error>
+			<error>楷体</error>
+			<error>仿宋</error>
+		</ask>
+		<ask id="107">
+			<title>打印页码“4-10，16,20”表示打印的是</title>
+			<correct>第4~10页，16、20页</correct>
+			<error>第4~10页，16~20页</error>
+			<error>第4、第10、第16、第20页</error>
+			<error>第4、第10页，第16~20页</error>
+		</ask>
+		<ask id="108">
+			<title>在Excel中输入身份证号码时，应首先将单元数据类型设置为（），以保证数据准确性</title>
+			<correct>“文本”</correct>
+			<error>“数据”</error>
+			<error>“视图”</error>
+			<error>“日期”</error>
+		</ask>
+		<ask id="109">
+			<title>在PowerPoint中，插入新幻灯片的组合键为</title>
+			<correct>Ctrl+M</correct>
+			<error>Shift+Enter</error>
+			<error>Shift+M</error>
+			<error>Tab+M</error>
+		</ask>
+		<ask id="110">
+			<title>幻灯片放映时可以按（）键终止放映</title>
+			<correct>Esc</correct>
+			<error>Ctrl+F4</error>
+			<error>Ctrl+Shift</error>
+			<error>Ctrl+Enter</error>
+		</ask>
+		<ask id="111">
+			<title>在Windows中，CD-ROM属于（）硬件类型</title>
+			<correct>存储器</correct>
+			<error>外部设备</error>
+			<error>适配器</error>
+			<error>驱动器</error>
+		</ask>
+		<ask id="112">
+			<title>在表格处理中下列说法不正确的是（）</title>
+			<correct>只能对表格中的数据进行升序排列</correct>
+			<error>能够平均分配行高和列宽</error>
+			<error>能够拆分表格，也能合并表格</error>
+			<error>能够利用公式对表格中的数据进行计算</error>
+		</ask>
+		<ask id="113">
+			<title>在Excel中，一个工作表最多包含（）行数据</title>
+			<correct>65 536</correct>
+			<error>无限</error>
+			<error>65 535</error>
+			<error>32 768</error>
+		</ask>
+		<ask id="114">
+			<title>进入幻灯片放映的快捷键是</title>
+			<correct>F5</correct>
+			<error>Shift+F5</error>
+			<error>Ctrl+F5</error>
+			<error>Alt+F5</error>
+		</ask>
+		<ask id="115">
+			<title>在Word的编辑状态中，（）标记表示输入的英文单词拼写有误</title>
+			<correct>红色波浪线</correct>
+			<error>绿色波浪线</error>
+			<error>绿色下划线</error>
+			<error>红色下划线</error>
+		</ask>
+		<ask id="116">
+			<title>中文Word中，默认将汉字从小到大分为16级，最大的字号为</title>
+			<correct>初号</correct>
+			<error>小初号</error>
+			<error>八号</error>
+			<error>五号</error>
+		</ask>
+		<ask id="117">
+			<title>CPU主要由运算器和（）组成</title>
+			<correct>控制器</correct>
+			<error>存储器</error>
+			<error>寄存器</error>
+			<error>编辑器</error>
+		</ask>
+		<ask id="118">
+			<title>在Windows中，当选择一个Word文件后，不将文件放到“回收站”中而直接将其删除的操作是</title>
+			<correct>按Shift+Del</correct>
+			<error>按住Del</error>
+			<error>用鼠标直接将文件拖放到回收站</error>
+			<error>选择“我的电脑>文件”菜单中“删除”命令</error>
+		</ask>
+		<ask id="119">
+			<title>在Word文档中，如果将文档标题处于文档第一行的正中间位置，选择（）</title>
+			<correct>居中</correct>
+			<error>右对齐</error>
+			<error>居上</error>
+			<error>左对齐</error>
+		</ask>
+		<ask id="120">
+			<title>C语言中，什么符号的运算级别最低</title>
+			<correct>逗号</correct>
+			<error>句号</error>
+			<error>分号</error>
+			<error>其他符号</error>
+		</ask>
+		<ask id="121">
+			<title>浮点型数据中，单精度浮点型的位数是</title>
+			<correct>32</correct>
+			<error>30</error>
+			<error>35</error>
+			<error>64</error>
+		</ask>
+		<ask id="122">
+			<title>浮点型数据中，双精度浮点型的位数是</title>
+			<correct>64</correct>
+			<error>128</error>
+			<error>32</error>
+			<error>68</error>
+		</ask>
+		<ask id="123">
+			<title>浮点型数据中，单精度浮点型取值范围最大是</title>
+			<correct>3.4*10^38</correct>
+			<error>3.4*10^20</error>
+			<error>3.4*10^40</error>
+			<error>3.4*10^28</error>
+		</ask>
+		<ask id="124">
+			<title>浮点型数据中，长双精度浮点型有效数字是</title>
+			<correct>18~19</correct>
+			<error>17~18</error>
+			<error>19~20</error>
+			<error>20~22</error>
+		</ask>
+		<ask id="126">
+			 <title>南沙群岛自古以来就是中国领土，中国人早在（）时首次发现该群岛，1621年印刊的《郑和航海图》将其列入中国版图</title>
+			 <error>西汉</error>
+			 <correct>东汉</correct>
+			 <error>南北朝</error>
+			 <error>三国</error>
+		</ask>
+		<ask id="130">
+			<title>世界上第一颗人造地球卫星是哪个国家发射的。 </title>
+			<correct>俄罗斯（前苏联）</correct>
+			<error>美国</error>
+			<error>法国</error>
+			<error>中国</error>
+		</ask>
+		<ask id="132">
+			<title>新中国成立后，国防与军队建设大体上经历了三个阶段，第二阶段为曲折前进时期，其时间是</title>
+			<correct>1965-1976</correct>
+			<error>1965-1977</error>
+			<error>1965-1979</error>
+			<error>1965-1978</error>
+		</ask>
+		<ask id="134">
+			<title>洲际导弹的射程通常在</title>
+			<correct>8000公里以上</correct>
+			<error>8000公里以内</error>
+			<error>5000公里以内</error>
+			<error>其他</error>
+		</ask>
+		<ask id="137">
+			<title>中国人民解放军第一次设立军衔的年份是</title>
+			<correct>1955</correct>
+			<error>1949</error>
+			<error>1952</error>
+			<error>1956</error>
+		</ask>
+		<ask id="138">
+			<title>我国最早的海防建设是从什么时候开始的</title>
+			<correct>明朝</correct>
+			<error>宋朝</error>
+			<error>唐朝</error>
+			<error>清朝</error>
+		</ask>
+		<ask id="139">
+			<title>在我国历史上，城池的建设最早始于</title>
+			<correct>商朝</correct>
+			<error>春秋</error>
+			<error>周朝</error>
+			<error>夏朝</error>
+		</ask>
+		<ask id="140">
+			<title>中国人民解放军的军旗是什么时间确定的</title>
+			<correct>1949年6月15日</correct>
+			<error>1948年12月1日</error>
+			<error>1948年11月23日</error>
+			<error>1949年7月12日</error>
+		</ask>
+		<ask id="141">
+			<title>抗日战争中，中国军民伤亡的总人数是</title>
+			<correct>3500万</correct>
+			<error>4500万</error>
+			<error>5500万</error>
+			<error>6500万</error>
+		</ask>
+		<ask id="142">
+			<title>我国最早的军官学校出现在哪个朝代</title>
+			<correct>宋朝</correct>
+			<error>唐朝</error>
+			<error>明朝</error>
+			<error>清朝</error>
+		</ask>
+		<ask id="143">
+			<title>什么时候中美正式建立外交关系</title>
+			<correct>1979年</correct>
+			<error>1971年</error>
+			<error>1980年</error>
+			<error>1981年</error>
+		</ask>
+		<ask id="144">
+			<title>中国于何时重返联合国的</title>
+			<correct>1971年10月</correct>
+			<error>1972年10月</error>
+			<error>1972年9月</error>
+			<error>1971年9月</error>
+		</ask>
+		<ask id="145">
+			<title>编程语言中pow是求</title>
+			<correct>x的y次方</correct>
+			<error>x与y的积</error>
+			<error>x与y的和</error>
+			<error>x与y立方的积</error>
+		</ask>
+		<ask id="146">
+			<title>编程语言中abs是求</title>
+			<correct>一个数的绝对值</correct>
+			<error>一个数的相反数</error>
+			<error>一个数的倒数</error>
+			<error>一个数的立方</error>
+		</ask>
+		<ask id="147">
+			<title>C语言运算符中()的优先级为</title>
+			<correct>1级</correct>
+			<error>2级</error>
+			<error>3级</error>
+			<error>4级</error>
+		</ask>
+		<ask id="148">
+			<title>世界上第一台计算机诞生于哪一年</title>
+			<correct>1946年</correct>
+			<error>1945年</error>
+			<error>1944年</error>
+			<error>1943年</error>
+		</ask>
+		<ask id="149">
+			<title>C语言于哪一年推出</title>
+			<correct>1972</correct>
+			<error>1971</error>
+			<error>1973</error>
+			<error>1978</error>
+		</ask>
+		<ask id="150">
+			<title>最新正式标准的C++11于哪一年发布</title>
+			<correct>2011</correct>
+			<error>2010</error>
+			<error>2012</error>
+			<error>2009</error>
+		</ask>
+		<ask id="151">
+			<title>“鸿鹄传书”一词，源自于以下哪个历史故事？</title>
+			<correct>苏武牧羊</correct>
+			<error>岳飞抗金</error>
+			<error>楚汉相争</error>
+			<error>文姬归汉</error>
+		</ask>
+		<ask id="152">
+			<title>名句“先天下之忧而忧，后天下之乐而乐”出自谁的文章？</title>
+			<correct>范仲淹</correct>
+			<error>文天祥</error>
+			<error>苏轼</error>
+			<error>辛弃疾</error>
+		</ask>
+		<ask id="153">
+			<title>成语“半斤八两”中的“斤”和“两”是古代重量单位，其中一斤合现在的多少两？</title>
+			<correct>十六两</correct>
+			<error>六两</error>
+			<error>八两</error>
+			<error>十两</error>
+		</ask>
+		<ask id="154">
+			<title>典故“名落孙山”的“孙山”指的是谁？</title>
+			<correct>中榜人的名字</correct>
+			<error>落榜人的名字</error>
+			<error>大山的名字</error>
+			<error>主考官的名字</error>
+		</ask>
+		<ask id="155">
+			<title>伟大的思想家、教育家孔子的故乡是下列哪座城市？</title>
+			<correct>山东曲阜</correct>
+			<error>山东济南</error>
+			<error>山东泰安</error>
+			<error>江苏徐州</error>
+		</ask>
+		<ask id="156">
+			<title>子在川上曰：“逝者如斯夫!不舍昼夜。”其中“逝者”在文章中指什么？</title>
+			<correct>消逝的时光</correct>
+			<error>失去的人</error>
+			<error>流淌的水</error>
+			<error>消逝的友情</error>
+		</ask>
+		<ask id="157">
+			<title>下列哪一历史人物与“指鹿为马”这一典故有关？</title>
+			<correct>赵高</correct>
+			<error>韩信</error>
+			<error>刘邦</error>
+			<error>项羽</error>
+		</ask>
+		<ask id="158">
+			<title>中国人自称为“炎黄子孙”，其中“黄”指的是什么？</title>
+			<correct>黄帝</correct>
+			<error>黄河</error>
+			<error>黄土</error>
+			<error>黄山</error>
+		</ask>
+		<ask id="159">
+			<title>“商女不知亡国恨，隔江犹唱后庭花”一诗的作者是谁？</title>
+			<correct>杜牧</correct>
+			<error>李商隐</error>
+			<error>李清照</error>
+			<error>王安石</error>
+		</ask>
+		<ask id="160">
+			<title>下列汉字形体演变次序排列正确的是哪一项？</title>
+			<correct>甲骨文、小篆、隶书、楷书、行书</correct>
+			<error>甲骨文、小篆、楷书、行书、隶书</error>
+			<error>甲骨文、隶书、小篆、楷书、行书</error>
+			<error>隶书、甲骨文、小篆、行书、楷书</error>
+		</ask>
+	</father>
+	
+	<father name="life3">
+		<ask id="161">
+			<title>下列关于活字印刷术，不正确的是</title>
+			<correct>活字印刷术最早出自欧洲</correct>
+			<error>北宋时期发明了活字印刷</error>
+			<error>中国发明活字印刷比欧洲早400年</error>
+			<error>活字印刷术的发明促进了文化的传播和发展</error>
+		</ask>
+		<ask id="162">
+			<title>我国最早指南仪器出现在</title>
+			<correct>战国时期</correct>
+			<error>黄帝时期</error>
+			<error>两晋时期</error>
+			<error>两宋时期</error>
+		</ask>
+		<ask id="163">
+			<title>把中国指南中传入欧洲，为欧洲航海事业活动创造了条件的是</title>
+			<correct>阿拉伯人</correct>
+			<error>日本遣唐使</error>
+			<error>意大利传教土</error>
+			<error>欧洲航海家</error>
+		</ask>
+		<ask id="164">
+			<title>四大发明为新航路开辟提供条件的是</title>
+			<correct>指南针</correct>
+			<error>火药</error>
+			<error>造纸术</error>
+			<error>印刷术</error>
+		</ask>
+		<ask id="165">
+			<title>《梦溪笔谈》作者是</title>
+			<correct>沈括</correct>
+			<error>毕生</error>
+			<error>郭守敬</error>
+			<error>张衡</error>
+		</ask>
+		<ask id="166">
+			<title>我国古代四大发明中在北宋的有</title>
+			<correct>活字印刷术和指南针</correct>
+			<error>造纸术和火药</error>
+			<error>火药和指南针</error>
+			<error>指南针和造纸术</error>
+		</ask>
+		<ask id="167">
+			<title>成吉思汗的主要功绩是</title>
+			<correct>统一蒙古</correct>
+			<error>建立元朝</error>
+			<error>定都大都</error>
+			<error>建立行省</error>
+		</ask>
+		<ask id="168">
+			<title>我国56个民族中，形成于元朝，信仰伊斯兰教的名族是</title>
+			<correct>回族</correct>
+			<error>藏族</error>
+			<error>白族</error>
+			<error>维吾尔族</error>
+		</ask>
+		<ask id="169">
+			<title>宋代城市平民住房一般为</title>
+			<correct>长方形，屋顶或以草或瓦片覆盖</correct>
+			<error>低矮的茅屋</error>
+			<error>相当宏丽，前堂后寝</error>
+			<error>茅屋和瓦房相结合，构成住宅</error>
+		</ask>
+		<ask id="170">
+			<title>被号为“冠天下”的丝织品出现在</title>
+			<correct>蜀地</correct>
+			<error>海南岛</error>
+			<error>江浙地区</error>
+			<error>广州</error>
+		</ask>
+		<ask id="171">
+			<title>2003年世界地球日的主题是</title>
+			<correct>善待地球，保护资源</correct>
+			<error>地球是我们唯一的家园</error>
+			<error>善待地球</error>
+			<error>保护我们的家园</error>
+		</ask>
+		<ask id="172">
+			<title>进入20世纪以来，到目前，世界博览会举行了多少次</title>
+			<correct>41</correct>
+			<error>40</error>
+			<error>39</error>
+			<error>29</error>
+		</ask>
+		<ask id="174">
+			<title>下列港口与所临海域相符合的是：</title>
+			<correct>鹿特丹-北海</correct>
+			<error>马赛-太平洋</error>
+			<error>汉堡-地中海</error>
+			<error>符拉迪沃斯托克-北冰洋</error>
+		</ask>
+		<ask id="175">
+			<title>世界上最大的区域性贸易组织集团是</title>
+			<correct>欧洲联盟</correct>
+			<error>世界贸易组织</error>
+			<error>石油输出国组织</error>
+			<error>东南亚国家联盟</error>
+		</ask>
+		<ask id="176">
+			<title>下列各组中，两地主要产业部门不一致的是</title>
+			<correct>休斯顿-长崎</correct>
+			<error>福山-匹兹堡</error>
+			<error>丰田-底特律</error>
+			<error>硅谷-九州岛</error>
+		</ask>
+		<ask id="177">
+			<title>巴西、土耳其、韩国、德国与塞内加尔等国。五个国家中，人口最多的是</title>
+			<correct>巴西</correct>
+			<error>土耳其</error>
+			<error>韩国</error>
+			<error>德国</error>
+		</ask>
+		<ask id="178">
+			<title>有关尼罗河、阿姆河、印度河的下列说法，正确的是：</title>
+			<correct>都是沿岸地区重要的灌溉资源</correct>
+			<error>都是外流河</error>
+			<error>都是内流河</error>
+			<error>都是古代文明摇篮</error>
+		</ask>
+		<ask id="179">
+			<title>中亚、西亚和南非比较，不正确的是</title>
+			<correct>居民都以阿拉伯人为主</correct>
+			<error>居民大多数信仰伊斯兰教</error>
+			<error>石油是三地主要矿产</error>
+			<error>农业主要以畜牧业和灌溉农业</error>
+		</ask>
+		<ask id="180">
+			<title>巴西人最喜爱的舞蹈是</title>
+			<correct>桑巴</correct>
+			<error>华尔兹</error>
+			<error>探戈</error>
+			<error>踢踏</error>
+		</ask>
+		<ask id="181">
+			<title>地跨两大洲，首都在西半球的是</title>
+			<correct>美国</correct>
+			<error>土耳其</error>
+			<error>俄罗斯</error>
+			<error>埃及</error>
+		</ask>
+		<ask id="182">
+			<title>地球村经济指</title>
+			<correct>经济领域的联系日益紧密</correct>
+			<error>世界各国经济差距日益缩小</error>
+			<error>世界经济规模日益缩小</error>
+			<error>国际经济新秩序已建成</error>
+		</ask>
+		<ask id="183">
+			<title>全球第一部国家级的《21世纪议程》诞生于</title>
+			<correct>巴西</correct>
+			<error>日本</error>
+			<error>美国</error>
+			<error>中国</error>
+		</ask>
+		<ask id="184">
+			<title>kiss起源于</title>
+			<correct>法国</correct>
+			<error>中国</error>
+			<error>美国</error>
+			<error>日本</error>
+		</ask>
+		<ask id="185">
+			<title>英国有何优越位置助其发展为17~19世纪世界经济强国</title>
+			<correct>位于西欧海外，攻守自如</correct>
+			<error>蕴藏丰富石油</error>
+			<error>地处地中海文明中心</error>
+			<error>居世界最繁华的空运枢纽</error>
+		</ask>
+		<ask id="186">
+			<title>在下列东欧诸国中，哪一国家地势低平，四周多强邻，因而在过去两百多年中，疆界多变，并屡遭瓜分? </title>
+			<correct>波兰</correct>
+			<error>奥地利</error>
+			<error>捷克</error>
+			<error>匈牙利</error>
+		</ask>
+		<ask id="187">
+			<title>中东哪一城市是三个宗教的圣地?</title>
+			<correct>耶路撒冷</correct>
+			<error>大马士革</error>
+			<error>伊斯坦布尔</error>
+			<error>拿撒勒</error>
+		</ask>
+		<ask id="188">
+			<title>俄罗斯的斯大林格勒更名为：</title>
+			<correct>伏尔加格勒</correct>
+			<error>列宁格勒</error>
+			<error>戈尔巴乔夫格勒</error>
+			<error>明斯克</error>
+		</ask>
+		<ask id="189">
+			<title>位于西非尖端的最主要港口达喀尔是哪一个国家的首都：</title>
+			<correct>塞内加尔</correct>
+			<error>科特迪瓦</error>
+			<error>塞拉利昂</error>
+			<error>毛里塔尼亚</error>
+		</ask>
+		<ask id="190">
+			<title>地中海气候区的雨季通常在：</title>
+			<correct>冬季</correct>
+			<error>春季</error>
+			<error>夏季</error>
+			<error>秋季</error>
+		</ask>
+		<ask id="191">
+			<title>2002年5月20日宣布独立的东帝汶民主共和国位于：</title>
+			<correct>马来群岛</correct>
+			<error>琉球群岛</error>
+			<error>西印度群岛</error>
+			<error>阿留申群岛</error>
+		</ask>
+		<ask id="192">
+			<title>钓鱼岛从何时开始就明确为我国的领土?</title>
+			<correct>明朝</correct>
+			<error>唐朝</error>
+			<error>元朝</error>
+			<error>宋朝</error>
+		</ask>
+		<ask id="193">
+			<title>我国第一座投入商业运营的核电站是：</title>
+			<correct>大亚湾核电站</correct>
+			<error>泰山核电站</error>
+			<error>岭澳核电站</error>
+			<error>田湾核电站</error>
+		</ask>
+		<ask id="194">
+			<title>世界上最大的白鹤栖息地是在：</title>
+			<correct>潘阳湖</correct>
+			<error>洞庭湖</error>
+			<error>太湖</error>
+			<error>巢湖</error>
+		</ask>
+		<ask id="195">
+			<title>长江三峡位于最西面的一个峡谷是：</title>
+			<correct>瞿塘峡</correct>
+			<error>西陵峡</error>
+			<error>巫峡</error>
+			<error>三门峡</error>
+		</ask>
+		<ask id="196">
+			<title>当长江发生特大洪水时，下列城市受威胁最大的是：</title>
+			<correct>武汉</correct>
+			<error>重庆</error>
+			<error>郑州</error>
+			<error>杭州</error>
+		</ask>
+		<ask id="197">
+			<title>下列城市中，按工矿城、农林城、旅游城顺序排列的一组专业性城市是：</title>
+			<correct>长春-宜春-宜春</correct>
+			<error>徐州-郑州-杭州</error>
+			<error>鞍山-舟山-黄山</error>
+			<error>金昌-南昌-西昌</error>
+		</ask>
+		<ask id="200">
+			<title>世界环保日是每年几月几日</title>
+			<correct>6.5</correct>
+			<error>6.6</error>
+			<error>6.4</error>
+			<error>6.2</error>
+		</ask>
+	</father>
+		
+	<father name="life4">
+		<ask id="201">
+			<title>LV路易威登是哪个国家的品牌</title>
+			<correct>法国</correct>
+			<error>中国</error>
+			<error>日本</error>
+			<error>俄罗斯</error>
+		</ask>
+		<ask id="202">
+			<title>哪个城市被世界公认为“雾都”</title>
+			<correct>伦敦</correct>
+			<error>巴黎</error>
+			<error>北京</error>
+			<error>好望角</error>
+		</ask>
+		<ask id="203">
+			<title>“铁观音”的原产发源地在哪个省份</title>
+			<correct>福建</correct>
+			<error>浙江</error>
+			<error>山东</error>
+			<error>陕西</error>
+		</ask>
+		<ask id="204">
+			<title>《变形金刚》中，跟擎天柱作对的反派首领是谁</title>
+			<correct>威震天</correct>
+			<error>霸天虎</error>
+			<error>大黄蜂</error>
+		</ask>
+		<ask id="205">
+			<title>世界上出现麦田怪圈最多的国家是</title>
+			<correct>英国</correct>
+			<error>法国</error>
+			<error>美国</error>
+			<error>俄罗斯</error>
+		</ask>
+		<ask id="206">
+			<title>在《三国演义》中“一个愿打一个愿挨”是指周瑜与哪位将领</title>
+			<correct>黄盖</correct>
+			<error>孙权</error>
+			<error>孙策</error>
+			<error>黄忠</error>
+		</ask>
+		<ask id="207">
+			<title>小说《封神演义》中，哪位著名的的人物用直的鱼钩钓鱼？</title>
+			<correct>姜子牙</correct>
+			<error>土行孙</error>
+			<error>哪吒</error>
+		</ask>
+		<ask id="208">
+			<title>我国明代“七下西洋”的航海家是谁？</title>
+			<correct>郑和</correct>
+			<error>戚继光</error>
+			<error>张居正</error>
+			<error>袁宗焕</error>
+		</ask>
+		<ask id="209">
+			<title>国际上用“K”表示含金量，18k金表示含金百分比多少？</title>
+			<correct>75%</correct>
+			<error>18%</error>
+			<error>80%</error>
+			<error>70%</error>
+		</ask>
+		<ask id="210">
+			<title>2008年奥运会，中国一共得了多少枚金牌</title>
+			<correct>48</correct>
+			<error>50</error>
+			<error>52</error>
+			<error>53</error>
+		</ask>
+		<ask id="211">
+			<title>香港特别行政区的区花是什么？</title>
+			<correct>紫荆花</correct>
+			<error>牡丹</error>
+			<error>玫瑰</error>
+			<error>荷花</error>
+		</ask>
+		<ask id="212">
+			<title>国产动画片《喜羊羊与灰太狼》中，灰太狼的老婆叫什么名字？</title>
+			<correct>红太狼</correct>
+			<error>喜羊羊</error>
+			<error>美羊羊</error>
+		</ask>
+		<ask id="213">
+			<title>历史上“焚书坑儒”的只中国的哪一位皇帝？</title>
+			<correct>秦始皇</correct>
+			<error>汉武帝</error>
+			<error>汉文帝</error>
+			<error>隋炀帝</error>
+		</ask>
+		<ask id="214">
+			<title>世界第一高峰珠穆朗玛峰在哪国？</title>
+			<correct>中国</correct>
+			<error>日本</error>
+			<error>法国</error>
+			<error>英国</error>
+		</ask>
+		<ask id="215">
+			<title>清朝被称为“扬州八怪”的八个人中以画竹子闻名的是哪一位？</title>
+			<correct>郑板桥</correct>
+			<error>金农</error>
+			<error>李方膺</error>
+			<error>罗聘</error>
+		</ask>
+		<ask id="216">
+			<title>烟草中毒性最大的物质是什么？</title>
+			<correct>尼古丁</correct>
+			<error>氨</error>
+			<error>氨基酸</error>
+			<error>丙酮</error>
+		</ask>
+		<ask id="217">
+			<title>小说《封神演义》中，传说由狐狸精变成的商纣王宠妃是谁？</title>
+			<correct>苏妲己</correct>
+			<error>玉磬</error>
+			<error>姬昌</error>
+		</ask>
+		<ask id="218">
+			<title>中国神话当中，嫦娥在月亮上的行宫叫什么？</title>
+			<correct>广寒宫</correct>
+			<error>兜率宫</error>
+			<error>凌霄宝殿</error>
+			<error>彩虹楼</error>
+		</ask>
+		<ask id="219">
+			<title>吴承恩小说《西游记》当中，唐僧在哪收了沙和尚做徒弟？</title>
+			<correct>流沙河</correct>
+			<error>高老庄</error>
+			<error>黑风洞</error>
+		</ask>
+		<ask id="220">
+			<title>马可波罗是在哪个朝代来到中国的？</title>
+			<correct>元朝</correct>
+			<error>宋朝</error>
+			<error>唐朝</error>
+			<error>清朝</error>
+		</ask>
+		<ask id="221">
+			<title>传说为关羽“刮骨疗毒”的是哪个名医？</title>
+			<correct>华佗</correct>
+			<error>李时珍</error>
+			<error>扁鹊</error>
+		</ask>
+		<ask id="222">
+			<title>格林童话《灰姑娘》中，灰姑娘参加舞会时所做的车是由哪种植物变成的？</title>
+			<correct>南瓜</correct>
+			<error>西瓜</error>
+			<error>冬瓜</error>
+		</ask>
+		<ask id="223">
+			<title>“遥知兄弟登高处，遍插茱萸少一人”，描述的是什么节日？</title>
+			<correct>重阳节</correct>
+			<error>七夕节</error>
+			<error>圣诞节</error>
+			<error>春节</error>
+		</ask>
+		<ask id="224">
+			<title>海宝是中国哪一年世博会的吉祥物</title>
+			<correct>2010</correct>
+			<error>2009</error>
+			<error>2011</error>
+			<error>2012</error>
+		</ask>
+		<ask id="225">
+			<title>陕西乾陵的“无字碑”，是哪位皇帝的功德碑？</title>
+			<correct>武则天</correct>
+			<error>唐玄宗</error>
+			<error>汉文帝</error>
+			<error>隋炀帝</error>
+		</ask>
+		<ask id="226">
+			<title>标准中国象棋中，一共有多少个棋子？</title>
+			<correct>32</correct>
+			<error>30</error>
+			<error>34</error>
+			<error>36</error>
+		</ask>
+		<ask id="227">
+			<title>我们通常用来指代飞碟等不明飞行物的英文缩写是什么？</title>
+			<correct>UFO</correct>
+			<error>USO</error>
+		</ask>
+		<ask id="228">
+			<title>久负盛名的孔雀舞是我国哪个民族的传统舞蹈？</title>
+			<correct>傣族</correct>
+			<error>壮族</error>
+			<error>藏族</error>
+			<error>白族</error>
+		</ask>
+		<ask id="229">
+			<title>传统服饰的旗袍是根据哪个民族的服饰改良的？</title>
+			<correct>满族</correct>
+			<error>汉族</error>
+			<error>回族</error>
+			<error>白族</error>
+		</ask>
+		<ask id="230">
+			<title>秦始皇兵马俑是在我国的哪个省发掘的？</title>
+			<correct>陕西</correct>
+			<error>安徽</error>
+			<error>广西</error>
+			<error>福建</error>
+		</ask>
+		<ask id="231">
+			<title>“迪斯尼”的总部设在哪个国家？</title>
+			<correct>美国</correct>
+			<error>中国</error>
+			<error>英国</error>
+			<error>法国</error>
+		</ask>
+		<ask id="232">
+			<title>我国哪个传统节日是祭祖和扫墓的日子？</title>
+			<correct>清明节</correct>
+			<error>重阳节</error>
+			<error>春节</error>
+			<error>元宵节</error>
+		</ask>
+		<ask id="233">
+			<title>人们一般撒什么东西来快速融化积雪路面？</title>
+			<correct>盐</correct>
+			<error>糖</error>
+			<error>醋</error>
+		</ask>
+		<ask id="234">
+			<title>酿造啤酒的主要原料是什么粮食？</title>
+			<correct>麦子</correct>
+			<error>稻谷</error>
+			<error>高粱</error>
+		</ask>
+		<ask id="235">
+			<title>2004年夏季奥运会是在哪个城市举办的？</title>
+			<correct>雅典</correct>
+			<error>上海</error>
+			<error>巴黎</error>
+			<error>好望角</error>
+		</ask>
+		<ask id="236">
+			<title>赵本山和宋丹丹的小品《昨天今天明天》邀请了哪位主持人与他们合作？</title>
+			<correct>崔永元</correct>
+			<error>周立波</error>
+		</ask>
+		
+	</father>	
+	<father name="life5">
+		<ask id="238">
+			<title>传说中开天辟地的上古人物叫做什么？</title>
+			<correct>盘古</correct>
+			<error>女娲</error>
+			<error>共工</error>
+			<error>宙斯</error>
+		</ask>
+		<ask id="239">
+			<title>中国神话传说中是哪位神用五色石头补的天？</title>
+			<correct>女娲</correct>
+			<error>盘古</error>
+			<error>宙斯</error>
+			<error>共工</error>
+		</ask>
+		<ask id="240">
+			<title>因为四季如春而被称为“春城”的是我国哪个城市？</title>
+			<correct>昆明</correct>
+			<error>福建</error>
+			<error>上海</error>
+			<error>杭州</error>
+		</ask>
+		<ask id="241">
+			<title>公认为全世界规模最大的网络搜索引擎是哪一个？</title>
+			<correct>谷歌</correct>
+			<error>百度</error>
+			<error>搜狗</error>
+			<error>360</error>
+		</ask>
+		<ask id="242">
+			<title>我国一般查询电话号码通用的三位数号码是多少？</title>
+			<correct>114</correct>
+			<error>119</error>
+			<error>120</error>
+			<error>110</error>
+		</ask>
+		<ask id="243">
+			<title>我国首都北京市的电话区号，是哪三个数字？</title>
+			<correct>010</correct>
+			<error>059</error>
+			<error>012</error>
+		</ask>
+		<ask id="244">
+			<title>皮肤划破后渗出的血会自动凝结是因为血液中含有什么细胞？</title>
+			<correct>血小板</correct>
+			<error>血清</error>
+			<error>血细胞</error>
+			<error>白细胞</error>
+		</ask>
+		<ask id="245">
+			<title>人体受到细菌感染时，血液中的哪种细胞会明显增多？</title>
+			<correct>白细胞</correct>
+			<error>血细胞</error>
+			<error>血小板</error>
+			<error>血清</error>
+		</ask>
+		<ask id="246">
+			<title>电影《2012》中，用来拯救人类的方舟，建在哪个地区？</title>
+			<correct>西藏</correct>
+			<error>福建</error>
+			<error>甘肃</error>
+			<error>新疆</error>
+		</ask>
+		<ask id="247">
+			<title>一般被称为“万能献血者”的血型是什么？</title>
+			<correct>O型</correct>
+			<error>A型</error>
+			<error>B型</error>
+			<error>AB型</error>
+		</ask>
+		<ask id="248">
+			<title>我们常说的“一打”啤酒是指多少瓶啤酒？</title>
+			<correct>12</correct>
+			<error>14</error>
+			<error>10</error>
+			<error>16</error>
+		</ask>
+		<ask id="249">
+			<title>美国用于报案、急救、消防等紧急求助的报警电话是什么？</title>
+			<correct>911</correct>
+			<error>119</error>
+			<error>110</error>
+			<error>120</error>
+		</ask>
+		<ask id="250">
+			<title>目前我国结婚证内页上印的是什么花？</title>
+			<correct>牡丹花</correct>
+			<error>玫瑰花</error>
+			<error>莲花</error>
+			<error>樱花</error>
+		</ask>
+		<ask id="251">
+			<title>侏罗纪时期最具代表性的大型陆地动物是什么？</title>
+			<correct>恐龙</correct>
+			<error>各种昆虫</error>
+			<error>其他生物</error>
+		</ask>
+		<ask id="252">
+			<title>常吃的“皮蛋”一般是由哪一种蛋加工而成的？</title>
+			<correct>鸭蛋</correct>
+			<error>鸡蛋</error>
+			<error>恐龙蛋</error>
+		</ask>
+		<ask id="253">
+			<title>我国农历中有多少个节气？</title>
+			<correct>24个</correct>
+			<error>22个</error>
+			<error>20个</error>
+			<error>26个</error>
+		</ask>
+		<ask id="254">
+			<title>在十二生肖中排列顺序第一的是什么动物？</title>
+			<correct>鼠</correct>
+			<error>蛇</error>
+			<error>虎</error>
+			<error>牛</error>
+		</ask>
+		<ask id="255">
+			<title>“接下来，就是见证奇迹的时刻了”是哪一位著名魔术师的标志性口号？</title>
+			<correct>刘谦</correct>
+			<error>迪恩</error>
+			<error>米尔克</error>
+			<error>迈诺克</error>
+		</ask>
+		<ask id="256">
+			<title>我国普遍公认的国土面积约为多少万平方公里？</title>
+			<correct>960</correct>
+			<error>950</error>
+			<error>940</error>
+			<error>980</error>
+		</ask>
+		<ask id="257">
+			<title>相传使董卓、吕布反目成仇的古代美女是谁？</title>
+			<correct>貂蝉</correct>
+			<error>西施</error>
+			<error>杨贵妃</error>
+			<error>小乔</error>
+		</ask>
+		<ask id="258">
+			<title>清朝道光年间，在虎门销禁鸦片的民族英雄是谁？</title>
+			<correct>林则徐</correct>
+			<error>戚继光</error>
+			<error>郑和</error>
+		</ask>
+		<ask id="259">
+			<title>十二世纪十大画家之一，以画虾技术精湛而闻名的画家是谁？</title>
+			<correct>齐白石</correct>
+			<error>郑板桥</error>
+			<error>金农</error>
+		</ask>
+		<ask id="260">
+			<title>中国的“雾都”是指哪个城市？</title>
+			<correct>重庆</correct>
+			<error>北京</error>
+			<error>上海</error>
+			<error>香港</error>
+		</ask>
+		<ask id="261">
+			<title>排球比赛中，一个队可以同时上场几名队员？</title>
+			<correct>6</correct>
+			<error>5</error>
+			<error>4</error>
+			<error>8</error>
+		</ask>
+		<ask id="263">
+			<title>马睡觉的时候保持怎样的姿势？</title>
+			<correct>站着</correct>
+			<error>蹲着</error>
+			<error>趴着</error>
+		</ask>
+		<ask id="264">
+			<title>著名的旅游景点夏威夷位于哪个大洋中？</title>
+			<correct>太平洋</correct>
+			<error>印度洋</error>
+			<error>大西洋</error>
+			<error>北冰洋</error>
+		</ask>
+		<ask id="265">
+			<title>世界上最大的沙漠叫什么名字？</title>
+			<correct>撒哈拉沙漠</correct>
+			<error>腾格里沙漠</error>
+			<error>塔克拉玛干沙漠</error>
+			<error>库布齐沙漠</error>
+		</ask>
+		<ask id="266">
+			<title>“己所不欲勿施于人”是中国哪位圣人提出的？</title>
+			<correct>孔子</correct>
+			<error>老子</error>
+			<error>诸葛亮</error>
+			<error>刘备</error>
+		</ask>
+		<ask id="267">
+			<title>“三顾茅庐”中的“茅庐”本意是指？</title>
+			<correct>诸葛亮</correct>
+			<error>茅庐</error>
+		</ask>
+		<ask id="268">
+			<title>人体分解和代谢酒精的主要器官是什么？</title>
+			<correct>肝</correct>
+			<error>脾</error>
+			<error>肺</error>
+			<error>胃</error>
+		</ask>
+		<ask id="269">
+			<title>人体最坚硬的部分是哪里？</title>
+			<correct>牙齿</correct>
+			<error>额头</error>
+			<error>骨</error>
+		</ask>
+		
+	</father>
+	<father name="life6">
+		<ask id="270">
+			<title>广州最著名的城市标识是五只什么动物？</title>
+			<correct>羊</correct>
+			<error>狗</error>
+			<error>虎</error>
+			<error>蛇</error>
+		</ask>
+		<ask id="271">
+			<title>《西游记》中唐僧师徒四人经过了多少难最终取到了真经？</title>
+			<correct>81</correct>
+			<error>80</error>
+			<error>82</error>
+			<error>79</error>
+		</ask>
+		<ask id="272">
+			<title>中国象棋“楚河汉界”跟哪两个历史人物有关？</title>
+			<correct>刘邦项羽</correct>
+			<error>刘备曹操</error>
+		</ask>
+		<ask id="273">
+			<title>《封神演义》中，哪吒的父亲托塔李天王名叫什么？</title>
+			<correct>李靖</correct>
+			<error>太乙真人</error>
+			<error>申公豹</error>
+		</ask>
+		<ask id="274">
+			<title>“信天游”是中国哪个省的民歌风格？</title>
+			<correct>陕西</correct>
+			<error>广东</error>
+			<error>福建</error>
+			<error>广西</error>
+		</ask>
+		<ask id="275">
+			<title>冬天，树干常常会被刷成乳白色，这液体是什么水？</title>
+			<correct>石灰水</correct>
+			<error>盐酸水</error>
+		</ask>
+		<ask id="276">
+			<title>泼水节是我国哪个民族的传统节日也是他们的新年？</title>
+			<correct>傣族</correct>
+			<error>藏族</error>
+			<error>白族</error>
+			<error>回族</error>
+		</ask>
+		<ask id="277">
+			<title>中央电视台著名节目《实话实说》的第一任主持人是谁？</title>
+			<correct>崔永元</correct>
+			<error>周立波</error>
+			<error>刘谦</error>
+		</ask>
+		<ask id="278">
+			<title>天津市的电话区号是？</title>
+			<correct>022</correct>
+			<error>010</error>
+			<error>0592</error>
+			<error>021</error>
+		</ask>
+		<ask id="279">
+			<title>消费者投诉举报专线电话号码是多少？</title>
+			<correct>12315</correct>
+			<error>10086</error>
+			<error>10010</error>
+			<error>10001</error>
+		</ask>
+		<ask id="280">
+			<title>从地图上看，黄河干流像一个巨大的汉字，是什么字？</title>
+			<correct>几</correct>
+			<error>干</error>
+			<error>人</error>
+		</ask>
+		<ask id="281">
+			<title>人体缺少哪种元素会引起甲状腺肿大，俗称大脖子病？</title>
+			<correct>碘</correct>
+			<error>铀</error>
+		</ask>
+		<ask id="282">
+			<title>晒太阳能够帮助人体获得哪种维生素？</title>
+			<correct>维生素D</correct>
+			<error>维生素A</error>
+			<error>维生素B</error>
+			<error>维生素C</error>
+		</ask>
+		<ask id="283">
+			<title>瑜伽起源于哪个国家？</title>
+			<correct>印度</correct>
+			<error>埃及</error>
+			<error>法国</error>
+			<error>西班牙</error>
+		</ask>
+		<ask id="284">
+			<title>赛龙舟运动是为了纪念我国哪一个爱国诗人？</title>
+			<correct>屈原</correct>
+			<error>文天祥</error>
+			<error>岳飞</error>
+		</ask>
+		<ask id="285">
+			<title>十二生肖中排在羊后面的动物是什么？</title>
+			<correct>猴</correct>
+			<error>鸡</error>
+			<error>马</error>
+			<error>蛇</error>
+		</ask>
+		<ask id="286">
+			<title>第一支获得女足世界杯冠军的亚洲国家是哪个国家？</title>
+			<correct>日本</correct>
+			<error>中国</error>
+			<error>俄罗斯</error>
+		</ask>
+		<ask id="287">
+			<title>“令堂”是指对对方什么人的称呼？</title>
+			<correct>母亲</correct>
+			<error>父亲</error>
+			<error>兄弟</error>
+			<error>姐妹</error>
+		</ask>
+		<ask id="288">
+			<title>许海峰获得了中国第一枚奥运金牌，他是在什么项目获得的？</title>
+			<correct>射击</correct>
+			<error>短跑</error>
+			<error>长跑</error>
+			<error>排球</error>
+		</ask>
+		<ask id="289">
+			<title>悬梁刺股的股是指人的哪个部位？</title>
+			<correct>大腿</correct>
+			<error>手臂</error>
+			<error>屁股</error>
+			<error>背部</error>
+		</ask>
+		<ask id="290">
+			<title>平假名都是由中国的汉字草书演化过来的，那么平假名属于哪种语言</title>
+			<correct>日语</correct>
+			<error>俄语</error>
+			<error>西班牙语</error>
+		</ask>
+		<ask id="291">
+			<title>西方的圣诞节前一天叫平安夜，平安夜是几月几号</title>
+			<correct>12.24</correct>
+			<error>12.25</error>
+			<error>11.24</error>
+			<error>12.23</error>
+		</ask>
+		<ask id="292">
+			<title>西方的万圣节，人们会用什么植物做成一盏灯</title>
+			<correct>南瓜</correct>
+			<error>西瓜</error>
+		</ask>
+		<ask id="293">
+			<title>网络论坛中，‘沙发’是代表第几个回帖的人</title>
+			<correct>1</correct>
+			<error>2</error>
+			<error>3</error>
+			<error>4</error>
+		</ask>
+		<ask id="294">
+			<title>在巴西盛行，同时也是国际舞比赛项目之一的舞蹈是哪种</title>
+			<correct>桑巴舞</correct>
+			<error>芭蕾</error>
+		</ask>
+		<ask id="295">
+			<title>拥有在美国长期居住和工作权利的永久居留证，被俗称什么</title>
+			<correct>绿卡</correct>
+			<error>红卡</error>
+			<error>橙卡</error>
+		</ask>
+		<ask id="296">
+			<title>若尿液中发现蛋白质和血细胞，则肾脏发生病变的部位是</title>
+			<correct>肾小球</correct>
+			<error>肾小囊</error>
+			<error>肾小管</error>
+			<error>肾上腺</error>
+		</ask>
+		<ask id="297">
+			<title>由地球自转产生的自然现象是</title>
+			<correct>昼夜更替</correct>
+			<error>四季变化</error>
+		</ask>
+		<ask id="298">
+			<title>受气候条件和地形因素的影响，欧洲西部形成的传统农业是</title>
+			<correct>畜牧业</correct>
+			<error>纺织业</error>
+			<error>农业</error>
+		</ask>
+		<ask id="299">
+			<title>下列海峡运河中，地处亚、非两洲之间的是</title>
+			<correct>苏伊士运河</correct>
+			<error>京杭大运河</error>
+		</ask>
+		<ask id="300">
+			<title>我国全部位于热带的省是</title>
+			<correct>海南</correct>
+			<error>福建</error>
+			<error>台湾</error>
+			<error>广东</error>
+		</ask>
+		
+		<ask>
+			<title>以下哪个是音效处理软件</title>
+			<correct>GoldWave</correct>
+			<correct>Audition</correct>
+			<error>Shockwave</error>
+			<error>Premiere</error>
+			<error>After Effects</error>
+			<error>Animate</error>
+			<error>Illustrator</error>
+		</ask>
+		<ask>
+			<title>Flash衰败的原因是？</title>
+			<correct>Adobe不重视。</correct>
+			<correct>Flash封闭的架构不适合移动互联网的发展。</correct>
+			<error>用户不喜欢。</error>
+			<error>开发Flash游戏的难度太大。</error>
+			<error>Flash一直无法给开发者带来收入。</error>
+		</ask>
+		<ask>
+			<title>冥王星属于？</title>
+			<correct>矮行星</correct>
+			<error>太阳系第九大行星</error>
+			<error>彗星</error>
+			<error>恒星</error>
+		</ask>
+		<ask>
+			<title>什么职业在未来不容易被人工智能所取代？</title>
+			<correct>心理咨询师</correct>
+			<correct>护士</correct>
+			<correct>公司CEO</correct>
+			<error>会计师</error>
+			<error>律师</error>
+			<error>银行柜员</error>
+			<error>程序员</error>
+			<error>司机</error>
+		</ask>
+		<ask>
+			<title>2020年中国的房价水平如何？</title>
+			<correct>偏高，有明显的泡沫。</correct>
+			<error>基本合理。</error>
+			<error>略微偏低。</error>
+			<error>非常低，大家买房很容易，人人都有套房。</error>
+		</ask>
+		<ask>
+			<title>年羹尧为什么被雍正赐死？</title>
+			<correct>权利太大，太过于跋扈。</correct>
+			<error>能力太弱，德不配位。</error>
+			<error>有逆反之心。</error>
+			<error>贪污受贿太过于严重。</error>
+			<error>受到妹妹的牵连。</error>
+		</ask>
+		<ask>
+			<title>雍正是康熙的第几个儿子？</title>
+			<correct>第4个</correct>
+			<error>第1个</error>
+			<error>第11个</error>
+			<error>第7个</error>
+			<error>第15个</error>
+		</ask>
+		<ask>
+			<title>地球的质量在太阳系行星中排名第几？</title>
+			<correct>第5</correct>
+			<error>第4</error>
+			<error>第6</error>
+			<error>第7</error>
+		</ask>
+		<ask>
+			<title>以下哪个城市能最早看到日出？</title>
+			<correct>东京</correct>
+			<error>北京</error>
+			<error>纽约</error>
+			<error>伦敦</error>
+			<error>孟买</error>
+			<error>雅典</error>
+		</ask>
+		<ask>
+			<title>1994年，我国法定一周休息几天？</title>
+			<correct>1天半</correct>
+			<error>1天</error>
+			<error>2天</error>
+			<error>2天半</error>
+			<error>半天</error>
+		</ask>
+		<ask>
+			<title>以下哪个省的2019年人均GDP排名最高？</title>
+			<correct>福建省</correct>
+			<error>广东省</error>
+			<error>湖北省</error>
+			<error>山东省</error>
+			<error>湖南省</error>
+			<error>辽宁省</error>
+		</ask>
+		<ask>
+			<title>以下哪个是人类几十年内需要面临的最大威胁？</title>
+			<correct>病毒</correct>
+			<error>核战争</error>
+			<error>人工智能</error>
+			<error>全球变暖</error>
+			<error>人口爆炸增长</error>
+		</ask>
+		<ask>
+			<title>在2019年，以下哪个城市人们的买房压力最小？</title>
+			<correct>长沙</correct>
+			<error>厦门</error>
+			<error>福州</error>
+			<error>深圳</error>
+			<error>长春</error>
+			<error>贵阳</error>
+			<error>大连</error>
+			<error>武汉</error>
+		</ask>
+		<ask>
+			<title>在2019年，以下哪个城市人们的买房压力最大？</title>
+			<correct>厦门</correct>
+			<error>长沙</error>
+			<error>福州</error>
+			<error>长春</error>
+			<error>贵阳</error>
+			<error>大连</error>
+			<error>武汉</error>
+		</ask>
+		]]>
+	</father>	
+</data>

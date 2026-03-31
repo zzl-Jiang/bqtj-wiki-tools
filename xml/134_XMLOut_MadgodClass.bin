@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="enemy" cnName="敌方">
+		<body name="狂战神" shell="compound">
+			<name>Madgod</name>
+			<cnName>狂战神</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/Madgod339.swf</swfUrl>
+			<rosRatio>1</rosRatio>
+			<!-- 基本系数 -->
+			<showLevel>9999</showLevel>
+			<headHurtMul>0.3</headHurtMul>
+			<headIconUrl>IconGather/Madgod</headIconUrl>
+			<imgType>normal</imgType>
+			<lifeBarExtraHeight>-180</lifeBarExtraHeight>
+			<imgArr>
+				stand,move
+				,normalAttack,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,die1
+				,birthAttack
+				,rotateAttack,shakeAttack,sprintAttack,magicAttack
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-20, -90, 40, 90</hitRect><!-- 站立碰撞体积-->
+			<maxVx>11</maxVx>
+			<extraAIClassLabel></extraAIClassLabel>
+			<preBulletArr>extremeLaserFire,MadgodSmoke</preBulletArr>
+			<dieJumpMul>0</dieJumpMul>
+			<motionD jumpMul="1.5"/>
+			<!-- 技能 -->
+			<avtiveSkillCdOverT>0.06</avtiveSkillCdOverT>
+			<skillArr>MadgodBuff,MadgodHit,verShieldMad,meltFlamerPurgold,vertigoArmorIron,cardNoAttackSkill,findHide,spellImmunityMax,noBounce_enemy,underHurt50</skillArr>
+			<bossSkillArr>magicMadgod,rotateMadgod,shakeMadgod,sprintMadgod,weaponDefence2,enemyToZombie,strong_enemy</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<wilderSkillArr></wilderSkillArr>
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack</imgLabel><cn>挥砍</cn>
+					<hurtRatio>2</hurtRatio>
+					<attackType>holy</attackType>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl name="blueHit"/>
+				</hurt>
+				<![CDATA[不加入ai选择]]>
+				<hurt><cn>乾坤斩</cn>
+					<imgLabel>rotateAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>1</hurtRatio>
+					<hurtMul>0.1</hurtMul>
+					<attackType>holy</attackType>
+					<skillArr></skillArr>
+					<hitImgUrl name="blueHit"/>
+				</hurt>
+				<hurt><cn>现身</cn>
+					<imgLabel>birthAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.00000000000001</hurtRatio>
+					<grapRect>-400,-111,100,105</grapRect>
+					<skillArr></skillArr>
+				</hurt>
+				<hurt><cn>擎天斩</cn>
+					<imgLabel>shakeAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>2</hurtRatio>
+					<hurtMul>0.4</hurtMul>
+					<attackType>holy</attackType>
+					<hitImgUrl name="blueHit"/>
+				</hurt>
+				<hurt><cn>疾风刺</cn>
+					<imgLabel>sprintAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>2</hurtRatio>
+					<hurtMul>0.05</hurtMul>
+					<attackType>holy</attackType>
+					<hitImgUrl name="blueHit"/>
+				</hurt>
+				<hurt><cn>虚空之雷</cn>
+					<imgLabel>magicAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.00000000000001</hurtRatio>
+					<grapRect>-400,-111,100,105</grapRect>
+				</hurt>
+				<![CDATA[
+				<hurt info="不加入ai选择">
+					<imgLabel>mopAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.00000000000001</hurtRatio>
+					<hurtMul>0.07</hurtMul>
+					<attackType>holy</attackType>
+					<skillArr>invincibleEmp</skillArr>
+					<grapRect>-400,-111,100,105</grapRect>
+					<hitImgUrl name="IronDogFiveHit"/>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>daggerAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>1</hurtRatio>
+					<attackType>holy</attackType>
+					<skillArr>invincibleEmp</skillArr>
+					<grapRect>-400,-111,100,105</grapRect>
+					<hitImgUrl name="IronDogFiveHit"/>
+				</hurt>
+				<hurt info="不加入ai选择">
+					<imgLabel>iceAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<hurtRatio>0.00000000000001</hurtRatio>
+					<hurtMul>0.15</hurtMul>
+					<attackType>holy</attackType>
+					<skillArr>invincibleEmp</skillArr>
+					<grapRect>-400,-111,100,105</grapRect>
+					<hitImgUrl name="IronDogFiveHit"/>
+				</hurt>
+				]]>
+			</hurtArr>
+		</body>
+		
+		<bullet cnName="爆瓶子弹">
+			<name>MadgodSmoke</name>
+			<cnName>爆瓶子弹</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>30</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->					
+			<bulletSpeed>0</bulletSpeed>
+			<!--特别属性------------------------------------------------------------ -->	
+			<hitGap>0.1</hitGap>
+			<skillArr>LaborZombieBoomBuff</skillArr>
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<!--图像动画属性-------------
+			----------------------------------------------- -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="LaborZombie_1_bullet"/>
+		</bullet>
+		
+	</father>
+	<father name="enemy">
+		<![CDATA[特效动画]]>
+		<skill cnName="全身发光、走路带烟">
+			<name>MadgodBuff</name><![CDATA[ 单位需要加上预处理 <preBulletArr>extremeLaserFire</preBulletArr> ]]>
+			<cnName>全身发光、走路带烟</cnName><noCopyB>1</noCopyB><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>add</condition><target>me</target><addType>state</addType>
+			<effectType>buff</effectType><effectFather>madgod</effectFather>
+			<duration>99999999</duration>
+			<meEffectImg name="madArmsAttack_state"/>
+			<stateEffectImg partType="leg_right_1,leg_left_1,arm_right_1,arm_left_1,mouth" con="add">generalEffect/purBigLight</stateEffectImg>
+			<pointEffectImg con="add">boomEffect/smoke2</pointEffectImg><!-- 走路冒烟特效 -->
+			<otherEffectImg partType="hand_right,leg_right_1,eye_left,body">boomEffect/boom3</otherEffectImg><!-- 死亡特效 -->
+		</skill>
+		<skill>
+			<name>MadgodHit</name>
+			<cnName>狂战神击中</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>allHit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>MadgodHit</effectType><effectFather>madgod</effectFather>
+			<description>。</description>
+		</skill>
+		
+		
+		<![CDATA[擎天斩]]>
+		<skill><!-- 限制 -->
+			<name>shakeMadgod</name>
+			<cnName>擎天斩</cnName><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>9</cd><iconUrl36></iconUrl36>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<otherEffectImg con="add" >skillEffect/apertureBig</otherEffectImg>
+			<meActionLabel>shakeAttack</meActionLabel>
+			<description>释放擎天斩，对地面造成猛烈一击。动作期间，狂战神将拥有竖盾。</description>
+		</skill>
+		
+		<![CDATA[乾坤斩]]>
+		<skill><!-- 限制 -->
+			<name>rotateMadgod</name>
+			<cnName>乾坤斩</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>8</cd><iconUrl36></iconUrl36>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>700</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<meActionLabel>rotateAttack</meActionLabel>
+			<description>狂战神挥刀腾旋两周，汇聚力量之后，向敌人发起致命一斩，对敌人造成超大范围的伤害。动作期间，狂战神将拥有竖盾。</description>
+		</skill>
+		<![CDATA[疾风刺]]>
+		<skill><!-- 限制 -->
+			<name>sprintMadgod</name>
+			<cnName>疾风刺</cnName><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>10</cd><iconUrl36></iconUrl36>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearEnemy</otherConditionArr>
+			<conditionRange>500</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<meActionLabel>sprintAttack</meActionLabel>
+			<pointEffectImg name="skillEffectTeleport"/>
+			<description>当敌人靠近自己时，狂战神将瞬移至远处，并挥刀向敌人发起突袭。此时狂战神处于无敌状态。</description>
+		</skill>
+		
+		<![CDATA[虚空之雷]]>
+		<skill><!-- 限制 -->
+			<name>magicMadgod</name>
+			<cnName>冰魄之雷</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cd>12</cd>
+			<iconUrl36></iconUrl36>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>lifePerLess50,magicMadgod</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<meActionLabel>magicAttack</meActionLabel>
+			<stateEffectImg name="frozenState"/>
+			<otherEffectImg name="silenceWarrior_state"/>
+			<description>当场上有多位持枪敌人时，狂战神将启动冰魄之雷，将他们冰封，只保留1位持枪敌人的活动性。持续7秒。</description>
+		</skill>
+					<skill><!-- 限制 -->
+						<name>magicMadgodHit</name>
+						<cnName>冰魄之雷-击中</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+						<!--触发条件与目标------------------------------------------------------------ -->
+						<conditionType>passive</conditionType>
+						<condition>hit</condition>
+						<target>target</target>
+						<!--效果------------------------------------------------------------ -->
+						<addType>instantAndState</addType>
+						<effectType>magicMadgodHit</effectType>
+						<duration>7</duration>
+						<stateEffectImg name="frozenState"/>
+						<description>。</description>
+					</skill>
+					
+		
+		<skill>
+			<name>weaponDefence2</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>淬火外壳</cnName><ignoreNoSkillB>1</ignoreNoSkillB><wantDescripB>1</wantDescripB>
+			<conditionType>passive</conditionType>
+			<condition>underHit</condition>
+			<otherConditionArr>hurtChild</otherConditionArr>
+			<conditionString>weapon</conditionString>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtAndMul</effectType>
+			<mul>0.35</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>受到副手伤害减少[1-mul]。</description>
+		</skill>
+		<skill><!-- 限制 -->
+			<name>verShieldMad</name><showInLifeBarB>1</showInLifeBarB>
+			<cnName>竖盾</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType><summonedUnitsB>1</summonedUnitsB>
+			<effectType>summonedUnitsAndCount</effectType>
+			
+			<!-- 子弹所需 -->
+			<obj>"cnName":"竖盾","num":2,"lifeMul":1,"dpsMul":0,"lifeTime":9999999,"mulByFatherB":1,"maxNum":2,"skillArr":["verShieldMadBuff","verShieldMadUnder"]</obj>
+			<!--图像------------------------------------------------------------ -->
+			<description>左右两侧竖起高高的护盾，抵挡任何攻击。</description>
+		</skill>
+					<skill>
+						<name>verShieldMadBuff</name>
+						<cnName>竖盾buff</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+						<conditionType>passive</conditionType>
+						<condition>add</condition>
+						<target>me</target>
+						<addType>state</addType>
+						<effectType>verShieldMadBuff</effectType><effectFather>madgod</effectFather>
+						<value>180</value><!-- 保护宽度 -->
+						<stateEffectImg name="verShieldMadState"/>
+						<duration>999999999</duration>
+					</skill>
+					<skill>
+						<name>verShieldMadUnder</name>
+						<cnName>竖盾under</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+						<conditionType>passive</conditionType>
+						<condition>underAllHit</condition>
+						<target>me</target>
+						<addType>instant</addType>
+						<effectType>verShieldMadUnder</effectType><effectFather>madgod</effectFather>
+						<valueString>verShieldMadBuff</valueString>
+						<duration>999999999</duration>
+					</skill>
+	</father>
+	
+	
+	
+	
+</data>

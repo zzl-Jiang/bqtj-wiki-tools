@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="car" cnName="战车定义">
+		<equip name="RedMoto" cnName="赤焰" rideLabel="RedMotoRide" evolutionLabel="RedMotoSec">
+			<evolutionLv>2</evolutionLv>
+			<canComposeB>1</canComposeB>
+			<mustCash>500</mustCash>
+			<main label="RedMoto_main" dpsMul="0.8" len="35" minRa="-179" maxRa="-178.9"/>
+			<sub label="Diggers_sub" dpsMul="0" hideB="1" />
+			<lifeMul>1.4</lifeMul>
+			<attackMul>1.4</attackMul>
+			<duration>40</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.08,'lifeAll':0.08}</addObjJson>
+			<skillArr>vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="RedMotoSec" cnName="烈焰" rideLabel="RedMotoRide" evolutionLabel="RedMotoThird">
+			<evolutionLv>4</evolutionLv>
+			<mustCash>250</mustCash>
+			<main label="RedMoto_main" dpsMul="1.2" len="35" minRa="-179" maxRa="-178.9"/>
+			<sub label="Diggers_sub" dpsMul="0" hideB="1" />
+			<lifeMul>1.8</lifeMul>
+			<attackMul>1.8</attackMul>
+			<duration>40</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.10,'lifeAll':0.10}</addObjJson>
+			<skillArr>vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="RedMotoThird" cnName="圣焰" rideLabel="RedMotoRide">
+			<evolutionLv>5</evolutionLv>
+			<mustCash>250</mustCash>
+			<main label="RedMoto_main" dpsMul="1.7" len="35" minRa="-179" maxRa="-178.9"/>
+			<sub label="Diggers_sub" dpsMul="0" hideB="1" />
+			<lifeMul>2.3</lifeMul>
+			<attackMul>2.2</attackMul>
+			<duration>40</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.16,'lifeAll':0.16}</addObjJson>
+			<skillArr>redMoto3Skill,vehicleFit_Civilian</skillArr>
+		</equip>
+		
+		<bullet cnName="赤焰-主炮">
+			<name>RedMoto_main</name>
+			<cnName>赤焰-主炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1.1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletNum>1</bulletNum>
+			<shootAngle>5</shootAngle>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.2</attackGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<bulletSpeed>40</bulletSpeed>
+			<followD value="0.8"/>
+			<penetrationGap>100</penetrationGap>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<fireImgUrl soundUrl="sound/bigShoot">gunFire/f</fireImgUrl>
+			<bulletImgUrl raNum="30" con="filter">bullet/orangeBullet</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/magicHit2"  shake="2,0.2,10" con="add">boomEffect/boom3</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	
+	
+	<father name="vehicleSkill" cnName="技能">
+		<skill>
+			<name>redMoto3Skill</name>
+			<cnName>车卷风</cnName><iconUrl>SkillIcon/redMoto3Skill</iconUrl>
+			<effectInfoArr></effectInfoArr>
+			<changeText>时间间隔[intervalT]秒</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>interval</condition><intervalT>1</intervalT>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>redMoto3Skill</effectType><effectFather>vehicle</effectFather>
+			<description>每过[intervalT]秒，清除一次载具附近的爆瓶毒雾、战神地面火焰。同时自身不会被封锁。</description>
+			<pointEffectImg name="extremeLaserFire_boom"/>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><intervalT>1.0</intervalT></skill>
+				<skill><intervalT>0.9</intervalT></skill>
+				<skill><intervalT>0.8</intervalT></skill>
+				<skill><intervalT>0.7</intervalT></skill>
+				<skill><intervalT>0.6</intervalT></skill>
+				<skill><intervalT>0.5</intervalT></skill>
+				<skill><intervalT>0.4</intervalT></skill>
+				<skill><intervalT>0.3</intervalT></skill>
+				<skill><intervalT>0.2</intervalT></skill>
+				<skill><intervalT>0.1</intervalT></skill>
+			</growth>
+		</skill>
+	</father>
+	
+	
+	
+	<father name="vehicle" cnName="战车body">
+		<body index="0" name="赤焰" shell="compound">
+			
+			<name>RedMoto</name>
+			<cnName>赤焰</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/RedMoto.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.8" jumpDelayT="0.15" F_I="0.4" F_F="1" moveWhenVB="1" />
+			<maxVx>20</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr>redMoto_state</skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel><hurtRatio>0.69</hurtRatio><attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel><hurtRatio>0.69</hurtRatio><attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel><hurtRatio>0.69</hurtRatio><attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel><hurtRatio>0.69</hurtRatio><attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body name="烈焰" fixed="RedMoto" shell="compound">
+			<name>RedMotoSec</name>
+			<cnName>烈焰</cnName>
+			<swfUrl>swf/vehicle/RedMotoSec.swf</swfUrl>
+			<bmpUrl>BodyImg/RedMotoSec</bmpUrl>
+		</body>
+		
+		<body name="圣焰" fixed="RedMoto" shell="compound">
+			<name>RedMotoThird</name>
+			<cnName>圣焰</cnName>
+			<swfUrl>swf/vehicle/RedMotoThird.swf</swfUrl>
+			<bmpUrl>BodyImg/RedMotoThird</bmpUrl>
+		</body>
+	</father>
+</data>

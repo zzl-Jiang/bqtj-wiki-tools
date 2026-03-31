@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="we" cnName="我方">
+		<body shell="normal">
+			<name>WangShu</name>
+			<cnName>望舒</cnName>
+			<sex>female</sex>
+			<raceType>human</raceType>
+			<swfUrl>swf/hero/WangShu.swf</swfUrl>
+			<!-- 基本系数 -->
+			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<showLevel>9999</showLevel>
+			<movieLink>Girl</movieLink>
+			<!-- 图像 -->
+			<headIconUrl>wangShu/head_icon</headIconUrl>
+			<headPlayB>1</headPlayB>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>10</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<flyType>tween</flyType>
+			<!-- AI属性 -->
+			<armsNumber>2</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>yearSnake,yearChicken</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<oneAiLabel>sniper</oneAiLabel>
+			<extraDropArmsB>1</extraDropArmsB>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr>groupReverseHurt_hero_10,crazy_hero_10,murderous_hero_10,skillGift_hero_7,silence_hero_10,invisibility_hero_10,invincibleHole,vertigoArmorIron,meltFlamerPurgold,spellImmunityMax</skillArr>
+			
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack1</imgLabel>
+					<hurtRatio>0.15</hurtRatio>
+					<shakeValue>4</shakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		
+	</father>
+</data>

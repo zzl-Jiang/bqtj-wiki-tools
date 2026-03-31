@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="nightmare" cnName="">
+		<skill cnName="步枪敏感">
+			<name>rifleSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>步枪敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>armsSensitive</effectType><valueString>rifle</valueString><mul>0.25</mul>
+			<description>降低[1-mul]受到的伤害（除步枪外）。</description>
+		</skill>
+		<skill cnName="狙击敏感">
+			<name>sniperSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>狙击敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>armsSensitive</effectType><valueString>sniper</valueString><mul>0.25</mul>
+			<description>降低[1-mul]受到的伤害（除狙击枪外）。</description>
+		</skill>
+		<skill cnName="散弹敏感">
+			<name>shotgunSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>散弹敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>armsSensitive</effectType><valueString>shotgun</valueString><mul>0.25</mul>
+			<description>降低[1-mul]受到的伤害（除散弹枪外）。</description>
+		</skill>
+		<skill cnName="手枪敏感">
+			<name>pistolSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>手枪敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>armsSensitive</effectType><valueString>pistol</valueString><mul>0.25</mul>
+			<description>降低[1-mul]受到的伤害（除手枪外）。</description>
+		</skill>
+		<skill cnName="火炮敏感">
+			<name>rocketSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>火炮敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>armsSensitive</effectType><valueString>rocket</valueString><mul>0.25</mul>
+			<description>降低[1-mul]受到的伤害（除火炮外）。</description>
+		</skill>
+		<skill cnName="弩敏感">
+			<name>crossbowSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>弩敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>armsSensitive</effectType><valueString>crossbow</valueString><mul>0.25</mul>
+			<description>降低[1-mul]受到的伤害（除弩外）。</description>
+		</skill>
+		<skill cnName="喷火器敏感">
+			<name>flamerSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>喷火器敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>armsSensitive</effectType><valueString>flamer</valueString><mul>0.25</mul><secMul>1.5</secMul>
+			<description>受到喷火器的伤害提升[secMul-1]，其他伤害降低[1-mul]。</description>
+		</skill>
+		<skill cnName="激光枪敏感">
+			<name>laserSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>激光枪敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>armsSensitive</effectType><valueString>laser</valueString><mul>0.25</mul>
+			<description>降低[1-mul]受到的伤害（除激光枪外）。</description>
+		</skill>
+		<skill cnName="其他敏感">
+			<name>otherSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>其他敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>otherSensitive</effectType><mul>0.15</mul><secMul>1.5</secMul>
+			<description>受到榴弹炮、波动枪、闪电枪、切割枪、气象枪的伤害提升[secMul-1]，其他伤害降低[1-mul]。</description>
+		</skill>
+		
+		<skill cnName="副手敏感">
+			<name>weaponSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>副手敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>weaponSensitive</effectType><mul>0</mul>
+			<description>降低[1-mul]受到的伤害（除副手外）。</description>
+		</skill>
+		<skill cnName="载具敏感">
+			<name>vehicleSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>载具敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>vehicleSensitive</effectType><mul>0</mul>
+			<description>只受载具的伤害。</description>
+		</skill>
+		<skill cnName="尸宠敏感">
+			<name>petSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>尸宠敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>petSensitive</effectType><mul>0</mul>
+			<description>只受尸宠的伤害。</description>
+		</skill>
+		<skill cnName="红武敏感">
+			<name>redArmsSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>红武敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>redArmsSensitive</effectType>
+			<description>只受红色武器的伤害。</description>
+		</skill>
+		<skill cnName="徒手敏感">
+			<name>handSensitive</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>徒手敏感</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType><condition>underAllHit</condition><target>me</target><addType>instant</addType>
+			<effectType>handSensitive</effectType>
+			<description>只受徒手攻击的伤害。</description>
+		</skill>
+		
+		<![CDATA[
+		<skill cnName="巫尸之怒"><!-- dps -->
+			<name>wizardAngerEdit</name>
+			<cnName>巫尸之怒</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<minTriggerT>50</minTriggerT>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>beforeDie</condition><!-- 被攻击后触发 -->
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>wizardAnger_wind</effectType>
+			<value>1</value>
+			<duration>5</duration>
+			<meEffectImg soundUrl="sound/invisibility_hero" con="add"></meEffectImg>
+			<stateEffectImg partType="2hand,2foot,arm_right_0,arm_right_1,arm_left_0,arm_left_1,leg_right_0,leg_right_1,leg_left_0,leg_left_1" con="filter" raNum="1">skillEffect/witchSmoke</stateEffectImg>
+			
+			<description>在受到必亡的伤害时，进入无敌状态，同时召唤无数的蝙蝠攻击敌人，蝙蝠每次攻击将回复巫尸一定的生命值。技能触发间隔不小于[minTriggerT]秒。</description>
+		</skill>
+		]]>
+	</father>
+</data>

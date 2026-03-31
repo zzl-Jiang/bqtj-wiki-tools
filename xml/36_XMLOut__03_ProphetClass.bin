@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="car" cnName="战车定义">
+		<equip name="Prophet" cnName="先知" evolutionLabel="Temmoku">
+			<canComposeB>1</canComposeB>
+			<shopB>1</shopB>
+			<main dpsMul="1.4" len="130" minRa="165" maxRa="17" />
+			<sub dpsMul="1.4" len="55" />
+			<lifeMul>1.7</lifeMul>
+			<attackMul>1.4</attackMul>
+			<duration>70</duration>
+			<cd>120</cd>
+			<mustCash>220</mustCash>
+			<addObjJson>{'dpsAll':0.10,'lifeAll':0.10}</addObjJson>
+		</equip>
+		<equip name="Temmoku" cnName="天目" evolutionLabel="SourceCode">
+			<evolutionLv>2</evolutionLv>
+			<main label="Prophet_main" dpsMul="1.7" len="130" minRa="165" maxRa="17" />
+			<sub label="Prophet_sub" dpsMul="1.7" len="55" />
+			<lifeMul>2</lifeMul>
+			<attackMul>1.7</attackMul>
+			<duration>70</duration>
+			<cd>120</cd>
+			<mustCash>220</mustCash>
+			<addObjJson>{'dpsAll':0.14,'lifeAll':0.14}</addObjJson>
+			<skillArr>vehicleFit_Gaia,vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="SourceCode" cnName="源代码" evolutionLabel="TimeMachine">
+			<evolutionLv>4</evolutionLv>
+			<main label="Prophet_main" dpsMul="2.1" len="130" minRa="165" maxRa="17" />
+			<sub label="Prophet_sub" dpsMul="2.1" len="55" />
+			<lifeMul>2.5</lifeMul>
+			<attackMul>2</attackMul>
+			<duration>70</duration>
+			<cd>120</cd>
+			<mustCash>300</mustCash>
+			<addObjJson>{'dpsAll':0.17,'lifeAll':0.17}</addObjJson>
+			<skillArr>vehicleFit_Gaia,vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="TimeMachine" cnName="时光机">
+			<evolutionLv>5</evolutionLv>
+			<main label="Prophet_main" dpsMul="2.4" len="130" minRa="165" maxRa="17" />
+			<sub label="Prophet_sub" dpsMul="2.4" len="55" />
+			<lifeMul>3</lifeMul>
+			<attackMul>2.5</attackMul>
+			<duration>70</duration>
+			<cd>120</cd>
+			<mustCash>300</mustCash>
+			<addObjJson>{'dpsAll':0.24,'lifeAll':0.24}</addObjJson>
+			<skillArr>timeMachineSkill,vehicleFit_Gaia,vehicleFit_Civilian</skillArr>
+		</equip>
+		
+		<bullet cnName="先知-主炮">
+			<name>Prophet_main</name>
+			<cnName>先知-主炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.83</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.5</attackGap>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<bulletSpeed>45</bulletSpeed>
+			<boomD  bodyB="1" floorB="1" radius="120"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">rocket/rocketBullet</bulletImgUrl>
+			<fireImgUrl raNum="30" soundUrl="rocket/barrel_sound" con="add">gunFire/rocket</fireImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom1"  shake="2,0.2,10">boomEffect/boom3</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="先知-副炮">
+			<name>Prophet_sub</name>
+			<cnName>先知-副炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.66</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.1</attackGap>
+			<attackDelay>0</attackDelay>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0x00FFFF" size="2" lightSize="6"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<fireImgUrl raNum="30" soundUrl="m4/barrel_sound">gunFire/f</fireImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	
+	
+	
+	
+	<father name="vehicleSkill" cnName="技能">
+		<skill>
+			<name>timeMachineSkill</name>
+			<cnName>多重回溯</cnName><iconUrl>SkillIcon/timeMachineSkill</iconUrl>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<changeText>伤害增加[mul-1]</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><changeHurtB>1</changeHurtB>
+			<condition>hit</condition>
+			<otherConditionArr>hurtIsAttack</otherConditionArr>
+			<conditionString>metal</conditionString>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>timeMachineSkill</effectType><effectFather>vehicle</effectFather>
+			<valueString>attack</valueString><!-- 指定子弹名字，attack就是碰撞伤害，不指定就是全部伤害 -->
+			<mul>1.2</mul>
+			<secMul>3</secMul>
+			<pointEffectImg name="orangeWaveBoom"/>
+			<otherEffectImg name="yellowHitSilence"/>
+			<description>下落时碾压敌人头部时，不断回到过去，造成多重伤害（伤害增加[mul-1]），对电磁敏感敌人的伤害再乘以3。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.5</mul></skill>
+				<skill><mul>2</mul></skill>
+				<skill><mul>2.5</mul></skill>
+				<skill><mul>3</mul></skill>
+				<skill><mul>3.5</mul></skill>
+				<skill><mul>4</mul></skill>
+				<skill><mul>4.5</mul></skill>
+				<skill><mul>5</mul></skill>
+				<skill><mul>6</mul></skill>
+				<skill><mul>7</mul></skill>
+			</growth>
+		</skill>
+	</father>
+	
+	<father name="vehicle" cnName="战车body">
+		<body index="0" name="先知" shell="compound">
+			
+			<name>Prophet</name>
+			<cnName>先知</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/Prophet38.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.8" jumpDelayT="0.15" F_I="0.3" F_F="0.9"/>
+			<maxVx>18</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp__jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit3">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<body name="天目" fixed="Prophet" shell="compound">
+			<name>Temmoku</name>
+			<cnName>天目</cnName>
+			<swfUrl>swf/vehicle/Temmoku.swf</swfUrl>
+			<bmpUrl>BodyImg/Temmoku</bmpUrl>
+		</body>	
+		<body name="源代码" fixed="Prophet" shell="compound">
+			<name>SourceCode</name>
+			<cnName>源代码</cnName>
+			<swfUrl>swf/vehicle/SourceCode.swf</swfUrl>
+			<bmpUrl>BodyImg/SourceCode</bmpUrl>
+		</body>	
+		<body name="时光机" fixed="Prophet" shell="compound">
+			<name>TimeMachine</name>
+			<cnName>时光机</cnName>
+			<swfUrl>swf/vehicle/TimeMachine.swf</swfUrl>
+			<bmpUrl>BodyImg/TimeMachine</bmpUrl>
+			<maxJumpNum>2</maxJumpNum>
+			<motionD F_G="0.8" jumpDelayT="0.15" F_I="0.3" F_F="0.9" />
+		</body>	
+	</father>
+</data>

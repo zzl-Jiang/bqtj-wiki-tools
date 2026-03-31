@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="space">
+		<body>
+			<name>OreLaserFly</name><headIconUrl>IconGather/OreLaser</headIconUrl>
+			<cnName>浮游激光炮</cnName><lifeRatio>2</lifeRatio>
+			<raceType>ship</raceType>
+			<swfUrl>swf/ship/OreLaserFly.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="stoneBoom"/>
+			<dieJumpMul>0</dieJumpMul>
+			<lockLeftB>1</lockLeftB>
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,normalAttack,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-25,-25,50,50</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<motionD F_AIR="2"/>
+			<maxVx>6</maxVx>
+			<attackAIClass></attackAIClass><!--SimpleSpaceAttack_AI  -->
+			<skillArr></skillArr>
+			<hurtArr>
+				<hurt cd="2">
+					<imgLabel>normalAttack</imgLabel><ingfollowB>1</ingfollowB>
+					<hurtRatio>0.06</hurtRatio>
+					<grapRect>-150,-350,300,380</grapRect>
+					<shakeValue>10</shakeValue>
+				</hurt>
+			</hurtArr>
+		</body>
+				<skill>
+					<name>OreLaserFly</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+					<cnName>浮游激光炮出现位置</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<conditionType>passive</conditionType>
+					<condition>bodyAdd</condition>
+					<target>me</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>OreLaserFly</effectType><effectFather>oreSpace</effectFather>
+					<pointEffectImg name="oreBombShow"/>
+				</skill>
+				<skill>
+					<name>OreWaveMoveY</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+					<cnName>垂直浮动</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<conditionType>passive</conditionType>
+					<condition>add</condition>
+					<target>me</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>OreWaveMoveY</effectType><effectFather>oreSpace</effectFather>
+					<value>20</value><!-- 浮游上限 -->
+					<mul>1</mul><!-- 浮游速度 每秒浮游mul*value-->
+					<duration>999999</duration>
+				</skill>
+		
+		
+		
+		
+		
+		
+		<body>
+			<name>OreLaser</name>
+			<cnName>采矿激光炮</cnName><lifeRatio>4</lifeRatio>
+			<raceType>ship</raceType>
+			<swfUrl>swf/ship/OreLaser.swf</swfUrl>
+			<!-- 图像 -->
+			<dieImg name="midSpace"/>
+			<dieJumpMul>0</dieJumpMul>
+			<lockLeftB>1</lockLeftB>
+			<imgType>normal</imgType>
+			<imgArr>
+				stand,normalAttack,die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-25,-25,50,50</hitRect>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<motionD vRan="0" F_AIR="2"/>
+			<maxVx>4</maxVx>
+			<attackAIClass></attackAIClass><!--SimpleSpaceAttack_AI  -->
+			<skillArr>OreLaserBuff</skillArr>
+			<hurtArr>
+				
+				<hurt cd="3">
+					<imgLabel>normalAttack</imgLabel>
+					<hurtRatio>0.1</hurtRatio>
+					<shakeValue>10</shakeValue>
+				</hurt>
+			</hurtArr>
+		</body>
+		<skill>
+			<name>OreLaserBuff</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>矿石激光台buff</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>bodyAdd</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>OreLaser</effectType>
+			<value>1.9</value><!-- 每隔几秒释放激光 -->
+			<mul>-60</mul><!-- y的距离 -->
+			<valueString>normalAttack</valueString>
+			<summonedUnitsB>1</summonedUnitsB>
+			
+			<obj>"cnName":"陨石矿","num":1,"lifeMul":1,"dpsMul":1,"maxNum":1,"lifeTime":-1,"cy":60,"skillArr":["meteOreLaserDie"]</obj>
+			<duration>9999999</duration>
+		</skill>
+		<![CDATA[
+		<skill>
+			<name>sumMeteOreLaser</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>产生陨石矿</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType><summonedUnitsB>1</summonedUnitsB>
+			<effectType>sumMeteOreLaser</effectType>
+			<value>60</value>
+			<!-- 子弹所需 -->
+			<obj>"cnName":"陨石矿","num":1,"lifeMul":2,"dpsMul":1,"mulByFatherB":1,"maxNum":1,"lifeTime":-1,"cy":60,"skillArr":["meteOreLaserDie"]</obj>
+		</skill>
+		
+				<skill>
+					<name>meteOreLaserBuff</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+					<cnName>陨石矿托运激光台</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<conditionType>passive</conditionType>
+					<condition>add</condition>
+					<target>me</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>meteOreLaserBuff</effectType>
+					<value>-60</value><!-- y的距离 -->
+					<duration>9999999</duration>
+				</skill>
+				]]>
+				<skill>
+					<name>meteOreLaserDie</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+					<cnName>陨石矿死亡</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<conditionType>passive</conditionType>
+					<condition>die</condition>
+					<target>me</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>meteOreLaserDie</effectType>
+				</skill>
+				
+	</father>
+</data>

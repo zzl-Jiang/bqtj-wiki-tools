@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="thingsEffect" cnName="物品使用效果">
+		<skill>
+			<name>bigWeaponCard</name>
+			<cnName>巨刃卡</cnName><everNoClearB>1</everNoClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>active</conditionType><noBeClearB>1</noBeClearB>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>attackScale</effectType>
+			<mul>3</mul>
+			<duration>999999</duration>
+			<stateEffectImg name="bigWeaponCard"/>
+			<description>使自己的近战（包括副手）伤害范围扩大[mul]。</description>
+		</skill>
+		<skill>
+			<name>slowTimeCard</name>
+			<cnName>缓时卡</cnName><everNoClearB>1</everNoClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>active</conditionType><noBeClearB>1</noBeClearB>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>setTimeSpeed</effectType>
+			<mul>0.85</mul>
+			<description>使关卡计时变慢[1-mul]。</description>
+		</skill>
+		<skill>
+			<name>fastEnemyCard</name>
+			<cnName>速怪卡</cnName><everNoClearB>1</everNoClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>active</conditionType><noBeClearB>1</noBeClearB>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>fastEnemy</effectType>
+			<description>怪物死后0.6秒即可刷新下一波怪，不用等待它尸体消失。</description>
+		</skill>
+		<skill>
+			<name>lockEnemyCard</name>
+			<cnName>锁怪卡</cnName><everNoClearB>1</everNoClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>active</conditionType><noBeClearB>1</noBeClearB>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>lockEnemyRect</effectType>
+			<valueString>r1</valueString>
+			<description>。</description>
+		</skill>
+	</father>
+		
+</data>

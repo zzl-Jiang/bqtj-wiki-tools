@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="energy">
+		
+		<bullet color="darkgold" evoMaxLv="5" evoMustFirstLv="9" composeLv="99" chipNum="150">
+			<name>falconGun</name><extraMul>1</extraMul>
+			<cnName>隼武</cnName><noMagneticB>1</noMagneticB>
+			<aiShootRange>800</aiShootRange><iconUrl>specialGun/falconGunIcon2</iconUrl>
+			<attackType>holy</attackType>
+			<dpsMul>3.5</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			<!--基本-->
+			<capacity>15</capacity>
+			<attackGap>0.7</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>25</bulletWidth>
+			<bulletNum>3</bulletNum>				
+			<shootAngle>1</shootAngle>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>10</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>5</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>4</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>35</bulletSpeed>
+			<bulletSkillArr>falconGun</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationGap>1000</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="0" pro="0"/>
+			<skillArr>Kill_AddCharger_ArmsSkill,Hit_AddLifeMul_ArmsSkill</skillArr>
+			<godSkillArr>enemyEmp,falconGunSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/greedySnakeSound</shootSoundUrl>
+			<bulletImgUrl name="falconArmsBullet"/>
+			<hitImgUrl name="greenEnergyHit"/>
+			
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/falconGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>消灭首领僵尸治疗兵(99级)</description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill>
+			<name>falconGunSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>隼啸</cnName>
+			<changeHurtB>1</changeHurtB><![CDATA[武器技能必须带上这个参数，不然就是伤害之后才执行]]>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>falconGunSkill</effectType>
+			<mul>5</mul>
+			<secMul>2.8</secMul>
+			<pointEffectImg name="waveBoom"/>
+			<description>每次3颗子弹交汇处击中敌人，都会造成额外[mul-1]的伤害，其他区域伤害+[secMul-1]。</description>
+		</skill>
+		
+		<skill>
+			<name>falconGunSkill2</name><noRandomListB>1</noRandomListB>
+			<cnName>穿透</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<description>无视致盲效果，同时射程不会被负面技能影响（比如狭隘领域等）。</description>
+		</skill>
+	</father>
+</data>

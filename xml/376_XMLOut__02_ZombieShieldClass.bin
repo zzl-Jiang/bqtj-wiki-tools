@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="death">
+		<body>
+			<name>ZombieShield</name>
+			<cnName>盾牌僵尸</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/ZombieShield.swf</swfUrl>
+			<headIconUrl>IconGather/ZombieShield</headIconUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>0.55</lifeRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<showLevel>9999</showLevel>
+			<!-- 图像 -->
+			<imgArr>
+				stand,move
+				,normalAttack1,hurt1,hurt2,die1
+				,__jumpUp,jumpUp,jumpUp__jumpDown,jumpDown,jumpDown__
+				,__fill1_Up,fill1_Up,fill1_Up__fill1_Down,fill1_Down,fill1_Down__die1
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-14,-76,28,76</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<!-- AI属性 -->
+			<nextAttackTime>1</nextAttackTime>
+			<extraAIClassLabel>Po_AIExtra</extraAIClassLabel>
+			<!-- 技能 -->
+			<skillArr>ZombieShieldShield</skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>normalAttack1</imgLabel>
+					<hurtRatio>2</hurtRatio>
+					<grapRect>-162,-100,144,100</grapRect>
+					<attackType>direct</attackType>
+					<skillArr></skillArr>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl name="clawHit" />
+				</hurt>
+			</hurtArr>
+		</body>	
+		
+		<skill><!-- 限制 -->
+			<name>ZombieShieldShield</name>
+			<cnName>僵尸盾牌</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<iconUrl>SkillIcon/verShield</iconUrl>
+			
+			<addType>instant</addType><summonedUnitsB>1</summonedUnitsB>
+			<effectType>summonedUnitsAndCount</effectType>
+			<!-- 子弹所需 -->
+			<obj>"cnName":"僵尸盾牌","num":1,"lifeMul":1,"dpsMul":0,"lifeTime":9999999,"mulByFatherB":1,"maxNum":2,"skillArr":["ZombieShieldShieldBuff"]</obj>
+			<description>拿起盾牌抵抗前方的攻击。在自己攻击时将失去盾牌保护。</description>
+		</skill>
+				<skill>
+						<name>ZombieShieldShieldBuff</name>
+						<cnName>盾牌buff</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+						<conditionType>passive</conditionType>
+						<condition>add</condition>
+						<target>me</target>
+						<addType>state</addType>
+						<effectType>ZombieShieldShieldBuff</effectType>
+						<value>45</value><!-- 保护宽度 -->
+						<valueString>normalAttack1</valueString><!-- 失去保护的动作数组 -->
+						<mul>4</mul><!-- 指定动作的前后几帧可以保护 -->
+						<duration>999999999</duration>
+					</skill>
+	</father>
+	
+	
+	<father name="other">
+		<body index="0" cn="盾牌僵尸盾牌" shell="other">
+			<name>ZombieShieldBody</name>
+			<cnName>僵尸盾牌</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/enemy/Zero.swf</swfUrl>
+			<swfName>Zero</swfName>
+			
+			<imgArr>stand,die1</imgArr><hurtRectArr>-16,-110,32,116</hurtRectArr>
+			<dieJumpMul>0</dieJumpMul>
+			<hitRect>-25,-15,50,30</hitRect>
+			<motionState>fly</motionState>
+			<skillArr>rigidBody_enemy,State_Invincible,State_SpellImmunity,State_noAiFind</skillArr>
+			<hurtArr><hurt><imgLabel>move</imgLabel><hurtRatio>0</hurtRatio><attackType>direct</attackType><grapRect>-50,-111,100,105</grapRect></hurt></hurtArr>
+		</body>	
+	</father>
+</data>

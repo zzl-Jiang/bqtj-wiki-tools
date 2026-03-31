@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<![CDATA[六周年已添加]]>
+	<father type="lightning" cnName="闪电枪">
+		<bullet name="yearDragon" color="darkgold" composeLv="99" dropLevelArr="999" evoMaxLv="2">
+			<name>yearDragon</name>
+			<cnName>辰龙</cnName>
+			<whippB>0</whippB>
+			<dpsMul>1.9</dpsMul>
+			<uiDpsMul>2.1</uiDpsMul>
+			<!--基本-->
+			<capacity>8</capacity>
+			<attackGap>1.2</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>500</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>10</bulletNum>				
+			<shootAngle>15</shootAngle>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>0</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.25"/>
+			
+			<skillArr>Hit_Spurting_ArmsSkill,Hit_AddLifeMul_ArmsSkill</skillArr>
+			<godSkillArr>yearDragonSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>4</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>8</upValue>
+			<shootShakeAngle>70</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>specialGun/yearDragonIcon</iconUrl>
+			<shootSoundUrl>sound/lightningShoot</shootSoundUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="filter" len="50" time="0.03" waveAn="45" everFleshB="1" imgDieType="ranStop">generalEffect/lineLightning</bulletImgUrl>
+			<hitImgUrl con="add">bulletHitEffect/fitHit</hitImgUrl>
+			<fireImgType></fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearDragon</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description></description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill>
+			<name>yearDragonSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>电爆</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<noReStateB>1</noReStateB>
+			<effectType>yearDragonSkill</effectType>
+			<mul>6</mul>
+			<value>7</value>
+			<valueString>yearDragon</valueString>
+			<duration>23</duration>
+			<stateEffectImg partType="shootPoint" con="add" raNum="1">bulletHitEffect/blueLaser</stateEffectImg>
+			<description>攻击敌人时会让枪支攻速瞬间提高6倍，不消耗子弹，持续7秒，之后12秒内不再触发此效果。</description>
+		</skill>
+		<skill>
+			<name>yearDragonPurgold</name><noRandomListB>1</noRandomListB>
+			<cnName>散射电爆</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<noReStateB>1</noReStateB>
+			<effectType>yearDragonSkill</effectType>
+			<mul>6</mul>
+			<value>7</value>
+			<secMul>1.7</secMul>
+			<valueString>yearDragon</valueString>
+			<duration>23</duration>
+			<stateEffectImg partType="shootPoint" con="add" raNum="1">bulletHitEffect/blueLaser</stateEffectImg>
+			<description>攻击敌人时会让枪支攻速瞬间提高6倍，闪电数量提高至[secMul]，不消耗子弹，持续7秒，之后12秒内不再触发此效果。</description>
+		</skill>
+	</father>
+</data>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="shotgun" cnName="散弹枪">
+		<bullet index="34" name="shotgunSkunk" color="black" dropLevelArr="89"  evoMaxLv="16" composeLv="86" chipNum="50">
+			<name>shotgunSkunk</name>
+			<cnName>赤鼬</cnName><extraMul>1.4</extraMul>
+			<whippB>0</whippB>
+			<!--基本-->
+			<capacity>6,10</capacity>
+			<attackGap>0.95,1.2</attackGap>
+			<reloadGap>2,2.5</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>500</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>11</bulletNum>				
+			<shootAngle>22</shootAngle>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationNum>0</penetrationNum>
+			<penetrationGap>0</penetrationGap>
+			<bounceD floor="4" body="3"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			<skillArr>Hit_AddLifeMul_ArmsSkill,Hit_Spurting_ArmsSkill</skillArr>
+			<godSkillArr>booby_godArmsSkill,Hit_imploding_godArmsSkill</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>4</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>14</upValue>
+			<shootShakeAngle>70</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/shotgunRed_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0xFF0000" size="2" lightSize="6" blendMode="add"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgType></fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/shotgunSkunk</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		
+		
+		
+		
+		
+		
+		<bullet name="shotgunSkunkYa"  color="yagold">
+			<name>shotgunSkunkYa</name>
+			<cnName>氩星赤鼬</cnName>
+			<whippB>0</whippB>
+			<!--基本-->
+			<capacity>20</capacity>
+			<attackGap>0.5</attackGap>
+			<reloadGap>1</reloadGap>
+			<shakeAngle>1</shakeAngle>
+			<bulletWidth>600</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<bulletNum>11</bulletNum>				
+			<shootAngle>22</shootAngle>				
+			<beatBack>2</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<bounceD floor="4" body="3"/>	<!-- 反弹 -->
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>4</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.6</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>14</upValue>
+			<shootShakeAngle>70</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/shotgunRed_sound</shootSoundUrl>
+			<flipX>1</flipX>
+			<lineD lightColor="0xFF0000" size="2" lightSize="6" blendMode="add"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgType></fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/shotgunSkunk6</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill name="鼬灭"><!-- dps-被动 -->
+			<name>booby_godArmsSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>鼬灭</cnName>
+			<haveEffectBuletHitNum>1</haveEffectBuletHitNum>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<summonedUnitsB>1</summonedUnitsB>
+			<addType>state</addType>
+			<effectType>booby_godArmsSkill</effectType>
+			<extraValueType>nowArmsTrueDps</extraValueType><!-- 附加值类型为单位dps系数 -->
+			<duration>999999</duration>
+			<mul>0.5</mul>
+			<range>600</range>
+			<!-- 子弹所需 -->
+			<obj>"cnName":"赤鼬导弹发射器","num":1,"lifeMul":1000,"maxNum":1,"dpsMul":1,"mulByFatherB":true,"lifeTime":1,"noUnderHurtB":1,"noAiFindB":1,"noUnderHitB":1,"skillArr":["State_SpellImmunity"]</obj>
+			<!--图像------------------------------------------------------------ -->
+			<description>对接近的敌方单位，发射导弹驱逐。</description>
+		</skill>
+		<skill name="超鼬灭"><!-- dps-被动 -->
+			<name>booby_godArmsSkill2</name><noRandomListB>1</noRandomListB>
+			<cnName>超鼬灭</cnName>
+			<haveEffectBuletHitNum>1</haveEffectBuletHitNum>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<summonedUnitsB>1</summonedUnitsB>
+			<addType>state</addType>
+			<effectType>booby_godArmsSkill</effectType>
+			<extraValueType>nowArmsTrueDps</extraValueType><!-- 附加值类型为单位dps系数 -->
+			<duration>999999</duration>
+			<mul>0.5</mul>
+			<range>900</range>
+			<!-- 子弹所需 -->
+			<obj>"cnName":"赤鼬导弹发射器","num":1,"lifeMul":1000,"maxNum":1,"dpsMul":1,"mulByFatherB":true,"lifeTime":1,"noUnderHurtB":1,"noAiFindB":1,"noUnderHitB":1,"skillArr":["State_SpellImmunity"]</obj>
+			<!--图像------------------------------------------------------------ -->
+			<description>对周围900码的敌人发射导弹驱逐。</description>
+		</skill>
+		<skill name="超鼬灭"><!-- dps-被动 -->
+			<name>boobyPurgold</name><noRandomListB>1</noRandomListB>
+			<cnName>超鼬灭</cnName>
+			<haveEffectBuletHitNum>1</haveEffectBuletHitNum>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<summonedUnitsB>1</summonedUnitsB>
+			<addType>state</addType>
+			<effectType>booby_godArmsSkill</effectType>
+			<extraValueType>nowArmsTrueDps</extraValueType><!-- 附加值类型为单位dps系数 -->
+			<duration>999999</duration>
+			<mul>0.5</mul>
+			<range>900</range>
+			<!-- 子弹所需 -->
+			<obj>"cnName":"赤鼬导弹发射器","num":1,"lifeMul":1000,"maxNum":1,"dpsMul":1,"mulByFatherB":true,"lifeTime":1,"noUnderHurtB":1,"noAiFindB":1,"noUnderHitB":1,"skillArr":["State_SpellImmunity","boobyPurgoldBody"]</obj>
+			<!--图像------------------------------------------------------------ -->
+			<description>对敌人发射导弹驱逐，并且不会触发其殒命技能。</description>
+		</skill>
+		
+		<skill name="弹爆">
+			<name>purgoldSkunk</name><noBeClearB>1</noBeClearB>
+			<cnName>弹爆</cnName><noRandomListB>1</noRandomListB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><![CDATA[<haveEffectBuletHitNum>1</haveEffectBuletHitNum>]]>
+			<condition>hit</condition><changeHurtB>1</changeHurtB><![CDATA[这个必须要加，才能在被打死之前触发该技能：//伤害技能（前）if (skillB0) dealHurtSkill(b0, b1, h0, SkillEvent.hit,true);]]>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>purgoldSkunk</effectType>
+			<linkArr>purgoldSkunkLink</linkArr>
+			<description>每颗子弹击中敌人都有3%的概率产生3倍散射，对有殒命技能的敌人概率加4倍，且封锁其殒命技能（短命之仇、复仇之箭、复仇之魂等）。[预估增加武器输出：70%]</description>
+		</skill>
+	</father>
+	
+	<father name="godArmsSkill_link" cnName="链接">
+		<skill>
+			<name>boobyPurgoldBody</name><noBeClearB>1</noBeClearB>
+			<cnName>导弹发射器-不触发殒命技能</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition><changeHurtB>1</changeHurtB><![CDATA[这个必须要加，才能在被打死之前触发该技能：//伤害技能（前）if (skillB0) dealHurtSkill(b0, b1, h0, SkillEvent.hit,true);]]>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>puKillNoDieEventB</effectType>
+			<description>击中敌人时不会触发其殒命技能。</description>
+		</skill>
+		
+		<skill>
+			<name>purgoldSkunkLink</name><noBeClearB>1</noBeClearB>
+			<cnName>弹爆状态</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>purgoldSkunkLink</effectType>
+			<value>3</value>
+			<mul>1</mul>
+			<duration>2</duration>
+			<pointEffectImg partType="shootPoint" con="add" raNum="1">gunFire/purgoldSkunk</pointEffectImg>
+			<description>击中敌人有3%的概率3倍散射。</description>
+		</skill>
+		
+	</father>
+</data>

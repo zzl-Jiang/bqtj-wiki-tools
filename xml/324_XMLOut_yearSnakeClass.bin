@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="crossbow" cnName="弩">
+		<bullet name="巳蛇" color="black" dropLevelArr="999"  evoB="0" composeLv="97" chipB="1" chipNum="150">
+			<name>yearSnake</name><cnName>巳蛇</cnName>
+			<dpsMul>1.1</dpsMul>
+			<uiDpsMul>1.1</uiDpsMul>
+			<!--基本-->
+			<capacity>6,8</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>2,2.5</reloadGap>
+			<shakeAngle>0,0</shakeAngle>
+			<bulletWidth>30</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>3,5</shootAngle>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul><upValue>10</upValue><shootShakeAngle>30</shootShakeAngle><shootRecoil>7</shootRecoil><screenShakeValue>10</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime><bulletLife>2.5</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>42</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->	
+			<attackDelay>1.5</attackDelay>
+			<crossbowD focoB="1" minDelayMul="0.05"/>
+			<godSkillArr>Hit_posion7_godArmsSkill,yearSnakeSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>specialGun/arrowAttack</shootSoundUrl>
+			<bulletImgUrl raNum="30" con="filter">specialGun/yearSnakeBullet</bulletImgUrl>
+			<hitImgUrl soundUrl="specialGun/arrowImpact">bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl>bulletHitEffect/yellow_motion</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<fireImgType>no</fireImgType>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearSnake</bodyImgRange><bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>文杰忠诚度（7级）、物品合成、纪念币商店、黄金商店、竞技宝箱</description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill name="蛇刺">
+			<name>yearSnakeSkill</name><noRandomListB>1</noRandomListB>
+			<cnName>蛇刺</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><changeHurtB>1</changeHurtB>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>stateAndInstant</addType><overlyingB>1</overlyingB>
+			<effectType>yearSnakeSkill</effectType>
+			<duration>2</duration>
+			<value>5</value>
+			<mul>4</mul>
+			<stateEffectImg partType="body" con="add" imgDieType="stop">specialGun/yearSnakeState</stateEffectImg>
+			<pointEffectImg soundUrl="boomSound/midBoom2" partType="body" con="add">boomEffect/midCan</pointEffectImg>
+			<description>巳蛇发出的蛇刺将插在敌人身上，蛇刺数量到达[value]时将爆炸，对敌人造成额外[mul-1]的伤害。</description>
+		</skill>
+	</father>
+</data>

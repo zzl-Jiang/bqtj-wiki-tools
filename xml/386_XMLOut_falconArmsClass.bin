@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="energy">
+		<bullet color="yagold">
+			<name>falconArms</name><![CDATA[ 该武器英文名不可修改]]>
+			<cnName>氩星隼武</cnName><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+			<aiShootRange>800</aiShootRange><!-- ai射程 -->
+			<attackType>holy</attackType>
+			<dpsMul>1.5</dpsMul>
+			<!--基本-->
+			<capacity>10</capacity>
+			<attackGap>1.1</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>25</bulletWidth>
+			<bulletNum>3</bulletNum>				
+			<shootAngle>1</shootAngle>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>20</upValue>
+			<shootShakeAngle>20</shootShakeAngle>
+			<shootRecoil>20</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>4</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>12</bulletSpeed>
+			<bulletSkillArr>spiralMove3</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>enemyEmp,killPet</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<fireImgUrl name="falconArmsFire"/>
+			<shootSoundUrl>specialGun/greedySnakeSound</shootSoundUrl>
+			<bulletImgUrl name="falconArmsBullet"/>
+			<hitImgUrl name="greenEnergyHit"/>
+			
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/falconArms</bodyImgRange>
+		</bullet>
+	</father>
+	
+</data>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- id是唯一识别码，必须防止和其他关卡集合重复，不设置的话默认为文件名。 -->
+<data id="levelExampleDrop2" cnName="添加掉落物" author="沃龙先生">
+	<!-- 关卡集介绍。 -->
+	<info>演示了如何在地图中添加掉落物，以及创建一个新的掉落物（可自定义外观）。</info>
+	
+	<father name="normal">
+		<gather>
+			<level name="levelExampleDrop1" cnName="添加掉落物" descrip="">
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1" />
+
+				<!-- 场景 -->
+				<sceneLabel>XiFeng</sceneLabel>
+				
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<!-- 每个蜘蛛网点添加掉落物addPumpkin，2个，高度间隔120 -->
+							<order>dropMapSpider:demStone; 2:120</order>
+							<!-- 往指定坐标添加地雷 -->
+							<order>addDrop:hurtMineEffect; 1970,1830</order>
+							<order>alert:yes; 拾取20个十年币即可通关。</order>
+						</event>
+					</group>
+					<group id="group2" cnName="事件集2">
+						<event>
+							<!-- doNumber="-1"意味着常驻条件，执行后不会删除。 -->
+							<condition doNumber="-1">hitDrop:p1; addTenCoin</condition>
+							<!-- 添加并让数值变量coin+1 -->
+							<order>addNumber:coin; 1</order>
+							<!-- 提示数值变量coin，持续10秒 -->
+							<order>tip:10; 获得十年币[coin]个</order>
+						</event>
+					</group>
+					<group id="group3" cnName="事件集3">
+						<event>
+							<!-- 条件：数值变量coin大于20时。 -->
+							<condition>number:greater_20; coin</condition>
+							<order>alert:yes; 获得十年币[coin]个，通关成功！</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+	</father>
+	
+	<father name="normal">
+		<gather>
+			<level name="levelExampleDrop2" cnName="创建新掉落物" descrip="">
+				<info enemyLv="99" noMoreB="1" noVehicleB="1" noTreasureB="1" noPropsB="1" mustSingleB="1" noDeviceB="1" noAIB="1" />
+
+				<!-- 场景 -->
+				<sceneLabel>XiFeng</sceneLabel>
+				
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<!-- 每个蜘蛛网点添加掉落物wenJieHead（文杰头），1个 -->
+							<order>dropMapSpider:wenJieHead; 1</order>
+							<order>alert:yes; 拾取20个文杰头即可通关成功。</order>
+						</event>
+					</group>
+					<group id="group2" cnName="事件集2">
+						<event>
+							<!-- doNumber="-1"意味着常驻条件，执行后不会删除。 -->
+							<condition doNumber="-1">hitDrop; wenJieHead</condition>
+							<!-- 添加并让数值变量coin+1 -->
+							<order>addNumber:coin; 1</order>
+							<!-- 提示数值变量coin，持续10秒 -->
+							<order>tip:10; 获得文杰头[coin]个</order>
+						</event>
+					</group>
+					<group id="group3" cnName="事件集3">
+						<event>
+							<!-- 条件：数值变量coin大于20时。 -->
+							<condition>number:greater_20; coin</condition>
+							<order>alert:yes; 获得文杰头[coin]个，通关成功！</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+	</father>
+	
+	<!-- type="effect"是掉落物的类型，必须有这个参数 -->
+	<father type="effect">
+		<drop>
+			<name>wenJieHead</name>
+			<cnName>文杰头</cnName>
+			<!-- 图标地址 -->
+			<imgUrl>WenJie/head</imgUrl>
+			<!-- 附带技能效果 -->
+			<extraSkill>invincibleDrugDrop</extraSkill>
+			<!-- 1不会有跟踪效果 0有跟踪效果 -->
+			<noFollowHeroB>1</noFollowHeroB>
+			<!-- 持续时间，不设置就是无限时间 -->
+			<lifetime>60</lifetime>
+			<!-- 在地图中显示的颜色 -->
+			<smallMapColor>0xFF00FFFF</smallMapColor>
+		</drop>
+	</father>
+</data>

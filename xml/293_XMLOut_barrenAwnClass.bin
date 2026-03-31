@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father  type="rocket" cnName="火炮-特殊">
+		<bullet cnName="荒芒" name="barrenAwn" color="black" composeLv="90" chipB="1" chipNum="160" dropLevelArr="999">
+			<name>barrenAwn</name>
+			<cnName>荒芒</cnName>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>20</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>35</bulletWidth>
+			<bulletShakeWidth>0,0</bulletShakeWidth>
+			<bulletNum>17</bulletNum>
+			<shootAngle>90</shootAngle>	
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>20</upValue>
+			<shootShakeAngle>40</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>2</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>2</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>30</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  bodyB="1" floorB="1" selfB="1" radius="130"/>
+			<twoShootPro>0.3</twoShootPro>
+			<penetrationGap>1000</penetrationGap>
+			<bounceD floor="0" body="0"/>	<!-- 反弹 -->
+			<critD mul="2" pro="0.2"/>
+			
+			<iconUrl>specialGun/barrenAwnIcon</iconUrl>
+			<skillArr>Hit_Spurting_ArmsSkill,Kill_Spurting_ArmsSkill</skillArr>
+			<godSkillArr>Hit_seckill_godArmsSkill,barrenAwnSkill</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<fireImgUrl name="gunFireRocket"/>
+			<bulletImgUrl con="filter" raNum="30">bullet/blueFire</bulletImgUrl>
+			<hitImgUrl name="smallSpace"/><!-- 子弹图像【必备】 -->
+			<shootSoundUrl>sound/bigShoot</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/barrenAwn</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description>纪念币兑换</description>
+		</bullet>
+		
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill><!-- dps-被动 -->
+			<name>barrenAwnSkill</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<cnName>战场之王</cnName><noRandomListB>1</noRandomListB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>puWe,barrenAwn,targetUnitType,isTrueBody</otherConditionArr>
+			<conditionString>boss</conditionString>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>barrenAwnSkill</effectType>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg></meEffectImg>
+			<targetEffectImg name="bigSpaceShake"/>
+			<description>每周可以瞬秒1次战场首领。当周战场首领个数超过7个时，可以瞬秒2次首领。注意，瞬秒效果不会影响首领的重生技能。</description>
+		</skill>
+	</father>
+</data>

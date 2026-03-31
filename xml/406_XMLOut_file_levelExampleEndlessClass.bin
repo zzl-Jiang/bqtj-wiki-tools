@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- id是唯一识别码，必须防止和其他关卡集合重复，不设置的话默认为文件名。 -->
+<data id="levelExampleEndless" cnName="无尽玩法" author="沃龙先生">
+	<!-- 关卡集介绍。 -->
+	<info>里面包含了几种玩法的关卡示例，作为参考。你还可以在底下“获取源码：关卡”中，获取其他关卡的源码进行参考。</info>
+	
+	<father name="normal">
+		<gather>
+			<level name="levelExampleEndless2" cnName="无尽玩法" descrip="展示无尽玩法，无穷无尽且越来越强的怪物。">
+				<info enemyLv="99" />
+				<!-- 场景 -->
+				<sceneLabel>XiShan3</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG>
+					<!-- 设置全部单位id命令为patrolGlobal（巡逻全图） -->
+					
+					<unitOrder id="enemy1" camp="enemy">
+						<!-- default可以设置所有单位的属性，格式和unit一致。 -->
+						<default aiOrder="patrolGlobal" skillArr="setMaxLifeMulByBo2,noUnderMulHurt,spellImmunityMax,killCharm2"/>
+						<!-- 11种怪物，每种40%的概率出现，不能添加太多小怪，否则内存不够将导致出错，因为这些小怪都是位图缓存，会占用很多内存。 -->
+						<numberType>pro</numberType>
+						<unit cnName="毒蛛" num="0.4"  />
+						<unit cnName="吸血蝙蝠" num="0.4"/>
+						<unit cnName="银锤" num="0.4"/>
+						<unit cnName="嗜血尸狼" num="0.4"/>
+						<unit cnName="火炮尸狼" num="0.4"/>
+						<unit cnName="战斗干尸" num="0.4"/>
+						<unit cnName="星锤干尸" num="0.4"/>
+						<unit cnName="哨兵" num="0.4"/>
+						<unit cnName="掘金尸" num="0.4"/>
+						<unit cnName="伏地尸" num="0.4"/>
+						<unit cnName="科研僵尸" num="0.4"/>
+					</unitOrder>
+				</unitG>
+				
+				<eventG>
+					<group id="group1" cnName="事件集1">
+						<event>
+							<order>say; startList:s1</order>
+						</event>
+						<!-- 对话结束后继续，其他condition参数【参考“开发文档_关卡.xls的condtion条件”】 -->
+						<event><condition>say:listOver</condition></event>
+						<event>
+							<!-- 循环刷怪10000次，因为怪物加了“setMaxLifeMulByBo2”技能，所以血量会跟随波数越来越高。。 -->
+							<condition doNumber="10000">liveEnemyNumber:less_1</condition>
+							<order>createUnit:enemy1; r123</order>
+						</event>
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>alert:yes; 恭喜你！你完成了一项壮举，成功击败了10000波的僵尸！</order>
+						</event>
+						<event>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		
+		<![CDATA[技能]]>
+		<skill>
+			<name>setMaxLifeMulByBo2</name>
+			<cnName>根据波数设置血量2</cnName>
+			<conditionType>passive</conditionType><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>setMaxLifeMulPow</effectType>
+			<!-- nowEnemyBo指的是当前怪物波数 -->
+			<extraValueType>nowEnemyBo</extraValueType>
+			<!-- 血量倍数=1.05^当前已经刷出怪物波数 -->
+			<value>1.05</value>
+			<description>血量倍数=[value]^当前已经刷出怪物波数。</description>
+		</skill>
+		<skill>
+			<name>killCharm2</name>
+			<cnName>超级破魅</cnName><showInLifeBarB>1</showInLifeBarB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurt</effectType>
+			<mul>1000000</mul>
+			<!-- 修改伤害所需 -->
+			<obj>"type":"killCharm"</obj>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg></meEffectImg>
+			<targetEffectImg></targetEffectImg>
+			<description>对魅惑单位造成1000000倍的伤害。</description>
+		</skill>
+		
+		<![CDATA[对话]]>
+		<level name="levelExampleEndless2"><!-- name要和level 的name同名 -->
+			<sayList name="s1">
+				<say target="沃龙"><content>马上就有10000波怪物，你能通关吗？</content></say>
+				<say target="p1"><content>小意思！</content></say>
+			</sayList>
+		</level>
+	</father>
+</data>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="aircraft" cnName="战车定义">
+		<equip name="Punisher" cnName="制裁者" evolutionLabel="Adjudicator">
+			<canComposeB>1</canComposeB>
+			<shopB>1</shopB>
+			<main dpsMul="1.6" len="20" minRa="-180" maxRa="-179.9" actionLabel="mainAttack"  swapLabel="mainChangeAttack" swapSoundUrl="Punisher/s_mainSwap" />
+			<sub dpsMul="1.6" len="0" minRa="90" maxRa="-160" actionLabel="subAttack"  swapLabel="subChangeAttack" swapSoundUrl="Punisher/s_subSwap" />
+			<lifeMul>1.5</lifeMul>
+			<attackMul>0</attackMul>
+			<duration>80</duration>
+			<cd>120</cd>
+			<mustCash>250</mustCash>
+			<addObjJson>{'dpsAll':0.12,'lifeAll':0.12}</addObjJson>
+		</equip>
+		<equip name="Adjudicator" cnName="判决者" evolutionLabel="Chastener">
+			<evolutionLv>2</evolutionLv>
+			<mustCash>250</mustCash>
+			<main label="Punisher_main" dpsMul="2.3" len="20" minRa="-180" maxRa="-179.9" actionLabel="mainAttack"  swapLabel="mainChangeAttack" swapSoundUrl="Adjudicator/s_mainSwap" />
+			<sub label="Punisher_sub" dpsMul="2.3" len="0" minRa="90" maxRa="-160" actionLabel="subAttack"  swapLabel="subChangeAttack" swapSoundUrl="Adjudicator/s_subSwap" />
+			<lifeMul>2</lifeMul>
+			<attackMul>0</attackMul>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.16,'lifeAll':0.16}</addObjJson>
+			<skillArr>vehicleFit_fly,vehicleFit_Gaia</skillArr>
+		</equip>
+		<equip name="Chastener" cnName="惩戒者" evolutionLabel="Executioner">
+			<evolutionLv>4</evolutionLv>
+			<mustCash>300</mustCash>
+			<main label="Punisher_main" dpsMul="2.7" len="20" minRa="-180" maxRa="-179.9" actionLabel="mainAttack"  swapLabel="mainChangeAttack" swapSoundUrl="Chastener/s_mainSwap" />
+			<sub label="Punisher_sub" dpsMul="2.7" len="0" minRa="90" maxRa="-160" actionLabel="subAttack"  swapLabel="subChangeAttack" swapSoundUrl="Chastener/s_subSwap" />
+			<lifeMul>2.7</lifeMul>
+			<attackMul>0</attackMul>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.20,'lifeAll':0.20}</addObjJson>
+			<skillArr>vehicleFit_fly,vehicleFit_Gaia</skillArr>
+		</equip>
+		<equip name="Executioner" cnName="处决者">
+			<evolutionLv>5</evolutionLv>
+			<mustCash>300</mustCash>
+			<main label="Punisher_main" dpsMul="3.3" len="20" minRa="-180" maxRa="-179.9" actionLabel="mainAttack"  swapLabel="mainChangeAttack" swapSoundUrl="Executioner/s_mainSwap" />
+			<sub label="Punisher_sub" dpsMul="3.3" len="0" minRa="90" maxRa="-160" actionLabel="subAttack"  swapLabel="subChangeAttack" swapSoundUrl="Executioner/s_subSwap" />
+			<lifeMul>3.2</lifeMul>
+			<attackMul>0</attackMul>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.26,'lifeAll':0.26}</addObjJson>
+			<skillArr>executionerSkill,vehicleFit_fly,vehicleFit_Gaia</skillArr>
+		</equip>
+		
+		
+		<bullet cnName="制裁者-主炮">
+			<name>Punisher_main</name>
+			<cnName>制裁者-主炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.28</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.5</attackGap>
+			<attackDelay>0.15</attackDelay>
+			<bulletNum>3</bulletNum>
+			<shootAngle>5</shootAngle>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<bulletSpeed>45</bulletSpeed>
+			<boomD  bodyB="1" floorB="1" radius="120" maxHurtNum="99" />
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<fireImgUrl soundUrl="sound/bigShoot"></fireImgUrl>
+			<bulletImgUrl raNum="30" con="filter">bullet/purpleFire</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom1"  shake="2,0.2,10">boomEffect/boom3</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="制裁者-副炮">
+			<name>Punisher_sub</name>
+			<cnName>制裁者-副炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.22</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.13</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletNum>3</bulletNum>
+			<shootAngle>3</shootAngle>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0xFF00FF" size="3" lightSize="8" blendMode="add" type="one" />
+			<fireImgUrl soundUrl="sound/laserShoot"></fireImgUrl>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	<father name="vehicleSkill" cnName="技能">
+		<skill>
+			<name>executionerSkill</name><noBeClearB>1</noBeClearB>
+			<cnName>处决形态</cnName><iconUrl>SkillIcon/executionerSkill</iconUrl>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>80</cd>
+			<changeText>持续时间[duration]秒</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>beforeAttack</condition><!-- 在准备攻击之前触发 -->
+			<target>me</target>
+			<passiveSkillArr>executionerSkill_link</passiveSkillArr>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>executionerSkill</effectType><effectFather>vehicle</effectFather>
+			<value>4</value><!-- bulletNumMul -->
+			<mul>0.5</mul><!-- shootAngleMul -->
+			<duration>1.7</duration>
+			
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="bladeShield_me"/>
+			<stateEffectImg name="burstParts"/>
+			<description>使自己身体放大2倍，进入无敌状态，并开启4倍超级散射，对机械体的敌人提升150%的伤害。持续[duration]秒。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><duration>1.6</duration></skill>
+				<skill><duration>2</duration></skill>
+				<skill><duration>2.5</duration></skill>
+				<skill><duration>3</duration></skill>
+				<skill><duration>3.5</duration></skill>
+				<skill><duration>4</duration></skill>
+				<skill><duration>4.5</duration></skill>
+				<skill><duration>5</duration></skill>
+				<skill><duration>5.5</duration></skill>
+				<skill><duration>7</duration></skill>
+			</growth>
+		</skill>
+				<skill>
+					<name>executionerSkill_link</name>
+					<cnName>对机械体提升</cnName><noRandomListB>1</noRandomListB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType><changeHurtB>1</changeHurtB>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>changeHurt_raceType</effectType>
+					<valueString>robot</valueString>
+					<mul>2.5</mul>
+					<pointEffectImg name="orangeWaveBoom"/>
+				</skill>
+	</father>
+	
+	
+	
+	
+	
+	<father name="vehicle" cnName="战车body">
+		<body index="0" name="制裁者" shell="compound">
+			
+			<name>Punisher</name>
+			<cnName>制裁者</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/Punisher.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<flipCtrlBy>mouse</flipCtrlBy>
+			<imgArr>
+				stand,move,die1,mainAttack,subAttack,mainChangeAttack,subChangeAttack
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-60,60,70</hitRect>
+			<!-- 运动 -->
+			<motionClass>AircraftGroundMotion</motionClass>
+			<motionState>fly</motionState>
+			<flyType>space</flyType>
+			<motionD jumpDelayT="0.15" moveWhenVB="1" />
+			<maxVx>15</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+			</hurtArr>
+		</body>
+		<body name="判决者" fixed="Punisher" shell="compound">
+			<name>Adjudicator</name>
+			<cnName>判决者</cnName>
+			<swfUrl>swf/vehicle/Adjudicator.swf</swfUrl>
+			<bmpUrl>BodyImg/Adjudicator</bmpUrl>
+		</body>
+		<body name="惩戒者" fixed="Punisher" shell="compound">
+			<name>Chastener</name>
+			<cnName>惩戒者</cnName>
+			<swfUrl>swf/vehicle/Chastener.swf</swfUrl>
+			<bmpUrl>BodyImg/Chastener</bmpUrl>
+		</body>
+		<body name="处决者" fixed="Punisher" shell="compound">
+			<name>Executioner</name>
+			<cnName>处决者</cnName>
+			<swfUrl>swf/vehicle/Executioner.swf</swfUrl>
+			<bmpUrl>BodyImg/Executioner</bmpUrl>
+		</body>
+	</father>
+</data>

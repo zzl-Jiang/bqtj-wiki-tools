@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="car" cnName="战车定义">
+		<equip name="BlueMoto" cnName="幽鬼" rideLabel="BlueMotoRide" evolutionLabel="BlueMotoSec">
+			<evolutionLv>2</evolutionLv>
+			<shopB>1</shopB>
+			<main label="BlueMoto_main" dpsMul="1.7" len="42" minRa="-179" maxRa="-178.9"/>
+			<sub label="Diggers_sub" dpsMul="0" hideB="1" />
+			<lifeMul>2</lifeMul>
+			<attackMul>1.8</attackMul>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.18,'lifeAll':0.18}</addObjJson>
+			<skillArr>vehicleFit_Gaia,blade_blueMoto</skillArr>
+		</equip>
+		<equip name="BlueMotoSec" cnName="血魂" rideLabel="BlueMotoRide" evolutionLabel="BlueMotoThird">
+			<evolutionLv>4</evolutionLv>
+			<mustCash>300</mustCash>
+			<main label="BlueMoto_main" dpsMul="3" len="42" minRa="-179" maxRa="-178.9"/>
+			<sub label="Diggers_sub" dpsMul="0" hideB="1" />
+			<lifeMul>2.9</lifeMul>
+			<attackMul>2.5</attackMul>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.21,'lifeAll':0.21}</addObjJson>
+			<skillArr>vehicleFit_Gaia,vehicleFit_fly,vehicleFit_Civilian,blade_blueMoto</skillArr>
+		</equip>
+		<equip name="BlueMotoThird" cnName="飞魄" rideLabel="BlueMotoRide">
+			<evolutionLv>5</evolutionLv>
+			<mustCash>200</mustCash>
+			<main label="BlueMoto_main" dpsMul="3.5" len="42" minRa="-179" maxRa="-178.9"/>
+			<sub label="Diggers_sub" dpsMul="0" hideB="1" />
+			<lifeMul>3.3</lifeMul>
+			<attackMul>3</attackMul>
+			<duration>80</duration>
+			<cd>120</cd>
+			<addObjJson>{'dpsAll':0.27,'lifeAll':0.27}</addObjJson>
+			<skillArr>vehicleFit_Gaia,vehicleFit_fly,vehicleFit_Civilian,blade_blueMoto,rideShootMoto</skillArr>
+		</equip>
+		
+		
+		<bullet cnName="幽鬼-主炮">
+			<name>BlueMoto_main</name>
+			<cnName>幽鬼-主炮</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1.2</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletNum>1</bulletNum>
+			<shootAngle>5</shootAngle>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.2</attackGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>15</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<bulletSpeed>40</bulletSpeed>
+			<boomD  bodyB="1" floorB="1" radius="120" />
+			<followD value="1"/>
+			<penetrationGap>100</penetrationGap>
+			<!--图像动画属性------------------------------------------------------------ -->
+			
+			<flipX>1</flipX>
+			<fireImgUrl soundUrl="GaiaFit/shoot">gunFire/f</fireImgUrl>
+			<bulletImgUrl raNum="30" con="filter">bullet/blueFire</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/magicHit2"  shake="2,0.2,10" con="add">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	
+	
+	<father name="vehicleSkill" cnName="技能">
+		
+		<skill>
+			<name>blade_blueMoto</name>
+			<cnName>冻血刀锋</cnName>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>20</cd>
+			<changeText>持续时间：[duration]秒</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>hit</condition><!-- 在准备攻击之前触发 -->
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>blade_blueMoto</effectType>
+			<duration>6</duration>
+			<passiveSkillArr>blade_blueMoto_link</passiveSkillArr>
+			<!-- 修改伤害所需 -->
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg soundUrl="sound/murderous_hero"></meEffectImg>
+			<stateEffectImg partType="foot_left,foot_right" con="filter">BlueMoto/blade</stateEffectImg>
+			<description>车轮装配冻刀，令碰撞的敌人胆寒，降低其40%攻击力，持续[duration]秒。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><duration>6</duration></skill>
+				<skill><duration>6.5</duration></skill>
+				<skill><duration>7</duration></skill>
+				<skill><duration>7.5</duration></skill>
+				<skill><duration>8</duration></skill>
+				<skill><duration>8.5</duration></skill>
+				<skill><duration>9</duration></skill>
+				<skill><duration>9.5</duration></skill>
+				<skill><duration>10</duration></skill>
+			</growth>
+		</skill>
+		
+		<skill>
+			<name>rideShootMoto</name><noCopyB>1</noCopyB><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<cnName>骑射</cnName><iconUrl>SkillIcon/rideShootMoto</iconUrl>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>no</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>rideShootMoto</effectType>
+			<mul>0.5</mul>
+			<duration>999999</duration>
+			<description>角色召唤载具将进入骑射状态（下蹲时则不召唤），期间角色将不会受到伤害，玩家可以操作角色的武器、技能、装置等，不能使用副手；玩家可同时操作载具的移动和射击，不过载具的技能将由AI控制，同时载具的防御将加倍。</description>
+			<growth>
+				<skill><duration>999999</duration></skill>
+			</growth>
+		</skill>
+	</father>
+		
+	
+	
+	
+	<father name="vehicle" cnName="战车body">
+		<body index="0" name="幽鬼" shell="compound">
+			
+			<name>BlueMoto</name>
+			<cnName>幽鬼</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/BlueMoto.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.8" jumpDelayT="0.15" F_I="0.4" F_F="1" moveWhenVB="1" />
+			<maxVx>20</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr>blueMoto_state</skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel><hurtRatio>0.69</hurtRatio><attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel><hurtRatio>0.69</hurtRatio><attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel><hurtRatio>0.69</hurtRatio><attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel><hurtRatio>0.69</hurtRatio><attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl con="add" soundUrl="sound/vehicle_hit4">bulletHitEffect/energy</hitImgUrl>
+				</hurt>
+			</hurtArr>
+		</body>
+	
+		<body name="血魂" fixed="BlueMoto" shell="compound">
+			<name>BlueMotoSec</name>
+			<cnName>血魂</cnName>
+			<swfUrl>swf/vehicle/BlueMotoSec.swf</swfUrl>
+			<bmpUrl>BodyImg/BlueMotoSec</bmpUrl>
+		</body>
+		
+		<body name="飞魄" fixed="BlueMoto" shell="compound">
+			<name>BlueMotoThird</name>
+			<cnName>飞魄</cnName>
+			<swfUrl>swf/vehicle/BlueMotoThird.swf</swfUrl>
+			<bmpUrl>BodyImg/BlueMotoThird</bmpUrl>
+		</body>
+	</father>
+</data>

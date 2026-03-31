@@ -1,0 +1,2440 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="zombie" cnName="僵尸">
+		<bullet cnName="无头自爆僵尸-死后释放炸弹">
+			<name>boom_headless</name>
+			<cnName>自爆僵尸炸弹</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>2.5</hurtRatio>
+			<attackType>holy</attackType><noMagneticB>1</noMagneticB>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>20</shakeAngle>
+			<bulletLife>0.8</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>160</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-18,-52</shootPoint>
+			<bulletSpeed>10</bulletSpeed>
+			<gravity>1</gravity>
+			<!--特殊属性------------------------------------------------------------ -->
+			<boomD selfB="1" bodyB="1" radius="80" />
+			<bounceD floor="10"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl>ZombieHeadless/bullet</bulletImgUrl>
+			<hitImgUrl shake="2,0.2,15" soundUrl="boomSound/midBoom2">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="boomSound/microBoom1">bulletHitEffect/smoke_small</hitFloorImgUrl>
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="携弹僵尸" hole="boom">
+			<name>ZombieBomb_1</name>
+			<cnName>携弹僵尸</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-64,-82</shootPoint>
+			<bulletSpeed>25</bulletSpeed>
+			<gravity>0.4</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">ZombieIncapable/bullet</bulletImgUrl>
+			<hitImgUrl name="imploding_enemy_hit"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="boom_headless_smoke"/><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="橄榄僵尸">
+			<name>ZombieFootball_1</name>
+			<cnName>橄榄僵尸</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<bulletAngle>210</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="2" num="0.8" />	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-64,-82</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1.4</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">ZombieFootball/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="ZombieFootball/hit2">bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="橄榄僵尸-尸宠">
+			<name>PetZombieFootball_1</name>
+			<cnName>橄榄僵尸</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<bulletAngle>210</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="2" num="0.8" />	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-64,-82</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1.4</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetZombieFootball/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="PetZombieFootball/hit2">bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="橄榄僵尸-尸宠">
+			<name>PetZombieFootball_2</name>
+			<cnName>橄榄僵尸-弹性世界</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<bulletAngle>210</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>8</bulletNum>				
+			<shootNum>1</shootNum>					
+							
+			<shootAngle>20</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<penetrationNum>999</penetrationNum>
+			<twoHitGap>0.2</twoHitGap>
+			<skillArr>slowMove_enemy</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-64,-82</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1.3</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetZombieFootball/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="PetZombieFootball/hit2">bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="橄榄僵尸-尸宠">
+			<name>PetZombieHelmet_1</name>
+			<cnName>橄榄僵尸</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<bulletAngle>210</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="2" num="0.8" />	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-64,-82</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1.4</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetZombieHelmet/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="PetZombieHelmet/hit2">bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="橄榄僵尸-尸宠">
+			<name>PetZombieHelmet_2</name>
+			<cnName>橄榄僵尸-弹性世界</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<bulletAngle>210</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>8</bulletNum>				
+			<shootNum>1</shootNum>					
+							
+			<shootAngle>20</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<penetrationNum>999</penetrationNum>
+			<twoHitGap>0.2</twoHitGap>
+			<skillArr>slowMove_enemy</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-64,-82</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1.3</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetZombieHelmet/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="PetZombieHelmet/hit2">bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		
+		<bullet cnName="屠刀僵尸-飞刀">
+			<name>ZombieCleaver_1</name>
+			<cnName>屠刀僵尸-飞刀</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>15</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.1</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-60,-90</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>0.7</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">ZombieCleaver/bullet</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="ZombieCleaver/hit1">bladeHitEffect/blood</hitImgUrl>
+			<hitFloorImgUrl con="add" soundUrl="ZombieCleaver/hit1" soundVolume="0.4">bladeHitEffect/blood</hitFloorImgUrl>
+			<smokeImgUrl con="filter" raNum="1">ZombieCleaver/smoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			
+		</bullet>
+		<bullet cnName="屠刀僵尸-飞刀">
+			<name>PetZombieCleaver_1</name>
+			<cnName>屠刀僵尸-飞刀</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>15</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.1</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-60,-90</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>0.7</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">PetZombieCleaver/bullet</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="PetZombieCleaver/hit1">bladeHitEffect/blood</hitImgUrl>
+			<hitFloorImgUrl con="add" soundUrl="PetZombieCleaver/hit1" soundVolume="0.4">bladeHitEffect/blood</hitFloorImgUrl>
+			<smokeImgUrl con="filter" raNum="1">PetZombieCleaver/smoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			
+		</bullet>
+		<bullet cnName="银锤-飞刀">
+			<name>ZombieSilver_1</name>
+			<cnName>银锤-飞刀</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>15</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.8</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-52,-75</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>0.7</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">ZombieSilver/bullet</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="ZombieSilver/hit1">bulletHitEffect/energy</hitImgUrl>
+			<hitFloorImgUrl con="add" soundUrl="ZombieSilver/hit1" soundVolume="0.4">bulletHitEffect/energy</hitFloorImgUrl>
+			<smokeImgUrl con="filter" raNum="1">ZombieSilver/smoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+			
+		</bullet>
+		
+		<bullet cnName="监狱僵尸-飞刀">
+			<name>ZombiePrison_1</name>
+			<cnName>监狱僵尸-飞刀</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.6</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-64,-82</shootPoint>
+			<bulletSpeed>25</bulletSpeed>
+			<gravity>0.6</gravity>
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">ZombiePrison/bullet</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/vehicle_hit2">bladeHitEffect/blood</hitImgUrl>
+			<hitFloorImgUrl con="add" soundUrl="sound/vehicle_hit2" soundVolume="0.4">bladeHitEffect/blood</hitFloorImgUrl>
+			<smokeImgUrl con="filter" raNum="1">ZombiePrison/smoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="屠刀僵尸-飞刀">
+			<name>HammerMummy_1</name>
+			<cnName>星锤干尸-飞锤</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>25</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.1</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-60,-90</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>0.7</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">HammerMummy/bullet</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/vehicle_hit1">bladeHitEffect/blood</hitImgUrl>
+			<hitFloorImgUrl con="add" soundUrl="sound/vehicle_hit1" soundVolume="0.4">bladeHitEffect/blood</hitFloorImgUrl>
+			
+		</bullet>
+	</father>
+	<father type="zombie" cnName="僵尸王">	
+		<bullet cnName="僵尸王-地滚弹">
+			<name>ZombieKing_floor</name>
+			<cnName>僵尸王地滚弹</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>60</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>								
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="1000"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-57,-50</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">ZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="ZombieKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="僵尸王-背部火炮">
+			<name>ZombieKing_gun</name>
+			<cnName>僵尸王-背部火炮</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>3</shootNum>					
+			<shootGap>0.2</shootGap>					
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-45,-106</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>1</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">ZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="ZombieKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		
+		
+		<bullet cnName="僵尸王-尸宠-地滚弹">
+			<name>PetZombieKing_floor</name>
+			<cnName>僵尸王地滚弹</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>60</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>								
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="1000"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-57,-50</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="PetZombieKing/hitFloor2"  raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="僵尸王-尸宠-背部火炮">
+			<name>PetZombieKing_gun</name>
+			<cnName>僵尸王-尸宠-背部火炮</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>3</shootNum>					
+			<shootGap>0.2</shootGap>					
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-45,-106</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>0.3</gravity>
+			<followD value="0.6"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="PetZombieKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		<bullet cnName="钢铁僵尸王-尸宠-地滚弹">
+			<name>PetIronZombieKing_floor</name>
+			<cnName>僵尸王地滚弹</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>60</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>									
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="1000"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-57,-50</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetIronZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="PetIronZombieKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="钢铁僵尸王-尸宠-背部火炮">
+			<name>PetIronZombieKing_gun</name>
+			<cnName>钢铁僵尸王-尸宠-背部火炮</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>3</shootNum>					
+			<shootGap>0.2</shootGap>					
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-45,-106</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>0.3</gravity>
+			<followD value="0.6"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">PetIronZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="PetIronZombieKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+	</father>
+	
+	<father type="zombie" cnName="游尸王">		
+		<bullet cnName="游尸王-地滚弹">
+			<name>SwimKing_floor</name>
+			<cnName>游尸王地滚弹</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>80</bulletAngleRange>
+			<bulletNum>6</bulletNum>				
+			<shootNum>1</shootNum>								
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="1000"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-57,-50</shootPoint>
+			<bulletSpeed>25</bulletSpeed>
+			<gravity>1</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">SwimKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="SwimKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="游尸王-背部火炮">
+			<name>SwimKing_gun</name>
+			<cnName>僵尸王-背部火炮</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>6</bulletNum>				
+			<shootNum>3</shootNum>					
+			<shootGap>0.2</shootGap>					
+			<shootAngle>40</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<followD value="0.5" maxTime="0.8" />	 
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-45,-106</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1</gravity>
+			<positionD>
+				<point shootPoint="-76,-97" bulletAngle="-144" />
+				<point shootPoint="10,-133" bulletAngle="-109" />
+				<point shootPoint="38,-73" bulletAngle="-21" />
+			</positionD>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">SwimKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="SwimKing/hitFloor2" soundVolume="0.2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+	</father>
+	<father type="zombie" cnName="炮兵总管">		
+		<bullet cnName="僵尸炮兵总管-圆周弹">
+			<name>circle_inward_shell</name>
+			<cnName>圆周弹</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngleRange>360</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>5</shootNum>					
+			<shootGap>0.05</shootGap>					
+			<shootAngle>0</shootAngle>					
+			<positionD specialType="circle_inward"/>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="0.3" />
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>25</bulletSpeed>
+			<speedD random="0.3"/>
+			<gravity>0</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">bullet/missile_bullet</bulletImgUrl>
+			<hitImgUrl  soundUrl="boomSound/microBoom2">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/smallFire</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="僵尸炮兵总管-横扫弹">
+			<name>sweep_shell</name>
+			<cnName>横扫弹</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>128</bulletAngle>
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<shootNum>5</shootNum>					
+			<shootGap>0.05</shootGap>					
+			<shootAngle>0</shootAngle>					
+			<positionD>
+				<point shootPoint="200,-350" />
+				<point shootPoint="300,-350" />
+				<point shootPoint="400,-350" />
+				<point shootPoint="500,-350" />
+				<point shootPoint="600,-350" />
+			</positionD>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>15</bulletSpeed>
+			<speedD random="0.3"/>
+			<gravity>0</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">bullet/missile_bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/microBoom2" soundVolume="1">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		
+		
+	</father>
+	<father type="zombie" cnName="精英技能">		
+		<bullet cnName="万弹归宗">
+			<name>moreMissile_enemy</name>
+			<cnName>万弹归宗</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>0.3</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletNum>4</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootAngle>60</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="2" delay="0.2" />	 
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-30,-60</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<speedD random="0.3"/>
+			<gravity>0</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">bullet/missile_bullet</bulletImgUrl>
+			<hitImgUrl  soundUrl="boomSound/microBoom2">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="导弹召唤-逃出升天任务">
+			<name>sweep_runAway</name>
+			<cnName>导弹召唤-任务</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>99999999</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>6</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngleRange>360</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootGap>0</shootGap>					
+			<shootAngle>0</shootAngle>					
+			<positionD specialType="circle_inward"/>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>10</bulletSpeed>
+			<speedD random="0.3"/>
+			<gravity>0</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl soundUrl="sound/imploding_enemy">skillEffect/imploding_enemy_bullet</bulletImgUrl>
+			<hitImgUrl  soundUrl="boomSound/microBoom2">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/smallFire</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+	</father>
+	<father type="zombie" cnName="狂战尸">		
+		<bullet cnName="狂刃爆发">
+			<name>knifeBoom_FightKing</name>
+			<cnName>狂刃爆发</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtMul>0.1</hurtMul>
+			<attackType>holy</attackType>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>10</shakeAngle>
+			<bulletLife>3.5</bulletLife>
+			<bulletWidth>45</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.1</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>8</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootAngle>100</shootAngle>					
+			<extendGap>50</extendGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,-60</shootPoint>
+			<bulletSpeed>15</bulletSpeed>
+			<speedD random="0.3"/>
+			<gravity>0.3</gravity>
+			<penetrationGap>1000</penetrationGap>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl con="add">FightKing/shoot_bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="FightKing/hit2" con="add">bladeHitEffect/blood</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter">FightKing/shoot_bullet</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="狂战尸-旋风宗">
+			<name>FightKing_shoot</name>
+			<cnName>狂战尸-旋风宗</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>60</shakeAngle>
+			<bulletLife>3.5</bulletLife>
+			<bulletWidth>45</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.3</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootGap>0.05</shootGap>				
+			<extendGap>0</extendGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-49,-176</shootPoint>
+			<bulletSpeed>15</bulletSpeed>
+			<speedD random="0.2"/>
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="0.8" maxTime="3" />	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="1">FightKing/shoot_bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="FightKing/hit2" con="add">bladeHitEffect/blood</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		
+		
+		<bullet cnName="狂战尸尸宠-狂刃追踪">
+			<name>PetFightKing_shoot</name>
+			<cnName>狂战尸-狂刃追踪</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>60</shakeAngle>
+			<bulletLife>4.5</bulletLife>
+			<bulletWidth>50</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.3</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootGap>0.05</shootGap>				
+			<extendGap>0</extendGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-49,-176</shootPoint>
+			<bulletSpeed>11</bulletSpeed>
+			<speedD random="0.2"/>
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="1.5"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="1">PetFightKing/shoot_bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="PetFightKing/hit2" con="add">bladeHitEffect/blood</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="混沌狂战尸尸宠-狂刃追踪">
+			<name>PetChaosKing_shoot</name>
+			<cnName>狂战尸-狂刃追踪</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>60</shakeAngle>
+			<bulletLife>4.5</bulletLife>
+			<bulletWidth>50</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.3</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootGap>0.05</shootGap>				
+			<extendGap>0</extendGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-49,-176</shootPoint>
+			<bulletSpeed>11</bulletSpeed>
+			<speedD random="0.2"/>
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="1.5"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="1">PetChaosKing/shoot_bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="PetChaosKing/hit2" con="add">bladeHitEffect/blood</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	<father type="zombie" cnName="鬼目游尸">		
+		<bullet cnName="灵游尸-镭射眼">
+			<name>laser_ling</name>
+			<cnName>鬼目游尸-镭射眼</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.2</attackGap>
+			<attackDelay>0.7</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>2</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<bulletSpeed>30</bulletSpeed>
+			<positionD>
+				<point shootPoint="-16,-72"/>
+				<point shootPoint="-28,-72"/>
+			</positionD>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl>ZombieLing/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="ZombieLing/hit2">bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter">ZombieLing/smoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+	</father>
+	<father type="zombie" cnName="巨毒尸">		
+		<bullet cnName="巨毒尸-喷毒">
+			<name>HugePoison_shoot</name>
+			<cnName>巨毒尸-喷毒</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>128</bulletAngle>
+			<shakeAngle>15</shakeAngle>
+			<bulletAngleRange>30</bulletAngleRange>
+			<bulletLife>3</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.2</attackGap>
+			<attackDelay>0.33</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<shootNum>18</shootNum>					
+			<shootGap>0</shootGap>					
+			<shootAngle>3</shootAngle>					
+			<positionD>
+				<point shootPoint="-43,-144" bulletAngle="-180" />
+				<point shootPoint="-42,-145" bulletAngle="-176" />
+				<point shootPoint="-40,-147" bulletAngle="-172" />
+				<point shootPoint="-38,-149" bulletAngle="-168" />
+				<point shootPoint="-37,-152" bulletAngle="-164" />
+				<point shootPoint="-35,-153" bulletAngle="-160" />
+				<point shootPoint="-33,-155" bulletAngle="-156" />
+				
+				<point shootPoint="-35,-153" bulletAngle="-160" />
+				<point shootPoint="-37,-152" bulletAngle="-164" />
+				<point shootPoint="-38,-149" bulletAngle="-168" />
+				<point shootPoint="-40,-147" bulletAngle="-172" />
+				<point shootPoint="-42,-145" bulletAngle="-176" />
+				<point shootPoint="-43,-144" bulletAngle="180" />
+				
+				<point shootPoint="-42,-145" bulletAngle="-176" />
+				<point shootPoint="-40,-147" bulletAngle="-172" />
+				<point shootPoint="-38,-149" bulletAngle="-168" />
+				<point shootPoint="-37,-152" bulletAngle="-164" />
+				<point shootPoint="-35,-153" bulletAngle="-160" />
+				<point shootPoint="-33,-155" bulletAngle="-156" />
+				
+			</positionD>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>15</bulletSpeed>
+			<extendGap>15</extendGap>
+			<speedD random="0.4" max="15" min="5" a="-15" />
+			<gravity>0.5</gravity>
+			<followD value="0.5" maxTime="0.3" />	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">skillEffect/poisonClaw_enemy</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="HugePoison/shoot_hit">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/poisonClaw_enemy</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="巨毒尸-毒震">
+			<name>HugePoison_shake</name>
+			<cnName>巨毒尸-毒震</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>270</bulletAngle>
+			<bulletAngleRange>30</bulletAngleRange>
+			<bulletLife>0.001</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<shootNum>10</shootNum>					
+			<shootGap>0</shootGap>					
+			<positionD specialType="HugePoison_shake"/>
+			<skillArr>posion7_hugePosion</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl>boomEffect/posion1</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="HugePoison/shoot_hit" soundVolume="0.3">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="巨毒尸-反溅">
+			<name>splash_HugePoison</name>
+			<cnName>巨毒尸-反溅</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>270</bulletAngle>
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>1</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletNum>15</bulletNum>				
+			<shootAngle>100</shootAngle>					
+			<shootPoint>0,-40</shootPoint>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>20</bulletSpeed>
+			<extendGap>15</extendGap>
+			<speedD random="0.5" max="20" min="5" a="-15" />
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">skillEffect/poisonClaw_enemy</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="HugePoison/shoot_hit">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/poisonClaw_enemy</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="毒气弹-爆毒">
+			<name>selfBoom_GasBomb</name>
+			<cnName>毒气弹-爆毒</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtMul>0.4</hurtMul>
+			<attackType>holy</attackType>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>0.001</bulletLife>
+			<bulletWidth>0</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<boomD selfB="1" radius="160"/>
+			<skillArr>slowMove_GasBomb</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">bullet/missile_bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/posion3</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	<father type="zombie" cnName="毒蛛">		
+		<bullet cnName="霸王毒蛛-喷毒">
+			<name>SpiderKing_shoot</name>
+			<cnName>霸王毒蛛-喷毒</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>-170</bulletAngle>
+			<shakeAngle>15</shakeAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletLife>3</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.6</attackGap>
+			<attackDelay>0.2</attackDelay>
+			<bulletNum>5</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootGap>0</shootGap>					
+			<shootAngle>10</shootAngle>					
+			<shootPoint>-54,-54</shootPoint>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>30</bulletSpeed>
+			<speedD random="0.5" max="30" min="15" a="-15" />
+			<gravity>0.2</gravity>
+			<!--<followD value="0.5" maxTime="0.3" />	 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">skillEffect/poisonClaw_enemy</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="SpiderKing/shoot_hit">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/poisonClaw_enemy</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="霸王毒蛛-酸雨-副本">
+			<name>acidRain_SpiderKing</name>
+			<cnName>酸雨</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtMul>0.17</hurtMul>
+			<attackType>holy</attackType>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>90</bulletAngle>
+			<shakeAngle>3</shakeAngle>
+			<bulletLife>6</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.5</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<shootNum>10</shootNum>					
+			<shootGap>0.05</shootGap>					
+			<shootAngle>0</shootAngle>					
+			<positionD>
+				<point shootPoint="-400,-1250" />
+				<point shootPoint="-300,-1250" />
+				<point shootPoint="-200,-1250" />
+				<point shootPoint="-100,-1250" />
+				<point shootPoint="0,-1250" />
+				<point shootPoint="100,-1250" />
+				<point shootPoint="200,-1250" />
+				<point shootPoint="300,-1250" />
+				<point shootPoint="400,-1250" />
+				<point shootPoint="500,-1250" />
+			</positionD>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>10</bulletSpeed>
+			<speedD random="0.3"/>
+			<gravity>0</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl>skillEffect/poisonousFog_hero</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="SpiderKing/shoot_hit">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter">skillEffect/poisonousFog_hero</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+	</father>
+	<father type="zombie" cnName="暴君">		
+		<bullet cnName="骷髅-跟踪导弹">
+			<name>Skeleton_bullet</name>
+			<cnName>骷髅-跟踪导弹</cnName>
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>175</bulletAngle>
+			<bulletAngleRange>0</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootAngle>20</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="6"/>	<!-- 反弹 -->
+			<followD value="1" maxTime="0.6" />	<!-- 跟踪 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-97,-84</shootPoint>
+			<bulletSpeed>35</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">rocket/rocketBullet</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="boomSound/smallBoom"  shake="3,0.4,9" soundVolume="0.5">boomEffect/boom1</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/smallFire</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet index="0" name="骷髅-散弹枪">
+			<name>Skeleton_machine</name>
+			<cnName>骷髅-散弹枪</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<shootPoint>-97,-84</shootPoint>
+			<bulletAngle>175</bulletAngle>
+			<attackGap>1</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletNum>6</bulletNum>				
+			<shootNum>4</shootNum>					
+			<shootGap>0.07</shootGap>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootAngle>20</shootAngle>				
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--<bulletMaxV>10</bulletMaxV>-->
+			<!--<bulletMaxVa>0</bulletMaxVa>-->
+			<!-- <bulletVra>-1000</bulletVra>-->		<!-- 自转速度（默认值为0，标准值30，-1000代表永远不转方向）-->
+			<!-- <gravity>0.8</gravity>-->			<!-- 重力系数（默认值为0）-->
+			<!--跟踪------------------------------------------------------------ -->
+			<bounceD floor="6" body="0" num="0"/>	<!-- 反弹 -->
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0x00FFFF" size="2" lightSize="6"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!-- <smokeImgUrl>sub/missile_bullet_smoke</smokeImgUrl>--><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="骷髅-地狱剑">
+			<name>knife_skeleton</name>
+			<cnName>骷髅-地狱剑</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>0.04</bulletLife>
+			<bulletWidth>100</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<imgClearDelay>0.4</imgClearDelay>
+			<bulletImgUrl>Skeleton/knifeEffect</bulletImgUrl>
+			<hitImgUrl con="add">bladeHitEffect/blood</hitImgUrl>
+		</bullet>
+		<bullet cnName="骷髅-地狱剑-副本">
+			<name>knife_skeleton_extra</name>
+			<cnName>骷髅-地狱剑-副本</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtMul>0.25</hurtMul>
+			<attackType>holy</attackType>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>0.04</bulletLife>
+			<bulletWidth>100</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>knife_skeleton_hammer</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<imgClearDelay>0.4</imgClearDelay>
+			<bulletImgUrl>Skeleton/knifeEffect</bulletImgUrl>
+			<hitImgUrl con="add">bladeHitEffect/blood</hitImgUrl>
+		</bullet>
+	</father>
+	<father type="zombie" cnName="钢铁僵尸王">	
+		<bullet cnName="钢铁僵尸王-地滚弹">
+			<name>IronZombieKing_floor</name>
+			<cnName>僵尸王地滚弹</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>60</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>							
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="1000"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-57,-50</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<gravity>1</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">IronZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="IronZombieKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="钢铁僵尸王-背部火炮">
+			<name>IronZombieKing_gun</name>
+			<cnName>钢铁僵尸王-背部火炮</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.35</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>3</shootNum>					
+			<shootGap>0.2</shootGap>					
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-45,-106</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>1</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">IronZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="IronZombieKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="钢铁僵尸王-磁力反击">
+			<name>IronZombieKing_bitBack</name>
+			<cnName>钢铁僵尸王-磁力反击</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.8</attackGap>
+			<attackDelay>1.4</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletAngleRange>30</bulletAngleRange>
+			<extendGap>30</extendGap>
+			<bulletNum>30</bulletNum>				
+			<shootNum>1</shootNum>							
+			<shootAngle>150</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<speedD random="0.2"/>
+			<shootPoint>0,-73</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<followD value="0.2"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">IronZombieKing/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="IronZombieKing/hitFloor2" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+	</father>
+	
+	<father type="zombie" cnName="飓风巫尸">	
+		<bullet cnName="飓风巫尸-能量波">
+			<name>TyphoonWitch_shoot1</name>
+			<cnName>飓风巫尸-能量波</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.3</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>3</shootNum>					
+			<shootGap>0.25</shootGap>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="10"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-63,-96</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<followD value="0.2"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">TyphoonWitch/bullet1</bulletImgUrl>
+			<hitImgUrl soundUrl="TyphoonWitch/hit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl>bulletHitEffect/energy</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="1">skillEffect/witchSmoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="飓风巫尸-聚能波">
+			<name>TyphoonWitch_shoot2</name>
+			<cnName>飓风巫尸-聚能波</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>3</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>2.2</attackGap>
+			<attackDelay>1.6</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>10</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>emp_wind</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-73,-96</shootPoint>
+			<bulletSpeed>35</bulletSpeed>
+			<targetShakeValue>20</targetShakeValue>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">TyphoonWitch/bullet2</bulletImgUrl>
+			<hitImgUrl soundUrl="TyphoonWitch/hit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="TyphoonWitch/hit1">bulletHitEffect/energy</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="1">TyphoonWitch/smoke2</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="飓风巫尸-蝙蝠阵">
+			<name>TyphoonWitch_bat</name>
+			<cnName>飓风巫尸-蝙蝠阵</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>15</shakeAngle>
+			<bulletLife>3</bulletLife>
+			<bulletWidth>25</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.6</attackGap>
+			<attackDelay>0.5</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>12</shootNum>					
+			<shootGap>0.03</shootGap>					
+			<positionD specialType="TyphoonWitch_bat"/>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<twoHitGap>0.5</twoHitGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>255,-81</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<speedD random="0.3"/>
+			<followD value="0.25"/>	<!-- 跟踪 -->
+			
+			<skillArr>blindness_skeleton</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">TyphoonWitch/batBullet1</bulletImgUrl>
+			<bulletLeftImgUrl raNum="1">TyphoonWitch/batBullet2</bulletLeftImgUrl>
+			<hitImgUrl soundUrl="TyphoonWitch/hit2">bladeHitEffect/blood</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="飓风巫尸-飓风">
+			<name>TyphoonWitch_wind</name>
+			<cnName>飓风巫尸-飓风</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>13</bulletLife>
+			<bulletWidth>60</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.4</attackGap>
+			<attackDelay>0.55</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<twoHitGap>0.2</twoHitGap>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-151,-55</shootPoint>
+			<bulletSpeed>15</bulletSpeed>
+			<speedD max="25" min="4" a="-4" />
+			<skillArr>slowMove_wind,silence_wind</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">TyphoonWitch/windEffect</bulletImgUrl>
+			<hitImgUrl soundUrl="TyphoonWitch/hit2">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="飓风巫尸-巫师之怒">
+			<name>TyphoonWitch_anger</name>
+			<cnName>巫师之怒</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>40</shakeAngle>
+			<bulletLife>3.5</bulletLife>
+			<bulletWidth>25</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.9</attackGap>
+			<attackDelay>0.15</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>3</bulletNum>				
+			<shootAngle>90</shootAngle>
+			<shootNum>30</shootNum>					
+			<shootGap>0.01</shootGap>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<twoHitGap>0.5</twoHitGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,-60</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<extendGap>30</extendGap>
+			<speedD max="20" min="6" a="4" random="0.3"/>
+			<followD value="0.2"/>	<!-- 跟踪 -->
+			
+			<skillArr>wizardAnger_wind_blood,blindness_skeleton</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">TyphoonWitch/batBullet1</bulletImgUrl>
+			<bulletLeftImgUrl raNum="1">TyphoonWitch/batBullet2</bulletLeftImgUrl>
+			<hitImgUrl soundUrl="TyphoonWitch/hit2">bladeHitEffect/blood</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		
+		
+		<bullet cnName="飓风巫尸-能量波">
+			<name>PetTyphoonWitch_shoot1</name>
+			<cnName>飓风巫尸-能量波</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.3</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>3</shootNum>					
+			<shootGap>0.25</shootGap>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="10"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-63,-96</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<followD value="0.2"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">PetTyphoonWitch/bullet1</bulletImgUrl>
+			<hitImgUrl soundUrl="PetTyphoonWitch/hit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl>bulletHitEffect/energy</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="1">skillEffect/witchSmoke</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="飓风巫尸-聚能波">
+			<name>PetTyphoonWitch_shoot2</name>
+			<cnName>飓风巫尸-聚能波</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>3</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>2.2</attackGap>
+			<attackDelay>1.6</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>10</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>emp_wind</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-73,-96</shootPoint>
+			<bulletSpeed>35</bulletSpeed>
+			<targetShakeValue>20</targetShakeValue>
+			<followD value="0.5"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">PetTyphoonWitch/bullet2</bulletImgUrl>
+			<hitImgUrl soundUrl="PetTyphoonWitch/hit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="PetTyphoonWitch/hit1">bulletHitEffect/energy</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="1">PetTyphoonWitch/smoke2</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="飓风巫尸-飓风">
+			<name>PetTyphoonWitch_wind</name>
+			<cnName>飓风巫尸-飓风</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>13</bulletLife>
+			<bulletWidth>60</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.4</attackGap>
+			<attackDelay>0.55</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<twoHitGap>0.2</twoHitGap>
+			
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-151,-55</shootPoint>
+			<bulletSpeed>8</bulletSpeed>
+			<speedD max="8" min="4" a="-4" />
+			<skillArr>slowMove_wind,silence_wind</skillArr>
+			<followD value="0.5"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">PetTyphoonWitch/windEffect</bulletImgUrl>
+			<hitImgUrl soundUrl="PetTyphoonWitch/hit2">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="飓风巫尸-巫师之怒">
+			<name>PetTyphoonWitch_anger</name>
+			<cnName>宠-巫师之怒</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>40</shakeAngle>
+			<bulletLife>3.5</bulletLife>
+			<bulletWidth>25</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.9</attackGap>
+			<attackDelay>0.15</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>3</bulletNum>				
+			<shootAngle>90</shootAngle>
+			<shootNum>30</shootNum>					
+			<shootGap>0.01</shootGap>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<twoHitGap>0.5</twoHitGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,-60</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<extendGap>30</extendGap>
+			<speedD max="20" min="6" a="4" random="0.3"/>
+			<followD value="0.2"/>	<!-- 跟踪 -->
+			
+			<skillArr>wizardAnger_wind_blood,blindness_skeleton</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1">PetTyphoonWitch/batBullet1</bulletImgUrl>
+			<bulletLeftImgUrl raNum="1">PetTyphoonWitch/batBullet2</bulletLeftImgUrl>
+			<hitImgUrl soundUrl="PetTyphoonWitch/hit2">bladeHitEffect/blood</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>	
+	<father type="zombie" cnName="铁魁">
+		<bullet>
+			<name>PetIronChief_shoot1</name>
+			<cnName>铁魁-散弹枪</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>0.33</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<shootPoint>-82,2</shootPoint>
+			<bulletAngle>179</bulletAngle>
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.27</attackDelay>
+			<bulletNum>6</bulletNum>				
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootAngle>20</shootAngle>				
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--跟踪------------------------------------------------------------ -->
+			<bounceD floor="6" body="0" num="0"/>	<!-- 反弹 -->
+			<!--特殊------------------------------------------------------------ -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0x00FFFF" size="2" lightSize="6"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!-- <smokeImgUrl>sub/missile_bullet_smoke</smokeImgUrl>--><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="铁魁-跟踪导弹">
+			<name>PetIronChief_shoot2</name>
+			<cnName>铁魁-跟踪导弹</cnName>
+			<hurtRatio>0.3</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.27</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootAngle>20</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="6"/>	<!-- 反弹 -->
+			<followD value="1" maxTime="0.6" />	<!-- 跟踪 -->
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-44,-11</shootPoint>
+			<bulletSpeed>35</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">rocket/rocketBullet</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="boomSound/smallBoom"  shake="3,0.4,9" soundVolume="0.5">boomEffect/boom1</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/smallFire</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet>
+			<name>PetIronChiefThird_shoot1</name>
+			<cnName>哈迪斯-光波</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>60</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.8</attackGap>
+			<attackDelay>0.5</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="6"/>	<!-- 反弹 -->
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<twoHitGap>0.2</twoHitGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-120,-67</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl con="add" raNum="2">PetIronChiefThird/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/fireHit1" con="add">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		
+	</father>	
+	<father type="zombie" cnName="爆骷">
+		<bullet cnName="爆骷-跟踪导弹">
+			<name>PetBoomSkull_shoot1</name>
+			<cnName>爆骷-跟踪导弹</cnName>
+			<hurtRatio>0.3</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletNum>2</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootAngle>20</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="1"/>	<!-- 跟踪 -->
+			<penetrationGap>1000</penetrationGap>
+			<boomD selfB="1" bodyB="1" radius="140" />
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-78,-90</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">PetBoomSkull/bullet1</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="爆骷-跟踪导弹">
+			<name>PetBoomSkullSecond_shoot1</name>
+			<cnName>爆骷-跟踪导弹</cnName>
+			<hurtRatio>0.3</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.7</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletNum>2</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootAngle>20</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="1"/>	<!-- 跟踪 -->
+			<penetrationGap>1000</penetrationGap>
+			<boomD selfB="1" bodyB="1" radius="140" />
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-78,-90</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">PetBoomSkullSecond/bullet1</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		<bullet cnName="爆骷X3-跟踪导弹">
+			<name>PetBoomSkullThird_shoot1</name>
+			<cnName>爆骷X3-跟踪导弹</cnName>
+			<hurtRatio>0.3</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.8</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootAngle>20</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="1"/>	<!-- 跟踪 -->
+			<penetrationGap>1000</penetrationGap>
+			<boomD selfB="1" bodyB="1" radius="200" />
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-108,-173</shootPoint>
+			<bulletSpeed>35</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">PetBoomSkullThird/bullet1</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet index="0" name="爆骷X3-机关枪">
+			<name>PetBoomSkullThird_machine</name>
+			<cnName>爆骷X3-机关枪</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>800</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<shootPoint>-97,-84</shootPoint>
+			<bulletAngle>175</bulletAngle>
+			<attackGap>1.3</attackGap>
+			<attackDelay>0.5</attackDelay>
+			<bulletNum>3</bulletNum>				
+			<shootNum>7</shootNum>					
+			<shootGap>0.08</shootGap>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootAngle>10</shootAngle>				
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<positionD>
+				<point shootPoint="-69,-48" bulletAngle="145" />
+				<point shootPoint="-78,-67" bulletAngle="152" />
+				<point shootPoint="-86,-87" bulletAngle="159" />
+				<point shootPoint="-94,-106" bulletAngle="166" />
+				<point shootPoint="-99,-119" bulletAngle="171" />
+				<point shootPoint="-103,-133" bulletAngle="176" />
+				<point shootPoint="-106,-142" bulletAngle="179" />
+			</positionD>
+			<!--跟踪------------------------------------------------------------ -->
+			<bounceD floor="6" body="0" num="0"/>	<!-- 反弹 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD lightColor="0x00FFFF" size="2" lightSize="6"/>
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="爆骷X3-2个小的跟踪导弹">
+			<name>PetBoomSkullThird_shoot3</name>
+			<cnName>爆骷X3-跟踪导弹</cnName>
+			<hurtRatio>0.3</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1</attackGap>
+			<attackDelay>0.5</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<shootNum>2</shootNum>					
+			<shootGap>0.16</shootGap>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="1"/>	<!-- 跟踪 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-100,-185</shootPoint>
+			<bulletSpeed>25</bulletSpeed>
+			<positionD>
+				<point shootPoint="-100,-185"/>
+				<point shootPoint="-100,-156"/>
+			</positionD>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">PetBoomSkullThird/bullet3</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+		
+		<bullet cnName="爆骷-无尽轰炸">
+			<name>PetBoomSkull_endlessBombing</name>
+			<cnName>爆骷-无尽轰炸</cnName>
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>5</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<shootNum>50</shootNum>					
+			<shootGap>0.1</shootGap>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="1"/>	<!-- 跟踪 -->
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-78,-90</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" soundUrl="sound/PetBoomSkull_endlessBombing" volume="0.5">skillEffect/PetBoomSkull_bullet2</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  soundVolume="0.3"  shake="3,0.4,13">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="boomSound/microBoom" soundVolume="0.5">boomEffect/boom1</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+	</father>	
+	<father type="zombie" cnName="雷克">
+		<bullet cnName="雷克-射击">
+			<name>shoot_PetLake</name>
+			<cnName>雷克-射击</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.9</attackGap>
+			<attackDelay>0.5</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>30</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-59,-51</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<followD value="0.3"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="filter">PetLake/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/fireHit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="雷克-辐射光球">
+			<name>lightBall_PetLake</name>
+			<cnName>雷克-辐射光球</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>13</bulletLife>
+			<bulletWidth>60</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1</attackGap>
+			<attackDelay>0.55</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<twoHitGap>0.1</twoHitGap>
+			<followD value="1" maxTime="2" />	<!-- 跟踪 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-92,-43</shootPoint>
+			<bulletSpeed>10</bulletSpeed>
+			<speedD max="25" min="1" a="-4" />
+			<skillArr>lightBall_PetLake_slow,silence_wind</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1"  con="add">PetLake/ball</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/fireHit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>		
+	<father type="zombie" cnName="雷尔">
+		<bullet cnName="雷尔-射击">
+			<name>shoot_PetLaer</name>
+			<cnName>雷尔-射击</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.9</attackGap>
+			<attackDelay>0.5</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletAngleRange>30</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-86,-55</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<followD value="0.3"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="filter">PetLaer/bullet</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/fireHit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="雷尔-辐射光球">
+			<name>lightBall_PetLaer</name>
+			<cnName>雷尔-辐射光球</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>1</shakeAngle>
+			<bulletLife>13</bulletLife>
+			<bulletWidth>60</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1</attackGap>
+			<attackDelay>0.55</attackDelay>
+			<bulletAngle>180</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationNum>999</penetrationNum>
+			<penetrationGap>1000</penetrationGap>
+			<twoHitGap>0.1</twoHitGap>
+			<followD value="1" maxTime="2" />	<!-- 跟踪 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-92,-43</shootPoint>
+			<bulletSpeed>10</bulletSpeed>
+			<speedD max="25" min="1" a="-4" />
+			<skillArr>lightBall_PetLake_slow,silence_wind</skillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1"  con="add">PetLaer/ball</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/fireHit1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>	
+	
+	
+	
+	<father type="zombie" cnName="无疆骑士">	
+		<bullet cnName="无疆骑士-流星拳">
+			<name>Knights_shoot1</name>
+			<cnName>无疆骑士-流星拳</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.35</attackGap>
+			<attackDelay>0.27</attackDelay>
+			<bulletAngle>157</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>2</shootNum>					
+			<shootAngle>20</shootAngle>
+			<shootGap>0.39</shootGap>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-106,-199</shootPoint>
+			<bulletSpeed>35</bulletSpeed>
+			<followD value="0.5"/>	<!-- 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">Knights/bullet1</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/midBoom2"  shake="3,0.4,13">boomEffect/boom2</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="boomSound/smallBoom"  shake="3,0.4,9" soundVolume="0.5">boomEffect/boom1</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/smoke_small</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+	</father>	
+	
+	<father type="zombie" cnName="尸狼">
+		<bullet cnName="嗜血尸狼-喷毒">
+			<name>ZombieWolf_shoot</name>
+			<cnName>嗜血尸狼-喷毒</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>-175</bulletAngle>
+			<shakeAngle>5</shakeAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletLife>3</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.2</attackGap>
+			<attackDelay>0.33</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<shootNum>9</shootNum>					
+			<shootGap>0</shootGap>					
+			<shootAngle>5</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-73,-31</shootPoint>
+			<bulletSpeed>20</bulletSpeed>
+			<speedD random="0.5" max="20" min="5" a="-10" />
+			<followD value="0.5" maxTime="0.3" />	<!-- 跟踪 -->
+			<extendGap>15</extendGap>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">skillEffect/poisonClaw_enemy</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/water_hit">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/poisonClaw_enemy</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="火炮尸狼-火炮">
+			<name>BoomWolf_bullet</name>
+			<cnName>火炮尸狼-火炮</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.1</attackGap>
+			<attackDelay>0.27</attackDelay>
+			<bulletAngle>200</bulletAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletNum>3</bulletNum>				
+			<shootNum>3</shootNum>					
+			<shootGap>0.2</shootGap>					
+			<shootAngle>30</shootAngle>					
+			<!--特殊属性------------------------------------------------------------ -->	
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-49,-61</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<gravity>0.6</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="2">BoomWolf/bullet_floor</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<hitFloorImgUrl soundUrl="sound/hitFloor" raNum="30">bulletHitEffect/smoke_small</hitFloorImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="45">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		
+	</father>	
+	
+	<father type="zombie" cnName="狂战狼">
+		<bullet cnName="狂战狼-召唤群狼">
+			<name>summonWolf_FightWolf</name>
+			<cnName>狂战狼-召唤群狼</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>0</hurtRatio>
+			<hurtMul>0.05</hurtMul>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>179.9</bulletAngle>
+			<shakeAngle>0</shakeAngle>
+			<bulletLife>4</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.8</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<shootNum>20</shootNum>					
+			<shootGap>0.05</shootGap>					
+			<shootAngle>0</shootAngle>					
+			<positionD specialType="summonWolf_FightWolf"/>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<twoHitGap>0.5</twoHitGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>23</bulletSpeed>
+			<speedD random="0.2"/>
+			<gravity>0</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1" con="add">generalEffect/wolfSummonBullet</bulletImgUrl>
+			<bulletLeftImgUrl raNum="1" con="add">generalEffect/wolfSummonBullet2</bulletLeftImgUrl>
+			<hitImgUrl soundUrl="sound/vehicle_hit1" soundVolume="1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="狂战狼-召唤群狼-带有减速技能">
+			<name>summonWolf_FightWolf_slow</name>
+			<cnName>狂战狼-召唤群狼</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>0</hurtRatio>
+			<hurtMul>0.05</hurtMul>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>179.9</bulletAngle>
+			<shakeAngle>0</shakeAngle>
+			<bulletLife>4</bulletLife>
+			<bulletWidth>40</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.8</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletNum>1</bulletNum>				
+			<shootNum>20</shootNum>					
+			<shootGap>0.05</shootGap>					
+			<shootAngle>0</shootAngle>					
+			<positionD specialType="summonWolf_FightWolf"/>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<twoHitGap>0.5</twoHitGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>23</bulletSpeed>
+			<speedD random="0.2"/>
+			<gravity>0</gravity>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="1" con="add">generalEffect/wolfSummonBullet</bulletImgUrl>
+			<bulletLeftImgUrl raNum="1" con="add">generalEffect/wolfSummonBullet2</bulletLeftImgUrl>
+			<hitImgUrl soundUrl="sound/vehicle_hit1" soundVolume="1">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		<bullet cnName="狂战狼-大地之怒">
+			<name>anger_FightWolf</name>
+			<cnName>狂战狼-大地之怒</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>0</hurtRatio>
+			<hurtMul>0.05</hurtMul>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>0.04</bulletLife>
+			<bulletWidth>100</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0</attackGap>
+			<attackDelay>0</attackDelay>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<shootNum>24</shootNum>					
+			<shootGap>0.03</shootGap>					
+			<shootAngle>0</shootAngle>					
+			<positionD specialType="anger_FightWolf"/>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>blindness_anger_PetFightWolf</skillArr>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<imgClearDelay>0.30</imgClearDelay>
+			<bulletImgUrl>boomEffect/blackBoom</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+		</bullet>
+	</father>	
+	
+	<father type="zombie" cnName="哨兵">
+		<bullet cnName="哨兵-激光">
+			<name>Sentry1</name>
+			<cnName>哨兵-激光</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>0</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>15</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.8</attackGap>
+			<attackDelay>0.46</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletAngleRange>5</bulletAngleRange>	
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-50,-60</shootPoint>
+			<bulletSpeed>40</bulletSpeed>
+			<penetrationGap>1000</penetrationGap>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="add">Sentry/bullet1</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/magicHit2">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">Sentry/bullet1</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="哨兵-慢速导弹">
+			<name>Sentry2</name>
+			<cnName>哨兵-慢速导弹</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>10</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.6</attackGap>
+			<attackDelay>0.2</attackDelay>
+			<bulletAngle>210</bulletAngle>
+			<bulletAngleRange>10</bulletAngleRange>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<followD value="0.5" maxTime="3"/>
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-5,-106</shootPoint>
+			<bulletSpeed>4</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">Sentry/bullet2</bulletImgUrl>
+			<hitImgUrl soundUrl="boomSound/smallBoom">boomEffect/boom1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">bulletHitEffect/spark_motion</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+	</father>		
+	<father type="zombie" cnName="窃听者">
+		<bullet cnName="窃听者-激光">
+			<name>Shapers1</name>
+			<cnName>窃听者-激光</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>0</shakeAngle>
+			<bulletLife>2</bulletLife>
+			<bulletWidth>10</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.8</attackGap>
+			<attackDelay>1</attackDelay>
+			<bulletAngle>179</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<shootNum>15</shootNum>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-51,-21</shootPoint>
+			<bulletSpeed>30</bulletSpeed>
+			<penetrationGap>1000</penetrationGap>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="add">Shapers/bullet1</bulletImgUrl>
+			<hitImgUrl soundUrl="sound/magicHit2">bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+			
+		</bullet>
+	</father>		
+	<father type="zombie" cnName="掘金尸">
+		<bullet cnName="掘金尸-疾风斩">
+			<name>knife_Nuggets</name>
+			<cnName>掘金尸-疾风斩</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtMul>0.2</hurtMul>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>0.06</bulletLife>
+			<bulletWidth>90</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<twoHitGap>0.5</twoHitGap>
+			<twoHitSameNameB>1</twoHitSameNameB>
+			<bulletAngle>270</bulletAngle>
+			<bulletNum>1</bulletNum>				
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<imgClearDelay>0.12</imgClearDelay>
+			<bulletImgUrl>NuggetsZombie/piercingLeft</bulletImgUrl>
+			<secondBulletImgUrl>NuggetsZombie/piercingRight</secondBulletImgUrl>
+			<hitImgUrl>bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>	
+	<father type="zombie" cnName="伏地尸">
+		<bullet cnName="伏地尸-喷毒">
+			<name>Crawler_shoot</name>
+			<cnName>伏地尸-喷毒</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletAngle>-170</bulletAngle>
+			<shakeAngle>15</shakeAngle>
+			<bulletAngleRange>20</bulletAngleRange>
+			<bulletLife>0.4</bulletLife>
+			<bulletWidth>20</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.6</attackGap>
+			<attackDelay>0.3</attackDelay>
+			<bulletNum>3</bulletNum>				
+			<shootNum>1</shootNum>					
+			<shootGap>0</shootGap>					
+			<shootAngle>10</shootAngle>					
+			<shootPoint>-98,-38</shootPoint>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>20</bulletSpeed>
+			<speedD random="0.5" max="30" min="15" a="-15" />
+			<gravity>0.2</gravity>
+			<!--<followD value="0.5" maxTime="0.3" />	 跟踪 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30">skillEffect/poisonClaw_enemy</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="SpiderKing/shoot_hit">boomEffect/posion1</hitImgUrl><!-- 子弹图像【必备】 -->
+			<smokeImgUrl con="filter" raNum="30">skillEffect/poisonClaw_enemy</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+	</father>	
+	<father type="zombie" cnName="狂野收割者">
+		<bullet cnName="狂野收割者-飞刀">
+			<name>FightPig_shoot</name>
+			<cnName>狂野收割者飞刀</cnName>
+			<!--基本属性------------------------------------------------------------ -->
+			<shakeAngle>5</shakeAngle>
+			<bulletLife>8</bulletLife>
+			<bulletWidth>30</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>1.1</attackGap>
+			<attackDelay>0.4</attackDelay>
+			<bulletAngle>185</bulletAngle>
+			<bulletAngleRange>40</bulletAngleRange>
+			<bulletNum>1</bulletNum>				
+			<shootNum>1</shootNum>					
+								
+			<shootAngle>0</shootAngle>					
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>-97,-58</shootPoint>
+			<bulletSpeed>25</bulletSpeed>
+			<gravity>0.6</gravity>
+			<bounceD floor="999"/>	<!-- 反弹 -->
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl>FightPig/bullet1</bulletImgUrl>
+			<hitImgUrl con="add" soundUrl="sound/vehicle_hit2">bladeHitEffect/blood</hitImgUrl>
+			<hitFloorImgUrl con="add" soundUrl="sound/vehicle_hit2" soundVolume="0.4">bladeHitEffect/blood</hitFloorImgUrl>
+			<smokeImgUrl con="filter" raNum="1">FightPig/smoke1</smokeImgUrl><!-- 子弹尾烟效果（默认为空） -->
+		</bullet>
+		<bullet cnName="狂野收割者-雷霆斧击">
+			<name>FightPig_thunder</name>
+			<cnName>雷霆斧击</cnName>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.0001</bulletLife>
+			<bulletWidth>320</bulletWidth>
+			<hitType>longLine</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<twoHitGap>0.5</twoHitGap>
+			<twoHitSameNameB>1</twoHitSameNameB>
+			<bulletAngle>270</bulletAngle>
+			<!--特殊属性------------------------------------------------------------ -->	
+			<penetrationGap>1000</penetrationGap>
+			<penetrationNum>999</penetrationNum>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootPoint>0,0</shootPoint>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<imgClearDelay>0.36</imgClearDelay>
+			<bulletImgUrl con="add" soundUrl="FightPig/skill2">FightPig/thunderBullet1</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/energy</hitImgUrl><!-- 子弹图像【必备】 -->
+		</bullet>
+		
+	</father>		
+</data>

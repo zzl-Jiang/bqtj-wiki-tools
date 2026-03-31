@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	
+	<father  type="blink">
+		<bullet cnName="荧光笔" name="highlighter" color="black" composeLv="99" chipB="1" chipNum="130">
+			<name>highlighter</name>
+			<cnName>荧光笔</cnName>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>200</capacity>
+			<attackGap>0.1</attackGap>
+			<reloadGap>0.5</reloadGap>
+			<bulletWidth>30</bulletWidth>
+			<noHitB>1</noHitB>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.65</armsArmMul>
+			<upValue>30</upValue>
+			<shootShakeAngle>10</shootShakeAngle>
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>4</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>10000</bulletLife>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<dpsMul>1</dpsMul>
+			<uiDpsMul>1</uiDpsMul>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  selfB="1" radius="0" hurtMul="0" />
+			<penetrationGap>1000</penetrationGap>
+			<skillArr></skillArr>
+			<godSkillArr>eraserArms,selfBoomArmsAll,armsToMousePoint</godSkillArr>
+			<bulletSkillArr>highlighterDieEvent</bulletSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl></iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl name="highlighterBullet"/>
+			<hitImgUrl name="highlighterBulletSun"/><!-- 烟花子弹特效 -->
+			<selfBoomImgUrl name="highlighterBoom"/><!-- 烟花爆炸特效 -->
+			<fireImgType></fireImgType>
+			<shootSoundUrl>hitSound/poisonHit1</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/highlighter</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<description></description>
+		</bullet>
+		
+		<otherBullet>
+			<name>highlighterSun</name>
+			<cnName>荧光笔烟花</cnName>
+			<noMagneticB>1</noMagneticB>
+			<noHitB>1</noHitB>
+			<!--伤害属性------------------------------------------------------------ -->
+			<hurtRatio>0.2</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletNum>1</bulletNum>
+			<bulletAngle>0</bulletAngle>
+			<bulletLife>2.5</bulletLife>
+			<lifeRandom>0.1</lifeRandom>
+			<bulletWidth>25</bulletWidth>
+			<hitType>rect</hitType>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<extendGap>10</extendGap>
+			<shootAngle>-90</shootAngle>
+			<shootShakeAngle>360</shootShakeAngle>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>10</bulletSpeed>
+			<speedD random="0.2" />
+			<gravity>0.5</gravity>
+			<penetrationGap>1000</penetrationGap>
+			
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="highlighterBulletSun"/>
+		</otherBullet>
+	</father>
+	
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill>
+			<name>eraserArms</name>
+			<cnName>橡皮擦</cnName><noRandomListB>1</noRandomListB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>replaceWeapon</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>eraserArms</effectType>
+			<range>50</range>
+			<!--图像------------------------------------------------------------ -->
+			<pointEffectImg name="burstParts"/>
+			<description>按下副手键时，擦除鼠标位置的相关子弹。</description>
+		</skill>
+		<skill>
+			<name>selfBoomArmsAll</name>
+			<cnName>自爆</cnName><noRandomListB>1</noRandomListB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>replaceDevice</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>selfBoomArms</effectType>
+			<range>99999</range>
+			<!--图像------------------------------------------------------------ -->
+			<pointEffectImg name="highlighterBoomSound"/>
+			<description>按下装置键时，让在场所有的相关子弹都自爆。</description>
+		</skill>
+		
+		<skill>
+			<name>armsToMousePoint</name>
+			<cnName>子弹瞬移</cnName><noRandomListB>1</noRandomListB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>beforeAttack</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>armsToMousePoint</effectType>
+			<description>发射时，把子弹瞬移到鼠标点位置。</description>
+		</skill>
+	</father>
+	
+</data>

@@ -1,0 +1,86 @@
+<?xmlversion="1.0" encoding="utf-8" ?>
+<data>
+	<father name="deathMap">
+		<body name="deathMap_town" cnName="村镇" noEncodeB="1">
+			WoTu
+BaiLu
+ShuangTa
+BeiDou
+QingSha
+NanTang
+LvSen
+BaoLun
+BaiSha
+		</body>
+		<body name="deathMap_hill" cnName="村镇" noEncodeB="1">
+			YangMei
+XiaSha
+BaiZhang
+QingMing
+YouLing
+XiFeng
+DuKu
+BaWang
+PingChuan
+		</body>
+		<body name="deathMap_sea" cnName="海滩与地堡" noEncodeB="1">
+			FengWei
+XiChi
+ShuiSheng
+ZhuTou
+DongShan
+LuYu
+ShangSha
+DongFeng
+ZhongXin
+DiXia
+		</body>
+		<body name="deathMap_prison" cnName="沙舟狱" noEncodeB="1">
+			HouJin
+ShaJiang
+XianQu
+FangZhouFirst
+FangZhouSecond
+PrisonDoor
+PrisonFirst
+PrisonDeep
+PrisonExport
+PrisonOutside
+		</body>
+		<body name="deathMap_jungle" cnName="丛林与雪地" noEncodeB="1">
+			JungleOutside
+JungleDeep
+CavesEntrance
+CavesDeep
+QianYe
+FuMu
+GongMu
+GuiWang
+BingKu
+BingKuDeep
+WuXue
+DongWu
+BuDong
+		</body>
+		<body name="deathMap_hanGuang" cnName="寒光市" noEncodeB="1">
+			HanGuang1
+HanGuang2
+HanGuang3
+HanGuang5
+Hospital2
+Hospital3
+XiShan1
+XiShan2
+XiShan3
+XiShan4
+XiShan5
+		</body>
+		<body name="deathMap_greenIs" cnName="绿岛" noEncodeB="1">
+			GreenIs1
+GreenIs2
+GreenIs3
+GreenIs4
+GreenTown1
+		</body>
+	</father>
+</data>
