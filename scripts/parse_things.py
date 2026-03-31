@@ -46,18 +46,18 @@ def process_element(element):
     """
     通用函数，处理 XML 元素（things 的子标签）。
     """
-    # 1. 只有属性的标签 -> 对象
+    # 只有属性的标签 -> 对象
     if element.attrib and not element.text and not len(element):
         return {k: ValueConverter.to_smart_value(v, k) for k, v in element.attrib.items()}
 
-    # 2. 同时有属性和文本 -> 对象 + value
+    # 同时有属性和文本 -> 对象 + value
     if element.attrib:
         obj = {k: ValueConverter.to_smart_value(v, k) for k, v in element.attrib.items()}
         if element.text and element.text.strip():
             obj['value'] = ValueConverter.to_smart_value(element.text.strip(), element.tag)
         return obj
 
-    # 3. 只有文本的标签 -> 值
+    # 只有文本的标签 -> 值
     if element.text and element.text.strip():
         text = element.text.strip()
         if element.tag == 'description':
@@ -76,7 +76,7 @@ def parse_things_node(things_node, father_attrs):
     # 注入父节点属性
     item_obj.update(father_attrs)
 
-    # 处理 things 自身的属性（包括 'o' 字段）
+    # 处理 things 自身的属性
     if things_node.attrib:
         for k, v in things_node.attrib.items():
             item_obj[k] = ValueConverter.to_smart_value(v, k)
@@ -190,6 +190,10 @@ def run_things_processor():
 
                 # 寻找所有 father 节点
                 for father in root_el.findall('.//father'):
+                    father_name = father.attrib.get('name')
+                    if not father_name or father_name == "parts":
+                        continue
+
                     # 获取父节点属性
                     father_attrs = {}
                     for k, v in father.attrib.items():

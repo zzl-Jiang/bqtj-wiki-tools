@@ -408,6 +408,7 @@ def run_patch():
 
             if not patched:
                 patch_stats['skipped'] += 1
+                print(f"  [跳过物品] {thing_name} ({thing_data.get('cnName')})")
 
         except Exception as e:
             print(f"  [!] 处理 {thing_name} 时出错: {e}")

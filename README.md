@@ -54,7 +54,7 @@ python scripts/xxx/xxx.py (具体脚本名称)
 ## 🤝 贡献与反馈
 如果你在处理数据过程中发现字段缺失或解析错误，请：
 1. 提交 Issue 描述问题。
-2. 或修改 `scripts/xml_to_json_arms.py` 中的解析逻辑并提交 Pull Request。
+2. 或修改对应脚本中的解析逻辑并提交 Pull Request。
 
 ---
 *由 爆枪突击wiki编辑团队 / Nai He 维护*
