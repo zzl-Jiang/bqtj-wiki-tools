@@ -175,16 +175,26 @@ def run_parts_processor():
                 entry[k] = val
         item_data.append(entry)
 
+    parts_item_json = {
+        "data": {
+            "father": {
+                "@name": "PartsItem",
+                "@cnName": "零件标签",
+                "item": item_data
+            }
+        }
+    }
+
     item_json_path = os.path.join(OUTPUT_DIR, 'PartsItemData.json')
     with open(item_json_path, 'w', encoding='utf-8') as f:
-        json.dump(item_data, f, ensure_ascii=False, indent=2)
+        json.dump(parts_item_json, f, ensure_ascii=False, indent=2)
     print(f"PartsItemData JSON: {item_json_path} ({len(item_data)} 条)")
 
     # 追加 PartsItemData 到 Excel
     existing_df = pd.read_excel(EXCEL_NAME, header=None)
     new_row = pd.DataFrame([{
         0: "Data:PartsItemData.json",
-        1: json.dumps(item_data, ensure_ascii=False)
+        1: json.dumps(parts_item_json, ensure_ascii=False)
     }])
     pd.concat([existing_df, new_row], ignore_index=True).to_excel(EXCEL_NAME, index=False, header=False)
 
