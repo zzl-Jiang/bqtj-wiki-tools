@@ -75,7 +75,7 @@ def parse_equip_node(equip_node, father_attrs):
 
 
 # 等级关联字段：这些字段可能随等级变化，归入 levels 字典
-LEVEL_FIELDS = {'hurtMul', 'skillArr', 'iconLabel', 'weaponUrl', 'proAddLv'}
+LEVEL_FIELDS = {'hurtMul', 'skillArr', 'iconLabel', 'weaponUrl', 'proAddLv', 'anger'}
 # 元数据字段：不进入 base 也不进入 levels
 META_FIELDS = {'game', 'moduleType', 'name', 'cnName', 'baseLabel', 'lv'}
 
@@ -231,7 +231,43 @@ def run_equip_processor():
     generate_summary(equip_pool)
 
     # --- 保存 JSON + Excel ---
-    OutputWriter.write(equip_pool, OUTPUT_DIR, 'Equip', cn_label='装备')
+    timestamp = OutputWriter.write(equip_pool, OUTPUT_DIR, 'Equip', cn_label='装备')
+
+    # --- 生成 WeaponsItemData（weapon 类装备的精简整合 JSON） ---
+    weapon_items = []
+    for key, data in equip_pool.items():
+        if data.get('father') == 'weapon':
+            weapon_items.append({
+                'name': data.get('name', ''),
+                'cnName': data.get('cnName', ''),
+            })
+
+    if weapon_items:
+        import json
+        weapons_item_json = {
+            "data": {
+                "father": {
+                    "@name": "WeaponsItem",
+                    "@cnName": "兵器标签",
+                    "item": weapon_items
+                }
+            }
+        }
+        item_json_path = os.path.join(OUTPUT_DIR, 'WeaponsItemData.json')
+        with open(item_json_path, 'w', encoding='utf-8') as f:
+            json.dump(weapons_item_json, f, ensure_ascii=False, indent=2)
+        print(f"WeaponsItemData JSON: {item_json_path} ({len(weapon_items)} 件)")
+
+    # 追加到 Excel
+    import pandas as pd
+    excel_path = os.path.join(OUTPUT_DIR, f'装备数据更新_{timestamp}.xlsx')
+    existing_df = pd.read_excel(excel_path, header=None)
+    new_row = pd.DataFrame([{
+        0: "Data:WeaponsItemData.json",
+        1: json.dumps(weapons_item_json, ensure_ascii=False)
+    }])
+    pd.concat([existing_df, new_row], ignore_index=True).to_excel(excel_path, index=False, header=False)
+
     print(f"\n处理完成！提取装备总数: {len(equip_pool)}")
 
 
