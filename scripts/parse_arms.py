@@ -1,4 +1,5 @@
 import os
+import glob as glob_module
 import json
 import pandas as pd
 import xml.etree.ElementTree as ET
@@ -9,12 +10,54 @@ from config import CATEGORY_MAP, ARM_NAME_MAP
 XML_DIR = './xml'
 OUTPUT_DIR = './data/arms'
 
+
+def load_death_arms_color():
+    """解析肉鸽武器对照表，返回 {weapon_name: color} 映射"""
+    death_files = glob_module.glob(os.path.join(XML_DIR, '*deathArmsListClass*'))
+    if not death_files:
+        return {}
+
+    color_map = {}
+    with open(death_files[0], 'r', encoding='utf-8') as f:
+        clean_xml = XmlCleaner.clean(f.read())
+    root = ET.fromstring(clean_xml)
+
+    for father in root.findall('.//father'):
+        if father.get('name') != 'deathArms':
+            continue
+        for body in father.findall('body'):
+            body_name = body.get('name', '')
+            # 从 deathArms_{color} 中提取颜色
+            prefix = 'deathArms_'
+            if body_name.startswith(prefix):
+                color = body_name[len(prefix):]
+            else:
+                continue
+            text = body.text
+            if not text:
+                continue
+            for name in text.strip().split():
+                name = name.strip()
+                if name:
+                    color_map[name] = color
+    return color_map
+
+
 def run_arm_processor():
     '''
     武器数据处理主流程。
     扫描 XML -> 清洗数据 -> 提取武器节点 -> 挂载分类 -> 输出成果。
     '''
+    '''
+    武器数据处理主流程。
+    扫描 XML -> 清洗数据 -> 提取武器节点 -> 挂载分类 -> 输出成果。
+    '''
     print(f"开始处理武器数据...")
+
+    # 加载肉鸽武器颜色对照表
+    death_color_map = load_death_arms_color()
+    if death_color_map:
+        print(f"[肉鸽颜色] 已加载 {len(death_color_map)} 条肉鸽武器颜色映射")
 
     arm_pool = {}
 
@@ -42,6 +85,11 @@ def run_arm_processor():
 
                         arm_data['armsType'] = arms_type
                         arm_data['category'] = CATEGORY_MAP.get(arm_data['name'], ["未分类"])
+
+                        # 肉鸽武器颜色修正
+                        arm_name = arm_data.get('name', '')
+                        if arm_name in death_color_map:
+                            arm_data['color'] = death_color_map[arm_name]
 
                         # 处理重名：肉鸽武器加"-肉鸽"后缀
                         cn = arm_data.get('cnName', '')
