@@ -1,7 +1,7 @@
 """
 爆枪突击时装（Fashion）数据处理器
 
-从 16_XMLOut_fashionClass.bin 提取所有时装定义，输出独立 JSON + Excel。
+扫描全部 XML，定位 <father name="fashion"> 节点提取所有时装定义，输出独立 JSON + Excel。
 每个 <image> 是一个完整的时装条目，以 name 为唯一标识。
 """
 import os
@@ -12,7 +12,7 @@ from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator
 from config import normalize_fashion_cn, FASHION_NAME_MAP
 
 # --- 配置 ---
-XML_FILE = './xml/16_XMLOut_fashionClass.bin'
+XML_DIR = './xml'
 OUTPUT_DIR = './data/fashion'
 
 
@@ -63,28 +63,32 @@ def parse_image_node(image_node):
 
 
 def run_fashion_processor():
-    """全自动时装处理器：提取 XML → 独立 JSON + Excel"""
-    print(f"开始处理时装数据: {XML_FILE}")
-
-    if not os.path.exists(XML_FILE):
-        print(f"  [!] 文件不存在: {XML_FILE}")
-        return
-
-    with open(XML_FILE, 'r', encoding='utf-8') as f:
-        clean_xml = XmlCleaner.clean(f.read())
-
-    root_el = ET.fromstring(clean_xml)
+    """全自动时装处理器：扫描 XML → 定位 fashion father → 独立 JSON + Excel"""
+    print(f"开始全量扫描目录: {XML_DIR}")
 
     fashion_items = []
-    for gather in root_el.findall('.//gather'):
-        for father in gather.findall('father'):
-            if father.get('name') != 'fashion':
+
+    for root_dir, _, files in os.walk(XML_DIR):
+        for file in files:
+            if not file.endswith('.bin'):
                 continue
-            for image_node in father.findall('image'):
-                item = parse_image_node(image_node)
-                if item and 'name' in item:
-                    item = ValueConverter.prepare_output(item, "爆枪突击", "fashion")
-                    fashion_items.append(item)
+            try:
+                with open(os.path.join(root_dir, file), 'r', encoding='utf-8') as f:
+                    clean_xml = XmlCleaner.clean(f.read())
+                root_el = ET.fromstring(clean_xml)
+
+                for gather in root_el.findall('.//gather'):
+                    for father in gather.findall('father'):
+                        if father.get('name') != 'fashion':
+                            continue
+                        for image_node in father.findall('image'):
+                            item = parse_image_node(image_node)
+                            if item and 'name' in item:
+                                item = ValueConverter.prepare_output(item, "爆枪突击", "fashion")
+                                fashion_items.append(item)
+
+            except Exception as e:
+                print(f"  [!] 错误文件 {file}: {e}")
 
     print(f"[提取] 共提取 {len(fashion_items)} 个时装")
 
