@@ -22,11 +22,16 @@ REPORT_OUT = './data/parts/处理报告.txt'
 
 
 def parse_o_attr(value):
-    """解析 o 属性中的 Python 字典字面量"""
+    """解析 o 属性中的 Python 字典字面量（兼容 JSON 风格 true/false/null）"""
     if not value or not value.strip():
         return {}
+    text = value.strip()
+    # 将 JSON 风格的布尔/null 转为 Python 字面量
+    text = re.sub(r'\btrue\b', 'True', text)
+    text = re.sub(r'\bfalse\b', 'False', text)
+    text = re.sub(r'\bnull\b', 'None', text)
     try:
-        return ast.literal_eval(value.strip())
+        return ast.literal_eval(text)
     except (ValueError, SyntaxError):
         return {}
 
