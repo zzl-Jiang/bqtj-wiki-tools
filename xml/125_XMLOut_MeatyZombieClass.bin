@@ -30,7 +30,7 @@
 			<nextAttackTime>0</nextAttackTime>
 			<!-- 技能 -->
 			<skillArr></skillArr>
-			<bossSkillArr>MeatySkillBack,cmldef2_enemy,defenceBounce_enemy,MeatyDesertedHalo,MeatyAway,MeatyShieldUnder,MeatyShield,desertedHalo_enemy</bossSkillArr>
+			<bossSkillArr>MeatySkillBack,cmldef2_enemy,MeatyDesertedHalo,MeatyAway,MeatyShieldUnder,MeatyShield,desertedHalo_enemy</bossSkillArr>
 			<bossSkillArrCn></bossSkillArrCn>
 			<extraAIClassLabel>MeatyZombie_AIExtra</extraAIClassLabel>
 			<!-- 攻击数据 -->

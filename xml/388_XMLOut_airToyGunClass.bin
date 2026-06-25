@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="wavegun">
+		<![CDATA[
+		<bullet color="blue">
+			<name>airToyGun</name>
+			<cnName>空气手枪</cnName>
+			<aiShootRange>250</aiShootRange><!-- ai射程 -->
+			<!--基本-->
+			<capacity>800</capacity>
+			<attackGap>0.5</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>25</bulletWidth><noHitB>1</noHitB>
+			<bulletNum>1</bulletNum>				
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.98</armsArmMul>
+			<upValue>8</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>9</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<bulletLife>0.001</bulletLife>
+			<shootNum>2</shootNum>
+			<shootGap>0.1</shootGap>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<bulletSkillArr>airCannonDieEvent</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD radius="160"/>
+			<followD aiStopGap="110"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>hitSound/wave</shootSoundUrl>
+			<fireImgUrl name="airCannonBoom"/>
+			<bulletImgUrl name="no"/>
+			<hitImgUrl name="gun_hit"/><!-- elasticRecoveryGod-->
+			<hitFloorImgUrl name="yearDragon_hit"/>
+			
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/airToyGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>武器本体无伤害，但可将半径190码范围内的敌人子弹变成我方子弹，并弹飞。</info>
+		</bullet>
+		]]>
+	</father>
+</data>

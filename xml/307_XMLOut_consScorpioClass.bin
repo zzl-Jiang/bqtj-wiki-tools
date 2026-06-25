@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="energy">
+		<![CDATA[]]>
+		<bullet color="yagold" composeLv="99" dropLevelArr="999">
+			<name>consScorpio</name><dpsMul>8</dpsMul><uiDpsMul>10.5</uiDpsMul><extraMul>8.5</extraMul>
+			<cnName>天蝎座</cnName><iconUrl>newGun/consScorpioIcon</iconUrl>
+			<attackType>holy</attackType><noMagneticB>1</noMagneticB>
+			<aiShootRange>1600</aiShootRange><!-- ai射程 -->
+			<!--基本-->
+			<capacity>50</capacity>
+			<attackGap>0.7</attackGap>
+			<reloadGap>1.4</reloadGap>
+			<bulletWidth>40</bulletWidth>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.55</armsArmMul>
+			<upValue>2</upValue>
+			<shootAngle>3</shootAngle>
+			<shakeAngle>3</shakeAngle>
+			<shootShakeAngle>15</shootShakeAngle>
+			<shootRecoil>7</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>4</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>40</bulletSpeed>
+			<speedD a="-40" min="20"/>
+			<!--特殊------------------------------------------------------------ -->
+			<penetrationGap>1000</penetrationGap>
+			<skillArr>Hit_AddLifeMul_ArmsSkill,Hit_Spurting_ArmsSkill</skillArr>
+			<godSkillArr>consScorpioSkill</godSkillArr>
+			<followD value="1.8" noLM="1" />
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<bulletImgUrl name="consScorpioBullet"/>
+			<smokeImgUrl name="smallMissleSmokeSm"></smokeImgUrl>
+			
+			<hitImgUrl name="consScorpioHit"></hitImgUrl>
+			<fireImgUrl name="purpleGunFire"></fireImgUrl>
+			<shootSoundUrl>newGun/consScorpioSound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/consScorpio</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>源自星穹的自主攻击型武器，一旦周遭战火燃起，它便会迅速锁定目标，疯狂倾泻弹雨。</info>
+			<description></description>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill>
+			<name>consScorpioSkill</name><inBodyType>wear</inBodyType><!-- 装上该武器时，技能成为人物技能，而不由武器触发 -->
+			<cnName>自主攻击</cnName><noRandomListB>1</noRandomListB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>otherHit</condition>
+			<otherConditionArr>puArmsSkillHaveNow</otherConditionArr>
+			<target noExistB="1">me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>consScorpioSkill</effectType>
+			<mul>2</mul>
+			<minTriggerT>0.29</minTriggerT>
+			<description>你的副手、载具、尸宠攻击敌人时，会同时激发你手上的天蝎座，使其发射子弹（跟踪型，可穿竖盾）。最短触发间隔[minTriggerT]秒（射速Buff越高，间隔越短）。天蝎座建议装配“穿人器”零件，可使武器输出提高50%~75%。</description>
+		</skill>
+	</father>
+</data>

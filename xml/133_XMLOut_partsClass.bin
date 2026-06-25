@@ -328,6 +328,14 @@
 			<description>AI控制下，持有该武器的角色会一直迫近敌人，直到双方距离小于“AI迫近截止”距离。适用于拥有“近视”技能的角色。</description>
 		</things>
 		
+		<things cnName="叛变器" o="{'enemyCampB':true}">
+			<name>betrayParts_1</name><baseLabel>betrayParts</baseLabel>
+			<cnName>叛变器</cnName>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/betrayParts1</iconUrl>
+			<description>射出的子弹将变为敌方子弹。</description>
+		</things>
 		
 		
 		<![CDATA[宝箱]]>
@@ -401,7 +409,18 @@
 				[n]物品合成（需要进阶出2把无双武器）
 			</description>
 		</things>			
-					
+		<things cnName="氩金之芯">
+			<name>yagoldCpu_1</name><baseLabel>yagoldCpu</baseLabel>
+			<cnName>氩金之芯</cnName>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/yagoldCpu1</iconUrl>
+			<description>
+				将以下武器跃升为氩金品质同时提升伤害：红色随机属性武器(+750%)、黑色随机属性武器(+1250%)、戌狗、烟花弩、炮仗、圣诞火铳。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]等级礼包（需要进阶出4把氩金武器）
+			</description>
+		</things>					
 					
 	</father>
 </data>

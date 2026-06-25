@@ -266,6 +266,8 @@
 	</things>
 	<things name="profiStamp"><must><gift>things;nuclearStone;		10</gift></must></things>
 	<things name="yaStone" week="100"><must><gift>things;nuclearStone;		5</gift></must></things>
+	<things name="intensDrug" all="150"><must><gift>things;falconGun;		1</gift><gift>things;extremeGun;		1</gift></must></things>
+	
 	<things name="partsGridCard" all="3"><must><gift>things;deathSilver;		40</gift></must></things>
 	<things name="godGridCard"><must><gift>things;bagGridCard;36</gift></must><must><gift>things;houseGridCard;120</gift></must></things>
 	

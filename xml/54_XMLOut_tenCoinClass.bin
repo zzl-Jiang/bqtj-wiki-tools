@@ -4,8 +4,8 @@
 		<type>
 			<goods defineLabel="partsChest93" price="50" 	buyLimitNum="6" dayBuyLimitNum="1"  fixedLimitB="1"/>
 			<goods defineLabel="longGlasses_1" price="10" 	buyLimitNum="40" dayBuyLimitNum="2"  fixedLimitB="1"/>
-			<goods defineLabel="consLibra" price="4" 			dayBuyLimitNum="6" buyLimitNum="120"/>
-			<goods defineLabel="highPartnerCard" price="4" 			dayBuyLimitNum="2" buyLimitNum="60"/>
+			<goods defineLabel="consLibra" price="4" 			dayBuyLimitNum="6" buyLimitNum="120" fixedLimitB="1"/>
+			<goods defineLabel="highPartnerCard" price="4" 			dayBuyLimitNum="2" buyLimitNum="60" fixedLimitB="1"/>
 			<goods defineLabel="roamRocket" price="4" 			buyLimitNum="100"/>
 			<goods defineLabel="starTrails" price="5" 			buyLimitNum="210"/>
 			<goods defineLabel="teddyBear" price="15" 			buyLimitNum="30" />

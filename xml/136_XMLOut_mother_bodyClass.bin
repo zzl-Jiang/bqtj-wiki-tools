@@ -5,7 +5,7 @@
 			<name>mother</name><headIconUrl>IconGather/mother</headIconUrl>
 			<cnName>玉晴</cnName>
 			<raceType>human</raceType>
-			<swfUrl>swf/hero/mother.swf</swfUrl>
+			<swfUrl>swf/hero/mother363.swf</swfUrl>
 			<showLevel>9999</showLevel>
 			<!-- 图像 -->
 			<headPlayB>1</headPlayB>

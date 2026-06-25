@@ -512,7 +512,7 @@
 		
 		<place lv="44" cnName="绿森堡" priority="10">
 			<name>LvSen</name>
-			<cnName>绿森堡</cnName><demBossSkillArr>State_AddMove,pioneerDemon,treater_knights,cmldef2_enemy,noDegradation,noBounce_enemy,fitVehicleDefence,toLand,hammer_enemy,feedback_enemy</demBossSkillArr>
+			<cnName>绿森堡</cnName><demBossSkillArr>State_AddMove,pioneerDemon,treater_knights,cmldef2_enemy,noDegradation,fitVehicleDefence,toLand,hammer_enemy,feedback_enemy</demBossSkillArr>
 			<mustWinShowB>1</mustWinShowB><demSkillArr>MeatySkillBack,rigidBody_enemy</demSkillArr>
 			<geogType>town</geogType>
 			<description></description>
@@ -682,7 +682,7 @@
 		<place lv="65" cnName="沙漠中心">
 			<name>ShaMo</name>
 			<cnName>沙漠中心</cnName><labelArr>月亮,沙漠</labelArr>
-			<mustWinShowB>1</mustWinShowB><demBossSkillArr>treater_knights,findHide,noUnderLaser,noBounce_enemy,fitVehicleDefence,weaponDefence,likeMissleNo</demBossSkillArr>
+			<mustWinShowB>1</mustWinShowB><demBossSkillArr>treater_knights,findHide,noUnderLaser,fitVehicleDefence,weaponDefence,likeMissleNo</demBossSkillArr>
 			<geogType>lab</geogType><demSkillArr>revengeArrow,fightBackBullet,noUnderLaser,summonShortLifeMax,bladeWrap</demSkillArr>
 			<description></description><demNoModeArr>nocom</demNoModeArr>
 			
@@ -1271,7 +1271,7 @@
 				</level>
 			</levelArr>
 		</place>
-		<![CDATA[
+		
 		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="no">
 			<name>GreenTown2</name>
 			<cnName>仙草镇18号</cnName><noTaskB>1</noTaskB><noEndlessB>1</noEndlessB>
@@ -1279,7 +1279,7 @@
 			<pointer>471,1073</pointer>
 			<levelArr>
 				<level>
-					<name>GreenTown2_1</name>
+					<name>GreenTown1_1</name>
 				</level>
 			</levelArr>
 		</place>
@@ -1290,11 +1290,11 @@
 			<pointer>471,1073</pointer>
 			<levelArr>
 				<level>
-					<name>GreenTown2_1</name>
+					<name>GreenTown1_1</name>
 				</level>
 			</levelArr>
 		</place>
-		]]>
+		
 		<![CDATA[添加新地图，如果不想作为任务地图，请添加<noTaskB>1</noTaskB>。对于剧情地图放置上面]]>
 		
 		

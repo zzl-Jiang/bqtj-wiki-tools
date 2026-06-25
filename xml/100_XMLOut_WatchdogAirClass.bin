@@ -26,7 +26,7 @@
 			<maxVx>7</maxVx>
 			<!-- AI属性 -->
 			<nextAttackTime>0</nextAttackTime>
-			<bossSkillArr>noSpeedReduce,offPassSkill,defenceBounce_enemy</bossSkillArr>
+			<bossSkillArr>fightBackBulletX,missile_Sentry,offAllSkill5,moreBullet,invincibleEmp,weaponEmp,noUnderMulHurt,spellImmunityMax,meltFlamerPurgold</bossSkillArr>
 			<!-- 攻击数据 -->
 			<hurtArr>
 				<hurt>
@@ -43,6 +43,21 @@
 		</body>	
 	</father>		
 	<father name="enemy">
+		<skill name="反击导弹X">
+			<name>fightBackBulletX</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<cnName>反击导弹X</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType>
+			<condition>underAllHurt</condition>
+			<target>target</target>
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<mul>4</mul>
+			<effectProArr>0.1</effectProArr>
+			<extraValueType>producterDpsFactor</extraValueType>
+			<obj>"name":"fightBackBullet","site":"puToTarget","producerShootB":true,"ranX":30,"ranY":50</obj>
+			<description>受到伤害就有几率向敌人发射导弹。</description>
+		</skill>
+		
 		<bullet cnName="小飞天狗-射击">
 			<name>WatchdogAirShoot</name>
 			<cnName>小飞天狗-射击</cnName>

@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<data id="level_GreenIsMain2" cnName="绿岛主线II" author="沃龙先生">
+	<info></info>
+	<father name="normal" cn="关卡">
+		<gather>
+			<level name="GreenTown2_plot" cnName="家">
+				<info enemyLv="99" diff="2" />
+				<sceneLabel>GreenTown2</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG><allDefault aiOrder="patrolGlobal"></allDefault>
+					<unitOrder id="enemy1">
+						<unit cnName="巡逻狗" num="4"/>
+						<unit cnName="飞天狗" num="6"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<unit cnName="巡逻狗" num="4"/>
+						<unit cnName="飞天狗" num="5"/>
+						<unit cnName="血蟒重甲兵" num="2"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<unit cnName="巡逻狗" num="5"/>
+						<unit cnName="飞天狗" num="7"/>
+						<unit cnName="血蟒重甲兵" num="2"/>
+					</unitOrder>
+					<unitOrder id="enemy4">
+						<unit cnName="飞天狗" unitType="boss" lifeMul="1000000" dpsMul="2" skillArr="fightBackBulletX,missile_Sentry,offAllSkill5,moreBullet,invincibleEmp,weaponEmp,noUnderMulHurt,spellImmunityMax,meltFlamerPurgold" />
+					</unitOrder>
+				</unitG>
+				<!-- 事件集************************************************ -->
+				<eventG>
+					<group>
+						<event><condition delay="0.5"></condition><order>say; startList:s1</order></event>
+						<event><condition delay="0.5">say:listOver</condition></event>
+						
+						<event><condition doNumber="3" >liveEnemyNumber:less_1</condition><order>createUnit:enemy1; r123</order></event> 
+						<event><condition doNumber="3" >liveEnemyNumber:less_1</condition><order>createUnit:enemy2; r123</order></event> 
+						<event><condition doNumber="3" >liveEnemyNumber:less_1</condition><order>createUnit:enemy3; r123</order></event> 
+						
+						<event><condition>liveEnemyNumber:less_1</condition><order>createUnit:enemy4; r123</order></event> 
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>allWeHeroRebirth</order>
+							<order>say; startList:s2</order>
+						</event>
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<event>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+			
+			<level name="greenMemory1" cnName="回忆一">
+				<sceneLabel>GreenTown2</sceneLabel>
+				<!-- 掉落 -->
+				<info unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" />
+				<drop noB="1" />
+				<!-- 发兵集--------------------------------------------------------------------------------------- -->
+				<unitG>
+					
+					<allDefault aiOrder="patrolGlobal" noSuperB="1"></allDefault>
+					<unitOrder id="we1" camp="we">
+						<unit cnName="本我" armsRange="airToyGun2"  skillArr="jumpNumAdd1"/>
+					</unitOrder>
+					<unitOrder id="we2" camp="we">
+						<unit cnName="玉晴" aiOrder="followBody:本我"/>
+					</unitOrder>
+				</unitG>
+				<!-- 区域集 -->
+				<rectG>
+					<rect id="rwe1">1470,1308,37,37</rect>
+					<rect id="rwe2">1711,1308,37,37</rect>
+				</rectG>
+				
+				<eventG>
+					<group>
+						<event>
+							<order>createUnit:we1; rwe1</order>
+							<order>createUnit:we2; rwe2</order>
+							<order>setP1:本我</order>
+							<order>addWeather:rain; 2:99999</order>
+							<order>playMusic; music_face/piano</order>
+							
+							
+						</event>
+						<event><condition delay="0.1"></condition><order>say; startList:s1</order></event>
+						<event><condition delay="0.1">say:listOver</condition></event>
+						<event>
+							<order>setP1:玉晴</order>
+							
+							<order>body:本我; rangeLimit:close</order>
+							<order>body:本我; followPoint:-270,1292</order>
+							<order>body:本我; setShootXY:-270,1292</order>
+						</event>
+						
+						<event><condition delay="3"></condition><order>say; startList:s2</order></event>
+						<event><condition delay="0.1">say:listOver</condition></event>
+						
+						<event><condition delay="1"></condition><order>say; startList:s3</order></event>
+						<event><condition delay="0.1">say:listOver</condition></event>
+						<event>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_birth</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+			
+			<level name="greenMemory2" cnName="回忆二">
+				<sceneLabel>GreenIs3</sceneLabel>
+				<!-- 掉落 -->
+				<info unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" />
+				<drop noB="1" />
+				<!-- 发兵集--------------------------------------------------------------------------------------- -->
+				<unitG>
+					
+					<allDefault aiOrder="patrolGlobal" noSuperB="1"></allDefault>
+					
+					<unitOrder id="we1" camp="we">
+						<unit cnName="本我" lifeMul="2" armsRange="airToyGun2" dieGotoState="stru" skillArr="jumpNumAdd1" />
+					</unitOrder>
+					<unitOrder id="we2" camp="we">
+						<unit cnName="枪店主" unitType="boss" lifeMul="0.14" skillArr="crazy_enemy" armsRange="rocketToy2" dieGotoState="stru"/>
+					</unitOrder>
+				</unitG>
+				<!-- 区域集 -->
+				<rectG>
+					<rect id="rwe2">2197,1304,20,20</rect>
+				</rectG>
+				
+				<eventG>
+					<group>
+						<event>
+							<order>createUnit:we1; r_over</order>
+							<order>createUnit:we2; rwe2</order>
+							<order>setP1:本我</order>
+							<order>body:枪店主;clearEyeLightEffect</order>
+						</event>
+						<event><condition delay="0.1">bodyGap:less_250; 本我:枪店主</condition><order>say; startList:s1</order></event>
+						<event><condition delay="2">say:listOver</condition></event>
+						<event>
+							<order>body:枪店主; changeCamp:enemy</order>
+							<order>body:枪店主; addLifeBar</order>
+							<order>body:枪店主; showBossLifeBar</order>
+							<order>body:枪店主; setAttackTarget:本我</order>
+						</event>
+						<event><condition delay="0.1">bodyEvent:die; 枪店主</condition><order>say; startList:s2</order></event>
+						<event><condition delay="0.1">say:listOver</condition></event>
+						<event>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_birth</order>
+						</event>
+					</group>
+					
+					<group>
+						<event>
+							<condition delay="0.1">bodyEvent:die; 本我</condition>
+							<order>body:枪店主; ai:noAndStop</order>
+							<order>say; startList:s_fail</order>
+						</event>
+						<event>
+							<condition delay="0.1">say:listOver</condition>
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+			
+			
+			<level name="greenMemory3" cnName="回忆三">
+				<sceneLabel>GreenIs2</sceneLabel>
+				<!-- 掉落 -->
+				<info unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" />
+				<drop noB="1" />
+				<!-- 发兵集--------------------------------------------------------------------------------------- -->
+				<unitG>
+					
+					<allDefault aiOrder="patrolGlobal" noSuperB="1"></allDefault>
+					
+					<unitOrder id="we1" camp="we">
+						<unit cnName="本我" lifeMul="2" dpsMul="1.5" armsRange="rocketToy2,airToyGun2" dieGotoState="stru" skillArr="jumpNumAdd1" />
+					</unitOrder>
+					<unitOrder id="enemy1" camp="enemy">
+						<unit cnName="枪店主" unitType="boss" lifeMul="0.1" armsRange="airCannonE,rocketToy2" skillArr="keeperBuffTask,gunReloadSwap"  dieGotoState="stru"/>
+					</unitOrder>
+				</unitG>
+				<!-- 区域集 -->
+				<rectG>
+					<rect id="rwe2">2197,1304,20,20</rect>
+				</rectG>
+				
+				<eventG>
+					<group>
+						<event>
+							<order>createUnit:we1; r_birth</order>
+							<order>createUnit:enemy1; r_over</order>
+							<order>setP1:本我</order>
+							<order>body:枪店主;clearEyeLightEffect</order>
+						</event>
+						<event><condition delay="0.1">bodyEvent:die; 枪店主</condition><order>say; startList:s2</order></event>
+						<event><condition delay="0.1">say:listOver</condition></event>
+						<event>
+							<order>task:now; complete</order>
+						</event>
+						<event>
+							<condition delay="1"></condition>
+							<order>level; win</order>
+						</event>
+					</group>
+					
+					<group>
+						<event>
+							<condition delay="0.1">bodyEvent:die; 本我</condition>
+							<order>body:枪店主; ai:noAndStop</order>
+							<order>say; startList:s_fail</order>
+						</event>
+						<event>
+							<condition delay="0.1">say:listOver</condition>
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+			
+			<level name="greenMemory4" cnName="回忆四">
+				<sceneLabel>WoTu</sceneLabel>
+				<!-- 掉落 -->
+				<info unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" preSkillArr="armsBroken" />
+				<drop noB="1" />
+				<!-- 发兵集--------------------------------------------------------------------------------------- -->
+				<unitG>
+					
+					<allDefault aiOrder="patrolGlobal" noSuperB="1"></allDefault>
+					<unitOrder id="we1" camp="we">
+						<unit cnName="本我" lifeMul="5" dpsMul="1.5" armsRange="airToyGun2" skillArr="jumpNumAdd1" />
+					</unitOrder>
+					<unitOrder id="we2" camp="we">
+						<unit cnName="文杰表哥" aiOrder="followBody:本我" />
+					</unitOrder>
+					<unitOrder id="enemy1">
+						<unit cnName="橄榄僵尸" dpsMul="0.6" num="1"/>
+						<unit cnName="携弹僵尸" lifeMul="0.6" num="2"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<unit cnName="携弹僵尸" lifeMul="0.6" num="4"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<unit cnName="橄榄僵尸" lifeMul="0.6" num="4"/>
+					</unitOrder>
+					<unitOrder id="enemy4">
+						<unit cnName="橄榄僵尸" lifeMul="0.6" num="6"/>
+						<unit cnName="携弹僵尸" lifeMul="0.6" num="6"/>
+					</unitOrder>
+					<unitOrder id="enemy5">
+						<unit cnName="橄榄僵尸" lifeMul="0.6" num="10"/>
+						<unit cnName="携弹僵尸" lifeMul="0.6" num="10"/>
+					</unitOrder>
+				</unitG>
+				<!-- 区域集 -->
+				<rectG>
+					<rect id="rwe2">-57,652,20,20</rect>
+				</rectG>
+				<eventG>
+					<group>
+						<event>
+							<order>createUnit:we1; r_over</order>
+							<order>setP1:本我</order>
+							<order>body:本我; allArmsChargerMul:0</order>
+							<order>body:本我; allArmsCapacity:160</order>
+							
+						</event>
+						<event><condition delay="0.5"></condition><order>say; startList:s1</order></event>
+						<event><condition delay="0.5">say:listOver</condition></event>
+						
+						<event><condition doNumber="1" >liveEnemyNumber:less_1</condition><order>createUnit:enemy1; r123</order></event> 
+						<event><condition doNumber="1" >liveEnemyNumber:less_1</condition><order>createUnit:enemy2; r123</order></event> 
+						<event><condition doNumber="1" >liveEnemyNumber:less_1</condition><order>createUnit:enemy3; r123</order></event> 
+						<event><condition doNumber="1" >liveEnemyNumber:less_1</condition><order>createUnit:enemy4; r123</order></event> 
+						<event><condition doNumber="1" >liveEnemyNumber:less_1</condition><order>createUnit:enemy5; r123</order></event> 
+						
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>body:本我; addState:armsBroken</order>
+							<order>say; startList:s2</order>
+						</event>
+						<event>
+							<condition delay="0.1">say:listOver</condition>
+							<order>createUnit:we2; rwe2</order>
+						</event>
+						<event><condition delay="0.1">bodyGap:less_250; 本我:文杰表哥</condition><order>say; startList:s3</order></event>
+						<event><condition delay="0.1">say:listOver</condition></event>
+						<event>
+							<order>task:now; complete</order>
+						</event>
+						<event>
+							<condition delay="1"></condition>
+							<order>level; win</order>
+						</event>
+					</group>
+					
+					<group>
+						<event>
+							<condition delay="0.1">bodyEvent:die; 本我</condition>
+							<order>alert:yes; 任务失败！</order>
+						</event>
+						<event>
+							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+		</gather>
+		
+		<level name="GreenTown2_plot" cn="对话-家">
+			<sayList name="s1">
+				<say target="文杰表哥"><content>到你家了耶，小白。</content></say>
+				<say target="我"><content>我也好久没回家了。</content></say>
+				<say target="小樱"><content>这栋房子是你的家？</content></say>
+				<say target="我"><content>对啊。</content></say>
+				<say target="心零"><content>这可是豪宅啊！</content></say>
+				<say target="藏师将军"><content>你还真是深藏不漏啊，小白！</content></say>
+				<say target="我"><content>这在农村不是很正常的房子吗？</content></say>
+				<say target="文杰表哥"><content>我们城里人的房子要是有你这四分之一大，就已经笑开花了。</content></say>
+				<say target="藏师将军"><content>大家注意！前面有血蟒的巡逻狗！</content></say>
+			</sayList>
+			<sayList name="s2">
+				<say target="文杰表哥"><content>这只飞天狗怎么那么难啃？</content></say>
+				<say target="p1"><content>还好有“空气波”，否则我们可能就束手无策了。</content></say>
+				<say target="小樱"><content>我说小白，你住在这么好的房子里，当初怎么会离家出走呢？</content></say>
+				<say target="我"><content>这……说来就话长了。</content></say>
+				<say target="文杰表哥"><content>一点都不长，我来给你们八卦！</content></say>
+				<say target="我"><content>先去天风塔要紧。</content></say>
+				<say target="小樱"><content>没事，你在路上跟我们娓娓道来。</content></say>
+				<say target="我"><content>行吧。</content></say>
+			</sayList>
+		</level>
+		
+		<level name="greenMemory1" cn="对话-回忆一">
+			<sayList name="s1">
+				<say target="玉晴"><content>你给我站住！</content></say>
+				<say target="玉晴"><content>不就是游戏里的一把破枪吗？有那么重要吗？</content></say>
+				<say target="本我"><content>那可是撒旦！你不会理解的！</content></say>
+				<say target="玉晴"><content>那你也不应该把电脑给砸了啊？</content></say>
+				<say target="本我"><content>那你也不应该打我脸！</content></say>
+				<say target="玉晴"><content>刚才……妈妈确实冲动了……</content></say>
+				<say target="本我"><content>反正这个家我是待不下去了！</content></say>
+				<say target="玉晴"><content>你要去哪？</content></say>
+				<say target="本我"><content>我要去霞光市找表哥……</content></say>
+				<say target="玉晴"><content>你身上又没带钱，怎么买船票？</content></say>
+				<say target="本我"><content>我会想办法的！</content></say>
+				<say target="玉晴"><content>就凭你手上那把玩具枪？</content></say>
+				<say target="玉晴"><content>我倒是要看看你怎么去。</content></say>
+				<say target="本我"><content>要你管我？！</content></say>
+				<say target="玉晴"><content>行啦行啦，你现在去树林里玩会儿，记得回来吃晚饭。</content></say>
+				<say target="本我"><content>哼！</content></say>
+			</sayList>
+			<sayList name="s2">
+				<say target="玉晴"><content>这孩子，脾气到底像谁呢？</content></say>
+				<say target="玉晴"><content>像我？还是像他爸？</content></say>
+				<say target="玉晴"><content>等会儿气消了，估计就回来了。</content></say>
+				
+				<say target="多米诺"><content>喂，玉晴啊……</content></say>
+				<say target="玉晴"><content>博士，怎么了？</content></say>
+				<say target="多米诺"><content>陆队长已经开始封岛了，你知道吗？</content></say>
+				<say target="玉晴"><content>我不知道啊。好端端的，干嘛封岛？</content></say>
+				<say target="多米诺"><content>霞光市刚刚爆发了僵尸病毒，往来的船只可能会将病毒带过来。</content></say>
+				<say target="玉晴"><content>啊！</content></say>
+				<say target="玉晴"><content>霞光市不是有几十米的防尸高墙吗？</content></say>
+				<say target="多米诺"><content>目前我还不清楚病毒爆发的原因。</content></say>
+				<say target="玉晴"><content>有没有可能，病毒已经来到岛上了呢？</content></say>
+				<say target="多米诺"><content>根据我的评估，暂时还没有这种风险。只要封岛的执行足够迅速，未来我们这也会很安全。</content></say>
+				<say target="玉晴"><content>我支持陆队长。</content></say>
+				<say target="多米诺"><content>你们这段时间就不要出岛了。</content></say>
+				<say target="玉晴"><content>知道了，谢谢博士。</content></say>
+			</sayList>
+			
+			<sayList name="s3">
+				<say target="玉晴"><content>小白现在想出岛都出不了了。</content></say>
+				<say target="玉晴"><content>不过，我还是先把他劝回来吧，这样比较放心。</content></say>
+				<say target="玉晴"><content>还得给文杰打个电话，问问他们家的情况。</content></say>
+			</sayList>
+		</level>
+		
+		<level name="greenMemory2" cn="对话-回忆二">
+			<sayList name="s1">
+				<say target="枪店主" pointer="本我"><content>这不是玉晴家那个孩子吗？</content></say>
+				<say target="本我"><content>你认识我？</content></say>
+				<say target="枪店主"><content>那当然，我和你妈妈关系可不错了。</content></say>
+				<say target="本我"><content>那我怎么不认识你？</content></say>
+				<say target="枪店主"><content>这可太正常了，你天天待在房间里，两耳不闻窗外事。</content></say>
+				<say target="本我"><content>原来如此。</content></say>
+				<say target="本我"><content>既然叔叔是我妈妈的好朋友，那能不能借我一把真枪给我。</content></say>
+				<say target="枪店主"><content>这可不行，你妈妈不会同意的。</content></say>
+				<say target="本我"><content>那我买，行了吧。</content></say>
+				<say target="枪店主"><content>嘿嘿，既然是来做生意的，那人情世故我就暂且放一边。</content></say>
+				<say target="枪店主"><content>您要哪一把？</content></say>
+				<say target="本我"><content>看了一圈，好像都不如我手上这把。</content></say>
+				<say target="枪店主"><content>您不是在开玩笑吧？</content></say>
+				<say target="枪店主"><content>您手上那就是一把玩具枪。</content></say>
+				<say target="本我"><content>这可是我自己改装的“空气手枪”。</content></say>
+				<say target="本我"><content>它射出的空气可将别人的子弹弹飞。</content></say>
+				
+				<say target="枪店主"><content>哎呀呀，那你可厉害了。</content></say>
+				<say target="枪店主"><content>你要是不想买我的武器，就早说。</content></say>
+				<say target="枪店主"><content>没必要搞这一出。</content></say>
+				<say target="本我"><content>那你敢不敢跟我打个赌。</content></say>
+				<say target="枪店主"><content>我挺忙的，没空跟你玩。</content></say>
+				<say target="本我"><content>你拿把枪跟我比试，我要是赢了，你就送一把枪给我。</content></say>
+				<say target="枪店主"><content>就凭你那玩具枪？</content></say>
+				<say target="本我"><content>对！</content></say>
+				<say target="枪店主"><content>你要是输了呢？</content></say>
+				<say target="本我"><content>输了，我就给你1500黄金。</content></say>
+				<say target="枪店主"><content>有这种好事？</content></say>
+				<say target="枪店主"><content>等我赢了，你可别去跟别人说我欺负你。</content></say>
+				<say target="本我"><content>不管结果如何，我都不会告诉别人的。</content></say>
+				<say target="枪店主"><content>行啊，那我们一言为定。</content></say>
+				<say target="枪店主"><content>我就用我手上这把玩具火炮，要是用真枪啊，我怕把你给打残了。</content></say>
+				<say target="枪店主"><content>到时候这1500还不够赔你医药费的。</content></say>
+				<say target="本我"><content>随便吧。</content></say>
+				<say target="枪店主"><content>给你几秒钟准备一下。</content></say>
+				<say target="本我"><content>开始吧！</content></say>
+			</sayList>
+			<sayList name="s2">
+				<say target="枪店主"><content>是我大意了！</content></say>
+				<say target="枪店主"><content>没想到你这空气手枪还挺厉害。</content></say>
+				<say target="本我"><content>我现在可以进店里挑一把枪了吧？</content></say>
+				<say target="枪店主"><content>等等！</content></say>
+				<say target="枪店主"><content>我连一个拿玩具枪的小屁孩都比不过，这事要是传出去，以后我这生意就没法做了。</content></say>
+				<say target="本我"><content>你想怎样？</content></say>
+				<say target="枪店主"><content>我们再比一场！</content></say>
+				<say target="枪店主"><content>要是你赢了，我可以再送你一把枪。</content></say>
+				<say target="本我"><content>可是我只需要一把。</content></say>
+				<say target="枪店主"><content>那你还想要什么？</content></say>
+				<say target="本我"><content>我要一张前往霞光市的船票。</content></say>
+				<say target="枪店主"><content>虽然现在船票不好弄，但是我有门路。</content></say>
+				<say target="本我"><content>那就这么定了。</content></say>
+				<say target="枪店主"><content>要是你输了，那咱们就一笔勾销了。</content></say>
+				<say target="本我"><content>没问题！</content></say>
+				<say target="本我"><content>这次要怎么比？</content></say>
+				<say target="枪店主"><content>我们去苍木道，这次我得再拿一把“空气炮”。</content></say>
+				<say target="本我"><content>空气炮？</content></say>
+				<say target="枪店主"><content>和你手上那把差不多。</content></say>
+				<say target="本我"><content>这样不公平，我也得带两把枪。</content></say>
+				<say target="枪店主"><content>我这还有一把玩具火炮，可以先借你用用。</content></say>
+				<say target="本我"><content>行，就这样吧。</content></say>
+				<say target="枪店主"><content>你先去苍木道，我马上就来。</content></say>
+				
+			</sayList>
+			
+			<sayList name="s_fail">
+				<say target="枪店主" pointer="本我"><content>嘿嘿，我就知道，你挨不了几下。</content></say>
+				<say target="枪店主" pointer="本我"><content>给我1000黄金就行了，剩下500你拿去买点药敷一敷。</content></say>
+				<say target="本我"><content>我……我没钱……</content></say>
+				<say target="枪店主"><content>什么？！</content></say>
+				<say target="枪店主"><content>你这小子竟敢忽悠我！</content></say>
+				<say target="枪店主"><content>你一定要去你妈妈那告状！</content></say>
+				<say target="本我"><content>告诉她你把我打伤了？</content></say>
+				<say target="枪店主"><content>你！</content></say>
+			</sayList>
+		</level>
+		<level name="greenMemory3" cn="对话-回忆三">
+			
+			<sayList name="s2">
+				<say target="枪店主"><content>看来不是武器的问题。</content></say>
+				<say target="枪店主"><content>你身手如此敏捷，我甘拜下风。</content></say>
+				<say target="本我"><content>答应我的船票，一定要给我弄到喔。</content></say>
+				<say target="枪店主"><content>这不巧了吗？我身上就有一张。</content></say>
+				<say target="枪店主"><content>今天我本来就要坐船去霞光市，淘一些武器回来。</content></say>
+				<say target="枪店主"><content>但刚才听人说那边爆发了僵尸病毒，所以就打消了这个念头。</content></say>
+				<say target="本我"><content>霞光市不是安全区吗？</content></say>
+				<say target="枪店主"><content>谁知道那里发生了什么。</content></say>
+				<say target="本我"><content>我倒是挺想见见僵尸到底长啥样的。</content></say>
+				<say target="枪店主"><content>你这孩子，年纪不大，胆子却不小。</content></say>
+				<say target="枪店主"><content>千万别告诉你妈，是我给你的船票，知道吗？</content></say>
+				<say target="本我"><content>放心吧。</content></say>
+				<say target="枪店主"><content>哎呦，今天遇到你真是倒大霉了。</content></say>
+				<say target="枪店主"><content>不过我看你未来肯定是一个能成大事的人。</content></say>
+				<say target="本我"><content>过奖了。</content></say>
+				<say target="枪店主"><content>现在陆队长已经禁止外来船只靠岸，但还是会放行离岛的船只。</content></say>
+				<say target="枪店主"><content>你还是赶紧吧，说不定过几天政策就变了。</content></say>
+				<say target="本我"><content>好的，谢谢叔叔！</content></say>
+			</sayList>
+			
+			<sayList name="s_fail">
+				<say target="枪店主" pointer="本我"><content>哈哈，果然被我翻盘了！</content></say>
+				<say target="本我"><content>可恶……</content></say>
+			</sayList>
+		</level>
+		
+		<level name="greenMemory4" cn="对话-回忆四">
+			<sayList name="s1">
+				<say target="本我"><content>这把空气手枪的子弹不够用了。</content></say>
+				<say target="本我"><content>我得省一点。</content></say>
+			</sayList>
+			
+			<sayList name="s2">
+				<say target="本我"><content>怎么冒烟了？</content></say>
+				<say target="本我"><content>唉，终归是塑料做的东西，用不了太久。</content></say>
+				<say target="本我"><content>接下来只能用真枪了。</content></say>
+			</sayList>
+			
+			<sayList name="s3">
+				<say target="文杰表哥" pointer="本我"><content>表弟，我终于找到你了！</content></say>
+				<say target="本我"><content>咱俩真是好久不见了。</content></say>
+				<say target="文杰表哥"><content>现在绿岛已经禁止全部船只的往来，你运气可真够好的，坐上最后一班船。</content></say>
+				<say target="本我"><content>真的吗？那可太好了。</content></say>
+				<say target="文杰表哥"><content>姨妈刚刚跟我通过电话，她让你打电话给她。</content></say>
+				<say target="本我"><content>我才不想跟她说话呢。</content></say>
+				<say target="文杰表哥"><content>还在气头上呢？</content></say>
+				<say target="文杰表哥"><content>行了行了，你现在首要的事就是跟紧我，不要乱跑。</content></say>
+				<say target="本我"><content>你在怕什么？</content></say>
+				<say target="文杰表哥"><content>难道你还不知道吗？</content></say>
+				<say target="文杰表哥"><content>前面好像来了一大群僵尸！</content></say>
+				<say target="文杰表哥"><content>我们先躲起来！等会儿再跟你细说！</content></say>
+				<say target="本我"><content>你怎么那么胆小？</content></say>
+				<say target="文杰表哥"><content>听我的就对了！</content></say>
+			</sayList>
+		</level>
+	</father>	
+	
+	<father name="enemy">
+		<skill>
+			<name>keeperBuffTask</name>
+			<cnName>枪店主Buff</cnName>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<addType>state</addType>
+			<effectType>keeperBuff</effectType><effectFather>task</effectFather>
+			<duration>9999999</duration>
+			<description>周围有敌人子弹时，枪店主将使用空气炮射击。</description>
+		</skill>
+		<skill>
+			<name>armsBroken</name>
+			<cnName>武器损坏</cnName>
+			<conditionType>passive</conditionType><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+			<condition>add</condition><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<target>me</target><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
+			<addType>state</addType>
+			<effectType>noArms</effectType>
+			<duration>999999</duration>
+			<range>999999</range>
+			<stateEffectImg name="gunSmokeSmall" />
+			<description>武器损坏，无法射击。</description>
+		</skill>
+	</father>		
+	<father type="rocket" cnName="火炮">
+		<bullet color="blue">
+			<name>rocketToy2</name>
+			<cnName>玩具火炮</cnName>
+			<!--基本-->
+			<capacity>15</capacity>
+			<attackGap>0.8</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>35</bulletWidth>	
+			<bulletNum>1</bulletNum>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>2.5</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>30</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  bodyB="1" floorB="1" radius="60"/>
+			<followD aiStopGap="250"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl raNum="30">rocket/rocketBullet</bulletImgUrl>
+			<hitImgUrl name="midSpace"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="rocketSmokeSm"/><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgUrl name="gunFireRocket"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<shootSoundUrl>rocket/barrel_sound</shootSoundUrl>
+			<bodyImgRange>newGun/rocketToy</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+	</father>
+	<father type="wavegun">
+		<bullet color="blue">
+			<name>airToyGun2</name>
+			<cnName>空气手枪</cnName>
+			<aiShootRange>250</aiShootRange><!-- ai射程 -->
+			<!--基本-->
+			<capacity>20</capacity>
+			<attackGap>0.25</attackGap>
+			<reloadGap>2</reloadGap>
+			<bulletWidth>25</bulletWidth><noHitB>1</noHitB>
+			<bulletNum>1</bulletNum>				
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.98</armsArmMul>
+			<upValue>8</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>9</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<bulletLife>0.001</bulletLife>
+			<shootNum>2</shootNum>
+			<shootGap>0.1</shootGap>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<bulletSkillArr>airCannonDieEvent</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD radius="160"/>
+			<followD aiStopGap="110"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>hitSound/wave</shootSoundUrl>
+			<fireImgUrl name="airCannonBoom"/>
+			<bulletImgUrl name="no"/>
+			<hitImgUrl name="gun_hit"/><!-- elasticRecoveryGod-->
+			<hitFloorImgUrl name="yearDragon_hit"/>
+			
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/airToyGun</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>武器本体无伤害，但可将半径190码范围内的敌人子弹变成我方子弹，并弹飞。</info>
+		</bullet>
+		
+		<bullet color="blue">
+			<name>airCannonE</name><iconUrl>newGun/airCannon_icon</iconUrl>
+			<cnName>空气炮E</cnName>
+			<aiShootRange>250</aiShootRange><!-- ai射程 -->
+			<dpsMul>2</dpsMul>
+			<!--基本-->
+			<capacity>14</capacity>
+			<attackGap>0.25</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>25</bulletWidth><noHitB>1</noHitB>
+			<bulletNum>1</bulletNum>				
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.55</armsArmMul>
+			<upValue>8</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>9</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<bulletLife>0.001</bulletLife>
+			<shootNum>2</shootNum>
+			<shootGap>0.1</shootGap>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<bulletSkillArr>airCannonDieEvent</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD selfB="1" radius="140" haveBodyHitEffectB="1" />
+			<followD aiStopGap="110"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>hitSound/wave</shootSoundUrl>
+			<bulletImgUrl name="no"/>
+			<hitImgUrl name="gun_hit"/><!-- elasticRecoveryGod-->
+			<hitFloorImgUrl name="yearDragon_hit"/>
+			<selfBoomImgUrl name="airCannonBoom"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/airCannon</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>将半径190码范围内的敌人子弹变成我方子弹，并弹飞。</info>
+		</bullet>
+	</father>
+	
+	
+	
+	
+	
+	
+	
+	
+</data>

@@ -154,13 +154,19 @@
 		
 	</father>	
 	<father info="神圣尸宠">
-		<gene name="DollRabbit" cnName="勇者兔" targetBodyName="DollRabbit" iconUrl="BodyImg/DollRabbit_icon" grade="2"  type="boss" evolutionLabel=""  evolutionMustMul="">
+		<gene name="DollRabbit" cnName="勇者兔" iconUrl="BodyImg/DollRabbit_icon" grade="2"  type="boss" evolutionLabel="WarriorRabbit"  evolutionMustMul="6,6,6" growMust="2">
 			<dpsMul>8</dpsMul><lifeMul>13</lifeMul>
 			<talentSkillArr>DollRabbitShelling,dpsConnect,alloyShellP</talentSkillArr>
 			<laterSkillArr>crazy_pet,bullying_pet,pioneer_pet,skillGift_pet</laterSkillArr>
 			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,cdMul,dodge</talentProArr>
 			<highDispaArr>神武碎片,银狐之眼,蚀骨碎片,狩猎者碎片</highDispaArr>
 			<lowDispaArr>青蜂之触,金蝉之翼,赤鼬之心</lowDispaArr>
+		</gene>
+		<gene lv="2" name="WarriorRabbit" cnName="武者兔" iconUrl="BodyImg/WarriorRabbit_icon" grade="2"  type="boss" evolutionLabel=""  evolutionMustMul="">
+			<dpsMul>12</dpsMul><lifeMul>16</lifeMul>
+			<talentSkillArr>DollRabbitShelling,dpsConnect,alloyShellP,WarriorRabbitHeart</talentSkillArr>
+			<laterSkillArr>crazy_pet,bullying_pet,pioneer_pet,skillGift_pet</laterSkillArr>
+			<talentProArr>dpsMul,hurtMul,lifeMul,headMul,lifeRate,critPro3,cdMul,dodge</talentProArr>
 		</gene>
 	</father>
 	

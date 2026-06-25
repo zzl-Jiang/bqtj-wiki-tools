@@ -32,7 +32,7 @@
 			<extraAIClassLabel>HookWitch_AIExtra</extraAIClassLabel>
 			<!-- 技能 -->
 			<skillArr></skillArr>
-			<bossSkillArr>fightReduct2,defenceBounce_enemy,HookWitchHook,HookWitchRoll,HookWitchShake,HookWitchVehicle</bossSkillArr>
+			<bossSkillArr>fightReduct2,HookWitchHook,HookWitchRoll,HookWitchShake,HookWitchVehicle</bossSkillArr>
 			<wilderSkillArr>shortShootRangeHole,weaponNo,godShield,fitVehicleDefence</wilderSkillArr>
 			<bossSkillArrCn></bossSkillArrCn>
 			<extraDropArmsB>1</extraDropArmsB>

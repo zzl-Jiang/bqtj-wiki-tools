@@ -36,7 +36,7 @@
 			<extraAIClassLabel>DiggingBeast_AIExtra</extraAIClassLabel>
 			<!-- 技能 -->
 			<skillArr></skillArr>
-			<bossSkillArr>KingRabbitTreater,DiggingHammer,DiggingDrill,addDiggingBox,DiggingRain,fightReduct2,defenceBounce_enemy</bossSkillArr>
+			<bossSkillArr>KingRabbitTreater,DiggingHammer,DiggingDrill,addDiggingBox,DiggingRain,fightReduct2</bossSkillArr>
 			<bossSkillArrCn></bossSkillArrCn>
 			
 			<!-- 攻击数据 -->

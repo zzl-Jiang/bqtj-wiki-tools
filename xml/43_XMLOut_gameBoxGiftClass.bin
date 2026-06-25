@@ -155,7 +155,7 @@
 	
 			
 		
-		]]>
+		
 		<one codeExchangeId="37927" name="sign2026_5_1" cnName="5月1天" startTime="2026-5-1 00:00:00" endTime="2026-6-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;demBall;10</gift>
@@ -192,7 +192,7 @@
 
 		</one>
 		
-			
+			]]>
 		<one codeExchangeId="37947" name="sign2026_6_1" cnName="6月1天" startTime="2026-6-1 00:00:00" endTime="2026-7-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>base;wilderKey;2</gift>
@@ -219,9 +219,9 @@
 			<gift>things;strengthenStone;150</gift>
 		</one>
 		
-		<![CDATA[
 		
-		<one codeExchangeId="37654" name="sign2026_7_1" cnName="7月1天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
+		
+		<one codeExchangeId="37968" name="sign2026_7_1" cnName="7月1天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;10</gift>
 			<gift>things;armsRadium;40</gift>
@@ -230,7 +230,7 @@
 			<gift>base;tenCoin;20</gift>
 
 		</one>
-		<one codeExchangeId="37655" name="sign2026_7_5" cnName="7月5天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="37969" name="sign2026_7_5" cnName="7月5天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;20</gift>
 			<gift>things;armsRadium;80</gift>
@@ -239,7 +239,7 @@
 			<gift>base;tenCoin;40</gift>
 
 		</one>
-		<one codeExchangeId="37656" name="sign2026_7_14" cnName="7月14天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="37970" name="sign2026_7_14" cnName="7月14天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;30</gift>
 			<gift>things;armsRadium;120</gift>
@@ -248,7 +248,7 @@
 			<gift>base;tenCoin;60</gift>
 
 		</one>
-		<one codeExchangeId="37657" name="sign2026_7_25" cnName="7月25天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="37971" name="sign2026_7_25" cnName="7月25天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;40</gift>
 			<gift>things;armsRadium;160</gift>
@@ -257,7 +257,7 @@
 			<gift>base;tenCoin;60</gift>
 
 		</one>
-		<one codeExchangeId="37658" name="sign2026_7_30" cnName="7月满勤" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="37972" name="sign2026_7_30" cnName="7月满勤" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;50</gift>
 			<gift>things;armsRadium;200</gift>
@@ -267,7 +267,7 @@
 
 		</one>
 		
-		
+		<![CDATA[
 		<one codeExchangeId="37672" name="sign2026_8_1" cnName="8月1天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;20</gift>

@@ -33,7 +33,7 @@
 			<extraAIClassLabel>FireDragon_AIExtra</extraAIClassLabel>
 			<!-- 技能 -->
 			<skillArr></skillArr>
-			<bossSkillArr>paralysis_enemy,FireDragonFire,FireDragonSprint,FireDragonCombo,cmldef2_enemy,fightReduct,defenceBounce_enemy</bossSkillArr>
+			<bossSkillArr>paralysis_enemy,FireDragonFire,FireDragonSprint,FireDragonCombo,cmldef2_enemy,fightReduct</bossSkillArr>
 			<bossSkillArrCn></bossSkillArrCn>
 			<uiSkillArr></uiSkillArr>
 			<!-- 攻击数据 -->

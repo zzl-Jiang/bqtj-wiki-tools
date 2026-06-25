@@ -189,7 +189,7 @@
 	
 	
 	<father name="holiday" cnName="特别" sortIndex="99">
-		<body name="GhostGungod" cnName="末日枪神" scene="XuWu1" lifeMul="20" dpsMul="0.05" openTime="2026-5-21" noMoreB="1"  day="40">
+		<body name="GhostGungod" cnName="末日枪神" scene="XuWu1" lifeMul="20" dpsMul="0.05" openTime="2026-5-21" noMoreB="1"  day="40" limitAll="125">
 			<drop cnName="空气波碎片" pro="1" d7="10" d6="9" d5="8" d4="7" d3="6" d2="5" d1="4" d0="3">
 				<gift>things;airWave;1</gift>
 			</drop>

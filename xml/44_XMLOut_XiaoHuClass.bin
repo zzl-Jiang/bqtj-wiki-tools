@@ -6,7 +6,7 @@
 			<name>XiaoHu</name>
 			<cnName>小虎</cnName>
 			<raceType>human</raceType>
-			<swfUrl>swf/hero/XiaoHu341.swf</swfUrl>
+			<swfUrl>swf/hero/XiaoHu363.swf</swfUrl>
 			<!-- 基本系数 -->
 			<showLevel>999</showLevel>
 			<headIconUrl>IconGather/XiaoHu</headIconUrl>

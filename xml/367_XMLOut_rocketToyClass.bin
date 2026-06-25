@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="rocket" cnName="火炮">
+		<![CDATA[
+		<bullet color="blue">
+			<name>rocketToy</name>
+			<cnName>玩具火炮</cnName>
+			<!--基本-->
+			<capacity>5</capacity>
+			<attackGap>0.8</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>35</bulletWidth>	
+			<bulletNum>3</bulletNum>
+			<shootAngle>4</shootAngle>
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.5</armsArmMul>
+			<upValue>5</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>2.5</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>40</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD  bodyB="1" floorB="1" radius="100"/>
+			<followD aiStopGap="250"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<bulletImgUrl raNum="30">rocket/rocketBullet</bulletImgUrl>
+			<hitImgUrl name="midSpace"/><!-- 子弹图像【必备】 -->
+			<smokeImgUrl name="rocketSmokeSm"/><!-- 子弹尾烟效果（默认为空） -->
+			<fireImgUrl name="gunFireRocket"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<shootSoundUrl>rocket/barrel_sound</shootSoundUrl>
+			<bodyImgRange>newGun/rocketToy</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+		]]>
+	</father>
+	
+</data>

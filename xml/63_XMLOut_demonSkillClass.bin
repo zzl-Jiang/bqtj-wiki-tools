@@ -145,7 +145,7 @@
 			
 			<addType>instant</addType>
 			<effectType>changeHurtAndMul</effectType>
-			<mul>0.4</mul>
+			<mul>0.5</mul>
 			
 			<description>受到副手伤害减少[1-mul]。</description>
 		</skill>
@@ -175,7 +175,7 @@
 			
 			<addType>instant</addType>
 			<effectType>changeHurtAndMul</effectType>
-			<mul>0.25</mul>
+			<mul>0.9</mul>
 			
 			<description>受到聚合载具的伤害减少[1-mul]。</description>
 		</skill>

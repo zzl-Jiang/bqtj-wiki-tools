@@ -30,7 +30,7 @@
 			<motionD jumpMul="1.5"/>
 			<!-- 技能 -->
 			<avtiveSkillCdOverT>0.06</avtiveSkillCdOverT>
-			<skillArr>MadgodBuff,MadgodHit,verShieldMad,meltFlamerPurgold,vertigoArmorIron,cardNoAttackSkill,findHide,spellImmunityMax,noBounce_enemy,underHurt50</skillArr>
+			<skillArr>MadgodBuff,MadgodHit,verShieldMad,meltFlamerPurgold,vertigoArmorIron,cardNoAttackSkill,findHide,spellImmunityMax,underHurt50</skillArr>
 			<bossSkillArr>magicMadgod,rotateMadgod,shakeMadgod,sprintMadgod,weaponDefence2,enemyToZombie,strong_enemy</bossSkillArr>
 			<bossSkillArrCn></bossSkillArrCn>
 			<wilderSkillArr></wilderSkillArr>

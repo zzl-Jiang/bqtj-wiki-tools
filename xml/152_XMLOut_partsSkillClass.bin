@@ -73,7 +73,7 @@
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>passive</conditionType>
 			<condition>loopClick</condition>
-			<target>me</target>
+			<target noExistB="1">me</target>
 			<!--效果------------------------------------------------------------ -->
 			<addType>state</addType>
 			<effectType>setBulletNum</effectType>

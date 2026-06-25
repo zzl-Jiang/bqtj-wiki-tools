@@ -12,6 +12,8 @@
 		<pro name="speed" cnName="速度" unit=""></pro>
 		<pro name="duration" cnName="持续时间" unit="秒"></pro>
 		<pro name="cd" cnName="冷却时间" unit="秒"></pro>
+		<pro name="durationAndCd" cnName="持续∕冷却" unit="秒"></pro>
+		
 		<pro name="baseLifeMul" cnName="基础耐久系数" unit="倍" fixedNum="1"></pro>
 		<pro name="lifeMul" cnName="耐久系数" unit="倍" fixedNum="1"></pro>
 		
@@ -27,7 +29,7 @@
 		<pro name="dpsMul" cnName="攻击倍数" unit="倍" fixedNum="1"></pro>
 		<pro name="hurtRatio" cnName="当前伤害" unit="" gatherColor="orangeness"  wanB="1"></pro>
 		<pro name="hurtTheory" cnName="理论伤害" unit="" gatherColor="purple"  wanB="1"></pro>
-		<pro name="hurtLimit" cnName="伤害上限" unit="" gatherColor="green" wanB="1"></pro>
+		<pro name="hurtLimit" cnName="伤害上限" unit="" gatherColor="greenDark" wanB="1"></pro>
 		
 		<pro name="attackGap" cnName="射击速度" unit="发/秒" fixedNum="2"></pro>
 		<pro name="rotateRange" cnName="转角范围" unit="度"></pro>

@@ -2377,6 +2377,71 @@
 				</task>
 			</growth>
 		</task>
+		<task name="GreenTown2_plot" cnName="仙草镇18号" lv="99" unlockLv="30">
+			<shortText>击败守关首领</shortText>
+			<uiConditionText>击败守关首领</uiConditionText>
+			<description>爆枪小队路过仙草镇18号，没想到这里竟然是小白的家。</description>
+			<!-- 目的地 -->
+			<worldMapId>GreenTown2</worldMapId>
+			<levelId>GreenTown2_plot</levelId>
+			
+			<growth>
+				<task>
+					<enemyLifeMul>1</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul><gift>things;intensDrug;12</gift>
+				</task>
+				<task>
+					<enemyLifeMul>5</enemyLifeMul><enemyDpsMul>1.5</enemyDpsMul><gift>things;intensDrug;14</gift>
+				</task>
+				<task>
+					<enemyLifeMul>50</enemyLifeMul><enemyDpsMul>3</enemyDpsMul><gift>things;intensDrug;16</gift>
+				</task>
+				<task>
+					<enemyLifeMul>300</enemyLifeMul><enemyDpsMul>5</enemyDpsMul><gift>things;intensDrug;18</gift>
+				</task>
+				<task>
+					<enemyLifeMul>1000</enemyLifeMul><enemyDpsMul>7</enemyDpsMul><gift>things;intensDrug;20</gift>
+				</task>
+			</growth>
+		</task>
+		
+		<task name="greenMemory1" cnName="回忆一" lv="99" unlockLv="30">
+			<shortText>完成对话</shortText>
+			<uiConditionText>完成对话</uiConditionText>
+			<description>随后小白回忆起了他来霞光市之前的事……</description>
+			<!-- 目的地 -->
+			<worldMapId>GreenTown2</worldMapId>
+			<levelId>greenMemory1</levelId>
+			<gift>things;yaGem;5</gift>
+		</task>
+		<task name="greenMemory2" cnName="回忆二" lv="99" unlockLv="30">
+			<shortText>完成任务</shortText>
+			<uiConditionText>完成任务</uiConditionText>
+			<description>离家出走后的小白，将进行他人生的第一场比试。</description>
+			<!-- 目的地 -->
+			<worldMapId>GreenTown2</worldMapId>
+			<levelId>greenMemory2</levelId>
+			<gift>things;intensDrug;15</gift>
+		</task>
+		
+		<task name="greenMemory3" cnName="回忆三" lv="99" unlockLv="30">
+			<shortText>完成任务</shortText>
+			<uiConditionText>完成任务</uiConditionText>
+			<description>店主将和小白进行第二场比试，结果会如何呢？</description>
+			<!-- 目的地 -->
+			<worldMapId>GreenIs2</worldMapId>
+			<levelId>greenMemory3</levelId>
+			<gift>things;intensDrug;15</gift>
+		</task>
+		
+		<task name="greenMemory4" cnName="回忆四" lv="99" unlockLv="30">
+			<shortText>完成任务</shortText>
+			<uiConditionText>完成任务</uiConditionText>
+			<description>小白乘船来到沃土镇，与文杰表哥汇合后，将开启他辉煌的人生！</description>
+			<!-- 目的地 -->
+			<worldMapId>WoTu</worldMapId>
+			<levelId>greenMemory4</levelId>
+			<gift>things;intensDrug;15</gift>
+		</task>
 	</father>
 	
 		

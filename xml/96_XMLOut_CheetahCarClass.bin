@@ -34,9 +34,9 @@
 			<!-- 技能 -->
 			<bulletLauncherClass>VehicleBulletLauncher</bulletLauncherClass>
 			<skillArr></skillArr>
-			<bossSkillArr>fastForward_Cheetah,fire_Cheetah,jump_Cheetah,defenceBounce_enemy,skillCopy_enemy</bossSkillArr>
+			<bossSkillArr>fastForward_Cheetah,fire_Cheetah,jump_Cheetah,skillCopy_enemy</bossSkillArr>
 			<bossSkillArrCn></bossSkillArrCn>
-			<extraG label="ExtraTaskAI" bossSkillArr="fastForward_Cheetah,fire_Cheetah,jump_Cheetah,defenceBounce_enemy,skillCopy_enemy">
+			<extraG label="ExtraTaskAI" bossSkillArr="fastForward_Cheetah,fire_Cheetah,jump_Cheetah,skillCopy_enemy">
 				<extra lifeMin="0.7" skillArr=""/>
 				<extra lifeMin="0.4" skillArr=""/>
 				<extra lifeMin="0" skillArr=""/>

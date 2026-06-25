@@ -25,7 +25,7 @@
 			<hitType>rect</hitType>
 			<!--运动属性------------------------------------------------------------ -->	
 			<bulletSpeed>25</bulletSpeed>
-			<followD value="0.35" delay="2" />
+			<followD value="0.35" delay="2" shootCY="-1000" />
 			
 			<!--特殊------------------------------------------------------------ -->
 			<gravity>0.6</gravity>

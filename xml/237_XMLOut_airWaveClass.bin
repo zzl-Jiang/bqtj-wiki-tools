@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father type="wavegun">
+		<bullet color="darkgold" evoMaxLv="5" evoMustFirstLv="9" composeLv="99" chipNum="200">
+			<name>airWave</name><iconUrl>newGun/airCannon_icon</iconUrl>
+			<cnName>空气波</cnName>
+			<aiShootRange>250</aiShootRange><!-- ai射程 -->
+			<dpsMul>3</dpsMul>
+			<uiDpsMul>2</uiDpsMul>
+			<!--基本-->
+			<capacity>800</capacity>
+			<attackGap>0.5</attackGap>
+			<reloadGap>1</reloadGap>
+			<bulletWidth>25</bulletWidth><noHitB>1</noHitB>
+			<bulletNum>1</bulletNum>				
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.55</armsArmMul>
+			<upValue>8</upValue>
+			<shootShakeAngle>30</shootShakeAngle>
+			<shootRecoil>9</shootRecoil>
+			<screenShakeValue>8</screenShakeValue>
+			<bulletLife>0.001</bulletLife>
+			<shootNum>2</shootNum>
+			<shootGap>0.1</shootGap>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>0</bulletSpeed>
+			<bulletSkillArr>airCannonDieEvent</bulletSkillArr>
+			<!--特殊------------------------------------------------------------ -->
+			<boomD selfB="1" radius="200" haveBodyHitEffectB="1" />
+			<followD aiStopGap="110"/>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>hitSound/wave</shootSoundUrl>
+			<bulletImgUrl name="no"/>
+			<hitImgUrl name="gun_hit"/><!-- elasticRecoveryGod-->
+			<hitFloorImgUrl name="yearDragon_hit"/>
+			<selfBoomImgUrl name="airCannonBoom"/>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/airCannon</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+			<info>将半径210码范围内的敌人子弹变成我方子弹，并弹飞。</info>
+		</bullet>
+	</father>
+	<father name="godArmsSkill" cnName="神级武器技能">
+		<skill>
+			<name>airWaveSkill2</name><noRandomListB>1</noRandomListB>
+			<cnName>反弹制导</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>killTarget</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<description>被反弹的子弹伤害增加50%，并且子弹将持续跟踪敌人。</description>
+		</skill>
+	</father>
+</data>

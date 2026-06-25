@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="car" cnName="战车定义">
+		<equip name="PandaCar" cnName="胖哒号">
+			<evolutionLv>2</evolutionLv>
+			
+			<main label="Diggers_sub" hideB="1" dpsMul="0"/>
+			<sub label="PandaCar_sub" dpsMul="2" len="60"/>
+			<lifeMul>3</lifeMul>
+			<attackMul>2</attackMul>
+			<duration>30</duration>
+			<cd>80</cd>
+			<addObjJson>{'dpsAll':0.18,'lifeAll':0.18,'gemDropPro':0.20}</addObjJson>
+			<specialInfoArr></specialInfoArr>
+			<skillArr>pandaHit,vehicleFit_Civilian</skillArr>
+			
+			<canComposeB>1</canComposeB>
+			<mustCash>200</mustCash>
+		</equip>
+	</father>
+	<father name="vehicle">
+		<body index="0" name="胖哒号" shell="metal">
+			
+			<name>PandaCar</name>
+			<cnName>胖哒号</cnName>
+			<raceType>robot</raceType>
+			<swfUrl>swf/vehicle/PandaCar.swf</swfUrl>
+			<!-- 基本系数 -->
+			<lifeRatio>1</lifeRatio>
+			<rosRatio>1</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<dieImg soundUrl="sound/pointBoom_hero" shake="3,0.4,30">boomEffect/boom3</dieImg>
+			<dieJumpMul>0</dieJumpMul>
+			<imgClass>CarImage</imgClass>
+			<imgType>normal</imgType>
+			<rotateBySlopeB>1</rotateBySlopeB>
+			<imgArr>
+				stand,move,die1
+				,__jumpUp,jumpUp,jumpDown,jumpDown__
+			</imgArr>
+			<!-- 碰撞体积 -->
+			<hitRect>-30,-88,60,88</hitRect>
+			<!-- 运动 -->
+			<motionD F_G="0.6" jumpDelayT="0.15" F_I="0.7" F_F="0.6" moveWhenVB="1" />
+			<maxVx>18</maxVx>
+			<maxJumpNum>1</maxJumpNum>
+			<!-- 技能 -->
+			<attackAIClass>CarAttack_AI</attackAIClass>
+			<keyClass>CarBodyKey</keyClass>
+			<bulletLauncherClass>CarBulletLauncher</bulletLauncherClass>
+			<skillArr></skillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>move</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl name="oreWormHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl name="oreWormHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpUp</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl name="oreWormHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>jumpDown__</imgLabel>
+					<hurtRatio>0.69</hurtRatio>
+					<attackType>through</attackType>
+					<shakeValue>10</shakeValue><meBack>10</meBack><hitMaxNum>1</hitMaxNum>
+					<hitImgUrl name="oreWormHit"/>
+				</hurt>
+			</hurtArr>
+		</body>
+		
+		<bullet cnName="胖哒号-机枪">
+			<name>PandaCar_sub</name>
+			<cnName>胖哒号-机枪</cnName>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>1</hurtRatio>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			<bulletWidth>1000</bulletWidth>
+			<bulletShakeWidth>100</bulletShakeWidth>
+			<!--攻击时的属性------------------------------------------------------------ -->
+			<attackGap>0.1</attackGap>
+			<attackDelay>0</attackDelay>
+			<!--运动属性------------------------------------------------------------ -->	
+			<shootRecoil>4</shootRecoil>
+			<screenShakeValue>9</screenShakeValue>
+			<shakeAngle>3</shakeAngle>
+			<bulletSpeed>0</bulletSpeed>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<flipX>1</flipX>
+			<lineD color="0xFFFF00" lightColor="0xD95F00" size="2" lightSize="6" blendMode="add" type="one" />
+			<bulletImgUrl>longLine</bulletImgUrl>
+			<fireImgUrl name="Prophet_sub_fire"/>
+			<hitImgUrl name="pistol1_hit"/><!-- 子弹图像【必备】 -->
+		</bullet>
+	</father>
+	<father name="vehicleSkill" cnName="技能">
+		<skill>
+			<name>pandaHit</name>
+			<cnName>血线压制</cnName><noBeClearB>1</noBeClearB><ignoreSilenceB>1</ignoreSilenceB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>pandaHit</effectType><effectFather>vehicle</effectFather>
+			<mul>0.80</mul>
+			<secMul>0.01</secMul>
+			<pointEffectImg name="yellowHit"/>
+			<description>每次攻击都将减少敌人[secMul]的生命值，直到敌人生命值少于[mul]。无视钢骨，虚天塔中有效。</description>
+			<growth>
+				<skill><mul>0.75</mul></skill>
+			</growth>
+		</skill>
+	</father>
+</data>

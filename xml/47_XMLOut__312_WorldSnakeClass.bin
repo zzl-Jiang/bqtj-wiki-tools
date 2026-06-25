@@ -24,7 +24,7 @@
 			<motionD vRan="0" F_AIR="2"   /><![CDATA[  imgRaB="1"  <lockLeftB>1</lockLeftB>]]>
 			<maxVx>14</maxVx>
 			<attackAIClass></attackAIClass><!--SimpleSpaceAttack_AI  -->
-			<skillArr>WSnakeWave,WorldSnake_sum,dieWSnake,weaknessWSnake,noSR,strong_enemy,BallLightningHurt,noBounce_enemy</skillArr>
+			<skillArr>WSnakeWave,WorldSnake_sum,dieWSnake,weaknessWSnake,noSR,strong_enemy,BallLightningHurt</skillArr>
 			<bossSkillArr>hidingSnake,strollCardWSnake,shortShootWSnake,meltFlamerPurgold,fightReduct7,State_SpellImmunity,KingRabbitTreater,godShield,alloyShell_9</bossSkillArr>
 			<wilderSkillArr></wilderSkillArr>
 			<preBulletArr>WorldSnakeLine</preBulletArr>
@@ -285,7 +285,7 @@
 			<motionD vRan="0" F_AIR="8"/>
 			<maxVx>12</maxVx>
 			<attackAIClass></attackAIClass><!--SimpleSpaceAttack_AI  -->
-			<skillArr>fightReduct7,WorldSnakeTailAI,noSR,spellImmunityMax,meltFlamerPurgold,BallLightningHurt,alloyShell_9,noBounce_enemy</skillArr>
+			<skillArr>fightReduct7,WorldSnakeTailAI,noSR,spellImmunityMax,meltFlamerPurgold,BallLightningHurt,alloyShell_9</skillArr>
 			<hurtArr>
 				<hurt>
 					<imgLabel>stand1</imgLabel><noAiChooseB>1</noAiChooseB>

@@ -41,7 +41,9 @@
 			<body name="consArcher" url ="newGun/consArcher" />
 			<body name="consArcher2603" cnName="星核双锋" author="『缠绵』花满江" url ="newGun/consArcher2603"  au="original" info="鎏金双刃与银灰机甲交织，中间星核迸发光芒，速射与穿透拉满，精准契合射手追猎星辰的战斗本。" />
 		</father>
-		
+		<father cnName="天蝎座" name="consScorpio">
+			<body name="consScorpio" url ="newGun/consScorpio" />
+		</father>
 		
 		<father cnName="围墙" name="closureGun">
 			<body name="closureGun" />
