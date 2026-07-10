@@ -51,6 +51,8 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 - `parse_suit.py` - 处理套装数据，从 gather → father → image 层级提取套装定义，基于 gather 的 cnName 挂载分类，包含重名检测和报告功能
 - `parse_fashion.py` - 处理时装数据，从 fashionClass.bin 提取所有时装条目，独立输出 JSON + Excel文件
 - `parse_parts.py` - 处理零件数据，从 partsClass.bin 提取所有零件条目，按 name 去后缀分组输出独立 JSON + Excel，包含专门为 Module:PartsItem 使用的 PartsItemData.json
+- `parse_achieve.py` - 处理成就数据，从 gather → father → achieve 三层嵌套提取成就定义，支持 gift（11字段含 pro/sp）和 condition 解析，包含重名检测和报告功能
+- `parse_active.py` - 处理活跃度数据，从 task/gift 两类容器提取活跃任务和奖励档位，支持嵌套 gift 子标签解析，包含重名检测和报告功能
 
 ## 常用命令
 
@@ -84,6 +86,12 @@ python scripts/parse_bullet.py
 
 # 处理特殊/稀有零件数据（输出至 data/parts/）
 python scripts/parse_parts.py
+
+# 处理成就数据（输出至 data/achieve/）
+python scripts/parse_achieve.py
+
+# 处理活跃度数据（输出至 data/active/）
+python scripts/parse_active.py
 ```
 
 ### 环境配置
@@ -115,11 +123,13 @@ pip install -e .
 - **子弹（非武器）**：存储在 `<father>` → `<bullet>` 节点下。通过检测 bodyImgRange/allImgRange 来排除武器子弹
 - **时装**：存储在 `fashionClass.bin` 的 `<father name="fashion">` → `<image>` 节点下，每个 image 是独立的时装条目
 - **零件**：存储在 `partsClass.bin` 的 `<father name="parts">` → `<things>` 节点下
+- **成就**：存储在 `<gather name="..." cnName="...">` → `<father>` → `<achieve>` 三层嵌套下。achieve 含 `<gift>`（分号分隔字符串）、`<condition>`（属性型）、`<description>`（文本型）子元素
+- **活跃度**：存储在 `<data>` → `<task>`/`<gift>` → `<one>` 两层结构下。task/one 为自闭合任务条目，gift/one 含嵌套 `<gift>` 子标签（奖励列表）
 
 ### 输出格式
 
 - **独立 JSON 文件**：以实体的 `name` 字段命名，存放在 `data/<type>/json/`
-- **汇总 JSON 文件**（武器数据）：所有武器合并为一个数组，`data/arms/武器数据汇总_*.json`
+- **汇总 JSON 文件**：所有实体合并为一个数组，`data/<type>/<类型>数据汇总_*.json`
 - **Excel 批量文件**：生成时附带时间戳，用于 HuijiBot 批量上传，存放在 `data/<type>/`
 
 ### 类别映射

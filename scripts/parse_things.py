@@ -13,32 +13,22 @@ import xml.etree.ElementTree as ET
 from typing import Dict, Any
 from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, clean_game_description
 
-# --- 配置 ---
+# ============================================================
+#  配置
+# ============================================================
+
 XML_DIR = './xml'
 OUTPUT_DIR = './data/things'
 ARMS_JSON_DIR = './data/arms/json'
+SUIT_JSON_DIR = './data/suit/json'
 
 # Things 特有的 gift 标签字段映射
 GIFT_KEYS = ["type", "name", "num", "color", "lv", "childType", "numExtra", "tipB", "dropName"]
 
-# Smelt 配置
-def _get_smelt_config(items_level: int, color: str) -> Dict[str, Any]:
-    config = {"type": "armsChip", "grade": 1, "price": 2, "maxNum": None, "addType": None}
-    if items_level < 86:
-        config["price"] = 2
-        config["grade"] = 1
-    elif items_level < 91:
-        config["price"] = 10
-        config["grade"] = 2
-        config["maxNum"] = 1
-        config["addType"] = "armsEquip"
-    else:
-        config["price"] = 1
-    if items_level >= 90 or color in ["darkgold", "purgold", "yagold"]:
-        config["grade"] = -1
-    return config
 
-
+# ============================================================
+#  XML 解析工具
+# ============================================================
 
 def parse_gift_element(element):
     """解析 gift 标签的内容和属性"""
@@ -55,7 +45,7 @@ def parse_gift_element(element):
 
 
 def process_element(element):
-    """通用函数，处理 XML 元素"""
+    """通用函数：处理 XML 叶子元素，根据属性/文本/子节点情况返回对应数据类型"""
     if element.attrib and not element.text and not len(element):
         return {k: ValueConverter.to_smart_value(v, k) for k, v in element.attrib.items()}
     if element.attrib:
@@ -72,7 +62,7 @@ def process_element(element):
 
 
 def parse_things_node(things_node, father_attrs):
-    """解析单个 things 节点"""
+    """解析单个 <things> 节点，返回物品数据字典"""
     item_obj = {}
     item_obj.update(father_attrs)
     if things_node.attrib:
@@ -101,7 +91,28 @@ def parse_things_node(things_node, father_attrs):
 
 
 # ============================================================
-#  补丁阶段：武器碎片数据水合
+#  Smelt 熔炼配置
+# ============================================================
+
+def _get_smelt_config(items_level: int, color: str) -> Dict[str, Any]:
+    """武器碎片 smeltD 配置"""
+    config = {"type": "armsChip", "grade": 1, "price": 2, "maxNum": None, "addType": None}
+    if items_level < 86:
+        config["price"] = 2
+        config["grade"] = 1
+    elif items_level < 91:
+        config["price"] = 10
+        config["grade"] = 2
+        config["maxNum"] = 1
+        config["addType"] = "armsEquip"
+    else:
+        config["price"] = 1
+    if items_level >= 90 or color in ["darkgold", "purgold", "yagold"]:
+        config["grade"] = -1
+    return config
+
+# ============================================================
+#  数据加载（外部 JSON）
 # ============================================================
 
 def _load_arms_data() -> Dict[str, Dict[str, Any]]:
@@ -123,6 +134,35 @@ def _load_arms_data() -> Dict[str, Dict[str, Any]]:
     print(f"[补丁] 已加载 {len(arms_index)} 个武器定义")
     return arms_index
 
+
+def _load_suit_data() -> Dict[str, list]:
+    """加载套装数据，提取黑色套装的部件列表。返回 {suit_name: [part_dict, ...]}"""
+    suit_parts = {}
+    if not os.path.exists(SUIT_JSON_DIR):
+        print(f"\n[补丁] 套装数据目录不存在: {SUIT_JSON_DIR}，跳过装备碎片补丁")
+        print("       请先运行 parse_suit.py 生成套装数据")
+        return suit_parts
+    for json_file in glob.glob(os.path.join(SUIT_JSON_DIR, '*.json')):
+        try:
+            with open(json_file, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            if data.get('color') != 'black':
+                continue
+            suit_name = data.get('name', '')
+            parts = data.get('image', [])
+            if suit_name and parts:
+                suit_parts[suit_name] = parts
+        except Exception as e:
+            print(f"[补丁] 加载套装文件失败 {json_file}: {e}")
+    if suit_parts:
+        total_parts = sum(len(v) for v in suit_parts.values())
+        print(f"[补丁] 已加载 {len(suit_parts)} 个黑色套装（共 {total_parts} 个部件）")
+    return suit_parts
+
+
+# ============================================================
+#  补丁：武器碎片
+# ============================================================
 
 def _patch_black_chip(thing_data: dict, arms_data: dict) -> bool:
     """修补黑色武器碎片数据"""
@@ -234,8 +274,12 @@ def _generate_missing_chips(things_pool: dict, arms_data: dict) -> dict:
     return stats
 
 
+# ============================================================
+#  补丁：套装碎片
+# ============================================================
+
 def _generate_suit_chips(things_pool: dict) -> int:
-    """为黑色套装部件自动生成碎片（blackChip）"""
+    """为黑色套装部件生成/修补装备碎片条目（XML + suit JSON 合并处理）"""
     black_equip_files = glob.glob(os.path.join(XML_DIR, '*blackEquipClass*'))
     if not black_equip_files:
         return 0
@@ -248,9 +292,12 @@ def _generate_suit_chips(things_pool: dict) -> int:
     except Exception:
         return 0
 
+    suit_data = _load_suit_data()
+
     black_template = {
         'father': 'blackChip', 'fatherCnName': '黑色碎片',
-        'secType': 'equip', 'btnList': ['compose'], '_generated': True,
+        'secType': 'equip', 'btnList': ['compose', 'composeNum'],
+        'hideB': True, 'addDropDefineB': True, '_generated': True,
     }
 
     generated = 0
@@ -259,6 +306,9 @@ def _generate_suit_chips(things_pool: dict) -> int:
             continue
         for father in gather.findall('father'):
             f_name = father.get('name', '')
+            parts = suit_data.get(f_name, [])
+            parts_by_type = {p.get('type', ''): p for p in parts}
+
             for image in father.findall('image'):
                 img_type = image.find('type')
                 img_cn = image.find('cnName')
@@ -268,19 +318,27 @@ def _generate_suit_chips(things_pool: dict) -> int:
                     continue
 
                 chip_name = f'{f_name}_{type_val}'
+                part_info = parts_by_type.get(type_val, {})
+                items_level = part_info.get('itemsLevel', 0)
+
                 if chip_name in things_pool:
-                    # 已存在，补 iconUrl
                     existing = things_pool[chip_name]
+                    existing['secType'] = 'equip'
+                    existing['itemsLevel'] = items_level
+                    existing['smeltD'] = _get_smelt_config(items_level, 'black')
+                    existing['btnList'] = ['compose', 'composeNum']
                     if not existing.get('iconUrl'):
                         existing['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
-                        existing['_patched'] = True
-                        print(f"  [补丁/套装碎片] {chip_name} 补充 iconUrl")
+                    existing['_patched'] = True
+                    print(f"  [补丁/套装碎片] {chip_name} (已存在，已更新 smeltD/btnList)")
                     continue
 
                 chip = black_template.copy()
                 chip['name'] = chip_name
                 chip['cnName'] = f'{cn_val}碎片'
                 chip['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
+                chip['itemsLevel'] = items_level
+                chip['smeltD'] = _get_smelt_config(items_level, 'black')
                 chip = ValueConverter.prepare_output(chip, "爆枪突击", "things")
                 things_pool[chip_name] = chip
                 generated += 1
@@ -288,6 +346,10 @@ def _generate_suit_chips(things_pool: dict) -> int:
 
     return generated
 
+
+# ============================================================
+#  补丁：图标修正
+# ============================================================
 
 def _patch_chip_icon(things_pool: dict) -> int:
     """修正碎片 iconUrl：xxx/chip → xxx/xxxChip"""
@@ -299,57 +361,115 @@ def _patch_chip_icon(things_pool: dict) -> int:
             data['iconUrl'] = f'{m.group(1)}/{m.group(1)}Chip'
             data['_patched'] = True
             count += 1
-            print(f"  [补丁/iconUrl] {name}: {icon} → {data['iconUrl']}")
+            print(f"  [补丁/iconUrl] {name}: {icon} -> {data['iconUrl']}")
     return count
 
 
+# ============================================================
+#  手动添加条目（历史 Bug 产物，Wiki 需要体现但已在游戏中移除）
+# ============================================================
+
+def _add_manual_entries(things_pool: dict) -> int:
+    """
+    向物品池中添加无法从 XML 提取的手动条目。
+
+    添加方法：在下方 MANUAL_ENTRIES 列表中按格式添加，脚本自动处理。
+    """
+    MANUAL_ENTRIES: list = [
+        {
+            "name": "huntParts_1",
+            "cnName": "猎人技能器",
+            "father": "other",
+            "fatherCnName": "其他",
+            "iconUrl": "ThingsIcon/huntParts_1"
+        },
+        {
+            "name": "acidicParts_1",
+            "cnName": "腐蚀芯片",
+            "father": "other",
+            "fatherCnName": "其他",
+            "iconUrl": "ThingsIcon/acidicParts_1"
+        },
+    ]
+
+    added = 0
+    for entry in MANUAL_ENTRIES:
+        name = entry.get('name')
+        if not name:
+            print("  [!] 手动条目缺少 name 字段，已跳过")
+            continue
+        if name in things_pool:
+            print(f"  [!] 手动条目 {name} 与已有物品冲突，已跳过（请检查 MANUAL_ENTRIES）")
+            continue
+        entry['_manual'] = True
+        entry = ValueConverter.prepare_output(entry, "爆枪突击", "things")
+        things_pool[name] = entry
+        added += 1
+        print(f"  [手动条目] {name} ({entry.get('cnName', '')})")
+
+    if added:
+        print(f"[手动条目] 已添加 {added} 个手动条目")
+    return added
+
+
+# ============================================================
+#  补丁协调
+# ============================================================
+
 def _apply_patches(things_pool: dict) -> dict:
-    """对 things_pool 执行武器碎片补丁，返回统计信息"""
+    """对 things_pool 执行全套补丁（武器碎片 + 套装碎片 + 图标修正 + 手动条目），返回统计信息"""
+    # 武器碎片
     arms_data = _load_arms_data()
-    if not arms_data:
-        return {}
 
-    # 生成缺失的碎片（黑色/稀有分类处理）
-    gen_stats = _generate_missing_chips(things_pool, arms_data)
+    gen_stats = {'black_generated': 0, 'rare_generated': 0}
+    stats = {'black_chips': 0, 'rare_chips': 0, 'black_generated': 0,
+             'rare_generated': 0, 'suit_generated': 0, 'chip_icon_fixed': 0,
+             'manual': 0, 'skipped': 0, 'errors': 0}
 
-    # 生成套装部件碎片
-    suit_generated = _generate_suit_chips(things_pool)
+    if arms_data:
+        gen_stats = _generate_missing_chips(things_pool, arms_data)
 
-    # 修正 chip 图标格式
-    chip_icon_fixed = _patch_chip_icon(things_pool)
-
-    stats = {'black_chips': 0, 'rare_chips': 0, 'black_generated': gen_stats['black_generated'],
-             'rare_generated': gen_stats['rare_generated'], 'suit_generated': suit_generated,
-             'chip_icon_fixed': chip_icon_fixed, 'skipped': 0, 'errors': 0}
-    for thing_name, thing_data in things_pool.items():
-        try:
-            father = thing_data.get('father', '')
-            if father not in ['blackChip', 'rareChip']:
-                continue
-
-            if father == 'blackChip':
-                if _patch_black_chip(thing_data, arms_data):
-                    stats['black_chips'] += 1
-                    print(f"  [补丁/黑武碎片] {thing_name} ({thing_data.get('cnName')})")
-                else:
-                    stats['skipped'] += 1
-            elif father == 'rareChip':
-                if thing_data.get('_generated'):
+        for thing_name, thing_data in things_pool.items():
+            try:
+                father = thing_data.get('father', '')
+                if father not in ['blackChip', 'rareChip']:
                     continue
-                if _patch_rare_chip(thing_data, arms_data):
-                    stats['rare_chips'] += 1
-                    print(f"  [补丁/稀有碎片] {thing_name} ({thing_data.get('cnName')})")
-                else:
-                    stats['skipped'] += 1
-        except Exception as e:
-            print(f"  [!] 处理 {thing_name} 时出错: {e}")
-            stats['errors'] += 1
+
+                if father == 'blackChip':
+                    if _patch_black_chip(thing_data, arms_data):
+                        stats['black_chips'] += 1
+                        print(f"  [补丁/黑武碎片] {thing_name} ({thing_data.get('cnName')})")
+                    else:
+                        stats['skipped'] += 1
+                elif father == 'rareChip':
+                    if thing_data.get('_generated'):
+                        continue
+                    if _patch_rare_chip(thing_data, arms_data):
+                        stats['rare_chips'] += 1
+                        print(f"  [补丁/稀有碎片] {thing_name} ({thing_data.get('cnName')})")
+                    else:
+                        stats['skipped'] += 1
+            except Exception as e:
+                print(f"  [!] 处理 {thing_name} 时出错: {e}")
+                stats['errors'] += 1
+
+    # 套装碎片
+    stats['suit_generated'] = _generate_suit_chips(things_pool)
+
+    # 图标修正
+    stats['chip_icon_fixed'] = _patch_chip_icon(things_pool)
+
+    # 手动条目
+    stats['manual'] = _add_manual_entries(things_pool)
+
+    stats['black_generated'] = gen_stats.get('black_generated', 0)
+    stats['rare_generated'] = gen_stats.get('rare_generated', 0)
 
     return stats
 
 
 # ============================================================
-#  报告与输出
+#  统计报告
 # ============================================================
 
 def generate_summary(things_pool, patch_stats=None):
@@ -389,12 +509,11 @@ def generate_summary(things_pool, patch_stats=None):
     report.append("\n[异常数据检测]")
     missing_cn = [n for n, d in things_pool.items() if not d.get('cnName')]
     if missing_cn:
-        report.append(f" [X] 缺少中文名 (cnName) 的物品 ({len(missing_cn)}个):")
+        report.append(f" [X] 缺少中文名的物品 ({len(missing_cn)}个):")
         report.append(f"    {', '.join(missing_cn[:20])}...")
     else:
         report.append(" [OK] 所有物品均包含中文名。")
 
-    # iconUrl 缺失检测
     missing_icon = [n for n, d in things_pool.items() if not d.get('iconUrl')]
     report.append(f"\n[图标缺失 (iconUrl)]")
     if missing_icon:
@@ -408,7 +527,8 @@ def generate_summary(things_pool, patch_stats=None):
 
     # 补丁统计
     if patch_stats:
-        total_patched = patch_stats['black_chips'] + patch_stats['rare_chips'] + patch_stats['black_generated'] + patch_stats['rare_generated']
+        total_patched = (patch_stats['black_chips'] + patch_stats['rare_chips']
+                         + patch_stats['black_generated'] + patch_stats['rare_generated'])
         report.append(f"\n[补丁水合]")
         report.append(f" 黑色武器碎片已修补: {patch_stats['black_chips']}")
         report.append(f" 稀有武器碎片已修补: {patch_stats['rare_chips']}")
@@ -423,7 +543,11 @@ def generate_summary(things_pool, patch_stats=None):
             report.append(f" 套装部件碎片已生成: {patch_stats['suit_generated']}")
         if patch_stats.get('chip_icon_fixed'):
             report.append(f" 碎片 iconUrl 已修正: {patch_stats['chip_icon_fixed']}")
-        report.append(f" 合计修补/生成: {total_patched + patch_stats.get('suit_generated', 0) + patch_stats.get('chip_icon_fixed', 0)}")
+        if patch_stats.get('manual'):
+            report.append(f" 手动条目已添加: {patch_stats['manual']}")
+        total_all = (total_patched + patch_stats.get('suit_generated', 0)
+                     + patch_stats.get('chip_icon_fixed', 0) + patch_stats.get('manual', 0))
+        report.append(f" 合计修补/生成: {total_all}")
 
     final_report = "\n".join(report)
     print(final_report)
@@ -434,8 +558,12 @@ def generate_summary(things_pool, patch_stats=None):
     print(f"\n[报告] 统计报告已保存至: {report_path}")
 
 
+# ============================================================
+#  主入口
+# ============================================================
+
 def run_things_processor():
-    """全自动物品处理器：XML 提取 + 武器碎片补丁 → JSON/Excel"""
+    """全自动物品处理器：XML 提取 → 补丁水合 → JSON/Excel 输出"""
 
     print(f"开始全量扫描目录: {XML_DIR}")
 
@@ -474,22 +602,22 @@ def run_things_processor():
 
     print(f"[提取] 共提取 {len(things_pool)} 个物品")
 
-    # ======== Phase 2: 武器碎片补丁 ========
-    print("\n--- Phase 2: 武器碎片数据补丁 ---")
+    # ======== Phase 2: 补丁水合 ========
+    print("\n--- Phase 2: 补丁水合 ---")
     patch_stats = _apply_patches(things_pool)
 
     # ======== Phase 3: 报告与输出 ========
     print(f"\n--- Phase 3: 保存输出 ---")
     generate_summary(things_pool, patch_stats)
 
-    # --- 保存 JSON ---
+    # 保存 JSON（独立 + 汇总）
     OutputWriter.write(things_pool, OUTPUT_DIR, 'Things', cn_label='物品',
-                       clean_keys=['_generated', '_patched'], skip_excel=True)
+                       clean_keys=['_generated', '_patched', '_manual'], skip_excel=True)
 
-    # --- Excel（全量单表） ---
+    # Excel（全量单表）
     timestamp = OutputWriter.write_excel(things_pool, OUTPUT_DIR, 'Things', '物品')
 
-    # --- 生成 ThingsItemData（精简查询 JSON） ---
+    # ThingsItemData（精简查询 JSON）
     thing_items = []
     for key, data in things_pool.items():
         entry = {}
@@ -527,7 +655,8 @@ def run_things_processor():
     # 最终统计
     total_patched = (patch_stats.get('black_chips', 0) + patch_stats.get('rare_chips', 0) +
                      patch_stats.get('black_generated', 0) + patch_stats.get('rare_generated', 0) +
-                     patch_stats.get('suit_generated', 0) + patch_stats.get('chip_icon_fixed', 0))
+                     patch_stats.get('suit_generated', 0) + patch_stats.get('chip_icon_fixed', 0) +
+                     patch_stats.get('manual', 0))
     print(f"\n处理完成！物品总数: {len(things_pool)}，本次修补/生成: {total_patched}")
 
 

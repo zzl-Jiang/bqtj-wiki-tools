@@ -13,7 +13,7 @@ import pandas as pd
 import datetime
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-from core import XmlCleaner, ValueConverter
+from core import XmlCleaner, ValueConverter, OutputWriter
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -136,39 +136,77 @@ def run_parts_processor():
                                 if k not in ('baseLabel', '_attrCnName')}
                                for it in items_sorted]
 
+        # 补齐缺失等级 + 统一 _N 后缀（对应 AS3 createSpecialPartsDefine：
+        #   XML 仅定义基础条目，运行时按 maxLevel 生成 1..maxLevel 的副本。
+        #   所有条目（含 level 1）的 name/skillArr/iconUrl 均追加 "_N" 后缀。）
+        max_level = group_data.get('maxLevel', 1)
+        base_item = group_data['items'][0]  # 以 level 1 原始数据为模板
+        # 保存原始值，用于生成所有等级（避免被 level 1 修改污染）
+        base_icon = base_item.get('iconUrl', '')
+        base_skills = base_item.get('skillArr', [])
+        existing_levels = {it['itemsLevel'] for it in group_data['items']}
+        for lv in range(1, max_level + 1):
+            if lv in existing_levels:
+                # 已有条目：用 base_* 重建（避免 XML 中已有后缀导致重复追加）
+                item = next(it for it in group_data['items'] if it['itemsLevel'] == lv)
+                item['name'] = f'{group_key}_{lv}'
+                if base_icon:
+                    item['iconUrl'] = f'{base_icon}_{lv}'
+                if base_skills:
+                    item['skillArr'] = [f'{s}_{lv}' for s in base_skills]
+                continue
+            new_item = dict(base_item)
+            new_item['name'] = f'{group_key}_{lv}'
+            new_item['itemsLevel'] = lv
+            if base_icon:
+                new_item['iconUrl'] = f'{base_icon}_{lv}'
+            else:
+                new_item['iconUrl'] = f'ThingsIcon/{group_key}_{lv}'
+            if base_skills:
+                new_item['skillArr'] = [f'{s}_{lv}' for s in base_skills]
+            if lv != 1:
+                new_item.pop('addDropDefineB', None)
+            group_data['items'].append(new_item)
+        # 重新排序
+        group_data['items'] = sorted(group_data['items'], key=lambda x: x['itemsLevel'])
+
+        # 同步 group 级 iconUrl/skillArr 为归一化后的 _1 版本
+        first_item = group_data['items'][0]
+        if 'iconUrl' in first_item:
+            group_data['iconUrl'] = first_item['iconUrl']
+        if 'skillArr' in first_item:
+            group_data['skillArr'] = first_item['skillArr']
+
+        # 精简 items：移除与 group 级相同或为空的冗余字段
+        _SHARED_KEYS = {'cnName', 'objType', 'iconUrl', 'skillArr', 'description', 'o', 'maxLevel'}
+        for it in group_data['items']:
+            for key in _SHARED_KEYS:
+                if key not in it:
+                    continue
+                val = it[key]
+                # 空值：移除
+                if not val and val != 0:
+                    del it[key]
+                # 与 group 级相同：移除
+                elif key in group_data and val == group_data[key]:
+                    del it[key]
+
         parts_pool[group_key] = group_data
 
-    # --- 保存独立 JSON ---
-    json_dir = os.path.join(OUTPUT_DIR, 'json')
-    os.makedirs(json_dir, exist_ok=True)
+    # --- 统一键序（OutputWriter 按 dict 插入顺序输出，此处确保可读性）---
     for group_key, data in parts_pool.items():
-        file_path = os.path.join(json_dir, f"{group_key}.json")
         ordered = {}
-        # 置顶键
         for k in ['game', 'moduleType', 'name', 'cnName', 'baseLabel', 'objType', 'maxLevel']:
             if k in data:
                 ordered[k] = data[k]
         for k, v in data.items():
             if k not in ordered:
                 ordered[k] = v
-        with open(file_path, 'w', encoding='utf-8') as j:
-            json.dump(ordered, j, ensure_ascii=False, indent=2)
-    print(f"独立 JSON: {json_dir}/ ({len(parts_pool)} 个文件)")
+        parts_pool[group_key] = ordered
 
-    # --- 保存 Excel ---
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    EXCEL_NAME = f'{OUTPUT_DIR}/零件数据全量更新_{timestamp}.xlsx'
-
-    excel_data = []
-    for group_key, data in parts_pool.items():
-        excel_data.append({
-            "PageName": f"Data:Part/{group_key}.json",
-            "Content": json.dumps(data, ensure_ascii=False)
-        })
-
-    pd.DataFrame(excel_data).to_excel(EXCEL_NAME, index=False, header=False)
-    print(f"Excel: {EXCEL_NAME} ({len(excel_data)} 行)")
+    # --- 保存独立 JSON + 汇总 JSON + Excel ---
+    ts = OutputWriter.write(parts_pool, OUTPUT_DIR, 'Part', cn_label='零件')
+    EXCEL_NAME = f'{OUTPUT_DIR}/零件数据更新_{ts}.xlsx'
 
     # --- 生成 PartsItemData（精简查询 JSON） ---
     item_data = []
