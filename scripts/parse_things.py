@@ -5,6 +5,7 @@
 """
 from collections import defaultdict
 import os
+import re
 import json
 import glob
 import datetime
@@ -136,7 +137,7 @@ def _patch_black_chip(thing_data: dict, arms_data: dict) -> bool:
     thing_data['secType'] = 'arms'
     thing_data['itemsLevel'] = compose_lv
     if not thing_data.get('iconUrl'):
-        thing_data['iconUrl'] = f"ThingsIcon/{name}"
+        thing_data['iconUrl'] = f"ThingsIcon/{name}Icon"
 
     smelt_config = _get_smelt_config(compose_lv, arm.get('color', ''))
     existing_smelt = thing_data.get('smeltD', {})
@@ -173,43 +174,133 @@ def _patch_rare_chip(thing_data: dict, arms_data: dict) -> bool:
     thing_data['smeltD'] = {"type": "armsChip", "grade": 1, "price": 10}
     thing_data['btnList'] = ['compose']
     if not thing_data.get('iconUrl'):
-        thing_data['iconUrl'] = f"ThingsIcon/{name}"
+        thing_data['iconUrl'] = f"ThingsIcon/{name}Icon"
     thing_data['_patched'] = True
     return True
 
 
-def _generate_missing_rare_chips(things_pool: dict, arms_data: dict) -> int:
-    """为 chipNum > 0 但尚无 things 条目的武器生成稀有碎片"""
-    # 获取 rareChip 模板
-    template = things_pool.get('rareChip', {}).copy() if 'rareChip' in things_pool else {
+def _generate_missing_chips(things_pool: dict, arms_data: dict) -> dict:
+    """为 chipNum > 0 但尚无 things 条目的武器生成碎片（黑色/稀有分类处理）"""
+    rare_template = things_pool.get('rareChip', {}).copy() if 'rareChip' in things_pool else {
         'father': 'rareChip', 'fatherCnName': '稀有碎片', 'hideB': True, 'addDropDefineB': True,
     }
+    black_template = things_pool.get('blackChip', {}).copy() if 'blackChip' in things_pool else {
+        'father': 'blackChip', 'fatherCnName': '黑色碎片', 'hideB': True, 'addDropDefineB': True,
+    }
 
-    generated = 0
+    stats = {'black_generated': 0, 'rare_generated': 0}
     for arm_name, arm_data in arms_data.items():
         if arm_data.get('chipNum', 0) <= 0:
             continue
         if arm_name in things_pool:
             continue
 
-        rare_chip = template.copy()
         weapon_cn = arm_data.get('cnName', '')
-        rare_chip.update({
-            'name': arm_name,
-            'cnName': f'{weapon_cn}稀有碎片',
-            'secType': 'arms',
-            'description': f'合成{weapon_cn}所需物品。',
-            'itemsLevel': arm_data.get('rareDropLevel', 1),
-            'iconUrl': f'ThingsIcon/{arm_name}',
-            'smeltD': {'type': 'armsChip', 'grade': 1, 'price': 10},
-            'btnList': ['compose'],
-            '_generated': True,
-        })
-        things_pool[arm_name] = rare_chip
-        generated += 1
-        print(f"  [补丁/生成] 稀有碎片: {arm_name} ({rare_chip['cnName']})")
+        is_black = arm_data.get('color') == 'black'
+
+        if is_black:
+            template = black_template.copy()
+            template.update({
+                'name': arm_name,
+                'cnName': f'{weapon_cn}碎片',
+                'secType': 'arms',
+                'description': f'合成{weapon_cn}所需物品。',
+                'itemsLevel': arm_data.get('composeLv', 1),
+                'iconUrl': f'ThingsIcon/{arm_name}Icon',
+                'smeltD': {'type': 'armsChip', 'grade': 1, 'price': 2},
+                'btnList': ['compose'],
+                '_generated': True,
+            })
+            things_pool[arm_name] = template
+            stats['black_generated'] += 1
+            print(f"  [补丁/生成] 黑色碎片: {arm_name} ({template['cnName']})")
+        else:
+            template = rare_template.copy()
+            template.update({
+                'name': arm_name,
+                'cnName': f'{weapon_cn}稀有碎片',
+                'secType': 'arms',
+                'description': f'合成{weapon_cn}所需物品。',
+                'itemsLevel': arm_data.get('rareDropLevel', 1),
+                'iconUrl': f'ThingsIcon/{arm_name}Icon',
+                'smeltD': {'type': 'armsChip', 'grade': 1, 'price': 10},
+                'btnList': ['compose'],
+                '_generated': True,
+            })
+            things_pool[arm_name] = template
+            stats['rare_generated'] += 1
+            print(f"  [补丁/生成] 稀有碎片: {arm_name} ({template['cnName']})")
+
+    return stats
+
+
+def _generate_suit_chips(things_pool: dict) -> int:
+    """为黑色套装部件自动生成碎片（blackChip）"""
+    black_equip_files = glob.glob(os.path.join(XML_DIR, '*blackEquipClass*'))
+    if not black_equip_files:
+        return 0
+
+    with open(black_equip_files[0], 'r', encoding='utf-8') as f:
+        clean_xml = XmlCleaner.clean(f.read())
+
+    try:
+        root_el = ET.fromstring(clean_xml)
+    except Exception:
+        return 0
+
+    black_template = {
+        'father': 'blackChip', 'fatherCnName': '黑色碎片',
+        'secType': 'equip', 'btnList': ['compose'], '_generated': True,
+    }
+
+    generated = 0
+    for gather in root_el.findall('.//gather'):
+        if gather.get('cnName') != '黑色':
+            continue
+        for father in gather.findall('father'):
+            f_name = father.get('name', '')
+            for image in father.findall('image'):
+                img_type = image.find('type')
+                img_cn = image.find('cnName')
+                type_val = img_type.text.strip() if img_type is not None and img_type.text else ''
+                cn_val = img_cn.text.strip() if img_cn is not None and img_cn.text else ''
+                if not type_val or not cn_val:
+                    continue
+
+                chip_name = f'{f_name}_{type_val}'
+                if chip_name in things_pool:
+                    # 已存在，补 iconUrl
+                    existing = things_pool[chip_name]
+                    if not existing.get('iconUrl'):
+                        existing['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
+                        existing['_patched'] = True
+                        print(f"  [补丁/套装碎片] {chip_name} 补充 iconUrl")
+                    continue
+
+                chip = black_template.copy()
+                chip['name'] = chip_name
+                chip['cnName'] = f'{cn_val}碎片'
+                chip['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
+                chip = ValueConverter.prepare_output(chip, "爆枪突击", "things")
+                things_pool[chip_name] = chip
+                generated += 1
+                print(f"  [补丁/生成] 套装碎片: {chip_name} ({chip['cnName']})")
 
     return generated
+
+
+def _patch_chip_icon(things_pool: dict) -> int:
+    """修正碎片 iconUrl：xxx/chip → xxx/xxxChip"""
+    count = 0
+    for name, data in things_pool.items():
+        icon = data.get('iconUrl', '')
+        m = re.match(r'^(.+)/chip$', icon)
+        if m:
+            data['iconUrl'] = f'{m.group(1)}/{m.group(1)}Chip'
+            data['_patched'] = True
+            count += 1
+            print(f"  [补丁/iconUrl] {name}: {icon} → {data['iconUrl']}")
+    return count
 
 
 def _apply_patches(things_pool: dict) -> dict:
@@ -218,10 +309,18 @@ def _apply_patches(things_pool: dict) -> dict:
     if not arms_data:
         return {}
 
-    # 生成缺失的稀有碎片
-    generated = _generate_missing_rare_chips(things_pool, arms_data)
+    # 生成缺失的碎片（黑色/稀有分类处理）
+    gen_stats = _generate_missing_chips(things_pool, arms_data)
 
-    stats = {'black_chips': 0, 'rare_chips': 0, 'generated': generated, 'skipped': 0, 'errors': 0}
+    # 生成套装部件碎片
+    suit_generated = _generate_suit_chips(things_pool)
+
+    # 修正 chip 图标格式
+    chip_icon_fixed = _patch_chip_icon(things_pool)
+
+    stats = {'black_chips': 0, 'rare_chips': 0, 'black_generated': gen_stats['black_generated'],
+             'rare_generated': gen_stats['rare_generated'], 'suit_generated': suit_generated,
+             'chip_icon_fixed': chip_icon_fixed, 'skipped': 0, 'errors': 0}
     for thing_name, thing_data in things_pool.items():
         try:
             father = thing_data.get('father', '')
@@ -236,7 +335,6 @@ def _apply_patches(things_pool: dict) -> dict:
                     stats['skipped'] += 1
             elif father == 'rareChip':
                 if thing_data.get('_generated'):
-                    stats['rare_chips'] += 1
                     continue
                 if _patch_rare_chip(thing_data, arms_data):
                     stats['rare_chips'] += 1
@@ -296,16 +394,36 @@ def generate_summary(things_pool, patch_stats=None):
     else:
         report.append(" [OK] 所有物品均包含中文名。")
 
+    # iconUrl 缺失检测
+    missing_icon = [n for n, d in things_pool.items() if not d.get('iconUrl')]
+    report.append(f"\n[图标缺失 (iconUrl)]")
+    if missing_icon:
+        report.append(f" [X] 缺少 iconUrl 的物品 ({len(missing_icon)}个):")
+        for n in missing_icon[:30]:
+            report.append(f"    {n}")
+        if len(missing_icon) > 30:
+            report.append(f"    ... 共 {len(missing_icon)} 个")
+    else:
+        report.append(" [OK] 所有物品均包含 iconUrl。")
+
     # 补丁统计
     if patch_stats:
-        total_patched = patch_stats['black_chips'] + patch_stats['rare_chips'] + patch_stats['generated']
+        total_patched = patch_stats['black_chips'] + patch_stats['rare_chips'] + patch_stats['black_generated'] + patch_stats['rare_generated']
         report.append(f"\n[补丁水合]")
         report.append(f" 黑色武器碎片已修补: {patch_stats['black_chips']}")
-        report.append(f" 稀有武器碎片已生成: {patch_stats['generated']}")
+        report.append(f" 稀有武器碎片已修补: {patch_stats['rare_chips']}")
+        if patch_stats['black_generated']:
+            report.append(f" 黑色武器碎片已生成: {patch_stats['black_generated']}")
+        if patch_stats['rare_generated']:
+            report.append(f" 稀有武器碎片已生成: {patch_stats['rare_generated']}")
         report.append(f" 跳过: {patch_stats['skipped']}")
         if patch_stats['errors']:
             report.append(f" 错误: {patch_stats['errors']}")
-        report.append(f" 合计修补/生成: {total_patched}")
+        if patch_stats.get('suit_generated'):
+            report.append(f" 套装部件碎片已生成: {patch_stats['suit_generated']}")
+        if patch_stats.get('chip_icon_fixed'):
+            report.append(f" 碎片 iconUrl 已修正: {patch_stats['chip_icon_fixed']}")
+        report.append(f" 合计修补/生成: {total_patched + patch_stats.get('suit_generated', 0) + patch_stats.get('chip_icon_fixed', 0)}")
 
     final_report = "\n".join(report)
     print(final_report)
@@ -369,10 +487,47 @@ def run_things_processor():
                        clean_keys=['_generated', '_patched'], skip_excel=True)
 
     # --- Excel（全量单表） ---
-    OutputWriter.write_excel(things_pool, OUTPUT_DIR, 'Things', '物品')
+    timestamp = OutputWriter.write_excel(things_pool, OUTPUT_DIR, 'Things', '物品')
+
+    # --- 生成 ThingsItemData（精简查询 JSON） ---
+    thing_items = []
+    for key, data in things_pool.items():
+        entry = {}
+        for k in ('name', 'cnName', 'iconUrl'):
+            val = data.get(k)
+            if val is not None and val != '':
+                entry[k] = val
+        thing_items.append(entry)
+
+    things_item_json = {
+        "data": {
+            "father": {
+                "@name": "ThingsItem",
+                "@cnName": "物品标签",
+                "item": thing_items
+            }
+        }
+    }
+
+    item_json_path = os.path.join(OUTPUT_DIR, 'ThingsItemData.json')
+    with open(item_json_path, 'w', encoding='utf-8') as f:
+        json.dump(things_item_json, f, ensure_ascii=False, indent=2)
+    print(f"ThingsItemData JSON: {item_json_path} ({len(thing_items)} 条)")
+
+    # 追加到 Excel
+    import pandas as pd
+    excel_path = os.path.join(OUTPUT_DIR, f'物品数据更新_{timestamp}.xlsx')
+    existing_df = pd.read_excel(excel_path, header=None)
+    new_row = pd.DataFrame([{
+        0: "Data:ThingsItemData.json",
+        1: json.dumps(things_item_json, ensure_ascii=False)
+    }])
+    pd.concat([existing_df, new_row], ignore_index=True).to_excel(excel_path, index=False, header=False)
 
     # 最终统计
-    total_patched = patch_stats.get('black_chips', 0) + patch_stats.get('rare_chips', 0) + patch_stats.get('generated', 0)
+    total_patched = (patch_stats.get('black_chips', 0) + patch_stats.get('rare_chips', 0) +
+                     patch_stats.get('black_generated', 0) + patch_stats.get('rare_generated', 0) +
+                     patch_stats.get('suit_generated', 0) + patch_stats.get('chip_icon_fixed', 0))
     print(f"\n处理完成！物品总数: {len(things_pool)}，本次修补/生成: {total_patched}")
 
 
