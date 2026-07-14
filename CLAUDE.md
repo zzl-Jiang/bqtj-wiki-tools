@@ -53,6 +53,8 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 - `parse_parts.py` - 处理零件数据，从 partsClass.bin 提取所有零件条目，按 name 去后缀分组输出独立 JSON + Excel，包含专门为 Module:PartsItem 使用的 PartsItemData.json
 - `parse_achieve.py` - 处理成就数据，从 gather → father → achieve 三层嵌套提取成就定义，支持 gift（11字段含 pro/sp）和 condition 解析，包含重名检测和报告功能
 - `parse_active.py` - 处理活跃度数据，从 task/gift 两类容器提取活跃任务和奖励档位，支持嵌套 gift 子标签解析，包含重名检测和报告功能
+- `parse_world_map.py` - 处理世界地图数据，从 father → place 两层结构提取地图定义，支持 levelArr 嵌套解析和坐标、标签列表
+- `parse_wilder.py` - 处理秘境数据，从 father → body → drop → gift 四层嵌套提取秘境首领定义，含掉落列表解析
 
 ## 常用命令
 
@@ -92,6 +94,12 @@ python scripts/parse_achieve.py
 
 # 处理活跃度数据（输出至 data/active/）
 python scripts/parse_active.py
+
+# 处理世界地图数据（输出至 data/worldMap/）
+python scripts/parse_world_map.py
+
+# 处理秘境数据（输出至 data/wilder/）
+python scripts/parse_wilder.py
 ```
 
 ### 环境配置
@@ -125,6 +133,8 @@ pip install -e .
 - **零件**：存储在 `partsClass.bin` 的 `<father name="parts">` → `<things>` 节点下
 - **成就**：存储在 `<gather name="..." cnName="...">` → `<father>` → `<achieve>` 三层嵌套下。achieve 含 `<gift>`（分号分隔字符串）、`<condition>`（属性型）、`<description>`（文本型）子元素
 - **活跃度**：存储在 `<data>` → `<task>`/`<gift>` → `<one>` 两层结构下。task/one 为自闭合任务条目，gift/one 含嵌套 `<gift>` 子标签（奖励列表）
+- **世界地图**：存储在 `<father name="...">` → `<place>` 两层结构下。place 含坐标（pointer/point）、标签列表（labelArr）、修罗技能（demSkillArr）等子元素
+- **秘境**：存储在 `<father name="...">` → `<body>` → `<drop>` → `<gift>` 四层嵌套下。body 为秘境首领，drop 含掉落物品（gift 格式 type;name;num）
 
 ### 输出格式
 

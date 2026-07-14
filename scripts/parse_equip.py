@@ -116,6 +116,18 @@ def merge_weapon_levels(equip_pool):
                     level_entry[k] = v
             levels[str(lv)] = level_entry
 
+        # 补齐缺失等级（如饰品 maxLv=5 但 XML 仅定义 lv=1，对应 AS3 运行时生成）
+        max_lv = merged.get('maxLv', 0)
+        if max_lv > len(levels) and levels:
+            base_lv_entry = levels.get('1', list(levels.values())[0])
+            for lv in range(2, int(max_lv) + 1):
+                new_entry = dict(base_lv_entry)
+                if new_entry.get('skillArr'):
+                    new_entry['skillArr'] = [f'{s}_{lv}' for s in new_entry['skillArr']]
+                if 'iconLabel' in new_entry:
+                    new_entry['iconLabel'] = f"{new_entry['iconLabel']}_{lv}"
+                levels[str(lv)] = new_entry
+
         merged['name'] = base_label
         merged['cnName'] = base_data.get('cnName', '')
         merged['levels'] = levels

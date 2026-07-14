@@ -177,7 +177,7 @@ def _patch_black_chip(thing_data: dict, arms_data: dict) -> bool:
     thing_data['secType'] = 'arms'
     thing_data['itemsLevel'] = compose_lv
     if not thing_data.get('iconUrl'):
-        thing_data['iconUrl'] = f"ThingsIcon/{name}Icon"
+        thing_data['iconUrl'] = arm.get('iconUrl') or f"ThingsIcon/{name}Icon"
 
     smelt_config = _get_smelt_config(compose_lv, arm.get('color', ''))
     existing_smelt = thing_data.get('smeltD', {})
@@ -214,7 +214,7 @@ def _patch_rare_chip(thing_data: dict, arms_data: dict) -> bool:
     thing_data['smeltD'] = {"type": "armsChip", "grade": 1, "price": 10}
     thing_data['btnList'] = ['compose']
     if not thing_data.get('iconUrl'):
-        thing_data['iconUrl'] = f"ThingsIcon/{name}Icon"
+        thing_data['iconUrl'] = arm.get('iconUrl') or f"ThingsIcon/{name}Icon"
     thing_data['_patched'] = True
     return True
 
@@ -246,7 +246,7 @@ def _generate_missing_chips(things_pool: dict, arms_data: dict) -> dict:
                 'secType': 'arms',
                 'description': f'合成{weapon_cn}所需物品。',
                 'itemsLevel': arm_data.get('composeLv', 1),
-                'iconUrl': f'ThingsIcon/{arm_name}Icon',
+                'iconUrl': arm_data.get('iconUrl') or f'ThingsIcon/{arm_name}Icon',
                 'smeltD': {'type': 'armsChip', 'grade': 1, 'price': 2},
                 'btnList': ['compose'],
                 '_generated': True,
@@ -262,7 +262,7 @@ def _generate_missing_chips(things_pool: dict, arms_data: dict) -> dict:
                 'secType': 'arms',
                 'description': f'合成{weapon_cn}所需物品。',
                 'itemsLevel': arm_data.get('rareDropLevel', 1),
-                'iconUrl': f'ThingsIcon/{arm_name}Icon',
+                'iconUrl': arm_data.get('iconUrl') or f'ThingsIcon/{arm_name}Icon',
                 'smeltD': {'type': 'armsChip', 'grade': 1, 'price': 10},
                 'btnList': ['compose'],
                 '_generated': True,
@@ -328,7 +328,7 @@ def _generate_suit_chips(things_pool: dict) -> int:
                     existing['smeltD'] = _get_smelt_config(items_level, 'black')
                     existing['btnList'] = ['compose', 'composeNum']
                     if not existing.get('iconUrl'):
-                        existing['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
+                        existing['iconUrl'] = f'ThingsIcon/{chip_name}'
                     existing['_patched'] = True
                     print(f"  [补丁/套装碎片] {chip_name} (已存在，已更新 smeltD/btnList)")
                     continue
@@ -336,7 +336,7 @@ def _generate_suit_chips(things_pool: dict) -> int:
                 chip = black_template.copy()
                 chip['name'] = chip_name
                 chip['cnName'] = f'{cn_val}碎片'
-                chip['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
+                chip['iconUrl'] = f'ThingsIcon/{chip_name}'
                 chip['itemsLevel'] = items_level
                 chip['smeltD'] = _get_smelt_config(items_level, 'black')
                 chip = ValueConverter.prepare_output(chip, "爆枪突击", "things")
@@ -381,14 +381,14 @@ def _add_manual_entries(things_pool: dict) -> int:
             "cnName": "猎人技能器",
             "father": "other",
             "fatherCnName": "其他",
-            "iconUrl": "ThingsIcon/huntParts_1"
+            "iconUrl": "ThingsIcon/huntParts1"
         },
         {
             "name": "acidicParts_1",
             "cnName": "腐蚀芯片",
             "father": "other",
             "fatherCnName": "其他",
-            "iconUrl": "ThingsIcon/acidicParts_1"
+            "iconUrl": "ThingsIcon/acidicParts1"
         },
     ]
 
