@@ -34,7 +34,7 @@
 			<!-- 攻击数据 -->
 			<hurtArr>
 				<hurt>
-					<imgLabel>normalAttack</imgLabel>
+					<imgLabel>normalAttack</imgLabel><cn>盾击</cn>
 					<hurtRatio>2</hurtRatio>
 					<attackType>holy</attackType>
 					<skillArr>hammerIron</skillArr>
@@ -42,7 +42,7 @@
 					<hitImgUrl con="add" soundUrl="sound/metal_hit1">bulletHitEffect/fitHit</hitImgUrl>
 				</hurt>
 				
-				<hurt info="冲刺" cd="6">
+				<hurt cd="6"><cn>冲刺</cn>
 					<imgLabel>sprintAttack</imgLabel>
 					<grapRect>-660,-82,600,132</grapRect>
 					<hurtRatio>0.000000001</hurtRatio>
@@ -51,14 +51,14 @@
 					<shakeValue>4</shakeValue>
 					<hitImgUrl con="add" soundUrl="sound/vehicle_hit1">bulletHitEffect/fitHit</hitImgUrl>
 				</hurt>
-				<hurt info="卸甲" >
+				<hurt ><cn>卸甲</cn>
 					<imgLabel>clearAttack</imgLabel><noAiChooseB>1</noAiChooseB>
 					<hurtRatio>10</hurtRatio>
 					<attackType>holy</attackType>
 					<noShootB>1</noShootB>
 					<grapRect>-400,-111,100,150</grapRect>
 				</hurt>
-				<hurt info="暴雨审判" >
+				<hurt ><cn>暴雨审判</cn>
 					<imgLabel>rainAttack</imgLabel><noAiChooseB>1</noAiChooseB>
 					<noShootB>1</noShootB>
 					<grapRect>-400,-111,100,150</grapRect>
@@ -83,7 +83,7 @@
 		
 		<skill cnName="缴械"><!-- dps -->
 			<name>clearAttackIron</name>
-			<cnName>缴械</cnName>
+			<cnName>缴械</cnName><iconUrl36>SkillIcon/rollHoleDR_36</iconUrl36>
 			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			<cd>5</cd>
 			<delay>0.52</delay>
@@ -154,7 +154,7 @@
 		
 		<skill>
 			<name>rainAttackIron</name>
-			<cnName>暴雨审判</cnName>
+			<cnName>暴雨审判</cnName><iconUrl36>SkillIcon/goldGaiaSkill_36</iconUrl36>
 			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			<cd>17</cd>
 			<delay>1</delay>

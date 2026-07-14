@@ -2296,8 +2296,8 @@
 				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
 				[n]2026年暑假签到
 			</description>
-			<loveD num="20"/>
-			<smeltD grade="-1" addType="" price="8"/>
+			<loveD num="0"/>
+			<smeltD grade="-1"/>
 		</things>
 		
 	</father>	

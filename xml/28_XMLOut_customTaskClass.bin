@@ -714,14 +714,100 @@
 		</task>
 		
 		
-		<![CDATA[
+		
+		
+		
+		<![CDATA[v36.4新增]]>
+		<task name="cusSkyScene" cnName="天空顶" lv="99" unlockLv="30" levelIsTaskLvB="1">
+			<shortText>击败爆枪小队。</shortText>
+			<uiConditionText>击败爆枪小队。</uiConditionText>
+			<description></description>
+			<!-- 目的地 -->
+			<worldMapId>SkyScene</worldMapId><enemyLifeMul>5</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
+			<levelId>customTask/cusSkyScene</levelId>
+			<gift>base;partsCoin;8</gift>
+			<gift>base;tenCoin;10</gift>
+			<gift>base;anniCoin;12</gift>
+		</task>
 		<task name="cusHospital5" cnName="实验室顶层" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
 			<description></description>
 			<!-- 目的地 -->
-			<worldMapId>Hospital5</worldMapId><enemyLifeMul>2.5</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
+			<worldMapId>Hospital5</worldMapId><enemyLifeMul>25</enemyLifeMul><enemyDpsMul>2</enemyDpsMul>
 			<levelId>customTask/cusHospital5</levelId>
+			<gift>base;partsCoin;8</gift>
+			<gift>base;tenCoin;10</gift>
+			<gift>base;anniCoin;12</gift>
+		</task>
+		<task name="cusXingGu" cnName="星谷" lv="99" unlockLv="30" levelIsTaskLvB="1">
+			<shortText>击败爆枪小队。</shortText>
+			<uiConditionText>击败爆枪小队。</uiConditionText>
+			<description></description>
+			<!-- 目的地 -->
+			<worldMapId>XingGu</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
+			<levelId>customTask/cusXingGu</levelId>
+			<gift>base;partsCoin;8</gift>
+			<gift>base;tenCoin;10</gift>
+			<gift>base;anniCoin;12</gift>
+		</task>
+		<task name="cusXiShan1" cnName="绝壁窟" lv="99" unlockLv="30" levelIsTaskLvB="1">
+			<shortText>击败爆枪小队。</shortText>
+			<uiConditionText>击败爆枪小队。</uiConditionText>
+			<description></description>
+			<!-- 目的地 -->
+			<worldMapId>XiShan1</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
+			<levelId>customTask/cusXiShan1</levelId>
+			<gift>base;partsCoin;8</gift>
+			<gift>base;tenCoin;10</gift>
+			<gift>base;anniCoin;12</gift>
+		</task>
+		
+		<task name="cusXiShan2" cnName="溪山西" lv="99" unlockLv="30" levelIsTaskLvB="1">
+			<shortText>击败爆枪小队。</shortText>
+			<uiConditionText>击败爆枪小队。</uiConditionText>
+			<description></description>
+			<!-- 目的地 -->
+			<worldMapId>XiShan2</worldMapId><enemyLifeMul>5</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
+			<levelId>customTask/cusXiShan2</levelId>
+			<gift>things;jiaozi;8</gift>
+			<gift>base;tenCoin;10</gift>
+			<gift>base;anniCoin;12</gift>
+		</task>
+		
+		
+		<![CDATA[
+		<task name="cusXiShan3" cnName="溪山南" lv="99" unlockLv="30" levelIsTaskLvB="1">
+			<shortText>击败爆枪小队。</shortText>
+			<uiConditionText>击败爆枪小队。</uiConditionText>
+			<description></description>
+			<!-- 目的地 -->
+			<worldMapId>XiShan3</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
+			<levelId>customTask/cusXiShan3</levelId>
+			<gift>base;partsCoin;8</gift>
+			<gift>base;tenCoin;10</gift>
+			<gift>base;anniCoin;12</gift>
+		</task>
+		
+		<task name="cusXiShan4" cnName="溪山顶" lv="99" unlockLv="30" levelIsTaskLvB="1">
+			<shortText>击败爆枪小队。</shortText>
+			<uiConditionText>击败爆枪小队。</uiConditionText>
+			<description></description>
+			<!-- 目的地 -->
+			<worldMapId>XiShan4</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
+			<levelId>customTask/cusXiShan4</levelId>
+			<gift>base;partsCoin;8</gift>
+			<gift>base;tenCoin;10</gift>
+			<gift>base;anniCoin;12</gift>
+		</task>
+		
+		<task name="cusXiShan5" cnName="溪山东" lv="99" unlockLv="30" levelIsTaskLvB="1">
+			<shortText>击败爆枪小队。</shortText>
+			<uiConditionText>击败爆枪小队。</uiConditionText>
+			<description></description>
+			<!-- 目的地 -->
+			<worldMapId>XiShan5</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
+			<levelId>customTask/cusXiShan5</levelId>
 			<gift>base;partsCoin;8</gift>
 			<gift>base;tenCoin;10</gift>
 			<gift>base;anniCoin;12</gift>

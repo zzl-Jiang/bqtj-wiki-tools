@@ -1240,13 +1240,13 @@
 				</level>
 			</levelArr>
 		</place>
-		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="no">
+		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="GreenTown2_plot">
 			<name>GreenIs3</name>
 			<cnName>郁葱甸</cnName><noTaskB>1</noTaskB><noEndlessB>1</noEndlessB>
 			<geogType>hill</geogType><mustWinShowB>1</mustWinShowB>
 			<levelArr>
 				<level>
-					<name>GreenIs3_plot</name>
+					<name>GreenIs3_1</name>
 				</level>
 			</levelArr>
 		</place>
@@ -1260,11 +1260,14 @@
 				</level>
 			</levelArr>
 		</place>
+		
+		
+		
 		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="GreenTown1_plot">
 			<name>GreenTown1</name>
 			<cnName>仙草镇入口</cnName><noTaskB>1</noTaskB><noEndlessB>1</noEndlessB>
 			<geogType>town</geogType><mustWinShowB>1</mustWinShowB>
-			<pointer>471,1073</pointer>
+			<pointer>470,1073</pointer>
 			<levelArr>
 				<level>
 					<name>GreenTown1_1</name>
@@ -1272,22 +1275,28 @@
 			</levelArr>
 		</place>
 		
-		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="no">
+		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="GreenTown2_wang">
 			<name>GreenTown2</name>
 			<cnName>仙草镇18号</cnName><noTaskB>1</noTaskB><noEndlessB>1</noEndlessB>
 			<geogType>town</geogType><mustWinShowB>1</mustWinShowB>
-			<pointer>471,1073</pointer>
+			<pointer>464,1063</pointer>
 			<levelArr>
 				<level>
-					<name>GreenTown1_1</name>
+					<name>GreenTown2_1</name>
 				</level>
 			</levelArr>
 		</place>
+		
+		
+		
+		
+		
+		
 		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="no">
 			<name>GreenTianFeng</name>
 			<cnName>天风塔</cnName><noTaskB>1</noTaskB><noEndlessB>1</noEndlessB>
 			<geogType>sky</geogType><mustWinShowB>1</mustWinShowB>
-			<pointer>471,1073</pointer>
+			<pointer>484,1063</pointer>
 			<levelArr>
 				<level>
 					<name>GreenTown1_1</name>

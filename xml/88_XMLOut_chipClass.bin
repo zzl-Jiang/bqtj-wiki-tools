@@ -155,7 +155,14 @@
 			<description>2024年十月活动、纪念币商店、黄金商店</description>
 			<smeltD grade="-1"/>
 		</things>
-		
+		<things cnName="束魂坠碎片">
+			<name>soulbindPendant_1</name><addDropDefineB>1</addDropDefineB>
+			<cnName>束魂坠碎片</cnName>
+			<btnList>compose</btnList>
+			<iconUrl>ThingsIcon/soulbindPendantChip</iconUrl><!-- 技能图标 -->
+			<description>绿岛地图“仙草镇18号”掉落。</description>
+			<smeltD grade="-1"/>
+		</things>
 		
 		
 		

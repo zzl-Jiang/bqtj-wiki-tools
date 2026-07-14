@@ -24,7 +24,7 @@
 						<unit cnName="血蟒重甲兵" num="2"/>
 					</unitOrder>
 					<unitOrder id="enemy4">
-						<unit cnName="飞天狗" unitType="boss" lifeMul="1000000" dpsMul="2" skillArr="fightBackBulletX,missile_Sentry,offAllSkill5,moreBullet,invincibleEmp,weaponEmp,noUnderMulHurt,spellImmunityMax,meltFlamerPurgold" />
+						<unit cnName="飞天狗" unitType="boss" lifeMul="1000000" dpsMul="2"/>
 					</unitOrder>
 				</unitG>
 				<!-- 事件集************************************************ -->
@@ -224,6 +224,7 @@
 				</eventG>
 			</level>
 			
+			
 			<level name="greenMemory4" cnName="回忆四">
 				<sceneLabel>WoTu</sceneLabel>
 				<!-- 掉落 -->
@@ -307,6 +308,48 @@
 						</event>
 						<event>
 							<order>level; fail</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+			
+			<level name="GreenTown2_wang" cnName="气象操控者">
+				<info enemyLv="99" diff="2" />
+				<sceneLabel>GreenTown2</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG><allDefault aiOrder="patrolGlobal"></allDefault>
+					<unitOrder id="enemy4">
+						<unit cnName="旺达" unitType="boss" lifeMul="2" dpsMul="1" dieGotoState="stru" />
+					</unitOrder>
+				</unitG>
+				<!-- 事件集************************************************ -->
+				<eventG>
+					<group>
+						<event><order>allBody:we; movePoint:3421,1364</order></event>
+						<event><condition delay="0.5"></condition><order>say; startList:s1</order></event>
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<event><condition>liveEnemyNumber:less_1</condition><order>createUnit:enemy4; r_birth</order></event> 
+						<event>
+							<condition>liveEnemyNumber:less_1</condition>
+							<order>allWeHeroRebirth</order>
+							<order>say; startList:s2</order>
+						</event>
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<![CDATA[旺达消失]]>
+						<event>
+							<order>body:旺达; toDel</order>
+							<order>body:旺达; addEffectPosition:hideEffect</order>
+						</event>
+						<![CDATA[继续对话]]>
+						<event><condition delay="0.5"/><order>say; startList:s3</order></event>
+						
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<event><order>say; startList:s4</order></event>	
+						
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<event>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
 						</event>
 					</group>
 				</eventG>
@@ -455,7 +498,7 @@
 				<say target="本我"><content>我……我没钱……</content></say>
 				<say target="枪店主"><content>什么？！</content></say>
 				<say target="枪店主"><content>你这小子竟敢忽悠我！</content></say>
-				<say target="枪店主"><content>你一定要去你妈妈那告状！</content></say>
+				<say target="枪店主"><content>我一定要去你妈妈那告状！</content></say>
 				<say target="本我"><content>告诉她你把我打伤了？</content></say>
 				<say target="枪店主"><content>你！</content></say>
 			</sayList>
@@ -516,6 +559,52 @@
 				<say target="文杰表哥"><content>我们先躲起来！等会儿再跟你细说！</content></say>
 				<say target="本我"><content>你怎么那么胆小？</content></say>
 				<say target="文杰表哥"><content>听我的就对了！</content></say>
+			</sayList>
+		</level>
+		<level name="GreenTown2_wang" cn="气象操控者">
+			<sayList name="s1">
+				<say target="旺达"><content>毁了我们的“迷雾”，还想跑？</content></say>
+				<say target="p1"><content>你想怎样？</content></say>
+				<say target="旺达"><content>今天必须过我这一关！</content></say>
+			</sayList>
+			<sayList name="s2">
+				<say target="p1"><content>你竟然可以控制这里的天气！这是怎么办到的？</content></say>
+				<say target="旺达"><content>呵呵，这怎么可能告诉你？</content></say>
+				<say target="p1"><content>迷雾、悬停沙漏，还有这气象操控装置……</content></say>
+				<say target="p1"><content>即便有多米诺博士的帮助，也不是你们这小小的血蟒能造得出来的。</content></say>
+				<say target="p1"><content>你们背后一定有更大的势力在支持着。</content></say>
+				<say target="旺达"><content>怕了吗？</content></say>
+				<say target="旺达"><content>如果你们现在就此屈服，我们还可以放你们一马。</content></say>
+				<say target="文杰表哥"><content>真是搞笑，现在正在下跪的人是你！</content></say>
+				<say target="文杰表哥"><content>绿岛病毒的爆发是不是你们的阴谋？想嫁祸给我们，是不是？</content></say>
+				<say target="旺达"><content>还想恶人先告状？</content></say>
+				<say target="文杰表哥"><content>姨妈今天就说了，大家其实早就厌烦了你们的封岛政策，之前岛民就和血蟒不断发生冲突，而且有愈演愈烈之势。</content></say>
+				<say target="文杰表哥"><content>如果不制造点事端出来，血蟒恐怕就要被赶出绿岛了。</content></say>
+				<say target="旺达"><content>扯淡，如果不是我们，绿岛早就生灵涂炭了！</content></say>
+				<say target="我"><content>这话怎么听着这么耳熟？</content></say>
+				<say target="小樱"><content>算了，如果这真是阴谋，他也不会承认的。</content></say>
+				<say target="血蟒狙击兵"><content>报告参谋长，多米诺已被擒获！</content></say>
+				<say target="旺达"><content>很好！</content></say>
+			</sayList>
+			
+			<sayList name="s3">
+				<say target="我"><content>不好！</content></say>
+				<say target="藏师将军"><content>旺达消失了！</content></say>
+				<say target="我"><content>刚才那竟然是旺达的幻象？</content></say>
+				<say target="我"><content>血蟒究竟还有多少我们不知道的东西？</content></say>
+				
+				<say target="旺达"><content>看来我的拖延策略很有效！</content></say>
+				<say target="旺达"><content>爆枪小队，我承认你们很厉害。</content></say>
+				<say target="旺达"><content>想保证多米诺博士的安全，就来天风塔跟我好好谈谈。</content></say>
+				<say target="我"><content>谈什么？</content></say>
+				<say target="旺达"><content>来了就知道了。</content></say>
+			</sayList>
+			
+			<sayList name="s4">
+				<say target="文杰表哥"><content>这家伙葫芦里卖了什么药？</content></say>
+				<say target="小樱"><content>肯定又布置了什么陷阱。</content></say>
+				<say target="我"><content>但我们必须去，要不是博士，我们这次根本没法把妈妈救出来。</content></say>
+				<say target="藏师将军"><content>走！</content></say>
 			</sayList>
 		</level>
 	</father>	

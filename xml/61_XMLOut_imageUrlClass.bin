@@ -269,6 +269,7 @@
   <body cnName="红光眼" name="redEyes" con="add" partType="2eye">skillEffect/trueBoss</body>
   
   <body cnName="冰冻状态" name="frozenState" con="add" partType="body">generalEffect/frozen</body>
+  <body cnName="冰冻陆续" name="frozenFrame" con="add" partType="body" imgDieType="stop">generalEffect/frozenFrame</body>
 	
   
   

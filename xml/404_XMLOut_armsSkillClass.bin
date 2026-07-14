@@ -1036,7 +1036,7 @@
 			<target arenaB="0">target</target>
 			<!--效果------------------------------------------------------------ -->
 			<addType>instantAndState</addType>
-			<effectType>armsFear</effectType>
+			<effectType>armsFear</effectType><changeHurtB>1</changeHurtB>
 			<extraValueType>nowArmsHurt</extraValueType><!-- 附加值类型为当前武器dps比例 -->
 			<effectProArr>0.5</effectProArr>
 			<mul>0.6</mul>
@@ -1045,7 +1045,7 @@
 			<!--图像------------------------------------------------------------ -->
 			<stateEffectImg partType="mouth" con="filter">skillEffect/screaming_hero_target</stateEffectImg>
 			<targetEffectImg soundUrl="sound/magicHit1" partType="mouth" con="add">skillEffect/screaming_hero</targetEffectImg>
-			<description>击中后有[effectProArr.0]概率恐惧目标并造成额外伤害(武器面板单伤x[mul])。</description>
+			<description>击中后有[effectProArr.0]概率恐惧目标并造成额外[mul]的伤害。</description>
 		</skill>
 		<skill name="爆震"><!-- dps-被动 -->
 			<name>fear_godArmsSkill2</name><mustLv>2</mustLv>
@@ -1059,7 +1059,7 @@
 			<target arenaB="0">target</target>
 			<!--效果------------------------------------------------------------ -->
 			<addType>instantAndState</addType>
-			<effectType>armsFear</effectType>
+			<effectType>armsFear</effectType><changeHurtB>1</changeHurtB>
 			<extraValueType>nowArmsHurt</extraValueType><!-- 附加值类型为当前武器dps比例 -->
 			<effectProArr>0.5</effectProArr>
 			<mul>1</mul>
@@ -1068,7 +1068,7 @@
 			<!--图像------------------------------------------------------------ -->
 			<stateEffectImg partType="mouth" con="filter">skillEffect/screaming_hero_target</stateEffectImg>
 			<targetEffectImg soundUrl="sound/magicHit1" partType="mouth" con="add">skillEffect/screaming_hero</targetEffectImg>
-			<description>击中后有[effectProArr.0]概率恐惧目标并造成额外伤害(武器面板单伤x[mul])，并减速目标。</description>
+			<description>击中后有[effectProArr.0]概率恐惧目标并造成额外[mul]的伤害，并减速目标。</description>
 		</skill>
 		
 		
@@ -1198,7 +1198,7 @@
 			<!--效果------------------------------------------------------------ -->
 			<addType>instant</addType>
 			<effectType>immuneNemesis</effectType>
-			<mul>1.6</mul>
+			<mul>2.3</mul>
 			<description>对拥有技能净化器、免疫、技能免疫、技能免除、抵御的敌人造成额外[mul-1]的伤害。</description>
 		</skill>
 		

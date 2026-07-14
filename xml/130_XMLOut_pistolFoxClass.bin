@@ -46,7 +46,7 @@
 			<!--图像范围------------------------------------------------------------ -->
 			<bodyImgRange>specialGun/pistolFox</bodyImgRange>
 			<bulletImgRange>specialGun/bullet</bulletImgRange>
-			<description>消灭首领毒魔(90级)</description>
+			<description>消灭首领毒魔(90级)、神武碎片合成</description>
 		</bullet>
 	</father>
 	

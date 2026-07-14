@@ -36,41 +36,41 @@
 			<!-- 攻击数据 -->
 			<hurtArr>
 				<hurt>
-					<imgLabel>stand</imgLabel>
+					<imgLabel>stand</imgLabel><noAiChooseB>1</noAiChooseB>
 					<hurtRatio>2</hurtRatio>
 					<attackType>holy</attackType>
 					<shakeValue>10</shakeValue><hitMaxNum>1</hitMaxNum>
 					<hitImgUrl con="add" soundUrl="sound/vehicle_hit1">bulletHitEffect/fitHit</hitImgUrl>
 				</hurt>
 				<hurt>
-					<imgLabel>move</imgLabel>
+					<imgLabel>move</imgLabel><noAiChooseB>1</noAiChooseB>
 					<hurtRatio>2</hurtRatio>
 					<attackType>holy</attackType>
 					<shakeValue>10</shakeValue><hitMaxNum>1</hitMaxNum>
 					<hitImgUrl con="add" soundUrl="sound/vehicle_hit1">bulletHitEffect/fitHit</hitImgUrl>
 				</hurt>
-				<hurt cd="1.35" info="不加入ai选择">
+				<hurt cd="1.35"><cn>大炮</cn>
 					<imgLabel>bigAttack</imgLabel>
 					<bulletLabel>LastdayBig</bulletLabel>
 					<grapRect>-776,-500,766,500</grapRect><!-- <grapRect>-812,-422,364,525</grapRect> -->
 					<hurtRatio>3</hurtRatio>
 					<attackType>holy</attackType>
 				</hurt>
-				<hurt cd="1.7" info="不加入ai选择">
+				<hurt cd="1.7"><cn>导弹</cn>
 					<imgLabel>missleAttack</imgLabel>
 					<bulletLabel>LastdayMissle</bulletLabel>
 					<grapRect>-776,-500,766,500</grapRect><!-- <grapRect>-550,-545,732,376</grapRect> -->
 					<hurtRatio>3</hurtRatio>
 					<attackType>holy</attackType>
 				</hurt>
-				<hurt cd="1" info="不加入ai选择">
+				<hurt cd="1"><cn>机枪</cn>
 					<imgLabel>vikingAttack</imgLabel>
 					<bulletLabel>LastdayViking</bulletLabel>
 					<grapRect>-776,-500,766,500</grapRect><!-- <grapRect>-528,-291,243,346</grapRect> -->
 					<hurtRatio>0.6</hurtRatio>
 					<attackType>holy</attackType>
 				</hurt>
-				<hurt cd="1.5" info="不加入ai选择">
+				<hurt cd="1.5"><cn>三连炮</cn>
 					<imgLabel>big3Attack</imgLabel>
 					<bulletLabel>LastdayBig3</bulletLabel>
 					<grapRect>-776,-500,766,500</grapRect><!-- <grapRect>-1011,-186,569,200</grapRect> -->
@@ -231,7 +231,7 @@
 			<description>生命值低于30%时，降低敌人在空中的移动速度。</description>
 		</skill>
 		<skill>
-			<name>LastdaySpellImmunity</name>
+			<name>LastdaySpellImmunity</name><iconUrl36>SkillIcon/spellImmunityMax</iconUrl36>
 			<cnName>免疫护罩</cnName><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			<cd>15</cd>
 			<conditionType>active</conditionType>

@@ -35,7 +35,7 @@
 			<fireImgType>no</fireImgType>
 			<!--图像范围------------------------------------------------------------ -->
 			<bodyImgRange>specialGun/meltFlamer</bodyImgRange><bulletImgRange>specialGun/bullet</bulletImgRange>
-			<description>消灭首领狂人机器(95级)</description>
+			<description>消灭首领狂人机器(95级)、神武碎片合成</description>
 		</bullet>
 		
 		

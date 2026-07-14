@@ -199,7 +199,7 @@
 				</task>
 				<task>
 					<diff>1.5</diff>
-					<condition type="collect" target="killEnemyNum" value="30" cumulativeType="no"/>
+					<condition type="collect" target="killEnemyNum" value="23" cumulativeType="no"/>
 					<gift>base;exp;2;;;;LevelEnemyExp</gift>
 					<gift>base;coin;4;;;;LevelEnemyCoin</gift>
 					<gift>things;armsBox;4</gift>
@@ -211,7 +211,7 @@
 				</task>
 				<task>
 					<diff>4</diff>
-					<condition type="collect" target="killEnemyNum" value="45" cumulativeType="no"/>
+					<condition type="collect" target="killEnemyNum" value="30" cumulativeType="no"/>
 					<gift>base;exp;3;;;;LevelEnemyExp</gift>
 					<gift>base;coin;6;;;;LevelEnemyCoin</gift>
 					<gift>things;armsBox;6</gift>
@@ -224,7 +224,7 @@
 				</task>
 				<task unlockLv="90">
 					<diff>10</diff>
-					<condition type="collect" target="killEnemyNum" value="60" cumulativeType="no"/>
+					<condition type="collect" target="killEnemyNum" value="40" cumulativeType="no"/>
 					<gift>base;exp;4;;;;LevelEnemyExp</gift>
 					<gift>base;coin;8;;;;LevelEnemyCoin</gift>
 					<gift>things;armsHighBox;4</gift>
@@ -234,7 +234,7 @@
 				</task>
 				<task unlockLv="95">
 					<diff>25</diff>
-					<condition type="collect" target="killEnemyNum" value="75" cumulativeType="no"/>
+					<condition type="collect" target="killEnemyNum" value="50" cumulativeType="no"/>
 					<gift>base;exp;5;;;;LevelEnemyExp</gift>
 					<gift>base;coin;10;;;;LevelEnemyCoin</gift>
 					<gift>things;armsHighBox;5</gift>
@@ -245,7 +245,7 @@
 				
 				<task unlockLv="99">
 					<diff>25</diff><enemyLifeMul>2</enemyLifeMul><enemyDpsMul>1.2</enemyDpsMul>
-					<condition type="collect" target="killEnemyNum" value="90" cumulativeType="no"/>
+					<condition type="collect" target="killEnemyNum" value="60" cumulativeType="no"/>
 					<gift>base;exp;6;;;;LevelEnemyExp</gift>
 					<gift>base;coin;12;;;;LevelEnemyCoin</gift>
 					<gift>things;armsHighBox;5</gift>
@@ -256,7 +256,7 @@
 				</task>
 				<task unlockLv="99">
 					<diff>25</diff><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>1.4</enemyDpsMul>
-					<condition type="collect" target="killEnemyNum" value="100" cumulativeType="no"/>
+					<condition type="collect" target="killEnemyNum" value="70" cumulativeType="no"/>
 					<gift>base;exp;7;;;;LevelEnemyExp</gift>
 					<gift>base;coin;14;;;;LevelEnemyCoin</gift>
 					<gift>things;armsHighBox;5</gift>
@@ -366,7 +366,7 @@
 			<!-- 任务各等级 ------------------------------------------------------------ -->
 			<growth>
 				<task>
-					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="30" cumulativeType="no" time="135" timeType="fail"/>
+					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="20" cumulativeType="no" time="135" timeType="fail"/>
 					<gift>base;exp;1;;;;LevelEnemyExp</gift>
 					<gift>base;coin;2;;;;LevelEnemyCoin</gift>
 					<gift>things;armsBox;2</gift>
@@ -377,7 +377,7 @@
 					<gift showLv="70">things;partsChest72;1</gift>
 				</task>
 				<task>
-					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="35" cumulativeType="no" time="135" timeType="fail"/>
+					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="25" cumulativeType="no" time="135" timeType="fail"/>
 					<gift>base;exp;2;;;;LevelEnemyExp</gift>
 					<gift>base;coin;4;;;;LevelEnemyCoin</gift>
 					<gift>things;armsBox;4</gift>
@@ -388,7 +388,7 @@
 					<gift showLv="70">things;partsChest72;3</gift>
 				</task>
 				<task>
-					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="40" cumulativeType="no" time="135" timeType="fail"/>
+					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="30" cumulativeType="no" time="135" timeType="fail"/>
 					<gift>base;exp;3;;;;LevelEnemyExp</gift>
 					<gift>base;coin;6;;;;LevelEnemyCoin</gift>
 					<gift>things;armsBox;6</gift>
@@ -399,7 +399,7 @@
 					<gift showLv="70">things;partsChest72;5</gift>
 				</task>
 				<task unlockLv="90">
-					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="45" cumulativeType="no" time="135" timeType="fail"/>
+					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="35" cumulativeType="no" time="135" timeType="fail"/>
 					<gift>base;exp;4;;;;LevelEnemyExp</gift>
 					<gift>base;coin;8;;;;LevelEnemyCoin</gift>
 					<gift>things;armsHighBox;4</gift>
@@ -408,7 +408,7 @@
 					<gift showLv="70">things;partsChest75;2</gift>
 				</task>
 				<task unlockLv="95">
-					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="50" cumulativeType="no" time="135" timeType="fail"/>
+					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="40" cumulativeType="no" time="135" timeType="fail"/>
 					<gift>base;exp;5;;;;LevelEnemyExp</gift>
 					<gift>base;coin;10;;;;LevelEnemyCoin</gift>
 					<gift>things;armsHighBox;5</gift>
@@ -417,7 +417,7 @@
 					<gift showLv="70">things;partsChest75;3</gift>
 				</task>
 				<task unlockLv="99">
-					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="55" cumulativeType="no" time="135" timeType="fail"/>
+					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="45" cumulativeType="no" time="135" timeType="fail"/>
 					<gift>base;exp;6;;;;LevelEnemyExp</gift>
 					<gift>base;coin;12;;;;LevelEnemyCoin</gift>
 					<gift>things;armsHighBox;5</gift>
@@ -427,7 +427,7 @@
 					<gift showLv="70">base;anniCoin;3</gift>
 				</task>
 				<task unlockLv="99">
-					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="60" cumulativeType="no" time="135" timeType="fail"/>
+					<condition type="collect" target="hitDrop" targetId="addCoin_task" value="50" cumulativeType="no" time="135" timeType="fail"/>
 					<gift>base;exp;7;;;;LevelEnemyExp</gift>
 					<gift>base;coin;14;;;;LevelEnemyCoin</gift>
 					<gift>things;armsHighBox;5</gift>
@@ -650,19 +650,19 @@
 				
 				<task>
 					<diff>1</diff>
-					<condition type="collect" target="killEnemyNum" value="90" cumulativeType="no" targetId="flySky" />
+					<condition type="collect" target="killEnemyNum" value="80" cumulativeType="no" targetId="flySky" />
 					<gift>things;allBlackCash;10</gift>
 					<gift showLv="70">things;artifactChest;3.5</gift>
 				</task>
 				<task>
 					<diff>1</diff>
-					<condition type="collect" target="killEnemyNum" value="120" cumulativeType="no" targetId="flySky" />
+					<condition type="collect" target="killEnemyNum" value="90" cumulativeType="no" targetId="flySky" />
 					<gift>things;allBlackCash;12</gift>
 					<gift showLv="70">things;artifactChest;4</gift>
 				</task>
 				<task>
 					<diff>1</diff>
-					<condition type="collect" target="killEnemyNum" value="160" cumulativeType="no" targetId="flySky" />
+					<condition type="collect" target="killEnemyNum" value="100" cumulativeType="no" targetId="flySky" />
 					<gift>things;allBlackCash;14</gift>
 					<gift showLv="70">things;artifactChest;4.5</gift>
 				</task>

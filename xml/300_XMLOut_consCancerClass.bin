@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
 	<father type="sniper">
-		<bullet color="purgold" kind="electric" evoMaxLv="2" evoMustFirstLv="13" composeLv="99" chipNum="300">
+		<bullet color="purgold" kind="electric" evoMaxLv="2" evoMustFirstLv="13" composeLv="99" chipNum="300" chipB="1">
 			<name>consCancer</name><extraMul>2.5</extraMul><dpsMul>2.4</dpsMul><uiDpsMul>1.525</uiDpsMul>
 			<cnName>巨蟹座</cnName><iconUrl>newGun/consCancerIcon</iconUrl>
 			<!--基本-->

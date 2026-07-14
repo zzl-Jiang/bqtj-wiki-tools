@@ -56,7 +56,7 @@
 			<!--图像范围------------------------------------------------------------ -->
 			<bodyImgRange>specialGun/rocketCate</bodyImgRange>
 			<bulletImgRange>specialGun/bullet</bulletImgRange>
-			<description>消灭首领异火龙(94级)、纪念币商店</description>
+			<description>消灭首领异火龙(94级)、纪念币商店、神武碎片合成</description>
 		</bullet>
 		
 	</father>

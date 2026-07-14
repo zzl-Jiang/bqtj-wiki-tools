@@ -343,6 +343,82 @@
 			</growth>
 		</skill>
 		
+		<skill>
+			<name>superLightWave</name>
+			<cnName>无双光波</cnName>
+			<changeText>伤害倍数：[mul]</changeText>
+			<cd>60</cd><delay>0.33</delay><firstCd>60</firstCd>
+			<ie>meFirst</ie><iconUrl>SkillIcon/superLightWave</iconUrl>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<condition>beforeAttack</condition>
+			<otherConditionArr>superLightWave</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			
+			<addType>state</addType>
+			<effectType>bullet_superLightWave</effectType><effectFather>weShip</effectFather>
+			<extraValueType>superLightWave</extraValueType><!-- 最高武器战力*（耐久系数+主炮攻击倍数+机枪攻击倍数+碾压或普通攻击倍数），虚天塔中伤害乘以3 -->
+			<mul>10</mul><!-- 伤害倍数 -->
+			<!-- 子弹所需 -->
+			<obj>"name":"superLightWaveBullet","site":"meMid","flipB":false</obj>
+			<value>0.1</value><!-- 间隔多少秒发射一次 -->
+			<duration>1</duration>
+			<!--图像------------------------------------------------------------ -->
+			<meEffectImg name="silverScreen"/>
+			<otherEffectImg name="waveSound"/>
+			<description>释放20道全域光波，每道光波的伤害=[mul] x 角色最高武器战力 x（耐久系数+主炮攻击倍数+机枪攻击倍数+碾压或普通攻击倍数），虚天塔中伤害再乘以5。对生命值高于65%的首领或角色无法造成伤害。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>10</mul></skill>
+				<skill><mul>20</mul></skill>
+				<skill><mul>30</mul></skill>
+				<skill><mul>40</mul></skill>
+				<skill><mul>50</mul></skill>
+				<skill><mul>60</mul></skill>
+				<skill><mul>70</mul></skill>
+				<skill><mul>80</mul></skill>
+				<skill><mul>90</mul></skill>
+				<![CDATA[<skill><mul>100</mul></skill>]]>
+				
+			</growth>
+		</skill>
+					<bullet>
+						<name>superLightWaveBullet</name>
+						<cnName>超级光波</cnName>
+						<hitType>longLine</hitType>
+						<attackType>holy</attackType>
+						<!--武器属性------------------------------------------------------------ -->
+						<hurtRatio>1</hurtRatio><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+						<bulletLife>3</bulletLife>
+						<attackGap>2</attackGap>
+						
+						<bulletWidth>2500</bulletWidth>
+						<bulletSpeed>0</bulletSpeed>
+						<bulletAngle>-90</bulletAngle>
+						<bulletSkillArr>silverScreenBullet30</bulletSkillArr>
+						<skillArr>superLightWaveHit</skillArr>
+						<penetrationGap>10000</penetrationGap>
+						<penetrationNum>999</penetrationNum>
+						<oneHitBodyB>1</oneHitBodyB>
+						<bulletImgUrl name="silverScreenBullet2"/>
+						<hitImgUrl name="silverScreenBulletHit"/>
+					</bullet>
+					<skill>
+						<name>superLightWaveHit</name><noCopyB>1</noCopyB><noSkillDodgeB>1</noSkillDodgeB>
+						<cnName>全域光波-击中</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+						<!--触发条件与目标------------------------------------------------------------ -->
+						<conditionType>passive</conditionType>
+						<condition>hit</condition><changeHurtB>1</changeHurtB>
+						<target noExitB="1">me</target>
+						<addType>instant</addType>
+						<effectType>superLightWaveHit</effectType><effectFather>weShip</effectFather>
+						<description>生命值高于65%的首领或角色不受到伤害。</description>
+					</skill>
+		
+		
+		
+		
 	</father>
 	<father name="vehicleSkillLink" cnName="英雄技能">
 		<skill index="0" name="狂战射手-击中麻痹">

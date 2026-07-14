@@ -152,7 +152,7 @@
 				
 		<skill cnName="地震"><!-- dps -->
 			<name>minersShake</name>
-			<cnName>地震</cnName><iconUrl36></iconUrl36><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>地震</cnName><iconUrl36>SkillIcon/shake_FightKing_36</iconUrl36><ignoreNoSkillB>1</ignoreNoSkillB>
 			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB>
 			<cd>14</cd>
 			<delay>0.3</delay>

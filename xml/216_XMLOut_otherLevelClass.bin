@@ -53,6 +53,7 @@
 				<eventG>
 					<group>
 						<event>
+							<order>towerStartEvent</order>
 							<order>createUnit:towerBoss; r1</order>
 						</event>
 						<event>

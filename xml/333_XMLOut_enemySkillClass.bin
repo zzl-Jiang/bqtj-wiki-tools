@@ -8,6 +8,14 @@
 			<mul>0.5</mul><effectType>underHurtMul</effectType>
 			<description>战斗中永久提升100%的防御力。</description>
 		</skill>
+		<skill name="防御力提升500%">
+			<name>defence500</name>
+			<cnName>防御力提升500%</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType><condition>add</condition><target>me</target><addType>state</addType><duration>99999</duration>
+			<mul>0.2</mul><effectType>underHurtMul</effectType>
+			<description>战斗中永久提升500%的防御力。</description>
+		</skill>
+		
 		<skill index="0" name="永久隐身"><!-- 生存-群体-主动 -->
 			<name>invisibilityEver</name>
 			<cnName>永久隐身</cnName>
@@ -3292,7 +3300,7 @@
 			
 			<conditionType>passive</conditionType>
 			<condition>interval</condition>
-			<target noMeB="1">me,range,we</target>
+			<target noMeB="1" noHaveNowSkillB="1" noZeroB="1">me,range,we</target>
 			
 			<addType>state</addType>
 			<effectType>invincibleAndThrough</effectType>
@@ -3302,6 +3310,25 @@
 			<stateEffectImg name="FoggyDefence_state"/>
 			<description>让所有我方单位（排除自己）进入无敌状态。</description>
 		</skill>
+		
+		
+		<skill>
+			<name>nonProliferation</name>
+			<cnName>防扩散</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<conditionType>passive</conditionType>
+			<condition>underAllHurt</condition>
+			<otherConditionArr>hurtPuIsP1</otherConditionArr>
+			<target noMeB="1" noZeroB="1">me,range,we</target>
+			
+			<addType>instant</addType>
+			<effectType>invincibleAndThrough</effectType>
+			<range>99999</range>
+			<targetEffectImg name="invincibleShieldOne"/>
+			<description>受到P1的伤害时，让所有我方单位（排除自己）进入无敌状态0.01秒。</description>
+		</skill>
+		
+		
 		<skill cnName="减速">
 			<name>slowMoveNoClear</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB>
 			<cnName>减速</cnName><iconUrl36>SkillIcon/slowMoveHalo_pet_36</iconUrl36>

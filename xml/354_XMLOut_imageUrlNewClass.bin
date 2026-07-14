@@ -48,8 +48,10 @@
 		 
 		 <![CDATA[弹孔特效]]>
 		<body cnName="弹孔-地面" name="holeFloor" urlRandomValue="3">hitHole/holeFloor</body>
-		<body cnName="血渍-地面" name="bloodFloor" urlRandomValue="4" raNum="4">hitHole/bloodFloorBlack</body>
-		<body cnName="暗血渍-地面" name="bloodFloorBlack" urlRandomValue="4" raNum="4">hitHole/bloodFloor</body>
+		<body cnName="雪渍-地面" name="snowFloor" urlRandomValue="3" raNum="4">hitHole/snowFloor</body>
+		
+		<body cnName="血渍-地面" name="bloodFloor" urlRandomValue="4" raNum="4">hitHole/bloodFloor</body>
+		<body cnName="暗血渍-地面" name="bloodFloorBlack" urlRandomValue="4" raNum="4">hitHole/bloodFloorBlack</body>
 		<body cnName="爆炸-地面" name="boomFloor" urlRandomValue="2" raNum="4">hitHole/boomFloor</body>
 		<body cnName="划痕-地面" name="scratchFloor" urlRandomValue="2" raNum="8">hitHole/scratchFloor</body>
 		
@@ -105,6 +107,9 @@
 		
 		<body cnName="大爆炸喷溅" name="bigBoomSputtering" soundUrl="boomSound/big" soundRan="4" shake="8,0.3,30,0,mess" >boomEffect/bigFire</body>
 		<body cnName="下雨" name="rainSputtering" urlRandomValue="3" con="add">sputtering/rain</body>
+		<body cnName="下雪" name="snowSputtering" urlRandomValue="4">sputtering/whiteBlood</body>
+		<body cnName="沙尘" name="sandSputtering" urlRandomValue="4" con="add">sputtering/sand</body>
+		<body cnName="酸雨" name="acidrain" urlRandomValue="3" con="add">sputtering/acidrain</body>
 		<body cnName="高温" name="heatSputtering" con="add">sputtering/heat</body>
 		<body cnName="降雨炮爆炸" name="rainBulletBoom" shake="20,0.3,30,0,mess" >boomEffect/bigSpace</body>
 		<body cnName="红点子弹" name="redPoint" con="add">bullet/redPoint</body>
@@ -180,11 +185,12 @@
 		
 		<body cnName="橙色激光" name="orangeLaser" con="add" raNum="60" len="25" time="-1" everFleshB="1" imgDieType="die">bullet/laserOrange</body>
 		<body cnName="橙色电流" name="orangeLightning" con="add" raNum="60" len="25" time="0.066" waveAn="90" everFleshB="1" imgDieType="stop">bullet/laserOrange</body>
-		<body cnName="紫色闪电" name="purpleLightning" con="add" raNum="60" len="35" time="0.066" waveAn="45" everFleshB="1" imgDieType="stop">bullet/laser2</body>
+		<body cnName="紫色闪电" name="purpleLightning" con="add" raNum="60" len="35" time="0.066" waveAn="60" everFleshB="1" imgDieType="stop">bullet/laser2</body>
 		
 		<body cnName="幻银子弹射线" name="silverLine" con="add" raNum="30" len="35" time="0.1" waveAn="90" everFleshB="1" imgDieType="stop">bullet/blueLaserThin</body>
 		
 		<body cnName="幻银光波子弹" name="silverScreenBullet" raNum="4" con="add" len="69" everFleshB="1" imgDieType="die" time="-1" bottomLayerB="1" >SilverShip/screenBullet</body>
+		<body cnName="幻银光波子弹2" name="silverScreenBullet2" raNum="4" con="add" len="69" everFleshB="1" imgDieType="die" time="-1" bottomLayerB="1" >SilverShip/screenBullet2</body>
 		<body cnName="技能复制线" name="skillCopyLine" raNum="1" con="add" len="45" time="0.2" waveAn="45" everFleshB="1" imgDieType="ranPlay" soundUrl="sound/skillCopy_enemy">skillEffect/skillCopy_enemy_bullet</body>
 		
 		<body cnName="狮子座子弹" name="consLeoLine" raNum="45" con="add" len="30">newGun/consLeoBullet</body>
@@ -206,6 +212,8 @@
 		<body cnName="灰尾烟-add" name="midGreySmokeAdd" urlRandomValue="2" len="25" con="add">smokeEffect/midGrey</body>
 		<body cnName="灰尾烟-小" name="midGreySmoke" urlRandomValue="2" len="25">smokeEffect/midGrey</body>
 		<body cnName="黑尾烟-小" name="midBlackSmoke" urlRandomValue="2" len="25">smokeEffect/midBlack</body>
+		<body cnName="绿尾烟-小" name="midGreenSmoke" urlRandomValue="2" len="25">smokeEffect/midGreen</body>
+		
 		<body cnName="矿锯尾烟" name="oreBombState" con="filter" >bulletHitEffect/blueLaser</body>
 		<body cnName="导弹尾烟" name="SilverShipMissileSmoke" con="filter" raNum="30" len="33">smokeEffect/lineMid</body>
 		<body cnName="导弹尾烟2" name="missleSmoke" raNum="30" con="filter"  len="35">bulletHitEffect/smoke_small2</body>
@@ -245,7 +253,10 @@
 		<body cnName="石脚" name="stoneFoot" con="add"  partType="2foot">skillEffect/imploding_enemy_bullet</body>
 		
 		<body cnName="武器冒烟" name="gunSmokeSmall" sm="midGreySmoke" partType="shootPoint">boomEffect/zero</body>
+		<body cnName="武器冒绿烟" name="gunSmokeGreen" sm="midGreenSmoke" partType="shootPoint">boomEffect/zero</body>
+		
 		<body cnName="四肢冒烟" name="minersShake" partType="2foot,2hand" sm="midGreySmoke" >boomEffect/zero</body>
+		<body cnName="双脚冒烟" name="footSmoke" partType="2foot" sm="midGreySmoke" >boomEffect/zero</body>
 		
 		<body cnName="治疗兵护盾" name="healerShield" con="add"  partType="body">HealerZombie/shieldMc</body>
 		<body cnName="自闭-符文" name="noAttackOrder" con="add"  partType="mouth">skillEffect/noAttackOrder</body>
@@ -286,9 +297,11 @@
 		<body cnName="巨刃卡" name="bigWeaponCard" con="add" partType="hand_right">generalEffect/bigWeaponCard</body>
 		<body cnName="毒液" name="poisonClaw" partType="2hand,shootPoint" con="filter" raNum="30">skillEffect/poisonClaw_enemy</body>
 		<body cnName="无敌护盾2" name="invincibleShield2" partType="body" con="add">generalEffect/invincibleShield2</body>
+		<body cnName="无敌护盾-单帧" name="invincibleShieldOne" partType="body" con="add">generalEffect/invincibleShieldOne</body>
 		
 		<body  cnName="翻滚状态"  name="rollingState" con="filter" raNum="1" soundUrl="bodySound/fastMove" soundRan="2">skillEffect/rollingShadow</body>
 		
+		<body  cnName="双脚着大火" name="footFireBig" con="add" partType="2foot">generalEffect/fire</body>
 	</father>
 	<father name="target" cnName="瞬发">
 		
@@ -375,7 +388,18 @@
 		<body cnName="喷火器击中" name="flamerHit" ranPro="0.3" soundUrl="hitSound/fireShoot"  soundRan="3" raNum="30" ranAn="360" con="add" randomRange="8">bulletHitEffect/spark_motion</body>
 		
 		<body cnName="弹药回复" name="addCharger" soundUrl="sound/groupLight_hero" con="add" >skillEffect/greenLight</body>
-		<body cnName="消失" name="addCharger" soundUrl="sound/groupLight_hero" con="add" >skillEffect/hide</body>
+		<body cnName="消失" name="hideEffect" soundUrl="sound/teleport_enemy" con="add" >skillEffect/hide</body>
+		
+		<body cnName="召唤天气" name="addWeather" con="add" soundUrl="SilverShip/screen_s">bulletHitEffect/blueUp</body>
+		<body cnName="冰块白烟" name="iceWhiteSmoke" con="add" partType="body"  soundRan="3" soundUrl="hitSound/smallFire">boomEffect/smoke2</body>
+		
+		<body con="add" name="extremeLaserFire_boom" cnName="烈焰大地-冒烟">boomEffect/smoke2</body>
+		
+		<body cnName="雷电击中" name="thunderHit" con="add" soundUrl="hitSound/lightning">bulletHitEffect/bluntBigPurple</body>
+		
+		<body cnName="雷电音效" name="thunderSound"  soundRan="4" soundUrl="sound/thunder"/>
+		<body cnName="波发射音效" name="waveSound"  soundUrl="hitSound/wave"/>
+		
 		
 		
 	</father>

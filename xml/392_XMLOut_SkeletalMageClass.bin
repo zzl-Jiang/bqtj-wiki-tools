@@ -214,11 +214,11 @@
 		
 					<skill cnName="分身只受副手攻击"><!-- 生存-被动 -->
 						<name>SkeletalMageClonedUnder</name>
-						<cnName>分身只受副手攻击</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB>
+						<cnName>分身只受副手攻击</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
 						<!--触发条件与目标------------------------------------------------------------ -->
 						<conditionType>passive</conditionType>
 						<condition>underHit</condition>
-						<target>target</target>
+						<target>me</target>
 						<!--效果------------------------------------------------------------ -->
 						<addType>instant</addType>
 						<effectType>SkeletalMageClonedUnder</effectType>

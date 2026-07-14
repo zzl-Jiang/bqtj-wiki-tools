@@ -2442,6 +2442,46 @@
 			<levelId>greenMemory4</levelId>
 			<gift>things;intensDrug;15</gift>
 		</task>
+		
+		
+		<task name="GreenTown2_wang" cnName="气象操控者" lv="99" unlockLv="30">
+			<shortText>击败守关首领</shortText>
+			<uiConditionText>击败守关首领</uiConditionText>
+			<description>爆枪小队被旺达拦截，他们即将爆发一场激烈的战斗。</description>
+			<!-- 目的地 -->
+			<worldMapId>GreenTown2</worldMapId>
+			<levelId>GreenTown2_wang</levelId>
+			
+			<growth>
+				<task>
+					<enemyLifeMul>10</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul><gift>things;nineCake;2</gift>
+				</task>
+				<task>
+					<enemyLifeMul>20</enemyLifeMul><enemyDpsMul>1</enemyDpsMul><gift>things;nineCake;3</gift>
+				</task>
+				<task>
+					<enemyLifeMul>30</enemyLifeMul><enemyDpsMul>1.5</enemyDpsMul><gift>things;nineCake;4</gift>
+				</task>
+				<task>
+					<enemyLifeMul>50</enemyLifeMul><enemyDpsMul>2</enemyDpsMul><gift>things;nineCake;5</gift>
+				</task>
+				<task>
+					<enemyLifeMul>90</enemyLifeMul><enemyDpsMul>3</enemyDpsMul><gift>things;nineCake;6</gift>
+				</task>
+				<task>
+					<enemyLifeMul>160</enemyLifeMul><enemyDpsMul>4</enemyDpsMul><gift>things;nineCake;7</gift>
+				</task>
+				<task>
+					<enemyLifeMul>300</enemyLifeMul><enemyDpsMul>5</enemyDpsMul><gift>things;nineCake;8</gift>
+				</task>
+				<task>
+					<enemyLifeMul>500</enemyLifeMul><enemyDpsMul>6</enemyDpsMul><gift>things;nineCake;9</gift>
+				</task>
+				<task>
+					<enemyLifeMul>1000</enemyLifeMul><enemyDpsMul>7</enemyDpsMul><gift>things;nineCake;10</gift>
+				</task>
+			</growth>
+		</task>
 	</father>
 	
 		

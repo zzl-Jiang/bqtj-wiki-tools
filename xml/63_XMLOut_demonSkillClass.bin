@@ -359,7 +359,7 @@
 		
 		
 		<skill name="陨石雨">
-			<name>meteoriteRain</name>
+			<name>meteoriteRain</name><iconUrl36>SkillIcon/imploding_pet_36</iconUrl36>
 			<cnName>陨石雨</cnName><noBeClearB>1</noBeClearB><ignoreSilenceB>1</ignoreSilenceB>
 			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			<cd>8</cd>

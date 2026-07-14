@@ -124,6 +124,7 @@
 						<effectType>silverScreenHurt</effectType>
 					</skill>
 					
+					
 		<![CDATA[  跟踪导弹  ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇]]>		
 		<skill>
 			<name>silverMissile</name>
@@ -232,7 +233,7 @@
 			<name>SilverShip</name>
 			<cnName>幻银</cnName>
 			<raceType>ship</raceType><rosRatio>1</rosRatio>
-			<swfUrl>swf/ship/SilverShip.swf</swfUrl><imgType>normal</imgType>
+			<swfUrl>swf/ship/SilverShip364.swf</swfUrl><imgType>normal</imgType>
 			<bmpUrl>BodyImg/SilverShip</bmpUrl>
 			<!-- 图像 -->
 			<dieImg name="stoneBoom"/>

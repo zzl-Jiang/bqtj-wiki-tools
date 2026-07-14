@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
 	<father type="wavegun">
-		<bullet color="darkgold" evoMaxLv="5" evoMustFirstLv="9" composeLv="99" chipNum="200">
+		<bullet color="darkgold" evoMaxLv="5" evoMustFirstLv="9" composeLv="99" chipNum="200" chipB="1">
 			<name>airWave</name><iconUrl>newGun/airCannon_icon</iconUrl>
 			<cnName>空气波</cnName>
-			<aiShootRange>250</aiShootRange><!-- ai射程 -->
+			<aiShootRange>800</aiShootRange><!-- ai射程 -->
 			<dpsMul>3</dpsMul>
 			<uiDpsMul>2</uiDpsMul>
 			<!--基本-->

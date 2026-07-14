@@ -192,7 +192,7 @@
 
 		</one>
 		
-			]]>
+			
 		<one codeExchangeId="37947" name="sign2026_6_1" cnName="6月1天" startTime="2026-6-1 00:00:00" endTime="2026-7-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>base;wilderKey;2</gift>
@@ -219,7 +219,7 @@
 			<gift>things;strengthenStone;150</gift>
 		</one>
 		
-		
+		]]>
 		
 		<one codeExchangeId="37968" name="sign2026_7_1" cnName="7月1天" startTime="2026-7-1 00:00:00" endTime="2026-8-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
@@ -267,45 +267,45 @@
 
 		</one>
 		
-		<![CDATA[
-		<one codeExchangeId="37672" name="sign2026_8_1" cnName="8月1天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
+	
+		<one codeExchangeId="37995" name="sign2026_8_1" cnName="8月1天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;20</gift>
 			<gift>things;highPetCard;1</gift>
 			<gift>things;allBlackCash;30</gift>
 			<gift>things;allBlackEquipCash;30</gift>
 		</one>
-		<one codeExchangeId="37673" name="sign2026_8_5" cnName="8月5天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="37996" name="sign2026_8_5" cnName="8月5天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;35</gift>
 			<gift>things;highPetCard;2</gift>
 			<gift>things;allBlackCash;60</gift>
 			<gift>things;allBlackEquipCash;60</gift>
 		</one>
-		<one codeExchangeId="37674" name="sign2026_8_14" cnName="8月14天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="37997" name="sign2026_8_14" cnName="8月14天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;50</gift>
 			<gift>things;highPetCard;3</gift>
-			<gift>things;allBlackCash;90</gift>
-			<gift>things;allBlackEquipCash;90</gift>
+			<gift>things;allBlackCash;100</gift>
+			<gift>things;allBlackEquipCash;100</gift>
 		</one>
-		<one codeExchangeId="37675" name="sign2026_8_25" cnName="8月25天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="37998" name="sign2026_8_25" cnName="8月25天" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;70</gift>
 			<gift>things;highPetCard;4</gift>
-			<gift>things;allBlackCash;120</gift>
-			<gift>things;allBlackEquipCash;120</gift>
+			<gift>things;allBlackCash;180</gift>
+			<gift>things;allBlackEquipCash;180</gift>
 		</one>
-		<one codeExchangeId="37676" name="sign2026_8_30" cnName="8月满勤" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="37999" name="sign2026_8_30" cnName="8月满勤" startTime="2026-8-1 00:00:00" endTime="2026-9-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;armsGemChest;100</gift>
 			<gift>things;highPetCard;5</gift>
-			<gift>things;allBlackCash;150</gift>
-			<gift>things;allBlackEquipCash;150</gift>
+			<gift>things;allBlackCash;250</gift>
+			<gift>things;allBlackEquipCash;250</gift>
 		</one>
 		
 	
-		
+			<![CDATA[
 		
 		
 		<one codeExchangeId="37701" name="sign2026_9_1" cnName="9月1天" startTime="2026-9-1 00:00:00" endTime="2026-10-1 00:00:00" hideOutTimeB="1">

@@ -125,7 +125,7 @@
 			<pointEffectImg name="yellowHit"/>
 			<description>每次攻击都将减少敌人[secMul]的生命值，直到敌人生命值少于[mul]。无视钢骨，虚天塔中有效。</description>
 			<growth>
-				<skill><mul>0.75</mul></skill>
+				<skill><mul>0.80</mul></skill>
 			</growth>
 		</skill>
 	</father>

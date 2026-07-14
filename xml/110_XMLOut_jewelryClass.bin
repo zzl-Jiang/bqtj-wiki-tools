@@ -118,5 +118,38 @@
 						<skill><mul>0.5</mul></skill>
 					</growth>
 				</skill>
+				
+		
+				
+		<equip lv="1" maxLv="3" skillArr="soulbindPendant_jewelry" baseLabel="soulbindPendant" cnName="束魂坠" addObjJson="{'damageMul':0.14}" composeMustNum="150" iconLabel="ThingsIcon/soulbindPendant" />
+				<skill>
+					<name>soulbindPendant_jewelry</name>
+					<cnName>束魂</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+					
+					<changeText>眩晕时间：[duration]秒</changeText>
+					<conditionType>passive</conditionType>
+					<condition>killTarget</condition>
+					<otherConditionArr>soulbindPendant</otherConditionArr>
+					<target>me,range,enemy</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>soulbindPendant</effectType>
+					<mul>0.75</mul><!-- 降低防御力 -->
+					<secMul>0.01</secMul><!-- 杀小怪概率 -->
+					<range>99999</range>
+					<duration>6</duration>
+					
+					<targetEffectImg name="yearSheepSkill_point"/>
+					<stateEffectImg name="pullAttackHit_state"/>
+					<stateEffectImg2 name="FoggyShakeHit_state"/>
+					<description>击杀敌人后有[secMul]的几率使全场敌人眩晕[duration]秒，并降低[1-mul]的防御力，无视技能免疫。击杀首领则概率将上升为100%。</description>
+					<growth>
+						<skill><duration>6</duration></skill>
+						<skill><duration>8</duration></skill>
+						<skill><duration>10</duration></skill>
+						<skill><duration>12</duration></skill>
+						<skill><duration>14</duration></skill>
+					</growth>
+				</skill>
 	</father>
 </data>

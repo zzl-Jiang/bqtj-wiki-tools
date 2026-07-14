@@ -86,7 +86,7 @@
 	
 		<![CDATA[  觉醒  ]]>
 		<skill name="觉醒-生命值低于5%">
-			<name>crazyMad</name>
+			<name>crazyMad</name><iconUrl36>SkillIcon/crazy_hero_36</iconUrl36>
 			<cnName>觉醒</cnName><wantDescripB>1</wantDescripB>
 			<!--英雄技能属性------------------------------------------------------------ -->
 			<cd>50</cd><firstCd>45</firstCd>

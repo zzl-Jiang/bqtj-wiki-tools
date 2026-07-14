@@ -26,7 +26,7 @@
 			<maxVx>7</maxVx>
 			<!-- AI属性 -->
 			<nextAttackTime>0</nextAttackTime>
-			<bossSkillArr>fightBackBulletX,missile_Sentry,offAllSkill5,moreBullet,invincibleEmp,weaponEmp,noUnderMulHurt,spellImmunityMax,meltFlamerPurgold</bossSkillArr>
+			<bossSkillArr>fightBackBulletX,offAllSkill5,moreBullet,invincibleEmp,weaponEmp,noUnderMulHurt,spellImmunityMax,meltFlamerPurgold</bossSkillArr>
 			<!-- 攻击数据 -->
 			<hurtArr>
 				<hurt>

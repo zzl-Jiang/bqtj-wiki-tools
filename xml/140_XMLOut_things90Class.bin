@@ -251,6 +251,17 @@
 				[n]成就>肉鸽模式
 			</description>
 		</things>
+		<things cnName="无双能石">
+			<name>demSkillStone</name>
+			<cnName>无双能石</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>NewIcon/demSkillStone</iconUrl><!-- 技能图标 -->
+			<description>
+				学习角色、载具的无双技能所需材料。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]击毙仙草镇18号首领“旺达”。
+			</description>
+			<loveD num="0"/>
+		</things>
 		<things cnName="氩晶">
 			<name>yaGem</name>
 			<cnName>氩晶</cnName><addDropDefineB>1</addDropDefineB>
@@ -271,6 +282,7 @@
 			<description>
 				部分武器进化所需材料。
 				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]击毙溪山东首领“氩星吞噬者”。
 				[n]反客任务。
 				[n]太空成就。
 			</description>
@@ -603,7 +615,7 @@
 			<cnName>锁怪卡</cnName>
 			<iconUrl>NewIcon/lockEnemyCard</iconUrl><!-- 技能图标 -->
 			<effectD type="skill" skillArr="lockEnemyCard" useInLevelB="1" levelUseLimitNum="1"  limit="onlyUnionBattle" />
-			<description>怪物的出生点有80%的概率被锁定在一个区域（每个地图不同，有时光洞特效），当前关卡有效。只能在军队争霸中使用。</description> 
+			<description>怪物的出生点被锁定在一个区域（每个地图不同，有时光洞特效，小地图也有标志），当前关卡有效。只能在军队争霸中使用。</description> 
 			<loveD num="0"/><smeltD type="festival" />
 		</things>
 		
