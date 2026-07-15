@@ -336,7 +336,7 @@ def _generate_suit_chips(things_pool: dict) -> int:
                 chip = black_template.copy()
                 chip['name'] = chip_name
                 chip['cnName'] = f'{cn_val}碎片'
-                chip['iconUrl'] = f'ThingsIcon/{chip_name}'
+                chip['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
                 chip['itemsLevel'] = items_level
                 chip['smeltD'] = _get_smelt_config(items_level, 'black')
                 chip = ValueConverter.prepare_output(chip, "爆枪突击", "things")
