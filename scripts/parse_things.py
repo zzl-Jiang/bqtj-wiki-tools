@@ -328,7 +328,7 @@ def _generate_suit_chips(things_pool: dict) -> int:
                     existing['smeltD'] = _get_smelt_config(items_level, 'black')
                     existing['btnList'] = ['compose', 'composeNum']
                     if not existing.get('iconUrl'):
-                        existing['iconUrl'] = f'ThingsIcon/{chip_name}'
+                        existing['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
                     existing['_patched'] = True
                     print(f"  [补丁/套装碎片] {chip_name} (已存在，已更新 smeltD/btnList)")
                     continue
@@ -650,7 +650,108 @@ def run_things_processor():
         0: "Data:ThingsItemData.json",
         1: json.dumps(things_item_json, ensure_ascii=False)
     }])
-    pd.concat([existing_df, new_row], ignore_index=True).to_excel(excel_path, index=False, header=False)
+    df_to_save = pd.concat([existing_df, new_row], ignore_index=True)
+
+    # --- 生成 SmeltList（熔炼数据整合 JSON） ---
+    CATEGORY_MAP = {
+        "general": "武器装备相关",
+        "weapon_fragments": "武器碎片",
+        "equipment_fragments": "装备碎片",
+        "other_fragments": "其他碎片",
+        "vehicle_fragments": "载具碎片",
+        "chests": "宝箱",
+        "materials": "材料",
+        "pet_related": "宠物相关",
+        "festival_items": "节日物品",
+        "silver_coin_goods": "银币商品",
+    }
+
+    def _classify_smelt(data):
+        """根据物品数据返回 SmeltList 分类键"""
+        father = data.get('father', '')
+        sd = data.get('smeltD', {})
+        sd_type = sd.get('type', '')
+        st = data.get('smeltType', '')
+
+        # smeltD.type 明确的情况
+        if sd_type == 'armsEquip':
+            return 'general'
+        if sd_type == 'pet':
+            return 'pet_related'
+        if sd_type == 'vehicle':
+            return 'vehicle_fragments'
+        if sd_type == 'armsChip':
+            if data.get('secType') == 'equip':
+                return 'equipment_fragments'
+            if father in ('blackChip', 'rareChip'):
+                return 'weapon_fragments'
+            if father == 'skillChip':
+                return 'other_fragments'
+            if father == 'normalChip':
+                return 'other_fragments'
+            return 'weapon_fragments'
+
+        # 无 smeltD.type，靠 father / smeltType / cnName 推断
+        cn = data.get('cnName', '')
+        if '宝箱' in cn or '蛋箱' in cn or '礼盒' in cn or '礼包' in cn:
+            return 'chests'
+        if '节日' in cn or '圣诞' in cn or '元旦' in cn or '春节' in cn or '中秋' in cn or '月饼' in cn:
+            return 'festival_items'
+        if st == 'memoryCoin' or '银币' in cn:
+            return 'silver_coin_goods'
+        if st == 'stone' or father == 'materials':
+            return 'materials'
+        if father == 'props':
+            return 'materials'
+        return 'materials'
+
+    smelt_groups = defaultdict(list)
+    for key, data in things_pool.items():
+        sd = data.get('smeltD')
+        if not sd or sd.get('price') is None:
+            continue
+        entry = {
+            'name': data.get('name', ''),
+            'cnName': data.get('cnName', ''),
+            'smeltD': {k: v for k, v in sd.items()},
+        }
+        st = data.get('smeltType')
+        if st:
+            entry['smeltType'] = st
+        cat = _classify_smelt(data)
+        smelt_groups[cat].append(entry)
+
+    # 按 grade 排序各组内条目
+    for cat in smelt_groups:
+        smelt_groups[cat].sort(key=lambda x: x['smeltD'].get('grade', 0))
+
+    # 固定 father 输出顺序
+    FATHER_ORDER = ["general", "weapon_fragments", "equipment_fragments", "other_fragments",
+                    "vehicle_fragments", "chests", "materials", "pet_related",
+                    "festival_items", "silver_coin_goods"]
+    father_list = []
+    for cat in FATHER_ORDER:
+        if cat in smelt_groups:
+            father_list.append({
+                "@name": cat,
+                "@cnName": CATEGORY_MAP.get(cat, cat),
+                "item": smelt_groups[cat]
+            })
+
+    smelt_json = {"data": {"father": father_list}}
+    smelt_path = os.path.join(OUTPUT_DIR, 'SmeltList.json')
+    with open(smelt_path, 'w', encoding='utf-8') as f:
+        json.dump(smelt_json, f, ensure_ascii=False, indent=2)
+    smelt_total = sum(len(v) for v in smelt_groups.values())
+    print(f"SmeltList JSON: {smelt_path} ({smelt_total} 条)")
+
+    # 追加 SmeltList 到 Excel
+    new_row2 = pd.DataFrame([{
+        0: "Data:SmeltList.json",
+        1: json.dumps(smelt_json, ensure_ascii=False)
+    }])
+    df_to_save = pd.concat([df_to_save, new_row2], ignore_index=True)
+    df_to_save.to_excel(excel_path, index=False, header=False)
 
     # 最终统计
     total_patched = (patch_stats.get('black_chips', 0) + patch_stats.get('rare_chips', 0) +
