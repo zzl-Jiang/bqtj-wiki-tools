@@ -385,7 +385,7 @@
 		</skill>
 					<bullet>
 						<name>superLightWaveBullet</name>
-						<cnName>超级光波</cnName>
+						<cnName>无双光波</cnName>
 						<hitType>longLine</hitType>
 						<attackType>holy</attackType>
 						<!--武器属性------------------------------------------------------------ -->
@@ -406,7 +406,7 @@
 					</bullet>
 					<skill>
 						<name>superLightWaveHit</name><noCopyB>1</noCopyB><noSkillDodgeB>1</noSkillDodgeB>
-						<cnName>全域光波-击中</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+						<cnName>无双光波-击中</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
 						<!--触发条件与目标------------------------------------------------------------ -->
 						<conditionType>passive</conditionType>
 						<condition>hit</condition><changeHurtB>1</changeHurtB>

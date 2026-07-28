@@ -1068,7 +1068,7 @@
 			<!--图像------------------------------------------------------------ -->
 			<stateEffectImg partType="mouth" con="filter">skillEffect/screaming_hero_target</stateEffectImg>
 			<targetEffectImg soundUrl="sound/magicHit1" partType="mouth" con="add">skillEffect/screaming_hero</targetEffectImg>
-			<description>击中后有[effectProArr.0]概率恐惧目标并造成额外[mul]的伤害，并减速目标。</description>
+			<description>击中后有[effectProArr.0]概率恐惧目标并造成额外[mul]的伤害。</description>
 		</skill>
 		
 		

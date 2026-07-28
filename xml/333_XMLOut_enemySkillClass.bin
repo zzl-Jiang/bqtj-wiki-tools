@@ -155,7 +155,7 @@
 		<skill index="0" name="技能免疫">
 			<name>State_SpellImmunity</name>
 			<cnName>技能免疫</cnName>
-			<showInLifeBarB>1</showInLifeBarB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			
 			<conditionType>passive</conditionType>
 			<condition>add</condition>
@@ -168,7 +168,7 @@
 		</skill>
 		<skill name="技能免除">
 			<name>spellImmunityMax</name>
-			<cnName>技能免除</cnName>
+			<cnName>技能免除</cnName><wantDescripB>1</wantDescripB>
 			<showInLifeBarB>1</showInLifeBarB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB>
 			
 			<conditionType>passive</conditionType>
@@ -189,7 +189,7 @@
 		</skill>
 		<skill index="0" name="永久无敌">
 			<name>State_Invincible</name>
-			<cnName>永久无敌</cnName>
+			<cnName>永久无敌</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
 			
 			<conditionType>passive</conditionType>
 			<condition>add</condition>
@@ -201,7 +201,7 @@
 			<description>永久无敌。</description>
 		</skill>
 		<skill index="0" name="永久无敌且不受碰撞">
-			<name>State_InvincibleThrough</name>
+			<name>State_InvincibleThrough</name><ignoreNoSkillB>1</ignoreNoSkillB>
 			<cnName>永久无敌</cnName><noBeClearB>1</noBeClearB>
 			
 			<conditionType>passive</conditionType>
@@ -433,7 +433,7 @@
 		</skill>
 		
 		<skill>
-			<name>noUnderMulHurt</name>
+			<name>noUnderMulHurt</name><wantDescripB>1</wantDescripB>
 			<cnName>钢骨</cnName><showInLifeBarB>1</showInLifeBarB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
 			
 			<conditionType>passive</conditionType>
@@ -2413,7 +2413,7 @@
 			<effectType>missile_Sentry</effectType>
 			<mul>0.1</mul>
 			
-			<description>每次攻击都目标造成最大生命值[mul]的伤害。</description>
+			<description>每次攻击都会对目标造成最大生命值[mul]的伤害。</description>
 		</skill>
 	</father>	
 	<father name="enemy" cnName="伏地尸">

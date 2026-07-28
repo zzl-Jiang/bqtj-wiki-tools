@@ -319,8 +319,15 @@
 		<things cnName="死神碎片">
 			<name>sickleScythe_1</name>
 			<cnName>死神碎片</cnName>
-			<btnList>compose</btnList>
+			<btnList>compose,composeNum</btnList>
 			<iconUrl>weapon/sickleScythe_1_chip</iconUrl><!-- 技能图标 -->
+			<description></description>
+		</things>
+		<things cnName="反骨盾碎片">
+			<name>backBuckler_1</name>
+			<cnName>反骨盾碎片</cnName>
+			<btnList>compose,composeNum</btnList>
+			<iconUrl>weapon/backBuckler_1_chip</iconUrl><!-- 技能图标 -->
 			<description></description>
 		</things>
 	</father>

@@ -74,7 +74,7 @@
 			<duration>6</duration>
 			<!--图像------------------------------------------------------------ -->
 			<stateEffectImg partType="body" con="add">specialGun/yearRabbitBuff</stateEffectImg>
-			<description>气泡有[effectType.0]的几率会把怪物包住，让它攻击伤害降低至0.001%，持续[duration]秒，无视技能免疫。99级主线任务、修罗模式效果减弱。</description>
+			<description>气泡有[effectProArr.0]的几率会把怪物包住，让它攻击伤害降低至0.001%，持续[duration]秒，无视技能免疫。99级主线任务、修罗模式效果减弱。</description>
 		</skill>
 	</father>
 	

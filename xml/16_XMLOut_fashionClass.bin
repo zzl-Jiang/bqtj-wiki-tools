@@ -285,7 +285,9 @@
 			<image name="girlWing" cnName="凌空时装" skillArr="girlWing" sex="female" hd="2" mp4Arr="girlWing1,girlWing2">
 				<addObjJson>{'dpsAll':0.35,"weaponMul":0.4,'lifeAll':0.40,"blackEquipDropPro":0.60,"specialPartsDropPro":0.4,"madheartDropNum":1}</addObjJson>
 			</image>
-			
+			<image name="mingji" cnName="冥姬时装" skillArr="yanluoSkill" sex="female" hd="1" mp4Arr="mingji2,mingji3" replaceWeaponType="sickle" weaponAction="yanluoAttack" >
+				<addObjJson>{'dpsAll':0.35,"weaponMul":0.25,'lifeAll':0.40,"blackEquipDropPro":0.8,"ranBlackArmsDropPro":0.6,"greenIsMax":0.1}</addObjJson>
+			</image>
 		</father>
 		
 	</gather>

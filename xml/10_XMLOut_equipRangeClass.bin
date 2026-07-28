@@ -1772,7 +1772,10 @@
 	<pro name="madheartDropNum" cnName="战神之心掉落" first="+" unit="个" info="同时会增加(掉落*250)的总上限。"></pro>
 	<pro name="yaStoneDropNum" cnName="氩石每周掉落" first="+" unit="个" info=""></pro>
 	<pro name="yaRockDropNum" cnName="氩岗岩每周掉落" first="+" unit="个" info=""></pro>
+	<pro name="greenIsMax" cnName="绿岛掉落总上限" first="+" unit="%" info="提升绿岛所有地图掉落的总上限。"></pro>
+	
 	<pro name="wilderKeyDay" cnName="秘境钥匙/每天" first="+" unit="个" info=""></pro>
+	
 	
 	
 	

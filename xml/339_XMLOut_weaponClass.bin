@@ -33,6 +33,7 @@
 		<equip lv="7" hurtMul="20" 			baseLabel="wolongStick" />
 		<equip lv="8" hurtMul="29" 			baseLabel="wolongStick" skillArr="weaponEmp" />
 		<equip lv="9" hurtMul="40" 		baseLabel="wolongStick" skillArr="weaponEmp,cutLife" iconLabel="weapon/wolongStick_4_icon" weaponUrl="weapon/wolongStick_4" />
+		<equip lv="10" hurtMul="60" 		baseLabel="wolongStick" skillArr="weaponEmp,cutLife2" iconLabel="weapon/wolongStick_5_icon" weaponUrl="weapon/wolongStick_5" />
 		
 		
 		<equip rareB="1" lv="1" hurtMul="27" 		baseLabel="saberDarts" proAddLv="3" hitNum="2" weaponType="darts" cnName="剑齿镖" armsType="pistol" anger="25" upgradeNum="3" description="[n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
@@ -63,6 +64,12 @@
 				<equip rareB="1" lv="3" hurtMul="39" 		skillArr="" baseLabel="sickleScythe" proAddLv="4" iconLabel="weapon/sickleScythe_2_icon" weaponUrl="weapon/sickleScythe_2"/>
 				<equip rareB="1" lv="4" hurtMul="57" 		skillArr="weaponEmp" baseLabel="sickleScythe" proAddLv="4" iconLabel="weapon/sickleScythe_3_icon" weaponUrl="weapon/sickleScythe_3"/>
 				<equip rareB="1" lv="5" hurtMul="70" 		skillArr="weaponEmp,cutLife" baseLabel="sickleScythe" proAddLv="4" iconLabel="weapon/sickleScythe_4_icon" weaponUrl="weapon/sickleScythe_4"/>
+		
+				
+		<equip cnName="反骨盾" rareB="1" lv="1" hurtMul="2"  		skillArr="backBucklerSkill" baseLabel="backBuckler"  	composeMustNum="70"   proAddLv="3" hitNum="1" weaponType="buckler"  armsType="rocket" anger="4" upgradeNum="3" layerIndex="2" description="[n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}[n]秘境“盾牌僵尸”"	/>
+									<equip rareB="1" lv="2" hurtMul="5" 		skillArr="backBucklerSkill" baseLabel="backBuckler" proAddLv="4" />
+									<equip rareB="1" lv="3" hurtMul="8" 		skillArr="backBucklerSkill" baseLabel="backBuckler" proAddLv="4" iconLabel="weapon/backBuckler_2_icon" weaponUrl="weapon/backBuckler_2"/>
+									<equip rareB="1" lv="4" hurtMul="10" 		skillArr="backBucklerSkill,weaponEmp" baseLabel="backBuckler" proAddLv="4" iconLabel="weapon/backBuckler_3_icon" weaponUrl="weapon/backBuckler_3"/>
 				
 		<![CDATA[活动]]>
 		<equip cnName="黄金铁锹" baseLabel="goldSpade" skillArr="goldSpadeSkill" iconLabel="weapon/goldSpade_icon_1" life="12" rareB="1" lv="1" hurtMul="25" proAddLv="6" weaponType="spade" armsType="shotgun" anger="50" angerAddMul="3.3" layerIndex="1" description="[n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}

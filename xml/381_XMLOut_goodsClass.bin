@@ -12,8 +12,9 @@
 			<goods name="pumpkinGoods" dataType="base" defineLabel="pumpkin" price="1000" num="2000" buyLimitNum="1" endTime="2025-12-15"/>
 			<goods cnName="缓时卡" name="slowTimeCard" price="10" dayBuyLimitNum="1" buyLimitNum="1"></goods>
 			]]>
-			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4584" dataType="fashion" inBagType="equip" cnName="凌空时装" name="girlWing"  price="1500" discount="0.8"><priceType>money</priceType></goods>
-			<goods  otherArr="hot,fashion" propId="4583" dataType="fashion" inBagType="equip" cnName="白狐时装" name="foxLingSuper"  price="1500" discount="0.8"><priceType>money</priceType></goods>
+			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4592" dataType="fashion" inBagType="equip" cnName="冥姬时装" name="mingji"  price="1500" discount="0.8"><priceType>money</priceType></goods>
+			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4591" dataType="fashion" inBagType="equip" cnName="凌空时装" name="girlWing"  price="1500"><priceType>money</priceType></goods>
+			<goods  otherArr="hot,fashion" propId="4593" dataType="fashion" inBagType="equip" cnName="白狐时装" name="foxLingSuper"  price="1500"><priceType>money</priceType></goods>
 			
 			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4575" dataType="fashion" inBagType="equip" cnName="噬原时装" name="phage"  price="1500" endTime="2026-8-31"><priceType>money</priceType></goods>
 			<goods  otherArr="hot,fashion" propId="4588" dataType="fashion" inBagType="equip" cnName="赤姬时装" name="mechaYingSuper"  price="1500"><priceType>money</priceType></goods>
@@ -170,7 +171,7 @@
 			
 			
 			<goods otherArr="hot" noOtherPathB="1" propId="4425" dataType="fashion" inBagType="equip" cnName="紫嫣小美时装" name="purpleMei" price="700"><priceType>money</priceType></goods>
-			<goods  otherArr="hot" noOtherPathB="1" propId="4481" dataType="fashion" inBagType="equip" cnName="白狐心零时装" name="foxLing"  price="1025" discount="0.8"><priceType>money</priceType></goods>
+			<goods  otherArr="hot" noOtherPathB="1" propId="4594" dataType="fashion" inBagType="equip" cnName="白狐心零时装" name="foxLing"  price="1000"><priceType>money</priceType></goods>
 			
 			<goods noOtherPathB="1" propId="4550" dataType="fashion" inBagType="equip" cnName="清凉心零时装" name="swimLing" price="800" discount="0.875"><priceType>money</priceType></goods>
 			<goods noOtherPathB="1" propId="4551" dataType="fashion" inBagType="equip" cnName="牛仔小樱时装" name="cowboyYing" price="800" discount="0.875"><priceType>money</priceType></goods>

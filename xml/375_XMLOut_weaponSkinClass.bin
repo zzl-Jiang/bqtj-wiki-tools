@@ -6,6 +6,7 @@
 			<body name="butcherBlade_2" evoLv="5" />
 			<body name="butcherBlade_3" evoLv="8" />
 			<body name="butcherBlade_4" evoLv="9" />
+			<body name="butcherBlade_5" evoLv="10" />
 			
 			<body cnName="图腾" name="totem" url="weapon/totem" icon="weapon/totem_icon" evoLv="8" />
 			<body name="phageNew" url="phageNew/weaponSp" icon="weapon/phage_icon" items="phageNew" />
@@ -38,6 +39,7 @@
 			<body name="moonDagger_2" evoLv="5" />
 			<body name="moonDagger_3" evoLv="8" />
 			<body name="moonDagger_4" evoLv="9" />
+			<body name="moonDagger_5" evoLv="10" />
 			<![CDATA[
 			<body cnName="银月"  name="silverDagger" url="weapon/silverDagger" icon="weapon/silverDagger_icon" evoLv="8" />
 			]]>
@@ -57,6 +59,7 @@
 			<body name="wolongStick_2" evoLv="5" />
 			<body name="wolongStick_3" evoLv="8" />
 			<body name="wolongStick_4" evoLv="9" />
+			<body name="wolongStick_5" evoLv="10" />
 			<body cnName="冰鱼" name="iceFish" url="weapon/iceFish" icon="weapon/iceFish_icon" evoLv="8" />
 			<![CDATA[
 			<body cnName="狼牙棒" name="langStick" url="weapon/langStick" icon="weapon/langStick_icon" evoLv="8" />
@@ -117,11 +120,21 @@
 			<body name="sickleScythe_3" evoLv="4" />
 			<body name="sickleScythe_4" evoLv="5" />
 			<body name="yanluo" url="yanluo/weaponSp" icon="yanluo/weaponSp_icon" items="yanluo" />
+			<body name="mingji" url="mingji/weaponSp" icon="mingji/weaponSp_icon" items="mingji" />
 			<![CDATA[
 			<body cnName="死亡之握" name="sickleScythe_2412a" evoLv="4"  author="【跑男团】椎名真昼"  au="original"/>
 			]]>
 			<body cnName="逆水游龙" name="sickleScythe2501" evoLv="4"  author="『逆龙』燕归"  au="original"/>
 			<body cnName="暗血征收" name="sickleScythe2506" evoLv="4"  author="我要困告了_(〃ω〃)"  au="original"/>
+		</father>
+		
+		<father cnName="反骨盾" name="backBuckler">
+			<body name="backBuckler_1" evoLv="1" />
+			<body name="backBuckler_2" evoLv="3" />
+			<body name="backBuckler_3" evoLv="4" />
+			<![CDATA[
+			<body name="backBuckler_4" evoLv="5" />
+			]]>
 		</father>
 		<![CDATA[
 		<father cnName="月刺" name="">

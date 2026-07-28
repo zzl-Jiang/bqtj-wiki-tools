@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
 	<father name="weaponSkill" cnName="副手技能">
+		
+		
+		<skill>
+			<name>backBucklerSkill</name><wantDescripB>1</wantDescripB>
+			<cnName>盾反</cnName>
+			<ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit_before</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>backBucklerUnder</effectType><effectFather>weapon</effectFather>
+			
+			<!--图像 ------------------------------------------------------------ -->
+			<pointEffectImg name="backBucklerWave"/><!-- 眩晕特效备份 -->
+			<otherEffectImg name="Antimatter_hammer_state"/><!-- 眩晕特效备份 -->
+			<description>举盾期间，只受近战伤害，并且近战伤害降低70%。在举盾的0.35秒内正面受到敌人的近战攻击，则敌人会被打断并进入眩晕状态2秒，无视无敌。</description>
+		</skill>
+				<skill>
+					<name>backBucklerHammer</name>
+					<cnName>盾反-眩晕</cnName>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>bucklerDizziness</effectType><effectFather>weapon</effectFather>
+					<duration>2.3</duration>
+					<!--图像------------------------------------------------------------ -->
+					<stateEffectImg name="Antimatter_hammer_state"/><![CDATA[特效同时放在backBucklerSkill中]]>
+					<description>使目标陷入眩晕状态，持续[duration]秒。</description>
+				</skill>
+				
+		
 		<skill>
 			<cnName>斩魂</cnName><wantDescripB>1</wantDescripB>
 			<name>cutLife</name><ignoreImmunityB>1</ignoreImmunityB>
@@ -17,8 +53,38 @@
 			<pointEffectImg name="yellowHitSilence"/>
 			<description>每刀降低敌人一定的总生命值上限（每个副手不同），最多降低[secMul]。</description>
 		</skill>
-		
-		
+		<skill>
+			<cnName>斩魂</cnName><wantDescripB>1</wantDescripB>
+			<name>cutLife</name><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>hurtIsNowWeapon,cutLifeLess</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>cutLife</effectType>
+			<secMul>0.26</secMul>
+			<!--图像------------------------------------------------------------ -->
+			<pointEffectImg name="yellowHitSilence"/>
+			<description>每刀降低敌人一定的总生命值上限（每个副手不同），最多降低[secMul]。</description>
+		</skill>
+		<skill>
+			<cnName>断魂</cnName><wantDescripB>1</wantDescripB>
+			<name>cutLife2</name><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>hurtIsNowWeapon,cutLifeLess</otherConditionArr>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>cutLife</effectType>
+			<secMul>0.30</secMul>
+			<!--图像------------------------------------------------------------ -->
+			<pointEffectImg name="yellowHitSilence"/>
+			<description>每刀降低敌人一定的总生命值上限（每个副手不同），最多降低[secMul]。</description>
+		</skill>
 		
 		
 		

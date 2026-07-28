@@ -27,6 +27,8 @@
 			<extraAIClassLabel>Po_AIExtra</extraAIClassLabel>
 			<!-- 技能 -->
 			<skillArr>ZombieShieldShield</skillArr>
+			<bossSkillArr>noUnderMulHurt</bossSkillArr>
+			<wilderSkillArr>awakeArmor,State_SpellImmunity,missile_Sentry,meltFlamerPurgold,cardNoAttackSkill</wilderSkillArr>
 			<!-- 攻击数据 -->
 			<hurtArr>
 				<hurt>
@@ -68,6 +70,25 @@
 						<mul>4</mul><!-- 指定动作的前后几帧可以保护 -->
 						<duration>999999999</duration>
 					</skill>
+					
+		<skill>
+			<name>awakeArmor</name>
+			<cnName>清醒护盾</cnName>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB><noBeClearB>1</noBeClearB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>awakeArmor</effectType>
+			<mul>0.1</mul>
+			<duration>9999999</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<stateEffectImg name="invincibleShield2"/>
+			<description>不处于眩晕时，受到的伤害降低[1-mul]。处于眩晕时，受到的伤害提升200%。</description>
+		</skill>
 	</father>
 	
 	

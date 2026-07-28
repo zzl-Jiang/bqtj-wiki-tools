@@ -24,7 +24,7 @@
 						<unit cnName="血蟒重甲兵" num="2"/>
 					</unitOrder>
 					<unitOrder id="enemy4">
-						<unit cnName="飞天狗" unitType="boss" lifeMul="1000000" dpsMul="2"/>
+						<unit cnName="飞天狗" unitType="boss" lifeMul="100" dpsMul="2"/>
 					</unitOrder>
 				</unitG>
 				<!-- 事件集************************************************ -->

@@ -7,7 +7,7 @@
 			<name>Striker</name>
 			<cnName>我</cnName>
 			<raceType>human</raceType>
-			<swfUrl>swf/hero/Striker358.swf</swfUrl>
+			<swfUrl>swf/hero/Striker365.swf</swfUrl>
 			<!-- 基本系数 -->
 			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
 			<!-- 图像 -->
@@ -27,6 +27,7 @@
 				,swordAttack,swordAfterAttack,bladeAttack,daggerAttack,stickAttack,ghost_swordAttack,great_stickAttack,sec_bladeAttack,sec_daggerAttack,sec_stickAttack,dartsAttack,shovelsAttack,spadeAttack
 				,shotgunBladeAttack
 				,sickleAttack
+				,bucklerAttack
 				,yanluoAttack
 				,equipStand
 				,BlueMotoRide,RedMotoRide,WatchEagleRide
@@ -56,15 +57,16 @@
 			<moreD dpsMul="0.8" underHurtMul="0.4" studySkillLvAdd="1" firstLv="6" />
 			<hurtArr>
 				<hurt>
-					<imgLabel>normalAttack1</imgLabel>
+					<imgLabel>normalAttack1</imgLabel><![CDATA[徒手]]>
 					<hurtRatio>0.15</hurtRatio>
 					<shakeValue>4</shakeValue>
 					<attackType>direct</attackType>
 					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
 				</hurt>
 				
-				<hurt><!-- 镰刀攻击 -->
-					<imgLabel>sickleAttack</imgLabel><ingfollowB>1</ingfollowB>
+				<hurt>
+					<imgLabel>sickleAttack</imgLabel><![CDATA[镰刀]]>
+					<ingfollowB>1</ingfollowB>
 					<hurtRatio>0.05</hurtRatio>
 					<shakeValue>4</shakeValue><beatBack>2</beatBack>
 					<attackType>direct</attackType>
@@ -73,7 +75,7 @@
 				
 				
 				<hurt>
-					<imgLabel>bladeAttack</imgLabel>
+					<imgLabel>bladeAttack</imgLabel><![CDATA[屠夫]]>
 					<hurtRatio>0.3</hurtRatio>
 					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
 					<attackType>direct</attackType>
@@ -81,7 +83,7 @@
 				</hurt>
 				
 				<hurt>
-					<imgLabel>daggerAttack</imgLabel>
+					<imgLabel>daggerAttack</imgLabel><![CDATA[月刺]]>
 					<hurtRatio>0.3</hurtRatio>
 					<shakeValue>8</shakeValue><beatBack>3</beatBack><screenShakeValue>6</screenShakeValue>
 					<attackType>direct</attackType>
@@ -96,7 +98,7 @@
 				</hurt>
 				
 				<hurt>
-					<imgLabel>stickAttack</imgLabel>
+					<imgLabel>stickAttack</imgLabel><![CDATA[棍棒]]>
 					<hurtRatio>0.3</hurtRatio>
 					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
 					<attackType>direct</attackType>
@@ -110,14 +112,14 @@
 					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
 				</hurt>
 				<hurt>
-					<imgLabel>dartsAttack</imgLabel>
+					<imgLabel>bucklerAttack</imgLabel><![CDATA[反骨盾]]>
 					<hurtRatio>0.2</hurtRatio>
-					<bulletLabel>saberDartsBullet</bulletLabel>
-					<grapRect>-660,-150,560,190</grapRect>
-					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
 					<attackType>direct</attackType>
-					<hitImgUrl con="add" raNum="30" soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+					<hitImgUrl name="oreWormHit"/>
 				</hurt>
+				
+				
 				
 				
 				
@@ -211,7 +213,7 @@
 			<cnName>小樱</cnName>
 			<sex>female</sex>
 			<raceType>human</raceType>
-			<swfUrl>swf/hero/Girl361.swf</swfUrl>
+			<swfUrl>swf/hero/Girl365.swf</swfUrl>
 			<description>一位温柔可爱、性格单纯的女孩，她将成为爆枪联盟的第一位女队员，但身世却一直是个迷。</description>
 			<!-- 基本系数 -->
 			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
@@ -230,6 +232,8 @@
 				,swordAttack,swordAfterAttack,bladeAttack,daggerAttack,stickAttack,dartsAttack,shovelsAttack,spadeAttack
 				,snow_daggerAttack
 				,fox_dartsAttack
+				,bucklerAttack
+				,yanluoAttack
 				,shotgunBladeAttack
 				,sickleAttack
 				,officer_bladeAttack
@@ -372,6 +376,14 @@
 					<attackType>direct</attackType>
 					<hitImgUrl name="purpleHit"/>
 				</hurt>
+				<hurt>
+					<imgLabel>bucklerAttack</imgLabel><![CDATA[反骨盾]]>
+					<hurtRatio>0.2</hurtRatio>
+					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl name="oreWormHit"/>
+				</hurt>
+				
 				
 				<hurt>
 					<imgLabel>snow_daggerAttack</imgLabel><![CDATA[雪影-月刺，3刀，实际单刀伤害*2（WeaponDefine.hitNum）]]>
@@ -410,7 +422,14 @@
 					<attackType>direct</attackType>
 					<hitImgUrl name="purpleHit"/>
 				</hurt>
-				
+				<hurt>
+					<imgLabel>yanluoAttack</imgLabel><![CDATA[冥姬-死神，8刀，实际单刀伤害*8（WeaponDefine.hitNum）]]>
+					<ingfollowB>1</ingfollowB>
+					<hurtRatio>0.018</hurtRatio>
+					<shakeValue>4</shakeValue><beatBack>2</beatBack>
+					<attackType>direct</attackType>
+					<hitImgUrl name="yanluoHit"/>
+				</hurt>
 				
 			</hurtArr>
 		</body>	

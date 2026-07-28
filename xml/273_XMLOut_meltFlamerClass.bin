@@ -111,7 +111,7 @@
 		
 		<skill>
 			<name>meltFlamerPurgold</name><noRandomListB>1</noRandomListB>
-			<cnName>化锁</cnName><showInLifeBarB>1</showInLifeBarB>
+			<cnName>化锁</cnName><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>passive</conditionType>
 			<condition>no</condition>

@@ -95,7 +95,7 @@
 		<body cnName="元素波" name="orangeWaveBoom" con="add" raNum="4">boomEffect/orangeWave</body>
 		<body cnName="蓝色波" name="blueWaveBoom" con="add" raNum="4">boomEffect/blueWave</body>
 		<body cnName="红色撞击波" name="redWaveBoom" con="add" raNum="7">boomEffect/redWave</body>
-		<body cnName="空气炮波" name="airCannonWave" con="add" raNum="11" ranPro="5" ranAn="360">boomEffect/blueWaveBig</body>
+		<body cnName="盾反波" name="backBucklerWave" con="add" raNum="11" soundUrl="hitSound/metalHit" soundRan="3">boomEffect/blueWaveBig</body>
 		<body cnName="空气炮爆" name="airCannonBoom" con="add">boomEffect/orangeWaveBoom</body>
 		<body cnName="截停炮爆" name="stopCannonBoom" con="add">boomEffect/blueWaveBoom</body>
 		
@@ -362,6 +362,8 @@
 		
 		<body cnName="死神-右" name="sickleAttack_er" con="add">Striker/sickleAttack_er</body>
 		<body cnName="死神-左" name="sickleAttack_el" con="add">Striker/sickleAttack_el</body>
+		
+		<body cnName="反骨盾" name="bucklerAttack_e" con="add">Striker/bucklerAttack_e</body>
 		
 		<body cnName="阎罗特效" name="yanluoAttack_e" con="add">yanluo/yanluoAttack_e</body>
 		<body cnName="阎罗特效2" name="yanluoAttack_e2">yanluo/yanluoAttack_e2</body>
