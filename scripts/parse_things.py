@@ -111,6 +111,24 @@ def _get_smelt_config(items_level: int, color: str) -> Dict[str, Any]:
         config["grade"] = -1
     return config
 
+
+def _get_equip_smelt_config(items_level: int) -> Dict[str, Any]:
+    """装备碎片 smeltD 配置（基于 AS3 inBlackEquipFatherArr 逻辑）"""
+    config = {"type": "equipChip", "grade": 1, "price": 2}
+    if items_level < 86:
+        config["price"] = 2
+        config["grade"] = 1
+    elif items_level < 91:
+        config["price"] = 10
+        config["grade"] = 2
+        config["maxNum"] = 1
+        config["addType"] = "armsEquip"
+    else:
+        config["price"] = 1
+    if items_level >= 91:
+        config["grade"] = -1
+    return config
+
 # ============================================================
 #  数据加载（外部 JSON）
 # ============================================================
@@ -165,8 +183,10 @@ def _load_suit_data() -> Dict[str, list]:
 # ============================================================
 
 def _patch_black_chip(thing_data: dict, arms_data: dict) -> bool:
-    """修补黑色武器碎片数据"""
+    """修补黑色武器碎片数据（跳过装备碎片，由 _generate_suit_chips 处理）"""
     name = thing_data.get('name')
+    if thing_data.get('secType') == 'equip':
+        return False
     if name not in arms_data:
         return False
     arm = arms_data[name]
@@ -325,7 +345,7 @@ def _generate_suit_chips(things_pool: dict) -> int:
                     existing = things_pool[chip_name]
                     existing['secType'] = 'equip'
                     existing['itemsLevel'] = items_level
-                    existing['smeltD'] = _get_smelt_config(items_level, 'black')
+                    existing['smeltD'] = _get_equip_smelt_config(items_level)
                     existing['btnList'] = ['compose', 'composeNum']
                     if not existing.get('iconUrl'):
                         existing['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
@@ -338,7 +358,7 @@ def _generate_suit_chips(things_pool: dict) -> int:
                 chip['cnName'] = f'{cn_val}碎片'
                 chip['iconUrl'] = f'ThingsIcon/{chip_name}Icon'
                 chip['itemsLevel'] = items_level
-                chip['smeltD'] = _get_smelt_config(items_level, 'black')
+                chip['smeltD'] = _get_equip_smelt_config(items_level)
                 chip = ValueConverter.prepare_output(chip, "爆枪突击", "things")
                 things_pool[chip_name] = chip
                 generated += 1
