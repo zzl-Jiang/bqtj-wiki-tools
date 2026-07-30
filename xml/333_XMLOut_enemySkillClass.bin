@@ -189,7 +189,7 @@
 		</skill>
 		<skill index="0" name="永久无敌">
 			<name>State_Invincible</name>
-			<cnName>永久无敌</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>永久无敌</cnName><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB>
 			
 			<conditionType>passive</conditionType>
 			<condition>add</condition>

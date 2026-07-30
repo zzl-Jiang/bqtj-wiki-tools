@@ -58,6 +58,7 @@
 		
 	</father>
 	<father name="things" cnName="物品">
+		<body name="copyThingsData" cnName="复制物品数量数据"/>
 		<body name="addAllThings" cnName="添加所有物品"  input="num"  string="1"/>
 		<body name="addAllKey" cnName="添加所有钥匙"  input="num"  string="100"/>
 		<body name="addPartsAll" cnName="添加所有零件" input="str"  string="72,10"  inputTitle="输入格式“等级,个数”"/>

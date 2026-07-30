@@ -112,6 +112,15 @@
 					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
 				</hurt>
 				<hurt>
+					<imgLabel>dartsAttack</imgLabel><![CDATA[剑齿镖]]>
+					<hurtRatio>0.2</hurtRatio>
+					<bulletLabel>saberDartsBullet</bulletLabel>
+					<grapRect>-171,-100,128,120</grapRect>
+					<shakeValue>10</shakeValue><beatBack>4</beatBack><screenShakeValue>8</screenShakeValue>
+					<attackType>direct</attackType>
+					<hitImgUrl con="add" raNum="30" soundUrl="sound/body_hit">bladeHitEffect/blood</hitImgUrl>
+				</hurt>
+				<hurt>
 					<imgLabel>bucklerAttack</imgLabel><![CDATA[反骨盾]]>
 					<hurtRatio>0.2</hurtRatio>
 					<shakeValue>12</shakeValue><beatBack>5</beatBack><screenShakeValue>10</screenShakeValue>
@@ -321,7 +330,7 @@
 					<hitImgUrl con="add" raNum="30" soundUrl="Striker/hit1">bladeHitEffect/blood</hitImgUrl>
 				</hurt>
 				<hurt>
-					<imgLabel>dartsAttack</imgLabel>
+					<imgLabel>dartsAttack</imgLabel><![CDATA[剑齿镖]]>
 					<hurtRatio>0.2</hurtRatio>
 					<bulletLabel>saberDartsBullet</bulletLabel>
 					<grapRect>-171,-100,128,120</grapRect>

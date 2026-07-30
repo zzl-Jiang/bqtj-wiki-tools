@@ -247,7 +247,7 @@
 					<extraValueType>nowArmsDpsOrNormal</extraValueType>
 					<duration>25</duration>
 					<!-- 子弹所需 -->
-					<obj>"cnName":"战神","num":1,"lifeMul":1000000000,"dpsMul":25,"mulByFatherB":1,"maxNum":1,"skillArr":["State_Invincible","moreBullet","crazy_pet_9","offBossAtten","madArmsAttack","desertedHalo_enemy","madCloseLightning","findHide","summonShortLife","MadbossUnder"]</obj>
+					<obj>"cnName":"战神","num":1,"lifeMul":1000000000,"dpsMul":25,"mulByFatherB":1,"maxNum":1,"skillArr":["State_Invincible","moreBullet","noUnderMulHurt","meltFlamerPurgold","crazy_pet_9","offBossAtten","madArmsAttack","desertedHalo_enemy","madCloseLightning","findHide","summonShortLife","MadbossUnder"]</obj>
 					<!--图像------------------------------------------------------------ -->
 					<meEffectImg noFollowB="1" soundUrl="sound/vehicleFit" con="add">generalEffect/vehicleFit</meEffectImg>
 					<description>身穿全套战神装，在受到必亡伤害时将变身无敌战神（拥有超级散射技能）！持续[duration]秒，最短触发间隔[minTriggerT]秒。主线支线任务、竞技场无效。</description>
