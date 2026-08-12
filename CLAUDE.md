@@ -44,8 +44,8 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
   - Excel 更新表，包含ArmsItemData.json（`data/arms/武器数据更新_*.xlsx`）
 - `parse_skills.py` - 处理具有 father/skill 层级结构的技能数据，包含重名检测和报告功能
 - `parse_things.py` - 处理物品数据（碎片、材料等），支持 gift 等特殊子标签解析，包含重名检测、报告功能和武器碎片自动补丁
-- `patch_things.py` - 兼容入口，直接调用 parse_things.py 的完整流程
-- `parse_body.py` - 处理角色数据，支持嵌套的 hurtArr 攻击数据解析，包含重名检测和报告功能
+- `patch_things.py` - 兼容入口，直接调用 parse_things.py 的完整流程，并处理ItemData与熔炼相关的SmeltData
+- `parse_body.py` - 处理角色数据，支持嵌套的 hurtArr 攻击数据解析，包含重名检测和报告功能，并处理ItemData
 - `parse_equip.py` - 处理装备数据（饰品、护盾、载具、副手），支持自闭合属性型和含子元素型，包含重名检测、报告功能，以及为 Module:WeaponsItem 专用的 WeaponsItemData.json
 - `parse_bullet.py` - 处理非武器子弹数据（英雄技能子弹、载具子弹、敌方子弹等），通过 bodyImgRange/allImgRange 排除武器子弹，包含重名检测和报告功能
 - `parse_suit.py` - 处理套装数据，从 gather → father → image 层级提取套装定义，基于 gather 的 cnName 挂载分类，包含重名检测和报告功能

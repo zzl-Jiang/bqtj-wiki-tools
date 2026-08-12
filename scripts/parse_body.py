@@ -212,7 +212,35 @@ def run_body_processor():
     generate_summary(body_pool)
 
     # --- 保存 JSON + Excel ---
-    OutputWriter.write(body_pool, OUTPUT_DIR, 'Body', cn_label='角色')
+    timestamp = OutputWriter.write(body_pool, OUTPUT_DIR, 'Body', cn_label='角色')
+
+    # --- 生成 BodyItemData（精简查询 JSON） ---
+    import json, pandas as pd
+    body_items = [{'name': d.get('name', ''), 'cnName': d.get('cnName', '')} for d in body_pool.values()]
+    body_item_json = {
+        "data": {
+            "father": {
+                "@name": "BodyItem",
+                "@cnName": "角色标签",
+                "item": body_items
+            }
+        }
+    }
+
+    item_json_path = os.path.join(OUTPUT_DIR, 'BodyItemData.json')
+    with open(item_json_path, 'w', encoding='utf-8') as f:
+        json.dump(body_item_json, f, ensure_ascii=False, indent=2)
+    print(f"BodyItemData JSON: {item_json_path} ({len(body_items)} 条)")
+
+    # 追加到 Excel
+    excel_path = os.path.join(OUTPUT_DIR, f'角色数据更新_{timestamp}.xlsx')
+    existing_df = pd.read_excel(excel_path, header=None)
+    new_row = pd.DataFrame([{
+        0: "Data:BodyItemData.json",
+        1: json.dumps(body_item_json, ensure_ascii=False)
+    }])
+    pd.concat([existing_df, new_row], ignore_index=True).to_excel(excel_path, index=False, header=False)
+
     print(f"\n处理完成！提取角色总数: {len(body_pool)}")
 
 
