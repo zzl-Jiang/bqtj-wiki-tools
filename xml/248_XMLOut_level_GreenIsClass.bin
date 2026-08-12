@@ -1552,7 +1552,7 @@
 						<unit cnName="血蟒狙击兵" num="2"/>
 					</unitOrder>
 					<unitOrder id="enemy4">
-						<unit cnName="飞天狗" unitType="boss" lifeMul="50" dpsMul="2"/>
+						<unit cnName="飞天狗" unitType="boss" lifeMul="20" dpsMul="2"/>
 					</unitOrder>
 				</unitG>
 				<!-- 事件集************************************************ -->
@@ -1668,7 +1668,7 @@
 						<unit cnName="血蟒重甲兵" num="2"/>
 					</unitOrder>
 					<unitOrder id="enemy4">
-						<unit cnName="旺达" unitType="boss" lifeMul="2" dpsMul="1"/>
+						<unit cnName="旺达" unitType="boss" lifeMul="1" dpsMul="0.3"/>
 					</unitOrder>
 				</unitG>
 				<!-- 事件集************************************************ -->

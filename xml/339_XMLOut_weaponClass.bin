@@ -22,6 +22,7 @@
 		<equip lv="7" hurtMul="19" 			baseLabel="moonDagger" />
 		<equip lv="8" hurtMul="27" 			baseLabel="moonDagger" skillArr="weaponEmp" />
 		<equip lv="9" hurtMul="35" 		baseLabel="moonDagger" skillArr="weaponEmp,cutLife" iconLabel="weapon/moonDagger_4_icon" weaponUrl="weapon/moonDagger_4" />
+		<equip lv="10" hurtMul="52" 		baseLabel="moonDagger" skillArr="weaponEmp,cutLife2" iconLabel="weapon/moonDagger_5_icon" weaponUrl="weapon/moonDagger_5" />
 		
 		
 		<equip lv="1" hurtMul="2.5" 		baseLabel="wolongStick" hitNum="2" weaponType="stick" cnName="沃龙牌棍棒" armsType="rocket" anger="28" />

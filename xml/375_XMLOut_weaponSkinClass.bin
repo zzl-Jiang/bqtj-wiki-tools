@@ -6,8 +6,8 @@
 			<body name="butcherBlade_2" evoLv="5" />
 			<body name="butcherBlade_3" evoLv="8" />
 			<body name="butcherBlade_4" evoLv="9" />
-			<body name="butcherBlade_5" evoLv="10" />
 			
+			<![CDATA[<body name="butcherBlade_5" evoLv="10" />]]>
 			<body cnName="图腾" name="totem" url="weapon/totem" icon="weapon/totem_icon" evoLv="8" />
 			<body name="phageNew" url="phageNew/weaponSp" icon="weapon/phage_icon" items="phageNew" />
 			<body name="phage" url="phage/weaponSp" icon="weapon/phage_icon" items="phage" />

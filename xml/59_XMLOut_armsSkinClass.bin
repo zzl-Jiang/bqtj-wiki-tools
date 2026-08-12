@@ -43,6 +43,8 @@
 		</father>
 		<father cnName="天蝎座" name="consScorpio">
 			<body name="consScorpio" url ="newGun/consScorpio" />
+			<body name="consScorpio2608" cnName="圣光"  author="霍霍_╮(╯3╰)╭" url ="newGun/consScorpio2608"  au="original" info="圣光与你同在。" />
+			<body name="consScorpio2608b" cnName="半凉微风"  author="清冷几千春" url ="newGun/consScorpio2608b"  au="original" info="山止川行，风禾尽起。" />
 		</father>
 		
 		<father cnName="围墙" name="closureGun">

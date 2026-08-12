@@ -17,6 +17,10 @@
 		<drop keyB="1" cnName="大药瓶" name="bigBloodBottle" text="血量+100%" imgUrl="NewIcon/bigBloodBottle" noFollowHeroB="1" extraSkill="dropAddLife100" />
 		
 		
+		<drop noHitB="1" cnName="爱心" name="heartTask" imgUrl="NewIcon/heart" noFollowHeroB="1" smallMapColor="0xFFFF3300" lightImg="lightEffect/purgoldDrop"/>
+		<drop noHitB="1" cnName="碎爱心" name="heartBreakTask" imgUrl="NewIcon/heartBreak" noFollowHeroB="1" smallMapColor="0xFFFF3300" lightImg="lightEffect/purgoldDrop"/>
+		
+		
 		
 		<drop cnName="增加血量">
 			<name>addLifeMul</name>

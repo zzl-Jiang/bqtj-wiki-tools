@@ -2,7 +2,7 @@
 <data>
 	<father type="crossbow">
 		<bullet color="yagold" kind="particle" composeLv="99" dropLevelArr="999">
-			<name>consArcher</name><dpsMul>2.5</dpsMul><uiDpsMul>7.7</uiDpsMul>
+			<name>consArcher</name><dpsMul>2.5</dpsMul><uiDpsMul>7.7</uiDpsMul><extraMul>1.1</extraMul>
 			<cnName>射手座</cnName><iconUrl>newGun/consArcherIcon</iconUrl>
 			<attackType>holy</attackType><noMagneticB>1</noMagneticB>
 			<aiShootRange>600</aiShootRange><!-- ai射程 -->

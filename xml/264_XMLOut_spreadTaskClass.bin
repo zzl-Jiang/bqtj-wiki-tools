@@ -1,7 +1,81 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
 	<father name="spread" cnName="外传"  tipText="完成任务后自动解锁下一个任务。" autoUnlockByLevelB="1">
-		<task name="zomFire" cnName="僵尸篇-火种" lv="50" unlockLv="50" uiShowTime="999999">
+		<task name="love2026_1" cnName="七夕篇-相遇" lv="10" unlockLv="30">
+			
+			<shortText>两人同时站在不同的爱心上</shortText>
+			<uiConditionText>两人同时站在不同的爱心上</uiConditionText>
+			<description>同一套按键，同时控制文杰和心零的移动和弹跳。请控制他们，让两人同时站在不同的爱心上，完成二人的相遇。</description>
+			<!-- 目的地 -->
+			<worldMapId>XiFeng</worldMapId>
+			<levelId>love2026_1</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;15</gift>
+		</task>
+		<task name="love2026_2" cnName="七夕篇-相恋" lv="10" unlockLv="10">
+			
+			<shortText>请让两人亲密无间，并同时站在不同的爱心上</shortText>
+			<uiConditionText>请让两人亲密无间，并同时站在不同的爱心上</uiConditionText>
+			<description>控制两人，让他们亲密无间，最后还要同时站在不同的爱心上，完成二人的相恋过程。</description>
+			<!-- 目的地 -->
+			<worldMapId>YangMei</worldMapId>
+			<levelId>love2026_2</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;15</gift>
+		</task>
+		<task name="love2026_3" cnName="七夕篇-磨合" lv="10" unlockLv="10">
+			
+			<shortText>请让两人亲密无间，并同时站在不同的爱心上</shortText>
+			<uiConditionText>请让两人亲密无间，并同时站在不同的爱心上</uiConditionText>
+			<description>控制两人，让他们亲密无间，最后还要同时站在不同的爱心上，完成二人的磨合过程。</description>
+			<!-- 目的地 -->
+			<worldMapId>QingMing</worldMapId>
+			<levelId>love2026_3</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;15</gift>
+		</task>
+		<task name="love2026_4" cnName="七夕篇-冷战" lv="10" unlockLv="30">
+			
+			<shortText>两人同时站在不同的爱心上</shortText>
+			<uiConditionText>两人同时站在不同的爱心上</uiConditionText>
+			<description>从相恋、磨合，再到吵架、冷战，二人的爱情逐渐出现裂痕。请让两人同时站在不同的爱心上，进入冷战状态。</description>
+			<!-- 目的地 -->
+			<worldMapId>YangMei</worldMapId>
+			<levelId>love2026_4</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;15</gift>
+		</task>
+		<task name="love2026_5" cnName="七夕篇-分别" lv="10" unlockLv="30">
+			
+			<shortText>两人同时站在不同的爱心上</shortText>
+			<uiConditionText>两人同时站在不同的爱心上</uiConditionText>
+			<description>二人的爱情是否真的难以为继？请让两人同时站在不同的爱心上，完成暂时的分别！</description>
+			<!-- 目的地 -->
+			<worldMapId>QingMing</worldMapId>
+			<levelId>love2026_5</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;20</gift>
+		</task>
+		
+		
+		
+		
+		<task name="zomFire" cnName="僵尸篇-火种" lv="50" unlockLv="30" uiShowTime="999999">
 			<shortText>在指定时间内活下来。</shortText>
 			<conditionText>坚持 [time]</conditionText>
 			<uiConditionText>坚持 [time]</uiConditionText>
@@ -26,7 +100,7 @@
 				</task>
 			</growth>
 		</task>
-		<task name="zomEnemy" cnName="僵尸篇-天敌" lv="50" unlockLv="50" uiShowTime="999999">
+		<task name="zomEnemy" cnName="僵尸篇-天敌" lv="50" unlockLv="30" uiShowTime="999999">
 			<conditionText>剩余时间 [time][n]血滴 [nowNum]/[num]</conditionText>
 			<uiConditionText>在时间 [time] 之内收集血滴 [num] </uiConditionText>
 			<description>火种的躯体被击毙后，接下来它会找哪个宿主呢？</description>
@@ -50,7 +124,7 @@
 				</task>
 			</growth>
 		</task>
-		<task name="zomControl" cnName="僵尸篇-恶源" lv="50" unlockLv="50" uiShowTime="999999">
+		<task name="zomControl" cnName="僵尸篇-恶源" lv="50" unlockLv="30" uiShowTime="999999">
 			<conditionText>剩余时间 [time][n]血滴 [nowNum]/[num]</conditionText>
 			<uiConditionText>在时间 [time] 之内收集血滴 [num] </uiConditionText>
 			<description>人类和僵尸是天敌，那谁才是罪恶之源？</description>
@@ -74,7 +148,7 @@
 				</task>
 			</growth>
 		</task>
-		<task name="zomSkill" cnName="僵尸篇-超能" lv="50" unlockLv="50" uiShowTime="999999">
+		<task name="zomSkill" cnName="僵尸篇-超能" lv="50" unlockLv="30" uiShowTime="999999">
 			<conditionText>剩余时间 [time][n]超能石 [nowNum]/[num]</conditionText>
 			<uiConditionText>在时间 [time] 之内收集超能石 [num] </uiConditionText>
 			<description>接下来，超能石将发挥它重要的作用。</description>
@@ -96,7 +170,7 @@
 				</task>
 			</growth>
 		</task>
-		<task name="zomExcape" cnName="僵尸篇-逃亡" lv="50" unlockLv="50" uiShowTime="999999">
+		<task name="zomExcape" cnName="僵尸篇-逃亡" lv="50" unlockLv="30" uiShowTime="999999">
 			<shortText>在指定时间内活下来。</shortText>
 			<conditionText>坚持 [time]</conditionText>
 			<uiConditionText>坚持 [time]</uiConditionText>
@@ -121,7 +195,7 @@
 				</task>
 			</growth>
 		</task>
-		<task name="zomNewborn" cnName="僵尸篇-新生" lv="50" unlockLv="50">
+		<task name="zomNewborn" cnName="僵尸篇-新生" lv="50" unlockLv="30">
 			<![CDATA[<openD tk="leavePartner"/>]]>
 			<shortText>完成剧情流程。</shortText>
 			<uiConditionText>完成剧情流程。</uiConditionText>
@@ -132,7 +206,7 @@
 			<gift>base;anniCoin;12</gift>
 			<gift>things;partsChest84;1</gift>
 		</task>
-		<task name="madSame" cnName="狂人篇-计划" lv="50" unlockLv="50">
+		<task name="madSame" cnName="狂人篇-计划" lv="50" unlockLv="30">
 			<shortText>击败天鹰特种兵首领。</shortText>
 			<uiConditionText>击败天鹰特种兵首领。</uiConditionText>
 			<description>狂人的计划是什么？</description>
@@ -165,7 +239,7 @@
 		
 		
 		
-		<task name="madDefect" cnName="狂人篇-缺陷" lv="96" unlockLv="96">
+		<task name="madDefect" cnName="狂人篇-缺陷" lv="96" unlockLv="30">
 			<openD tk="Hospital1_plot"/>
 			<shortText>完成剧情流程。</shortText>
 			<uiConditionText>完成剧情流程。</uiConditionText>
@@ -176,7 +250,7 @@
 			<gift>base;anniCoin;10</gift>
 			<gift>things;skyArch;5</gift>
 		</task>
-		<task name="madFly1" cnName="狂人篇-宝石一" lv="96" unlockLv="96">
+		<task name="madFly1" cnName="狂人篇-宝石一" lv="96" unlockLv="30">
 			<shortText>收集极源宝石</shortText>
 			<conditionText>丢失宝石不超过 [num]个</conditionText>
 			<uiConditionText>丢失宝石不超过 [num]个</uiConditionText>
@@ -203,7 +277,7 @@
 			</growth>
 		</task>
 		
-		<task name="madFly2" cnName="狂人篇-宝石二" lv="97" unlockLv="97">
+		<task name="madFly2" cnName="狂人篇-宝石二" lv="97" unlockLv="30">
 			<shortText>收集极源宝石</shortText>
 			<conditionText>丢失宝石不超过 [num]个</conditionText>
 			<uiConditionText>丢失宝石不超过 [num]个</uiConditionText>
@@ -230,7 +304,7 @@
 			</growth>
 		</task>
 		
-		<task name="madFly3" cnName="狂人篇-宝石三" lv="98" unlockLv="98">
+		<task name="madFly3" cnName="狂人篇-宝石三" lv="98" unlockLv="30">
 			<shortText>收集极源宝石</shortText>
 			<conditionText>丢失宝石不超过 [num]个</conditionText>
 			<uiConditionText>丢失宝石不超过 [num]个</uiConditionText>
@@ -258,7 +332,7 @@
 		</task>
 		
 		
-		<task name="madFly4" cnName="狂人篇-抢夺" lv="99" unlockLv="99">
+		<task name="madFly4" cnName="狂人篇-抢夺" lv="99" unlockLv="30">
 			<openD tk="leavePartner,leavePartner_WenJie"/>
 			<shortText>击败人类飞行器</shortText>
 			<conditionText>击败人类飞行器</conditionText>
@@ -287,7 +361,7 @@
 		</task>
 		
 		
-		<task name="madBossShow" cnName="狂人篇-初代战神" lv="99" unlockLv="99">
+		<task name="madBossShow" cnName="狂人篇-初代战神" lv="99" unlockLv="30">
 			<conditionText></conditionText>
 			<uiConditionText>操控战神通关</uiConditionText>
 			<description>狂人利用造梦机成功地骗过了主角。在主线任务“弥天大谎”之后，主角已经受到蛊惑，离开了战斧高地，离开了爆枪小队。而实验室这里，经过铁犬的不懈努力，战神初代机终于完成了！目前战神只能被远程遥控，但狂人已经迫不及待要试验它的威力了。</description>
@@ -313,7 +387,7 @@
 			</growth>
 		</task>
 		
-		<task name="madBossPhone" cnName="狂人篇-通讯器" lv="99" unlockLv="99">
+		<task name="madBossPhone" cnName="狂人篇-通讯器" lv="99" unlockLv="30">
 			<conditionText></conditionText>
 			<uiConditionText>操控战神通关</uiConditionText>
 			<description>在主角离开战斧高地之际，狂人命铁犬偷走主角的通讯器，他有何目的？</description>
@@ -339,7 +413,7 @@
 			</growth>
 		</task>
 		
-		<task name="madWarriorSec" cnName="狂人篇-主角" lv="99" unlockLv="99" uiShowTime="999999">
+		<task name="madWarriorSec" cnName="狂人篇-主角" lv="99" unlockLv="30" uiShowTime="999999">
 			<openD tk="captureUpland"/>
 			<shortText>击败狂人机器X</shortText>
 			<uiConditionText>击败狂人机器X</uiConditionText>

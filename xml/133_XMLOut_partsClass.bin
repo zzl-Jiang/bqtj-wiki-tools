@@ -147,7 +147,20 @@
 		</things>
 				<things cnName="爆裂弹"><skillArr>burstParts_2</skillArr><itemsLevel>2</itemsLevel><maxLevel>2</maxLevel><name>burstParts_2</name><iconUrl>PartsIcon/burstParts2</iconUrl><baseLabel>burstParts</baseLabel><cnName>爆裂弹</cnName><objType>rare</objType><description></description></things>
 		
+		
 				
+		<things cnName="四素球" o="{'electricEleB':true,'fireEleB':true,'frozenEleB':true,'poisonEleB':true}">
+			<name>fourEleParts_2</name><baseLabel>fourEleParts</baseLabel>
+			<cnName>四素球</cnName>
+			<objType>rare</objType>
+			<maxLevel>2</maxLevel>
+			<itemsLevel>2</itemsLevel>
+			<iconUrl>PartsIcon/fourEleParts2</iconUrl>
+			<description>让武器获得4种元素伤害，伤害与当前武器元素伤害相同。可在“物品合成”中由3种二级元素球合成获得。</description>
+		</things>		
+		
+		
+		
 		<things cnName="电磁球" o="{'electricEleB':true}">
 			<name>electricParts_1</name><baseLabel>electricParts</baseLabel>
 			<cnName>电磁球</cnName>
@@ -163,7 +176,7 @@
 					<maxLevel>2</maxLevel>
 					<itemsLevel>2</itemsLevel>
 					<iconUrl>PartsIcon/electricParts2</iconUrl>
-					<description>让武器获得电磁元素伤害，伤害与当前武器元素伤害相同。可与其他一级（放置在前）、二级元素球搭配使用，同时生效多种元素伤害。</description>
+					<description>让武器获得电磁元素伤害，伤害与当前武器元素伤害相同。可与其他一级（放置在前）、二级元素球搭配使用，同时生效多种元素伤害。这也是合成四素球的材料之一（在“物品合成”中）。</description>
 				</things>
 		<things cnName="火焰球" o="{'fireEleB':true}">
 			<name>fireParts_1</name><baseLabel>fireParts</baseLabel>
@@ -180,7 +193,7 @@
 					<maxLevel>2</maxLevel>
 					<itemsLevel>2</itemsLevel>
 					<iconUrl>PartsIcon/fireParts2</iconUrl>
-					<description>让武器获得火焰元素伤害，伤害与当前武器元素伤害相同。可与其他一级（放置在前）、二级元素球搭配使用，同时生效多种元素伤害。</description>
+					<description>让武器获得火焰元素伤害，伤害与当前武器元素伤害相同。可与其他一级（放置在前）、二级元素球搭配使用，同时生效多种元素伤害。这也是合成四素球的材料之一（在“物品合成”中）。</description>
 				</things>
 		
 		<things cnName="冷冻球" o="{'frozenEleB':true}">
@@ -198,7 +211,7 @@
 					<maxLevel>2</maxLevel>
 					<itemsLevel>2</itemsLevel>
 					<iconUrl>PartsIcon/frozenParts2</iconUrl>
-					<description>让武器获得冷冻元素伤害，伤害与当前武器元素伤害相同。可与其他一级（放置在前）、二级元素球搭配使用，同时生效多种元素伤害。</description>
+					<description>让武器获得冷冻元素伤害，伤害与当前武器元素伤害相同。可与其他一级（放置在前）、二级元素球搭配使用，同时生效多种元素伤害。这也是合成四素球的材料之一（在“物品合成”中）。</description>
 				</things>
 				
 		<things cnName="生化球" o="{'poisonEleB':true}">
@@ -216,7 +229,7 @@
 					<maxLevel>2</maxLevel>
 					<itemsLevel>2</itemsLevel>
 					<iconUrl>PartsIcon/poisonParts2</iconUrl>
-					<description>让武器获得生化元素伤害，伤害与当前武器元素伤害相同。可与其他一级（放置在前）、二级元素球搭配使用，同时生效多种元素伤害。</description>
+					<description>让武器获得生化元素伤害，伤害与当前武器元素伤害相同。可与其他一级（放置在前）、二级元素球搭配使用，同时生效多种元素伤害。这也是合成四素球的材料之一（在“物品合成”中）。</description>
 				</things>
 		
 		

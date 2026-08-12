@@ -28,7 +28,7 @@
 			<!-- 技能 -->
 			<skillArr>ZombieShieldShield</skillArr>
 			<bossSkillArr>noUnderMulHurt</bossSkillArr>
-			<wilderSkillArr>awakeArmor,State_SpellImmunity,missile_Sentry,meltFlamerPurgold,cardNoAttackSkill</wilderSkillArr>
+			<wilderSkillArr>awakeArmor,missile_Sentry,meltFlamerPurgold,cardNoAttackSkill</wilderSkillArr>
 			<!-- 攻击数据 -->
 			<hurtArr>
 				<hurt>
@@ -83,7 +83,7 @@
 			<!--效果------------------------------------------------------------ -->
 			<addType>state</addType>
 			<effectType>awakeArmor</effectType>
-			<mul>0.1</mul>
+			<mul>0.2</mul>
 			<duration>9999999</duration>
 			<!--图像------------------------------------------------------------ --> 
 			<stateEffectImg name="invincibleShield2"/>

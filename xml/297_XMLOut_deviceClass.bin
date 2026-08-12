@@ -26,7 +26,18 @@
 		
 		<equip rareB="1" name="phantomDevice" cnName="幻影成像仪" skill="phantomDevice" rareMul="3.5" life="12"/>
 		<equip rareB="1" name="timeCapsule" cnName="悬停沙漏" skill="timeCapsule" rareMul="5" composeMustNum="80" description="绿岛“仙草镇入口”掉落。"/>
-		<equip rareB="1" canNum="1" name="timeCapsuleT" cnName="悬停沙漏T" skill="timeCapsuleT" iconLabel="ThingsIcon/timeCapsule" /><![CDATA[任务专属，次数消耗]]>
+		
+		
+		<equip rareB="1" name="lingContract" cnName="心灵契约" skill="lingContract" rareMul="5" composeMustNum="80" iconLabel="NewIcon/lingContract" description=""/>
+		<![CDATA[
+		<equip rareB="1" name="yingContract" cnName="樱花契约" skill="yingContract" rareMul="5" composeMustNum="80" description=""/>
+		]]>
+		
+		
+		
+		
+		<![CDATA[任务专属，次数消耗]]>
+		<equip rareB="1" canNum="1" name="timeCapsuleT" cnName="悬停沙漏T" skill="timeCapsuleT" iconLabel="ThingsIcon/timeCapsule" />
 		
 		
 		

@@ -258,6 +258,12 @@
 	<things name="poisonParts_1" giftType="parts" all="1"><must><gift>things;madheart;		300</gift><gift>things;demStone;		300</gift></must></things>
 	<things name="oldBulletCube_1" giftType="parts" all="1"><must><gift>things;oldBulletStamp;		300</gift></must></things>
 	<things name="followParts_1" giftType="parts" all="1"><must><gift>things;deathSilver;		70</gift></must></things>
+	<things name="fourEleParts_2" giftType="parts">
+		<must><gift>parts;electricParts_2;1</gift><gift>parts;fireParts_2;1</gift><gift>parts;poisonParts_2;1</gift></must>
+		<must><gift>parts;electricParts_2;1</gift><gift>parts;fireParts_2;1</gift><gift>parts;frozenParts_2;1</gift></must>
+		<must><gift>parts;electricParts_2;1</gift><gift>parts;poisonParts_2;1</gift><gift>parts;frozenParts_2;1</gift></must>
+		<must><gift>parts;fireParts_2;1</gift><gift>parts;poisonParts_2;1</gift><gift>parts;frozenParts_2;1</gift></must>
+	</things>
 	
 	<things name="ghostStone" week="25">
 		<must><gift>things;yaStone;			2</gift></must>

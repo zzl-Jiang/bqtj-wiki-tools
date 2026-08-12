@@ -638,6 +638,7 @@
 			<name>phantomDevice</name>
 			<cnName>集体照</cnName><noInClonedB>1</noInClonedB>
 			<cd>120</cd>
+			
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>active</conditionType>
 			<condition>avtiveSkillCdOver</condition>
@@ -656,6 +657,28 @@
 				<skill><duration>30</duration></skill>
 			</growth>
 		</skill>			
+		
+		
+		<skill>
+			<name>lingContract</name>
+			<cnName>心灵契约</cnName><noInClonedB>1</noInClonedB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>addAndCon</condition>
+			<otherConditionArr>puIsMale,noUnionPK</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>skillContract</effectType><effectFather>weapon</effectFather>
+			<value>9</value>
+			<valueString>XinLing</valueString>
+			<!--图像------------------------------------------------------------ -->
+			<description>当男性角色进入游戏时，将复制心零“未装备技能栏”第一个格子的技能（必须是被动技能）。最高只能复制第[value]级。竞技场无效。</description>
+			<growth>
+				<skill><value>9</value></skill>
+			</growth>
+		</skill>			
+		
 		
 	</father>
 	

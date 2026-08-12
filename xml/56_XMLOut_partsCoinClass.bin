@@ -2,6 +2,8 @@
 <data>
 	<father name="partsCoin" cnName="零件券" priceType="partsCoin" labelArr="all">
 		<type>
+			<goods defineLabel="aiStopParts_1" dataType="parts" price="60" 		buyLimitNum="2"/>
+			
 			<goods defineLabel="bluntBall_1" dataType="parts" price="60" 		buyLimitNum="1"/>
 			<goods defineLabel="spurtingCube_1" dataType="parts" price="60" 		buyLimitNum="1"/>
 			

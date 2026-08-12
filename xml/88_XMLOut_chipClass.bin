@@ -285,11 +285,7 @@
 			<btnList>compose</btnList>
 			<iconUrl>ThingsIcon/hookDeviceChip</iconUrl><!-- 技能图标 -->
 			<description>消灭秘境“斩之使者”掉落。</description>
-			
 		</things>
-		
-		
-		
 		<things cnName="异龙蛋碎片">
 			<name>dinosaurEgg_1</name><addDropDefineB>1</addDropDefineB>
 			<cnName>异龙蛋碎片</cnName>
@@ -314,6 +310,15 @@
 			<iconUrl>ThingsIcon/timeCapsuleChip</iconUrl><!-- 技能图标 -->
 			<description>绿岛地图“仙草镇入口”掉落。</description>
 		</things>
+		<things cnName="心灵契约碎片">
+			<name>lingContract_1</name>
+			<cnName>心灵契约碎片</cnName>
+			<btnList>compose</btnList>
+			<iconUrl>NewIcon/lingContractChip</iconUrl><!-- 技能图标 -->
+			<description>。</description>
+		</things>
+		
+		
 		
 		
 		<things cnName="死神碎片">

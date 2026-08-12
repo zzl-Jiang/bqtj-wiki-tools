@@ -30,5 +30,7 @@
 	<task id="108" name="activeValue" cnName="120点活跃值" contribution="100" mustNum="120">
 		<info>获得120点活跃值 或 获得1把无双武器</info>
 	</task>
-	
+	<task id="113" name="demon9" cnName="修罗九x3" contribution="90" mustNum="3">
+		<info>完成3次修罗九 或 获得2把氩星武器</info>
+	</task>
 </data>

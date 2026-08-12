@@ -3,7 +3,7 @@
 	<father type="energy">
 		<![CDATA[]]>
 		<bullet color="yagold" composeLv="99" dropLevelArr="999">
-			<name>consScorpio</name><dpsMul>8</dpsMul><uiDpsMul>10.5</uiDpsMul><extraMul>8.5</extraMul>
+			<name>consScorpio</name><dpsMul>8</dpsMul><uiDpsMul>10.5</uiDpsMul><extraMul>7.6</extraMul>
 			<cnName>天蝎座</cnName><iconUrl>newGun/consScorpioIcon</iconUrl>
 			<attackType>holy</attackType><noMagneticB>1</noMagneticB>
 			<aiShootRange>1600</aiShootRange><!-- ai射程 -->

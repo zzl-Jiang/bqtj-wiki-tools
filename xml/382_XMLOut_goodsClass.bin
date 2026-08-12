@@ -297,6 +297,8 @@
 			<goods propId="4458" cnName="电磁球" dataType="parts" name="electricParts_1" num="1" price="250" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="4459" cnName="火焰球" dataType="parts" name="fireParts_1" num="1" price="250" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="4460" cnName="冷冻球" dataType="parts" name="frozenParts_1" num="1" price="250" chooseNumB="1"><priceType>money</priceType></goods>
+			<goods propId="4595" cnName="AI迫近器" dataType="parts" name="aiStopParts_1" num="1" price="80" chooseNumB="1"><priceType>money</priceType></goods>
+			
 			<goods propId="4485" cnName="消磁器" dataType="parts" name="degaussingParts_1" num="1" price="50" chooseNumB="1"><priceType>money</priceType></goods>
 			
 			<goods  otherArr="hot"  propId="4507" cnName="猎人技能器" dataType="parts" name="huntParts_1" num="1" price="2" chooseNumB="1"><priceType>money</priceType></goods>
@@ -308,6 +310,7 @@
 		<type name="equip">
 			<goods otherArr="hot" propId="4511" dataType="equip" inBagType="equip" cnName="超远视镜" name="superGlasses" price="370"><priceType>money</priceType></goods>
 			<goods  otherArr="hot"  propId="4532" cnName="死神碎片" name="sickleScythe_1" price="3" chooseNumB="1"><priceType>money</priceType></goods>
+			<goods  otherArr="hot"  propId="4596" cnName="悬停沙漏碎片" name="timeCapsule_1" price="4" chooseNumB="1" buyLimitNum="280"><priceType>money</priceType></goods>
 			
 			<![CDATA[
 			<goods  otherArr="hot"  propId="4427" cnName="副手箱500个" name="weaponChest_20" price="1000" defineLabel="weaponChest" num="500" buyLimitNum="2"><priceType>money</priceType></goods>
