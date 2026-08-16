@@ -55,6 +55,7 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 - `parse_active.py` - 处理活跃度数据，从 task/gift 两类容器提取活跃任务和奖励档位，支持嵌套 gift 子标签解析，包含重名检测和报告功能
 - `parse_world_map.py` - 处理世界地图数据，从 father → place 两层结构提取地图定义，支持 levelArr 嵌套解析和坐标、标签列表
 - `parse_wilder.py` - 处理秘境数据，从 father → body → drop → gift 四层嵌套提取秘境首领定义，含掉落列表解析
+- `parse_unend.py` - 处理虚天塔数据，从 unendEnemyClass 提取每层出场角色（father name="unend" 下的 body，按名称+权重解析），从 unendProClass 提取点数 pro，输出 unendEnemy.json + unendPro.json
 
 ## 常用命令
 
@@ -100,6 +101,9 @@ python scripts/parse_world_map.py
 
 # 处理秘境数据（输出至 data/wilder/）
 python scripts/parse_wilder.py
+
+# 处理虚天塔数据（输出至 data/unend/）
+python scripts/parse_unend.py
 ```
 
 ### 环境配置
