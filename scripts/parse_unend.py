@@ -93,9 +93,10 @@ def run_unend_processor():
 
                 enemy_list.append(entry)
 
+    enemy_json = {"data": {"father": enemy_list}}
     enemy_path = os.path.join(OUTPUT_DIR, 'unendEnemy.json')
     with open(enemy_path, 'w', encoding='utf-8') as f:
-        json.dump(enemy_list, f, ensure_ascii=False, indent=2)
+        json.dump(enemy_json, f, ensure_ascii=False, indent=2)
     print(f"unendEnemy JSON: {enemy_path} ({len(enemy_list)} 个 body)")
 
     # ======== 2. unendPro ========
@@ -119,10 +120,22 @@ def run_unend_processor():
                         entry[k] = ValueConverter.to_smart_value(v, k)
                 pro_list.append(entry)
 
+    pro_json = {"data": {"father": pro_list}}
     pro_path = os.path.join(OUTPUT_DIR, 'unendPro.json')
     with open(pro_path, 'w', encoding='utf-8') as f:
-        json.dump(pro_list, f, ensure_ascii=False, indent=2)
+        json.dump(pro_json, f, ensure_ascii=False, indent=2)
     print(f"unendPro JSON: {pro_path} ({len(pro_list)} 条)")
+
+    # ======== 3. Excel ========
+    import pandas as pd
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    excel_path = os.path.join(OUTPUT_DIR, f'虚天塔数据更新_{timestamp}.xlsx')
+    excel_data = [
+        {"PageName": "Data:unendEnemy.json", "Content": json.dumps(enemy_json, ensure_ascii=False)},
+        {"PageName": "Data:unendPro.json", "Content": json.dumps(pro_json, ensure_ascii=False)},
+    ]
+    pd.DataFrame(excel_data).to_excel(excel_path, index=False, header=False)
+    print(f"Excel: {excel_path} ({len(excel_data)} 行)")
 
     # ======== 报告 ========
     report = []
