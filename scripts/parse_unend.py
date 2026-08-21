@@ -43,9 +43,9 @@ def parse_enemy_bodys(text):
         if len(parts) == 1:
             result.append({'name': name})
         else:
-            weights = [_smart_number(w.strip()) for w in parts[1:] if w.strip() != '']
-            if weights:
-                result.append({'name': name, 'weights': weights})
+            value = [_smart_number(w.strip()) for w in parts[1:] if w.strip() != '']
+            if value:
+                result.append({'name': name, 'value': value})
             else:
                 result.append({'name': name})
     return result
