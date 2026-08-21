@@ -121,7 +121,34 @@ def run_world_map_processor():
                              group_field='fatherCnName')
 
     # 保存输出
-    OutputWriter.write(map_pool, OUTPUT_DIR, 'WorldMap', cn_label='世界地图')
+    timestamp = OutputWriter.write(map_pool, OUTPUT_DIR, 'WorldMap', cn_label='世界地图')
+
+    # --- 生成 MapItemData（精简查询 JSON） ---
+    import pandas as pd
+    map_items = [{'name': d.get('name', ''), 'cnName': d.get('cnName', '')} for d in map_pool.values()]
+    map_item_json = {
+        "data": {
+            "father": {
+                "@name": "MapItem",
+                "@cnName": "地图标签",
+                "item": map_items
+            }
+        }
+    }
+
+    item_json_path = os.path.join(OUTPUT_DIR, 'MapItemData.json')
+    with open(item_json_path, 'w', encoding='utf-8') as f:
+        json.dump(map_item_json, f, ensure_ascii=False, indent=2)
+    print(f"MapItemData JSON: {item_json_path} ({len(map_items)} 条)")
+
+    # 追加到 Excel
+    excel_path = os.path.join(OUTPUT_DIR, f'世界地图数据更新_{timestamp}.xlsx')
+    existing_df = pd.read_excel(excel_path, header=None)
+    new_row = pd.DataFrame([{
+        0: "Data:MapItemData.json",
+        1: json.dumps(map_item_json, ensure_ascii=False)
+    }])
+    pd.concat([existing_df, new_row], ignore_index=True).to_excel(excel_path, index=False, header=False)
 
     print(f"\n处理完成！提取地图总数: {len(map_pool)}")
 
