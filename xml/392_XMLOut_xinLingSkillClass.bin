@@ -269,7 +269,7 @@
 			<duration>0.5</duration>
 			<range>9999999</range>
 			<stateEffectImg partType="shootPoint" con="filter" raNum="30" followPartRaB="1">skillEffect/purpleFire</stateEffectImg>
-			<description>当自己和队友持有同一类型枪支时，双方伤害提升[mul]。</description>
+			<description>当自己和队友持有同一类型枪支时，双方伤害提升[mul]。不判断双持的第二把武器。</description>
 			<!-- 技能各等级 ------------------------------------------------------------ -->
 			<growth>
 				<skill><mul>0.03</mul></skill>

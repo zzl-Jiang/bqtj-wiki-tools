@@ -12,6 +12,7 @@
 			
 			<gift>more;Girl;1;;taskLv</gift>
 		</task>
+		
 		<task name="thornyRoad" cnName="荆棘之路" uiShowTime="999999" lv="84" unlockLv="84">
 			<limit vehicleB="0" propsB="0" skillB="0" />
 			<shortText>前往[map]收集大银币。</shortText>
@@ -309,6 +310,79 @@
 			<openD mustB="1" tk="XiShan5_plot">
 				<must>things;highPartnerCard;60</must>
 			</openD>
+		</task>
+		
+		
+		<![CDATA[2026年七夕篇活动，获得心零契约]]>
+		<task name="love2026_1" cnName="七夕篇-相遇" lv="10" unlockLv="30">
+			
+			<shortText>两人同时站在不同的爱心上</shortText>
+			<uiConditionText>两人同时站在不同的爱心上</uiConditionText>
+			<description>同一套按键，同时控制文杰和心零的移动和弹跳。请控制他们，让两人同时站在不同的爱心上，完成二人的相遇。</description>
+			<!-- 目的地 -->
+			<worldMapId>XiFeng</worldMapId>
+			<levelId>love2026_1</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;15</gift>
+		</task>
+		<task name="love2026_2" cnName="七夕篇-相恋" lv="10" unlockLv="10">
+			
+			<shortText>请让两人亲密无间，并同时站在不同的爱心上</shortText>
+			<uiConditionText>请让两人亲密无间，并同时站在不同的爱心上</uiConditionText>
+			<description>控制两人，让他们亲密无间，最后还要同时站在不同的爱心上，完成二人的相恋过程。</description>
+			<!-- 目的地 -->
+			<worldMapId>YangMei</worldMapId>
+			<levelId>love2026_2</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;15</gift>
+		</task>
+		<task name="love2026_3" cnName="七夕篇-磨合" lv="10" unlockLv="10">
+			
+			<shortText>请让两人亲密无间，并同时站在不同的爱心上</shortText>
+			<uiConditionText>请让两人亲密无间，并同时站在不同的爱心上</uiConditionText>
+			<description>控制两人，让他们亲密无间，最后还要同时站在不同的爱心上，完成二人的磨合过程。</description>
+			<!-- 目的地 -->
+			<worldMapId>QingMing</worldMapId>
+			<levelId>love2026_3</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;15</gift>
+		</task>
+		<task name="love2026_4" cnName="七夕篇-冷战" lv="10" unlockLv="30">
+			
+			<shortText>两人同时站在不同的爱心上</shortText>
+			<uiConditionText>两人同时站在不同的爱心上</uiConditionText>
+			<description>从相恋、磨合，再到吵架、冷战，二人的爱情逐渐出现裂痕。请让两人同时站在不同的爱心上，进入冷战状态。</description>
+			<!-- 目的地 -->
+			<worldMapId>YangMei</worldMapId>
+			<levelId>love2026_4</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;15</gift>
+		</task>
+		<task name="love2026_5" cnName="七夕篇-分别" lv="10" unlockLv="30">
+			
+			<shortText>两人同时站在不同的爱心上</shortText>
+			<uiConditionText>两人同时站在不同的爱心上</uiConditionText>
+			<description>二人的爱情是否真的难以为继？请让两人同时站在不同的爱心上，完成暂时的分别！</description>
+			<!-- 目的地 -->
+			<worldMapId>QingMing</worldMapId>
+			<levelId>love2026_5</levelId>
+			<gift>base;anniCoin;30</gift>
+			<gift>things;armsGemChest;30</gift>
+			<gift>things;madheart;10</gift>
+			<gift>things;demStone;10</gift>
+			<gift>things;lingContract_1;20</gift>
 		</task>
 	</father>
 </data>

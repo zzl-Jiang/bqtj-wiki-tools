@@ -121,7 +121,7 @@
 				
 		
 				
-		<equip lv="1" maxLv="3" skillArr="soulbindPendant_jewelry" baseLabel="soulbindPendant" cnName="束魂坠" addObjJson="{'damageMul':0.14}" composeMustNum="150" iconLabel="ThingsIcon/soulbindPendant" />
+		<equip lv="1" maxLv="4" skillArr="soulbindPendant_jewelry" baseLabel="soulbindPendant" cnName="束魂坠" addObjJson="{'damageMul':0.14}" composeMustNum="150" iconLabel="ThingsIcon/soulbindPendant" />
 				<skill>
 					<name>soulbindPendant_jewelry</name>
 					<cnName>束魂</cnName><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
@@ -134,7 +134,7 @@
 					<!--效果------------------------------------------------------------ -->
 					<addType>state</addType>
 					<effectType>soulbindPendant</effectType>
-					<mul>0.75</mul><!-- 降低防御力 -->
+					<mul>0.70</mul><!-- 降低防御力 -->
 					<secMul>0.01</secMul><!-- 杀小怪概率 -->
 					<range>99999</range>
 					<duration>6</duration>

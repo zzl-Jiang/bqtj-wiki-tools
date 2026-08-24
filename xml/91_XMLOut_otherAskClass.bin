@@ -607,7 +607,7 @@
 			<error>沃龙穷。</error>
 		</ask>
 
-		
+		<![CDATA[
 		<ask>
 			<title>心零喜欢的人是谁？</title>
 			<correct>暂时不知道。</correct>
@@ -617,7 +617,7 @@
 			<error>小樱。</error>
 			<error>制毒师。</error>
 		</ask>
-		
+		]]>
 		<ask>
 			<title>提升队友忠诚度可以带来的好处是？</title>
 			<correct>获得新技能。</correct>

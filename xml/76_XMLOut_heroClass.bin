@@ -51,8 +51,8 @@
 			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
 			<!-- 技能 -->
 			<skillArr></skillArr>
-			<studyCnNameArr>狂暴,派生导弹,群体圣光,定点轰炸,吞噬,远视,群体隐身,万弹归宗,毒雾,反击,嗜爪,欺凌,金刚钻,魅惑,电离折射,馈赠,沉默,近视,先锋盾,精准,群体自燃,滑翔,翻滚,王者之翼,附身,全域光波</studyCnNameArr>
-			<p1SkillArr>吞噬,万弹归宗,远视,沉默,先锋盾,滑翔,翻滚,附身,全域光波</p1SkillArr>
+			<studyCnNameArr>狂暴,派生导弹,群体圣光,定点轰炸,吞噬,远视,群体隐身,万弹归宗,毒雾,反击,嗜爪,双持,欺凌,金刚钻,魅惑,电离折射,馈赠,沉默,近视,先锋盾,精准,群体自燃,滑翔,翻滚,王者之翼,附身,全域光波</studyCnNameArr>
+			<p1SkillArr>吞噬,万弹归宗,双持,远视,沉默,先锋盾,滑翔,翻滚,附身,全域光波</p1SkillArr>
 			<!-- 攻击数据 -->
 			<moreD dpsMul="0.8" underHurtMul="0.4" studySkillLvAdd="1" firstLv="6" />
 			<hurtArr>

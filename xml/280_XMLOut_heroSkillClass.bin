@@ -4,7 +4,30 @@
 		
 		
 	<father name="heroSkill" cnName="英雄技能">
-		<skill index="0" name="群体圣光"><!-- 生存-群体-主动 -->
+		<skill name="双持">
+			<name>dualWield</name><iconUrl>SkillIcon/dualWield</iconUrl><wantDescripB>1</wantDescripB><noCopyB>1</noCopyB>
+			<cnName>双持</cnName><everNoClearB>1</everNoClearB><ignoreNoSkillB>1</ignoreNoSkillB><noNeedEquipB>1</noNeedEquipB>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<studyMustGiftStr>things;demSkillStone;200</studyMustGiftStr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText></changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>dualWield</effectType>
+			<value>1</value>
+			<duration>9999999</duration>
+			<description>进入战斗后，双手将各持有一把已装备的武器。该技能无需装备即可生效。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><value>1</value></skill>
+			</growth>
+		</skill>
+		
+		<skill index="0" name="群体圣光">
 			<name>groupLight_hero</name>
 			<cnName>群体圣光</cnName>
 			<effectInfoArr>回复生命值</effectInfoArr>
@@ -1087,7 +1110,7 @@
 			<range>9999999</range>
 			<!--图像------------------------------------------------------------ -->
 			<stateEffectImg partType="mouth" con="add">skillEffect/eleOverlap</stateEffectImg>
-			<description>把藏师当前武器[mul]的元素伤害，叠加到队友具有同类元素伤害的武器上。</description>
+			<description>把藏师当前武器[mul]的元素伤害，叠加到队友具有同类元素伤害的武器上。对“元素球”零件增加的元素生效，对双持的第二把武器无效。</description>
 			<!-- 技能各等级 ------------------------------------------------------------ -->
 			<growth>
 				<skill><mul>0.10</mul></skill>
@@ -1104,7 +1127,7 @@
 				<skill><mul>0.60</mul><secMul>0.05</secMul><changeText>叠加比例：[mul]{n}不同元素伤害的叠加比例[secMul]</changeText><description>把藏师当前武器[mul]的元素伤害，叠加到队友具有同类元素伤害的武器上，队友不同元素伤害的武器也将获得[secMul]的伤害叠加。</description></skill>
 				<skill><mul>0.65</mul><secMul>0.10</secMul><changeText>叠加比例：[mul]{n}不同元素伤害的叠加比例[secMul]</changeText><description>把藏师当前武器[mul]的元素伤害，叠加到队友具有同类元素伤害的武器上，队友不同元素伤害的武器也将获得[secMul]的伤害叠加。</description></skill>
 				<skill><mul>0.70</mul><secMul>0.15</secMul><changeText>叠加比例：[mul]{n}不同元素伤害的叠加比例[secMul]</changeText><description>把藏师当前武器[mul]的元素伤害，叠加到队友具有同类元素伤害的武器上，队友不同元素伤害的武器也将获得[secMul]的伤害叠加。</description></skill>
-				<skill><noNeedEquipB>1</noNeedEquipB><mul>0.70</mul><secMul>0.15</secMul><changeText>无需装备技能也会有技能效果</changeText><description>把藏师当前武器[mul]的元素伤害，叠加到队友具有同类元素伤害的武器上，队友不同元素伤害的武器也将获得[secMul]的伤害叠加。无需装备技能也会有技能效果</description></skill>
+				<skill><noNeedEquipB>1</noNeedEquipB><mul>0.70</mul><secMul>0.15</secMul><changeText>无需装备技能也会有技能效果</changeText><description>把藏师当前武器[mul]的元素伤害，叠加到队友具有同类元素伤害的武器上，队友不同元素伤害的武器也将获得[secMul]的伤害叠加。对“元素球”零件增加的元素生效，对双持的第二把武器无效。无需装备技能也会有技能效果。</description></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="血盾"><!-- dps-被动 -->

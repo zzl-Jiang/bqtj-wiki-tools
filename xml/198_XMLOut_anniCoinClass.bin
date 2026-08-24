@@ -4,7 +4,7 @@
 	<father name="anniCoin" cnName="纪念币" priceType="anniCoin" labelArr="all">
 		<type>
 			<goods defineLabel="yaGem" price="10" 	dayBuyLimitNum="15" buyLimitNum="200" fixedLimitB="1" />
-			<goods defineLabel="oldBulletStamp" price="1" 	dayBuyLimitNum="20" buyLimitNum="300" fixedLimitB="1" />
+			<goods defineLabel="oldBulletStamp" price="1" 	dayBuyLimitNum="20" buyLimitNum="700" fixedLimitB="1" />
 			<goods defineLabel="highlighter" price="5" 	dayBuyLimitNum="20" fixedLimitB="1" />
 			<goods defineLabel="rainGun" price="5" 	dayBuyLimitNum="10" buyLimitNum="100" fixedLimitB="1" />
 			<goods defineLabel="vehicleCash" price="2" 	dayBuyLimitNum="40" fixedLimitB="1" />

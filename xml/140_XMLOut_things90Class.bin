@@ -89,12 +89,12 @@
 				[n]商店购买
 			</description>
 		</things>
-		<things cnName="老弹兑换券">
+		<things cnName="零件合成券">
 			<name>oldBulletStamp</name>
-			<cnName>老弹兑换券</cnName>
+			<cnName>零件合成券</cnName>
 			<iconUrl>ThingsIcon/oldBulletStamp</iconUrl><!-- 技能图标 -->
 			<description>
-				可在“锻造>物品合成”中合成零件“老弹体”。老弹体是领取究极武器“射手座”的必需品。
+				可在“锻造>物品合成”中合成零件老弹体、叛变器。
 				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
 				[n]纪念币商店
 			</description> 
@@ -586,6 +586,7 @@
 			<smeltD type="festival" />
 		</things>
 		
+		
 		<things>
 			<name>bigWeaponCard</name>
 			<cnName>巨刃卡</cnName>
@@ -734,7 +735,7 @@
 			<iconUrl>ThingsIcon/highPartnerCard</iconUrl><!-- 技能图标 -->
 			<stateD skill="highPartnerCard" time="60" gamingB="1"  demNoneB="1"/>
 			<smeltD price="50" />
-			<description>使用后在战斗中增加队友100%的伤害，持续1分钟。</description> 
+			<description>使用后在战斗中增加队友100%的伤害，持续1分钟。该物品是解锁小美队友的重要道具，请谨慎使用。</description> 
 			<loveD num="1"/>
 		</things>
 	</father>

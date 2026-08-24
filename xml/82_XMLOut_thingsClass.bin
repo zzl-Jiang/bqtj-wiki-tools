@@ -2292,8 +2292,9 @@
 			<cnName>胖哒号碎片</cnName>
 			<iconUrl>ThingsIcon/PandaCarCash</iconUrl><!-- 技能图标 -->
 			<description>
-				用于合成载具“胖哒号”（是究极武器的领取条件之一）。
+				用于合成载具“胖哒号”（是究极武器“天蝎座”的领取条件之一）。
 				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]十年币商店
 				[n]2026年暑假签到
 			</description>
 			<loveD num="0"/>

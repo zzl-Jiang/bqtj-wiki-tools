@@ -66,6 +66,11 @@
 			<goods propId="1207" cnName="队友重生卡" name="teamRebirthCard" price="5" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="1209" cnName="技能刷新卡" name="skillFleshCard" price="5" chooseNumB="1"><priceType>money</priceType></goods>
 			
+			<goods propId="4603" cnName="锁怪卡" name="lockEnemyCard" price="30" chooseNumB="1" buyLimitNum="10"><priceType>money</priceType></goods>
+			<goods propId="4602" cnName="速怪卡" name="fastEnemyCard" price="30" chooseNumB="1" buyLimitNum="10"><priceType>money</priceType></goods>
+			<goods propId="4601" cnName="缓时卡" name="slowTimeCard" price="30" chooseNumB="1" buyLimitNum="10"><priceType>money</priceType></goods>
+			<goods propId="4600" cnName="巨刃卡" name="bigWeaponCard" price="30" chooseNumB="1" buyLimitNum="10"><priceType>money</priceType></goods>
+			
 			<goods propId="4172" cnName="竞技宝箱" name="arenaChest" num="1" price="3" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods otherArr="hot" propId="3978" cnName="扫荡卡" name="sweepingCard" num="1" price="8" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods otherArr="hot" propId="3106" cnName="双倍武器掉率卡" name="doubleArmsCard" price="10" chooseNumB="1"><priceType>money</priceType></goods>
@@ -97,6 +102,7 @@
 		<![CDATA[材料]]>	
 		<type name="materials">
 			
+			<goods otherArr="hot" propId="4597" cnName="无双能石" name="demSkillStone" price="2" chooseNumB="1" buyLimitNum="1000"><priceType>money</priceType></goods>
 			<goods otherArr="hot" propId="4581" cnName="氩晶" name="yaGem" price="4" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods otherArr="hot" propId="1208" cnName="重生石" name="rebirthStone" price="9" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods otherArr="hot" propId="3980" cnName="核能石" name="nuclearStone" price="1" chooseNumB="1"><priceType>money</priceType></goods>
@@ -285,7 +291,8 @@
 			<goods propId="4590" cnName="溅射体" dataType="parts" name="spurtingCube_1" num="1" price="100" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="4578" cnName="老弹体" dataType="parts" name="oldBulletCube_1" num="1" price="200" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="4580" cnName="跟踪器" dataType="parts" name="followParts_1" num="1" price="70" chooseNumB="1"><priceType>money</priceType></goods>
-			<goods propId="4484" cnName="挖墙弹" dataType="parts" name="digWallParts_1" num="1" price="80" chooseNumB="1" buyLimitNum="1"><priceType>money</priceType></goods>
+			<goods propId="4599" cnName="绞杀体" dataType="parts" name="crushCube_1" num="1" price="150" chooseNumB="1"><priceType>money</priceType></goods>
+			
 			<goods propId="4483" cnName="减速器" dataType="parts" name="downSpeedParts_1" num="1" price="30" chooseNumB="1"><priceType>money</priceType></goods>
 			
 			<goods propId="4473" cnName="C型枪管" dataType="parts" name="lshapedParts_1" num="1" price="70" chooseNumB="1"><priceType>money</priceType></goods>
@@ -298,6 +305,7 @@
 			<goods propId="4459" cnName="火焰球" dataType="parts" name="fireParts_1" num="1" price="250" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="4460" cnName="冷冻球" dataType="parts" name="frozenParts_1" num="1" price="250" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="4595" cnName="AI迫近器" dataType="parts" name="aiStopParts_1" num="1" price="80" chooseNumB="1"><priceType>money</priceType></goods>
+			<goods propId="4484" cnName="挖墙弹" dataType="parts" name="digWallParts_1" num="1" price="80" chooseNumB="1" buyLimitNum="1"><priceType>money</priceType></goods>
 			
 			<goods propId="4485" cnName="消磁器" dataType="parts" name="degaussingParts_1" num="1" price="50" chooseNumB="1"><priceType>money</priceType></goods>
 			
@@ -318,6 +326,7 @@
 			<goods  otherArr="hot"  propId="4274" dataType="device" inBagType="equip" cnName="镭射穿梭器" name="shuttleDevicer_1" num="1" price="8" chooseNumB="1" ><priceType>money</priceType></goods>
 			<goods otherArr="hot" propId="4435" cnName="斩之核心碎片" name="hookDevice_1" num="1" price="4" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods otherArr="hot" propId="4471" cnName="远视镜碎片" name="longGlasses_1" price="7" chooseNumB="1" ><priceType>money</priceType></goods>
+			<goods otherArr="hot" propId="4598" cnName="反骨盾碎片" name="backBuckler_1" price="1" chooseNumB="1" ><priceType>money</priceType></goods>
 			
 			<goods propId="4505" cnName="神谕战衣碎片" name="oracleSuit_coat" price="1" num="2" chooseNumB="1" ><priceType>money</priceType></goods>
 			<goods propId="4505" cnName="神谕腰带碎片" name="oracleSuit_belt" price="1" chooseNumB="1" ><priceType>money</priceType></goods>

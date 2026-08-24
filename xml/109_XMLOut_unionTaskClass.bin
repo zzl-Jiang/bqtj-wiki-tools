@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
+	<task id="44" name="arena" cnName="登录游戏" contribution="100" mustNum="1">
+		<info>登录游戏</info>
+	</task>
 	<task id="42" name="kingTask" cnName="每日签到" contribution="100" mustNum="1">
 		<info>领取每日签到礼包</info>
 	</task>
-	<task id="44" name="arena" cnName="竞技挑战" contribution="100" mustNum="1">
-		<info>取得竞技场胜利1次</info>
-	</task>
+	
 	<task id="92" name="level" cnName="关卡挑战" contribution="100" mustNum="2">
 		<info>任意普通关卡胜利2次 或 主角战斗力到达过5亿</info>
 	</task>
@@ -30,7 +31,7 @@
 	<task id="108" name="activeValue" cnName="120点活跃值" contribution="100" mustNum="120">
 		<info>获得120点活跃值 或 获得1把无双武器</info>
 	</task>
-	<task id="113" name="demon9" cnName="修罗九x3" contribution="90" mustNum="3">
-		<info>完成3次修罗九 或 获得2把氩星武器</info>
+	<task id="113" name="demon9" cnName="竞技场胜利" contribution="90" mustNum="2">
+		<info>本周竞技场胜利2次 或 获得1把氩星武器</info>
 	</task>
 </data>

@@ -5,7 +5,7 @@
 	<father name="normal" cn="关卡">
 		<gather>
 			<level name="love2026_1" cnName="相遇">
-				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" dropSmallMapB="1" />
+				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" overBackB="1" dropSmallMapB="1" />
 				<drop noB="1" />
 				<sceneLabel>XiFeng</sceneLabel>
 				<!-- 发兵集************************************************ -->
@@ -50,7 +50,7 @@
 			</level>
 			
 			<level name="love2026_2" cnName="相恋">
-				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" dropSmallMapB="1" />
+				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" overBackB="1" dropSmallMapB="1" />
 				<drop noB="1" />
 				<sceneLabel>YangMei</sceneLabel>
 				<!-- 发兵集************************************************ -->
@@ -97,7 +97,7 @@
 					<group>
 						<event>
 							<condition delay="0.3">number:greater_200; gap</condition>
-							<order>alertFail; 小白和心零距离太远，任务失败！</order>
+							<order>alertFail; 文杰和心零距离太远，任务失败！</order>
 						</event>
 						<event>
 							<order>level; fail</order>
@@ -107,7 +107,7 @@
 			</level>
 			
 			<level name="love2026_3" cnName="磨合">
-				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" dropSmallMapB="1" />
+				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" overBackB="1" dropSmallMapB="1" />
 				<drop noB="1" />
 				<sceneLabel>QingMing</sceneLabel>
 				<!-- 发兵集************************************************ -->
@@ -154,7 +154,7 @@
 					<group>
 						<event>
 							<condition delay="0.3">number:greater_200; gap</condition>
-							<order>alertFail; 小白和心零距离太远，任务失败！</order>
+							<order>alertFail; 文杰和心零距离太远，任务失败！</order>
 						</event>
 						<event>
 							<order>level; fail</order>
@@ -165,7 +165,7 @@
 			
 			
 			<level name="love2026_4" cnName="冷战">
-				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" dropSmallMapB="1" />
+				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" overBackB="1" dropSmallMapB="1" />
 				<drop noB="1" />
 				<sceneLabel>YangMei</sceneLabel>
 				<!-- 发兵集************************************************ -->
@@ -211,7 +211,7 @@
 			
 			
 			<level name="love2026_5" cnName="分别">
-				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" dropSmallMapB="1" />
+				<info diy="love2026" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" mustSingleB="1" preSkillArr="love2026Skill" overBackB="1" dropSmallMapB="1" />
 				<drop noB="1" />
 				<sceneLabel>QingMing</sceneLabel>
 				<!-- 发兵集************************************************ -->

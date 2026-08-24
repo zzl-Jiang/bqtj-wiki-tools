@@ -82,7 +82,7 @@
 			<mul>3</mul><!-- shootAngleMul -->
 			<duration>1</duration>
 			<!--图像------------------------------------------------------------ -->
-			<description>持续射击[duration]秒，将有[effectProArr.0]概率产生[duration]秒的[value]倍散射效果。</description>
+			<description>持续射击[duration]秒，将有[effectProArr.0]概率产生[duration]秒的[value]倍散射效果。同把武器装不同等级的爆裂弹，效果会叠加。双持武器时，如果两把枪都有爆裂弹，则第二把枪的爆裂触发概率将降低70%。</description>
 			<stateEffectImg name="burstParts"/>
 			<!-- 技能各等级 ------------------------------------------------------------ -->
 			<growth>
