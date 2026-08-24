@@ -56,6 +56,7 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 - `parse_world_map.py` - 处理世界地图数据，从 father → place 两层结构提取地图定义，支持 levelArr 嵌套解析和坐标、标签列表
 - `parse_wilder.py` - 处理秘境数据，从 father → body → drop → gift 四层嵌套提取秘境首领定义，含掉落列表解析
 - `parse_unend.py` - 处理虚天塔数据，从 unendEnemyClass 提取每层出场角色（father name="unend" 下的 body，按名称+权重解析），从 unendProClass 提取点数 pro，输出 unendEnemy.json + unendPro.json
+- `mixed.py` - 全量运行入口，自动发现 scripts/ 下所有 parse_*.py 并按依赖顺序运行（parse_arms、parse_suit 提前，其余按字母序）
 
 ## 常用命令
 
@@ -104,6 +105,9 @@ python scripts/parse_wilder.py
 
 # 处理虚天塔数据（输出至 data/unend/）
 python scripts/parse_unend.py
+
+# 全量运行所有处理器（自动发现脚本并按依赖顺序执行）
+python scripts/mixed.py
 ```
 
 ### 环境配置
