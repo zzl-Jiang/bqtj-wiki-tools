@@ -22,6 +22,7 @@
 			<goods defineLabel="yaRock" price="9" 			buyLimitNum="200" />
 			<goods defineLabel="demStone" price="5" 			buyLimitNum="800" />
 			<goods defineLabel="madheart" price="6" 			buyLimitNum="600" />
+			<goods defineLabel="demBall" price="3" 			buyLimitNum="400" />
 			
 			<goods dataType="base" defineLabel="anniCoin" num="2" price="1"/>
 			

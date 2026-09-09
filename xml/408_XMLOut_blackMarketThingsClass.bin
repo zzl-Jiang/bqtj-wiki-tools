@@ -27,6 +27,12 @@
 			<gift>things;rocketCate;10</gift>
 			<gift>things;meltFlamer;10</gift>
 			
+			<gift>things;PetIronChiefBook;10</gift>
+			<gift>things;fireGem;10</gift>
+			<gift>things;electricGem;10</gift>
+			<gift>things;frozenGem;10</gift>
+			<gift>things;poisonGem;10</gift>
+			
 			<gift>things;thunderSuit_head;20</gift>
 			<gift>things;thunderSuit_coat;20</gift>
 			<gift>things;thunderSuit_pants;20</gift>
@@ -37,12 +43,19 @@
 			<gift>things;aintSuit_belt;20</gift>
 		</one>
 		<one name="blackMarketThings_rare" cnName="稀有">
-			<gift>things;PetIronChiefBook;10</gift>
-			<gift>things;fireGem;10</gift>
-			<gift>things;electricGem;10</gift>
-			<gift>things;frozenGem;10</gift>
-			<gift>things;poisonGem;10</gift>
-			<gift>things;lightCone;5</gift>
+			<gift>base;anniCoin;25</gift>
+			<gift>base;tenCoin;15</gift>
+			<gift>things;lightCone;6</gift>
+			<gift>things;falconGun;3</gift>
+			<gift>things;extremeGun;3</gift>
+			<gift>things;consVirgo;2</gift>
+
+			<gift>things;demBall;6</gift>
+			<gift>things;ghostStone;2</gift>
+			<gift>things;intensDrug;10</gift>
+			<gift>things;yaRock;3</gift>
+			<gift>things;yaStone;3</gift>
+
 		</one>
 	</blackMarketThings>
 	

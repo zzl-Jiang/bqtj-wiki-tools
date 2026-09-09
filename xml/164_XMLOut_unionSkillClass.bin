@@ -143,7 +143,7 @@
 			<!--效果------------------------------------------------------------ -->
 			<addType>state</addType>
 			<effectType>bullet_godMace</effectType>
-			<extraValueType>nowArmsTrueDps</extraValueType><!-- 附加值类型为当前武器dps比例 -->
+			<extraValueType>hurtOrNowArmsTrueDps</extraValueType><!-- 附加值类型为当前武器dps比例 -->
 			<range>600</range>
 			<value>0.2</value>
 			<duration>2</duration>

@@ -165,6 +165,28 @@
 			</growth>
 		</skill>
 		
+		<skill>
+			<name>lineAddBallParts</name>
+			<cnName>射线增强</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>额外造成[mul]倍的伤害</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>armsIsLine</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<changeHurtB>1</changeHurtB>
+			<effectType>changeHurtNoCondition</effectType>
+			<mul>1.1</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>射线型武器额外增加[mul-1]的伤害，并改变射线外观。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.1</mul></skill>
+			</growth>
+		</skill>
 	</father>
 	
 </data>

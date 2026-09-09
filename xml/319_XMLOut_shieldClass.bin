@@ -11,12 +11,12 @@
 					<target>me</target>
 					<addType>instant</addType>
 					<effectType>changeHurtMulDedut</effectType>
-					<mul>0.95</mul>
+					<mul>0.8</mul>
 					<description>降低[1-mul]的近战百分比伤害。</description>
 					<growth>
-						<skill><mul>0.95</mul></skill>
-						<skill><mul>0.85</mul></skill>
-						<skill><mul>0.75</mul></skill>
+						<skill><mul>0.8</mul></skill>
+						<skill><mul>0.65</mul></skill>
+						<skill><mul>0.5</mul></skill>
 					</growth>
 				</skill>
 				

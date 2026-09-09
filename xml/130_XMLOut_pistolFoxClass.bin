@@ -86,8 +86,8 @@
 			<extraValueType>nowArmsTrueDps</extraValueType><!-- 附加值类型为单位dps系数 -->
 			<obj>"cnName":"吸血蝙蝠","num":1,"lifeMul":2,"dpsMul":1.25,"mulByFatherB":1,"cx":0,"cy":-80,"firstVx":10,"maxNum":10,"maxFromWeAllB":1,"noUnderHurtB":1,"noAiFindB":1,"noUnderHitB":1,"skillArr":["State_SpellImmunity","State_AddMove"]</obj>
 			<duration>90</duration>
-			<mul>0.05</mul><!-- 每杀一个敌人，永久增加的伤害 -->
-			<secMul>1</secMul><!-- 最高伤害增加值 -->
+			<mul>0.08</mul><!-- 每杀一个敌人，永久增加的伤害 -->
+			<secMul>1.6</secMul><!-- 最高伤害增加值 -->
 			<stateEffectImg partType="arm_right_1,arm_left_1" con="add" raNum="30" followPartRaB="1">skillEffect/trueshot_enemy</stateEffectImg>
 			<!--图像------------------------------------------------------------ -->
 			<description>消灭敌人后将召唤无敌吸血蝙蝠（上限10只），同时永久增加银狐[mul]的伤害（最多可累加到[secMul]）。</description>

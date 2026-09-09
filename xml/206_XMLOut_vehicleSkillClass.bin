@@ -342,6 +342,22 @@
 				<skill><mul>0.100</mul></skill>
 			</growth>
 		</skill>
+		<skill>
+			<name>throughVehicle</name>
+			<cnName>永久金刚钻</cnName><ignoreNoSkillB>1</ignoreNoSkillB>
+			<conditionType>passive</conditionType><everNoClearB>1</everNoClearB>
+			<condition>add</condition><iconUrl>SkillIcon/through_hero</iconUrl>
+			<target>me</target>
+			<addType>state</addType>
+			<effectType>penetrationGap</effectType>
+			<value>10000</value>
+			<duration>999999</duration>
+			<description>单位射出的所有子弹都将无视任何地形。</description>
+			<growth>
+				<skill><value>10000</value></skill>
+			</growth>
+		</skill>
+		
 		
 		<skill>
 			<name>superLightWave</name>

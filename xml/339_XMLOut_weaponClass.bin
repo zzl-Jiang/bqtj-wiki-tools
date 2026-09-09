@@ -10,6 +10,7 @@
 		<equip lv="7" hurtMul="35" 		baseLabel="butcherBlade"/>
 		<equip lv="8" hurtMul="54" 		baseLabel="butcherBlade" skillArr="weaponEmp" anger="33"/>
 		<equip lv="9" hurtMul="75" 		baseLabel="butcherBlade" skillArr="weaponEmp,cutLife" anger="33" iconLabel="weapon/butcherBlade_4_icon" weaponUrl="weapon/butcherBlade_4" />
+		<equip lv="10" hurtMul="105" 		baseLabel="butcherBlade" skillArr="weaponEmp,cutLife2" anger="33" iconLabel="weapon/butcherBlade_5_icon" weaponUrl="weapon/butcherBlade_5" />
 		
 		
 		
@@ -44,7 +45,7 @@
 				<equip rareB="1" lv="2" hurtMul="48" 		baseLabel="saberDarts" proAddLv="4"/>
 				<equip rareB="1" lv="3" hurtMul="57" 		baseLabel="saberDarts" proAddLv="4" iconLabel="weapon/saberDarts_icon_2" weaponUrl="weapon/saberDarts_2" />
 				<equip rareB="1" lv="4" hurtMul="84" 		baseLabel="saberDarts" proAddLv="4" iconLabel="weapon/saberDarts_icon_3" weaponUrl="weapon/saberDarts_3" skillArr="weaponEmp"/>
-		
+				<equip rareB="1" lv="5" hurtMul="105" 		baseLabel="saberDarts" proAddLv="4" iconLabel="weapon/saberDarts_icon_4" weaponUrl="weapon/saberDarts_4" skillArr="weaponEmp,cutLife"/>
 				
 		<equip rareB="1" lv="1" hurtMul="12" 		skillArr="sprintSwordHit" baseLabel="sprintSword" proAddLv="3" hitNum="2" weaponType="sword" cnName="凯撒" armsType="sniper" anger="25" upgradeNum="3" description="[n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
 				[n]秘境“虚晶蝎”

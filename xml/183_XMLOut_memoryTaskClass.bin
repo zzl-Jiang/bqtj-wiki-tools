@@ -24,6 +24,7 @@
 			<gift>things;madheart;2</gift>
 		</task>
 		<task name="XiaSha_1M" cnName="下沙" lv="4">
+			<diff>0.7</diff>
 			<shortText></shortText>
 			<uiConditionText>消灭所有僵尸</uiConditionText>
 			<description>消灭所有僵尸。</description>
@@ -31,10 +32,12 @@
 			<worldMapId>XiaSha</worldMapId>
 			<levelId>XiaSha_1</levelId>
 			<condition type="levelWin"/>
+			
 			<gift>base;anniCoin;16</gift>
 			<gift>things;madheart;2</gift>
 		</task>
 		<task name="FengWei_1M" cnName="凤尾洋" lv="5">
+			<diff>0.7</diff>
 			<shortText></shortText>
 			<uiConditionText>消灭所有僵尸</uiConditionText>
 			<description>消灭所有僵尸。</description>
@@ -42,6 +45,7 @@
 			<worldMapId>FengWei</worldMapId>
 			<levelId>FengWei_1</levelId>
 			<condition type="levelWin"/>
+			
 			<gift>base;anniCoin;16</gift>
 			<gift>things;madheart;2</gift>
 		</task>

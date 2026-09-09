@@ -195,6 +195,8 @@
 		
 		<body cnName="狮子座子弹" name="consLeoLine" raNum="45" con="add" len="30">newGun/consLeoBullet</body>
 		<body cnName="狮子座子射线" name="consVirgoLineChild" con="add" raNum="30" len="26" time="0.01" waveAn="90" everFleshB="1" imgDieType="stop">newGun/consLeoChildBullet</body>
+		<body cnName="狮子座射线-大" name="consLeoLineBig" con="add" raNum="60" len="25" time="0.066" waveAn="35" everFleshB="1" imgDieType="stop">bullet/purLaserBig</body>
+		
 		<body cnName="巨蟹座射线" name="consCancerLine" con="add" raNum="60" len="25" time="0.066" waveAn="35" everFleshB="1" imgDieType="stop">bullet/laserOrange</body>
 		
 		<body cnName="弹道" name="ballistic" raNum="60" len="25" time="-1">smokeEffect/ballistic</body>

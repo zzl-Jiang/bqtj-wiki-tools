@@ -12,7 +12,7 @@
 			<goods dataType="base" defineLabel="partsCoin" price="2" 			dayBuyLimitNum="8" buyLimitNum="100" fixedLimitB="1"/>
 			<goods defineLabel="longGlasses_1" price="20" 	buyLimitNum="10" fixedLimitB="1"/>
 			<goods defineLabel="partsChest78" price="10" 	dayBuyLimitNum="4"/>
-			<goods dataType="base" defineLabel="tenCoin" price="2" 	dayBuyLimitNum="400"	buyLimitNum="20000" fixedLimitB="1"/>
+			<goods dataType="base" defineLabel="tenCoin" price="2" 	dayBuyLimitNum="1000"	buyLimitNum="20000" fixedLimitB="1"/>
 			<goods defineLabel="intensDrug" price="3" 			buyLimitNum="100" fixedLimitB="1"/>
 			<goods defineLabel="teddyBear" price="10" 			dayBuyLimitNum="2" buyLimitNum="100" fixedLimitB="1"/>
 			<goods defineLabel="soldiersStamp" price="3" 			dayBuyLimitNum="5"/>
@@ -23,7 +23,7 @@
 			<goods dataType="fashion" inBagType="equip" defineLabel="dragonHead" price="90" 			limitOneB="1" />
 			
 			<goods defineLabel="greedySnake" price="5" 			buyLimitNum="100" fixedLimitB="1"/>
-			<goods defineLabel="iceCone" price="2" 			buyLimitNum="180" fixedLimitB="1"/>
+			<goods defineLabel="iceCone" price="2" 			buyLimitNum="300" fixedLimitB="1"/>
 			
 			<goods defineLabel="lightCone" price="7" 			buyLimitNum="60"  fixedLimitB="1"/>
 			<goods defineLabel="workerHead" price="8" 			buyLimitNum="10" fixedLimitB="1" />

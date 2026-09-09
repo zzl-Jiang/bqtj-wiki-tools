@@ -89,14 +89,19 @@
 异齿虎:1
 掘地兽:0.6
 		</body>
-		<body name="unendLast" cnName="厉害首领" noEncodeB="1"><!-- 112、114、116、118、120级替代掉最后一个首领，136开始4首领登场，并且随机一个修罗技能。 -->
+		<body name="unendLast" cnName="厉害首领" noEncodeB="1"><!-- 112、114、116、118、120级替代掉最后一个首领 -->
 矿工僵尸
 僵尸治疗兵:0.6
 利爪僵尸
 双头僵尸
 氩星吞噬者:0.3
 		</body>
-		
+		<body name="unendBoss151" cnName="151以后的额外首领" noEncodeB="1"><!-- 151后的额外首领，还要加上unendLast的细闪首领 -->
+棍棒僵尸
+交叉骨
+黑暗骑士
+旺达:0.5
+		</body>
 		
 		
 		

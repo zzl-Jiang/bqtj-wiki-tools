@@ -6,6 +6,7 @@
 			<body name="butcherBlade_2" evoLv="5" />
 			<body name="butcherBlade_3" evoLv="8" />
 			<body name="butcherBlade_4" evoLv="9" />
+			<body name="butcherBlade_5" evoLv="10" />
 			
 			<![CDATA[<body name="butcherBlade_5" evoLv="10" />]]>
 			<body cnName="图腾" name="totem" url="weapon/totem" icon="weapon/totem_icon" evoLv="8" />
@@ -75,6 +76,7 @@
 			<body name="saberDarts_1" evoLv="1" />
 			<body name="saberDarts_2" evoLv="3" />
 			<body name="saberDarts_3" evoLv="4" />
+			<body name="saberDarts_4" evoLv="5" />
 			<body cnName="绯斩" name="saberDarts_3336554617" evoLv="4" author="挽梦亦清歌（天酱）"  au="original"/>
 			<body cnName="樱落" name="saberDarts_2607333339" evoLv="4" author="地煞：诡道子"  au="original"/>
 			<body cnName="裂风扇" name="saberDartsLieFeng" evoLv="4" author="驰掣万里"  au="original"/>

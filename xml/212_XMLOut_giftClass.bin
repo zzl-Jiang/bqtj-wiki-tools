@@ -7,9 +7,17 @@
 		<one name="vipExc_3" cnName="累计充值3万黄金的专属礼包" mustLevel="30000" >
 			<gift>parts;shotgunCopyParts_1;1</gift>
 		</one>
+		<one name="vipExc_4" cnName="累计充值4万黄金的专属礼包" mustLevel="40000" >
+			<gift>parts;lineAddBall_1;1</gift>
+		</one>
+		
 		<one name="vipExc1" cnName="累计充值5万黄金的专属礼包" mustLevel="50000" >
 			<gift>arms;closureGun;1</gift>
 		</one>
+		<one name="vipExc_6" cnName="累计充值6万黄金的专属礼包" mustLevel="60000" >
+			<gift>parts;paralysisCube_1;1</gift>
+		</one>
+		
 		<one name="vipExc2" cnName="累计充值10万黄金的专属礼包" mustLevel="100000" >
 			<gift>equip;blackGhost;1</gift>
 		</one>
