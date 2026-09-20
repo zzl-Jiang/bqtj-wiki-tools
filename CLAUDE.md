@@ -156,6 +156,8 @@ pip install -e .
 
 套装类别在 [config/suit_map.py](config/suit_map.py) 中通过 `GATHER_SUIT_MAP` 字典映射，基于 gather 标签的 cnName 属性判定分类。无 cnName 的 gather 默认为"普通套装"。
 
+属性词条后缀在 [config/pro_map.py](config/pro_map.py) 中通过 `SUFFIX_MAP` 字典映射，用于补全 medelPropertyClass 等缺失中文名的带后缀属性（如 `dpsMul_rifle` → `战斗力/火炮`）。补全时优先查找 equipRangeClass、suitPropertyClass 的中英文对照。
+
 ## 数据水合说明
 
 部分 things 数据（如武器碎片）在 XML 中只有基础定义，游戏运行时通过 AS3 代码水合生成完整数据。Wiki 无法运行时水合，因此 `parse_things.py` 在提取完成后会自动进行静态补丁：

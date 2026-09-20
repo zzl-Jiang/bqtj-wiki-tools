@@ -11,10 +11,14 @@ import re
 import datetime
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, ValueConverter
+from config import SUFFIX_MAP
 
 # --- 配置 ---
 XML_DIR = './xml'
 OUTPUT_DIR = './data/property'
+
+# 优先用于补全中文名的来源文件
+PRIORITY_SOURCES = ('equipRangeClass', 'suitPropertyClass')
 
 
 def _parse_text_levels(text):
@@ -54,6 +58,18 @@ def _smart_value(v):
             return float(v)
         except ValueError:
             return v
+
+
+def _fill_cn_name(name, global_map):
+    """补全缺失的中文名。带后缀词条（如 dpsMul_rifle）拆成 base + 后缀组合"""
+    if name in global_map and global_map[name]:
+        return global_map[name]
+    # 带后缀：base_suffix
+    if '_' in name:
+        base, _, suffix = name.rpartition('_')
+        if base in global_map and global_map[base] and suffix in SUFFIX_MAP:
+            return f"{global_map[base]}/{SUFFIX_MAP[suffix]}"
+    return ''
 
 
 def parse_pro_node(pro_node):
@@ -148,14 +164,47 @@ def run_property_processor():
     print(f"\n汇总文件: {summary_path}")
 
     # 输出对照表（仅 name → cnName，按来源分组）
-    lookup = {}
+    # 先建立全局 name → cnName 映射，用于补全缺失的中文名（优先 equipRangeClass/suitPropertyClass）
+    global_map = {}
     for stem, pro_list in sorted(file_groups.items()):
         key = _short_name(stem)
-        lookup[key] = {pro['name']: pro.get('cnName', '') for pro in pro_list if pro.get('name')}
+        if key not in PRIORITY_SOURCES:
+            continue
+        for pro in pro_list:
+            name = pro.get('name')
+            cn = pro.get('cnName', '')
+            if name and cn:
+                global_map[name] = cn
+    for stem, pro_list in sorted(file_groups.items()):
+        key = _short_name(stem)
+        if key in PRIORITY_SOURCES:
+            continue
+        for pro in pro_list:
+            name = pro.get('name')
+            cn = pro.get('cnName', '')
+            if name and cn and name not in global_map:
+                global_map[name] = cn
+
+    lookup = {}
+    filled_count = 0
+    for stem, pro_list in sorted(file_groups.items()):
+        key = _short_name(stem)
+        lookup[key] = {}
+        for pro in pro_list:
+            name = pro.get('name')
+            if not name:
+                continue
+            cn = pro.get('cnName', '')
+            if not cn:
+                filled = _fill_cn_name(name, global_map)
+                if filled:
+                    cn = filled
+                    filled_count += 1
+            lookup[key][name] = cn
     lookup_path = os.path.join(OUTPUT_DIR, '属性名称对照表.json')
     with open(lookup_path, 'w', encoding='utf-8') as f:
         json.dump(lookup, f, ensure_ascii=False, indent=2)
-    print(f"名称对照表: {lookup_path}")
+    print(f"名称对照表: {lookup_path}（补全 {filled_count} 个缺失中文名）")
 
     print(f"\n处理完成！{len(file_groups)} 个文件，{total_pros} 个属性")
 

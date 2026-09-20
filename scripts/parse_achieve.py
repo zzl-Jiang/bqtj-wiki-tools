@@ -145,7 +145,59 @@ def run_achieve_processor():
                              extra_checks={'gift 奖励': 'gift'})
 
     # --- 保存输出 ---
-    OutputWriter.write(achieve_pool, OUTPUT_DIR, 'Achieve', cn_label='成就')
+    timestamp = OutputWriter.write(achieve_pool, OUTPUT_DIR, 'Achieve', cn_label='成就')
+
+    # --- 生成 AchieveItemData（精简查询 JSON） ---
+    import json
+    import re
+    import pandas as pd
+
+    def _resolve_condition(cn, condition):
+        """将 cnName 中的 [condition.xxx] 占位符替换为 condition 字典的实际值"""
+        if not cn or not isinstance(condition, dict):
+            return cn
+        def _replace(m):
+            key = m.group(1)
+            # maxLevelLv 实际对应 levelLv 字段（值如 "40~40"），取范围最大值
+            if key == 'maxLevelLv':
+                val = condition.get('levelLv')
+                if val is not None:
+                    return str(val).split('~')[-1]
+                return m.group(0)
+            val = condition.get(key)
+            if val is None:
+                return m.group(0)
+            return str(val)
+        return re.sub(r'\[condition\.(\w+)\]', _replace, cn)
+
+    achieve_items = []
+    for d in achieve_pool.values():
+        cn = d.get('cnName', '')
+        cn = _resolve_condition(cn, d.get('condition'))
+        achieve_items.append({'name': d.get('name', ''), 'cnName': cn})
+    achieve_item_json = {
+        "data": {
+            "father": {
+                "@name": "AchieveItem",
+                "@cnName": "成就标签",
+                "item": achieve_items
+            }
+        }
+    }
+
+    item_json_path = os.path.join(OUTPUT_DIR, 'AchieveItemData.json')
+    with open(item_json_path, 'w', encoding='utf-8') as f:
+        json.dump(achieve_item_json, f, ensure_ascii=False, indent=2)
+    print(f"AchieveItemData JSON: {item_json_path} ({len(achieve_items)} 条)")
+
+    # 追加到 Excel
+    excel_path = os.path.join(OUTPUT_DIR, f'成就数据更新_{timestamp}.xlsx')
+    existing_df = pd.read_excel(excel_path, header=None)
+    new_row = pd.DataFrame([{
+        0: "Data:AchieveItemData.json",
+        1: json.dumps(achieve_item_json, ensure_ascii=False)
+    }])
+    pd.concat([existing_df, new_row], ignore_index=True).to_excel(excel_path, index=False, header=False)
 
     # --- 附：勋章属性对照表 ---
     # 成就系统通过 medelProArr 字段引用勋章属性名（如 "dpsMul"），
