@@ -104,9 +104,7 @@
 			</growth>
 		</skill>
 	</father>
-	<father name="petBodySkill" cnName="战斗僵尸">
-		
-	</father>
+	
 	<father name="petBodySkill" cnName="屠刀僵尸">
 		<skill index="0" name="远视"><!-- dps-被动 -->
 			<name>hyperopia_pet</name>
@@ -736,6 +734,11 @@
 				<skill><cd>30</cd></skill>
 				<skill><cd>25</cd></skill>
 				<skill><cd>20</cd></skill>
+				
+				<skill><cd>19</cd></skill>
+				<skill><cd>18</cd></skill>
+				<skill><cd>17</cd></skill>
+				<skill><cd>16</cd></skill>
 			</growth>
 		</skill>
 		<skill index="0" cnName="辐射光球"><!-- dps -->
@@ -766,6 +769,11 @@
 				<skill><cd>30</cd></skill>
 				<skill><cd>26</cd></skill>
 				<skill><cd>23</cd></skill>
+				
+				<skill><cd>22</cd></skill>
+				<skill><cd>21</cd></skill>
+				<skill><cd>20</cd></skill>
+				<skill><cd>19</cd></skill>
 			</growth>
 		</skill>
 		<skill index="0" cnName="静电过载"><!-- 限制 -->
@@ -803,6 +811,11 @@
 				<skill><cd>15</cd><mul>0.15</mul></skill>
 				<skill><cd>15</cd><mul>0.17</mul></skill>
 				<skill><cd>15</cd><mul>0.19</mul></skill>
+				
+				<skill><cd>14</cd><mul>0.19</mul></skill>
+				<skill><cd>14</cd><mul>0.21</mul></skill>
+				<skill><cd>13</cd><mul>0.21</mul></skill>
+				<skill><cd>13</cd><mul>0.23</mul></skill>
 			</growth>
 		</skill>
 		<skill index="0" cnName="敏捷光环"><!-- dps -->
@@ -832,6 +845,11 @@
 				<skill><mul>1.12</mul></skill>
 				<skill><mul>1.13</mul></skill>
 				<skill><mul>1.14</mul></skill>
+				
+				<skill><mul>1.14</mul><range>700</range><changeText>范围[range]码</changeText></skill>
+				<skill><mul>1.14</mul><range>900</range><changeText>范围[range]码</changeText></skill>
+				<skill><mul>1.14</mul><range>1200</range><changeText>范围[range]码</changeText></skill>
+				<skill><mul>1.14</mul><range>9999</range><changeText>范围[range]码</changeText></skill>
 			</growth>
 		</skill>
 	</father>
@@ -985,6 +1003,11 @@
 				<skill><cd>40</cd></skill>
 				<skill><cd>35</cd></skill>
 				<skill><cd>30</cd></skill>
+				
+				<skill><cd>28</cd></skill>
+				<skill><cd>26</cd></skill>
+				<skill><cd>24</cd></skill>
+				<skill><cd>22</cd></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="沉默"><!-- 生存-主动 -->
@@ -1022,6 +1045,13 @@
 				<skill><cd>30</cd><range>1500</range><duration>8</duration></skill>
 				<skill><cd>27</cd><range>1500</range><duration>8</duration></skill>
 				<skill><cd>25</cd><range>1500</range><duration>8</duration></skill>
+				
+				<skill><cd>25</cd><range>2000</range><conditionRange>2000</conditionRange><duration>8</duration></skill>
+				<skill><cd>25</cd><range>9999</range><conditionRange>2000</conditionRange><duration>8</duration></skill>
+				<skill><cd>25</cd><range>9999</range><conditionRange>2000</conditionRange><duration>8</duration><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><changeText>无视封锁，不会被清除</changeText></skill>
+				<skill><cd>25</cd><range>9999</range><conditionRange>2000</conditionRange><duration>8</duration><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><changeText>无视技能免疫</changeText></skill>
+				
+				
 			</growth>
 		</skill>
 		<skill index="0" name="群体圣光"><!-- 生存-群体-主动 -->
@@ -1059,6 +1089,11 @@
 				<skill><cd>60</cd><obj>"pro":0.4</obj></skill>
 				<skill><cd>55</cd><obj>"pro":0.45</obj></skill>
 				<skill><cd>50</cd><obj>"pro":0.5</obj></skill>
+				
+				<skill><cd>47</cd><obj>"pro":0.5</obj></skill>
+				<skill><cd>44</cd><obj>"pro":0.5</obj></skill>
+				<skill><cd>41</cd><obj>"pro":0.5</obj></skill>
+				<skill><cd>38</cd><obj>"pro":0.5</obj></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="反击"><!-- 生存-主动 -->
@@ -1096,6 +1131,11 @@
 				<skill><cd>40</cd></skill>
 				<skill><cd>35</cd></skill>
 				<skill><cd>30</cd></skill>
+				
+				<skill><cd>30</cd><mul>0.4</mul><changeText>吸血效率[mul]</changeText></skill>
+				<skill><cd>30</cd><mul>0.5</mul><changeText>吸血效率[mul]</changeText></skill>
+				<skill><cd>30</cd><mul>0.6</mul><changeText>吸血效率[mul]</changeText></skill>
+				<skill><cd>30</cd><mul>0.7</mul><changeText>吸血效率[mul]</changeText></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="电离折射"><!-- 生存-主动 -->
@@ -1134,6 +1174,11 @@
 				<skill><cd>35</cd></skill>
 				<skill><cd>30</cd></skill>
 				<skill><cd>27</cd></skill>
+				
+				<skill><cd>25</cd></skill>
+				<skill><cd>23</cd></skill>
+				<skill><cd>21</cd></skill>
+				<skill><cd>20</cd></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="馈赠"><!-- 生存-被动 -->
@@ -1198,6 +1243,11 @@
 				<skill><mul>0.32</mul></skill>
 				<skill><mul>0.29</mul></skill>
 				<skill><mul>0.26</mul></skill>
+				
+				<skill><mul>0.24</mul></skill>
+				<skill><mul>0.22</mul></skill>
+				<skill><mul>0.20</mul></skill>
+				<skill><mul>0.18</mul></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="电离反转"><!-- 生存-主动 -->
@@ -1207,7 +1257,7 @@
 			<isInvincibleB>1</isInvincibleB><isDefenceB>1</isDefenceB>
 			<!--英雄技能属性------------------------------------------------------------ -->
 			<cd>90</cd>
-			<changeText>技能冷却时间：[cd]秒</changeText>
+			<changeText>技能冷却时间：[cd]秒{n}作用范围：[range]码</changeText>
 			
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>active</conditionType>
@@ -1235,6 +1285,12 @@
 				<skill><cd>50</cd><range>880</range></skill>
 				<skill><cd>46</cd><range>950</range></skill>
 				<skill><cd>43</cd><range>1200</range></skill>
+				
+				<skill><cd>43</cd><range>2000</range></skill>
+				<skill><cd>41</cd><range>2000</range></skill>
+				<skill><cd>39</cd><range>2000</range></skill>
+				<skill><cd>37</cd><range>2000</range></skill>
+				
 			</growth>
 		</skill>
 		<skill index="0" name="毒雾"><!-- dps-限制-主动 -->
@@ -1275,6 +1331,11 @@
 				<skill><cd>40</cd><range>450</range></skill>
 				<skill><cd>35</cd><range>500</range></skill>
 				<skill><cd>30</cd><range>550</range></skill>
+				
+				<skill><cd>30</cd><range>600</range></skill>
+				<skill><cd>29</cd><range>650</range></skill>
+				<skill><cd>28</cd><range>700</range></skill>
+				<skill><cd>27</cd><range>800</range></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="定点轰炸"><!-- dps-主动 -->
@@ -1339,6 +1400,15 @@
 					<cd>50</cd>
 					<effectProArr>0.34,0.9,0.27,0.09</effectProArr>
 				</skill>
+				
+				<skill><cd>45</cd><effectProArr>0.34,0.9,0.27,0.09</effectProArr></skill>
+				<skill><cd>40</cd><effectProArr>0.34,0.9,0.27,0.09</effectProArr></skill>
+				<skill><cd>35</cd><effectProArr>0.34,0.9,0.27,0.09</effectProArr></skill>
+				<skill><cd>30</cd><effectProArr>0.34,0.9,0.27,0.09</effectProArr></skill>
+					
+					
+				
+				
 			</growth>
 		</skill>
 		<skill index="0" name="欺凌"><!-- dps-被动 -->
@@ -1373,6 +1443,11 @@
 				<skill><mul>2.7</mul></skill>
 				<skill><mul>2.9</mul></skill>
 				<skill><mul>3.1</mul></skill>
+				
+				<skill><mul>3.2</mul></skill>
+				<skill><mul>3.3</mul></skill>
+				<skill><mul>3.4</mul></skill>
+				<skill><mul>3.5</mul></skill>
 			</growth>
 		</skill>
 		
@@ -1410,6 +1485,11 @@
 				<skill><cd>7</cd></skill>
 				<skill><cd>7</cd><linkArr>flash_pet_link_2,godHiding_Pet</linkArr><mul>2.5</mul><changeText>伤害倍数[mul]</changeText></skill>
 				<skill><cd>7</cd><linkArr>flash_pet_link_3,godHiding_Pet</linkArr><mul>3</mul><changeText>伤害倍数[mul]</changeText></skill>
+				
+				<skill><cd>7</cd><linkArr>flash_pet_link_3,godHiding_Pet</linkArr><mul>3.4</mul><changeText>伤害倍数[mul]</changeText></skill>
+				<skill><cd>7</cd><linkArr>flash_pet_link_3,godHiding_Pet</linkArr><mul>3.8</mul><changeText>伤害倍数[mul]</changeText></skill>
+				<skill><cd>7</cd><linkArr>flash_pet_link_3,godHiding_Pet</linkArr><mul>4.2</mul><changeText>伤害倍数[mul]</changeText></skill>
+				<skill><cd>7</cd><linkArr>flash_pet_link_3,godHiding_Pet</linkArr><mul>4.5</mul><changeText>伤害倍数[mul]</changeText></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="gngerFire_pet" cnName="怒火"><!-- dps -->
@@ -1443,6 +1523,11 @@
 				<skill><mul>0.8</mul><passiveSkillArr>selfBurn_pet_7</passiveSkillArr></skill>
 				<skill><mul>1.1</mul><passiveSkillArr>selfBurn_pet_8</passiveSkillArr></skill>
 				<skill><mul>1.5</mul><passiveSkillArr>selfBurn_pet_9</passiveSkillArr></skill>
+				
+				<skill><mul>1.9</mul><passiveSkillArr>selfBurn_pet_9</passiveSkillArr></skill>
+				<skill><mul>2.2</mul><passiveSkillArr>selfBurn_pet_9</passiveSkillArr></skill>
+				<skill><mul>2.6</mul><passiveSkillArr>selfBurn_pet_9</passiveSkillArr></skill>
+				<skill><mul>3</mul><passiveSkillArr>selfBurn_pet_9</passiveSkillArr></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="paralysis_pet" cnName="闪电麻痹"><!-- 限制 -->
@@ -1476,6 +1561,11 @@
 				<skill><cd>25</cd></skill>
 				<skill><cd>21</cd></skill>
 				<skill><cd>18</cd></skill>
+				
+				<skill><cd>17</cd></skill>
+				<skill><cd>16</cd></skill>
+				<skill><cd>15</cd></skill>
+				<skill><cd>14</cd></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="imploding_pet" cnName="爆石"><!-- dps -->
@@ -1511,6 +1601,11 @@
 				<skill><cd>20</cd></skill>
 				<skill><cd>16</cd></skill>
 				<skill><cd>12</cd></skill>
+				
+				<skill><cd>11</cd></skill>
+				<skill><cd>10</cd></skill>
+				<skill><cd>9</cd></skill>
+				<skill><cd>8</cd></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="strong_pet" cnName="顽强"><!-- 生存-被动 -->
@@ -1542,6 +1637,11 @@
 				<skill><obj>"type":"lifePerLess","per":0.53</obj></skill>
 				<skill><obj>"type":"lifePerLess","per":0.57</obj></skill>
 				<skill><obj>"type":"lifePerLess","per":0.62</obj></skill>
+				
+				<skill><obj>"type":"lifePerLess","per":0.66</obj></skill>
+				<skill><obj>"type":"lifePerLess","per":0.70</obj></skill>
+				<skill><obj>"type":"lifePerLess","per":0.74</obj></skill>
+				<skill><obj>"type":"lifePerLess","per":0.78</obj></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="trueshot_pet" cnName="强击光环"><!-- dps -->
@@ -1571,6 +1671,12 @@
 				<skill><mul>1.31</mul></skill>
 				<skill><mul>1.33</mul></skill>
 				<skill><mul>1.35</mul></skill>
+				
+				<skill><mul>1.35</mul><range>350</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>1.35</mul><range>400</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>1.35</mul><range>500</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>1.35</mul><range>600</range><changeText>作用范围：[range]</changeText></skill>
+				
 			</growth>
 		</skill>
 		<skill index="0" name="recoveryHalo_pet" cnName="复原光环"><!-- dps -->
@@ -1600,6 +1706,11 @@
 				<skill><mul>0.016</mul></skill>
 				<skill><mul>0.017</mul></skill>
 				<skill><mul>0.018</mul></skill>
+				
+				<skill><mul>0.018</mul><range>300</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>0.018</mul><range>400</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>0.018</mul><range>500</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>0.018</mul><range>600</range><changeText>作用范围：[range]</changeText></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="disabledHalo_pet" cnName="致残光环"><!-- dps -->
@@ -1629,6 +1740,11 @@
 				<skill><mul>0.72</mul></skill>
 				<skill><mul>0.69</mul></skill>
 				<skill><mul>0.66</mul></skill>
+				
+				<skill><mul>0.66</mul><range>500</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>0.66</mul><range>650</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>0.66</mul><range>800</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>0.66</mul><range>1000</range><changeText>作用范围：[range]</changeText></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="slowMoveHalo_pet" cnName="减速光环"><!-- dps -->
@@ -1659,6 +1775,11 @@
 				<skill><range>900</range></skill>
 				<skill><range>1050</range></skill>
 				<skill><range>1200</range></skill>
+				
+				<skill><range>1500</range></skill>
+				<skill><range>9999</range></skill>
+				<skill><range>9999</range><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><changeText>无视封锁，不会被清除</changeText></skill>
+				<skill><range>9999</range><ignoreNoSkillB>1</ignoreNoSkillB><noBeClearB>1</noBeClearB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><changeText>无视技能免疫</changeText></skill>
 			</growth>
 		</skill>
 	</father>	

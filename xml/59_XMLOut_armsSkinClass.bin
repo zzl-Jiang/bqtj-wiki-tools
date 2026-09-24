@@ -243,6 +243,7 @@
 		<father cnName="隼武" name="falconGun">
 			<body name="falconGun" />
 			<body name="falconGun5" evoLv="5"/>
+			<body name="falconGun6" evoLv="7"/>
 			<body name="falconGun498942159" cnName="流光驹" author="驰掣万里" au="original" />
 			<body name="falconGun2734366043" cnName="游隼" author="【觉醒】屑狐狸" au="original" evoLv="5"/>
 			<body name="falconGun2506" url ="newGun/falconGun2506"  cnName="碧绿精粹" author="驰掣万里" au="original" evoLv="5" info="" />

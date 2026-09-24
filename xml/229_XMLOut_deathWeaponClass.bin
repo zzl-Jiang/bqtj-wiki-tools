@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="deathWeapon" cnName="肉鸽副手">
+		<equip cnName="反骨盾X" rareB="1" lv="1" hurtMul="0"  skillArr="backBucklerSkill" baseLabel="backBucklerX" iconLabel="weapon/backBuckler_1_icon" weaponUrl="weapon/backBuckler_1" hitNum="1" weaponType="buckler"  armsType="rocket" anger="2" angerAddMul="4" layerIndex="2" />
+	</father>
+</data>

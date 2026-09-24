@@ -7,7 +7,7 @@
 			<goods defineLabel="bluntBall_1" dataType="parts" price="60" 		buyLimitNum="1"/>
 			<goods defineLabel="spurtingCube_1" dataType="parts" price="60" 		buyLimitNum="1"/>
 			
-			<goods defineLabel="partsGridCard" price="40" 		buyLimitNum="25"/>
+			<goods defineLabel="partsGridCard" price="40" 		buyLimitNum="27"/>
 			<goods defineLabel="noHurtParts_1" price="5" />
 			<goods defineLabel="mooncakeParts_1" dataType="parts" price="60" 		buyLimitNum="1"/>
 			<goods defineLabel="lshapedParts_1" dataType="parts" price="40" 		buyLimitNum="3"/>

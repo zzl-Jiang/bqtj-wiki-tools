@@ -27,14 +27,15 @@
 			<growth>
 				<skill><mul>0.3</mul></skill>
 				<skill><mul>0.6</mul></skill>
-				<skill><mul>0.9</mul></skill>
-				<skill><mul>1.2</mul></skill>
+				<skill><mul>1</mul></skill>
 				<skill><mul>1.5</mul></skill>
-				<skill><mul>1.8</mul></skill>
-				<skill><mul>2.1</mul></skill>
-				<skill><mul>2.4</mul></skill>
-				<skill><mul>2.7</mul></skill>
-				<skill><mul>3.0</mul></skill>
+				<skill><mul>2</mul></skill>
+				<skill><mul>2.5</mul></skill>
+				<skill><mul>3</mul></skill>
+				<skill><mul>3.5</mul></skill>
+				<skill><mul>4</mul></skill>
+				<skill><mul>4.5</mul></skill>
+				<skill><mul>5.0</mul><changeText>直接召唤轰天雷{n}伤害倍数：[mul]</changeText><description>当在场的2个队友同时装备指定载具（必须强化至30级）时，主角将直接召唤超强载具：轰天雷！伤害倍数：[mul]，持续时间[duration]秒。指定载具包括黑暗泰坦、天目、判决者、腥红挖掘者、幽鬼、异祖龙、异齿虎、雷鸣以及它们的进化体。</description></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="镇山聚合">
@@ -63,14 +64,15 @@
 			<growth>
 				<skill><mul>0.3</mul></skill>
 				<skill><mul>0.6</mul></skill>
-				<skill><mul>0.9</mul></skill>
-				<skill><mul>1.2</mul></skill>
+				<skill><mul>1</mul></skill>
 				<skill><mul>1.5</mul></skill>
-				<skill><mul>1.8</mul></skill>
-				<skill><mul>2.1</mul></skill>
-				<skill><mul>2.4</mul></skill>
-				<skill><mul>2.7</mul></skill>
-				<skill><mul>3.0</mul></skill>
+				<skill><mul>2</mul></skill>
+				<skill><mul>2.5</mul></skill>
+				<skill><mul>3</mul></skill>
+				<skill><mul>3.5</mul></skill>
+				<skill><mul>4</mul></skill>
+				<skill><mul>4.5</mul></skill>
+				<skill><mul>5.0</mul><changeText>直接召唤镇山虎{n}伤害倍数：[mul]</changeText><description>在场的2个队友同时装备指定载具（必须强化至30级）时，主角将召唤一个超强载具：镇山虎！伤害倍数：[mul]，持续时间[duration]秒。指定载具包括黑暗泰坦、血魂、天目、丛林狂袭者、月蚀、碾压者、赤焰、切割者。</description></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="霸空聚合">
@@ -82,7 +84,7 @@
 			<changeText>伤害倍数：[mul]</changeText>
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>active</conditionType>
-			<doCondition>vehicleFit</doCondition>
+			<doCondition></doCondition>
 			<condition></condition><!-- 在准备攻击之前触发 -->
 			<conditionString>Lurker,TheEagle,Adjudicator,WatchEagleAir,BlueMotoSec,BlackTitans</conditionString>
 			<target>me</target>
@@ -99,14 +101,15 @@
 			<growth>
 				<skill><mul>0.3</mul></skill>
 				<skill><mul>0.6</mul></skill>
-				<skill><mul>0.9</mul></skill>
-				<skill><mul>1.2</mul></skill>
+				<skill><mul>1</mul></skill>
 				<skill><mul>1.5</mul></skill>
-				<skill><mul>1.8</mul></skill>
-				<skill><mul>2.1</mul></skill>
-				<skill><mul>2.4</mul></skill>
-				<skill><mul>2.7</mul></skill>
-				<skill><mul>3.0</mul></skill>
+				<skill><mul>2</mul></skill>
+				<skill><mul>2.5</mul></skill>
+				<skill><mul>3</mul></skill>
+				<skill><mul>3.5</mul></skill>
+				<skill><mul>4</mul></skill>
+				<skill><mul>4.5</mul></skill>
+				<skill><mul>5.0</mul><changeText>直接召唤霸空雕{n}伤害倍数：[mul]</changeText><description>在场的2个队友同时装备指定载具（必须强化至30级）时，主角将召唤一个超强飞行器：霸空雕！伤害倍数：[mul]，持续时间[duration]秒。 指定载具包括丛林潜伏者、雄鹰、判决者、守望之翼、黑暗泰坦、血魂。</description></skill>
 			</growth>
 		</skill>
 		

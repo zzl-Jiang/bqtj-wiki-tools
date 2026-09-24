@@ -751,6 +751,14 @@
 				<condition type="valueCompare" pro="deathArthurWinDiff" value="2" /><gift>things;deathSilver;100</gift>
 				<description>亚瑟通关肉鸽 普通 难度。</description>
 			</achieve>
+			<achieve name="deathGhostSoldier" cnName="鬼影战士肉鸽">
+				<condition type="valueCompare" pro="deathGhostSoldierWinDiff" value="2" /><gift>things;yaGem;50</gift>
+				<description>鬼影战士通关肉鸽 普通 难度。</description>
+			</achieve>
+			<achieve name="deathXinLing" cnName="心零肉鸽">
+				<condition type="valueCompare" pro="deathXinLingWinDiff" value="2" /><gift>things;yaGem;50</gift>
+				<description>心零通关肉鸽 普通 难度。</description>
+			</achieve>
 		</father>
 		
 		<father name="deathBook" cnName="记忆收集" goods="achieveCard">

@@ -176,7 +176,7 @@
 	<father name="enemySkill" cnName="首领技能">
 		<skill>
 			<name>wheelStabsDiggers</name><noBeClearB>1</noBeClearB><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
-			<cnName>轮刺</cnName><iconUrl36>SkillIcon/redWiperSkill_36</iconUrl36>
+			<cnName>轮刺</cnName><iconUrl36>SkillIcon/shoot_FightKing_36</iconUrl36>
 			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			<!--英雄技能属性------------------------------------------------------------ -->
 			<cd>25</cd>

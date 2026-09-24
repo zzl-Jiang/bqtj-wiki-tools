@@ -179,6 +179,7 @@
 		<body name="addRanBlackArms" cnName="添加黑色随机武器" input="str"  string="99,1" tip="等级,数量"/>
 		<body name="testBlackArms" cnName="测试黑色随机武器" input="str"  string="60,99" tip="等级范围"/>
 		<body name="addBlackArmsPro" cnName="增加黑色随机武器掉率"/>
+		<body name="clearAllArmsSkin" cnName="清空所有武器的皮肤"/>
 	</father>
 	
 	

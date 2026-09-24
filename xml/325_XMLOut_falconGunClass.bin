@@ -2,7 +2,7 @@
 <data>
 	<father type="energy">
 		
-		<bullet color="darkgold" evoMaxLv="5" evoMustFirstLv="9" composeLv="99" chipNum="150">
+		<bullet color="darkgold" evoMaxLv="7" evoMustFirstLv="9" composeLv="99" chipNum="150">
 			<name>falconGun</name><extraMul>1</extraMul>
 			<cnName>隼武</cnName><noMagneticB>1</noMagneticB>
 			<aiShootRange>800</aiShootRange><iconUrl>specialGun/falconGunIcon2</iconUrl>

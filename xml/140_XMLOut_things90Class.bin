@@ -811,6 +811,31 @@
 	
 	
 	<father name="props" cnName="节日礼包">
+		<things cnName="十月特惠礼包">
+			<name>guoqing2026_10</name>
+			<cnName>十月特惠礼包</cnName>
+			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
+			<useSave>shopAuto</useSave>
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]商店黄金购买
+				[n][n]使用后将获得以下所有物品：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="2"/>
+			<showGiftB>1</showGiftB>
+			<gift>things;demStone;100</gift>
+			<gift>things;demBall;150</gift>
+			<gift>things;madheart;100</gift>
+			<gift>things;yaStone;60</gift>
+			<gift>things;yaRock;60</gift>
+			<gift>things;yaGem;50</gift>
+			<gift>things;intensDrug;200</gift>
+			<gift>things;zodiacCash;100</gift>
+			<gift>things;armsGemChest;200</gift>
+			<gift>things;equipGemChest;200</gift>
+
+		</things>
+		
 		
 		<things cnName="周年畅玩礼包">
 			<name>anniver2025_1</name>
@@ -909,30 +934,7 @@
 		</things>
 		
 		
-		<things cnName="十月特惠礼包">
-			<name>guoqing2024</name>
-			<cnName>十月特惠礼包</cnName>
-			<iconUrl>ThingsIcon/postPlatinumChest</iconUrl><!-- 技能图标 -->
-			<useSave>shopAuto</useSave>
-			<description>
-				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
-				[n]商店黄金购买
-				[n][n]使用后将获得以下所有物品：</description>
-			<effectD type="addGift" useSurplusBagB="1" />
-			<loveD num="2"/>
-			<showGiftB>1</showGiftB>
-			<gift>things;zodiacCash;100</gift>
-			<gift>things;armsGemChest;200</gift>
-			<gift>things;equipGemChest;200</gift>
-			<gift>things;demStone;100</gift>
-			<gift>things;demBall;100</gift>
-			<gift>things;intensDrug;120</gift>
-			<gift>base;wilderKey;10</gift>
-			<gift>things;bossCardStamp;10</gift>
-			<gift>things;partsChest90;1</gift>
-			<gift>things;allBlackEquipCash;300</gift>
-			<gift>things;allBlackCash;300</gift>
-		</things>
+		
 		
 		<things cnName="周年畅玩礼包">
 			<name>anniver2024_1</name>

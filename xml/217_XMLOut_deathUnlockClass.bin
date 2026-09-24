@@ -60,6 +60,7 @@
 		<father name="role">
 			<body must="200" text="解锁角色：藏师" />
 			<body must="200" text="解锁角色：亚瑟" />
+			<body must="200" text="解锁角色：心零" />
 		</father>
 		<father name="bloodSave">
 			<body must="2000" text="多余血浆存储处" />

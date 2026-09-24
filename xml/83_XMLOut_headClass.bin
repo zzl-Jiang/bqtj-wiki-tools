@@ -144,7 +144,16 @@
 			<addObjJson>{'dpsAll':0.06,'lottery':5}</addObjJson>
 		</head>
 		
-		
+		<head name="superHeroEver" cnName="超能英雄EVER" diff="200" iconUrl48="IconGather/superHeroEver_48">
+			<condition info="使用“竞技宝箱”合成。" />
+			<addObjJson>{'dpsMul':1.0,'rareArmsDropPro':0.70}</addObjJson>
+		</head>
+		<![CDATA[
+		<head name="specialSoldiersEver" cnName="特种奇兵EVER" diff="150" iconUrl48="IconGather/specialSoldiersEver_48">
+			<condition info="使用“竞技宝箱”合成。" />
+			<addObjJson>{'lifeMul':1.0,'rareEquipDropPro':0.70}</addObjJson>
+		</head>
+		]]>
 		<head name="superHero" cnName="超能英雄" diff="120"  life="15" iconUrl48="IconGather/superHero_48">
 			<condition info="使用“竞技宝箱”合成。" />
 			<addObjJson>{'dpsMul':1.0,'rareArmsDropPro':0.70}</addObjJson>

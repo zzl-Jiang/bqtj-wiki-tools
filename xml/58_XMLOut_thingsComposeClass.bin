@@ -247,6 +247,10 @@
 	<things name="xiaoNa" giftType="equip"><must><gift>things;normalChest;		350</gift></must></things>
 	<things name="xiaoTian" giftType="equip"><must><gift>things;normalChest;		200</gift></must></things>
 	
+	<things name="superHeroEver" giftType="head"><must><gift>things;arenaChest;		200</gift></must></things>
+	<![CDATA[
+	<things name="specialSoldiersEver" giftType="head"><must><gift>things;arenaChest;		500</gift></must></things>
+	]]>
 	<things name="superHero" giftType="head"><must><gift>things;arenaChest;		40</gift></must></things>
 	<things name="specialSoldiers" giftType="head"><must><gift>things;arenaChest;		30</gift></must></things>
 	<things name="anniver12" giftType="head"><must><gift>things;deathSilver;		40</gift></must></things>

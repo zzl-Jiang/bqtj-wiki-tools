@@ -187,6 +187,44 @@
 				<skill><mul>1.1</mul></skill>
 			</growth>
 		</skill>
+		<skill name="超级麻痹">
+			<name>Hit_Paralysis_ArmsSkill2_p</name><noRandomListB>1</noRandomListB>
+			<cnName>超级麻痹</cnName>
+			<haveEffectBuletHitNum>1</haveEffectBuletHitNum><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>moveSpeed</effectType>
+			<effectProArr>0.1</effectProArr>
+			<mul>0</mul>
+			<duration>4</duration>
+			<!--图像------------------------------------------------------------ --> 
+			<targetEffectImg soundUrl="sound/paralysis_enemy_hit"></targetEffectImg>
+			<stateEffectImg con="add" >skillEffect/paralysis_enemy</stateEffectImg>
+			<description>击中目标后，有[effectProArr.0]的几率使其麻痹，持续[duration]秒。</description>
+		</skill>
+		
+		
+		
+		<skill name="暴击">
+			<name>critCube</name>
+			<cnName>暴击</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<condition>hit</condition><changeHurtB>1</changeHurtB>
+			<target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtNoCondition</effectType>
+			<effectProArr>0.005</effectProArr>
+			<mul>10</mul>
+			<targetEffectImg name="godMace_ArmsSkill_target"/>
+			<description>有[effectProArr.0]的几率造成10倍的伤害。</description>
+		</skill>
+		
 	</father>
 	
 </data>

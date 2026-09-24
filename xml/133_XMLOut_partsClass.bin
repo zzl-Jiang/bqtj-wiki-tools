@@ -194,7 +194,7 @@
 		
 		
 				
-		<things cnName="四素球" o="{'electricEleB':true,'fireEleB':true,'frozenEleB':true,'poisonEleB':true}">
+		<things cnName="四素球" o="{'rareHurtMul':0.15,'electricEleB':true,'fireEleB':true,'frozenEleB':true,'poisonEleB':true}">
 			<name>fourEleParts_2</name><baseLabel>fourEleParts</baseLabel>
 			<cnName>四素球</cnName>
 			<objType>rare</objType>
@@ -468,6 +468,18 @@
 	
 		<![CDATA[技能体]]>
 		<things o="">
+			<name>critCube_1</name><baseLabel>critCube</baseLabel>
+			<cnName>暴击体</cnName><skillArr>critCube</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/critCube1</iconUrl>
+			<description>{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]2026国庆砸金蛋
+			</description>
+		</things>
+		
+		
+		<things o="">
 			<name>spurtingCube_1</name><baseLabel>spurtingCube</baseLabel>
 			<cnName>溅射体</cnName><skillArr>Hit_Spurting_ArmsSkill</skillArr>
 			<objType>rare</objType>
@@ -507,7 +519,7 @@
 		
 		<things o="">
 			<name>paralysisCube_1</name><baseLabel>paralysisCube</baseLabel>
-			<cnName>麻痹体</cnName><skillArr>Hit_Paralysis_ArmsSkill2</skillArr>
+			<cnName>麻痹体</cnName><skillArr>Hit_Paralysis_ArmsSkill2_p</skillArr>
 			<objType>rare</objType>
 			<maxLevel>1</maxLevel>
 			<iconUrl>PartsIcon/paralysisCube1</iconUrl>
@@ -528,6 +540,17 @@
 				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
 				[n]零件券商店
 				[n]黄金商店
+			</description>
+		</things>
+		<things o="{'coinMul':1.5}">
+			<name>coinBall_1</name><baseLabel>coinBall</baseLabel>
+			<cnName>银币掉落球</cnName>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/coinBall1</iconUrl>
+			<description>使用该武器击杀敌人可获得银币掉落加成。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]2026国庆砸金蛋
 			</description>
 		</things>
 		

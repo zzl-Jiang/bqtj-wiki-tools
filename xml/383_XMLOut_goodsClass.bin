@@ -2,6 +2,8 @@
 <data>
 	<father name="normal" cnName="普通" priceType="coin" labelArr="hot,all,props,materials,fashion,vehicle,arms,parts,equip,other">
 		<type name="hot">
+			<goods otherArr="hot" propId="4310" newB="1"cnName="十月特惠礼包" name="guoqing2026_10" price="600" buyLimitNum="1" endTime="2026-10-15" autoUseB="1"><priceType>money</priceType></goods>
+			
 			<![CDATA[
 			<goods cnName="3月补偿礼包" name="offset2026_3" price="1000" buyLimitNum="5" dayBuyLimitNum="1" endTime="2026-4-6" autoUseB="1"><priceType>coin</priceType></goods>
 			
@@ -12,7 +14,7 @@
 			<goods name="pumpkinGoods" dataType="base" defineLabel="pumpkin" price="1000" num="2000" buyLimitNum="1" endTime="2025-12-15"/>
 			<goods cnName="缓时卡" name="slowTimeCard" price="10" dayBuyLimitNum="1" buyLimitNum="1"></goods>
 			]]>
-			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4592" dataType="fashion" inBagType="equip" cnName="冥姬时装" name="mingji"  price="1500" discount="0.8"><priceType>money</priceType></goods>
+			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4606" dataType="fashion" inBagType="equip" cnName="冥姬时装" name="mingji"  price="1500"><priceType>money</priceType></goods>
 			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4591" dataType="fashion" inBagType="equip" cnName="凌空时装" name="girlWing"  price="1500"><priceType>money</priceType></goods>
 			<goods  otherArr="hot,fashion" propId="4593" dataType="fashion" inBagType="equip" cnName="白狐时装" name="foxLingSuper"  price="1500"><priceType>money</priceType></goods>
 			
@@ -37,9 +39,9 @@
 			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4546" dataType="fashion" inBagType="equip" cnName="黄金隼" name="goldFalcon"  price="1000" discount="0.8"><priceType>money</priceType></goods>
 			
 			
-			<goods otherArr="hot,equip" propId="4525" cnName="镭射箱" name="shuttleSword" price="190" buyLimitNum="20" chooseNumB="1" endTime="2026-8-31" discount="0.8" ><priceType>money</priceType></goods>
-			<goods otherArr="hot,equip" propId="4526" cnName="黑洞箱" name="blackHoleSword" price="220" buyLimitNum="20" chooseNumB="1" endTime="2026-8-31" discount="0.8" ><priceType>money</priceType></goods>
-			<goods  otherArr="hot,equip"  propId="4556" cnName="凯撒箱" name="sprintSword20" price="1500"  buyLimitNum="10" endTime="2026-8-31" discount="0.5" ><priceType>money</priceType></goods>
+			<goods otherArr="hot,equip" propId="4525" cnName="镭射箱" name="shuttleSword" price="190" buyLimitNum="25" chooseNumB="1" endTime="2026-10-15" discount="0.8" ><priceType>money</priceType></goods>
+			<goods otherArr="hot,equip" propId="4526" cnName="黑洞箱" name="blackHoleSword" price="220" buyLimitNum="25" chooseNumB="1" endTime="2026-10-15" discount="0.8" ><priceType>money</priceType></goods>
+			<goods  otherArr="hot,equip"  propId="4556" cnName="凯撒箱" name="sprintSword20" price="1500"  buyLimitNum="15" endTime="2026-10-15" discount="0.5" ><priceType>money</priceType></goods>
 			
 			<goods  otherArr="hot,vehicle"  propId="4558" dataType="vehicle" inBagType="equip" cnName="切割者" name="BoneBreaker" price="400" buyLimitNum="1"  endTime="2025-11-16" ><priceType>money</priceType></goods>
 			<goods  otherArr="other" propId="4559" dataType="bossCard" name="su25" price="100" buyLimitNum="1" endTime="2025-11-16"><priceType>money</priceType></goods>
@@ -55,7 +57,6 @@
 			
 			<![CDATA[
 			<goods otherArr="hot" newB="1"cnName="周年畅玩礼包" name="anniver2025_1" price="600" buyLimitNum="6" dayBuyLimitNum="1" endTime="2025-2-15" autoUseB="1"><priceType>coin</priceType></goods>
-			<goods otherArr="hot" propId="4433" newB="1"cnName="周年特惠礼包" name="anniver2025_2" price="140" buyLimitNum="6" dayBuyLimitNum="1" endTime="2025-2-15" autoUseB="1"><priceType>money</priceType></goods>
 			]]>
 			
 			<goods propId="4533" cnName="巨蟹座碎片" name="consCancer" price="6" buyLimitNum="600" chooseNumB="1" discount="0.5" endTime="2025-11-15"><priceType>money</priceType></goods>

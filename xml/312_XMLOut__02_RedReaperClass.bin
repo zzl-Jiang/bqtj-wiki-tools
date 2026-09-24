@@ -26,7 +26,7 @@
 			<addObjJson>{'dpsAll':0.08,'lifeAll':0.08}</addObjJson>
 			<skillArr>vehicleFit_Civilian</skillArr>
 		</equip>
-		<equip name="RedSweeps" cnName="扫荡者" evolutionLabel="">
+		<equip name="RedSweeps" cnName="扫荡者" evolutionLabel="RedWiper">
 			<evolutionLv>4</evolutionLv>
 			<main label="RedReaper_main" dpsMul="1.1" len="67"/>
 			<sub label="RedReaper_sub" dpsMul="1.4" len="47" />
@@ -38,6 +38,19 @@
 			<mustCash>120</mustCash>
 			<addObjJson>{'dpsAll':0.1,'lifeAll':0.1}</addObjJson>
 			<skillArr>vehicleFit_Civilian</skillArr>
+		</equip>
+		<equip name="RedWiper" cnName="剿灭者" evolutionLabel="">
+			<evolutionLv>5</evolutionLv>
+			<main label="RedReaper_main" dpsMul="1.5" len="67"/>
+			<sub label="RedReaper_sub" dpsMul="1.8" len="47" />
+			<mainFrontB>1</mainFrontB>
+			<lifeMul>2.3</lifeMul>
+			<attackMul>2.3</attackMul>
+			<duration>40</duration>
+			<cd>120</cd>
+			<mustCash>120</mustCash>
+			<addObjJson>{'dpsAll':0.16,'lifeAll':0.16}</addObjJson>
+			<skillArr>redWiperSkill,vehicleFit_Civilian</skillArr>
 		</equip>
 		
 		
@@ -174,6 +187,45 @@
 			<swfUrl>swf/vehicle/RedSweeps.swf</swfUrl>
 			<bmpUrl>BodyImg/RedSweeps</bmpUrl>
 		</body>
-		
+		<body name="剿灭者" fixed="RedReaper" shell="metal">
+			<name>RedWiper</name>
+			<cnName>剿灭者</cnName>
+			<swfUrl>swf/vehicle/RedWiper.swf</swfUrl>
+			<bmpUrl>BodyImg/RedWiper</bmpUrl>
+		</body>
+	</father>
+	
+	
+	<father name="vehicleSkill" cnName="技能">
+		<skill>
+			<name>redWiperSkill</name><noBeClearB>1</noBeClearB>
+			<cnName>虚天之轮</cnName><iconUrl>SkillIcon/redWiperSkill</iconUrl>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>碾压伤害提升[mul-1]</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>isUnendLevelB,hurtIsAttack</otherConditionArr>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>changeHurtNoCondition</effectType>
+			<mul>1.5</mul>
+			<description>在虚天塔中，碾压伤害提升[mul]。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>1.5</mul></skill>
+				<skill><mul>2</mul></skill>
+				<skill><mul>3</mul></skill>
+				<skill><mul>4</mul></skill>
+				<skill><mul>5</mul></skill>
+				<skill><mul>6</mul></skill>
+				<skill><mul>7</mul></skill>
+				<skill><mul>8</mul></skill>
+				<skill><mul>9</mul></skill>
+				<skill><mul>10</mul></skill>
+			</growth>
+		</skill>
 	</father>
 </data>

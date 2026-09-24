@@ -10,6 +10,7 @@
 		<equip name="GaiaFit" cnName="轰天雷"><isFitB>1</isFitB>
 			<main label="GaiaFit_main" dpsMul="1" len="100"/>
 			<sub label="Diggers_sub" hideB="1" />
+			<iconLabel>IconGather/GaiaFit</iconLabel>
 			<mainFrontB>1</mainFrontB>
 			<lifeMul>1</lifeMul>
 			<attackMul>1</attackMul>
@@ -18,6 +19,7 @@
 			<main label="CivilianFit_main" dpsMul="0.6" len="100" yGap="20" minRa="166" maxRa="-157" />
 			<sub label="Diggers_sub" hideB="1" />
 			<mainFrontB>1</mainFrontB>
+			<iconLabel>IconGather/CivilianFit</iconLabel>
 			<lifeMul>1</lifeMul>
 			<attackMul>1</attackMul>
 		</equip>
@@ -26,6 +28,7 @@
 		<equip name="FlyFit" cnName="霸空雕"><isFitB>1</isFitB>
 			<main label="FlyFit_main" dpsMul="0.6" len="63" yGap="-21" minRa="113" maxRa="-163" />
 			<sub label="Diggers_sub" hideB="1" />
+			<iconLabel>IconGather/FlyFit</iconLabel>
 			<lifeMul>1</lifeMul>
 			<attackMul>1</attackMul>
 		</equip>

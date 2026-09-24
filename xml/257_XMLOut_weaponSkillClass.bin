@@ -16,9 +16,10 @@
 			<effectType>backBucklerUnder</effectType><effectFather>weapon</effectFather>
 			
 			<!--图像 ------------------------------------------------------------ -->
-			<pointEffectImg name="backBucklerWave"/><!-- 眩晕特效备份 -->
+			<pointEffectImg name="backBucklerWave"/><!-- 弹飞特效 -->
 			<otherEffectImg name="Antimatter_hammer_state"/><!-- 眩晕特效备份 -->
-			<description>举盾期间，只受近战伤害，并且近战伤害降低70%。在举盾的0.35秒内正面受到敌人的近战攻击，则敌人会被打断并进入眩晕状态2秒，无视无敌。</description>
+			<stateEffectImg name="gun_hit"/><!-- 子弹击中无效特效 -->
+			<description>举盾期间，只受近战伤害，并且近战伤害降低70%。在举盾的0.35秒内正面受到敌人的近战攻击，则敌人会被打断并进入眩晕状态，无视无敌。</description>
 		</skill>
 				<skill>
 					<name>backBucklerHammer</name>
@@ -30,12 +31,26 @@
 					<!--效果------------------------------------------------------------ -->
 					<addType>state</addType>
 					<effectType>bucklerDizziness</effectType><effectFather>weapon</effectFather>
-					<duration>2.3</duration>
+					<duration>2.5</duration>
 					<!--图像------------------------------------------------------------ -->
 					<stateEffectImg name="Antimatter_hammer_state"/><![CDATA[特效同时放在backBucklerSkill中]]>
 					<description>使目标陷入眩晕状态，持续[duration]秒。</description>
 				</skill>
-				
+				<skill>
+					<name>backBucklerHammerDeath</name>
+					<cnName>盾反-眩晕</cnName>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>bucklerDizziness</effectType><effectFather>weapon</effectFather>
+					<duration>4</duration>
+					<!--图像------------------------------------------------------------ -->
+					<stateEffectImg name="Antimatter_hammer_state"/><![CDATA[特效同时放在backBucklerSkill中]]>
+					<description>使目标陷入眩晕状态，持续[duration]秒。</description>
+				</skill>
 		
 		<skill>
 			<cnName>斩魂</cnName><wantDescripB>1</wantDescripB>

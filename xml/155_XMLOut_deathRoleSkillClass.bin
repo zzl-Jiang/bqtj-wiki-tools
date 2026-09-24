@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
 	<father name="deathRole" cnName="肉鸽角色">
-		
+		<skill name="横扫">
+			<name>spurtingDR</name><iconUrl>SkillIcon/spurtingLing</iconUrl>
+			<cnName>横扫</cnName><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB><noSkillDodgeB>1</noSkillDodgeB>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<changeText>范围[range]码</changeText>
+			<conditionType>passive</conditionType>
+			<condition>hurt</condition>
+			<target targetMustLiveB="1" noTargetB="1">target,range,enemy</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>spurtingDR</effectType>
+			<extraValueType>hurtValue</extraValueType>
+			<minTriggerT>0.15</minTriggerT>
+			<mul>1</mul>
+			<range>600</range>
+			<pointEffectImg name="orangeLightning"/>
+			<description>对目标造成伤害时，将对目标周围[range]码的敌人造成同等伤害（无视减伤技能，无视免疫、技能免疫），最短触发间隔[minTriggerT]秒。</description>
+			<growth>
+				<skill><range>700</range></skill>
+				<skill><range>1200</range></skill>
+				<skill><range>2000</range></skill>
+			</growth>
+		</skill>
 		<skill name="狂暴">
 			<name>crazyDR</name>
 			<cnName>狂暴</cnName><iconUrl>SkillIcon/crazy_hero</iconUrl>
@@ -468,6 +491,7 @@
 			<duration>999999</duration>
 			<description>无限怒气。</description>
 		</skill>
+		
 		<skill>
 			<name>fastReload</name>
 			<cnName>快速换弹</cnName><everNoClearB>1</everNoClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
