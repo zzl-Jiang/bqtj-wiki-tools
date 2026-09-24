@@ -207,4 +207,5 @@ SKILL_RENAME_MAP = {
     'skeletonWandS': '骷髅权杖·肉鸽',
     'terroristBox_screaming': '惊吓·恐怖盒子',
     'squibDevice_screaming': '惊吓·爆竹',
+    'backBucklerHammerDeath': '盾反-眩晕·肉鸽-副手技能',
 }
