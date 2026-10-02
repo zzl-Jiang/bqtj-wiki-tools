@@ -63,6 +63,9 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 ### 运行处理器
 
 ```bash
+# 全量运行下文所有处理器（自动发现脚本并部分按顺序执行）
+python scripts/mixed.py
+
 # 处理武器数据（输出至 data/arms/）
 python scripts/parse_arms.py
 
@@ -106,8 +109,9 @@ python scripts/parse_wilder.py
 # 处理虚天塔数据（输出至 data/unend/）
 python scripts/parse_unend.py
 
-# 全量运行所有处理器（自动发现脚本并按依赖顺序执行）
-python scripts/mixed.py
+# 处理神秘商人数据（输出至 data/blackmarket/）
+python scripts/parse_blackmarket.py
+
 ```
 
 ### 环境配置
@@ -143,6 +147,7 @@ pip install -e .
 - **活跃度**：存储在 `<data>` → `<task>`/`<gift>` → `<one>` 两层结构下。task/one 为自闭合任务条目，gift/one 含嵌套 `<gift>` 子标签（奖励列表）
 - **世界地图**：存储在 `<father name="...">` → `<place>` 两层结构下。place 含坐标（pointer/point）、标签列表（labelArr）、修罗技能（demSkillArr）等子元素
 - **秘境**：存储在 `<father name="...">` → `<body>` → `<drop>` → `<gift>` 四层嵌套下。body 为秘境首领，drop 含掉落物品（gift 格式 type;name;num）
+- **神秘商人**：存储在blackMarketThingsClass → `<blackMarketThings>`、blackMarketPriceClass → `<father name="blackMartket">`的相关文件下。
 
 ### 输出格式
 
