@@ -216,7 +216,13 @@ def run_body_processor():
 
     # --- 生成 BodyItemData（精简查询 JSON） ---
     import json, pandas as pd
-    body_items = [{'name': d.get('name', ''), 'cnName': d.get('cnName', '')} for d in body_pool.values()]
+    body_items = []
+    for d in body_pool.values():
+        entry = {'name': d.get('name', ''), 'cnName': d.get('cnName', '')}
+        head = d.get('headIconUrl')
+        if head:
+            entry['headIconUrl'] = head
+        body_items.append(entry)
     body_item_json = {
         "data": {
             "father": {
