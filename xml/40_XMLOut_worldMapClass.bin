@@ -1230,13 +1230,13 @@
 				</level>
 			</levelArr>
 		</place>
-		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="no">
+		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="GreenIs2_plot">
 			<name>GreenIs2</name>
 			<cnName>苍木道</cnName><noTaskB>1</noTaskB><noEndlessB>1</noEndlessB>
 			<geogType>sea</geogType><mustWinShowB>1</mustWinShowB>
 			<levelArr>
 				<level>
-					<name>GreenIs2_plot</name>
+					<name>GreenIs2_1</name>
 				</level>
 			</levelArr>
 		</place>

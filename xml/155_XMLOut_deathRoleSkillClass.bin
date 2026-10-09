@@ -368,7 +368,7 @@
 			<target targetMustLiveB="1">target</target>
 			<!--效果------------------------------------------------------------ -->
 			<addType>instant</addType>
-			<extraValueType>puDpsFactor</extraValueType>
+			<extraValueType>meDpsFactor</extraValueType>
 			<effectType>lightningBackDR</effectType><effectFather>death</effectFather>
 			<mul>1.4</mul>
 			<!--图像------------------------------------------------------------ -->

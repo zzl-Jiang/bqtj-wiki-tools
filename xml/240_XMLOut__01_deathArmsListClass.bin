@@ -27,6 +27,7 @@ airCannon
 stopCannon
 waterFlamerDea
 electricArc
+sniperBlueDea
 		</body>
 		<body name="deathArms_purple" noEncodeB="1">
 			yearCattleDea
@@ -61,6 +62,9 @@ gatling
 arcHowDea
 starDeaS
 electricArcX
+sniperCicadaDea
+yearSheepDea
+consLibraDea
 		</body>
 	</father>
 </data>

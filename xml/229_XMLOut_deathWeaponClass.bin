@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
 	<father name="deathWeapon" cnName="肉鸽副手">
-		<equip cnName="反骨盾X" rareB="1" lv="1" hurtMul="0"  skillArr="backBucklerSkill" baseLabel="backBucklerX" iconLabel="weapon/backBuckler_1_icon" weaponUrl="weapon/backBuckler_1" hitNum="1" weaponType="buckler"  armsType="rocket" anger="2" angerAddMul="4" layerIndex="2" />
+		<equip cnName="反骨盾X" rareB="1" lv="1" hurtMul="0"  skillArr="backBucklerSkillDea" baseLabel="backBucklerX" iconLabel="weapon/backBuckler_1_icon" weaponUrl="weapon/backBuckler_1" hitNum="1" weaponType="buckler"  armsType="rocket" anger="2" angerAddMul="4" layerIndex="2" />
 	</father>
+	
+	<father name="weaponSkill" cnName="副手技能">
+		<skill>
+			<name>backBucklerSkillDea</name><wantDescripB>1</wantDescripB>
+			<cnName>盾反</cnName>
+			<ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>underAllHit_before</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>backBucklerUnderDea</effectType><effectFather>weapon</effectFather>
+			<preEffectArr>Antimatter_hammer_state</preEffectArr>
+			<!--图像 ------------------------------------------------------------ -->
+			<pointEffectImg name="backBucklerWave"/><!-- 弹飞特效 -->
+			<otherEffectImg name="Antimatter_hammer_state"/><!-- 眩晕特效备份 -->
+			<stateEffectImg name="gun_hit"/><!-- 子弹击中无效特效 -->
+			<description>举盾期间，只受近战伤害，并且近战伤害降低90%。在举盾的0.35秒内正面受到敌人的近战攻击，则会使周围300码内的敌人会被打断并进入眩晕状态4秒，无视无敌。</description>
+		</skill>
+				<skill>
+					<name>backBucklerHammerDeath</name>
+					<cnName>盾反-群体眩晕</cnName>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>active</conditionType>
+					<condition>no</condition>
+					<target>me,range,enemy</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>bucklerDizziness</effectType><effectFather>weapon</effectFather>
+					<duration>4</duration>
+					<range>300</range>
+					<!--图像------------------------------------------------------------ -->
+					<stateEffectImg name="Antimatter_hammer_state"/><![CDATA[特效同时放在backBucklerSkill中]]>
+					<description>使周围[range]码内的敌人陷入眩晕状态，持续[duration]秒。</description>
+				</skill>
+	</father>
+	
 </data>

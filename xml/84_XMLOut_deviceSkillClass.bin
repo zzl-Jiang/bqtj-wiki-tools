@@ -411,6 +411,7 @@
 				<skill><cd>25</cd></skill>
 				<skill><cd>20</cd></skill>
 				<skill><cd>16</cd></skill>
+				<skill><cd>12</cd></skill>
 			</growth>
 		</skill>
 		
@@ -506,6 +507,11 @@
 					<obj>"cnName":"无疆骑士","num":1,"lifeMul":70,"dpsMul":3,"mulByFatherB":true,"maxNum":1,"lifeTime":30,"skillArr":["crazy_knights","boundless_enemy"]</obj>
 					<changeText>生命值倍数：[obj.lifeMul]{n}战斗力倍数：[mul]</changeText>
 				</skill>
+				<skill>
+					<mul>5</mul>
+					<obj>"cnName":"无疆骑士","num":1,"lifeMul":140,"dpsMul":5,"mulByFatherB":true,"maxNum":1,"lifeTime":30,"skillArr":["crazy_knights","boundless_enemy","noUnderMulHurt"]</obj>
+					<changeText>生命值倍数：[obj.lifeMul]{n}战斗力倍数：[mul]{n}带有钢骨技能</changeText>
+				</skill>
 			</growth>
 		</skill>
 		
@@ -538,6 +544,7 @@
 				<skill><duration>20</duration></skill>
 				<skill><duration>25</duration></skill>
 				<skill><duration>30</duration></skill>
+				<skill><duration>35</duration></skill>
 			</growth>
 		</skill>
 		
@@ -612,6 +619,7 @@
 				<skill><duration>10</duration></skill>
 				<skill><duration>15</duration></skill>
 				<skill><duration>20</duration></skill>
+				<skill><duration>22</duration><changeText>持续时间：[duration]秒{n}伤害[obj.dpsMul]倍</changeText><obj>"cnName":"斩之使者","num":1,"lifeMul":100,"dpsMul":40,"mulByFatherB":1,"maxNum":1,"skillArr":["State_SpellImmunity","alloyShell_10","HookWitchHook","HookWitchRoll","HookWitchShake","mulHurtToValue","State_AddMove50"]</obj></skill>
 			</growth>
 		</skill>			
 					<skill>

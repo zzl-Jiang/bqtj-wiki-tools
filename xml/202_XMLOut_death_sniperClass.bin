@@ -40,7 +40,42 @@
 			<bodyImgRange>specialGun/sniperGreen</bodyImgRange>
 			<bulletImgRange>specialGun/bullet</bulletImgRange>
 		</bullet>
-		
+		<bullet color="orange">
+			<name>sniperCicadaDea</name>
+			<cnName>暴击·金蝉</cnName><dpsMul>0.53</dpsMul><skillArr>sniperKillDea2</skillArr>
+			<iconUrl>newGun/sniperCicada_icon</iconUrl>
+			<capacity>80</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>800</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			
+			<beatBack>10</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootShakeAngle>25</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>	
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<shootSoundUrl>specialGun/sniperBlue_sound</shootSoundUrl>
+			<lineD lightColor="0xFF9900" size="3" lightSize="8" blendMode="add" type="one" />
+			<bodyImgRange>specialGun/sniperCicada</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+				<skill>
+					<name>sniperKillDea2</name>
+					<cnName>暴击</cnName>
+					<haveEffectBuletHitNum>1</haveEffectBuletHitNum>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType><changeHurtB>1</changeHurtB>
+					<effectType>changeHurtNoCondition</effectType>
+					<mul>50</mul>
+					<effectProArr>0.03</effectProArr>
+					
+					<targetEffectImg name="bigSpaceShake"/>
+					<description>有[effectProArr.0]的几率产生50倍的伤害。</description><![CDATA[秒杀boss，就是50倍的，秒杀敌人就是1.5倍的增伤]]>
+				</skill>
 		<![CDATA[紫色]]>
 		
 		
@@ -128,6 +163,44 @@
 				<stateEffectImg partType="mouth" con="add">skillEffect/poisonousFog_hero</stateEffectImg>
 				<description>击中目标后使其中毒，每秒受到伤害为击中伤害的[mul]，持续[duration]秒。</description>
 			</skill>
+			
+		<bullet color="blue">
+			<name>sniperBlueDea</name>
+			<cnName>暴击·猎鹰</cnName><dpsMul>0.67</dpsMul><skillArr>sniperKillDea</skillArr>
+			<iconUrl>newGun/sniperBlue_icon</iconUrl>
+			<capacity>80</capacity>
+			<attackGap>1</attackGap>
+			<reloadGap>1.3</reloadGap>
+			<bulletWidth>800</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			
+			<beatBack>10</beatBack><targetShakeValue>10</targetShakeValue>
+			<armsArmMul>0.5</armsArmMul><upValue>3</upValue><shootShakeAngle>25</shootShakeAngle><shootRecoil>10</shootRecoil><screenShakeValue>15</screenShakeValue>
+			<bulletLife>0.001</bulletLife><hitType>longLine</hitType>	
+			<bulletImgUrl>longLine</bulletImgUrl><hitImgUrl>bulletHitEffect/yellow_motion</hitImgUrl>
+			<shootSoundUrl>specialGun/sniperBlue_sound</shootSoundUrl>
+			<lineD lightColor="0x9100FF" size="3" lightSize="8" blendMode="add" type="one" />
+			<bodyImgRange>specialGun/sniperBlue</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+				<skill>
+					<name>sniperKillDea</name>
+					<cnName>暴击</cnName>
+					<haveEffectBuletHitNum>1</haveEffectBuletHitNum>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType><changeHurtB>1</changeHurtB>
+					<effectType>changeHurtNoCondition</effectType>
+					<mul>50</mul>
+					<effectProArr>0.01</effectProArr>
+					
+					<targetEffectImg name="bigSpaceShake"/>
+					<description>有[effectProArr.0]的几率产生100倍的伤害。</description><![CDATA[秒杀boss，就是50倍的，秒杀敌人就是1.5倍的增伤]]>
+				</skill>
+				
 	</father>
 	
 	<father type="sniper" name="death" cnName="狙击枪">

@@ -1320,6 +1320,24 @@
 			<pointEffectImg name="fullCrushGod"/>
 			<description>对于生命值大于[mul]的敌人造成[secMul]伤害。无视免疫和技能免疫。</description>
 		</skill>
+		<skill name="背刺">
+			<name>backstabGodParts</name><noRandomListB>1</noRandomListB><![CDATA[名字要包含backstabGod]]>
+			<cnName>背刺</cnName><ignoreImmunityB>1</ignoreImmunityB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType><condition>hit</condition><target>target</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>backstabGod</effectType><effectFather>arms</effectFather><changeHurtB>1</changeHurtB>
+			<mul>1.35</mul>
+			<secMul>1.35</secMul>
+			<pointEffectImg name="purpleClawSmall"/>
+			<otherEffectImg name="purpleClaw"/>
+			<description>当你面朝着敌人背面时，对敌人可造成额外[mul-1]的伤害。无视技能免疫。</description>
+		</skill>
+		
+		
+		
+		
 	</father>	
 	
 	

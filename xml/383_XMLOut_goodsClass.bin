@@ -289,6 +289,8 @@
 		<type name="parts">
 			<goods  otherArr="hot"  propId="4436" cnName="爆裂弹" dataType="parts" name="burstParts_1" num="1" price="100" chooseNumB="1"><priceType>money</priceType></goods>
 			
+			<goods propId="4608" cnName="暴击体" dataType="parts" name="critCube_1" num="1" price="200" chooseNumB="1"><priceType>money</priceType></goods>
+			
 			<goods propId="4605" cnName="钝化球" dataType="parts" name="bluntBall_1" num="1" price="100" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="4590" cnName="溅射体" dataType="parts" name="spurtingCube_1" num="1" price="100" chooseNumB="1"><priceType>money</priceType></goods>
 			<goods propId="4578" cnName="老弹体" dataType="parts" name="oldBulletCube_1" num="1" price="200" chooseNumB="1"><priceType>money</priceType></goods>

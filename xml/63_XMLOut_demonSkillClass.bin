@@ -1045,7 +1045,7 @@
 			<description>初始生命值设为[mul]。</description>
 		</skill>
 		<skill cnName="黑洞射线">
-			<name>blackHoleDemon</name><showInLifeBarB>1</showInLifeBarB>
+			<name>blackHoleDemon</name><showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			<cnName>黑洞射线</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB>
 			
 			<conditionType>passive</conditionType>

@@ -474,7 +474,8 @@
 			<maxLevel>1</maxLevel>
 			<iconUrl>PartsIcon/critCube1</iconUrl>
 			<description>{b}{font color='#FFFF00'}获得方式：{/font}{/b}
-				[n]2026国庆砸金蛋
+				[n]稀零箱（绿岛苍木道掉落）
+				[n]黄金商店
 			</description>
 		</things>
 		
@@ -528,7 +529,108 @@
 				[n]VIP专属奖励
 			</description>
 		</things>		
-
+		
+		<![CDATA[技能体2]]>
+		<![CDATA[
+		<things o="">
+			<name>erosionCube_1</name><baseLabel>erosionCube</baseLabel>
+			<cnName>蚀骨体</cnName><skillArr>erosion_ArmsSkill</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/erosionCube1</iconUrl>
+			<description>
+				对拥有“蚀骨”技能的武器无效。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]稀零箱（绿岛苍木道掉落）
+			</description>
+		</things>
+		<things o="">
+			<name>coldCube_1</name><baseLabel>coldCube</baseLabel>
+			<cnName>冷凝体</cnName><skillArr>cold_ArmsSkill</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/coldCube1</iconUrl>
+			<description>
+				对拥有“冷凝”技能的武器无效。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]稀零箱（绿岛苍木道掉落）
+			</description>
+		</things>
+		]]>
+		<things o="">
+			<name>addLifeCube_1</name><baseLabel>addLifeCube</baseLabel>
+			<cnName>回复体</cnName><skillArr>Hit_AddLifeMul_ArmsSkill</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/addLifeCube1</iconUrl>
+			<description>
+				对拥有“击中回复”技能的武器无效。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]稀零箱（绿岛苍木道掉落）
+			</description>
+		</things>
+		<things o="">
+			<name>poisonCube_1</name><baseLabel>poisonCube</baseLabel>
+			<cnName>剧毒体</cnName><skillArr>Hit_Poison_ArmsSkill</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/poisonCube1</iconUrl>
+			<description>
+				对拥有“剧毒”技能的武器无效。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]稀零箱（绿岛苍木道掉落）
+			</description>
+		</things>
+		<things o="">
+			<name>killHurtCube_1</name><baseLabel>killHurtCube</baseLabel>
+			<cnName>振奋体</cnName><skillArr>Kill_Crazy_ArmsSkill</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/killHurtCube1</iconUrl>
+			<description>
+				对拥有“振奋”技能的武器无效。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]稀零箱（绿岛苍木道掉落）
+			</description>
+		</things>
+		<things o="">
+			<name>silenceCube_1</name><baseLabel>silenceCube</baseLabel>
+			<cnName>沉默体</cnName><skillArr>Hit_silence_ArmsSkill</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/silenceCube1</iconUrl>
+			<description>
+				对拥有“击中沉默”技能的武器无效。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]稀零箱（绿岛苍木道掉落）
+			</description>
+		</things>
+		<things o="">
+			<name>implodingCube_1</name><baseLabel>implodingCube</baseLabel>
+			<cnName>爆石体</cnName><skillArr>Hit_imploding_godArmsSkill</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/implodingCube1</iconUrl>
+			<description>
+				对拥有“爆石”技能的武器无效。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]稀零箱（绿岛苍木道掉落）
+			</description>
+		</things>
+		<things o="">
+			<name>backstabCube_1</name><baseLabel>backstabCube</baseLabel>
+			<cnName>背刺体</cnName><skillArr>backstabGodParts</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/backstabCube1</iconUrl>
+			<description>
+				对拥有“背刺”技能的武器无效。
+				[n][n]{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]稀零箱（绿岛苍木道掉落）
+			</description>
+		</things>
+		
+		
 		<![CDATA[增强球]]>
 		<things o="">
 			<name>bluntBall_1</name><baseLabel>bluntBall</baseLabel>

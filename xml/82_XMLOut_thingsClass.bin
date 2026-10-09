@@ -1065,6 +1065,37 @@
 			<loveD num="4"/>
 			<gift>parts;loaderParts_93;6</gift>
 		</things>
+		<things cnName="稀零箱">
+			<name>rarePartsChest</name>
+			<cnName>稀零箱</cnName><addDropDefineB>1</addDropDefineB>
+			<iconUrl>NewIcon/rarePartsBox</iconUrl><!-- 技能图标 -->
+			<description>
+				{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]1、苍木道。
+				[n]2、商店购买。
+				[n][n]使用后将随机获得以下物品中的1种：</description>
+			<effectD type="addGift" useSurplusBagB="1" />
+			<loveD num="3"/>
+			<smeltD grade="-1" addType="" price="300"/>
+			<giftRandomB>1</giftRandomB><!-- 随机物品，根据pro概率 -->
+			<gift pro="400">base;partsCoin;2</gift>
+			<gift pro="100">base;wilderKey;1</gift>
+			<gift pro="100">things;partsChest78;1</gift>
+			<gift pro="20">parts;shockParts_1;1</gift>
+			<gift pro="20">parts;hardeningParts_1;1</gift>
+			<gift pro="20">parts;speedParts_1;1</gift>
+			<gift pro="20">parts;downSpeedParts_1;1</gift>
+			<gift pro="10">parts;coinBall_1;1</gift>
+			<gift pro="5">parts;addLifeCube_1;1</gift>
+			<gift pro="5">parts;poisonCube_1;1</gift>
+			<gift pro="5">parts;killHurtCube_1;1</gift>
+			<gift pro="5">parts;silenceCube_1;1</gift>
+			<gift pro="3">parts;implodingCube_1;1</gift>
+			<gift pro="2">parts;backstabCube_1;1</gift>
+			<gift pro="5">parts;critCube_1;1</gift>
+
+		</things>
+		
 		
 		
 		

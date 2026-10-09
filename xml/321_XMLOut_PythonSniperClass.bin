@@ -27,7 +27,7 @@
 			<randomArmsRange>sniperRifle</randomArmsRange>
 			<!-- 技能 -->
 			<skillArr>hyperopia_incapable</skillArr>
-			<bossSkillArr>sumLandDog,slowMove_enemy</bossSkillArr>
+			<bossSkillArr>fastForwardDeath,sumLandDog,slowMove_enemy,groupCrazy_enemy,blackHoleDemon,resistMulHurt,killPoison,BallLightningCd</bossSkillArr>
 		</body>
 	</father>
 	<father name="snake" cnName="血蟒">
@@ -55,7 +55,7 @@
 		<skill>
 			<name>sumLandDog</name><iconUrl36>SkillIcon/summonedSpider_spiderKing_36</iconUrl36>
 			<cnName>召唤巡逻狗</cnName>
-			<showInLifeBarB>1</showInLifeBarB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
 			<!--英雄技能属性------------------------------------------------------------ -->
 			<cd>5</cd>
 			<!--触发条件与目标------------------------------------------------------------ -->

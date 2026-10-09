@@ -74,7 +74,65 @@
 			<bulletImgRange>specialGun/bullet</bulletImgRange>
 			<info>狮子座的吼声划破天际，迸发出的声电电流将撕裂周围的敌人。不受磁力场影响。</info>
 		</bullet>
-		
+		<bullet color="orange">
+			<name>yearSheepDea</name>
+			<cnName>未羊X</cnName><iconUrl>specialGun/yearSheepIcon</iconUrl>
+			<dpsMul>0.5</dpsMul>
+			<!--基本-->
+			<capacity>40</capacity> 
+			<attackGap>0.7</attackGap>
+			<reloadGap>3</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>900</bulletWidth>
+			<bulletShakeWidth>50</bulletShakeWidth>
+			<bulletNum>1</bulletNum>				
+			<shootAngle>0</shootAngle>				
+			<beatBack>10</beatBack>
+			<targetShakeValue>10</targetShakeValue>
+			<!--特殊------------------------------------------------------------ -->
+			<penetrationNum>12</penetrationNum>
+			<godSkillArr>yearSheepSkillDea</godSkillArr>
+			<!--武器属性------------------------------------------------------------ -->
+			<hurtRatio>15</hurtRatio>
+			<gunNum>1</gunNum>
+			<armsArmMul>0.5</armsArmMul>
+			<armsWeight>5</armsWeight>
+			<upValue>3</upValue>
+			<shootShakeAngle>15</shootShakeAngle>
+			<shootRecoil>10</shootRecoil>
+			<screenShakeValue>15</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<noShakeTime>0.5</noShakeTime>
+			<bulletLife>0.001</bulletLife>
+			<hitType>longLine</hitType>
+			
+			<!--图像动画属性------------------------------------------------------------ -->
+			<shootSoundUrl>sound/waveShoot</shootSoundUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl raNum="30" con="filter" len="30" time="0.03" imgDieType="die">specialGun/yearSheepBullet</bulletImgUrl>
+			<hitImgUrl>bulletHitEffect/fitHit</hitImgUrl><!-- 子弹图像【必备】 -->
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>specialGun/yearSheep</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+				<skill><!-- dps-被动 -->
+					<name>yearSheepSkillDea</name><noRandomListB>1</noRandomListB>
+					<cnName>无双</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>yearSheepSkill</effectType>
+					<mul>0.4</mul>
+					<!--图像------------------------------------------------------------ -->
+					<pointEffectImg partType="body" soundUrl="sound/magicHit1">bulletHitEffect/purpleLaser</pointEffectImg>
+					<description>秒杀生命值低于[mul]的敌人。</description>
+				</skill>
+				
+				
+				
 		<bullet color="purple">
 			<name>airCannonX</name><iconUrl>newGun/airCannonX_icon</iconUrl>
 			<cnName>空气炮X</cnName>

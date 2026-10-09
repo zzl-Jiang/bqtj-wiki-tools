@@ -111,6 +111,11 @@
 				<skill><duration>1.0</duration></skill>
 				<skill><duration>1.2</duration></skill>
 				<skill><duration>1.4</duration></skill>
+				
+				<skill><condition>underAllHurt</condition><duration>1.5</duration></skill>
+				<skill><condition>underAllHurt</condition><duration>1.6</duration></skill>
+				<skill><condition>underAllHurt</condition><duration>1.7</duration></skill>
+				<skill><condition>underAllHurt</condition><duration>1.8</duration></skill>
 			</growth>
 		</skill>
 	</father>

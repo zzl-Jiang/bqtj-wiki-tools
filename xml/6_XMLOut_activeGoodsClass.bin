@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
-	<father name="pumpkin" cnName="桂花糕" priceType="pumpkin" labelArr="all"><!-- 2023年中秋 -->
+	<father name="pumpkin" cnName="桂花糕" priceType="pumpkin" labelArr="all" type="other"><!-- 2023年中秋 -->
 		<type>
 			<goods dataType="parts" defineLabel="mooncakeParts_1" price="30" buyLimitNum="1" />
 			<goods defineLabel="demonSpreadCard" price="3" 			buyLimitNum="5" />

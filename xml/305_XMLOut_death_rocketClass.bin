@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
-	<father type="rocket" name="death" cnName="火炮-紫色">
+	<father type="rocket" name="death" cnName="火炮">
+		
+		<bullet color="orange">
+			<name>consLibraDea</name>
+			<cnName>天秤座X</cnName>
+			<dpsMul>1</dpsMul>
+			<!--随机属性------------------------------------------------------------ -->
+			<!--基本-->
+			<capacity>30</capacity>
+			<attackGap>0.8</attackGap>
+			<reloadGap>2</reloadGap>
+			<shakeAngle>0</shakeAngle>
+			<bulletWidth>40</bulletWidth>
+			<bulletNum>1</bulletNum>				
+			<!--武器属性------------------------------------------------------------ -->
+			<armsArmMul>0.60</armsArmMul>
+			<upValue>0</upValue>
+			<shootShakeAngle>40</shootShakeAngle>
+			<shootRecoil>12</shootRecoil>
+			<screenShakeValue>16</screenShakeValue>
+			<!--基本属性------------------------------------------------------------ -->
+			<bulletLife>3</bulletLife>
+			<hitType>rect</hitType>
+			<!--运动属性------------------------------------------------------------ -->	
+			<bulletSpeed>40</bulletSpeed>
+			<!--特殊------------------------------------------------------------ -->
+			<godSkillArr>consLibraDea</godSkillArr>
+			<!--图像动画属性------------------------------------------------------------ -->
+			<iconUrl>newGun/consLibraIcon</iconUrl>
+			<flipX>1</flipX>
+			<bulletImgUrl name="consLibraBullet"/>
+			<smokeImgUrl name="consLibraSmoke"/>
+			<hitImgUrl name="consPurpleHit"/>
+			<fireImgUrl name="purpleSpurtingFire"/>
+			<shootSoundUrl>specialGun/yearMonkeySound</shootSoundUrl>
+			<!--图像范围------------------------------------------------------------ -->
+			<bodyImgRange>newGun/consLibra</bodyImgRange>
+			<bulletImgRange>specialGun/bullet</bulletImgRange>
+		</bullet>
+				<skill>
+					<name>consLibraDea</name><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<cnName>平衡</cnName><noRandomListB>1</noRandomListB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>instant</addType>
+					<effectType>consLibraDea</effectType>
+					<mul>0.4</mul>
+					<!--图像------------------------------------------------------------ -->
+					<otherEffectImg />
+					<pointEffectImg name="consPurpleBoom"/>
+					<description>击中敌人时，将它的生命百分比设置为和你一致（不低于[mul]）。</description>
+				</skill>
+		
+		
 		<bullet cnName="丑牛"  kind="poison" color="purple">
 			<name>yearCattleDea</name>
 			<cnName>滞毒·丑牛</cnName><dpsMul>0.58</dpsMul>

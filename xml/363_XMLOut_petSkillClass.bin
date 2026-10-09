@@ -406,6 +406,11 @@
 				<skill><mul>0.31</mul></skill>
 				<skill><mul>0.34</mul></skill>
 				<skill><mul>0.37</mul></skill>
+				
+				<skill><mul>0.37</mul><range>550</range><changeText>增加值为伤害值的[mul]{n}范围：[range]</changeText></skill>
+				<skill><mul>0.38</mul><range>700</range><changeText>增加值为伤害值的[mul]{n}范围：[range]</changeText></skill>
+				<skill><mul>0.39</mul><range>1000</range><changeText>增加值为伤害值的[mul]{n}范围：[range]</changeText></skill>
+				<skill><mul>0.40</mul><range>1300</range><changeText>增加值为伤害值的[mul]{n}范围：[range]</changeText></skill>
 			</growth>
 		</skill>
 		<skill index="0" cnName="防御光环"><!-- dps -->
@@ -437,6 +442,11 @@
 				<skill><mul>0.72</mul></skill>
 				<skill><mul>0.70</mul></skill>
 				<skill><mul>0.68</mul></skill>
+				
+				<skill><mul>0.67</mul><range>600</range><changeText>防御增加：[1-mul]{n}范围：[range]</changeText></skill>
+				<skill><mul>0.66</mul><range>700</range><changeText>防御增加：[1-mul]{n}范围：[range]</changeText></skill>
+				<skill><mul>0.65</mul><range>850</range><changeText>防御增加：[1-mul]{n}范围：[range]</changeText></skill>
+				<skill><mul>0.64</mul><range>1000</range><changeText>防御增加：[1-mul]{n}范围：[range]</changeText></skill>
 			</growth>
 		</skill>
 		<skill index="0" cnName="上帝的护佑"><!-- dps -->
@@ -467,6 +477,11 @@
 				<skill><minTriggerT>35</minTriggerT></skill>
 				<skill><minTriggerT>32</minTriggerT></skill>
 				<skill><minTriggerT>30</minTriggerT></skill>
+				
+				<skill><minTriggerT>28</minTriggerT></skill>
+				<skill><minTriggerT>26</minTriggerT></skill>
+				<skill><minTriggerT>24</minTriggerT></skill>
+				<skill><minTriggerT>22</minTriggerT></skill>
 			</growth>
 		</skill>
 	</father>
@@ -1672,10 +1687,10 @@
 				<skill><mul>1.33</mul></skill>
 				<skill><mul>1.35</mul></skill>
 				
-				<skill><mul>1.35</mul><range>350</range><changeText>作用范围：[range]</changeText></skill>
 				<skill><mul>1.35</mul><range>400</range><changeText>作用范围：[range]</changeText></skill>
-				<skill><mul>1.35</mul><range>500</range><changeText>作用范围：[range]</changeText></skill>
-				<skill><mul>1.35</mul><range>600</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>1.35</mul><range>550</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>1.35</mul><range>700</range><changeText>作用范围：[range]</changeText></skill>
+				<skill><mul>1.35</mul><range>1000</range><changeText>作用范围：[range]</changeText></skill>
 				
 			</growth>
 		</skill>

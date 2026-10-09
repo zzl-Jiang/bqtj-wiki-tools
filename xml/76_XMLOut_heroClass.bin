@@ -726,7 +726,7 @@
 			<cnName>本我</cnName><showLevel>9999</showLevel>
 			<raceType>human</raceType>
 			<movieLink>Striker</movieLink>
-			<swfUrl>swf/hero/Striker358.swf</swfUrl>
+			<swfUrl>swf/hero/Striker369.swf</swfUrl>
 			<swfName>Striker</swfName>
 			<!-- 基本系数 -->
 			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
@@ -1450,6 +1450,44 @@
 			<bossSkillArrCn>永久金刚钻，重生，电离折射，复原，群体圣光，反击</bossSkillArrCn>
 			<!-- 攻击数据，【已经链接到了movieLink】 -->
 		</body>	
+		
+		<body index="0" name="鬼影射手" shell="normal">
+			
+			<name>GhostSoldierSec</name>
+			<cnName>鬼影射手</cnName>
+			<raceType>human</raceType>
+			<movieLink>Striker</movieLink>
+			<swfUrl>swf/hero/GhostSoldier369.swf</swfUrl>
+			<swfName>GhostSoldier</swfName>
+			<!-- 基本系数 -->
+			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
+			<!-- 图像 ，【已经链接到了movieLink】-->
+			<headIconUrl>IconGather/GhostSoldier</headIconUrl>
+			<!-- 碰撞体积 -->
+			<hitRect>-12, -90, 24, 90</hitRect><!-- 站立碰撞体积-->
+			<squatHitRect>-12,-50,24,50</squatHitRect><!-- 下蹲碰撞体积-->
+			<hurtRectArr>-12,-35,24,35</hurtRectArr> <!-- 要害受伤体积-->
+			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
+			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
+			<!-- 运动 -->
+			<maxVx>9</maxVx>
+			<squatMaxVx>5</squatMaxVx>
+			<oneAiLabel>shootHead</oneAiLabel>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<!-- AI属性 -->
+			<dropD rareSuit="normal"/>
+			<armsNumber>5</armsNumber><!-- 武器个数 -->
+			<randomArmsRange>ak47</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
+			<!-- 技能 -->
+			<skillArr></skillArr>
+			<bossSkillArr>through_enemy,rebirth_enemy,feedback_enemy,recovery_enemy,groupLight_enemy,tenacious_enemy</bossSkillArr>
+			<bossSkillArrCn>永久金刚钻，重生，电离折射，复原，群体圣光，反击</bossSkillArrCn>
+			<!-- 攻击数据，【已经链接到了movieLink】 -->
+		</body>	
+		
+		
+		
+		
 		
 		<body index="0" name="鬼爵" shell="normal">
 			<name>GhostDuke</name>

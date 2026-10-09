@@ -208,4 +208,7 @@ SKILL_RENAME_MAP = {
     'terroristBox_screaming': '惊吓·恐怖盒子',
     'squibDevice_screaming': '惊吓·爆竹',
     'backBucklerHammerDeath': '盾反-眩晕·肉鸽',
+    'backstabGodParts': '背刺·零件',
+    'backBucklerSkillDea': '盾反·肉鸽',
+    'sniperKillDea2': '暴击·金蝉',
 }

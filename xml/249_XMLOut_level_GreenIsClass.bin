@@ -1532,6 +1532,45 @@
 				</eventG>
 			</level>
 			
+			<level name="GreenIs2_1">
+				<info enemyLv="99" diff="2" />
+				<sceneLabel>GreenIs2</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG><allDefault aiOrder="patrolGlobal"></allDefault>
+					<unitOrder id="enemy1">
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="1.5" />
+						<unit cnName="血蟒突击兵" num="3" lifeMul="1.5"/>
+					</unitOrder>
+					<unitOrder id="enemy2">
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="1.5"/>
+						<unit cnName="血蟒突击兵" num="3" lifeMul="1.5"/>
+						<unit cnName="血蟒狙击兵" num="1" lifeMul="1.5"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<unit cnName="血蟒雇佣兵" num="3" lifeMul="1.5"/>
+						<unit cnName="血蟒突击兵" num="3" lifeMul="1.5"/>
+						<unit cnName="血蟒狙击兵" num="3" lifeMul="1.5"/>
+					</unitOrder>
+					<unitOrder id="enemy4">
+						<unit cnName="血蟒狙击兵" unitType="boss" lifeMul="7" dpsMul="0.5" armsRange="consArcher,consLeo,consScorpio" />
+					</unitOrder>
+				</unitG>
+				<!-- 事件集************************************************ -->
+				<eventG>
+					<group>
+						<event id="e2_1"><condition delay="1"></condition></event>
+						<event id="e2_1"><condition doNumber="3" orderChooseType="randomOne">liveEnemyNumber:less_2</condition><order>createUnit:enemy1; r1</order><order>createUnit:enemy1; r2</order><order>createUnit:enemy1; r3</order></event> 
+						<event id="e2_1"><condition doNumber="3" orderChooseType="randomOne">liveEnemyNumber:less_2</condition><order>createUnit:enemy2; r1</order><order>createUnit:enemy2; r2</order><order>createUnit:enemy2; r3</order></event> 
+						<event id="e2_1"><condition doNumber="3" orderChooseType="randomOne">liveEnemyNumber:less_2</condition><order>createUnit:enemy3; r1</order><order>createUnit:enemy3; r2</order><order>createUnit:enemy3; r3</order></event> 
+						<event id="e2_1"><condition doNumber="1" orderChooseType="randomOne">enemyNumber:less_1</condition><order>createUnit:enemy4; r1</order><order>createUnit:enemy4; r2</order><order>createUnit:enemy4; r3</order></event> 
+						<event id="e2_11">
+							<condition>enemyNumber:less_1</condition>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+			
 			<level name="GreenIs3_1">
 				<info enemyLv="99" diff="2" />
 				<sceneLabel>GreenIs3</sceneLabel>
