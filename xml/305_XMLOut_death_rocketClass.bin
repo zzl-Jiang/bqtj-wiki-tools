@@ -45,6 +45,7 @@
 					<!--触发条件与目标------------------------------------------------------------ -->
 					<conditionType>passive</conditionType>
 					<condition>hit</condition>
+					<otherConditionArr>isDeathB</otherConditionArr>
 					<target>target</target>
 					<!--效果------------------------------------------------------------ -->
 					<addType>instant</addType>
@@ -53,7 +54,7 @@
 					<!--图像------------------------------------------------------------ -->
 					<otherEffectImg />
 					<pointEffectImg name="consPurpleBoom"/>
-					<description>击中敌人时，将它的生命百分比设置为和你一致（不低于[mul]）。</description>
+					<description>击中敌人时，将它的生命百分比设置为和你一致（不低于[mul]）。只在肉鸽模式下有效。</description>
 				</skill>
 		
 		

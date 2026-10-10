@@ -121,6 +121,7 @@
 					<!--触发条件与目标------------------------------------------------------------ -->
 					<conditionType>passive</conditionType>
 					<condition>hit</condition>
+					<otherConditionArr>isDeathB</otherConditionArr>
 					<target>target</target>
 					<!--效果------------------------------------------------------------ -->
 					<addType>instant</addType>
@@ -128,7 +129,7 @@
 					<mul>0.4</mul>
 					<!--图像------------------------------------------------------------ -->
 					<pointEffectImg partType="body" soundUrl="sound/magicHit1">bulletHitEffect/purpleLaser</pointEffectImg>
-					<description>秒杀生命值低于[mul]的敌人。</description>
+					<description>秒杀生命值低于[mul]的敌人。只在肉鸽模式下有效。</description>
 				</skill>
 				
 				
