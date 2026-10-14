@@ -189,7 +189,48 @@ def run_skill_processor():
     generate_summary(skill_pool, renamed_count)
 
     # --- 统一保存 ---
-    OutputWriter.write(skill_pool, OUTPUT_DIR, 'Skill', cn_label='技能')
+    timestamp = OutputWriter.write(skill_pool, OUTPUT_DIR, 'Skill', cn_label='技能')
+
+    # --- 生成 SkillsItemData（精简查询 JSON） ---
+    import json
+    import pandas as pd
+    skill_items = []
+    for d in skill_pool.values():
+        entry = {
+            'name': d.get('name', ''),
+            'cnName': d.get('cnName', ''),
+            'father': d.get('father', ''),
+        }
+        if d.get('iconUrl36'):
+            entry['iconUrl36'] = d['iconUrl36']
+        if d.get('iconUrl'):
+            entry['iconUrl'] = d['iconUrl']
+        skill_items.append(entry)
+
+    skill_item_json = {
+        "data": {
+            "father": {
+                "@name": "SkillItem",
+                "@cnName": "技能标签",
+                "item": skill_items
+            }
+        }
+    }
+
+    item_json_path = os.path.join(OUTPUT_DIR, 'SkillsItemData.json')
+    with open(item_json_path, 'w', encoding='utf-8') as f:
+        json.dump(skill_item_json, f, ensure_ascii=False, indent=2)
+    print(f"SkillsItemData JSON: {item_json_path} ({len(skill_items)} 条)")
+
+    # 追加到 Excel
+    excel_path = os.path.join(OUTPUT_DIR, f'技能数据更新_{timestamp}.xlsx')
+    existing_df = pd.read_excel(excel_path, header=None)
+    new_row = pd.DataFrame([{
+        0: "Data:SkillsItemData.json",
+        1: json.dumps(skill_item_json, ensure_ascii=False)
+    }])
+    pd.concat([existing_df, new_row], ignore_index=True).to_excel(excel_path, index=False, header=False)
+
     print(f"处理完成！提取技能总数: {len(skill_pool)}")
 
 if __name__ == '__main__':
