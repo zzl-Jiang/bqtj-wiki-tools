@@ -175,6 +175,10 @@ CATEGORY_MAP = {
     "starDeaS": ["death"],
     "electricArcX": ["death"],
     "airWave": ["darkgold"],
+    "consLibraDea": ["death"],
+    "sniperCicadaDea": ["death"],
+    "sniperBlueDea": ["death"],
+    "yearSheepDea": ["death"],
 }
 
 # name → 强制 cnName 覆盖表（处理重名冲突等特殊情况）
