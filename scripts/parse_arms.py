@@ -10,7 +10,7 @@ from config import CATEGORY_MAP, ARM_NAME_MAP
 XML_DIR = './xml'
 OUTPUT_DIR = './data/arms'
 
-
+# --- 注意新增一把武器时，请于config\arm_map.py处手动填写分类内容 ---
 def load_death_arms_color():
     """解析肉鸽武器对照表，返回 {weapon_name: color} 映射"""
     death_files = glob_module.glob(os.path.join(XML_DIR, '*deathArmsListClass*'))
