@@ -6,7 +6,7 @@
 """
 import os
 import xml.etree.ElementTree as ET
-from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator
+from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator, clean_str
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -174,7 +174,7 @@ def run_achieve_processor():
     for d in achieve_pool.values():
         cn = d.get('cnName', '')
         cn = _resolve_condition(cn, d.get('condition'))
-        achieve_items.append({'name': d.get('name', ''), 'cnName': cn})
+        achieve_items.append({'name': clean_str(d.get('name', '')), 'cnName': clean_str(cn)})
     achieve_item_json = {
         "data": {
             "father": {

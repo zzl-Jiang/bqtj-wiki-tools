@@ -57,6 +57,7 @@
 		
 		
 		<body cnName="掉落物碰撞" name="dropHit" con="add" soundUrl="uiSound/getDrop" soundRan="6" raNum="8" ranAn="60" >bulletHitEffect/blue</body>
+		<body cnName="掉落物碰撞-声音" name="dropHitSound" soundUrl="uiSound/getDrop" soundRan="6" raNum="8"></body>
 		<body cnName="冲刺小烟" name="sprintSmoke"  raNum="30" con="add" soundUrl="bodySound/fastMove" soundRan="2">bulletHitEffect/smoke_motion</body>
 		<body cnName="夺命箭发射" name="deadlyArrowDeathFire" soundUrl="hitSound/magicShoot"  soundRan="3" ranAn="180" raNum="4" randomRange="8">bulletHitEffect/purpleBoomSmall</body>
 		<body cnName="天蝎座击中" name="consScorpioHit" con="add" soundUrl="hitSound/waveHit"  soundRan="3" ranAn="180" raNum="4" randomRange="8">bulletHitEffect/purpleBoomSmall</body>
@@ -111,6 +112,7 @@
 		<body cnName="下雪" name="snowSputtering" urlRandomValue="4">sputtering/whiteBlood</body>
 		<body cnName="沙尘" name="sandSputtering" urlRandomValue="4" con="add">sputtering/sand</body>
 		<body cnName="酸雨" name="acidrain" urlRandomValue="3" con="add">sputtering/acidrain</body>
+		<body cnName="蓝色雨" name="blueRain" urlRandomValue="3" con="add">sputtering/blueRain</body>
 		<body cnName="高温" name="heatSputtering" con="add">sputtering/heat</body>
 		<body cnName="降雨炮爆炸" name="rainBulletBoom" shake="20,0.3,30,0,mess" >boomEffect/bigSpace</body>
 		<body cnName="红点子弹" name="redPoint" con="add">bullet/redPoint</body>
@@ -179,6 +181,9 @@
 		<body cnName="射手座" name="consArcherBullet"  raNum="1" con="add">newGun/consArcherBullet</body>
 		<body cnName="极弧子弹" name="electricArcBullet"  raNum="1" con="add">generalEffect/electricArc</body>
 		<body cnName="天蝎座子弹" name="consScorpioBullet"  raNum="30" con="add" imgDieType="stop">newGun/consScorpioBullet</body>
+		
+		<body cnName="噬原虫光球" name="phageWormBall" con="add">generalEffect/purpleFireBall</body>
+		<body cnName="噬原虫病毒" name="phageWormBullet" con="add">PhageWorm/bullet</body>
 		
 	</father>
 	<father name="bulletLine" cnName="线性子弹" >

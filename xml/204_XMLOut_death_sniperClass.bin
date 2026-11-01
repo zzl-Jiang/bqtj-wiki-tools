@@ -4,7 +4,7 @@
 		<![CDATA[橙色]]>
 		<bullet color="orange">
 			<name>sniperSmilodonDea</name>
-			<cnName>破障·剑齿</cnName><dpsMul>1</dpsMul>
+			<cnName>破障·剑齿</cnName><dpsMul>1.11</dpsMul>
 			<iconUrl>newGun/sniperSmilodon_icon</iconUrl>
 			<capacity>45</capacity>
 			<attackGap>1.3</attackGap>
@@ -42,7 +42,7 @@
 		</bullet>
 		<bullet color="orange">
 			<name>sniperCicadaDea</name>
-			<cnName>暴击·金蝉</cnName><dpsMul>0.53</dpsMul><skillArr>sniperKillDea2</skillArr>
+			<cnName>暴击·金蝉</cnName><dpsMul>1.11</dpsMul><skillArr>sniperKillDea2</skillArr>
 			<iconUrl>newGun/sniperCicada_icon</iconUrl>
 			<capacity>80</capacity>
 			<attackGap>1</attackGap>
@@ -166,9 +166,9 @@
 			
 		<bullet color="blue">
 			<name>sniperBlueDea</name>
-			<cnName>暴击·猎鹰</cnName><dpsMul>0.67</dpsMul><skillArr>sniperKillDea</skillArr>
+			<cnName>暴击·猎鹰</cnName><dpsMul>1.11</dpsMul><skillArr>sniperKillDea</skillArr>
 			<iconUrl>newGun/sniperBlue_icon</iconUrl>
-			<capacity>80</capacity>
+			<capacity>200</capacity>
 			<attackGap>1</attackGap>
 			<reloadGap>1.3</reloadGap>
 			<bulletWidth>800</bulletWidth>
@@ -195,10 +195,10 @@
 					<addType>instant</addType><changeHurtB>1</changeHurtB>
 					<effectType>changeHurtNoCondition</effectType>
 					<mul>50</mul>
-					<effectProArr>0.01</effectProArr>
+					<effectProArr>0.02</effectProArr>
 					
 					<targetEffectImg name="bigSpaceShake"/>
-					<description>有[effectProArr.0]的几率产生100倍的伤害。</description><![CDATA[秒杀boss，就是50倍的，秒杀敌人就是1.5倍的增伤]]>
+					<description>有[effectProArr.0]的几率产生50倍的伤害。</description><![CDATA[秒杀boss，就是100倍的，秒杀敌人就是1.5倍的增伤]]>
 				</skill>
 				
 	</father>

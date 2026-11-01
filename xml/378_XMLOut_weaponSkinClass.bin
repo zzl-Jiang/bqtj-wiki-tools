@@ -70,6 +70,7 @@
 			<body name="greatSage" url="greatSage/weaponSp" icon="greatSage/weapon_icon" items="greatSage" />
 			<body name="cowboyYingSuper" url="cowboyYing/weaponSp" icon="cowboyYing/weaponIcon" items="cowboyYingSuper" />
 			<body cnName="泷" name="wolongStick_c1" evoLv="8" author="地煞：诡道子"  au="original"/>
+			<body cnName="公主" name="wolongStick2610" evoLv="8" author="沁园春丨雪玻璃"  au="original" info="暴虐公！"/>
 			
 		</father>
 		<father cnName="剑齿镖" name="saberDarts">

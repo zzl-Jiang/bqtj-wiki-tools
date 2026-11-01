@@ -570,12 +570,12 @@
 		</skill>
 	</father>	 	
 	<father name="enemy" cnName="异猛象">
-		<skill name="死后清除所有召唤单位">
+		<skill name="死后清除所有自身子弹">
 			<name>Mammoth_die</name>
-			<cnName>死后清除所有召唤单位</cnName><noBeClearB>1</noBeClearB><ignoreSilenceB>1</ignoreSilenceB>
+			<cnName>死后清除所有子弹</cnName><noBeClearB>1</noBeClearB><ignoreSilenceB>1</ignoreSilenceB>
 			<conditionType>passive</conditionType><condition>allDie</condition>
 			<target>me</target>
-			<addType>instant</addType><effectType>clearSummoned</effectType>
+			<addType>instant</addType><effectType>clearWeAllBullet</effectType>
 		</skill>
 		<skill cnName="电磁风暴"><!-- dps -->
 			<name>Mammoth_electricity</name>

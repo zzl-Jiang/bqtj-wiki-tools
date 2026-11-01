@@ -2482,6 +2482,55 @@
 				</task>
 			</growth>
 		</task>
+		
+		<task name="TianFengWorm" cnName="噬原虫" lv="99" unlockLv="30">
+			<shortText>击败守关首领</shortText>
+			<uiConditionText>击败守关首领</uiConditionText>
+			<description>终于来到了天风塔，这里驻守着一只从未见过的神奇生物——噬原虫。</description>
+			<!-- 目的地 -->
+			<worldMapId>GreenTianFeng</worldMapId>
+			<levelId>TianFengWorm</levelId>
+			
+			<growth>
+				<task>
+					<enemyLifeMul>10</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul><gift>things;yaGem;1</gift>
+				</task>
+				<task>
+					<enemyLifeMul>20</enemyLifeMul><enemyDpsMul>1</enemyDpsMul><gift>things;yaGem;2</gift>
+				</task>
+				<task>
+					<enemyLifeMul>30</enemyLifeMul><enemyDpsMul>1.5</enemyDpsMul><gift>things;yaGem;3</gift>
+				</task>
+				<task>
+					<enemyLifeMul>50</enemyLifeMul><enemyDpsMul>2</enemyDpsMul><gift>things;yaGem;4</gift>
+				</task>
+				<task>
+					<enemyLifeMul>90</enemyLifeMul><enemyDpsMul>3</enemyDpsMul><gift>things;yaGem;5</gift>
+				</task>
+				<task>
+					<enemyLifeMul>160</enemyLifeMul><enemyDpsMul>4</enemyDpsMul><gift>things;yaGem;6</gift>
+				</task>
+				<task>
+					<enemyLifeMul>300</enemyLifeMul><enemyDpsMul>5</enemyDpsMul><gift>things;yaGem;7</gift>
+				</task>
+				<task>
+					<enemyLifeMul>500</enemyLifeMul><enemyDpsMul>6</enemyDpsMul><gift>things;yaGem;8</gift>
+				</task>
+				<task>
+					<enemyLifeMul>1000</enemyLifeMul><enemyDpsMul>7</enemyDpsMul><gift>things;yaGem;9</gift>
+				</task>
+			</growth>
+		</task>
+		<task name="GreenTown2_Domino" cnName="众矢之的" lv="99" unlockLv="30">
+			<shortText>完成对话</shortText>
+			<uiConditionText>完成对话</uiConditionText>
+			<description>回程的路上，他们遇到了被释放的多米诺。</description>
+			<!-- 目的地 -->
+			<worldMapId>GreenTown2</worldMapId>
+			<levelId>GreenTown2_Domino</levelId>
+			<gift>things;yaGem;4</gift>
+		</task>
+		
 	</father>
 	
 		

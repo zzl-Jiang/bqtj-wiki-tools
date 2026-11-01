@@ -13,7 +13,7 @@ import pandas as pd
 import datetime
 import xml.etree.ElementTree as ET
 from collections import defaultdict
-from core import XmlCleaner, ValueConverter, OutputWriter
+from core import XmlCleaner, ValueConverter, OutputWriter, clean_str
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -215,7 +215,7 @@ def run_parts_processor():
         for k in ('name', 'cnName', 'iconUrl'):
             val = data.get(k)
             if val is not None and val != '':
-                entry[k] = val
+                entry[k] = clean_str(val)
         item_data.append(entry)
 
     parts_item_json = {

@@ -2,7 +2,7 @@ from collections import defaultdict
 import os
 import datetime
 import xml.etree.ElementTree as ET
-from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter
+from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, clean_str
 from config import SKILL_RENAME_MAP, SKILL_CATEGORY_MAP
 
 # --- 配置 ---
@@ -197,14 +197,14 @@ def run_skill_processor():
     skill_items = []
     for d in skill_pool.values():
         entry = {
-            'name': d.get('name', ''),
-            'cnName': d.get('cnName', ''),
-            'father': d.get('father', ''),
+            'name': clean_str(d.get('name', '')),
+            'cnName': clean_str(d.get('cnName', '')),
+            'father': clean_str(d.get('father', '')),
         }
         if d.get('iconUrl36'):
-            entry['iconUrl36'] = d['iconUrl36']
+            entry['iconUrl36'] = clean_str(d['iconUrl36'])
         if d.get('iconUrl'):
-            entry['iconUrl'] = d['iconUrl']
+            entry['iconUrl'] = clean_str(d['iconUrl'])
         skill_items.append(entry)
 
     skill_item_json = {

@@ -11,14 +11,16 @@
 	
 	<pro name="gravity" cnName="子弹重力" typeArr="rect"></pro>
 	
-	<pro name="penetrationNum" cnName="穿人个数" first="+"></pro>
-	<pro name="penetrationGap" cnName="穿墙深度" first="+"></pro>
-	<pro name="twoShootPro" cnName="瞬间连发概率" first="+" unit="%"></pro>
-	<pro name="eleHurtMul" cnName="元素伤害" first="+" unit="%"></pro><!-- 适合有元素伤害的武器 -->
-	<pro name="fireEleB" cnName="火焰元素" gatherColor="redness"></pro><!-- 适合有元素伤害的武器 -->
-	<pro name="frozenEleB" cnName="冷冻元素" gatherColor="blove"></pro><!-- 适合有元素伤害的武器 -->
-	<pro name="poisonEleB" cnName="生化元素" gatherColor="greeness"></pro><!-- 适合有元素伤害的武器 -->
-	<pro name="electricEleB" cnName="电磁元素" gatherColor="purpleness"></pro><!-- 适合有元素伤害的武器 -->
+	<pro name="penetrationNum" cnName="穿人个数" first="+" hideB="2"></pro><![CDATA[ hideB="2" 在武器界面隐藏，以减少武器提示高度]]>
+	<pro name="penetrationGap" cnName="穿墙深度" first="+"  hideB="2"></pro>
+	<pro name="twoShootPro" cnName="瞬间连发概率" first="+" unit="%"  hideB="2"></pro>
+	<pro name="eleHurtMul" cnName="元素伤害" first="+" unit="%"  hideB="2"></pro><!-- 适合有元素伤害的武器 -->
+	
+	<pro name="fireEleB" cnName="火焰元素" gatherColor="redness" hideB="1"></pro><!-- 适合有元素伤害的武器 -->
+	<pro name="frozenEleB" cnName="冷冻元素" gatherColor="blove" hideB="1"></pro><!-- 适合有元素伤害的武器 -->
+	<pro name="poisonEleB" cnName="生化元素" gatherColor="greeness" hideB="1"></pro><!-- 适合有元素伤害的武器 -->
+	<pro name="electricEleB" cnName="电磁元素" gatherColor="purpleness" hideB="1"></pro><!-- 适合有元素伤害的武器 -->
+	
 	<pro name="noMagneticB" cnName="磁力场免疫"></pro>
 	<pro name="enemyCampB" cnName="敌方子弹"></pro>
 	<pro name="shootAngleCtrlB" cnName="散射角控制"></pro>
@@ -28,7 +30,7 @@
 	<pro name="rareHurtMul" cnName="伤害(稀有)" first="+" unit="%"></pro>
 	<pro name="demCapacityMul" cnName="修罗弹容" first="+" unit="%"></pro>
 	
-	<pro name="color" cnName="品质" child="itemsColor"></pro>
+	<pro name="color" cnName="品质" child="itemsColor"  hideB="2"></pro>
 	<pro name="colorHurtMul" cnName="品质伤害" first="+" unit="%"></pro>
 	
 	<pro name="coinMul" cnName="银币掉落" first="+" unit="%"></pro>

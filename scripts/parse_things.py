@@ -11,7 +11,7 @@ import glob
 import datetime
 import xml.etree.ElementTree as ET
 from typing import Dict, Any
-from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, clean_game_description
+from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, clean_game_description, clean_str
 
 # ============================================================
 #  配置
@@ -644,7 +644,7 @@ def run_things_processor():
         for k in ('name', 'cnName', 'iconUrl'):
             val = data.get(k)
             if val is not None and val != '':
-                entry[k] = val
+                entry[k] = clean_str(val)
         thing_items.append(entry)
 
     things_item_json = {

@@ -1329,7 +1329,7 @@
 			<duration>10</duration>
 			<range>200</range>
 			<!--技能链接或者需要添加的被动技能------------------------------------------------------------ --> 
-			<linkArr>poisonousFog_hero_link</linkArr>
+			<linkArr>poisonousFog_pet_link</linkArr>
 			<!--图像------------------------------------------------------------ --> 
 			<meEffectImg soundUrl="sound/poisonousFog_hero"></meEffectImg>
 			<stateEffectImg partType="mouth" con="add">skillEffect/poisonousFog_hero</stateEffectImg>
@@ -1337,20 +1337,20 @@
 			<description>在单位周围释放毒雾，感染[range]码以内的敌人，使他们降低[1-mul]移动速度并且每秒减少0.5%生命值，持续10秒。</description>
 			<!-- 技能各等级 ------------------------------------------------------------ -->
 			<growth>
-				<skill><cd>100</cd><range>200</range></skill>
-				<skill><cd>90</cd><range>250</range></skill>
-				<skill><cd>80</cd><range>300</range></skill>
-				<skill><cd>70</cd><range>400</range></skill>
-				<skill><cd>60</cd><range>450</range></skill>
-				<skill><cd>50</cd><range>450</range></skill>
-				<skill><cd>40</cd><range>450</range></skill>
-				<skill><cd>35</cd><range>500</range></skill>
-				<skill><cd>30</cd><range>550</range></skill>
+				<skill><cd>100</cd><range>200</range><linkArr>poisonousFog_pet_link_1</linkArr></skill>
+				<skill><cd>90</cd><range>250</range><linkArr>poisonousFog_pet_link_2</linkArr></skill>
+				<skill><cd>80</cd><range>300</range><linkArr>poisonousFog_pet_link_3</linkArr></skill>
+				<skill><cd>70</cd><range>400</range><linkArr>poisonousFog_pet_link_4</linkArr></skill>
+				<skill><cd>60</cd><range>450</range><linkArr>poisonousFog_pet_link_5</linkArr></skill>
+				<skill><cd>50</cd><range>450</range><linkArr>poisonousFog_pet_link_6</linkArr></skill>
+				<skill><cd>40</cd><range>450</range><linkArr>poisonousFog_pet_link_7</linkArr></skill>
+				<skill><cd>35</cd><range>500</range><linkArr>poisonousFog_pet_link_8</linkArr></skill>
+				<skill><cd>30</cd><range>550</range><linkArr>poisonousFog_pet_link_9</linkArr></skill>
 				
-				<skill><cd>30</cd><range>600</range></skill>
-				<skill><cd>29</cd><range>650</range></skill>
-				<skill><cd>28</cd><range>700</range></skill>
-				<skill><cd>27</cd><range>800</range></skill>
+				<skill><cd>30</cd><range>600</range><linkArr>poisonousFog_pet_link_10</linkArr></skill>
+				<skill><cd>29</cd><range>650</range><linkArr>poisonousFog_pet_link_11</linkArr></skill>
+				<skill><cd>28</cd><range>700</range><linkArr>poisonousFog_pet_link_12</linkArr></skill>
+				<skill><cd>27</cd><range>800</range><linkArr>poisonousFog_pet_link_13</linkArr></skill>
 			</growth>
 		</skill>
 		<skill index="0" name="定点轰炸"><!-- dps-主动 -->

@@ -9,7 +9,7 @@ import os
 import json
 import datetime
 import xml.etree.ElementTree as ET
-from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator
+from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator, clean_str
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -125,7 +125,7 @@ def run_world_map_processor():
 
     # --- 生成 MapItemData（精简查询 JSON） ---
     import pandas as pd
-    map_items = [{'name': d.get('name', ''), 'cnName': d.get('cnName', '')} for d in map_pool.values()]
+    map_items = [{'name': clean_str(d.get('name', '')), 'cnName': clean_str(d.get('cnName', ''))} for d in map_pool.values()]
     map_item_json = {
         "data": {
             "father": {

@@ -8,7 +8,7 @@ from collections import defaultdict
 import os
 import datetime
 import xml.etree.ElementTree as ET
-from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator
+from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator, clean_str
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -250,8 +250,8 @@ def run_equip_processor():
     for key, data in equip_pool.items():
         if data.get('father') == 'weapon':
             weapon_items.append({
-                'name': data.get('name', ''),
-                'cnName': data.get('cnName', ''),
+                'name': clean_str(data.get('name', '')),
+                'cnName': clean_str(data.get('cnName', '')),
             })
 
     if weapon_items:

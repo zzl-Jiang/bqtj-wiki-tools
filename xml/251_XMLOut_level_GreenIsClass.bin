@@ -1438,7 +1438,7 @@
 					</group>
 				</eventG>
 			</level>
-			<level name="GreenIs4_black">
+			<level name="GreenIs4_black"><![CDATA[黑暗骑士]]>
 				<info enemyLv="99" diff="2" />
 				<sceneLabel>GreenIs4</sceneLabel>
 				<!-- 发兵集************************************************ -->
@@ -1610,6 +1610,7 @@
 				</eventG>
 			</level>
 			
+			
 			<level name="GreenIs4_1">
 				<info enemyLv="99" diff="2" />
 				<sceneLabel>GreenIs4</sceneLabel>
@@ -1725,6 +1726,47 @@
 					</group>
 				</eventG>
 			</level>
+			
+			
+			<level name="GreenTianFeng_1">
+				<info enemyLv="99" diff="2" />
+				<sceneLabel>GreenTianFeng</sceneLabel>
+				<!-- 发兵集************************************************ -->
+				<unitG><allDefault aiOrder="patrolGlobal"></allDefault>
+					<unitOrder id="enemy1">
+						<unit cnName="棍棒僵尸" num="4"/>
+						<unit cnName="伐木僵尸" num="6"/>
+					</unitOrder> 
+					<unitOrder id="enemy2">
+						<unit cnName="古惑僵尸" num="4"/>
+						<unit cnName="棍棒僵尸" num="5"/>
+						<unit cnName="血蟒感染者" num="2"/>
+					</unitOrder>
+					<unitOrder id="enemy3">
+						<unit cnName="棍棒僵尸" num="5"/>
+						<unit cnName="伐木僵尸" num="7"/>
+						<unit cnName="血蟒感染者" num="2"/>
+					</unitOrder>
+					<unitOrder id="enemy4">
+						<unit cnName="噬原虫" unitType="boss" lifeMul="5"/>
+					</unitOrder>
+				</unitG>
+				<!-- 事件集************************************************ -->
+				<eventG>
+					<group>
+						
+						<event><condition doNumber="3" >liveEnemyNumber:less_1</condition><order>createUnit:enemy1; r123</order></event> 
+						<event><condition doNumber="3" >liveEnemyNumber:less_1</condition><order>createUnit:enemy2; r123</order></event> 
+						<event><condition doNumber="3" >liveEnemyNumber:less_1</condition><order>createUnit:enemy3; r123</order></event> 
+						<event><condition>liveEnemyNumber:less_1</condition><order>createUnit:enemy4; r123</order></event> 
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+			
 		</gather>
 	</father>
 		

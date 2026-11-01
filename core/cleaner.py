@@ -48,3 +48,15 @@ def clean_game_description(text):
     text = re.sub(r'\{font[^}]*\}', '', text)
     text = text.replace('{/font}', '')
     return "\n".join([line.strip() for line in text.strip().split('\n') if line.strip()])
+
+
+def clean_str(text):
+    """
+    清理字符串中的非法控制字符（ASCII 0x00-0x1F，保留换行/回车/制表符），
+    并去除首尾空白。用于 ItemData 等输出前的清洗，避免 JSON 上传报
+    Control character 错误。
+    """
+    if not isinstance(text, str):
+        return text
+    cleaned = ''.join(c for c in text if ord(c) >= 32 or c in '\n\r\t')
+    return cleaned.strip()

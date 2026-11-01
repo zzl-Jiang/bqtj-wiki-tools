@@ -1292,14 +1292,13 @@
 		
 		
 		
-		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="no">
+		<place lv="99" diffMax="8" sweepMax="-1" unlockTask="TianFengWorm">
 			<name>GreenTianFeng</name>
 			<cnName>天风塔</cnName><noTaskB>1</noTaskB><noEndlessB>1</noEndlessB>
 			<geogType>sky</geogType><mustWinShowB>1</mustWinShowB>
-			<pointer>484,1063</pointer>
 			<levelArr>
 				<level>
-					<name>GreenTown1_1</name>
+					<name>GreenTianFeng_1</name>
 				</level>
 			</levelArr>
 		</place>

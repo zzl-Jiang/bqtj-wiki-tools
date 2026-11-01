@@ -222,7 +222,7 @@
 			<cnName>小樱</cnName>
 			<sex>female</sex>
 			<raceType>human</raceType>
-			<swfUrl>swf/hero/Girl365.swf</swfUrl>
+			<swfUrl>swf/hero/Girl371.swf</swfUrl>
 			<description>一位温柔可爱、性格单纯的女孩，她将成为爆枪联盟的第一位女队员，但身世却一直是个迷。</description>
 			<!-- 基本系数 -->
 			<rosRatio>0.02</rosRatio><!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->

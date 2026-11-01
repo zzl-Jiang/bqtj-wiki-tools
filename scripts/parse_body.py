@@ -8,7 +8,7 @@ from collections import defaultdict
 import os
 import datetime
 import xml.etree.ElementTree as ET
-from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter
+from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, clean_str
 from config import BODY_RENAME_MAP
 # --- 配置 ---
 XML_DIR = './xml'
@@ -218,10 +218,10 @@ def run_body_processor():
     import json, pandas as pd
     body_items = []
     for d in body_pool.values():
-        entry = {'name': d.get('name', ''), 'cnName': d.get('cnName', '')}
+        entry = {'name': clean_str(d.get('name', '')), 'cnName': clean_str(d.get('cnName', ''))}
         head = d.get('headIconUrl')
         if head:
-            entry['headIconUrl'] = head
+            entry['headIconUrl'] = clean_str(head)
         body_items.append(entry)
     body_item_json = {
         "data": {

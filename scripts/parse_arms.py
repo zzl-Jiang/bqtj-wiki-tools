@@ -3,7 +3,7 @@ import glob as glob_module
 import json
 import pandas as pd
 import xml.etree.ElementTree as ET
-from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, ReportGenerator
+from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, ReportGenerator, clean_str
 from config import CATEGORY_MAP, ARM_NAME_MAP
 
 # --- 配置 ---
@@ -125,7 +125,7 @@ def run_arm_processor():
         for k in item_fields:
            val = arm.get(k)
            if val is not None and val != "":
-                entry[k] = val
+                entry[k] = clean_str(val)
         item_data.append(entry)
 
     arms_item_json = {

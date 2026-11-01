@@ -61,6 +61,18 @@
 		
 	</other>
 	<activity><!-- 活动 -->
+		<one codeExchangeId="38068" name="wansheng26_10" cnName="万圣节礼包" startTime="2026-10-29 00:00:00">
+			<codeUrl>https://my.4399.com/forums/thread-64622516</codeUrl>
+			<gift>things;exploitCard;2</gift>
+			<gift>things;profiStamp;2</gift>
+			<gift>things;bloodStone;100</gift>
+			<gift>things;strengthenStone;100</gift>
+			<gift>things;strengthenDrug;200</gift>
+			<gift>things;demBall;40</gift>
+			<gift>base;wilderKey;3</gift>
+			<gift>things;rarePartsChest;5</gift>
+
+		</one>
 		
 		<one codeExchangeId="36773" name="gameBox23_5" cnName="游戏盒云游独家">
 			<codeUrl>https://my.4399.com/forums/thread-63579375 </codeUrl>
@@ -77,7 +89,7 @@
 			<gift>things;equipGemChest;10</gift>
 			<gift>things;demBall;60</gift>
 		</one>
-		
+		<![CDATA[
 		<one codeExchangeId="37973" name="gameBox13" cnName="游戏盒十三周年" startTime="2026-7-1 00:00:00">
 			<codeUrl> https://my.4399.com/forums/thread-64551115</codeUrl>
 			<gift>things;armsTitanium;300</gift>
@@ -93,7 +105,7 @@
 			<gift>things;intensDrug;30</gift>
 
 		</one>
-		<![CDATA[
+		
 		<one codeExchangeId="37207" name="gameBox24_5" cnName="游戏盒云游黄金周">
 			<codeUrl>https://my.4399.com/forums/thread-63997438</codeUrl>
 			<gift>things;exploitCard;2</gift>

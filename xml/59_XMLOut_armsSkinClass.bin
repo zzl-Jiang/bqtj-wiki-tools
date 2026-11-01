@@ -19,6 +19,11 @@
 			<body name="laser2509" cnName="末日" color="black" url ="newGun/laser2509" author="【弑杀】最终幻想" au="original" info="复仇跟在你身后一步之遥。" />
 		</father>
 		
+		<father cnName="电弧" name="electricCurve">
+			<body name="electricCurve" url ="newGun/electricCurve" />
+		</father>
+		
+		
 		<father cnName="狮子座" name="consLeo">
 			<body name="consLeo" url ="newGun/consLeo" />
 			<body name="consLeo2507" cnName="百鬼夜行" author="花落燕歸巢" url ="newGun/consLeo2507"  au="original" info="" />

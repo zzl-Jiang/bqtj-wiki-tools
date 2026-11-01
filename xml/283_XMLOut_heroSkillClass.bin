@@ -1744,8 +1744,43 @@
 				<skill><range>450</range><duration>12</duration></skill>
 				<skill><range>500</range><duration>12</duration><mul>0.015</mul></skill>
 			</growth>
+		</skill>
+		
+		<skill index="0" name="尸宠毒雾-减血">
+			<name>poisonousFog_pet_link</name>
+			<cnName>尸宠毒雾-减血</cnName>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>active</conditionType>
+			<target>mouse,range,enemy</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>poison_xiaoAi</effectType>
+			<extraValueType>targetMaxLife</extraValueType>
+			<mul>0.01</mul>
+			<doGap>1</doGap>
+			<duration>10</duration>
+			<range>200</range>
+			<growth>
+				<skill><range>200</range></skill>
+				<skill><range>250</range></skill>
+				<skill><range>300</range></skill>
+				<skill><range>400</range></skill>
+				<skill><range>450</range></skill>
+				<skill><range>450</range></skill>
+				<skill><range>450</range></skill>
+				<skill><range>500</range></skill>
+				<skill><range>550</range></skill>
+				
+				<skill><range>600</range></skill>
+				<skill><range>650</range></skill>
+				<skill><range>700</range></skill>
+				<skill><range>800</range></skill>
+			</growth>
 			
 		</skill>
+		
+		
+		
 		<skill index="0" name="吞噬-回血">
 			<name>devour_hero_link</name>
 			<cnName>吞噬-回血</cnName>

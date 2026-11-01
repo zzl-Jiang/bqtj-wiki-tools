@@ -354,6 +354,66 @@
 					</group>
 				</eventG>
 			</level>
+			
+			<level name="TianFengWorm" cnName="噬原虫">
+				<sceneLabel>GreenTianFeng</sceneLabel>
+				<info enemyLv="99" diff="2" />
+				<drop noB="1"/>
+				<fixed eventG="all" rectG="affter" drop="all" info="all" unitG="all"/>
+				<unitG>
+					<allDefault aiOrder="patrolGlobal"/>
+					<unitOrder id="enemy4">
+						<unit lifeMul="8" num="1" cnName="噬原虫" unitType="boss"/>
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group>
+						<event><condition delay="0.5"></condition><order>say; startList:s1</order></event>
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<event><condition>liveEnemyNumber:less_1</condition><order>createUnit:enemy4; rEnemySpace</order></event> 
+						<event>
+							<condition>liveEnemyNumber:less_1</condition>
+							<order>allWeHeroRebirth</order>
+							<order>addWeather:blueRain; 2:300</order>
+							<order>say; startList:s2</order>
+						</event>
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<![CDATA[继续对话]]>
+						<event><condition delay="0.5"/><order>say; startList:s3</order></event>
+						
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<event>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_birth</order>
+						</event>
+					</group>
+				</eventG>
+			</level>
+			
+			<level name="GreenTown2_Domino" cnName="局">
+				<sceneLabel>GreenTown2</sceneLabel>
+				<info enemyLv="99" diff="2" />
+				<drop noB="1"/>
+				<fixed eventG="all" rectG="affter" drop="all" info="all" unitG="all"/>
+				<unitG>
+					<allDefault aiOrder="patrolGlobal"/>
+					<unitOrder id="we2" camp="we">
+						<unit cnName="多米诺" armsRange="pistolLock" skillArr="" aiOrder="followBodyAttack:p1"/>
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group>
+						<event><order>allBody:we; movePoint:3421,1364</order><order>createUnit:we2; r_birth</order></event>
+						
+						<event><condition delay="0.5"></condition><order>say; startList:s1</order></event>
+						<event><condition delay="0.5">say:listOver</condition></event>
+						<event>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_birth</order>
+						</event>
+					</group>
+				</eventG>
+			</level> 
 		</gather>
 		
 		<level name="GreenTown2_plot" cn="对话-家">
@@ -606,6 +666,95 @@
 				<say target="我"><content>但我们必须去，要不是博士，我们这次根本没法把妈妈救出来。</content></say>
 				<say target="藏师将军"><content>走！</content></say>
 			</sayList>
+		</level>
+		<level name="TianFengWorm" cn="噬原虫">
+			<sayList name="s1">
+				<say target="旺达"><content>你们终于来了！</content></say>
+				<say target="我"><content>博士在哪里？</content></say>
+				<say target="旺达"><content>博士，你来说两句。</content></say>
+				<say target="多米诺"><content>你们放心，我现在很好，他们并没有伤害我。</content></say>
+				<say target="多米诺"><content>但是你们要小心！噬原虫可能随时会出现！</content></say>
+				<say target="我"><content>噬原虫是什么东西？</content></say>
+				<say target="旺达"><content>你不要装傻了，噬原虫就是新型僵尸病毒的源头。</content></say>
+				<say target="旺达"><content>我们已经在第一个被感染的血蟒士兵身上找到了噬原幼虫的咬痕。</content></say>
+				<say target="旺达"><content>你们将它隐藏于归还的飞船之内，目的就是想毁灭血蟒！</content></say>
+				<say target="文杰表哥"><content>解释的话，我们已经懒得说了。</content></say>
+				<say target="多米诺"><content>我敢保证，爆枪小队绝无此心。</content></say>
+				<say target="旺达"><content>这个账可以以后再算，现在有更棘手的事。</content></say>
+				<say target="我"><content>是什么？</content></say>
+				<say target="旺达"><content>随着感染人数的增多，原来的噬原幼虫已经慢慢成长为了无比强大的噬原虫。</content></say>
+				<say target="旺达"><content>我们血蟒已经难以对付。</content></say>
+				<say target="我"><content>我怎么觉得这事有蹊跷呢？</content></say>
+				<say target="我"><content>你们是不是一开始就发现了噬原幼虫？</content></say>
+				<say target="旺达"><content>这个……</content></say>
+				<say target="旺达"><content>确实，在第一个血蟒士兵被感染后，我们就发现了它。</content></say>
+				<say target="我"><content>为何没有第一时间就将其灭杀？</content></say>
+				<say target="旺达"><content>对于这种新奇之物，肯定是先封存于实验室中，作为日后研究之用。</content></say>
+				<say target="旺达"><content>没曾想，它会自行成长，并在前些天逃出了实验室。还毁坏了这里的“迷雾”主塔。</content></say>
+				<say target="多米诺"><content>现在说这些已经没用了。</content></say>
+				<say target="旺达"><content>听说爆枪小队在虚天塔中已经所向披靡，我想，噬原虫对于你们来说应该不是个问题吧？</content></say>
+				<say target="旺达"><content>你们也不想看到噬原虫在绿岛上肆虐吧？</content></say>
+				<say target="我"><content>无论噬原虫是哪来的，我们都有义务清除它！</content></say>
+				<say target="旺达"><content>很好，在那之后，我们之间的账也将一笔勾销。</content></say>
+				<say target="旺达"><content>博士也将恢复自由之身。</content></say>
+				<say target="多米诺"><content>小心！我好像听到了噬原虫的声音。</content></say>
+				<say target="我"><content>全员戒备！</content></say>
+			</sayList>
+			<sayList name="s2">
+				<say target="藏师将军"><content>这噬原虫死后向外喷射了什么东西？</content></say>
+				<say target="藏师将军"><content>是病毒吗？</content></say>
+				<say target="我"><content>怎么下起紫色雨了？</content></say>
+				<say target="多米诺"><content>这……这是病毒雨！</content></say>
+				<say target="旺达"><content>据刚刚的卫星图显示，噬原虫体内的病毒污染了上空的云团，目前整个绿岛都在下病毒雨。</content></say>
+				<say target="文杰表哥"><content>怎么回事？！</content></say>
+				<say target="旺达"><content>病毒雨还有向霞光大陆扩散的趋势……</content></say>
+				<say target="我"><content>你！</content></say>
+				<say target="我"><content>你是不是早就知道会这样？</content></say>
+				<say target="旺达"><content>嘿嘿……我可没有未卜先知的能力。</content></say>
+				<say target="文杰表哥"><content>他就是故意的！</content></say>
+				<say target="藏师将军"><content>这是血蟒的圈套！</content></say>
+				<say target="旺达"><content>我会履行诺言，在仙草镇释放多米诺。</content></say>
+				<say target="旺达"><content>另外，我会昭告天下，是你们爆枪小队杀死了噬原虫，导致了新型病毒的大蔓延。</content></say>
+				<say target="旺达"><content>再见！</content></say>
+			</sayList>
+			<sayList name="s3">
+				<say target="小樱"><content>现在我们该怎么办？</content></say>
+				<say target="心零"><content>他们打不过我们，就想毁掉我们的名声。</content></say>
+				<say target="我"><content>不管那么多了，现在我们得赶紧回到大陆上去。</content></say>
+				<say target="我"><content>希望这雨还下不到高地上去，不然就真完了。</content></say>
+			</sayList>
+		</level>
+		
+		<level name="GreenTown2_Domino" cn="局">
+			<sayList name="s1">
+				<say target="文杰表哥"><content>好在这雨就下了几分钟。</content></say>
+				<say target="多米诺"><content>我回来了！</content></say>
+				<say target="我"><content>多博士，又能见到你了，真好！</content></say>
+				<say target="多米诺"><content>之前我在天风塔引诱噬原虫攻击“迷雾”主塔时，被血蟒给抓了。</content></say>
+				<say target="多米诺"><content>旺达才能以我为要挟，让你们攻击噬原虫……都怪我！</content></say>
+				<say target="文杰表哥"><content>能安全回来就好！</content></say>
+				<say target="我"><content>多博士，你不用自责，这本就是血蟒设下的局。</content></say>
+				<say target="文杰表哥"><content>其实我在上岛之前就预感到了，只是不知道他们会用什么样的方式。</content></say>
+				<say target="我"><content>当时妈妈在他们手上，是什么坑我都得跳。</content></say>
+				<say target="多米诺"><content>是的，他们抓住了你的把柄。只要能将你引到绿岛来，那后面的一切都会在他们的掌控之中。</content></say>
+				<say target="多米诺"><content>最终血蟒的目的，就是将爆枪小队散播病毒这个谣言给坐实！</content></say>
+				<say target="心零"><content>还真让他们给办到了……</content></say>
+				<say target="多米诺"><content>我说假如……如果以后爆枪小队成了全霞光的众矢之的，你们该怎么办？</content></say>
+				<say target="我"><content>我没想过这个问题。</content></say>
+				<say target="小樱"><content>旺达真是太可恶了！</content></say>
+				<say target="多米诺"><content>我猜测，你们在霞光大陆上先后覆灭天鹰、鬼爵的时候，就已经成为了血蟒的眼中钉。</content></say>
+				<say target="多米诺"><content>在发现绿岛第一位感染者的时候，他们明明有能力对其隔离，及时控制住病毒的传播。</content></say>
+				<say target="多米诺"><content>但是旺达没这么干！</content></say>
+				<say target="我"><content>他怎么对得起绿岛的岛民？！</content></say>
+				<say target="多米诺"><content>对旺达来说，只有听话的人才有利用价值。</content></say>
+				<say target="多米诺"><content>不多说了，你们还是赶紧回大陆吧。</content></say>
+				<say target="我"><content>博士，你不跟我们一起走吗？</content></say>
+				<say target="多米诺"><content>我还想继续潜伏在这，看看他们还想耍什么花样。</content></say>
+				<say target="我"><content>那你一定要注意安全。</content></say>
+				<say target="文杰表哥"><content>未来我们还会回来救你的。</content></say>
+				<say target="多米诺"><content>放心吧，我还有很多自保的手段。</content></say>
+			</sayList>
+			
 		</level>
 	</father>	
 	

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	
+	<father name="snake" cnName="血蟒">
+		<body shell="variation">
+			
+			<name>PhageWorm</name>
+			<cnName>噬原虫</cnName>
+			<raceType>zombies</raceType>
+			<swfUrl>swf/enemy/PhageWorm.swf</swfUrl>
+			<rosRatio>2</rosRatio>
+			<headHurtMul>0.5</headHurtMul>
+			<!-- 图像 -->
+			<imgType>normal</imgType>
+			
+			<showLevel>9999</showLevel>
+			<imgArr>
+				stand,move,hurt1,die1
+				,headAttack,tailAttack
+				,sprintAttack
+				,shootAttack
+			</imgArr>
+			<lifeBarExtraHeight>-50</lifeBarExtraHeight>
+			<!-- 碰撞体积 -->
+			<hitRect>-27,-23,50,54</hitRect>
+			<!-- 运动 -->
+			<maxJumpNum>1</maxJumpNum>
+			<maxVx>25</maxVx><dieJumpMul>0.001</dieJumpMul>
+			<motionState>fly</motionState><flyType>space</flyType>
+			<!-- AI属性 -->
+			<nextAttackTime>0</nextAttackTime>
+			<!-- 技能 -->
+			<preBulletArr>PhageWormDieEffect</preBulletArr>
+			<skillArr></skillArr>
+			<bossSkillArr>PhageWormBuff,PhageWormSprint,PhageWormBall,PhageWormCloned,fastForwardDeath,Mammoth_die,vertigoArmorIron,cardNoAttackSkill</bossSkillArr>
+			<bossSkillArrCn></bossSkillArrCn>
+			<uiSkillArr></uiSkillArr>
+			<!-- 攻击数据 -->
+			<hurtArr>
+				<hurt>
+					<imgLabel>headAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<hurtRatio>2</hurtRatio>
+					<attackType>holy</attackType>
+					<skillArr></skillArr>
+					<shakeValue>4</shakeValue>
+					<hitImgUrl name="purpleHit"/>
+				</hurt>
+				<hurt>
+					<imgLabel>tailAttack</imgLabel>
+					<bulletLabel>PhageWorm1</bulletLabel>
+					<grapRect>-400,-50,300,200</grapRect>
+					<hurtRatio>2</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				
+				
+				<hurt  info="不加入ai选择">
+					<imgLabel>sprintAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<attackType>holy</attackType>
+					<hurtRatio>0.4</hurtRatio>
+					<grapRect>-520,-110,530,210</grapRect>
+					<shakeValue>10</shakeValue>
+					<skillArr>moreMissile_hero_dizziness2</skillArr>
+					<hitImgUrl name="hurtBulletMad_hit"/>
+				</hurt>
+				
+				<hurt  info="不加入ai选择">
+					<imgLabel>shootAttack</imgLabel><noAiChooseB>1</noAiChooseB>
+					<bulletLabel>PhageWormBall</bulletLabel>
+					<grapRect>-400,-50,300,200</grapRect>
+					<hurtRatio>0.1</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				<![CDATA[
+				<hurt>
+					<imgLabel>tailAttack</imgLabel><mustGrapRectB>1</mustGrapRectB>
+					<bulletLabel>FlyDragon_fireball</bulletLabel>
+					<grapRect>-400,-50,300,200</grapRect>
+					<hurtRatio>1.2</hurtRatio>
+					<attackType>holy</attackType>
+				</hurt>
+				
+				
+				<hurt info="不加入ai选择">
+					<imgLabel>rollAttack</imgLabel>
+					<grapRect>-350,-17,270,97</grapRect>
+					<noAiChooseB>1</noAiChooseB>
+					<noShootB>1</noShootB>
+					<hurtRatio>0</hurtRatio>
+					<shakeValue>4</shakeValue>
+				</hurt>
+				]]>
+			</hurtArr>
+		</body>
+				<bullet>
+					<name>PhageWorm1</name>
+					<cnName>噬原虫尾刺</cnName>
+					<!--基本属性------------------------------------------------------------ -->
+					<shakeAngle>5</shakeAngle>
+					<bulletLife>3</bulletLife>
+					<bulletWidth>30</bulletWidth>
+					<hitType>rect</hitType>
+					<!--攻击时的属性------------------------------------------------------------ -->
+					<attackGap>1</attackGap>
+					<attackDelay>0.5</attackDelay>
+					<shootGap>0.132</shootGap>
+					<bulletAngle>190</bulletAngle>
+					<bulletAngleRange>40</bulletAngleRange>
+					<bulletNum>1</bulletNum>				
+					<shootNum>3</shootNum>
+					
+					<followD value="1" noLM="1" maxTime="2" />
+					<!--运动属性------------------------------------------------------------ -->	
+					<shootPoint>-71,33</shootPoint>
+					<bulletSpeed>30</bulletSpeed>
+					<speedD a="-40" min="16"/>
+					<penetrationGap>1000</penetrationGap>
+					<!--图像动画属性------------------------------------------------------------ -->
+					<flipX>1</flipX>
+					<bulletImgUrl name="consScorpioBullet"/>
+					<smokeImgUrl name="smallMissleSmokeSm"></smokeImgUrl>
+			
+					<hitImgUrl name="consScorpioHit"></hitImgUrl>
+				</bullet>
+				<bullet>
+					<name>PhageWormDieEffect</name>
+					<cnName>噬原虫病毒</cnName><noBeClearB>1</noBeClearB><noMagneticB>1</noMagneticB>
+					<!--基本属性------------------------------------------------------------ -->
+					<bulletLife>6</bulletLife>
+					<bulletWidth>0</bulletWidth>
+					<hitType>rect</hitType>
+					<noHitB>1</noHitB>
+					<!--攻击时的属性------------------------------------------------------------ -->
+					<bulletAngle>-90</bulletAngle>
+					<shakeAngle>120</shakeAngle>
+					<bulletNum>1</bulletNum>				
+					<!--运动属性------------------------------------------------------------ -->	
+					<shootPoint>0,0</shootPoint>
+					<bulletSpeed>40</bulletSpeed>
+					<speedD random="0.7"/>
+					<penetrationGap>1000</penetrationGap>
+					<gravity>0.1</gravity>
+					<!--图像动画属性------------------------------------------------------------ -->
+					<bulletImgUrl name="phageWormBullet"/>
+					<smokeImgUrl name="rocketSmokeSm"></smokeImgUrl>
+				</bullet>
+	</father>
+	
+	<father name="enemy">
+		<skill>
+			<name>PhageWormBuff</name><ignoreSilenceB>1</ignoreSilenceB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<cnName>噬原虫buff</cnName><everNoClearB>1</everNoClearB><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>PhageWormBuff</effectType><effectFather>snake</effectFather>
+			<duration>9999999</duration>
+		</skill>
+		<skill name="分身">
+			<name>PhageWormCloned</name>
+			<cnName>分身</cnName><iconUrl36>SkillIcon/cloned_36</iconUrl36>
+			<cd>20</cd>
+			<firstCd>22</firstCd><noInClonedB>1</noInClonedB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>lifePerLess50</otherConditionArr>
+			<target>me</target>
+			
+			<addType>instant</addType>
+			<effectType>cloned</effectType>
+			<value>1</value>
+			<mul>0.1</mul>
+			<secMul>0.5</secMul>
+			<duration>20</duration>
+			
+			<meEffectImg soundUrl="sound/cloned_enemy" con="add">skillEffect/hiding_hero</meEffectImg>
+			<description>生命值少于50%时，产生1个分身，攻击力为自身的30%，血量为自身的[mul]，持续[duration]秒。</description>
+		</skill>
+		<skill>
+			<name>PhageWormSprint</name><wantDescripB>1</wantDescripB>
+			<cnName>天璇冲撞</cnName>
+			<showInLifeBarB>1</showInLifeBarB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>9</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>900</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<!--图像------------------------------------------------------------ -->
+			<meActionLabel>sprintAttack</meActionLabel>
+			<description>噬原虫极速旋转身体向敌人撞去，对敌人造成3秒的眩晕。</description>
+		</skill>
+		
+		<skill>
+			<name>PhageWormBall</name><wantDescripB>1</wantDescripB>
+			<cnName>噬原球</cnName>
+			<showInLifeBarB>1</showInLifeBarB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<cd>8</cd>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<ignoreSilenceB>1</ignoreSilenceB>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>900</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<effectType>no</effectType>
+			<!--图像------------------------------------------------------------ -->
+			<meActionLabel>shootAttack</meActionLabel>
+			<description>发射慢速跟踪敌人的噬原球，噬原球触碰到敌人将对敌人进行封锁。</description>
+		</skill>
+				<bullet>
+					<name>PhageWormBall</name>
+					<cnName>噬原虫光球</cnName><noBeClearB>1</noBeClearB>
+					<!--基本属性------------------------------------------------------------ -->
+					<bulletLife>20</bulletLife>
+					<bulletWidth>100</bulletWidth>
+					<hitType>rect</hitType>
+					<hitGap>0.2</hitGap>
+					<!--攻击时的属性------------------------------------------------------------ -->
+					<attackGap>1</attackGap>
+					<attackDelay>0.9</attackDelay>
+					<bulletNum>1</bulletNum>				
+					<!--运动属性------------------------------------------------------------ -->	
+					<shootPoint>-150,-19</shootPoint>
+					<bulletSpeed>4</bulletSpeed>
+					<speedD a="-4" min="2"/>
+					<penetrationGap>1000</penetrationGap>
+					<penetrationNum>999</penetrationNum>
+					<followD value="1"/>
+					<skillArr>PhageWormBallBuff</skillArr>
+					<!--图像动画属性------------------------------------------------------------ -->
+					<bulletImgUrl name="phageWormBall"/>
+				</bullet>
+				<skill cnName="爆瓶buff"><!-- dps -->
+					<name>PhageWormBallBuff</name>
+					<cnName>噬原虫光球buff</cnName><noBeClearB>1</noBeClearB><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB>
+					<!--触发条件与目标------------------------------------------------------------ -->
+					<conditionType>passive</conditionType>
+					<condition>hit</condition>
+					<target>target</target>
+					<!--效果------------------------------------------------------------ -->
+					<addType>state</addType>
+					<effectType>LaborZombieBoomBuff</effectType>
+					<mul>0.5</mul>
+					<duration>5</duration>
+					<!--图像------------------------------------------------------------ --> 
+					<stateEffectImg name="PoliceZombieShakeHit_state"/>
+				</skill>
+	</father>
+</data>
