@@ -12,6 +12,7 @@ import datetime
 import xml.etree.ElementTree as ET
 from typing import Dict, Any
 from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, clean_game_description, clean_str
+from config import is_skipped_xml
 
 # ============================================================
 #  配置
@@ -300,7 +301,8 @@ def _generate_missing_chips(things_pool: dict, arms_data: dict) -> dict:
 
 def _generate_suit_chips(things_pool: dict) -> int:
     """为黑色套装部件生成/修补装备碎片条目（XML + suit JSON 合并处理）"""
-    black_equip_files = glob.glob(os.path.join(XML_DIR, '*blackEquipClass*'))
+    black_equip_files = [p for p in glob.glob(os.path.join(XML_DIR, '*blackEquipClass*'))
+                         if not is_skipped_xml(os.path.basename(p))]
     if not black_equip_files:
         return 0
 
@@ -593,7 +595,7 @@ def run_things_processor():
 
     for root, _, files in os.walk(XML_DIR):
         for file in files:
-            if not file.endswith('.bin'):
+            if not file.endswith('.bin') or is_skipped_xml(file):
                 continue
             try:
                 with open(os.path.join(root, file), 'r', encoding='utf-8') as f:

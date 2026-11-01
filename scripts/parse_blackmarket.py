@@ -11,6 +11,7 @@ import glob as glob_module
 import datetime
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, ValueConverter
+from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -54,7 +55,8 @@ def run_blackmarket_processor():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # ======== 1. blackMarketThings ========
-    things_files = glob_module.glob(os.path.join(XML_DIR, '*blackMarketThingsClass*'))
+    things_files = [p for p in glob_module.glob(os.path.join(XML_DIR, '*blackMarketThingsClass*'))
+                    if not is_skipped_xml(os.path.basename(p))]
     things_list = []
     if things_files:
         with open(things_files[0], 'r', encoding='utf-8') as f:
@@ -87,7 +89,8 @@ def run_blackmarket_processor():
     print(f"blackMarketThings JSON: {things_path} ({len(things_list)} 个分类)")
 
     # ======== 2. blackMarketPrice ========
-    price_files = glob_module.glob(os.path.join(XML_DIR, '*blackMarketPriceClass*'))
+    price_files = [p for p in glob_module.glob(os.path.join(XML_DIR, '*blackMarketPriceClass*'))
+                   if not is_skipped_xml(os.path.basename(p))]
     price_list = []
     if price_files:
         with open(price_files[0], 'r', encoding='utf-8') as f:

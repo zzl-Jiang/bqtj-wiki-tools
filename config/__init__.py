@@ -6,3 +6,4 @@ from .fashion_config import normalize_fashion_cn, FASHION_NAME_MAP
 
 from .body_rename_map import BODY_RENAME_MAP
 from .pro_map import SUFFIX_MAP
+from .skip_files import SKIP_XML_KEYWORDS, is_skipped_xml

@@ -7,6 +7,7 @@
 import os
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator, clean_str
+from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -93,7 +94,7 @@ def run_achieve_processor():
 
     for root_dir, _, files in os.walk(XML_DIR):
         for file in files:
-            if not file.endswith('.bin'):
+            if not file.endswith('.bin') or is_skipped_xml(file):
                 continue
             try:
                 with open(os.path.join(root_dir, file), 'r', encoding='utf-8') as f:
@@ -232,7 +233,7 @@ def _extract_medel_properties():
 
     for root_dir, _, files in os.walk(XML_DIR):
         for file in files:
-            if not file.endswith('.bin') or 'medelProperty' not in file:
+            if not file.endswith('.bin') or 'medelProperty' not in file or is_skipped_xml(file):
                 continue
             try:
                 with open(os.path.join(root_dir, file), 'r', encoding='utf-8') as f:

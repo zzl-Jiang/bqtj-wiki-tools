@@ -11,7 +11,7 @@ import re
 import datetime
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, ValueConverter
-from config import SUFFIX_MAP
+from config import SUFFIX_MAP, is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -117,7 +117,7 @@ def run_property_processor():
 
     for root_dir, _, files in os.walk(XML_DIR):
         for file in files:
-            if not file.endswith('.bin'):
+            if not file.endswith('.bin') or is_skipped_xml(file):
                 continue
             try:
                 path = os.path.join(root_dir, file)

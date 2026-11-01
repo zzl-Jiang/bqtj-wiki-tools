@@ -9,6 +9,7 @@ import os
 import datetime
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator, clean_str
+from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -199,7 +200,7 @@ def run_equip_processor():
 
     for root, _, files in os.walk(XML_DIR):
         for file in files:
-            if not file.endswith('.bin'):
+            if not file.endswith('.bin') or is_skipped_xml(file):
                 continue
             try:
                 with open(os.path.join(root, file), 'r', encoding='utf-8') as f:

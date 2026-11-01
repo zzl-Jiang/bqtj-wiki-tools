@@ -14,6 +14,7 @@ import datetime
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from core import XmlCleaner, ValueConverter, OutputWriter, clean_str
+from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -86,7 +87,8 @@ def get_group_key(name):
 def run_parts_processor():
     """全自动零件处理器：提取 → 按 name 分组 → JSON + Excel"""
     # 按文件名匹配 partsClass，兼容版本号前缀变动
-    xml_files = glob_module.glob(os.path.join(XML_DIR, '*partsClass*'))
+    xml_files = [p for p in glob_module.glob(os.path.join(XML_DIR, '*partsClass*'))
+                 if not is_skipped_xml(os.path.basename(p))]
 
     XML_FILE = xml_files[0]
     print(f"开始处理零件数据: {XML_FILE}")

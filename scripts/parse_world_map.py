@@ -10,6 +10,7 @@ import json
 import datetime
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator, clean_str
+from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -81,7 +82,7 @@ def run_world_map_processor():
 
     for root_dir, _, files in os.walk(XML_DIR):
         for file in files:
-            if not file.endswith('.bin'):
+            if not file.endswith('.bin') or is_skipped_xml(file):
                 continue
             if 'worldMap' not in file:
                 continue

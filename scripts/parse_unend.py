@@ -11,6 +11,7 @@ import glob as glob_module
 import datetime
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, ValueConverter
+from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -65,7 +66,8 @@ def run_unend_processor():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # ======== 1. unendEnemy ========
-    enemy_files = glob_module.glob(os.path.join(XML_DIR, '*unendEnemyClass*'))
+    enemy_files = [p for p in glob_module.glob(os.path.join(XML_DIR, '*unendEnemyClass*'))
+                   if not is_skipped_xml(os.path.basename(p))]
     enemy_list = []
     if enemy_files:
         with open(enemy_files[0], 'r', encoding='utf-8') as f:
@@ -100,7 +102,8 @@ def run_unend_processor():
     print(f"unendEnemy JSON: {enemy_path} ({len(enemy_list)} 个 body)")
 
     # ======== 2. unendPro ========
-    pro_files = glob_module.glob(os.path.join(XML_DIR, '*unendProClass*'))
+    pro_files = [p for p in glob_module.glob(os.path.join(XML_DIR, '*unendProClass*'))
+                 if not is_skipped_xml(os.path.basename(p))]
     pro_list = []
     if pro_files:
         with open(pro_files[0], 'r', encoding='utf-8') as f:

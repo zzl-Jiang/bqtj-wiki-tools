@@ -153,6 +153,13 @@ pip install -e .
 - **秘境**：存储在 `<father name="...">` → `<body>` → `<drop>` → `<gift>` 四层嵌套下。body 为秘境首领，drop 含掉落物品（gift 格式 type;name;num）
 - **神秘商人**：存储在blackMarketThingsClass → `<blackMarketThings>`、blackMarketPriceClass → `<father name="blackMartket">`的相关文件下。
 
+### XML 屏蔽列表
+
+部分 XML 不属于游戏正式数据（玩家投稿作品），所有处理器扫描时必须跳过。
+屏蔽列表在 [config/skip_files.py](config/skip_files.py) 中通过 `SKIP_XML_KEYWORDS` 维护，只记录文件名关键片段（不含数字前缀和 `Class` 后缀，因为它们随版本变动）。
+
+调用 `is_skipped_xml(filename)` 判断是否跳过。所有 `os.walk` 扫描循环应在 `file.endswith('.bin')` 处一并判断，glob 定向查找结果也需过滤。
+
 ### 输出格式
 
 - **独立 JSON 文件**：以实体的 `name` 字段命名，存放在 `data/<type>/json/`
@@ -166,6 +173,8 @@ pip install -e .
 套装类别在 [config/suit_map.py](config/suit_map.py) 中通过 `GATHER_SUIT_MAP` 字典映射，基于 gather 标签的 cnName 属性判定分类。无 cnName 的 gather 默认为"普通套装"。
 
 属性词条后缀在 [config/pro_map.py](config/pro_map.py) 中通过 `SUFFIX_MAP` 字典映射，用于补全 medelPropertyClass 等缺失中文名的带后缀属性（如 `dpsMul_rifle` → `战斗力/火炮`）。补全时优先查找 equipRangeClass、suitPropertyClass 的中英文对照。
+
+XML 屏蔽列表在 [config/skip_files.py](config/skip_files.py) 中通过 `SKIP_XML_KEYWORDS` 维护，详见「XML 屏蔽列表」章节。
 
 ## 数据水合说明
 

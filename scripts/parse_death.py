@@ -11,10 +11,19 @@ import glob as glob_module
 import datetime
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, ValueConverter
+from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
 OUTPUT_DIR = './data/death'
+
+
+def _find_xml(pattern):
+    """按文件名片段定位 XML（自动排除屏蔽文件）"""
+    for path in glob_module.glob(os.path.join(XML_DIR, pattern)):
+        if not is_skipped_xml(os.path.basename(path)):
+            return path
+    return None
 
 
 def _parse_map_names(text):
@@ -30,10 +39,10 @@ def run_death_processor():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # ======== 1. deathUnlock ========
-    unlock_files = glob_module.glob(os.path.join(XML_DIR, '*deathUnlockClass*'))
+    unlock_file = _find_xml('*deathUnlockClass*')
     unlock_list = []
-    if unlock_files:
-        with open(unlock_files[0], 'r', encoding='utf-8') as f:
+    if unlock_file:
+        with open(unlock_file, 'r', encoding='utf-8') as f:
             clean_xml = XmlCleaner.clean(f.read())
         root_el = ET.fromstring(clean_xml)
 
@@ -62,10 +71,10 @@ def run_death_processor():
     print(f"deathUnlock JSON: {unlock_path} ({len(unlock_list)} 个解锁项)")
 
     # ======== 2. deathMapList ========
-    maplist_files = glob_module.glob(os.path.join(XML_DIR, '*deathMapListClass*'))
+    maplist_file = _find_xml('*deathMapListClass*')
     maplist_list = []
-    if maplist_files:
-        with open(maplist_files[0], 'r', encoding='utf-8') as f:
+    if maplist_file:
+        with open(maplist_file, 'r', encoding='utf-8') as f:
             clean_xml = XmlCleaner.clean(f.read())
         root_el = ET.fromstring(clean_xml)
 

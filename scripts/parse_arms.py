@@ -4,7 +4,7 @@ import json
 import pandas as pd
 import xml.etree.ElementTree as ET
 from core import XmlCleaner, XmlParser, ValueConverter, OutputWriter, ReportGenerator, clean_str
-from config import CATEGORY_MAP, ARM_NAME_MAP
+from config import CATEGORY_MAP, ARM_NAME_MAP, is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
@@ -13,7 +13,8 @@ OUTPUT_DIR = './data/arms'
 # --- 注意新增一把武器时，请于config\arm_map.py处手动填写分类内容 ---
 def load_death_arms_color():
     """解析肉鸽武器对照表，返回 {weapon_name: color} 映射"""
-    death_files = glob_module.glob(os.path.join(XML_DIR, '*deathArmsListClass*'))
+    death_files = [p for p in glob_module.glob(os.path.join(XML_DIR, '*deathArmsListClass*'))
+                   if not is_skipped_xml(os.path.basename(p))]
     if not death_files:
         return {}
 
@@ -63,7 +64,7 @@ def run_arm_processor():
 
     for root, _, files in os.walk(XML_DIR):
         for file in files:
-            if not file.endswith('.bin'): continue
+            if not file.endswith('.bin') or is_skipped_xml(file): continue
 
             try:
                 with open(os.path.join(root, file), 'r', encoding='utf-8') as f:
