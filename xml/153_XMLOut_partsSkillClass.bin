@@ -116,6 +116,31 @@
 		</skill>
 		
 		
+		
+		<skill>
+			<name>dogBulletParts</name>
+			<cnName>单身增强</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><ignoreNoSkillB>1</ignoreNoSkillB>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText>额外造成[mul]倍的伤害</changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>puNoP1,puRangeNoWeRole</otherConditionArr>
+			<conditionRange>400</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instant</addType>
+			<changeHurtB>1</changeHurtB>
+			<effectType>changeHurtNoCondition</effectType>
+			<mul>2</mul>
+			<!--图像------------------------------------------------------------ -->
+			<description>非P1角色，如果周围[conditionRange]码范围内没有队友角色，则当前武器额外增加[mul-1]的伤害。</description>
+			<!-- 技能各等级 ------------------------------------------------------------ -->
+			<growth>
+				<skill><mul>2</mul></skill>
+			</growth>
+		</skill>
+		
 		<skill name="修罗弹夹"><!-- dps-被动 -->
 			<name>demCapacityParts</name>
 			<cnName>弹药补充</cnName>

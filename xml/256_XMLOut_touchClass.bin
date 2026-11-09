@@ -35,5 +35,7 @@
 		<touch cnName="发光体" name="lightKey" imgType="oneEffect" imgUrl="NewIcon/lightKey" hitSoundUrl="uiSound/moveLottery" rect="-50,-110,100,160"/>
 		<touch cnName="模拟器" name="deathSim" ctrlCn="开启" imgType="oneEffect" imgUrl="NewIcon/deathSim" hitSoundUrl="uiSound/moveLottery" rect="-50,-110,100,110"/>
 		<touch cnName="研究室出口" name="labExit" ctrlCn="前往并存档" imgType="oneEffect" imgUrl="NewIcon/labExit" hitSoundUrl="uiSound/mapChange" rect="-50,-130,100,130"/>
+		
+		<touch cnName="进入新难度" name="nextDiff" ctrlCn="进阶难度" imgType="oneEffect" imgUrl="generalEffect/nextDiff" hitSoundUrl="uiSound/moveLottery" rect="-30,-40,60,80"/>
 	</father>
 </data>

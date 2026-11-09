@@ -93,7 +93,7 @@
 						<event>
 							<condition delay="1"></condition>
 							<order>say; startList:deathSay_lab1</order>
-							<order>body:p1; moveSpeedMul:0.5</order>
+							
 						</event>
 					</group>
 				</eventG>

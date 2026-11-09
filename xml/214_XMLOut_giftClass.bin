@@ -61,6 +61,7 @@
 		
 	</other>
 	<activity><!-- 活动 -->
+		<![CDATA[
 		<one codeExchangeId="38068" name="wansheng26_10" cnName="万圣节礼包" startTime="2026-10-29 00:00:00">
 			<codeUrl>https://my.4399.com/forums/thread-64622516</codeUrl>
 			<gift>things;exploitCard;2</gift>
@@ -73,7 +74,7 @@
 			<gift>things;rarePartsChest;5</gift>
 
 		</one>
-		
+		]]>
 		<one codeExchangeId="36773" name="gameBox23_5" cnName="游戏盒云游独家">
 			<codeUrl>https://my.4399.com/forums/thread-63579375 </codeUrl>
 			<gift>things;bloodStone;40</gift>

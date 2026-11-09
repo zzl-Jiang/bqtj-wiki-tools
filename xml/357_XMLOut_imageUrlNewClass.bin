@@ -246,6 +246,7 @@
 	
 	<father name="state" cnName="状态">
 		<body cnName="加速扳机" partType="2hand" con="add" name="armsSpeed_jie" >skillEffect/armsSpeed_jie</body>
+		<body cnName="金刚劫" partType="2hand" con="add" name="aegisbaneJie" >skillEffect/aegisbaneJie</body>
 		
 		<body cnName="火烟" name="boomMoveSmokeState" sm="boomMoveSmoke" partType="body">boomEffect/zero</body>
 		<body cnName="火烟-小" name="boomMoveSmokeSmallState" sm="boomMoveSmokeSmall" partType="body">boomEffect/zero</body>

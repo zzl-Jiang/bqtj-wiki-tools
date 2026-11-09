@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
 	<father name="heroSkill" cnName="英雄技能">
+		
+		<skill>
+			<name>aegisbaneJie</name><iconUrl>SkillIcon/aegisbaneJie</iconUrl>
+			<cnName>金刚劫</cnName><noNeedEquipB>1</noNeedEquipB>
+			<showInLifeBarB>1</showInLifeBarB><wantDescripB>1</wantDescripB>
+			<noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+			
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			<studyMustGiftStr>things;demSkillStone;200</studyMustGiftStr>
+			<!--英雄技能属性------------------------------------------------------------ -->
+			<changeText></changeText>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>interval</condition>
+			<intervalT>0.3</intervalT>
+			<otherConditionArr>enemyRangeHaveInviB</otherConditionArr>
+			<conditionRange>9999</conditionRange>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>state</addType>
+			<effectType>addAllHurtMul</effectType>
+			<mul>2.5</mul>
+			<stateEffectImg name="aegisbaneJie"/>
+			<duration>3</duration>
+			<description>周围有敌人无敌时（每0.3秒检查一次），则自己增伤[mul-1]（无视封锁），持续[duration]秒。该技能无需装备即可生效。</description>
+			<growth>
+				<skill><mul>2.5</mul></skill>
+			</growth>
+		</skill>
+		
+		
 		<skill><!-- dps-主动 -->
 			<name>underMurderous_jie</name><iconUrl>SkillIcon/sacrifice</iconUrl>
 			<cnName>反制</cnName>

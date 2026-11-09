@@ -176,7 +176,9 @@
 			<image name="yanluo" cnName="阎罗时装" replaceWeaponType="sickle" weaponAction="yanluoAttack" hd="1" skillArr="yanluoSkill">
 				<addObjJson>{'dpsAll':0.20,"weaponMul":0.25,'lifeAll':0.18,"blackEquipDropPro":0.8,"ranBlackArmsDropPro":0.6,"yaRockDropNum":6}</addObjJson>
 			</image>
-			
+			<image name="goldFalconSuper" cnName="圣羽时装" skillArr="sanfeather" hd="1">
+				<addObjJson>{'dpsAll':0.20,"weaponMul":0.4,'lifeAll':0.18,"blackEquipDropPro":0.60,"specialPartsDropPro":0.4,"greenIsMax":0.1}</addObjJson>
+			</image>
 			
 			
 			<image name="neZha" cnName="哪吒时装"  replaceWeaponType="dagger" weaponAction="sec_daggerAttack">
@@ -218,6 +220,8 @@
 			
 			<![CDATA[女性]]>
 			<image name="wangShu" cnName="望舒时装" hd="1" sex="female" composeMustNum="360">
+			</image>
+			<image name="toxwitch" cnName="桃巫皮肤" hd="1" sex="female" mp4Arr="toxwitch1">
 			</image>
 			<image name="xiaoXiang" cnName="小香时装" sex="female">
 				<addObjJson>{'dpsAll':0.18,'lifeAll':0.30}</addObjJson>

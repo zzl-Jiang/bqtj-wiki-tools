@@ -778,35 +778,58 @@
 			<description>肉鸽超难难度开启。</description> 
 			<loveD num="1"/>
 		</things>
+		
 		<things>
 			<name>dieMedal3</name>
 			<cnName>骷髅勋章V4</cnName>
 			<iconUrl>NewIcon/dieMedal3</iconUrl><!-- 技能图标 -->
-			<description>肉鸽神难难度将在未来开启。</description> 
+			<description>请在研究所进入肉鸽神难难度，只有这一次机会。</description> 
 			<loveD num="1"/>
 		</things>
+		
 		<things>
 			<name>dieMedal4</name>
 			<cnName>骷髅勋章V5</cnName>
 			<iconUrl>NewIcon/dieMedal4</iconUrl><!-- 技能图标 -->
-			<description>肉鸽炼狱难度将在未来开启。</description> 
+			<description>请在研究所进入肉鸽炼狱难度，只有这一次机会。</description> 
 			<loveD num="1"/>
 		</things>
 		<things>
 			<name>dieMedal5</name>
 			<cnName>骷髅勋章V6</cnName>
 			<iconUrl>NewIcon/dieMedal5</iconUrl><!-- 技能图标 -->
-			<description>肉鸽地狱难度将在未来开启。</description> 
+			<description>请在研究所进入肉鸽地狱难度，只有这一次机会。</description> 
 			<loveD num="1"/>
 		</things>
 		<things>
 			<name>dieMedal6</name>
 			<cnName>骷髅勋章V7</cnName>
 			<iconUrl>NewIcon/dieMedal6</iconUrl><!-- 技能图标 -->
-			<description>肉鸽地狱二难度将在未来开启。</description> 
+			<description>请在研究所进入肉鸽地狱二难度，只有这一次机会。</description> 
 			<loveD num="1"/>
 		</things>
 		
+		<things>
+			<name>dieMedal7</name>
+			<cnName>骷髅勋章V7</cnName>
+			<iconUrl>NewIcon/dieMedal8</iconUrl><!-- 技能图标 -->
+			<description>请在研究所进入肉鸽地狱三难度，只有这一次机会。</description> 
+			<loveD num="1"/>
+		</things>
+		<things>
+			<name>dieMedal8</name>
+			<cnName>骷髅勋章V9</cnName>
+			<iconUrl>NewIcon/dieMedal8</iconUrl><!-- 技能图标 -->
+			<description>请在研究所进入肉鸽地狱四难度，只有这一次机会。</description> 
+			<loveD num="1"/>
+		</things>
+		<things>
+			<name>dieMedal9</name>
+			<cnName>骷髅勋章V10</cnName>
+			<iconUrl>NewIcon/dieMedal9</iconUrl><!-- 技能图标 -->
+			<description>你已通关当前版本最高难度。</description> 
+			<loveD num="1"/>
+		</things>
 	</father>
 	
 	
@@ -890,10 +913,10 @@
 		</things>
 		
 		
-		
-		<things cnName="bug补偿礼包-时间结束后可关闭">
-			<name>offset2026_3</name>
-			<cnName>3月补偿礼包</cnName>
+			
+		<things>
+			<name>newGift2026_11</name>
+			<cnName>新手礼包</cnName>
 			<iconUrl>ThingsIcon/postNormalChest</iconUrl><!-- 技能图标 -->
 			<useSave>shopAuto</useSave>
 			<description>
@@ -903,21 +926,21 @@
 			<effectD type="addGift" useSurplusBagB="1" />
 			<loveD num="2"/>
 			<showGiftB>1</showGiftB>
-			<gift>things;allBlackEquipCash;80</gift>
-			<gift>things;yearMonkey;13</gift>
-			<gift>things;yearPig;13</gift>
-			<gift>things;yearHourse;13</gift>
-			<gift>things;yearMouse;13</gift>
-			<gift>things;yearRabbit;13</gift>
-			<gift>things;demBall;20</gift>
-			<gift>things;madheart;12</gift>
-			<gift>things;demStone;12</gift>
-			<gift>things;yaStone;7</gift>
-			<gift>things;zodiacCash;15</gift>
-			<gift>base;anniCoin;75</gift>
+			<gift>base;coin;5000000</gift>
+			<gift>things;skillStone;1000</gift>
+			<gift>things;godStone;500</gift>
+			<gift>things;strengthenStone;300</gift>
+			<gift>things;strengthenDrug;1000</gift>
+			<gift>things;armsRadium;300</gift>
+			<gift>things;armsTitanium;300</gift>
+			<gift>things;allBlackCash;300</gift>
+			<gift>things;allBlackEquipCash;300</gift>
+			<gift>base;wilderKey;10</gift>
+			<gift>things;doubleCard;5</gift>
+
 
 		</things>
-		<![CDATA[
+	<![CDATA[
 		<things cnName="游戏盒签到补偿">
 			<name>gameBoxOffset26_1</name>
 			<cnName>游戏盒签到补偿</cnName>

@@ -2,41 +2,65 @@
 <data>
 	<father name="normal" cnName="普通" priceType="coin" labelArr="hot,all,props,materials,fashion,vehicle,arms,parts,equip,other">
 		<type name="hot">
-			<goods otherArr="hot" propId="4310" newB="1"cnName="十月特惠礼包" name="guoqing2026_10" price="600" buyLimitNum="1" endTime="2026-10-15" autoUseB="1"><priceType>money</priceType></goods>
+			<goods cnName="新手礼包" name="newGift2026_11" price="1" buyLimitNum="1" dayBuyLimitNum="1" endTime="2026-11-22" autoUseB="1"><priceType>coin</priceType></goods>
 			
 			<![CDATA[
-			<goods cnName="3月补偿礼包" name="offset2026_3" price="1000" buyLimitNum="5" dayBuyLimitNum="1" endTime="2026-4-6" autoUseB="1"><priceType>coin</priceType></goods>
+			<goods otherArr="hot" propId="4310" newB="1"cnName="十月特惠礼包" name="guoqing2026_10" price="600" buyLimitNum="1" endTime="2026-10-15" autoUseB="1"><priceType>money</priceType></goods>
 			
 			
 			<goods cnName="游戏盒签到补偿" name="gameBoxOffset26_1" price="10" buyLimitNum="1" dayBuyLimitNumdayBuyLimitNum="1" endTime="2026-2-28" autoUseB="1"><priceType>coin</priceType></goods>
-			
-			
 			<goods name="pumpkinGoods" dataType="base" defineLabel="pumpkin" price="1000" num="2000" buyLimitNum="1" endTime="2025-12-15"/>
 			<goods cnName="缓时卡" name="slowTimeCard" price="10" dayBuyLimitNum="1" buyLimitNum="1"></goods>
+			
+			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4575" dataType="fashion" inBagType="equip" cnName="噬原时装" name="phage"  price="1500" endTime="2026-8-31"><priceType>money</priceType></goods>
+			
 			]]>
+			
+			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4615" dataType="fashion" inBagType="equip" cnName="圣羽时装" name="goldFalconSuper"  price="1500" discount="0.8"><priceType>money</priceType></goods>
+			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4614" dataType="fashion" inBagType="equip" cnName="桃巫皮肤" name="toxwitch"  price="400" discount="0.8"><priceType>money</priceType></goods>
+			
+			<goods  otherArr="hot,vehicle"  noOtherPathB="1" propId="4539" dataType="vehicle" inBagType="equip" cnName="泰坦" name="Titans" price="1500" discount="0.8"><priceType>money</priceType></goods>
+			<goods  otherArr="hot,vehicle"  noOtherPathB="1" propId="4540" dataType="vehicle" inBagType="equip" cnName="幽鬼" name="BlueMoto" price="1500" discount="0.7"><priceType>money</priceType></goods>
+			
+			<![CDATA[打折前时装
 			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4606" dataType="fashion" inBagType="equip" cnName="冥姬时装" name="mingji"  price="1500"><priceType>money</priceType></goods>
 			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4591" dataType="fashion" inBagType="equip" cnName="凌空时装" name="girlWing"  price="1500"><priceType>money</priceType></goods>
 			<goods  otherArr="hot,fashion" propId="4593" dataType="fashion" inBagType="equip" cnName="白狐时装" name="foxLingSuper"  price="1500"><priceType>money</priceType></goods>
-			
-			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4575" dataType="fashion" inBagType="equip" cnName="噬原时装" name="phage"  price="1500" endTime="2026-8-31"><priceType>money</priceType></goods>
 			<goods  otherArr="hot,fashion" propId="4588" dataType="fashion" inBagType="equip" cnName="赤姬时装" name="mechaYingSuper"  price="1500"><priceType>money</priceType></goods>
-			
-			
-			
-			
 			<goods  otherArr="fashion" propId="4567" dataType="fashion" inBagType="equip" cnName="猎风时装" name="cowboyYingSuper"  price="1500"><priceType>money</priceType></goods>
-			
 			<goods  otherArr="fashion" noOtherPathB="1" propId="4570" dataType="fashion" inBagType="equip" cnName="阎罗时装" name="yanluo"  price="1500" discount="0.9" ><priceType>money</priceType></goods>
 			<goods  otherArr="fashion" noOtherPathB="1" propId="4568" dataType="fashion" inBagType="equip" cnName="惊雀时装" name="officerYing"  price="1500"><priceType>money</priceType></goods>
-			
 			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4571" dataType="fashion" inBagType="equip" cnName="大圣时装" name="greatSage"  price="1500" discount="0.9"><priceType>money</priceType></goods>
 			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4572" dataType="fashion" inBagType="equip" cnName="雪影时装" name="snowShadow"  price="1500" discount="0.9"><priceType>money</priceType></goods>
 			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4573" dataType="fashion" inBagType="equip" cnName="刹鬼时装" name="hundredGhosts"  price="1500" discount="0.9"><priceType>money</priceType></goods>
 			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4574" dataType="fashion" inBagType="equip" cnName="噬魂时装" name="phageNew"  price="1500" discount="0.9"><priceType>money</priceType></goods>
+			]]>
+			<![CDATA[打折后]]>
+			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4592" dataType="fashion" inBagType="equip" cnName="冥姬时装" name="mingji"  price="1500" discount="0.9"><priceType>money</priceType></goods>
+			<goods  otherArr="hot,fashion" noOtherPathB="1" propId="4584" dataType="fashion" inBagType="equip" cnName="凌空时装" name="girlWing"  price="1500" discount="0.9"><priceType>money</priceType></goods>
+			<goods  otherArr="hot,fashion" propId="4583" dataType="fashion" inBagType="equip" cnName="白狐时装" name="foxLingSuper"  price="1500" discount="0.9"><priceType>money</priceType></goods>
+			
+			<goods  otherArr="hot,fashion" propId="4576" dataType="fashion" inBagType="equip" cnName="赤姬时装" name="mechaYingSuper"  price="1500" discount="0.9"><priceType>money</priceType></goods>
+			<goods  otherArr="fashion" propId="4562" dataType="fashion" inBagType="equip" cnName="猎风时装" name="cowboyYingSuper"  price="1500" discount="0.9"><priceType>money</priceType></goods>
+			
+			<goods  otherArr="fashion" noOtherPathB="1" propId="4535" dataType="fashion" inBagType="equip" cnName="阎罗时装" name="yanluo"  price="1500" discount="0.8" ><priceType>money</priceType></goods>
+			<goods  otherArr="fashion" noOtherPathB="1" propId="4534" dataType="fashion" inBagType="equip" cnName="惊雀时装" name="officerYing"  price="1500" discount="0.9"><priceType>money</priceType></goods>
+			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4542" dataType="fashion" inBagType="equip" cnName="大圣时装" name="greatSage"  price="1500" discount="0.8"><priceType>money</priceType></goods>
+			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4543" dataType="fashion" inBagType="equip" cnName="雪影时装" name="snowShadow"  price="1500" discount="0.8"><priceType>money</priceType></goods>
+			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4544" dataType="fashion" inBagType="equip" cnName="刹鬼时装" name="hundredGhosts"  price="1500" discount="0.8"><priceType>money</priceType></goods>
+			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4545" dataType="fashion" inBagType="equip" cnName="噬魂时装" name="phageNew"  price="1500" discount="0.8"><priceType>money</priceType></goods>
+			
+			
+			
+			
+			
 			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4565" dataType="fashion" inBagType="equip" cnName="白耀时装" name="whiteUniverSuper"  price="1000" discount="0.8"><priceType>money</priceType></goods>
-			
-			
 			<goods otherArr="hot,fashion" noOtherPathB="1" propId="4546" dataType="fashion" inBagType="equip" cnName="黄金隼" name="goldFalcon"  price="1000" discount="0.8"><priceType>money</priceType></goods>
+			
+			
+			
+			
+			
 			
 			
 			<goods otherArr="hot,equip" propId="4525" cnName="镭射箱" name="shuttleSword" price="190" buyLimitNum="25" chooseNumB="1" endTime="2026-10-15" discount="0.8" ><priceType>money</priceType></goods>
@@ -51,7 +75,7 @@
 			<![CDATA[
 			<goods otherArr="fashion" propId="4557" cnName="小治时装碎片" name="sanjiChip" defineLabel="sanji" num="1" price="7" chooseNumB="1" buyLimitNum="120" endTime="2025-11-16" ><priceType>money</priceType></goods>
 			]]>
-			<goods otherArr="fashion" propId="3833" cnName="神烦狗碎片" name="dogHeadChip" defineLabel="dogHead" num="1" price="4" chooseNumB="1" buyLimitNum="150" endTime="2025-11-16" ><priceType>money</priceType></goods>
+			<goods otherArr="fashion" propId="3833" cnName="神烦狗碎片" name="dogHeadChip" defineLabel="dogHead" num="1" price="4" chooseNumB="1" buyLimitNum="150" endTime="2026-11-17" ><priceType>money</priceType></goods>
 			
 			
 			
@@ -212,10 +236,11 @@
 		
 		<![CDATA[载具]]>
 		<type name="vehicle">
+			
+			<![CDATA[
 			<goods  otherArr="hot,vehicle"  noOtherPathB="1" propId="1783" dataType="vehicle" inBagType="equip" cnName="泰坦" name="Titans" price="1500"><priceType>money</priceType></goods>
 			<goods  otherArr="hot,vehicle"  noOtherPathB="1" propId="4078" dataType="vehicle" inBagType="equip" cnName="幽鬼" name="BlueMoto" price="1500" discount="0.8"><priceType>money</priceType></goods>
-			
-			
+			]]>
 			<goods  otherArr="hot,vehicle"  noOtherPathB="1" propId="4541" dataType="vehicle" inBagType="equip" cnName="制裁者" name="Punisher" price="800"><priceType>money</priceType></goods>
 			
 			

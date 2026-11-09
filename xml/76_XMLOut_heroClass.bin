@@ -537,8 +537,8 @@
 			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
 			<!-- 技能 -->
 			<bossSkillArr>myopia_hero_1</bossSkillArr>
-			<studyCnNameArr>真空,群体圣光,反击,反制,毒雾,群体隐身,吞噬,万弹归宗,欺凌,魅惑,加速扳机,电离折射,嗜爪,馈赠,翻滚,近视,滑翔,沉默,先锋盾,群体自燃,合金护甲,抵御,全域光波</studyCnNameArr>
-			<p1SkillArr>真空,欺凌,加速扳机,滑翔,沉默,翻滚,合金护甲,全域光波</p1SkillArr>
+			<studyCnNameArr>真空,群体圣光,反击,反制,毒雾,群体隐身,吞噬,万弹归宗,欺凌,魅惑,加速扳机,电离折射,嗜爪,馈赠,翻滚,近视,滑翔,沉默,先锋盾,群体自燃,合金护甲,抵御,全域光波,金刚劫</studyCnNameArr>
+			<p1SkillArr>真空,欺凌,加速扳机,滑翔,沉默,翻滚,合金护甲,全域光波,金刚劫</p1SkillArr>
 			<addMoreText></addMoreText>
 			<moreD dpsMul="0.5" underHurtMul="0.3" arenaUnderHurtMul="2" studySkillLvAdd="1" firstLv="6" />
 			

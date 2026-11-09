@@ -1,7 +1,29 @@
 
 # 武器类别映射配置表
 # 主要是类别映射没有判定标准，只能手动修正了
-CATEGORY_MAP = {
+
+# 当前拥有的分类：
+## 按品质分类，可能与按关系分类有交集，其余大类均不交集
+# rare 稀有武器（红武）
+# oldBlack 旧黑武器（81级以上）
+# newBlack 新黑武器（86级以上）
+# newBlack2 新黑武器2（90级以上）
+# particular 特黑武器（其它各种神秘黑武）
+# darkgold 暗金武器
+# purgold 紫金武器
+# yagold 氩金武器
+## 按关系分类
+# constellations 星座武器
+# zodiac 生肖武器
+
+## 按玩法分类
+# death 肉鸽武器
+# space 太空武器
+## 其它
+# random 随机武器
+# special 特殊武器（包含特定关卡武器、敌方武器等）
+
+CATEGORY_MAP = { #以前不懂事用的字母排序，如果有问题请及时修改
     "ArthurRocket180": ["random"],
     "FlyDragonGun": ["rare"],
     "XiaoMei_pistol": ["random"],
@@ -27,12 +49,13 @@ CATEGORY_MAP = {
     "christmasDea": ["death"],
     "christmasGun": ["rare"],
     "closureGun": ["particular"],
-    "consArcher": ["darkgold", "constellation"],
-    "consCancer": ["darkgold", "constellation"],
-    "consLeo": ["darkgold", "constellation"],
+    "consArcher": ["yagold", "constellation"],
+    "consLeo": ["yagold", "constellation"],
+    "consScorpio":  ["yagold", "constellation"],#天蝎座
     "consLeoDea": ["death"],
     "consLibra": ["darkgold", "constellation"],
-    "consVirgo": ["darkgold", "constellation"],
+    "consCancer": ["purgold", "constellation"],
+    "consVirgo": ["purgold", "constellation"],
     "crocodileDea": ["death"],
     "destroyDie": ["death"],
     "dreamDie": ["space"],
@@ -51,21 +74,21 @@ CATEGORY_MAP = {
     "gatling": ["death"],
     "ghostAxe": ["particular"],
     "greedySnake": ["particular"],
-    "guaiPistol": ["death"],
+    "guaiPistol": ["special"],
     "highlighter": ["particular"],
     "iceCone": ["particular"],
     "iceConeDea": ["death"],
     "laser1": ["random"],
-    "lightCone": ["newBlack"],
+    "lightCone": ["newBlack2"],
     "lightConeDea": ["death"],
     "lingGun": ["random"],
-    "lingPistol": ["death"],
+    "lingPistol": ["special"],
     "m4Red": ["death"],
     "m4Rifle": ["death"],
     "mambaGreen": ["death"],
     "mambaYellow": ["death"],
     "mammothDeath": ["death"],
-    "meltFlamer": ["newBlack"],
+    "meltFlamer": ["newBlack2"],
     "meltFlamerYa": ["space"],
     "old_rocket": ["random"],
     "old_rocket22": ["random"],
@@ -74,7 +97,7 @@ CATEGORY_MAP = {
     "pistol1": ["random"],
     "pistol2": ["random"],
     "pistolCabrite": ["rare"],
-    "pistolFox": ["newBlack"],
+    "pistolFox": ["newBlack2"],
     "pistolFoxYa": ["space"],
     "pistolGod": ["rare"],
     "pistolLock": ["random"],
@@ -84,7 +107,7 @@ CATEGORY_MAP = {
     "pistol_two": ["random"],
     "qsg92": ["death"],
     "rainGun": ["particular"],
-    "redFire": ["newBlack"],
+    "redFire": ["newBlack2"],
     "redFireYa": ["space"],
     "rifleDragon": ["oldBlack"],
     "rifleHornet": ["newBlack"],
@@ -95,7 +118,7 @@ CATEGORY_MAP = {
     "roamDea": ["death"],
     "roamRocket": ["particular"],
     "rocket1": ["random"],
-    "rocketCate": ["newBlack"],
+    "rocketCate": ["newBlack2"],
     "rocketCateDea": ["death"],
     "rocketDeath": ["death"],
     "rocketHummer": ["rare"],
@@ -103,7 +126,7 @@ CATEGORY_MAP = {
     "rocketSky": ["rare"],
     "rocketSkyDea": ["death"],
     "rocketSkyS": ["death"],
-    "rocketSpace": ["death"],
+    "rocketSpace": ["special"],
     "rocket_fight": ["special"],
     "sandStormDea": ["death"],
     "sawEmitter": ["space"],
@@ -121,10 +144,10 @@ CATEGORY_MAP = {
     "shotgunSkunk": ["newBlack"],
     "shotgunSkunkTwo": ["random"],
     "shotgunSkunkYa": ["space"],
-    "shotgunTyran": ["death"],
+    "shotgunTyran": ["special"],
     "shotgun_two": ["random"],
     "skyArch": ["particular"],
-    "smileCrossbow": ["death"],
+    "smileCrossbow": ["special"],
     "snakeCrossbow": ["rare"],
     "sniperBlue": ["rare"],
     "sniperCicada": ["newBlack"],
@@ -138,7 +161,7 @@ CATEGORY_MAP = {
     "starDea": ["death"],
     "starTrails": ["particular"],
     "stopCannon": ["death"],
-    "sunDeath": ["death"],
+    "sunDeath": ["special"],
     "svdBlue": ["death"],
     "toyPistol": ["death"],
     "waterFlamer": ["particular"],
@@ -167,21 +190,34 @@ CATEGORY_MAP = {
     "electricArcS": ["death"],
     "electricArc": ["death"],
     "waterFlamerDea": ["death"],
-    "sawEmitterE": ["death"],
-    "smileCrossbowE": ["death"],
-    "spiralCannonE": ["death"],
-    "falconGunE": ["death"],
+    "sawEmitterE": ["special"],
+    "smileCrossbowE": ["special"],
+    "spiralCannonE": ["special"],
+    "falconGunE": ["special"],
     "fireFlamerDea": ["death"],
     "starDeaS": ["death"],
     "electricArcX": ["death"],
-    "airWave": ["darkgold"],
-    "consLibraDea": ["death"],
+    
+    "airWave": ["darkgold"], #空气波
+    
+    "consLibraDea": ["death"], #37.0肉鸽武器
     "sniperCicadaDea": ["death"],
     "sniperBlueDea": ["death"],
     "yearSheepDea": ["death"],
+    
+    "electricCurve": ["purgold"], #电弧
+    #先前未定义武器的补充
+    "yearCattleE": ["special"], #敌方手持的武器
+    "iceConeE": ["special"],
+    "yearDragonE": ["special"],
+    "redFireE": ["special"],
+    "airCannonE": ["special"],
+    "rocketToy2": ["special"], #枪店主主线武器
+    "airToyGun2": ["special"],
 }
 
 # name → 强制 cnName 覆盖表（处理重名冲突等特殊情况）
 ARM_NAME_MAP = {
     "rocketSpace": "苍穹-末日枪神",
+    "shotgunTyran": "暴龙-末日枪神",
 }

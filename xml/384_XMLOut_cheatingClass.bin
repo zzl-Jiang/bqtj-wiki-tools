@@ -252,6 +252,7 @@
 		<body name="showAllDeathBook" cnName="显示全部记忆"/>
 		<body name="clearDeathRole" cnName="清除角色数据"/>
 		<body name="goDeathBig" cnName="前往大地图"  input="str"  string="greenIs" inputTitle="大地图英文名"/>
+		<body name="goDeathLab" cnName="前往研究所"/>
 		<body name="refleshDeathShop" cnName="刷新商店列表" />
 		
 	</father>

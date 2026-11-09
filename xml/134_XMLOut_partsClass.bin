@@ -450,7 +450,15 @@
 				[n]物品合成（需要零件合成券）
 			</description>
 		</things>
-		
+		<things cnName="单身狗子弹" o="">
+			<name>dogBulletParts_1</name><baseLabel>dogBulletParts</baseLabel>
+			<cnName>单身狗子弹</cnName><skillArr>dogBulletParts_1</skillArr>
+			<objType>rare</objType>
+			<maxLevel>1</maxLevel>
+			<iconUrl>PartsIcon/dogBulletParts1</iconUrl>
+			<description>{b}{font color='#FFFF00'}获得方式：{/font}{/b}
+				[n]活动币商店兑换</description>
+		</things>
 		
 		<![CDATA[宝箱]]>
 		<things cnName="修罗弹夹" o="">

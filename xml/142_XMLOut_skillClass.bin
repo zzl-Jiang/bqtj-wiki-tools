@@ -542,6 +542,23 @@
 			<duration>9999999</duration>
 		</skill>
 		<skill>
+			<name>sanfeather</name>
+			<cnName>驭空</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
+			<!--触发条件与目标------------------------------------------------------------ -->
+			<conditionType>passive</conditionType>
+			<condition>add</condition>
+			<target>me</target>
+			<!--效果------------------------------------------------------------ -->
+			<addType>instantAndState</addType>
+			<effectType>girlWing</effectType>
+			<value>40</value>
+			<mul>1.8</mul>
+			<secMul>0.4</secMul>
+			<valueString>goldFalconSuper/wing</valueString>
+			<description>初始拥有[value]%的怒气，怒气回复提升至原来的[mul]；副手攻击范围提升[secMul]；进入关卡进入飞行形态（可使用I键切换陆空状态），且不会被击落。未穿该时装时，可用“使用外观”、“打开效果”来让角色获得当前技能效果。注意，该时装没有绑定副手动作！</description>
+			<duration>9999999</duration>
+		</skill>
+		<skill>
 			<name>girlWing</name>
 			<cnName>驭空</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
 			<!--触发条件与目标------------------------------------------------------------ -->
@@ -555,7 +572,7 @@
 			<mul>1.8</mul>
 			<secMul>0.4</secMul>
 			<valueString>girlWing/wing</valueString>
-			<description>初始拥有[value]%的怒气，怒气回复提升至原来的[mul]；副手攻击范围提升[secMul]；进入关卡进入飞行形态（可使用I键切换陆空状态），且不会被击落。未穿该时装时，可用“使用外观”来让角色获得当前技能效果。注意，该时装没有绑定副手动作！</description>
+			<description>初始拥有[value]%的怒气，怒气回复提升至原来的[mul]；副手攻击范围提升[secMul]；进入关卡进入飞行形态（可使用I键切换陆空状态），且不会被击落。未穿该时装时，可用“使用外观”、“打开效果”来让角色获得当前技能效果。注意，该时装没有绑定副手动作！</description>
 			<duration>9999999</duration>
 		</skill>
 		

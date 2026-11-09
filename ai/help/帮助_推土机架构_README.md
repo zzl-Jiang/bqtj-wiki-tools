@@ -1,0 +1,47 @@
+# 帮助:推土机架构/README
+
+来源：https://www.huijiwiki.com/wiki/%E5%B8%AE%E5%8A%A9%3A%E6%8E%A8%E5%9C%9F%E6%9C%BA%E6%9E%B6%E6%9E%84/README
+revid：42454 · 抓取时间：2026-11-09T14:27:10+08:00
+
+---
+
+这是一个提供给AI阅读的技术指引，方便AI能够更好的理解灰机wiki相关游戏数据项目应该遵循的一般性规范。
+
+==用途==
+当你在使用AI时，例如网页对话/本地harness，将本页面的url<code>https://www.huijiwiki.com/p/26199</code>直接喂给你的AI，告诉他请先阅读本文档来了解灰机wiki的特点和推荐的方案
+
+==概述==
+*灰机基于MediaWiki搭建，版本为[[special:version]]
+*灰机的托管站点使用独立的二级域名如xxx.huijiwiki.com
+*灰机使用较为严格的网络请求策略，禁止bot直接访问api.php，不能保证自动化脚本的每一次请求都被正确响应。推荐使用[[帮助:灰机Wiki数据更新器]]进行页面同步拉取到本地/更新，直接请求api.php需要向staff进行申请，获得authkey后才能正常通信
+
+==重要扩展==
+灰机安装了以下重要扩展
+*[[帮助:模块|Lua]]，推荐使用Lua的Module而不是wikitext的Template
+*[[帮助:零件|Gagdet]],推荐使用gadget:xxx.js/gadget:xxx.css来管理单独开发的代码而不是都塞到common.css/common.js里，并通过Gadget defination来构建bundle方便打包移植，也可以直接在templatemanager.huijiwiki.com使用其他用户共享的代码模块
+
+==前端相关==
+*灰机使用通用的user页面，去除了MediaWiki的user page以及挂在user页面下的sandbox/JavaScript/CSS页面
+*灰机的JavaScript版本支持到ES4，ES5/ES6代码在被MediaWiki压缩后无法生效，需要进行转换才可以使用（Mastache模板提供的html页面不受影响）
+
+灰机支持以下功能
+*[[帮助:Tailwind CSS参考|Tailwind]]
+*[[帮助:使用CSS变量|CSS变量]],预设样式[[帮助:在CSS中使用主题色彩]]
+*[[帮助:Mustache模板|mustache]],通过html页面可以插入复杂的js和css以及前端控件，绕过大部分的MediaWiki限制
+*[[帮助:数学公式|MathJax3]]
+*[[帮助:Mermaid|Mermaid]]
+*[[帮助:在灰机使用Less|Less]]语法
+*[[templatemanager:template:Fa|Fontawesome模板]]
+*[[帮助:字体|预制中英文字体]]
+*[[帮助:折叠|基于JavaScript的内容折叠]]
+
+==数据存储相关==
+灰机支持独有的[[帮助:MongoDB支持|MongoDB]]数据库，不推荐使用Semantic MediaWiki，无法使用Cargo/Bundle。灰机Db扩展允许用户通过将tab/tabx/json格式页面更新到Data命名空间，数据可以进入MongoDB，通过Lua模块中提供的mw.huiji.db.find，mw.huiji.db.findOne，mw.huiji.db.aggregate进行真正的数据库查询/聚合
+*建议本地清理数据，整理成500kb以内的json文件（数量不限）
+*通过[[帮助:灰机Wiki数据更新器]]将json文件同步到网页，每个页面是一个_id。tab/tabx格式每行一个_id
+*推荐通过lua模块进行查询、聚合
+**可以使用[[帮助:搜索器与检索工具]]、[[帮助:SMongo]]等简单的轮子加速开发
+**由于MediaWiki的性能限制，mw.huiji.db.find和mw.huiji.db.aggregate等属于高开销函数（与其他高开销函数共享单页面100次的使用限制）因此推荐使用[[templatemanager:Manifest:鼠标提示框]]进行鼠标悬浮窗异步加载（懒加载）
+**在JavaScript中亦可以使用函数查询灰机Db
+**由于MediaWiki的lua有50mb的内存限制，因此推荐使用数据查询中的project进行优化，或者使用mw.loadData()避免数据重复加载
+[[分类:顶层帮助文档]]

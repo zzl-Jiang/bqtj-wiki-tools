@@ -1,0 +1,1638 @@
+{
+  "version": 1,
+  "docs": {
+    "帮助:AI支持框架": {
+      "revid": 42600,
+      "path": "ai/help/帮助_AI支持框架.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:API": {
+      "revid": 39547,
+      "path": "ai/help/帮助_API.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:APP配置": {
+      "revid": 36130,
+      "path": "ai/help/帮助_APP配置.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:AWB机器人": {
+      "revid": 39556,
+      "path": "ai/help/帮助_AWB机器人.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:BOOTSTRAP": {
+      "revid": 39553,
+      "path": "ai/help/帮助_BOOTSTRAP.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Bot": {
+      "revid": 39551,
+      "path": "ai/help/帮助_Bot.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:CSS样式库": {
+      "revid": 39549,
+      "path": "ai/help/帮助_CSS样式库.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Cockpit文本语法": {
+      "revid": 41606,
+      "path": "ai/help/帮助_Cockpit文本语法.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:CommunityCenter": {
+      "revid": 9334,
+      "path": "ai/help/帮助_CommunityCenter.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Excel": {
+      "revid": 39550,
+      "path": "ai/help/帮助_Excel.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ": {
+      "revid": 41995,
+      "path": "ai/help/帮助_FAQ.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/为什么会出现“调用重复模板参数的页面”分类？": {
+      "revid": 12041,
+      "path": "ai/help/帮助_FAQ_为什么会出现“调用重复模板参数的页面”分类？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/为什么修改了模板/CSS没有立刻生效？": {
+      "revid": 12045,
+      "path": "ai/help/帮助_FAQ_为什么修改了模板_CSS没有立刻生效？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/为什么刚传的新图没有显示？": {
+      "revid": 41617,
+      "path": "ai/help/帮助_FAQ_为什么刚传的新图没有显示？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/为什么我的文字被代码框住了？": {
+      "revid": 12043,
+      "path": "ai/help/帮助_FAQ_为什么我的文字被代码框住了？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/为什么页面没有目录？": {
+      "revid": 12047,
+      "path": "ai/help/帮助_FAQ_为什么页面没有目录？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/偏好设置": {
+      "revid": 12025,
+      "path": "ai/help/帮助_FAQ_偏好设置.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/分类": {
+      "revid": 12014,
+      "path": "ai/help/帮助_FAQ_分类.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/在哪里查看我编辑过的页面？": {
+      "revid": 12055,
+      "path": "ai/help/帮助_FAQ_在哪里查看我编辑过的页面？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/在维基中如何空格": {
+      "revid": 12057,
+      "path": "ai/help/帮助_FAQ_在维基中如何空格.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/如何安全修改站点的配色？": {
+      "revid": 12027,
+      "path": "ai/help/帮助_FAQ_如何安全修改站点的配色？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/如何定位到页面的某个章节/位置？": {
+      "revid": 12029,
+      "path": "ai/help/帮助_FAQ_如何定位到页面的某个章节_位置？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/如何指向一个分类页面？": {
+      "revid": 12036,
+      "path": "ai/help/帮助_FAQ_如何指向一个分类页面？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/如何让自己的维基在搜索引擎中获得较高排名": {
+      "revid": 12031,
+      "path": "ai/help/帮助_FAQ_如何让自己的维基在搜索引擎中获得较高排名.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/如何隐藏内容防止剧透？": {
+      "revid": 35203,
+      "path": "ai/help/帮助_FAQ_如何隐藏内容防止剧透？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/模块是什么，有什么用？": {
+      "revid": 12023,
+      "path": "ai/help/帮助_FAQ_模块是什么，有什么用？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/模板是什么，怎么使用？": {
+      "revid": 12059,
+      "path": "ai/help/帮助_FAQ_模板是什么，怎么使用？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/灰机与维基百科是什么关系": {
+      "revid": 12016,
+      "path": "ai/help/帮助_FAQ_灰机与维基百科是什么关系.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/监视是什么？监视列表又是什么？": {
+      "revid": 12018,
+      "path": "ai/help/帮助_FAQ_监视是什么？监视列表又是什么？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/行政员是什么？": {
+      "revid": 12049,
+      "path": "ai/help/帮助_FAQ_行政员是什么？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/页面中如何显示维基语言": {
+      "revid": 12051,
+      "path": "ai/help/帮助_FAQ_页面中如何显示维基语言.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:FAQ/页面中怎么才能换行？": {
+      "revid": 39745,
+      "path": "ai/help/帮助_FAQ_页面中怎么才能换行？.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Gadget": {
+      "revid": 11738,
+      "path": "ai/help/帮助_Gadget.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:HTML": {
+      "revid": 39552,
+      "path": "ai/help/帮助_HTML.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Html模板": {
+      "revid": 14703,
+      "path": "ai/help/帮助_Html模板.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:HuijiAgent": {
+      "revid": 42456,
+      "path": "ai/help/帮助_HuijiAgent.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:HuijiAgent/事件API": {
+      "revid": 42446,
+      "path": "ai/help/帮助_HuijiAgent_事件API.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:HuijiAgent/知识库": {
+      "revid": 42448,
+      "path": "ai/help/帮助_HuijiAgent_知识库.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:HuijiAgent/自定义工具": {
+      "revid": 42440,
+      "path": "ai/help/帮助_HuijiAgent_自定义工具.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Huiji缓存": {
+      "revid": 41621,
+      "path": "ai/help/帮助_Huiji缓存.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Infobox": {
+      "revid": 14200,
+      "path": "ai/help/帮助_Infobox.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mermaid": {
+      "revid": 42400,
+      "path": "ai/help/帮助_Mermaid.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mermaid/思维导图": {
+      "revid": 42395,
+      "path": "ai/help/帮助_Mermaid_思维导图.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mermaid/时序图": {
+      "revid": 42396,
+      "path": "ai/help/帮助_Mermaid_时序图.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mermaid/泳道图": {
+      "revid": 42397,
+      "path": "ai/help/帮助_Mermaid_泳道图.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mermaid/流程图": {
+      "revid": 42402,
+      "path": "ai/help/帮助_Mermaid_流程图.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mermaid/甘特图": {
+      "revid": 42399,
+      "path": "ai/help/帮助_Mermaid_甘特图.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:MongoDB支持": {
+      "revid": 42455,
+      "path": "ai/help/帮助_MongoDB支持.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mustache模板": {
+      "revid": 41759,
+      "path": "ai/help/帮助_Mustache模板.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mustache模板/dot写法": {
+      "revid": 14976,
+      "path": "ai/help/帮助_Mustache模板_dot写法.md",
+      "fetched_at": "2026-11-09T14:27:09+08:00"
+    },
+    "帮助:Mustache模板/危险模板": {
+      "revid": 41797,
+      "path": "ai/help/帮助_Mustache模板_危险模板.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Page Forms": {
+      "revid": 31080,
+      "path": "ai/help/帮助_Page Forms.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Python": {
+      "revid": 42223,
+      "path": "ai/help/帮助_Python.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Python/mwclientReference": {
+      "revid": 34762,
+      "path": "ai/help/帮助_Python_mwclientReference.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:SMW2.5-3.0迁移指南": {
+      "revid": 41631,
+      "path": "ai/help/帮助_SMW2.5-3.0迁移指南.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:SMongo": {
+      "revid": 41748,
+      "path": "ai/help/帮助_SMongo.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Forms": {
+      "revid": 39561,
+      "path": "ai/help/帮助_Semantic Forms.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki": {
+      "revid": 39566,
+      "path": "ai/help/帮助_Semantic MediaWiki.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/Boolean类型": {
+      "revid": 33350,
+      "path": "ai/help/帮助_Semantic MediaWiki_Boolean类型.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/Date类型": {
+      "revid": 33352,
+      "path": "ai/help/帮助_Semantic MediaWiki_Date类型.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/Monolingual text类型": {
+      "revid": 33354,
+      "path": "ai/help/帮助_Semantic MediaWiki_Monolingual text类型.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/Quantity类型": {
+      "revid": 33356,
+      "path": "ai/help/帮助_Semantic MediaWiki_Quantity类型.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/Record类型": {
+      "revid": 33358,
+      "path": "ai/help/帮助_Semantic MediaWiki_Record类型.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/category格式": {
+      "revid": 33360,
+      "path": "ai/help/帮助_Semantic MediaWiki_category格式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/embedded格式": {
+      "revid": 33362,
+      "path": "ai/help/帮助_Semantic MediaWiki_embedded格式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/embedde格式": {
+      "revid": 33364,
+      "path": "ai/help/帮助_Semantic MediaWiki_embedde格式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/list格式": {
+      "revid": 33366,
+      "path": "ai/help/帮助_Semantic MediaWiki_list格式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/ol格式": {
+      "revid": 33368,
+      "path": "ai/help/帮助_Semantic MediaWiki_ol格式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/table格式": {
+      "revid": 33370,
+      "path": "ai/help/帮助_Semantic MediaWiki_table格式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/template格式": {
+      "revid": 33372,
+      "path": "ai/help/帮助_Semantic MediaWiki_template格式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/ul格式": {
+      "revid": 33374,
+      "path": "ai/help/帮助_Semantic MediaWiki_ul格式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/允许值": {
+      "revid": 33376,
+      "path": "ai/help/帮助_Semantic MediaWiki_允许值.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/命名空间": {
+      "revid": 33378,
+      "path": "ai/help/帮助_Semantic MediaWiki_命名空间.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/子对象查询": {
+      "revid": 35322,
+      "path": "ai/help/帮助_Semantic MediaWiki_子对象查询.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/属性及其类型": {
+      "revid": 33382,
+      "path": "ai/help/帮助_Semantic MediaWiki_属性及其类型.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/属性类型": {
+      "revid": 33384,
+      "path": "ai/help/帮助_Semantic MediaWiki_属性类型.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/嵌入式查询": {
+      "revid": 33386,
+      "path": "ai/help/帮助_Semantic MediaWiki_嵌入式查询.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/概念": {
+      "revid": 33388,
+      "path": "ai/help/帮助_Semantic MediaWiki_概念.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/结果的format": {
+      "revid": 33390,
+      "path": "ai/help/帮助_Semantic MediaWiki_结果的format.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/负属性": {
+      "revid": 33392,
+      "path": "ai/help/帮助_Semantic MediaWiki_负属性.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic MediaWiki/选择页面": {
+      "revid": 33394,
+      "path": "ai/help/帮助_Semantic MediaWiki_选择页面.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki": {
+      "revid": 33349,
+      "path": "ai/help/帮助_Semantic Mediawiki_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/Boolean类型": {
+      "revid": 33351,
+      "path": "ai/help/帮助_Semantic Mediawiki_Boolean类型_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/Date类型": {
+      "revid": 33353,
+      "path": "ai/help/帮助_Semantic Mediawiki_Date类型_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/Monolingual text类型": {
+      "revid": 33355,
+      "path": "ai/help/帮助_Semantic Mediawiki_Monolingual text类型_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/Quantity类型": {
+      "revid": 33357,
+      "path": "ai/help/帮助_Semantic Mediawiki_Quantity类型_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/Record类型": {
+      "revid": 33359,
+      "path": "ai/help/帮助_Semantic Mediawiki_Record类型_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/category格式": {
+      "revid": 33361,
+      "path": "ai/help/帮助_Semantic Mediawiki_category格式_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/embedded格式": {
+      "revid": 33363,
+      "path": "ai/help/帮助_Semantic Mediawiki_embedded格式_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/embedde格式": {
+      "revid": 33365,
+      "path": "ai/help/帮助_Semantic Mediawiki_embedde格式_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/list格式": {
+      "revid": 33367,
+      "path": "ai/help/帮助_Semantic Mediawiki_list格式_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/ol格式": {
+      "revid": 33369,
+      "path": "ai/help/帮助_Semantic Mediawiki_ol格式_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/table格式": {
+      "revid": 33371,
+      "path": "ai/help/帮助_Semantic Mediawiki_table格式_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/template格式": {
+      "revid": 33373,
+      "path": "ai/help/帮助_Semantic Mediawiki_template格式_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/ul格式": {
+      "revid": 33375,
+      "path": "ai/help/帮助_Semantic Mediawiki_ul格式_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/允许值": {
+      "revid": 33377,
+      "path": "ai/help/帮助_Semantic Mediawiki_允许值_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/命名空间": {
+      "revid": 33379,
+      "path": "ai/help/帮助_Semantic Mediawiki_命名空间_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/子对象查询": {
+      "revid": 33381,
+      "path": "ai/help/帮助_Semantic Mediawiki_子对象查询_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/属性及其类型": {
+      "revid": 33383,
+      "path": "ai/help/帮助_Semantic Mediawiki_属性及其类型_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/属性类型": {
+      "revid": 33385,
+      "path": "ai/help/帮助_Semantic Mediawiki_属性类型_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/嵌入式查询": {
+      "revid": 33387,
+      "path": "ai/help/帮助_Semantic Mediawiki_嵌入式查询_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/概念": {
+      "revid": 33389,
+      "path": "ai/help/帮助_Semantic Mediawiki_概念_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/结果的format": {
+      "revid": 33391,
+      "path": "ai/help/帮助_Semantic Mediawiki_结果的format_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/负属性": {
+      "revid": 33393,
+      "path": "ai/help/帮助_Semantic Mediawiki_负属性_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Mediawiki/选择页面": {
+      "revid": 33395,
+      "path": "ai/help/帮助_Semantic Mediawiki_选择页面_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Result Formats": {
+      "revid": 41688,
+      "path": "ai/help/帮助_Semantic Result Formats.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Semantic Result Formats/echarts": {
+      "revid": 41719,
+      "path": "ai/help/帮助_Semantic Result Formats_echarts.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Steam激活码": {
+      "revid": 3876,
+      "path": "ai/help/帮助_Steam激活码.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Tab切换": {
+      "revid": 41762,
+      "path": "ai/help/帮助_Tab切换.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Tailwind CSS参考": {
+      "revid": 42224,
+      "path": "ai/help/帮助_Tailwind CSS参考.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:WAB与机器人": {
+      "revid": 3263,
+      "path": "ai/help/帮助_WAB与机器人.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:Wiki标记语言": {
+      "revid": 39562,
+      "path": "ai/help/帮助_Wiki标记语言.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:XnView": {
+      "revid": 41203,
+      "path": "ai/help/帮助_XnView.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传媒体文件": {
+      "revid": 11943,
+      "path": "ai/help/帮助_上传媒体文件.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传媒体文件/1": {
+      "revid": 39564,
+      "path": "ai/help/帮助_上传媒体文件_1.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传媒体文件/2": {
+      "revid": 29184,
+      "path": "ai/help/帮助_上传媒体文件_2.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传媒体文件/3": {
+      "revid": 3506,
+      "path": "ai/help/帮助_上传媒体文件_3.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传媒体文件/4": {
+      "revid": 3539,
+      "path": "ai/help/帮助_上传媒体文件_4.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传媒体文件/5": {
+      "revid": 5331,
+      "path": "ai/help/帮助_上传媒体文件_5.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传媒体文件/6": {
+      "revid": 29185,
+      "path": "ai/help/帮助_上传媒体文件_6.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传媒体文件/tabs": {
+      "revid": 3526,
+      "path": "ai/help/帮助_上传媒体文件_tabs.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:上传字体": {
+      "revid": 8666,
+      "path": "ai/help/帮助_上传字体.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:主题编辑器": {
+      "revid": 41853,
+      "path": "ai/help/帮助_主题编辑器.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用CSS变量": {
+      "revid": 42092,
+      "path": "ai/help/帮助_使用CSS变量.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用React做界面": {
+      "revid": 36948,
+      "path": "ai/help/帮助_使用React做界面.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用SPA": {
+      "revid": 41243,
+      "path": "ai/help/帮助_使用SPA.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用Sublime Text更新Wiki": {
+      "revid": 11477,
+      "path": "ai/help/帮助_使用Sublime Text更新Wiki.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用Sublime Text编辑Wiki": {
+      "revid": 33690,
+      "path": "ai/help/帮助_使用Sublime Text编辑Wiki.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用cockpit组件": {
+      "revid": 42309,
+      "path": "ai/help/帮助_使用cockpit组件.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用echarts": {
+      "revid": 42617,
+      "path": "ai/help/帮助_使用echarts.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用手册索引/TabsHeader": {
+      "revid": 1259,
+      "path": "ai/help/帮助_使用手册索引_TabsHeader.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:使用指南/编辑": {
+      "revid": 286,
+      "path": "ai/help/帮助_使用指南_编辑.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:保护页面": {
+      "revid": 41846,
+      "path": "ai/help/帮助_保护页面.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:修改站点导航": {
+      "revid": 41851,
+      "path": "ai/help/帮助_修改站点导航.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:修改站点页脚": {
+      "revid": 41850,
+      "path": "ai/help/帮助_修改站点页脚.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:停机坪": {
+      "revid": 39571,
+      "path": "ai/help/帮助_停机坪.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:公告模板": {
+      "revid": 39575,
+      "path": "ai/help/帮助_公告模板.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:创建新页面": {
+      "revid": 39574,
+      "path": "ai/help/帮助_创建新页面.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:创建条目": {
+      "revid": 823,
+      "path": "ai/help/帮助_创建条目.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:加油": {
+      "revid": 41736,
+      "path": "ai/help/帮助_加油.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:加油/new": {
+      "revid": 39107,
+      "path": "ai/help/帮助_加油_new.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:博客": {
+      "revid": 7549,
+      "path": "ai/help/帮助_博客.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:历史与回退": {
+      "revid": 39576,
+      "path": "ai/help/帮助_历史与回退.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:变量": {
+      "revid": 39581,
+      "path": "ai/help/帮助_变量.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:可配置的站点功能": {
+      "revid": 41973,
+      "path": "ai/help/帮助_可配置的站点功能.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:吐槽与讨论": {
+      "revid": 41835,
+      "path": "ai/help/帮助_吐槽与讨论.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:命名常规": {
+      "revid": 39579,
+      "path": "ai/help/帮助_命名常规.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:命名空间": {
+      "revid": 42620,
+      "path": "ai/help/帮助_命名空间.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:图像处理工具": {
+      "revid": 39578,
+      "path": "ai/help/帮助_图像处理工具.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:图片": {
+      "revid": 33049,
+      "path": "ai/help/帮助_图片.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:图片仓库": {
+      "revid": 11733,
+      "path": "ai/help/帮助_图片仓库.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:图片教程": {
+      "revid": 41701,
+      "path": "ai/help/帮助_图片教程.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:在CSS中使用主题色彩": {
+      "revid": 17996,
+      "path": "ai/help/帮助_在CSS中使用主题色彩.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:在灰机使用Less": {
+      "revid": 41550,
+      "path": "ai/help/帮助_在灰机使用Less.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:在灰机使用Less/Less函数列表": {
+      "revid": 41553,
+      "path": "ai/help/帮助_在灰机使用Less_Less函数列表.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:在灰机使用Less/example": {
+      "revid": 41413,
+      "path": "ai/help/帮助_在灰机使用Less_example.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:在灰机使用Less/简明教程": {
+      "revid": 41552,
+      "path": "ai/help/帮助_在灰机使用Less_简明教程.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:在灰机使用Less/（基本上）完整的文档": {
+      "revid": 41441,
+      "path": "ai/help/帮助_在灰机使用Less_（基本上）完整的文档.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:在灰机使用Vue.js": {
+      "revid": 42102,
+      "path": "ai/help/帮助_在灰机使用Vue.js.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:复杂模板": {
+      "revid": 41546,
+      "path": "ai/help/帮助_复杂模板.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:如何找到编辑页面": {
+      "revid": 824,
+      "path": "ai/help/帮助_如何找到编辑页面.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:如何插入图片": {
+      "revid": 825,
+      "path": "ai/help/帮助_如何插入图片.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:字体": {
+      "revid": 42630,
+      "path": "ai/help/帮助_字体.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:学习使用维基的五个阶段": {
+      "revid": 9574,
+      "path": "ai/help/帮助_学习使用维基的五个阶段.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:学习地图": {
+      "revid": 39584,
+      "path": "ai/help/帮助_学习地图.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:封禁": {
+      "revid": 39588,
+      "path": "ai/help/帮助_封禁.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:小贴士": {
+      "revid": 28079,
+      "path": "ai/help/帮助_小贴士.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:工作区": {
+      "revid": 42468,
+      "path": "ai/help/帮助_工作区.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:帮助:上传媒体文件": {
+      "revid": 8725,
+      "path": "ai/help/帮助_帮助_上传媒体文件.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:建站前准备工作建议": {
+      "revid": 36227,
+      "path": "ai/help/帮助_建站前准备工作建议.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:建站心得": {
+      "revid": 42612,
+      "path": "ai/help/帮助_建站心得.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:建站评估": {
+      "revid": 41142,
+      "path": "ai/help/帮助_建站评估.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:开发者": {
+      "revid": 14702,
+      "path": "ai/help/帮助_开发者.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:开发者101": {
+      "revid": 41811,
+      "path": "ai/help/帮助_开发者101.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:快速指南": {
+      "revid": 41869,
+      "path": "ai/help/帮助_快速指南.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:快速插入项": {
+      "revid": 39594,
+      "path": "ai/help/帮助_快速插入项.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:恶意编辑": {
+      "revid": 39595,
+      "path": "ai/help/帮助_恶意编辑.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:折叠": {
+      "revid": 39591,
+      "path": "ai/help/帮助_折叠.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:接收webhook消息": {
+      "revid": 16801,
+      "path": "ai/help/帮助_接收webhook消息.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:推土机架构": {
+      "revid": 42465,
+      "path": "ai/help/帮助_推土机架构.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:推土机架构/README": {
+      "revid": 42454,
+      "path": "ai/help/帮助_推土机架构_README.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:推土机架构/标准": {
+      "revid": 13840,
+      "path": "ai/help/帮助_推土机架构_标准.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:推土机架构/标准/接口": {
+      "revid": 13853,
+      "path": "ai/help/帮助_推土机架构_标准_接口.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:推土机架构/标准/新手上路": {
+      "revid": 13836,
+      "path": "ai/help/帮助_推土机架构_标准_新手上路.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:推土机架构/标准/管理属性": {
+      "revid": 13844,
+      "path": "ai/help/帮助_推土机架构_标准_管理属性.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:推土机架构/标准/继承": {
+      "revid": 13841,
+      "path": "ai/help/帮助_推土机架构_标准_继承.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:推土机架构/标准/自定义": {
+      "revid": 13849,
+      "path": "ai/help/帮助_推土机架构_标准_自定义.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:提升访问速度": {
+      "revid": 41176,
+      "path": "ai/help/帮助_提升访问速度.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:插入视频": {
+      "revid": 683,
+      "path": "ai/help/帮助_插入视频.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:搜索器与检索工具": {
+      "revid": 41244,
+      "path": "ai/help/帮助_搜索器与检索工具.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:数学公式": {
+      "revid": 41296,
+      "path": "ai/help/帮助_数学公式.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:文本处理工具": {
+      "revid": 42614,
+      "path": "ai/help/帮助_文本处理工具.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:方针与指引": {
+      "revid": 1495,
+      "path": "ai/help/帮助_方针与指引.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:机器人": {
+      "revid": 41673,
+      "path": "ai/help/帮助_机器人.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:机长可配置的站点功能": {
+      "revid": 41791,
+      "path": "ai/help/帮助_机长可配置的站点功能.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:模块": {
+      "revid": 42080,
+      "path": "ai/help/帮助_模块.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:模块/HTML编写入门": {
+      "revid": 39277,
+      "path": "ai/help/帮助_模块_HTML编写入门.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:模块/Hello world": {
+      "revid": 42082,
+      "path": "ai/help/帮助_模块_Hello world.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:模块/MongoDB函数": {
+      "revid": 42096,
+      "path": "ai/help/帮助_模块_MongoDB函数.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:模块/function调用": {
+      "revid": 33329,
+      "path": "ai/help/帮助_模块_function调用.md",
+      "fetched_at": "2026-11-09T14:27:10+08:00"
+    },
+    "帮助:模块/test": {
+      "revid": 34623,
+      "path": "ai/help/帮助_模块_test.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/使用MongoDB函数读取JSON": {
+      "revid": 33412,
+      "path": "ai/help/帮助_模块_使用MongoDB函数读取JSON.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/使用译名表": {
+      "revid": 34326,
+      "path": "ai/help/帮助_模块_使用译名表.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/保留字": {
+      "revid": 34216,
+      "path": "ai/help/帮助_模块_保留字.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/函数": {
+      "revid": 33339,
+      "path": "ai/help/帮助_模块_函数.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/分支结构": {
+      "revid": 33337,
+      "path": "ai/help/帮助_模块_分支结构.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/变量": {
+      "revid": 33335,
+      "path": "ai/help/帮助_模块_变量.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/字符串": {
+      "revid": 41400,
+      "path": "ai/help/帮助_模块_字符串.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/库与函数索引": {
+      "revid": 42132,
+      "path": "ai/help/帮助_模块_库与函数索引.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/循环结构": {
+      "revid": 42131,
+      "path": "ai/help/帮助_模块_循环结构.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/挂载数据": {
+      "revid": 41807,
+      "path": "ai/help/帮助_模块_挂载数据.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/数据类型": {
+      "revid": 33331,
+      "path": "ai/help/帮助_模块_数据类型.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/数组": {
+      "revid": 33341,
+      "path": "ai/help/帮助_模块_数组.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/替换模板入门": {
+      "revid": 33328,
+      "path": "ai/help/帮助_模块_替换模板入门.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/注释": {
+      "revid": 34209,
+      "path": "ai/help/帮助_模块_注释.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/灰机特有函数": {
+      "revid": 42099,
+      "path": "ai/help/帮助_模块_灰机特有函数.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/获取模板参数": {
+      "revid": 38178,
+      "path": "ai/help/帮助_模块_获取模板参数.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/表": {
+      "revid": 35023,
+      "path": "ai/help/帮助_模块_表.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/跨模块调用": {
+      "revid": 38173,
+      "path": "ai/help/帮助_模块_跨模块调用.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模块/运算符": {
+      "revid": 34988,
+      "path": "ai/help/帮助_模块_运算符.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模板": {
+      "revid": 42128,
+      "path": "ai/help/帮助_模板.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模板仓库": {
+      "revid": 13090,
+      "path": "ai/help/帮助_模板仓库.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模板参数": {
+      "revid": 39602,
+      "path": "ai/help/帮助_模板参数.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:模板默认参数": {
+      "revid": 3854,
+      "path": "ai/help/帮助_模板默认参数.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:消歧义": {
+      "revid": 39603,
+      "path": "ai/help/帮助_消歧义.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:添加分类": {
+      "revid": 2809,
+      "path": "ai/help/帮助_添加分类.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:添加引用": {
+      "revid": 42147,
+      "path": "ai/help/帮助_添加引用.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:添加注释": {
+      "revid": 26160,
+      "path": "ai/help/帮助_添加注释.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Json编辑器": {
+      "revid": 42604,
+      "path": "ai/help/帮助_灰机Json编辑器.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Wiki数据更新器": {
+      "revid": 42668,
+      "path": "ai/help/帮助_灰机Wiki数据更新器.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Wiki数据更新器/v3": {
+      "revid": 42672,
+      "path": "ai/help/帮助_灰机Wiki数据更新器_v3.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Wiki数据更新器/使用VSCode": {
+      "revid": 42523,
+      "path": "ai/help/帮助_灰机Wiki数据更新器_使用VSCode.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Wiki数据更新器/更新日志": {
+      "revid": 42660,
+      "path": "ai/help/帮助_灰机Wiki数据更新器_更新日志.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Wiki数据更新器/更新日志/2017年": {
+      "revid": 27988,
+      "path": "ai/help/帮助_灰机Wiki数据更新器_更新日志_2017年.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Wiki数据更新器/更新日志/2018-2026年": {
+      "revid": 42642,
+      "path": "ai/help/帮助_灰机Wiki数据更新器_更新日志_2018-2026年.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Wiki数据更新器\\使用Harness": {
+      "revid": 42636,
+      "path": "ai/help/帮助_灰机Wiki数据更新器_使用Harness.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机Wiki数据更新器\\使用VS Code维护代码": {
+      "revid": 42522,
+      "path": "ai/help/帮助_灰机Wiki数据更新器_使用VS Code维护代码.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机wiki": {
+      "revid": 3524,
+      "path": "ai/help/帮助_灰机wiki.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机wiki/1": {
+      "revid": 3656,
+      "path": "ai/help/帮助_灰机wiki_1.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机wiki/2": {
+      "revid": 3624,
+      "path": "ai/help/帮助_灰机wiki_2.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机wiki/3": {
+      "revid": 3654,
+      "path": "ai/help/帮助_灰机wiki_3.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机wiki/4": {
+      "revid": 3655,
+      "path": "ai/help/帮助_灰机wiki_4.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机wiki/tabs": {
+      "revid": 3551,
+      "path": "ai/help/帮助_灰机wiki_tabs.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机workshop": {
+      "revid": 41852,
+      "path": "ai/help/帮助_灰机workshop.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:灰机内链": {
+      "revid": 2622,
+      "path": "ai/help/帮助_灰机内链.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:版权信息": {
+      "revid": 11892,
+      "path": "ai/help/帮助_版权信息.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:版权信息(CC-BY-SA)": {
+      "revid": 3385,
+      "path": "ai/help/帮助_版权信息(CC-BY-SA).md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:版权信息(CC BY-NC)": {
+      "revid": 39608,
+      "path": "ai/help/帮助_版权信息(CC BY-NC).md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:版权信息(CC BY-SA)": {
+      "revid": 39611,
+      "path": "ai/help/帮助_版权信息(CC BY-SA).md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:狗头人APP": {
+      "revid": 39605,
+      "path": "ai/help/帮助_狗头人APP.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:狗头人APP(v2)": {
+      "revid": 42044,
+      "path": "ai/help/帮助_狗头人APP(v2).md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:生者传记": {
+      "revid": 1780,
+      "path": "ai/help/帮助_生者传记.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:用Git管理MediaWiki": {
+      "revid": 39609,
+      "path": "ai/help/帮助_用Git管理MediaWiki.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:用户": {
+      "revid": 3369,
+      "path": "ai/help/帮助_用户.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:用户协议": {
+      "revid": 1765,
+      "path": "ai/help/帮助_用户协议.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:用户手册": {
+      "revid": 9424,
+      "path": "ai/help/帮助_用户手册.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:用户权限": {
+      "revid": 42315,
+      "path": "ai/help/帮助_用户权限.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:用户等级": {
+      "revid": 41210,
+      "path": "ai/help/帮助_用户等级.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:用户组限定的CSS/JS": {
+      "revid": 42148,
+      "path": "ai/help/帮助_用户组限定的CSS_JS.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:目录": {
+      "revid": 284,
+      "path": "ai/help/帮助_目录.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:知识库": {
+      "revid": 42435,
+      "path": "ai/help/帮助_知识库.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:短域名选择": {
+      "revid": 41171,
+      "path": "ai/help/帮助_短域名选择.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:移动页面": {
+      "revid": 41844,
+      "path": "ai/help/帮助_移动页面.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:站点CSS编辑": {
+      "revid": 39615,
+      "path": "ai/help/帮助_站点CSS编辑.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:站点JS编辑": {
+      "revid": 41830,
+      "path": "ai/help/帮助_站点JS编辑.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:站点排名": {
+      "revid": 3316,
+      "path": "ai/help/帮助_站点排名.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:站点等级": {
+      "revid": 39616,
+      "path": "ai/help/帮助_站点等级.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:站点评分": {
+      "revid": 39618,
+      "path": "ai/help/帮助_站点评分.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:站长指南": {
+      "revid": 39639,
+      "path": "ai/help/帮助_站长指南.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:章节": {
+      "revid": 39619,
+      "path": "ai/help/帮助_章节.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:简繁处理": {
+      "revid": 42090,
+      "path": "ai/help/帮助_简繁处理.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:素材库": {
+      "revid": 39624,
+      "path": "ai/help/帮助_素材库.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:维基化": {
+      "revid": 39621,
+      "path": "ai/help/帮助_维基化.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:维基条目编写指南": {
+      "revid": 11871,
+      "path": "ai/help/帮助_维基条目编写指南.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:编辑冲突": {
+      "revid": 39622,
+      "path": "ai/help/帮助_编辑冲突.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:编辑手册": {
+      "revid": 14470,
+      "path": "ai/help/帮助_编辑手册.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:编辑摘要": {
+      "revid": 42093,
+      "path": "ai/help/帮助_编辑摘要.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:编辑页面": {
+      "revid": 41843,
+      "path": "ai/help/帮助_编辑页面.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:自动翻译": {
+      "revid": 42317,
+      "path": "ai/help/帮助_自动翻译.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:自定义主题": {
+      "revid": 3942,
+      "path": "ai/help/帮助_自定义主题.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:自定义守则": {
+      "revid": 14730,
+      "path": "ai/help/帮助_自定义守则.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:表格": {
+      "revid": 41872,
+      "path": "ai/help/帮助_表格.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:视频教程": {
+      "revid": 41848,
+      "path": "ai/help/帮助_视频教程.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器函数": {
+      "revid": 42127,
+      "path": "ai/help/帮助_解析器函数.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签": {
+      "revid": 39632,
+      "path": "ai/help/帮助_解析器扩展标签.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Accordion": {
+      "revid": 10964,
+      "path": "ai/help/帮助_解析器扩展标签_Accordion.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Alert": {
+      "revid": 9310,
+      "path": "ai/help/帮助_解析器扩展标签_Alert.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Callout": {
+      "revid": 1878,
+      "path": "ai/help/帮助_解析器扩展标签_Callout.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Carousel": {
+      "revid": 5327,
+      "path": "ai/help/帮助_解析器扩展标签_Carousel.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Collapse": {
+      "revid": 10962,
+      "path": "ai/help/帮助_解析器扩展标签_Collapse.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Dropdown": {
+      "revid": 1849,
+      "path": "ai/help/帮助_解析器扩展标签_Dropdown.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Gallery": {
+      "revid": 38514,
+      "path": "ai/help/帮助_解析器扩展标签_Gallery.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Heading": {
+      "revid": 8389,
+      "path": "ai/help/帮助_解析器扩展标签_Heading.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Pop": {
+      "revid": 14443,
+      "path": "ai/help/帮助_解析器扩展标签_Pop.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Siteactivity": {
+      "revid": 1880,
+      "path": "ai/help/帮助_解析器扩展标签_Siteactivity.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Tab": {
+      "revid": 1842,
+      "path": "ai/help/帮助_解析器扩展标签_Tab.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Tip": {
+      "revid": 11017,
+      "path": "ai/help/帮助_解析器扩展标签_Tip.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/Trans": {
+      "revid": 8481,
+      "path": "ai/help/帮助_解析器扩展标签_Trans.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/background": {
+      "revid": 9289,
+      "path": "ai/help/帮助_解析器扩展标签_background.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/commentOfTheDay": {
+      "revid": 1871,
+      "path": "ai/help/帮助_解析器扩展标签_commentOfTheDay.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/commentsOfTheDay": {
+      "revid": 1873,
+      "path": "ai/help/帮助_解析器扩展标签_commentsOfTheDay.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/indicator": {
+      "revid": 1915,
+      "path": "ai/help/帮助_解析器扩展标签_indicator.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/rec": {
+      "revid": 3659,
+      "path": "ai/help/帮助_解析器扩展标签_rec.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/test1": {
+      "revid": 14687,
+      "path": "ai/help/帮助_解析器扩展标签_test1.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:解析器扩展标签/test2": {
+      "revid": 14686,
+      "path": "ai/help/帮助_解析器扩展标签_test2.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:诽谤": {
+      "revid": 1796,
+      "path": "ai/help/帮助_诽谤.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:跨语言链接": {
+      "revid": 32546,
+      "path": "ai/help/帮助_跨语言链接.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:邀请新用户": {
+      "revid": 41849,
+      "path": "ai/help/帮助_邀请新用户.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:配置webhook": {
+      "revid": 16800,
+      "path": "ai/help/帮助_配置webhook.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:重定向": {
+      "revid": 14474,
+      "path": "ai/help/帮助_重定向.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:重定向页面": {
+      "revid": 39630,
+      "path": "ai/help/帮助_重定向页面.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:链接": {
+      "revid": 39633,
+      "path": "ai/help/帮助_链接.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:锁定页面": {
+      "revid": 12065,
+      "path": "ai/help/帮助_锁定页面.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:零件": {
+      "revid": 41554,
+      "path": "ai/help/帮助_零件.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:页面分类": {
+      "revid": 41845,
+      "path": "ai/help/帮助_页面分类.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:页面图片": {
+      "revid": 42088,
+      "path": "ai/help/帮助_页面图片.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:页面重命名": {
+      "revid": 12063,
+      "path": "ai/help/帮助_页面重命名.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:页面重定向": {
+      "revid": 1258,
+      "path": "ai/help/帮助_页面重定向.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:预设模板": {
+      "revid": 39636,
+      "path": "ai/help/帮助_预设模板.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:魔术字": {
+      "revid": 42145,
+      "path": "ai/help/帮助_魔术字.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    },
+    "帮助:魔术字/sandbox": {
+      "revid": 32999,
+      "path": "ai/help/帮助_魔术字_sandbox.md",
+      "fetched_at": "2026-11-09T14:27:11+08:00"
+    }
+  },
+  "facts": {
+    "26199": {
+      "title": "帮助:推土机架构/README",
+      "revid": 42454,
+      "path": "ai/huiji/facts-26199.md",
+      "fetched_at": "2026-11-09T14:27:08+08:00"
+    }
+  },
+  "tm": {
+    "Manifest:GlobalSearch": {
+      "revid": 8063,
+      "path": "ai/templatemanager/Manifest_GlobalSearch.md",
+      "fetched_at": "2026-11-09T14:27:12+08:00"
+    },
+    "Manifest:MathJax3": {
+      "revid": 6968,
+      "path": "ai/templatemanager/Manifest_MathJax3.md",
+      "fetched_at": "2026-11-09T14:27:12+08:00"
+    },
+    "Manifest:鼠标提示框": {
+      "revid": 6914,
+      "path": "ai/templatemanager/Manifest_鼠标提示框.md",
+      "fetched_at": "2026-11-09T14:27:12+08:00"
+    }
+  },
+  "site": "bqtj",
+  "generated_at": "2026-11-09T14:27:08+08:00",
+  "facts_pageid": 26199
+}

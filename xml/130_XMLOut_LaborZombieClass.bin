@@ -149,7 +149,7 @@
 			<!--图像动画属性-------------
 			----------------------------------------------- -->
 			<flipX>1</flipX>
-			<bulletImgUrl name="LaborZombie_1_bulletRed"/>
+			<bulletImgUrl name="LaborZombie_1_bullet"/>
 		</bullet>			
 					
 					
