@@ -273,7 +273,7 @@
 			<effectType>no</effectType>
 			<!--图像 ------------------------------------------------------------ -->
 			<meActionLabel>twoAttack</meActionLabel>
-			<description>黑暗骑士进入无敌状态，使用双手发射无双拳导弹，敌人击破该导弹才能让黑暗骑士受到伤害。</description>
+			<description>黑暗骑士使用双手发射无双拳导弹，敌人击破该导弹才能让黑暗骑士受到伤害。</description>
 		</skill>
 				<skill>
 					<name>underBKBullet</name><ignoreNoSkillB>1</ignoreNoSkillB><ignoreSilenceB>1</ignoreSilenceB>
@@ -301,7 +301,7 @@
 			<!--图像 ------------------------------------------------------------ -->
 			<meActionLabel>laserAttack</meActionLabel>
 			<otherEffectImg name="laserBlackLine"/>
-			<description>黑暗骑士进入无敌状态（除了头部），头顶持续发射旋转激光攻击敌人。</description>
+			<description>黑暗骑士进入免伤状态（除了头部），头顶持续发射旋转激光攻击敌人。</description>
 		</skill>
 					<skill>
 						<name>laserAttackBKSlow</name>

@@ -24,7 +24,7 @@
 			<effectType>addAllHurtMul</effectType>
 			<mul>2.5</mul>
 			<stateEffectImg name="aegisbaneJie"/>
-			<duration>3</duration>
+			<duration>5</duration>
 			<description>周围有敌人无敌时（每0.3秒检查一次），则自己增伤[mul-1]（无视封锁），持续[duration]秒。该技能无需装备即可生效。</description>
 			<growth>
 				<skill><mul>2.5</mul></skill>

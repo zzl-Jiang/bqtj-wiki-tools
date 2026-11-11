@@ -528,7 +528,7 @@
 		
 		
 		<skill>
-			<name>goldFalcon</name>
+			<name>goldFalcon</name><![CDATA[加入SkillName.flyArr，才能陆空切换]]>
 			<cnName>金翼</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>passive</conditionType>
@@ -542,7 +542,7 @@
 			<duration>9999999</duration>
 		</skill>
 		<skill>
-			<name>sanfeather</name>
+			<name>sanfeather</name><![CDATA[加入SkillName.flyArr，才能陆空切换]]>
 			<cnName>驭空</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>passive</conditionType>
@@ -559,7 +559,7 @@
 			<duration>9999999</duration>
 		</skill>
 		<skill>
-			<name>girlWing</name>
+			<name>girlWing</name><![CDATA[加入SkillName.flyArr，才能陆空切换]]>
 			<cnName>驭空</cnName><noSkillDodgeB>1</noSkillDodgeB><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB><everNoClearB>1</everNoClearB>
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>passive</conditionType>
@@ -578,7 +578,7 @@
 		
 		
 		<skill>
-			<name>dragonHeadSkill</name>
+			<name>dragonHeadSkill</name><![CDATA[加入SkillName.flyArr，才能陆空切换]]>
 			<cnName>龙翅</cnName>
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>passive</conditionType>

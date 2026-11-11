@@ -824,7 +824,7 @@
 			<loveD num="1"/>
 		</things>
 		<things>
-			<name>dieMedal9</name>
+			<name>dieMedal9</name><![CDATA[请在 DeathCreatorThings.nameArr中添加]]>
 			<cnName>骷髅勋章V10</cnName>
 			<iconUrl>NewIcon/dieMedal9</iconUrl><!-- 技能图标 -->
 			<description>你已通关当前版本最高难度。</description> 

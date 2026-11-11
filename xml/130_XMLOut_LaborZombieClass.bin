@@ -150,6 +150,7 @@
 			----------------------------------------------- -->
 			<flipX>1</flipX>
 			<bulletImgUrl name="LaborZombie_1_bullet"/>
+			<bulletLeftImgUrl name="LaborZombie_1_bulletRed"/>
 		</bullet>			
 					
 					
