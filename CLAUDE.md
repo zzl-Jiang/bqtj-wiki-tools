@@ -57,6 +57,8 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 - `parse_wilder.py` - 处理秘境数据，从 father → body → drop → gift 四层嵌套提取秘境首领定义，含掉落列表解析
 - `parse_unend.py` - 处理虚天塔数据，从 unendEnemyClass 提取每层出场角色（father name="unend" 下的 body，按名称+权重解析），从 unendProClass 提取点数 pro，输出 unendEnemy.json + unendPro.json
 - `parse_death.py` - 处理肉鸽模式数据，从 deathUnlockClass 提取解锁项、从 deathMapListClass 提取地图列表（father name="deathMap"），输出 deathUnlock.json + deathMapList.json
+- `parse_peak.py` - 处理巅峰等级数据，从 peakExpClass 提取各等级所需经验（换行数字，支持科学计数法）、从 peakProClass 提取属性词条，输出 peakExp.json + peakPro.json
+- `parse_outfit.py` - 处理套件数据，从 outfitClass 提取 `<one>`（套件）及其 `<must>`（装备要求）条件，输出 Outfit.json
 - `mixed.py` - 全量运行入口，自动发现 scripts/ 下所有 parse_*.py 并按依赖顺序运行（parse_arms、parse_suit 提前，其余按字母序）
 
 ## 常用命令
@@ -116,6 +118,12 @@ python scripts/parse_blackmarket.py
 # 处理肉鸽模式数据（输出至 data/death/）
 python scripts/parse_death.py
 
+# 处理巅峰等级数据（输出至 data/peak/）
+python scripts/parse_peak.py
+
+# 处理套件数据（输出至 data/outfit/）
+python scripts/parse_outfit.py
+
 ```
 
 ### 环境配置
@@ -152,6 +160,7 @@ pip install -e .
 - **世界地图**：存储在 `<father name="...">` → `<place>` 两层结构下。place 含坐标（pointer/point）、标签列表（labelArr）、修罗技能（demSkillArr）等子元素
 - **秘境**：存储在 `<father name="...">` → `<body>` → `<drop>` → `<gift>` 四层嵌套下。body 为秘境首领，drop 含掉落物品（gift 格式 type;name;num）
 - **神秘商人**：存储在blackMarketThingsClass → `<blackMarketThings>`、blackMarketPriceClass → `<father name="blackMartket">`的相关文件下。
+- **套件**：存储在 outfitClass 的 `<data>` → `<one>`（套件）→ `<must>`（装备要求，含 type/partType/colorArr/nameArr/lv）结构下
 
 ### XML 屏蔽列表
 

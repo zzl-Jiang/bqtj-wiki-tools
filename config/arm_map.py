@@ -13,7 +13,7 @@
 # purgold 紫金武器
 # yagold 氩金武器
 ## 按关系分类
-# constellations 星座武器
+# constellation 星座武器
 # zodiac 生肖武器
 
 ## 按玩法分类
