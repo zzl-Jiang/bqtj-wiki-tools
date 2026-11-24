@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="normal">
+		<gather>
+			<level name="doctorJoin" cnName="腐毒测试">
+
+				<info enemyLv="99" unitAddType="noAll" noPropsB="1" noTreasureB="1" noAIB="1" />
+				<sceneLabel>ShuangTa</sceneLabel>
+				<unitG>
+					<unitOrder id="doctorTeam" camp="we">
+						<unit cnName="制毒师" lifeMul="10" dpsMul="2" armsRange="sniperSmilodon"
+							  skillArr="jumpNumAdd1,State_AddMove50,shootSpeed2,rollingDeath,fastCd2,noBulletReduct" skillCloseB="1" />
+					</unitOrder>
+					<unitOrder id="enemy1">
+						<numberType>number</numberType>
+						<unit cnName="肥胖僵尸" num="1" lifeMul="60" noSuperB="1" />
+					</unitOrder>
+
+					<unitOrder id="boss1" camp="enemy">
+						<unit cnName="携弹僵尸" num="1" unitType="boss" lifeMul="200" aiOrder="no" noSuperB="1" />
+					</unitOrder>
+				</unitG>
+				<eventG>
+					<group id="g1" cnName="开场">
+						<event>
+							<order>createUnit:doctorTeam; r_birth</order>
+							<order>setP1:制毒师</order>
+							<order>body:制毒师; addSkillLock:venomCoat_12,plagueBurst_12,miasmaField_12</order>
+						</event>
+						<!-- 对话1 -->
+						<event><condition delay="0.1"></condition><order>say; startList:s1</order></event>
+						<event><condition delay="1">say:listOver</condition></event>
+						
+						<!-- 添加一个测试小怪 -->
+						<event>
+							<order>createUnit:enemy1; r1</order>
+							<order>say; startList:s2</order>
+						</event>
+						<!-- 小怪死后，开始对boss进行测试 -->
+						<event>
+							<condition>enemyNumber:less_1</condition>
+							<order>say; startList:s3</order>
+						</event>
+						<!-- 产生boss -->
+						<event><condition delay="1">say:listOver</condition></event>
+						<event><order>createUnit:boss1; r1</order></event>
+						<!-- boss血量少于90%，让玩家继续重复操作 -->
+						<event>
+							<condition>bodyLifePerLess:0.9001; 携弹僵尸</condition>
+							<order>say; startList:s4</order>
+						</event>
+						<event><condition delay="1">say:listOver</condition></event>
+						<!-- boss血量少于40%，则结束 -->
+						<event>
+							<condition>bodyLifePerLess:0.4; 携弹僵尸</condition>
+							<order>say; startList:s5</order>
+						</event>
+						<event>
+							<condition delay="0.1">say:listOver</condition>
+							<order>task:now; complete</order>
+							<order>level; showPointer:r_over</order>
+						</event>
+					</group>
+				</eventG>
+
+			</level>
+		</gather>
+	</father>
+	<father name="normal" cn="对话">
+		<level name="doctorJoin">
+			<sayList name="s1">
+				<say target="我"><content>我们快到高地了，听说你下山了？</content></say>
+				<say target="制毒师"><content>对，我在双塔村测试一种从尸体中提取的毒物——腐毒。</content></say>
+				<say target="我"><content>这么恶心？</content></say>
+				<say target="制毒师"><content>它本身并不会对生物造成伤害。</content></say>
+				<say target="我"><content>那这有什么用？</content></say>
+				<say target="制毒师"><content>但是它可以放大其它毒性的伤害，比如剧毒、七步毒、毒雾等等，还包括毒系武器。</content></say>
+				<say target="我"><content>看来还不错！</content></say>
+				<say target="制毒师"><content>但这还不是它的绝招。</content></say>
+				<say target="我"><content>喔？</content></say>
+				<say target="制毒师"><content>等我测试成功了再说吧，到时候我或许就可以跟你们一起去杀僵尸了。</content></say>
+				<say target="我"><content>没问题！</content></say>
+				<say target="我"><content>对了，绿岛的病毒样本检测得怎么样了？</content></say>
+				<say target="制毒师"><content>电话里不方便说，我回去后再细聊。</content></say>
+				<say target="我"><content>我明白了，那你快点！</content></say>
+				<say target="制毒师"><content>知道了。</content></say>
+			</sayList>
+			
+			<sayList name="s2">
+				<say target="制毒师"><content>射击僵尸使其不断叠上腐毒，最多能叠5层。</content></say>
+				<say target="制毒师"><content>在怪物脚底下放置“毒沼”（第二个技能），也可让僵尸叠上腐毒。</content></say>
+				<say target="制毒师"><content>叠到5层之后，在准心处使用“疫病爆发”技能（第一个技能），引爆其体内所有腐毒。</content></say>
+			</sayList>
+			<sayList name="s3">
+				<say target="制毒师"><content>很好！秒杀了一只小怪。</content></say>
+				<say target="制毒师"><content>不过对首领的效果就没那么好了。</content></say>
+				<say target="制毒师"><content>叠满腐毒后，每次疫病爆发只能造成10%伤害。</content></say>
+				<say target="制毒师"><content>而且只能对生命值低于40%的首领无效。</content></say>
+				<say target="制毒师"><content>我来测试一下。</content></say>
+			</sayList>
+			<sayList name="s4">
+				<say target="制毒师"><content>很好，清除了它10%的血量。</content></say>
+				<say target="制毒师"><content>不断重复操作，看看最多能清除多少血量。</content></say>
+			</sayList>
+			<sayList name="s5">
+				<say target="制毒师"><content>确实如此！</content></say>
+				<say target="制毒师"><content>但不管怎么说，腐毒在以后的战斗中都能发挥重大的作用。</content></say>
+				<say target="制毒师"><content>测试完毕，收工，回高地！</content></say>
+			</sayList>
+		</level>
+	</father>
+
+</data>

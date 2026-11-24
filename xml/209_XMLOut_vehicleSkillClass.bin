@@ -370,7 +370,7 @@
 			<ie>meFirst</ie><iconUrl>SkillIcon/superLightWave</iconUrl>
 			<!--触发条件与目标------------------------------------------------------------ -->
 			<conditionType>active</conditionType>
-			<condition>beforeAttack</condition>
+			<condition>avtiveSkillCdOver</condition>
 			<otherConditionArr>superLightWave</otherConditionArr>
 			<target>me</target>
 			<!--效果------------------------------------------------------------ -->

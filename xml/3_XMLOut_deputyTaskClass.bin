@@ -312,6 +312,20 @@
 			</openD>
 		</task>
 		
+		<![CDATA[v37.3添加，制毒师入队]]>
+		<task name="doctorJoin" cnName="腐毒（制毒师入队）" lv="99" unlockLv="30" levelIsTaskLvB="1" >
+			<shortText>完成关卡任务。</shortText>
+			<uiConditionText>完成关卡任务。</uiConditionText>
+			<description>爆枪小队即将回到战斧高地，而制毒师却在双塔村，他在干什么呢？完成任务后，将获得制毒师队友！</description>
+			<!-- 目的地 -->
+			<worldMapId>ShuangTa</worldMapId>
+			<levelId>doctorJoin</levelId>
+			<gift>more;Doctor;1;;taskLv</gift>
+			
+			<openD tk="GreenTown2_Domino"/>
+		</task>
+		
+		
 		
 		<![CDATA[2026年七夕篇活动，获得心零契约]]>
 		<task name="love2026_1" cnName="七夕篇-相遇" lv="10" unlockLv="30">

@@ -4,7 +4,7 @@
 		<bullet color="purgold" sightMul="2" evoMaxLv="2" evoMustFirstLv="13" composeLv="99" chipNum="300">
 			<name>electricCurve</name><extraMul>1</extraMul>
 			<cnName>电弧</cnName>
-			<dpsMul>0.3</dpsMul><uiDpsMul>1.17</uiDpsMul>
+			<dpsMul>0.3</dpsMul><uiDpsMul>0.88</uiDpsMul>
 			<aiShootRange>1200</aiShootRange><!-- ai射程 -->
 			<attackType>holy</attackType>
 			<iconUrl>newGun/electricCurveIcon</iconUrl>

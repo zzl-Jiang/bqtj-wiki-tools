@@ -6,7 +6,7 @@
 			<openD tk="PrisonExport_duke"/>
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>WoTu</worldMapId>
 			<levelId>customTask/cusWoTu</levelId>
@@ -15,7 +15,7 @@
 		<task name="cusYangMei" cnName="杨梅岭" lv="3" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>YangMei</worldMapId>
 			<levelId>customTask/cusYangMei</levelId>
@@ -24,7 +24,7 @@
 		<task name="cusXiaSha" cnName="下沙" lv="4" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XiaSha</worldMapId>
 			<levelId>customTask/cusXiaSha</levelId>
@@ -33,7 +33,7 @@
 		<task name="cusFengWei" cnName="凤尾洋" lv="5" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>FengWei</worldMapId><enemyLifeMul>0.6</enemyLifeMul><enemyDpsMul>0.8</enemyDpsMul>
 			<levelId>customTask/cusFengWei</levelId>
@@ -43,7 +43,7 @@
 		<task name="cusXiChi" cnName="西池" lv="6" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XiChi</worldMapId>
 			<levelId>customTask/cusXiChi</levelId>
@@ -52,7 +52,7 @@
 		<task name="cusBaiLu" cnName="白鹭镇" lv="7" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>BaiLu</worldMapId>
 			<levelId>customTask/cusBaiLu</levelId>
@@ -61,7 +61,7 @@
 		<task name="cusShuiSheng" cnName="水升村" lv="8" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>ShuiSheng</worldMapId><enemyLifeMul>1.6</enemyLifeMul><enemyDpsMul>1</enemyDpsMul>
 			<levelId>customTask/cusShuiSheng</levelId>
@@ -70,7 +70,7 @@
 		<task name="cusZhuTou" cnName="猪头洋" lv="10" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>ZhuTou</worldMapId><enemyLifeMul>1.3</enemyLifeMul>
 			<levelId>customTask/cusZhuTou</levelId>
@@ -94,7 +94,7 @@
 		<task name="cusBeiDou" cnName="北斗城" lv="13" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>BeiDou</worldMapId><enemyLifeMul>1.3</enemyLifeMul>
 			<levelId>customTask/cusBeiDou</levelId>
@@ -104,7 +104,7 @@
 		<task name="cusDongShan" cnName="东山澳" lv="14" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>DongShan</worldMapId><enemyLifeMul>1.3</enemyLifeMul>
 			<levelId>customTask/cusDongShan</levelId>
@@ -114,7 +114,7 @@
 		<task name="cusQingSha" cnName="青纱镇" lv="15" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>QingSha</worldMapId><enemyLifeMul>1.3</enemyLifeMul><enemyDpsMul>0.8</enemyDpsMul>
 			<levelId>customTask/cusQingSha</levelId>
@@ -124,7 +124,7 @@
 		<task name="cusQingMing" cnName="清明岭" lv="16" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>QingMing</worldMapId><enemyLifeMul>1.3</enemyLifeMul>
 			<levelId>customTask/cusQingMing</levelId>
@@ -134,7 +134,7 @@
 		<task name="cusNanTang" cnName="南唐城" lv="18" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>NanTang</worldMapId><enemyLifeMul>1.1</enemyLifeMul>
 			<levelId>customTask/cusNanTang</levelId>
@@ -174,7 +174,7 @@
 		<task name="cusDongShan_QiHuang" cnName="奇皇博士" lv="28" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>DongShan</worldMapId><enemyLifeMul>1.2</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul>
 			<levelId>customTask/cusDongShan_QiHuang</levelId>
@@ -190,7 +190,7 @@
 		<task name="cusQingMing_Arthur" cnName="决战爆枪小队" lv="30" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>QingMing</worldMapId><enemyLifeMul>1.2</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul>
 			<levelId>customTask/cusQingMing_Arthur</levelId>
@@ -200,7 +200,7 @@
 		<task name="cusYouLing" cnName="幽灵谷" lv="32" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>YouLing</worldMapId><enemyLifeMul>2.3</enemyLifeMul>
 			<levelId>customTask/cusYouLing</levelId>
@@ -210,7 +210,7 @@
 		<task name="cusXiFeng" cnName="西峰" lv="40" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XiFeng</worldMapId><enemyLifeMul>4</enemyLifeMul>
 			<levelId>customTask/cusXiFeng</levelId>
@@ -220,7 +220,7 @@
 		<task name="cusLvSen" cnName="绿森堡" lv="44" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>LvSen</worldMapId><enemyLifeMul>3</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul>
 			<levelId>customTask/cusLvSen</levelId>
@@ -230,7 +230,7 @@
 		<task name="cusDuKu" cnName="毒窟" lv="45" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>DuKu</worldMapId><enemyLifeMul>2</enemyLifeMul><enemyDpsMul>0.4</enemyDpsMul>
 			<levelId>customTask/cusDuKu</levelId>
@@ -240,7 +240,7 @@
 		<task name="cusBaoLun" cnName="宝伦镇" lv="46" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>BaoLun</worldMapId><enemyLifeMul>2</enemyLifeMul>
 			<levelId>customTask/cusBaoLun</levelId>
@@ -251,7 +251,7 @@
 		<task name="cusLuYu" cnName="炉屿" lv="47" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>LuYu</worldMapId><enemyLifeMul>2.5</enemyLifeMul>
 			<levelId>customTask/cusLuYu</levelId>
@@ -262,7 +262,7 @@
 		<task name="cusBaWang" cnName="霸王坡" lv="47" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>BaWang</worldMapId><enemyLifeMul>3.7</enemyLifeMul>
 			<levelId>customTask/cusBaWang</levelId>
@@ -272,7 +272,7 @@
 		<task name="cusPingChuan" cnName="平川" lv="49" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>PingChuan</worldMapId><enemyLifeMul>2.5</enemyLifeMul><enemyDpsMul>0.7</enemyDpsMul>
 			<levelId>customTask/cusPingChuan</levelId>
@@ -286,7 +286,7 @@
 		<task name="cusBaiSha" cnName="暴君" lv="50" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>BaiSha</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusBaiSha</levelId>
@@ -296,7 +296,7 @@
 		<task name="cusDongFeng" cnName="东峰研究所" lv="55" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>DongFeng</worldMapId><enemyLifeMul>3.5</enemyLifeMul><enemyDpsMul>0.8</enemyDpsMul>
 			<levelId>customTask/cusDongFeng</levelId>
@@ -306,7 +306,7 @@
 		<task name="cusZhongXin" cnName="研究中心" lv="56" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>ZhongXin</worldMapId><enemyLifeMul>3</enemyLifeMul><enemyDpsMul>0.4</enemyDpsMul>
 			<levelId>customTask/cusZhongXin</levelId>
@@ -316,7 +316,7 @@
 		<task name="cusDiXia" cnName="地下城市" lv="60" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>DiXia</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusDiXia</levelId>
@@ -326,7 +326,7 @@
 		<task name="cusHouJin" cnName="后井" lv="63" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>HouJin</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul>
 			<levelId>customTask/cusHouJin</levelId>
@@ -336,7 +336,7 @@
 		<task name="cusShaJiang" cnName="沙江" lv="64" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>ShaJiang</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>1</enemyDpsMul>
 			<levelId>customTask/cusShaJiang</levelId>
@@ -346,7 +346,7 @@
 		<task name="cusShaMo" cnName="沙漠中心" lv="65" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>ShaMo</worldMapId><enemyLifeMul>4.5</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusShaMo</levelId>
@@ -358,7 +358,7 @@
 		<task name="cusXianQu" cnName="先驱号" lv="67" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XianQu</worldMapId><enemyLifeMul>1.4</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul>
 			<levelId>customTask/cusXianQu</levelId>
@@ -368,7 +368,7 @@
 		<task name="cusFangZhouFirst" cnName="诺亚方舟" lv="68" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>FangZhouFirst</worldMapId><enemyLifeMul>3.3</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusFangZhouFirst</levelId>
@@ -378,7 +378,7 @@
 		<task name="cusFangZhouSecond" cnName="黑暗泰坦" lv="69" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>FangZhouSecond</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>0.8</enemyDpsMul>
 			<levelId>customTask/cusFangZhouSecond</levelId>
@@ -388,7 +388,7 @@
 		<task name="cusFangZhouTop" cnName="无疆骑士" lv="70" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>FangZhouTop</worldMapId><enemyLifeMul>7</enemyLifeMul><enemyDpsMul>1</enemyDpsMul>
 			<levelId>customTask/cusFangZhouTop</levelId>
@@ -400,7 +400,7 @@
 		<task name="cusDongShan_shiti" cnName="水下奇景" lv="71" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>完成对话</shortText>
 			<uiConditionText>完成对话</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>DongShan</worldMapId><enemyLifeMul>7</enemyLifeMul><enemyDpsMul>1</enemyDpsMul>
 			<levelId>customTask/cusDongShan_shiti</levelId>
@@ -417,7 +417,7 @@
 		<task name="cusPrisonDoor" cnName="监狱大门" lv="73" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>PrisonDoor</worldMapId><enemyLifeMul>1.5</enemyLifeMul><enemyDpsMul>0.4</enemyDpsMul>
 			<levelId>customTask/cusPrisonDoor</levelId>
@@ -428,7 +428,7 @@
 		<task name="cusPrisonFirst" cnName="监狱第1层" lv="74" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>PrisonFirst</worldMapId><enemyLifeMul>4.5</enemyLifeMul><enemyDpsMul>1</enemyDpsMul>
 			<levelId>customTask/cusPrisonFirst</levelId>
@@ -439,7 +439,7 @@
 		<task name="cusPrisonExport" cnName="监狱出口" lv="75" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>PrisonExport</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>1</enemyDpsMul>
 			<levelId>customTask/cusPrisonExport</levelId>
@@ -450,7 +450,7 @@
 		<task name="cusPrisonOutside" cnName="监狱外围" lv="76" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>PrisonOutside</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusPrisonOutside</levelId>
@@ -463,7 +463,7 @@
 		<task name="cusJungleOutside" cnName="丛林外围" lv="77" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>JungleOutside</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>0.4</enemyDpsMul>
 			<levelId>customTask/cusJungleOutside</levelId>
@@ -474,7 +474,7 @@
 		<task name="cusJungleDeep" cnName="丛林深处" lv="78" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>JungleDeep</worldMapId><enemyLifeMul>1.2</enemyLifeMul><enemyDpsMul>0.8</enemyDpsMul>
 			<levelId>customTask/cusJungleDeep</levelId>
@@ -485,7 +485,7 @@
 		<task name="cusCavesEntrance" cnName="洞窟入口" lv="79" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>CavesEntrance</worldMapId><enemyLifeMul>2.7</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusCavesEntrance</levelId>
@@ -496,7 +496,7 @@
 		<task name="cusCavesDeep" cnName="洞窟深处" lv="80" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>CavesDeep</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>1</enemyDpsMul>
 			<levelId>customTask/cusCavesDeep</levelId>
@@ -509,7 +509,7 @@
 		<task name="cusQianYe" cnName="千叶谷" lv="82" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>QianYe</worldMapId><enemyLifeMul>3</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul>
 			<levelId>customTask/cusQianYe</levelId>
@@ -520,7 +520,7 @@
 		<task name="cusFuMu" cnName="腐木岗" lv="83" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>FuMu</worldMapId><enemyLifeMul>3.5</enemyLifeMul><enemyDpsMul>1.2</enemyDpsMul>
 			<levelId>customTask/cusFuMu</levelId>
@@ -531,7 +531,7 @@
 		<task name="cusGongMu" cnName="公墓入口" lv="84" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>GongMu</worldMapId><enemyLifeMul>2.5</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul>
 			<levelId>customTask/cusGongMu</levelId>
@@ -542,7 +542,7 @@
 		<task name="cusGuiWang" cnName="鬼王墓" lv="85" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>GuiWang</worldMapId><enemyLifeMul>4</enemyLifeMul><enemyDpsMul>0.7</enemyDpsMul>
 			<levelId>customTask/cusGuiWang</levelId>
@@ -558,7 +558,7 @@
 		<task name="cusBingKu" cnName="冰窟" lv="86" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>BingKu</worldMapId><enemyLifeMul>3</enemyLifeMul><enemyDpsMul>0.7</enemyDpsMul>
 			<levelId>customTask/cusBingKu</levelId>
@@ -568,7 +568,7 @@
 		<task name="cusBingKuDeep" cnName="冰窟深处" lv="87" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>BingKuDeep</worldMapId><enemyLifeMul>2</enemyLifeMul><enemyDpsMul>0.7</enemyDpsMul>
 			<levelId>customTask/cusBingKuDeep</levelId>
@@ -578,7 +578,7 @@
 		<task name="cusWuXue" cnName="无雪干谷" lv="88" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>WuXue</worldMapId><enemyLifeMul>2</enemyLifeMul><enemyDpsMul>0.4</enemyDpsMul>
 			<levelId>customTask/cusWuXue</levelId>
@@ -588,7 +588,7 @@
 		<task name="cusDongWu" cnName="千年冻湖" lv="89" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>DongWu</worldMapId><enemyLifeMul>1.8</enemyLifeMul><enemyDpsMul>0.4</enemyDpsMul>
 			<levelId>customTask/cusDongWu</levelId>
@@ -598,7 +598,7 @@
 		<task name="cusBuDong" cnName="不冻湖" lv="90" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>BuDong</worldMapId><enemyLifeMul>2.5</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusBuDong</levelId>
@@ -622,7 +622,7 @@
 		<task name="cusHanGuang1" cnName="寒光入口" lv="91" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description><![CDATA[古飙：开局复制一个电离折射，后面不停用"泰山压顶"的技能，cd期间就直接跑步撞击]]>
+			<description>按Q键可以切换攻击方式。</description><![CDATA[古飙：开局复制一个电离折射，后面不停用"泰山压顶"的技能，cd期间就直接跑步撞击]]>
 			<!-- 目的地 -->
 			<worldMapId>HanGuang1</worldMapId><enemyLifeMul>2</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusHanGuang1</levelId>
@@ -633,7 +633,7 @@
 		<task name="cusHanGuang2" cnName="寒光西城" lv="92" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description><![CDATA[幻影X：致盲之光让敌人失去攻击力，让小怪保持输出。]]>
+			<description>按Q键可以切换攻击方式。</description><![CDATA[幻影X：致盲之光让敌人失去攻击力，让小怪保持输出。]]>
 			<!-- 目的地 -->
 			<worldMapId>HanGuang2</worldMapId><enemyLifeMul>2.5</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusHanGuang2</levelId>
@@ -644,7 +644,7 @@
 		<task name="cusHanGuang3" cnName="寒光中心" lv="93" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description><![CDATA[斩之使者：致盲之光让敌人失去攻击力，让小怪保持输出。]]>
+			<description>按Q键可以切换攻击方式。</description><![CDATA[斩之使者：致盲之光让敌人失去攻击力，让小怪保持输出。]]>
 			<!-- 目的地 -->
 			<worldMapId>HanGuang3</worldMapId><enemyLifeMul>3.5</enemyLifeMul><enemyDpsMul>0.8</enemyDpsMul>
 			<levelId>customTask/cusHanGuang3</levelId>
@@ -655,7 +655,7 @@
 		<task name="cusHanGuang4" cnName="寒光之巅" lv="94" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText><![CDATA[异火龙：首选使用龙雨触发对方的电离折射，然后后面苟着，一直使用龙雨。]]>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>HanGuang4</worldMapId><enemyLifeMul>3</enemyLifeMul><enemyDpsMul>0.45</enemyDpsMul>
 			<levelId>customTask/cusHanGuang4</levelId>
@@ -669,7 +669,7 @@
 		<task name="cusHanGuang5" cnName="寒光末路" lv="95" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>HanGuang5</worldMapId><enemyLifeMul>2.5</enemyLifeMul><enemyDpsMul>0.45</enemyDpsMul>
 			<levelId>customTask/cusHanGuang5</levelId>
@@ -682,7 +682,7 @@
 		<task name="cusHospital1" cnName="实验室入口" lv="96" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText><![CDATA[看门狗：]]>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>Hospital1</worldMapId><enemyLifeMul>3.1</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusHospital1</levelId>
@@ -693,7 +693,7 @@
 		<task name="cusHospital2" cnName="实验室底层" lv="97" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText><![CDATA[防毒僵尸]]>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>Hospital2</worldMapId><enemyLifeMul>3</enemyLifeMul><enemyDpsMul>0.5</enemyDpsMul>
 			<levelId>customTask/cusHospital2</levelId>
@@ -704,7 +704,7 @@
 		<task name="cusHospital3" cnName="实验室中层" lv="98" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText><![CDATA[球形闪电]]>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>Hospital3</worldMapId><enemyLifeMul>2.2</enemyLifeMul><enemyDpsMul>1</enemyDpsMul>
 			<levelId>customTask/cusHospital3</levelId>
@@ -721,7 +721,7 @@
 		<task name="cusSkyScene" cnName="天空顶" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>SkyScene</worldMapId><enemyLifeMul>5</enemyLifeMul><enemyDpsMul>0.6</enemyDpsMul>
 			<levelId>customTask/cusSkyScene</levelId>
@@ -732,7 +732,7 @@
 		<task name="cusHospital5" cnName="实验室顶层" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>Hospital5</worldMapId><enemyLifeMul>25</enemyLifeMul><enemyDpsMul>2</enemyDpsMul>
 			<levelId>customTask/cusHospital5</levelId>
@@ -743,7 +743,7 @@
 		<task name="cusXingGu" cnName="星谷" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XingGu</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
 			<levelId>customTask/cusXingGu</levelId>
@@ -754,7 +754,7 @@
 		<task name="cusXiShan1" cnName="绝壁窟" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XiShan1</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
 			<levelId>customTask/cusXiShan1</levelId>
@@ -766,7 +766,7 @@
 		<task name="cusXiShan2" cnName="溪山西" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XiShan2</worldMapId><enemyLifeMul>5</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
 			<levelId>customTask/cusXiShan2</levelId>
@@ -780,7 +780,7 @@
 		<task name="cusXiShan3" cnName="溪山南" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XiShan3</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
 			<levelId>customTask/cusXiShan3</levelId>
@@ -792,7 +792,7 @@
 		<task name="cusXiShan4" cnName="溪山顶" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XiShan4</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
 			<levelId>customTask/cusXiShan4</levelId>
@@ -804,7 +804,7 @@
 		<task name="cusXiShan5" cnName="溪山东" lv="99" unlockLv="30" levelIsTaskLvB="1">
 			<shortText>击败爆枪小队。</shortText>
 			<uiConditionText>击败爆枪小队。</uiConditionText>
-			<description></description>
+			<description>按Q键可以切换攻击方式。</description>
 			<!-- 目的地 -->
 			<worldMapId>XiShan5</worldMapId><enemyLifeMul>20</enemyLifeMul><enemyDpsMul>0.1</enemyDpsMul>
 			<levelId>customTask/cusXiShan5</levelId>

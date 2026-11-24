@@ -66,6 +66,8 @@
 	
 	
 	<father name="boom">
+		<body cnName="爆炸音效" name="midBoomSound" soundUrl="boomSound/midBoom" soundRan="7"></body>
+		
 		<body con="add" name="stoneSeaWalk" cnName="石海步行特效">boomEffect/posionSmall</body>
 		<body cnName="小内爆" name="smallInsideBoom" soundUrl="hitSound/fire"  soundRan="3" soundVolume="0.2" urlRandomValue="2">boomEffect/smallInside</body>
 		<body cnName="中内爆" name="smallMidBoom" soundUrl="boomSound/midBoom" soundRan="7" soundVolume="0.5" urlRandomValue="2">boomEffect/midInside</body>
@@ -184,6 +186,8 @@
 		
 		<body cnName="噬原虫光球" name="phageWormBall" con="add">generalEffect/purpleFireBall</body>
 		<body cnName="噬原虫病毒" name="phageWormBullet" con="add">PhageWorm/bullet</body>
+		
+		<body cnName="毒沼" name="miasmaField" con="add">generalEffect/miasmaField</body>
 		
 	</father>
 	<father name="bulletLine" cnName="线性子弹" >
@@ -311,6 +315,8 @@
 		<body  cnName="翻滚状态"  name="rollingState" con="filter" raNum="1" soundUrl="bodySound/fastMove" soundRan="2">skillEffect/rollingShadow</body>
 		
 		<body  cnName="双脚着大火" name="footFireBig" con="add" partType="2foot">generalEffect/fire</body>
+		
+		<body  cnName="腐毒" name="venomCoat" con="add" partType="body">bulletHitEffect/venomCoat</body>
 	</father>
 	<father name="target" cnName="瞬发">
 		

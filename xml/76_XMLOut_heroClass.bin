@@ -670,6 +670,7 @@
 			<raceType>human</raceType>
 			<movieLink>Striker</movieLink><showLevel>9999</showLevel>
 			<swfUrl>swf/hero/Doctor360.swf</swfUrl>
+			<description>制毒手法独步天下，擅长以毒攻毒。完成支线任务“腐毒”后可出战。</description>
 			<!-- 基本系数 -->
 			<!-- 硬直比例，血量扣除到达这个百分比的多少就硬直 -->
 			<!-- 图像 ，【已经链接到了movieLink】-->
@@ -681,14 +682,18 @@
 			<hurtRectArr>-12, -70, 24, 70</hurtRectArr> <!-- 站立受伤体积-->
 			<hurtRectArr>-12, -40, 24, 40</hurtRectArr> <!-- 下蹲受伤体积-->
 			<!-- 运动 -->
-			<maxVx>11</maxVx>
+			<maxVx>10</maxVx>
 			<squatMaxVx>5</squatMaxVx>
 			<!-- AI属性 -->
 			<armsNumber>2</armsNumber><!-- 武器个数 -->
 			<randomArmsRange>pistol2</randomArmsRange><!-- 随机枪范围，里面是armsRange的标签 -->	
 			<!-- 技能 -->
 			<skillArr>poisonousFog_hero_5,charm_hero_1</skillArr>
-			<addMoreText>暂未开放</addMoreText>
+			<oneAiLabel>sniper</oneAiLabel>
+			<extraAIClassLabel>Hero_AIExtra</extraAIClassLabel>
+			<studyCnNameArr>吞噬,魅惑,先锋盾,电离折射,毒雾,腐毒浸染,疫病爆发,毒沼,万毒共鸣,沉默,馈赠</studyCnNameArr>
+			<addMoreText>完成支线任务“腐毒”后可出战</addMoreText>
+			<moreD dpsMul="0.85" underHurtMul="0.4" studySkillLvAdd="41" firstLv="99" />
 			<!-- 攻击数据，【已经链接到了movieLink】 -->
 		</body>
 		<body index="0" name="“制毒师”">

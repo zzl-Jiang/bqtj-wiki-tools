@@ -344,7 +344,7 @@
 		</one>
 			
 		
-		]]>
+	
 		
 		<one codeExchangeId="38045" name="sign2026_10_1" cnName="10月1天" startTime="2026-10-1 00:00:00" endTime="2026-11-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
@@ -380,7 +380,7 @@
 			<gift>things;strengthenStone;100</gift>
 		</one>
 		
-		
+			]]>
 		<one codeExchangeId="38069" name="sign2026_11_1" cnName="11月1天签到礼包" startTime="2026-11-1 00:00:00" endTime="2026-12-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;allBlackEquipCash;60</gift>
@@ -402,36 +402,38 @@
 			<gift>things;allBlackEquipCash;300</gift>
 		</one>
 		
-		<![CDATA[
-		]]>
-		<![CDATA[
 		
-		<one codeExchangeId="37786" name="sign2025_12_1" cnName="12月1天签到礼包" startTime="2025-12-1 00:00:00" endTime="2026-1-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="38097" name="sign2026_12_1" cnName="12月1天签到礼包" startTime="2026-12-1 00:00:00" endTime="2027-1-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;highArmsEchelonCard;2</gift>
 			<gift>things;zodiacCash;10</gift>
+			<gift>things;rarePartsChest;1</gift>
 		</one>
-		<one codeExchangeId="37787" name="sign2025_12_5" cnName="12月5天签到礼包" startTime="2025-12-1 00:00:00" endTime="2026-1-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="38098" name="sign2026_12_5" cnName="12月5天签到礼包" startTime="2026-12-1 00:00:00" endTime="2027-1-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;highArmsEchelonCard;4</gift>
 			<gift>things;zodiacCash;15</gift>
+			<gift>things;rarePartsChest;2</gift>
 		</one>
-		<one codeExchangeId="37788" name="sign2025_12_14" cnName="12月14天签到礼包" startTime="2025-12-1 00:00:00" endTime="2026-1-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="38099" name="sign2026_12_14" cnName="12月14天签到礼包" startTime="2026-12-1 00:00:00" endTime="2027-1-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;highArmsEchelonCard;6</gift>
 			<gift>things;zodiacCash;30</gift>
+			<gift>things;rarePartsChest;3</gift>
 		</one>
-		<one codeExchangeId="37789" name="sign2025_12_25" cnName="12月25天签到礼包" startTime="2025-12-1 00:00:00" endTime="2026-1-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="38100" name="sign2026_12_25" cnName="12月25天签到礼包" startTime="2026-12-1 00:00:00" endTime="2027-1-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;highArmsEchelonCard;8</gift>
 			<gift>things;zodiacCash;45</gift>
+			<gift>things;rarePartsChest;4</gift>
 		</one>
-		<one codeExchangeId="37790" name="sign2025_12_30" cnName="12月满勤签到礼包" startTime="2025-12-1 00:00:00" endTime="2026-1-1 00:00:00" hideOutTimeB="1">
+		<one codeExchangeId="38101" name="sign2026_12_30" cnName="12月满勤签到礼包" startTime="2026-12-1 00:00:00" endTime="2027-1-1 00:00:00" hideOutTimeB="1">
 			<codeUrl>http://news.4399.com/gonglue/bqyx/xinwen/471939.html</codeUrl>
 			<gift>things;highArmsEchelonCard;10</gift>
 			<gift>things;zodiacCash;60</gift>
+			<gift>things;rarePartsChest;5</gift>
 		</one>
-		]]>
+		
 		<![CDATA[
 		]]>
 	</gameBox>

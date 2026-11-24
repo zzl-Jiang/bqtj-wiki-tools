@@ -51,7 +51,7 @@
 		<bullet color="blue">
 			<name>yearDogDea</name>
 			<cnName>弹力·戌狗</cnName>
-			<dpsMul>0.6</dpsMul>
+			<dpsMul>0.6</dpsMul>7
 			<!--随机属性------------------------------------------------------------ -->
 			<!--基本-->
 			<capacity>285</capacity>

@@ -2,9 +2,10 @@
 <data>
 	<father name="normal" cnName="普通" priceType="coin" labelArr="hot,all,props,materials,fashion,vehicle,arms,parts,equip,other">
 		<type name="hot">
-			<goods cnName="新手礼包" name="newGift2026_11" price="1" buyLimitNum="1" dayBuyLimitNum="1" endTime="2026-11-22" autoUseB="1"><priceType>coin</priceType></goods>
 			
 			<![CDATA[
+			<goods cnName="新手礼包" name="newGift2026_11" price="1" buyLimitNum="1" dayBuyLimitNum="1" endTime="2026-11-22" autoUseB="1"><priceType>coin</priceType></goods>
+			
 			<goods otherArr="hot" propId="4310" newB="1"cnName="十月特惠礼包" name="guoqing2026_10" price="600" buyLimitNum="1" endTime="2026-10-15" autoUseB="1"><priceType>money</priceType></goods>
 			
 			

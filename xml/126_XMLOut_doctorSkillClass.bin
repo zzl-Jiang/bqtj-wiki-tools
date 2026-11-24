@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<father name="heroSkill" cnName="英雄技能">
+
+		<![CDATA[腐毒浸染 被动]]>
+		<skill name="腐毒浸染">
+			<name>venomCoat</name>
+			<cnName>腐毒浸染</cnName><iconUrl>SkillIcon/venomCoat</iconUrl><iconUrl36>SkillIcon/venomCoat_36</iconUrl36>
+			<effectInfoArr>增加伤害输出</effectInfoArr><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB><noBeClearB>1</noBeClearB>
+			
+			<changeText>中毒伤害提高[mul]</changeText>
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<otherConditionArr>venomCoat</otherConditionArr>
+			<conditionRange>1</conditionRange>
+			<target>target</target>
+			
+			<addType>state</addType><overlyingB>1</overlyingB>
+			<effectType>venomCoat</effectType><effectFather>role</effectFather>
+			<overlyingMax>5</overlyingMax> <!-- 层数上限 -->
+			<mul>0.01</mul>                       <!-- 每层增伤 -->
+			<duration>6</duration>
+			<passiveSkillArr>venomCoatUnder</passiveSkillArr>
+			<stateEffectImg name="venomCoat" />
+			<description>每次攻击会使敌人获得1层腐毒（血条上可显示），每层使目标受到的中毒伤害（包括毒系武器伤害）提高[mul]。腐毒可叠加，每秒最多叠加1层，最多可叠加[overlyingMax]层，持续[duration]秒。</description>
+			<growth>
+				<skill><mul>0.01</mul></skill>
+				<skill><mul>0.02</mul></skill>
+				<skill><mul>0.03</mul></skill>
+				<skill><mul>0.04</mul></skill>
+				<skill><mul>0.05</mul></skill>
+				<skill><mul>0.06</mul></skill>
+				<skill><mul>0.07</mul></skill>
+				<skill><mul>0.08</mul></skill>
+				<skill><mul>0.09</mul></skill>
+				<skill><mul>0.10</mul></skill>
+				<skill><mul>0.11</mul></skill>
+				<skill><mul>0.12</mul></skill>
+			</growth>
+		</skill>
+				<skill name="腐毒增伤">
+					<name>venomCoatUnder</name>
+					<cnName>腐毒增伤</cnName>
+					<conditionType>passive</conditionType>
+					<condition>underAllHit</condition>
+					<target>me</target>
+					<valueString>venomCoat</valueString><!-- 腐毒浸染buff名称 -->
+					<addType>instant</addType>
+					<effectType>venomCoatUnder</effectType><effectFather>role</effectFather>
+				</skill>
+
+		<![CDATA[腐毒爆发 主动]]>
+		<skill>
+			<name>plagueBurst</name>
+			<cnName>疫病爆发</cnName><iconUrl>SkillIcon/plagueBurst</iconUrl><iconUrl36>SkillIcon/plagueBurst_36</iconUrl36>
+			<effectInfoArr>增加伤害输出</effectInfoArr><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			
+			<changeText>最大生命值[mul]的伤害</changeText>
+			<cd>18</cd><firstCd>20</firstCd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>plagueBurst</otherConditionArr>
+			<conditionRange>5</conditionRange><!-- 攻击的目标身上腐毒层数超过这个数，才会引爆 -->
+			<target>mouse,range,enemy</target>
+			
+			<addType>instant</addType>
+			<effectType>plagueBurst</effectType><effectFather>role</effectFather>
+			<valueString>venomCoat</valueString><!-- 腐毒浸染buff名称 -->
+			<mul>0.002</mul>
+			<range>250</range>
+			<meEffectImg name="midBoomSound"/>
+			<pointEffectImg name="MeatyAway_target" />
+			<description>引爆鼠标处[range]码范围内敌人体内的腐毒，造成其最大生命值[mul]x层数的真实伤害，首领血量不低于40%才能受到伤害；对付小怪则是会造成其最大生命值[mul]x层数x10的真实伤害。无视钢骨，虚天塔有效。</description>
+			<growth>
+				<skill><mul>0.002</mul></skill>
+				<skill><mul>0.003</mul></skill>
+				<skill><mul>0.004</mul></skill>
+				<skill><mul>0.005</mul></skill>
+				<skill><mul>0.006</mul></skill>
+				<skill><mul>0.008</mul></skill>
+				<skill><mul>0.010</mul></skill>
+				<skill><mul>0.012</mul></skill>
+				<skill><mul>0.014</mul></skill>
+				<skill><mul>0.016</mul></skill>
+				<skill><mul>0.018</mul></skill>
+				<skill><mul>0.020</mul></skill>
+			</growth>
+		</skill>
+
+		<![CDATA[毒沼 主动]]>
+		<skill>
+			<name>miasmaField</name>
+			<cnName>毒沼</cnName><iconUrl>SkillIcon/miasmaField</iconUrl><iconUrl36>SkillIcon/miasmaField_36</iconUrl36>
+			<effectInfoArr>增加伤害输出</effectInfoArr>
+			
+			<changeText>技能冷却时间[cd]秒</changeText>
+			<cd>40</cd><firstCd>40</firstCd>
+			<conditionType>active</conditionType>
+			<condition>avtiveSkillCdOver</condition>
+			<otherConditionArr>nearAttackTarget</otherConditionArr>
+			<conditionRange>2000</conditionRange>
+			<target>me</target>
+			<addType>instant</addType>
+			<effectType>bullet</effectType>
+			<meEffectImg name="poisonousFog_hero_me"/>
+			<!-- 子弹所需 -->
+			<obj>"name":"miasmaField","site":"mouse","minYB":1,"cy":-30</obj>
+			<description>在鼠标处铺开毒沼，在毒沼内的敌人移动速度降低70%，防御降低10%，还会不断叠加腐毒层。毒沼存在10秒。</description>
+			<growth>
+				<skill><cd>34</cd></skill>
+				<skill><cd>30</cd></skill>
+				<skill><cd>28</cd></skill>
+				<skill><cd>26</cd></skill>
+				<skill><cd>24</cd></skill>
+				<skill><cd>22</cd></skill>
+				<skill><cd>20</cd></skill>
+				<skill><cd>18</cd></skill>
+				<skill><cd>16</cd></skill>
+				<skill><cd>14</cd></skill>
+				<skill><cd>12</cd></skill>
+				<skill><cd>10</cd></skill>
+			</growth>
+		</skill>
+				
+				<bullet cnName="毒沼-子弹">
+					<name>miasmaField</name>
+					<cnName>毒沼-子弹</cnName><noMagneticB>1</noMagneticB><noBeClearB>1</noBeClearB>
+					<!--基本属性============================================================ -->
+					<bulletLife>10</bulletLife>
+					<bulletWidth>300</bulletWidth>
+					<hitType>rect</hitType>
+					<bulletSpeed>0</bulletSpeed>
+					<!--特别属性============================================================ -->	
+					<hitGap>0.2</hitGap>
+					<skillArr>venomCoat,miasmaFieldBuff</skillArr>
+					<penetrationNum>999</penetrationNum>
+					<penetrationGap>1000</penetrationGap>
+					<bulletImgUrl name="miasmaField"/>
+				</bullet>
+		
+		<![CDATA[万毒共鸣 被动]]>
+		<skill>
+			<name>venomResonance</name>
+			<cnName>万毒共鸣</cnName><ignoreNoSkillB>1</ignoreNoSkillB><ignoreImmunityB>1</ignoreImmunityB><noSkillDodgeB>1</noSkillDodgeB>
+			<effectInfoArr>增加伤害输出</effectInfoArr><iconUrl>SkillIcon/venomResonance</iconUrl><iconUrl36>SkillIcon/venomResonance_36</iconUrl36>
+			
+			<changeText>队友增伤[mul]{n}制毒师增伤[secMul]</changeText>
+			<conditionType>passive</conditionType>
+			<condition>interval</condition>
+			<target>me,range,we</target>
+			<addType>state</addType>
+			<effectType>venomResonance</effectType><effectFather>role</effectFather>
+			<valueString>venomCoat</valueString><!-- 腐毒浸染buff名称 -->
+			<value>5</value>
+			<mul>0.02</mul>
+			<secMul>0.05</secMul>
+			<intervalT>0.5</intervalT>
+			<duration>1</duration>
+			<range>9999</range>
+			<description>场上每多存在1个中了腐毒的敌人，制毒师就增伤[secMul]，全体队友就增伤[mul]，最高增伤[value]次。无视封锁。</description>
+			<growth>
+				<skill><mul>0.012</mul><secMul>0.003</secMul></skill>
+				<skill><mul>0.02</mul><secMul>0.005</secMul></skill>
+				<skill><mul>0.028</mul><secMul>0.007</secMul></skill>
+				<skill><mul>0.04</mul><secMul>0.01</secMul></skill>
+				<skill><mul>0.06</mul><secMul>0.015</secMul></skill>
+				<skill><mul>0.08</mul><secMul>0.02</secMul></skill>
+				<skill><mul>0.1</mul><secMul>0.025</secMul></skill>
+				<skill><mul>0.12</mul><secMul>0.03</secMul></skill>
+				<skill><mul>0.14</mul><secMul>0.035</secMul></skill>
+				<skill><mul>0.16</mul><secMul>0.04</secMul></skill>
+				<skill><mul>0.18</mul><secMul>0.045</secMul></skill>
+				<skill><mul>0.2</mul><secMul>0.05</secMul></skill>
+			</growth>
+		</skill>
+
+	</father>
+	<father name="heroSkill_link" cnName="英雄技能-链接">
+		<skill>
+			<name>miasmaFieldBuff</name>
+			<cnName>毒沼-buff</cnName><ignoreImmunityB>1</ignoreImmunityB><noBeClearB>1</noBeClearB>
+			<!--触发条件与目标============================================================ -->
+			<conditionType>passive</conditionType>
+			<condition>hit</condition>
+			<target>target</target>
+			<!--效果============================================================ -->
+			<addType>state</addType>
+			<effectType>miasmaFieldBuff</effectType><effectFather>role</effectFather>
+			<mul>0.3</mul>
+			<secMul>0.10</secMul>
+			<duration>1</duration>
+			<stateEffectImg partType="2foot">skillEffect/disabled_enemy</stateEffectImg>
+			<description>击中目标后减少其[1-mul]的移动速度，降低[secMul]的防御，持续[duration]秒。无视技能免疫。</description>
+		</skill>
+	</father>
+</data>

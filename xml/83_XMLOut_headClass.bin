@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
 	<father name="new" cnName="新的">
+		<head name="boomWorld" cnName="爆枪世界" diff="100" noEquip="1" iconUrl48="IconGather/boomWorld_48">
+			<condition info="游玩《爆枪世界》DEMO获得活动币，再使用活动币兑换获得。" />
+			<addObjJson>{'lottery':5}</addObjJson>
+		</head>
+		<head name="boomWorldDemo" cnName="爆枪世界DEMO" diff="50" noEquip="1" iconUrl48="IconGather/boomWorldDemo_48">
+			<condition info="游玩《爆枪世界》DEMO获得活动币，再使用活动币兑换获得。" />
+			<addObjJson>{'lottery':3}</addObjJson>
+		</head>
+		
 		<head name="anniver12" cnName="十二周年" diff="50"  noEquip="1"  iconUrl48="IconGather/anniver12_48">
 			<condition info="十二周年签到奖励。" />
 			<addObjJson>{'dpsAll':0.05,'lottery':5}</addObjJson>
