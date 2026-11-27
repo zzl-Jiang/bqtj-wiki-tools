@@ -1,7 +1,7 @@
 """
 爆枪突击活跃度（Active）数据处理器
 
-从 XML 提取活跃度任务定义和奖励档位数据，输出 JSON + Excel。
+从 XML 提取活跃度任务定义和奖励档位数据，输出单个 active.json。
 数据结构：<data> → <task>/<gift> → <one>（两层，无 father 包裹）
   - task/one：每日活跃任务，自闭合属性型
   - gift/one：活跃奖励档位，含嵌套 <gift> 子标签（分号分隔字符串）
@@ -10,12 +10,12 @@ import json
 import os
 import datetime
 import xml.etree.ElementTree as ET
-from core import XmlCleaner, ValueConverter, OutputWriter, ReportGenerator
+from core import XmlCleaner, ValueConverter, clean_str
 from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
-OUTPUT_DIR = './data/active'
+OUTPUT_DIR = './data/others/active'
 
 # 活跃度奖励的 gift 子标签字段顺序（type;name;num，3 字段）
 ACTIVE_GIFT_KEYS = ['type', 'name', 'num']
@@ -129,41 +129,61 @@ def run_active_processor():
     print(f"\n[提取] 共提取 {len(task_pool)} 个任务 + {len(gift_pool)} 个奖励档位，"
           f"合计 {len(task_pool) + len(gift_pool)} 个条目")
 
-    # 合并池（用于独立 JSON / Excel），同时清理内部标记字段
-    all_pool = {}
-    all_pool.update(task_pool)
-    all_pool.update(gift_pool)
-    for data in all_pool.values():
-        data.pop('subType', None)
+    # 清理内部标记字段
+    for pool in (task_pool, gift_pool):
+        for data in pool.values():
+            data.pop('subType', None)
+            if data.get('name'):
+                data['name'] = clean_str(data['name'])
 
-    # 生成报告
-    report_pool = {
-        **{k: {**v, '_group': 'task'} for k, v in task_pool.items()},
-        **{k: {**v, '_group': 'gift'} for k, v in gift_pool.items()},
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    # --- 输出单个 active.json ---
+    active_json = {
+        "data": {
+            "father": [
+                {
+                    "@name": "task",
+                    "@cnName": "活跃任务",
+                    "item": list(task_pool.values()),
+                },
+                {
+                    "@name": "gift",
+                    "@cnName": "奖励档位",
+                    "item": list(gift_pool.values()),
+                },
+            ]
+        }
     }
-    ReportGenerator.generate(report_pool, OUTPUT_DIR,
-                             report_prefix='活跃度',
-                             group_field='_group')
 
-    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    active_path = os.path.join(OUTPUT_DIR, 'active.json')
+    with open(active_path, 'w', encoding='utf-8') as f:
+        json.dump(active_json, f, ensure_ascii=False, indent=2)
+    print(f"active JSON: {active_path} "
+          f"({len(task_pool)} 个任务 + {len(gift_pool)} 个奖励档位)")
 
-    # --- 保存独立 JSON ---
-    json_dir = os.path.join(OUTPUT_DIR, 'json')
-    os.makedirs(json_dir, exist_ok=True)
-    for name, data in all_pool.items():
-        file_path = os.path.join(json_dir, f"{name}.json")
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"独立 JSON: {json_dir}/ ({len(all_pool)} 个文件)")
+    # ======== 报告 ========
+    report = []
+    report.append("=" * 50)
+    report.append(f" 爆枪突击活跃度数据处理报告 - {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    report.append("=" * 50)
+    report.append(f"\n[总体概况]")
+    report.append(f" 活跃任务: {len(task_pool)} 个")
+    report.append(f" 奖励档位: {len(gift_pool)} 个")
 
-    # --- 保存拆分结构的汇总 JSON ---
-    summary_path = os.path.join(OUTPUT_DIR, f'活跃度数据汇总_{timestamp}.json')
-    with open(summary_path, 'w', encoding='utf-8') as f:
-        json.dump({
-            'taskArr': list(task_pool.values()),
-            'giftArr': list(gift_pool.values())
-        }, f, ensure_ascii=False, indent=2)
-    print(f"汇总 JSON（拆分结构）: {summary_path}")
+    report.append("\n[异常数据检测]")
+    missing_name = [k for k in list(task_pool) + list(gift_pool) if not k]
+    if missing_name:
+        report.append(f" [X] 缺少 name 的条目 ({len(missing_name)}个)")
+    else:
+        report.append(" [OK] 所有条目均包含 name。")
+
+    final_report = "\n".join(report)
+    print(final_report)
+    report_path = os.path.join(OUTPUT_DIR, '处理报告.txt')
+    with open(report_path, 'w', encoding='utf-8') as f:
+        f.write(final_report)
+    print(f"\n[报告] 统计报告已保存至: {report_path}")
 
     print(f"\n处理完成！活跃任务 {len(task_pool)} 个 + 奖励档位 {len(gift_pool)} 个")
 

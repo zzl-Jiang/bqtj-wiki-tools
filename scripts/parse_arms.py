@@ -96,6 +96,9 @@ def run_arm_processor():
                         cn = arm_data.get('cnName', '')
                         if 'death' in arm_data['category']:
                             arm_data['cnName'] = cn + '-肉鸽'
+                        # 处理重名：太空武器加"-太空"后缀
+                        elif 'space' in arm_data['category']:
+                            arm_data['cnName'] = cn + '-太空'
                         # 随机属性武器加"-随机属性武器"后缀
                         elif arm_data.get('randomPro', 0) > 0:
                             arm_data['cnName'] = cn + '-随机属性武器'

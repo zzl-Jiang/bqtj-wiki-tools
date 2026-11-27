@@ -15,7 +15,7 @@ from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
-OUTPUT_DIR = './data/blackmarket'
+OUTPUT_DIR = './data/others/blackmarket'
 
 # gift 字段顺序：type;name;num
 GIFT_KEYS = ['type', 'name', 'num']

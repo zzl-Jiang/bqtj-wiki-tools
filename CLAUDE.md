@@ -20,6 +20,9 @@ config/      - 映射配置（如武器类别映射）
 scripts/     - 数据处理器入口
 xml/         - 源 XML 游戏数据文件（纳入 git 管理）
 data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
+  <type>/        - 需要 Excel 批量上传的处理器（arms、skills、things 等）
+  others/<type>/ - 只导出纯 JSON、不生成 Excel 的处理器
+                   （active、blackmarket、death、outfit、peak、property）
 ```
 
 ### 核心模块 (`core/`)
@@ -52,23 +55,20 @@ data/        - 生成的输出文件（JSON + Excel，已加入 gitignore）
 - `parse_fashion.py` - 处理时装数据，从 fashionClass.bin 提取所有时装条目，独立输出 JSON + Excel文件
 - `parse_parts.py` - 处理零件数据，从 partsClass.bin 提取所有零件条目，按 name 去后缀分组输出独立 JSON + Excel，包含专门为 Module:PartsItem 使用的 PartsItemData.json
 - `parse_achieve.py` - 处理成就数据，从 gather → father → achieve 三层嵌套提取成就定义，支持 gift（11字段含 pro/sp）和 condition 解析，包含重名检测和报告功能
-- `parse_active.py` - 处理活跃度数据，从 task/gift 两类容器提取活跃任务和奖励档位，支持嵌套 gift 子标签解析，包含重名检测和报告功能
+- `parse_active.py` - 处理活跃度数据，从 task/gift 两类容器提取活跃任务和奖励档位，支持嵌套 gift 子标签解析，统一输出单个 active.json
 - `parse_world_map.py` - 处理世界地图数据，从 father → place 两层结构提取地图定义，支持 levelArr 嵌套解析和坐标、标签列表
 - `parse_wilder.py` - 处理秘境数据，从 father → body → drop → gift 四层嵌套提取秘境首领定义，含掉落列表解析
 - `parse_unend.py` - 处理虚天塔数据，从 unendEnemyClass 提取每层出场角色（father name="unend" 下的 body，按名称+权重解析），从 unendProClass 提取点数 pro，输出 unendEnemy.json + unendPro.json
 - `parse_death.py` - 处理肉鸽模式数据，从 deathUnlockClass 提取解锁项、从 deathMapListClass 提取地图列表（father name="deathMap"），输出 deathUnlock.json + deathMapList.json
 - `parse_peak.py` - 处理巅峰等级数据，从 peakExpClass 提取各等级所需经验（换行数字，支持科学计数法）、从 peakProClass 提取属性词条，输出 peakExp.json + peakPro.json
 - `parse_outfit.py` - 处理套件数据，从 outfitClass 提取 `<one>`（套件）及其 `<must>`（装备要求）条件，输出 Outfit.json
-- `mixed.py` - 全量运行入口，自动发现 scripts/ 下所有 parse_*.py 并按依赖顺序运行（parse_arms、parse_suit 提前，其余按字母序）
+- `mixed.py` - 全量运行入口，自动发现 scripts/ 下所有 parse_*.py 并按依赖顺序运行（parse_arms、parse_suit 提前，其余按字母序）；运行结束后与「上一版本」的 data 输出做对比，输出各数据集变动报告
 
 ## 常用命令
 
 ### 运行处理器
 
 ```bash
-# 全量运行下文所有处理器（自动发现脚本并部分按顺序执行）
-python scripts/mixed.py
-
 # 处理武器数据（输出至 data/arms/）
 python scripts/parse_arms.py
 
@@ -100,7 +100,7 @@ python scripts/parse_parts.py
 # 处理成就数据（输出至 data/achieve/）
 python scripts/parse_achieve.py
 
-# 处理活跃度数据（输出至 data/active/）
+# 处理活跃度数据（输出至 data/others/active/）
 python scripts/parse_active.py
 
 # 处理世界地图数据（输出至 data/worldMap/）
@@ -112,17 +112,23 @@ python scripts/parse_wilder.py
 # 处理虚天塔数据（输出至 data/unend/）
 python scripts/parse_unend.py
 
-# 处理神秘商人数据（输出至 data/blackmarket/）
+# 处理神秘商人数据（输出至 data/others/blackmarket/）
 python scripts/parse_blackmarket.py
 
-# 处理肉鸽模式数据（输出至 data/death/）
+# 处理肉鸽模式数据（输出至 data/others/death/）
 python scripts/parse_death.py
 
-# 处理巅峰等级数据（输出至 data/peak/）
+# 处理巅峰等级数据（输出至 data/others/peak/）
 python scripts/parse_peak.py
 
-# 处理套件数据（输出至 data/outfit/）
+# 处理套件数据（输出至 data/others/outfit/）
 python scripts/parse_outfit.py
+
+# 处理属性数据（输出至 data/others/property/）
+python scripts/parse_property.py
+
+# 全量运行所有处理器（自动发现脚本并按依赖顺序执行，结束后输出数据变动对比）
+python scripts/mixed.py
 
 ```
 
@@ -174,6 +180,18 @@ pip install -e .
 - **独立 JSON 文件**：以实体的 `name` 字段命名，存放在 `data/<type>/json/`
 - **汇总 JSON 文件**：所有实体合并为一个数组，`data/<type>/<类型>数据汇总_*.json`
 - **Excel 批量文件**：生成时附带时间戳，用于 HuijiBot 批量上传，存放在 `data/<type>/`
+- **纯 JSON 处理器**：不生成 Excel 的处理器（active、blackmarket、death、outfit、peak、property）输出到 `data/others/<type>/`
+
+### 版本变动检测
+
+`mixed.py` 全量运行后会与「上一版本」的 data 输出做对比，便于定位哪些数据需要手动更新：
+
+- 运行前对 `data/` 做一次内容指纹快照（遍历 `.json`，按解析后的内容计算 MD5）
+- 文件名中的时间戳（`_YYYYMMDD_HHMMSS`）在对比时统一归一化为 `_<TS>`，避免每次运行都误报为新增
+- 同一归一化路径存在多份时，只取修改时间最新的文件
+- 运行结束后重新快照并对比，按数据集分组输出「新增 / 修改 / 移除」
+- 数据集目录通过各 `parse_*.py` 中声明的 `OUTPUT_DIR` 反查对应脚本名
+- 首次运行（`data/` 无上一版本数据）时跳过对比，不输出任何内容
 
 ### 类别映射
 

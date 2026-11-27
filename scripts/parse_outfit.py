@@ -14,7 +14,7 @@ from config import is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
-OUTPUT_DIR = './data/outfit'
+OUTPUT_DIR = './data/others/outfit'
 
 
 def _find_xml(pattern):

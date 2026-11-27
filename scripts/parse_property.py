@@ -15,7 +15,7 @@ from config import SUFFIX_MAP, is_skipped_xml
 
 # --- 配置 ---
 XML_DIR = './xml'
-OUTPUT_DIR = './data/property'
+OUTPUT_DIR = './data/others/property'
 
 # 优先用于补全中文名的来源文件
 PRIORITY_SOURCES = ('equipRangeClass', 'suitPropertyClass')
